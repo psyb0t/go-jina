@@ -1,0 +1,18 @@
+package: jinareader
+# The Reader spec repeats its ~100 header and query parameters inline on every
+# operation, so the models alone are several hundred KB. They go in their own
+# file, models.gen.go, and config.yaml writes the client to client.gen.go.
+generate:
+  models: true
+output: models.gen.go
+output-options:
+  resolve-type-name-collisions: true
+  # Timeouts and other plain `type: number` fields have no format, which
+  # oapi-codegen maps to float32 by default. Map them to float64 so no
+  # precision is lost.
+  type-mapping:
+    number:
+      default:
+        type: float64
+compatibility:
+  always-prefix-enum-values: true

@@ -1,0 +1,16 @@
+package: jina
+generate:
+  client: true
+  models: true
+output: client.gen.go
+output-options:
+  resolve-type-name-collisions: true
+  # Scores, weights and other plain `type: number` fields have no format,
+  # which oapi-codegen maps to float32 by default. Map them to float64 so no
+  # precision is lost.
+  type-mapping:
+    number:
+      default:
+        type: float64
+compatibility:
+  always-prefix-enum-values: true
