@@ -45,6 +45,7 @@ make sec       # gitleaks, govulncheck, semgrep
 - Untyped Reader query or header parameters are generated as a non-pointer `interface{}` that is always sent; a nil value panics in the runtime. `fix-reader-spec.jq` types them as strings.
 - semgrep's `unsafe-deserialization-interface` rule is excluded in `scripts/sec.sh`. oapi-codegen decodes untyped response schemas (the batch downloads) into `interface{}`, which the spec leaves no way around.
 - The CI pipeline skips the generate drift check, because the specs change upstream without notice. Regenerate locally and commit the result.
+- `.github/workflows/regen.yml` regenerates the client every day and releases the result. When the checks fail, Claude edits the repository to fix them, but a fix may not touch the paths listed under `fix_protected_paths` in that workflow: the workflows, the Makefile, `AGENTS.md`, `.agents/rules/`, the lint, security and spec download scripts and their configs. A problem that needs a change there fails the run and needs a manual fix.
 
 ## Rules
 

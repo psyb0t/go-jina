@@ -119,6 +119,8 @@ make generate
   - `scripts/fix-reader-spec.jq`: renames the `{url}` path parameter to `{targetUrl}`, because a Go parameter named `url` shadows `net/url` in the generated client. It drops `nullable` from untyped `additionalProperties`, which makes oapi-codegen write code that does not compile. It types untyped query and header parameters such as `jsonSchema` as strings, because otherwise the client always sends them and panics when they are unset.
 - oapi-codegen runs with `config.yaml` (and `reader/config.yaml` plus `reader/config.models.yaml`). The configs map `number` to `float64`, because the specs give scores and timeouts no format and oapi-codegen would otherwise use `float32`. The Reader spec repeats around 100 parameters inline on every operation, so its models go in `reader/models.gen.go` and the client in `reader/client.gen.go`.
 
+`.github/workflows/regen.yml` does the same every day in CI. When the new spec changes the client, it runs `make lint`, `make test` and `make sec`. If a check fails, Claude edits the code and the checks run again, up to three times, and a review step reads the result. A passing change is committed with a CHANGELOG entry and tagged as the next release: a patch version for fixes and additions, a minor version for breaking changes.
+
 ## Development
 
 Every command runs in the `Dockerfile.dev` image. The host needs only Docker and Make.
