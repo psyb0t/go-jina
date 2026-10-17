@@ -1,6 +1,7 @@
 ---
 name: go-jina
 description: Unofficial Go client for the Jina AI APIs, generated with oapi-codegen. Package `jina` (`github.com/psyb0t/go-jina`) calls api.jina.ai for embeddings, reranking, the model list, chat completions (document OCR) and batch embedding jobs; package `jinareader` (`github.com/psyb0t/go-jina/reader`) calls r.jina.ai to read a web page as markdown, text, HTML or JSON. Every endpoint is a typed `...WithResponse` method on `ClientWithResponses`, auth is a bearer API key set through `WithRequestEditorFn`, and responses decode into `JSON200` and per-status error fields. Use when Go code needs Jina embeddings, a reranker or the Reader API, or already imports go-jina.
+license: MIT
 homepage: https://github.com/psyb0t/go-jina
 user-invocable: true
 metadata:
@@ -9,8 +10,6 @@ metadata:
     requires:
       bins:
         - go
-      env:
-        - JINA_API_KEY
 permissions:
   filesystem: "Guides edits to the Go source of the current project. The library reads and writes no files."
   shell: "The Go toolchain (`go get`, `go build`, `go test`) to add and compile the dependency."
@@ -40,6 +39,22 @@ For install details, the full operation list and the union types, see [reference
 - Web search on s.jina.ai. That API is not in these specs and has no client here.
 - Code that is not Go. Call the HTTP API directly or use another client.
 - Local or self-hosted embedding models. This client only talks to Jina AI's hosted APIs.
+
+## Finding endpoints and types
+
+The examples below cover a few calls. Every operation in the specs has a generated method, and the specs' descriptions are on them as Go doc comments. Look names and fields up instead of guessing. After `go get github.com/psyb0t/go-jina`, from inside your module:
+
+```bash
+go doc github.com/psyb0t/go-jina ClientWithResponsesInterface         # every endpoint method
+go doc github.com/psyb0t/go-jina EmbeddingsV3Request                  # one method, params type or model
+go doc -all github.com/psyb0t/go-jina                                 # the whole package
+go doc github.com/psyb0t/go-jina/reader ClientWithResponsesInterface  # every Reader method
+go doc github.com/psyb0t/go-jina/reader GetTargetUrlParams            # the Reader options
+```
+
+The same documentation is at https://pkg.go.dev/github.com/psyb0t/go-jina.
+
+Method names come from the spec's operation IDs. `<OperationId>WithResponse` takes the context, then the path parameters in order, then `*<OperationId>Params` when the operation has query or header parameters, then the request body when it has one. The `JSON200` field (or `JSON201` and so on, per declared status) holds the decoded body; it is nil for any other status. In `jina` the IDs spell out the path and HTTP method (`EmbeddingsV1EmbeddingsPost`); in `jinareader` the `{url}` path parameter is renamed, so the method is `GetTargetUrl`, not `GetUrl`.
 
 ## Client and auth
 

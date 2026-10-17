@@ -53,7 +53,7 @@ The spec uses `oneOf`/`anyOf` heavily. oapi-codegen turns each into a struct wit
 | `SingleEmbeddingData_Embedding` | `AsSingleEmbeddingDataEmbedding0` (base64 `string`), `AsSingleEmbeddingDataEmbedding1` (`[]float64`), `AsSingleEmbeddingDataEmbedding2` (sparse map) |
 | `EmbeddingResponse_Usage` | `AsEmbeddingUsage`, `AsELSERV2EmbeddingUsage`, `AsBaseUsage` |
 
-Each request variant has its own model enum, for example `EmbeddingsV3RequestModelJinaEmbeddingsV3` or `TextRerankerRequestModelJinaRerankerV2BaseMultilingual`. Grep `client.gen.go` for `RequestModel` to list them. `embedding_type` takes one `EmbeddingType` value or a list of them.
+Each request variant has its own model enum, for example `EmbeddingsV3RequestModelJinaEmbeddingsV3` or `TextRerankerRequestModelJinaRerankerV2BaseMultilingual`. List them with `go doc -all github.com/psyb0t/go-jina | grep 'RequestModel'`. `embedding_type` takes one `EmbeddingType` value or a list of them.
 
 ## Reader (`jinareader`)
 

@@ -17,6 +17,17 @@ There are two packages:
 
 Everything in the `*.gen.go` files is generated. Don't edit them by hand, regenerate them.
 
+## Contents
+
+- [Install](#install)
+- [Usage](#usage)
+  - [Reader](#reader)
+- [Auth](#auth)
+- [Regenerating](#regenerating)
+- [Development](#development)
+- [Agent integrations](#agent-integrations)
+- [License](#license)
+
 ## Install
 
 ```sh
@@ -73,6 +84,8 @@ func main() {
 ```
 
 The same code is in `example_test.go`, so `make test` checks that it compiles.
+
+The full API, with the specs' descriptions as doc comments, is in the [Go reference](https://pkg.go.dev/github.com/psyb0t/go-jina) and in `go doc github.com/psyb0t/go-jina` (`go doc github.com/psyb0t/go-jina/reader` for the Reader package).
 
 The embedding and rerank request bodies are unions with one variant per model family (`EmbeddingsV3Request`, `ClipV2Request`, `TextRerankerRequest`, `RerankerV3Request` and so on). Fill the variant for your model and set it on `EmbeddingRequest` or `RerankingRequest` with the matching `From...` method. Fields that accept more than one shape, such as `input` or a response's `embedding`, work the same way with `From...` and `As...` methods.
 
