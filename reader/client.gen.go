@@ -529,7 +529,7 @@ func NewGetRequest(server string, params *GetParams) (*http.Request, error) {
 
 		if params.Page != nil {
 
-			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "page", *params.Page, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "number", Format: ""}); err != nil {
+			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "page", *params.Page, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "", Format: ""}); err != nil {
 				return nil, err
 			} else {
 				for _, qp := range strings.Split(queryFrag, "&") {
@@ -1724,7 +1724,7 @@ func NewPostRequestWithBody(server string, params *PostParams, contentType strin
 
 		if params.Page != nil {
 
-			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "page", *params.Page, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "number", Format: ""}); err != nil {
+			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "page", *params.Page, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "", Format: ""}); err != nil {
 				return nil, err
 			} else {
 				for _, qp := range strings.Split(queryFrag, "&") {
@@ -3088,7 +3088,7 @@ func NewGetTargetUrlRequest(server string, targetUrl string, params *GetTargetUr
 
 		if params.Page != nil {
 
-			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "page", *params.Page, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "number", Format: ""}); err != nil {
+			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "page", *params.Page, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "", Format: ""}); err != nil {
 				return nil, err
 			} else {
 				for _, qp := range strings.Split(queryFrag, "&") {
@@ -4278,7 +4278,7 @@ func NewPostTargetUrlRequestWithBody(server string, targetUrl string, params *Po
 
 		if params.Page != nil {
 
-			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "page", *params.Page, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "number", Format: ""}); err != nil {
+			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "page", *params.Page, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "", Format: ""}); err != nil {
 				return nil, err
 			} else {
 				for _, qp := range strings.Split(queryFrag, "&") {
@@ -5508,17 +5508,17 @@ type GetResponse struct {
 	// JSON409 the response for an HTTP 409 `application/json` response
 	JSON409 *Get409JSONResponseBody
 	// JSON413 the response for an HTTP 413 `application/json` response
-	JSON413 *TargetFileTooLargeError0x31
+	JSON413 *TargetFileTooLargeError0x32
 	// JSON422 the response for an HTTP 422 `application/json` response
 	JSON422 *Get422JSONResponseBody
 	// JSON429 the response for an HTTP 429 `application/json` response
-	JSON429 *RateLimitTriggeredError0x35
+	JSON429 *RateLimitTriggeredError0x36
 	// JSON451 the response for an HTTP 451 `application/json` response
-	JSON451 *HarmfulContentError0x36
+	JSON451 *HarmfulContentError0x37
 	// JSON500 the response for an HTTP 500 `application/json` response
-	JSON500 *DownstreamServiceError0x37
+	JSON500 *DownstreamServiceError0x38
 	// JSON503 the response for an HTTP 503 `application/json` response
-	JSON503 *ServiceNodeResourceDrainError0x38
+	JSON503 *ServiceNodeResourceDrainError0x39
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
@@ -5552,7 +5552,7 @@ func (r GetResponse) GetJSON409() *Get409JSONResponseBody {
 }
 
 // GetJSON413 returns the response for an HTTP 413 `application/json` response
-func (r GetResponse) GetJSON413() *TargetFileTooLargeError0x31 {
+func (r GetResponse) GetJSON413() *TargetFileTooLargeError0x32 {
 	return r.JSON413
 }
 
@@ -5562,22 +5562,22 @@ func (r GetResponse) GetJSON422() *Get422JSONResponseBody {
 }
 
 // GetJSON429 returns the response for an HTTP 429 `application/json` response
-func (r GetResponse) GetJSON429() *RateLimitTriggeredError0x35 {
+func (r GetResponse) GetJSON429() *RateLimitTriggeredError0x36 {
 	return r.JSON429
 }
 
 // GetJSON451 returns the response for an HTTP 451 `application/json` response
-func (r GetResponse) GetJSON451() *HarmfulContentError0x36 {
+func (r GetResponse) GetJSON451() *HarmfulContentError0x37 {
 	return r.JSON451
 }
 
 // GetJSON500 returns the response for an HTTP 500 `application/json` response
-func (r GetResponse) GetJSON500() *DownstreamServiceError0x37 {
+func (r GetResponse) GetJSON500() *DownstreamServiceError0x38 {
 	return r.JSON500
 }
 
 // GetJSON503 returns the response for an HTTP 503 `application/json` response
-func (r GetResponse) GetJSON503() *ServiceNodeResourceDrainError0x38 {
+func (r GetResponse) GetJSON503() *ServiceNodeResourceDrainError0x39 {
 	return r.JSON503
 }
 
@@ -5633,7 +5633,7 @@ type PostResponse struct {
 		// - Cast to: &lt; **FormattedPageDto** &gt;
 		//
 		// - Member of &lt;ReaderEnvelope&gt;
-		Data *FormattedPageDto0x41 `json:"data,omitempty"`
+		Data *FormattedPageDto0x42 `json:"data,omitempty"`
 
 		// Meta The metadata that the payload sometimes came with
 		//
@@ -5666,17 +5666,17 @@ type PostResponse struct {
 	// JSON409 the response for an HTTP 409 `application/json` response
 	JSON409 *Post409JSONResponseBody
 	// JSON413 the response for an HTTP 413 `application/json` response
-	JSON413 *TargetFileTooLargeError0x31
+	JSON413 *TargetFileTooLargeError0x32
 	// JSON422 the response for an HTTP 422 `application/json` response
 	JSON422 *Post422JSONResponseBody
 	// JSON429 the response for an HTTP 429 `application/json` response
-	JSON429 *RateLimitTriggeredError0x35
+	JSON429 *RateLimitTriggeredError0x36
 	// JSON451 the response for an HTTP 451 `application/json` response
-	JSON451 *HarmfulContentError0x36
+	JSON451 *HarmfulContentError0x37
 	// JSON500 the response for an HTTP 500 `application/json` response
-	JSON500 *DownstreamServiceError0x37
+	JSON500 *DownstreamServiceError0x38
 	// JSON503 the response for an HTTP 503 `application/json` response
-	JSON503 *ServiceNodeResourceDrainError0x38
+	JSON503 *ServiceNodeResourceDrainError0x39
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
@@ -5699,7 +5699,7 @@ func (r PostResponse) GetJSON200() *struct {
 	// - Cast to: &lt; **FormattedPageDto** &gt;
 	//
 	// - Member of &lt;ReaderEnvelope&gt;
-	Data *FormattedPageDto0x41 `json:"data,omitempty"`
+	Data *FormattedPageDto0x42 `json:"data,omitempty"`
 
 	// Meta The metadata that the payload sometimes came with
 	//
@@ -5750,7 +5750,7 @@ func (r PostResponse) GetJSON409() *Post409JSONResponseBody {
 }
 
 // GetJSON413 returns the response for an HTTP 413 `application/json` response
-func (r PostResponse) GetJSON413() *TargetFileTooLargeError0x31 {
+func (r PostResponse) GetJSON413() *TargetFileTooLargeError0x32 {
 	return r.JSON413
 }
 
@@ -5760,22 +5760,22 @@ func (r PostResponse) GetJSON422() *Post422JSONResponseBody {
 }
 
 // GetJSON429 returns the response for an HTTP 429 `application/json` response
-func (r PostResponse) GetJSON429() *RateLimitTriggeredError0x35 {
+func (r PostResponse) GetJSON429() *RateLimitTriggeredError0x36 {
 	return r.JSON429
 }
 
 // GetJSON451 returns the response for an HTTP 451 `application/json` response
-func (r PostResponse) GetJSON451() *HarmfulContentError0x36 {
+func (r PostResponse) GetJSON451() *HarmfulContentError0x37 {
 	return r.JSON451
 }
 
 // GetJSON500 returns the response for an HTTP 500 `application/json` response
-func (r PostResponse) GetJSON500() *DownstreamServiceError0x37 {
+func (r PostResponse) GetJSON500() *DownstreamServiceError0x38 {
 	return r.JSON500
 }
 
 // GetJSON503 returns the response for an HTTP 503 `application/json` response
-func (r PostResponse) GetJSON503() *ServiceNodeResourceDrainError0x38 {
+func (r PostResponse) GetJSON503() *ServiceNodeResourceDrainError0x39 {
 	return r.JSON503
 }
 
@@ -5854,11 +5854,11 @@ type GetEphemeralEncodedFidResponse struct {
 		Status float64 `json:"status"`
 	}
 	// JSON401 the response for an HTTP 401 `application/json` response
-	JSON401 *AuthenticationRequiredError0x2a
+	JSON401 *AuthenticationRequiredError0x2b
 	// JSON403 the response for an HTTP 403 `application/json` response
-	JSON403 *OperationNotAllowedError0x2d
+	JSON403 *OperationNotAllowedError0x2e
 	// JSON404 the response for an HTTP 404 `application/json` response
-	JSON404 *ResourceNotFoundError0x43
+	JSON404 *ResourceNotFoundError0x44
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
@@ -5907,17 +5907,17 @@ func (r GetEphemeralEncodedFidResponse) GetJSON200() *struct {
 }
 
 // GetJSON401 returns the response for an HTTP 401 `application/json` response
-func (r GetEphemeralEncodedFidResponse) GetJSON401() *AuthenticationRequiredError0x2a {
+func (r GetEphemeralEncodedFidResponse) GetJSON401() *AuthenticationRequiredError0x2b {
 	return r.JSON401
 }
 
 // GetJSON403 returns the response for an HTTP 403 `application/json` response
-func (r GetEphemeralEncodedFidResponse) GetJSON403() *OperationNotAllowedError0x2d {
+func (r GetEphemeralEncodedFidResponse) GetJSON403() *OperationNotAllowedError0x2e {
 	return r.JSON403
 }
 
 // GetJSON404 returns the response for an HTTP 404 `application/json` response
-func (r GetEphemeralEncodedFidResponse) GetJSON404() *ResourceNotFoundError0x43 {
+func (r GetEphemeralEncodedFidResponse) GetJSON404() *ResourceNotFoundError0x44 {
 	return r.JSON404
 }
 
@@ -5996,11 +5996,11 @@ type PostEphemeralEncodedFidResponse struct {
 		Status float64 `json:"status"`
 	}
 	// JSON401 the response for an HTTP 401 `application/json` response
-	JSON401 *AuthenticationRequiredError0x2a
+	JSON401 *AuthenticationRequiredError0x2b
 	// JSON403 the response for an HTTP 403 `application/json` response
-	JSON403 *OperationNotAllowedError0x2d
+	JSON403 *OperationNotAllowedError0x2e
 	// JSON404 the response for an HTTP 404 `application/json` response
-	JSON404 *ResourceNotFoundError0x43
+	JSON404 *ResourceNotFoundError0x44
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
@@ -6049,17 +6049,17 @@ func (r PostEphemeralEncodedFidResponse) GetJSON200() *struct {
 }
 
 // GetJSON401 returns the response for an HTTP 401 `application/json` response
-func (r PostEphemeralEncodedFidResponse) GetJSON401() *AuthenticationRequiredError0x2a {
+func (r PostEphemeralEncodedFidResponse) GetJSON401() *AuthenticationRequiredError0x2b {
 	return r.JSON401
 }
 
 // GetJSON403 returns the response for an HTTP 403 `application/json` response
-func (r PostEphemeralEncodedFidResponse) GetJSON403() *OperationNotAllowedError0x2d {
+func (r PostEphemeralEncodedFidResponse) GetJSON403() *OperationNotAllowedError0x2e {
 	return r.JSON403
 }
 
 // GetJSON404 returns the response for an HTTP 404 `application/json` response
-func (r PostEphemeralEncodedFidResponse) GetJSON404() *ResourceNotFoundError0x43 {
+func (r PostEphemeralEncodedFidResponse) GetJSON404() *ResourceNotFoundError0x44 {
 	return r.JSON404
 }
 
@@ -6115,7 +6115,7 @@ type GetTargetUrlResponse struct {
 		// - Cast to: &lt; **FormattedPageDto** &gt;
 		//
 		// - Member of &lt;ReaderEnvelope&gt;
-		Data *FormattedPageDto0x41 `json:"data,omitempty"`
+		Data *FormattedPageDto0x42 `json:"data,omitempty"`
 
 		// Meta The metadata that the payload sometimes came with
 		//
@@ -6148,17 +6148,17 @@ type GetTargetUrlResponse struct {
 	// JSON409 the response for an HTTP 409 `application/json` response
 	JSON409 *GetTargetUrl409JSONResponseBody
 	// JSON413 the response for an HTTP 413 `application/json` response
-	JSON413 *TargetFileTooLargeError0x31
+	JSON413 *TargetFileTooLargeError0x32
 	// JSON422 the response for an HTTP 422 `application/json` response
 	JSON422 *GetTargetUrl422JSONResponseBody
 	// JSON429 the response for an HTTP 429 `application/json` response
-	JSON429 *RateLimitTriggeredError0x35
+	JSON429 *RateLimitTriggeredError0x36
 	// JSON451 the response for an HTTP 451 `application/json` response
-	JSON451 *HarmfulContentError0x36
+	JSON451 *HarmfulContentError0x37
 	// JSON500 the response for an HTTP 500 `application/json` response
-	JSON500 *DownstreamServiceError0x37
+	JSON500 *DownstreamServiceError0x38
 	// JSON503 the response for an HTTP 503 `application/json` response
-	JSON503 *ServiceNodeResourceDrainError0x38
+	JSON503 *ServiceNodeResourceDrainError0x39
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
@@ -6181,7 +6181,7 @@ func (r GetTargetUrlResponse) GetJSON200() *struct {
 	// - Cast to: &lt; **FormattedPageDto** &gt;
 	//
 	// - Member of &lt;ReaderEnvelope&gt;
-	Data *FormattedPageDto0x41 `json:"data,omitempty"`
+	Data *FormattedPageDto0x42 `json:"data,omitempty"`
 
 	// Meta The metadata that the payload sometimes came with
 	//
@@ -6232,7 +6232,7 @@ func (r GetTargetUrlResponse) GetJSON409() *GetTargetUrl409JSONResponseBody {
 }
 
 // GetJSON413 returns the response for an HTTP 413 `application/json` response
-func (r GetTargetUrlResponse) GetJSON413() *TargetFileTooLargeError0x31 {
+func (r GetTargetUrlResponse) GetJSON413() *TargetFileTooLargeError0x32 {
 	return r.JSON413
 }
 
@@ -6242,22 +6242,22 @@ func (r GetTargetUrlResponse) GetJSON422() *GetTargetUrl422JSONResponseBody {
 }
 
 // GetJSON429 returns the response for an HTTP 429 `application/json` response
-func (r GetTargetUrlResponse) GetJSON429() *RateLimitTriggeredError0x35 {
+func (r GetTargetUrlResponse) GetJSON429() *RateLimitTriggeredError0x36 {
 	return r.JSON429
 }
 
 // GetJSON451 returns the response for an HTTP 451 `application/json` response
-func (r GetTargetUrlResponse) GetJSON451() *HarmfulContentError0x36 {
+func (r GetTargetUrlResponse) GetJSON451() *HarmfulContentError0x37 {
 	return r.JSON451
 }
 
 // GetJSON500 returns the response for an HTTP 500 `application/json` response
-func (r GetTargetUrlResponse) GetJSON500() *DownstreamServiceError0x37 {
+func (r GetTargetUrlResponse) GetJSON500() *DownstreamServiceError0x38 {
 	return r.JSON500
 }
 
 // GetJSON503 returns the response for an HTTP 503 `application/json` response
-func (r GetTargetUrlResponse) GetJSON503() *ServiceNodeResourceDrainError0x38 {
+func (r GetTargetUrlResponse) GetJSON503() *ServiceNodeResourceDrainError0x39 {
 	return r.JSON503
 }
 
@@ -6313,7 +6313,7 @@ type PostTargetUrlResponse struct {
 		// - Cast to: &lt; **FormattedPageDto** &gt;
 		//
 		// - Member of &lt;ReaderEnvelope&gt;
-		Data *FormattedPageDto0x41 `json:"data,omitempty"`
+		Data *FormattedPageDto0x42 `json:"data,omitempty"`
 
 		// Meta The metadata that the payload sometimes came with
 		//
@@ -6346,17 +6346,17 @@ type PostTargetUrlResponse struct {
 	// JSON409 the response for an HTTP 409 `application/json` response
 	JSON409 *PostTargetUrl409JSONResponseBody
 	// JSON413 the response for an HTTP 413 `application/json` response
-	JSON413 *TargetFileTooLargeError0x31
+	JSON413 *TargetFileTooLargeError0x32
 	// JSON422 the response for an HTTP 422 `application/json` response
 	JSON422 *PostTargetUrl422JSONResponseBody
 	// JSON429 the response for an HTTP 429 `application/json` response
-	JSON429 *RateLimitTriggeredError0x35
+	JSON429 *RateLimitTriggeredError0x36
 	// JSON451 the response for an HTTP 451 `application/json` response
-	JSON451 *HarmfulContentError0x36
+	JSON451 *HarmfulContentError0x37
 	// JSON500 the response for an HTTP 500 `application/json` response
-	JSON500 *DownstreamServiceError0x37
+	JSON500 *DownstreamServiceError0x38
 	// JSON503 the response for an HTTP 503 `application/json` response
-	JSON503 *ServiceNodeResourceDrainError0x38
+	JSON503 *ServiceNodeResourceDrainError0x39
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
@@ -6379,7 +6379,7 @@ func (r PostTargetUrlResponse) GetJSON200() *struct {
 	// - Cast to: &lt; **FormattedPageDto** &gt;
 	//
 	// - Member of &lt;ReaderEnvelope&gt;
-	Data *FormattedPageDto0x41 `json:"data,omitempty"`
+	Data *FormattedPageDto0x42 `json:"data,omitempty"`
 
 	// Meta The metadata that the payload sometimes came with
 	//
@@ -6430,7 +6430,7 @@ func (r PostTargetUrlResponse) GetJSON409() *PostTargetUrl409JSONResponseBody {
 }
 
 // GetJSON413 returns the response for an HTTP 413 `application/json` response
-func (r PostTargetUrlResponse) GetJSON413() *TargetFileTooLargeError0x31 {
+func (r PostTargetUrlResponse) GetJSON413() *TargetFileTooLargeError0x32 {
 	return r.JSON413
 }
 
@@ -6440,22 +6440,22 @@ func (r PostTargetUrlResponse) GetJSON422() *PostTargetUrl422JSONResponseBody {
 }
 
 // GetJSON429 returns the response for an HTTP 429 `application/json` response
-func (r PostTargetUrlResponse) GetJSON429() *RateLimitTriggeredError0x35 {
+func (r PostTargetUrlResponse) GetJSON429() *RateLimitTriggeredError0x36 {
 	return r.JSON429
 }
 
 // GetJSON451 returns the response for an HTTP 451 `application/json` response
-func (r PostTargetUrlResponse) GetJSON451() *HarmfulContentError0x36 {
+func (r PostTargetUrlResponse) GetJSON451() *HarmfulContentError0x37 {
 	return r.JSON451
 }
 
 // GetJSON500 returns the response for an HTTP 500 `application/json` response
-func (r PostTargetUrlResponse) GetJSON500() *DownstreamServiceError0x37 {
+func (r PostTargetUrlResponse) GetJSON500() *DownstreamServiceError0x38 {
 	return r.JSON500
 }
 
 // GetJSON503 returns the response for an HTTP 503 `application/json` response
-func (r PostTargetUrlResponse) GetJSON503() *ServiceNodeResourceDrainError0x38 {
+func (r PostTargetUrlResponse) GetJSON503() *ServiceNodeResourceDrainError0x39 {
 	return r.JSON503
 }
 
@@ -6725,7 +6725,7 @@ func ParseGetResponse(rsp *http.Response) (*GetResponse, error) {
 		response.JSON409 = &dest
 
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 413:
-		var dest TargetFileTooLargeError0x31
+		var dest TargetFileTooLargeError0x32
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -6739,28 +6739,28 @@ func ParseGetResponse(rsp *http.Response) (*GetResponse, error) {
 		response.JSON422 = &dest
 
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 429:
-		var dest RateLimitTriggeredError0x35
+		var dest RateLimitTriggeredError0x36
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
 		response.JSON429 = &dest
 
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 451:
-		var dest HarmfulContentError0x36
+		var dest HarmfulContentError0x37
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
 		response.JSON451 = &dest
 
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 500:
-		var dest DownstreamServiceError0x37
+		var dest DownstreamServiceError0x38
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
 		response.JSON500 = &dest
 
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 503:
-		var dest ServiceNodeResourceDrainError0x38
+		var dest ServiceNodeResourceDrainError0x39
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -6805,7 +6805,7 @@ func ParsePostResponse(rsp *http.Response) (*PostResponse, error) {
 			// - Cast to: &lt; **FormattedPageDto** &gt;
 			//
 			// - Member of &lt;ReaderEnvelope&gt;
-			Data *FormattedPageDto0x41 `json:"data,omitempty"`
+			Data *FormattedPageDto0x42 `json:"data,omitempty"`
 
 			// Meta The metadata that the payload sometimes came with
 			//
@@ -6868,7 +6868,7 @@ func ParsePostResponse(rsp *http.Response) (*PostResponse, error) {
 		response.JSON409 = &dest
 
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 413:
-		var dest TargetFileTooLargeError0x31
+		var dest TargetFileTooLargeError0x32
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -6882,28 +6882,28 @@ func ParsePostResponse(rsp *http.Response) (*PostResponse, error) {
 		response.JSON422 = &dest
 
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 429:
-		var dest RateLimitTriggeredError0x35
+		var dest RateLimitTriggeredError0x36
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
 		response.JSON429 = &dest
 
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 451:
-		var dest HarmfulContentError0x36
+		var dest HarmfulContentError0x37
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
 		response.JSON451 = &dest
 
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 500:
-		var dest DownstreamServiceError0x37
+		var dest DownstreamServiceError0x38
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
 		response.JSON500 = &dest
 
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 503:
-		var dest ServiceNodeResourceDrainError0x38
+		var dest ServiceNodeResourceDrainError0x39
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -6979,21 +6979,21 @@ func ParseGetEphemeralEncodedFidResponse(rsp *http.Response) (*GetEphemeralEncod
 		response.JSON200 = &dest
 
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 401:
-		var dest AuthenticationRequiredError0x2a
+		var dest AuthenticationRequiredError0x2b
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
 		response.JSON401 = &dest
 
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 403:
-		var dest OperationNotAllowedError0x2d
+		var dest OperationNotAllowedError0x2e
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
 		response.JSON403 = &dest
 
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 404:
-		var dest ResourceNotFoundError0x43
+		var dest ResourceNotFoundError0x44
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -7066,21 +7066,21 @@ func ParsePostEphemeralEncodedFidResponse(rsp *http.Response) (*PostEphemeralEnc
 		response.JSON200 = &dest
 
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 401:
-		var dest AuthenticationRequiredError0x2a
+		var dest AuthenticationRequiredError0x2b
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
 		response.JSON401 = &dest
 
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 403:
-		var dest OperationNotAllowedError0x2d
+		var dest OperationNotAllowedError0x2e
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
 		response.JSON403 = &dest
 
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 404:
-		var dest ResourceNotFoundError0x43
+		var dest ResourceNotFoundError0x44
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -7125,7 +7125,7 @@ func ParseGetTargetUrlResponse(rsp *http.Response) (*GetTargetUrlResponse, error
 			// - Cast to: &lt; **FormattedPageDto** &gt;
 			//
 			// - Member of &lt;ReaderEnvelope&gt;
-			Data *FormattedPageDto0x41 `json:"data,omitempty"`
+			Data *FormattedPageDto0x42 `json:"data,omitempty"`
 
 			// Meta The metadata that the payload sometimes came with
 			//
@@ -7188,7 +7188,7 @@ func ParseGetTargetUrlResponse(rsp *http.Response) (*GetTargetUrlResponse, error
 		response.JSON409 = &dest
 
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 413:
-		var dest TargetFileTooLargeError0x31
+		var dest TargetFileTooLargeError0x32
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -7202,28 +7202,28 @@ func ParseGetTargetUrlResponse(rsp *http.Response) (*GetTargetUrlResponse, error
 		response.JSON422 = &dest
 
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 429:
-		var dest RateLimitTriggeredError0x35
+		var dest RateLimitTriggeredError0x36
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
 		response.JSON429 = &dest
 
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 451:
-		var dest HarmfulContentError0x36
+		var dest HarmfulContentError0x37
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
 		response.JSON451 = &dest
 
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 500:
-		var dest DownstreamServiceError0x37
+		var dest DownstreamServiceError0x38
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
 		response.JSON500 = &dest
 
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 503:
-		var dest ServiceNodeResourceDrainError0x38
+		var dest ServiceNodeResourceDrainError0x39
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -7271,7 +7271,7 @@ func ParsePostTargetUrlResponse(rsp *http.Response) (*PostTargetUrlResponse, err
 			// - Cast to: &lt; **FormattedPageDto** &gt;
 			//
 			// - Member of &lt;ReaderEnvelope&gt;
-			Data *FormattedPageDto0x41 `json:"data,omitempty"`
+			Data *FormattedPageDto0x42 `json:"data,omitempty"`
 
 			// Meta The metadata that the payload sometimes came with
 			//
@@ -7334,7 +7334,7 @@ func ParsePostTargetUrlResponse(rsp *http.Response) (*PostTargetUrlResponse, err
 		response.JSON409 = &dest
 
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 413:
-		var dest TargetFileTooLargeError0x31
+		var dest TargetFileTooLargeError0x32
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -7348,28 +7348,28 @@ func ParsePostTargetUrlResponse(rsp *http.Response) (*PostTargetUrlResponse, err
 		response.JSON422 = &dest
 
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 429:
-		var dest RateLimitTriggeredError0x35
+		var dest RateLimitTriggeredError0x36
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
 		response.JSON429 = &dest
 
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 451:
-		var dest HarmfulContentError0x36
+		var dest HarmfulContentError0x37
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
 		response.JSON451 = &dest
 
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 500:
-		var dest DownstreamServiceError0x37
+		var dest DownstreamServiceError0x38
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
 		response.JSON500 = &dest
 
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 503:
-		var dest ServiceNodeResourceDrainError0x38
+		var dest ServiceNodeResourceDrainError0x39
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}

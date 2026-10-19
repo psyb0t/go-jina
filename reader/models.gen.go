@@ -30,84 +30,57 @@ func (e Enum0x0d) Valid() bool {
 	}
 }
 
-// Defines values for Enum0x0f.
+// Defines values for Enum0x10.
 const (
-	Enum0x0fContent       Enum0x0f = "content"
-	Enum0x0fDoclayout     Enum0x0f = "doclayout"
-	Enum0x0fFrontmatter   Enum0x0f = "frontmatter"
-	Enum0x0fHtml          Enum0x0f = "html"
-	Enum0x0fJinaOcr       Enum0x0f = "jina-ocr"
-	Enum0x0fJinaOcrV1     Enum0x0f = "jina-ocr-v1"
-	Enum0x0fMarkdown      Enum0x0f = "markdown"
-	Enum0x0fPageshot      Enum0x0f = "pageshot"
-	Enum0x0fPpDoclayout   Enum0x0f = "pp-doclayout"
-	Enum0x0fPpDoclayoutv3 Enum0x0f = "pp-doclayoutv3"
-	Enum0x0fReadability   Enum0x0f = "readability"
-	Enum0x0fReaderlmV2    Enum0x0f = "readerlm-v2"
-	Enum0x0fScreenshot    Enum0x0f = "screenshot"
-	Enum0x0fText          Enum0x0f = "text"
-	Enum0x0fVlm           Enum0x0f = "vlm"
+	Enum0x10Content       Enum0x10 = "content"
+	Enum0x10Doclayout     Enum0x10 = "doclayout"
+	Enum0x10Frontmatter   Enum0x10 = "frontmatter"
+	Enum0x10Html          Enum0x10 = "html"
+	Enum0x10JinaOcr       Enum0x10 = "jina-ocr"
+	Enum0x10JinaOcrV1     Enum0x10 = "jina-ocr-v1"
+	Enum0x10Markdown      Enum0x10 = "markdown"
+	Enum0x10Pageshot      Enum0x10 = "pageshot"
+	Enum0x10PpDoclayout   Enum0x10 = "pp-doclayout"
+	Enum0x10PpDoclayoutv3 Enum0x10 = "pp-doclayoutv3"
+	Enum0x10Readability   Enum0x10 = "readability"
+	Enum0x10ReaderlmV2    Enum0x10 = "readerlm-v2"
+	Enum0x10Screenshot    Enum0x10 = "screenshot"
+	Enum0x10Text          Enum0x10 = "text"
+	Enum0x10Vlm           Enum0x10 = "vlm"
 )
 
-// Valid indicates whether the value is a known member of the Enum0x0f enum.
-func (e Enum0x0f) Valid() bool {
+// Valid indicates whether the value is a known member of the Enum0x10 enum.
+func (e Enum0x10) Valid() bool {
 	switch e {
-	case Enum0x0fContent:
+	case Enum0x10Content:
 		return true
-	case Enum0x0fDoclayout:
+	case Enum0x10Doclayout:
 		return true
-	case Enum0x0fFrontmatter:
+	case Enum0x10Frontmatter:
 		return true
-	case Enum0x0fHtml:
+	case Enum0x10Html:
 		return true
-	case Enum0x0fJinaOcr:
+	case Enum0x10JinaOcr:
 		return true
-	case Enum0x0fJinaOcrV1:
+	case Enum0x10JinaOcrV1:
 		return true
-	case Enum0x0fMarkdown:
+	case Enum0x10Markdown:
 		return true
-	case Enum0x0fPageshot:
+	case Enum0x10Pageshot:
 		return true
-	case Enum0x0fPpDoclayout:
+	case Enum0x10PpDoclayout:
 		return true
-	case Enum0x0fPpDoclayoutv3:
+	case Enum0x10PpDoclayoutv3:
 		return true
-	case Enum0x0fReadability:
+	case Enum0x10Readability:
 		return true
-	case Enum0x0fReaderlmV2:
+	case Enum0x10ReaderlmV2:
 		return true
-	case Enum0x0fScreenshot:
+	case Enum0x10Screenshot:
 		return true
-	case Enum0x0fText:
+	case Enum0x10Text:
 		return true
-	case Enum0x0fVlm:
-		return true
-	default:
-		return false
-	}
-}
-
-// Defines values for Enum0x11.
-const (
-	Enum0x11All  Enum0x11 = "all"
-	Enum0x11AllP Enum0x11 = "all_p"
-	Enum0x11Alt  Enum0x11 = "alt"
-	Enum0x11AltP Enum0x11 = "alt_p"
-	Enum0x11None Enum0x11 = "none"
-)
-
-// Valid indicates whether the value is a known member of the Enum0x11 enum.
-func (e Enum0x11) Valid() bool {
-	switch e {
-	case Enum0x11All:
-		return true
-	case Enum0x11AllP:
-		return true
-	case Enum0x11Alt:
-		return true
-	case Enum0x11AltP:
-		return true
-	case Enum0x11None:
+	case Enum0x10Vlm:
 		return true
 	default:
 		return false
@@ -116,25 +89,25 @@ func (e Enum0x11) Valid() bool {
 
 // Defines values for Enum0x12.
 const (
-	Enum0x12Html  Enum0x12 = "html"
-	Enum0x12Image Enum0x12 = "image"
-	Enum0x12Link  Enum0x12 = "link"
-	Enum0x12None  Enum0x12 = "none"
-	Enum0x12Text  Enum0x12 = "text"
+	Enum0x12All  Enum0x12 = "all"
+	Enum0x12AllP Enum0x12 = "all_p"
+	Enum0x12Alt  Enum0x12 = "alt"
+	Enum0x12AltP Enum0x12 = "alt_p"
+	Enum0x12None Enum0x12 = "none"
 )
 
 // Valid indicates whether the value is a known member of the Enum0x12 enum.
 func (e Enum0x12) Valid() bool {
 	switch e {
-	case Enum0x12Html:
+	case Enum0x12All:
 		return true
-	case Enum0x12Image:
+	case Enum0x12AllP:
 		return true
-	case Enum0x12Link:
+	case Enum0x12Alt:
+		return true
+	case Enum0x12AltP:
 		return true
 	case Enum0x12None:
-		return true
-	case Enum0x12Text:
 		return true
 	default:
 		return false
@@ -143,43 +116,25 @@ func (e Enum0x12) Valid() bool {
 
 // Defines values for Enum0x13.
 const (
-	Enum0x13Agent    Enum0x13 = "agent"
-	Enum0x13Index    Enum0x13 = "index"
-	Enum0x13Ocr      Enum0x13 = "ocr"
-	Enum0x13Ocr1     Enum0x13 = "ocr+"
-	Enum0x13Ocr2     Enum0x13 = "ocr++"
-	Enum0x13Pdf      Enum0x13 = "pdf"
-	Enum0x13Pdf1     Enum0x13 = "pdf+"
-	Enum0x13Pdf2     Enum0x13 = "pdf++"
-	Enum0x13Reader   Enum0x13 = "reader"
-	Enum0x13Research Enum0x13 = "research"
-	Enum0x13Spider   Enum0x13 = "spider"
+	Enum0x13Html  Enum0x13 = "html"
+	Enum0x13Image Enum0x13 = "image"
+	Enum0x13Link  Enum0x13 = "link"
+	Enum0x13None  Enum0x13 = "none"
+	Enum0x13Text  Enum0x13 = "text"
 )
 
 // Valid indicates whether the value is a known member of the Enum0x13 enum.
 func (e Enum0x13) Valid() bool {
 	switch e {
-	case Enum0x13Agent:
+	case Enum0x13Html:
 		return true
-	case Enum0x13Index:
+	case Enum0x13Image:
 		return true
-	case Enum0x13Ocr:
+	case Enum0x13Link:
 		return true
-	case Enum0x13Ocr1:
+	case Enum0x13None:
 		return true
-	case Enum0x13Ocr2:
-		return true
-	case Enum0x13Pdf:
-		return true
-	case Enum0x13Pdf1:
-		return true
-	case Enum0x13Pdf2:
-		return true
-	case Enum0x13Reader:
-		return true
-	case Enum0x13Research:
-		return true
-	case Enum0x13Spider:
+	case Enum0x13Text:
 		return true
 	default:
 		return false
@@ -188,22 +143,43 @@ func (e Enum0x13) Valid() bool {
 
 // Defines values for Enum0x14.
 const (
-	Enum0x14All    Enum0x14 = "all"
-	Enum0x14GptOss Enum0x14 = "gpt-oss"
-	Enum0x14None   Enum0x14 = "none"
-	Enum0x14Text   Enum0x14 = "text"
+	Enum0x14Agent    Enum0x14 = "agent"
+	Enum0x14Index    Enum0x14 = "index"
+	Enum0x14Ocr      Enum0x14 = "ocr"
+	Enum0x14Ocr1     Enum0x14 = "ocr+"
+	Enum0x14Ocr2     Enum0x14 = "ocr++"
+	Enum0x14Pdf      Enum0x14 = "pdf"
+	Enum0x14Pdf1     Enum0x14 = "pdf+"
+	Enum0x14Pdf2     Enum0x14 = "pdf++"
+	Enum0x14Reader   Enum0x14 = "reader"
+	Enum0x14Research Enum0x14 = "research"
+	Enum0x14Spider   Enum0x14 = "spider"
 )
 
 // Valid indicates whether the value is a known member of the Enum0x14 enum.
 func (e Enum0x14) Valid() bool {
 	switch e {
-	case Enum0x14All:
+	case Enum0x14Agent:
 		return true
-	case Enum0x14GptOss:
+	case Enum0x14Index:
 		return true
-	case Enum0x14None:
+	case Enum0x14Ocr:
 		return true
-	case Enum0x14Text:
+	case Enum0x14Ocr1:
+		return true
+	case Enum0x14Ocr2:
+		return true
+	case Enum0x14Pdf:
+		return true
+	case Enum0x14Pdf1:
+		return true
+	case Enum0x14Pdf2:
+		return true
+	case Enum0x14Reader:
+		return true
+	case Enum0x14Research:
+		return true
+	case Enum0x14Spider:
 		return true
 	default:
 		return false
@@ -212,61 +188,67 @@ func (e Enum0x14) Valid() bool {
 
 // Defines values for Enum0x15.
 const (
-	Enum0x15Lax    Enum0x15 = "Lax"
-	Enum0x15None   Enum0x15 = "None"
-	Enum0x15Strict Enum0x15 = "Strict"
+	Enum0x15All    Enum0x15 = "all"
+	Enum0x15GptOss Enum0x15 = "gpt-oss"
+	Enum0x15None   Enum0x15 = "none"
+	Enum0x15Text   Enum0x15 = "text"
 )
 
 // Valid indicates whether the value is a known member of the Enum0x15 enum.
 func (e Enum0x15) Valid() bool {
 	switch e {
-	case Enum0x15Lax:
+	case Enum0x15All:
+		return true
+	case Enum0x15GptOss:
 		return true
 	case Enum0x15None:
 		return true
-	case Enum0x15Strict:
+	case Enum0x15Text:
 		return true
 	default:
 		return false
 	}
 }
 
-// Defines values for Enum0x1a.
+// Defines values for Enum0x16.
 const (
-	Enum0x1aAuto               Enum0x1a = "auto"
-	Enum0x1aBrowser            Enum0x1a = "browser"
-	Enum0x1aCfBrowserRendering Enum0x1a = "cf-browser-rendering"
-	Enum0x1aCurl               Enum0x1a = "curl"
+	Enum0x16Lax    Enum0x16 = "Lax"
+	Enum0x16None   Enum0x16 = "None"
+	Enum0x16Strict Enum0x16 = "Strict"
 )
 
-// Valid indicates whether the value is a known member of the Enum0x1a enum.
-func (e Enum0x1a) Valid() bool {
+// Valid indicates whether the value is a known member of the Enum0x16 enum.
+func (e Enum0x16) Valid() bool {
 	switch e {
-	case Enum0x1aAuto:
+	case Enum0x16Lax:
 		return true
-	case Enum0x1aBrowser:
+	case Enum0x16None:
 		return true
-	case Enum0x1aCfBrowserRendering:
-		return true
-	case Enum0x1aCurl:
+	case Enum0x16Strict:
 		return true
 	default:
 		return false
 	}
 }
 
-// Defines values for Enum0x1c.
+// Defines values for Enum0x1b.
 const (
-	Enum0x1cAtx    Enum0x1c = "atx"
-	Enum0x1cSetext Enum0x1c = "setext"
+	Enum0x1bAuto               Enum0x1b = "auto"
+	Enum0x1bBrowser            Enum0x1b = "browser"
+	Enum0x1bCfBrowserRendering Enum0x1b = "cf-browser-rendering"
+	Enum0x1bCurl               Enum0x1b = "curl"
 )
 
-// Valid indicates whether the value is a known member of the Enum0x1c enum.
-func (e Enum0x1c) Valid() bool {
+// Valid indicates whether the value is a known member of the Enum0x1b enum.
+func (e Enum0x1b) Valid() bool {
 	switch e {
-	case Enum0x1cAtx:
+	case Enum0x1bAuto:
 		return true
-	case Enum0x1cSetext:
+	case Enum0x1bBrowser:
+		return true
+	case Enum0x1bCfBrowserRendering:
+		return true
+	case Enum0x1bCurl:
 		return true
 	default:
 		return false
@@ -275,19 +257,16 @@ func (e Enum0x1c) Valid() bool {
 
 // Defines values for Enum0x1d.
 const (
-	Enum0x1dAsterisk Enum0x1d = "*"
-	Enum0x1dMinus    Enum0x1d = "-"
-	Enum0x1dPlus     Enum0x1d = "+"
+	Enum0x1dAtx    Enum0x1d = "atx"
+	Enum0x1dSetext Enum0x1d = "setext"
 )
 
 // Valid indicates whether the value is a known member of the Enum0x1d enum.
 func (e Enum0x1d) Valid() bool {
 	switch e {
-	case Enum0x1dAsterisk:
+	case Enum0x1dAtx:
 		return true
-	case Enum0x1dMinus:
-		return true
-	case Enum0x1dPlus:
+	case Enum0x1dSetext:
 		return true
 	default:
 		return false
@@ -296,8 +275,9 @@ func (e Enum0x1d) Valid() bool {
 
 // Defines values for Enum0x1e.
 const (
-	Enum0x1eAsterisk   Enum0x1e = "*"
-	Enum0x1eUnderscore Enum0x1e = "_"
+	Enum0x1eAsterisk Enum0x1e = "*"
+	Enum0x1eMinus    Enum0x1e = "-"
+	Enum0x1ePlus     Enum0x1e = "+"
 )
 
 // Valid indicates whether the value is a known member of the Enum0x1e enum.
@@ -305,7 +285,9 @@ func (e Enum0x1e) Valid() bool {
 	switch e {
 	case Enum0x1eAsterisk:
 		return true
-	case Enum0x1eUnderscore:
+	case Enum0x1eMinus:
+		return true
+	case Enum0x1ePlus:
 		return true
 	default:
 		return false
@@ -314,16 +296,16 @@ func (e Enum0x1e) Valid() bool {
 
 // Defines values for Enum0x1f.
 const (
-	Enum0x1fAsteriskAsterisk     Enum0x1f = "**"
-	Enum0x1fUnderscoreUnderscore Enum0x1f = "__"
+	Enum0x1fAsterisk   Enum0x1f = "*"
+	Enum0x1fUnderscore Enum0x1f = "_"
 )
 
 // Valid indicates whether the value is a known member of the Enum0x1f enum.
 func (e Enum0x1f) Valid() bool {
 	switch e {
-	case Enum0x1fAsteriskAsterisk:
+	case Enum0x1fAsterisk:
 		return true
-	case Enum0x1fUnderscoreUnderscore:
+	case Enum0x1fUnderscore:
 		return true
 	default:
 		return false
@@ -332,19 +314,16 @@ func (e Enum0x1f) Valid() bool {
 
 // Defines values for Enum0x20.
 const (
-	Enum0x20Discarded  Enum0x20 = "discarded"
-	Enum0x20Inlined    Enum0x20 = "inlined"
-	Enum0x20Referenced Enum0x20 = "referenced"
+	Enum0x20AsteriskAsterisk     Enum0x20 = "**"
+	Enum0x20UnderscoreUnderscore Enum0x20 = "__"
 )
 
 // Valid indicates whether the value is a known member of the Enum0x20 enum.
 func (e Enum0x20) Valid() bool {
 	switch e {
-	case Enum0x20Discarded:
+	case Enum0x20AsteriskAsterisk:
 		return true
-	case Enum0x20Inlined:
-		return true
-	case Enum0x20Referenced:
+	case Enum0x20UnderscoreUnderscore:
 		return true
 	default:
 		return false
@@ -353,52 +332,43 @@ func (e Enum0x20) Valid() bool {
 
 // Defines values for Enum0x21.
 const (
-	Enum0x21Collapsed Enum0x21 = "collapsed"
-	Enum0x21Discarded Enum0x21 = "discarded"
-	Enum0x21Full      Enum0x21 = "full"
-	Enum0x21Shortcut  Enum0x21 = "shortcut"
+	Enum0x21Discarded  Enum0x21 = "discarded"
+	Enum0x21Inlined    Enum0x21 = "inlined"
+	Enum0x21Referenced Enum0x21 = "referenced"
 )
 
 // Valid indicates whether the value is a known member of the Enum0x21 enum.
 func (e Enum0x21) Valid() bool {
 	switch e {
-	case Enum0x21Collapsed:
-		return true
 	case Enum0x21Discarded:
 		return true
-	case Enum0x21Full:
+	case Enum0x21Inlined:
 		return true
-	case Enum0x21Shortcut:
+	case Enum0x21Referenced:
 		return true
 	default:
 		return false
 	}
 }
 
-// Defines values for Enum0x24.
+// Defines values for Enum0x22.
 const (
-	Enum0x24Html           Enum0x24 = "html"
-	Enum0x24MediaIdle      Enum0x24 = "media-idle"
-	Enum0x24MutationIdle   Enum0x24 = "mutation-idle"
-	Enum0x24NetworkIdle    Enum0x24 = "network-idle"
-	Enum0x24ResourceIdle   Enum0x24 = "resource-idle"
-	Enum0x24VisibleContent Enum0x24 = "visible-content"
+	Enum0x22Collapsed Enum0x22 = "collapsed"
+	Enum0x22Discarded Enum0x22 = "discarded"
+	Enum0x22Full      Enum0x22 = "full"
+	Enum0x22Shortcut  Enum0x22 = "shortcut"
 )
 
-// Valid indicates whether the value is a known member of the Enum0x24 enum.
-func (e Enum0x24) Valid() bool {
+// Valid indicates whether the value is a known member of the Enum0x22 enum.
+func (e Enum0x22) Valid() bool {
 	switch e {
-	case Enum0x24Html:
+	case Enum0x22Collapsed:
 		return true
-	case Enum0x24MediaIdle:
+	case Enum0x22Discarded:
 		return true
-	case Enum0x24MutationIdle:
+	case Enum0x22Full:
 		return true
-	case Enum0x24NetworkIdle:
-		return true
-	case Enum0x24ResourceIdle:
-		return true
-	case Enum0x24VisibleContent:
+	case Enum0x22Shortcut:
 		return true
 	default:
 		return false
@@ -407,54 +377,84 @@ func (e Enum0x24) Valid() bool {
 
 // Defines values for Enum0x25.
 const (
-	Enum0x25H1         Enum0x25 = "h1"
-	Enum0x25H2         Enum0x25 = "h2"
-	Enum0x25H3         Enum0x25 = "h3"
-	Enum0x25H4         Enum0x25 = "h4"
-	Enum0x25H5         Enum0x25 = "h5"
-	Enum0x25S1         Enum0x25 = "s1"
-	Enum0x25S2         Enum0x25 = "s2"
-	Enum0x25S3         Enum0x25 = "s3"
-	Enum0x25S4         Enum0x25 = "s4"
-	Enum0x25S5         Enum0x25 = "s5"
-	Enum0x25Structured Enum0x25 = "structured"
-	Enum0x25True       Enum0x25 = "true"
+	Enum0x25Html           Enum0x25 = "html"
+	Enum0x25MediaIdle      Enum0x25 = "media-idle"
+	Enum0x25MutationIdle   Enum0x25 = "mutation-idle"
+	Enum0x25NetworkIdle    Enum0x25 = "network-idle"
+	Enum0x25ResourceIdle   Enum0x25 = "resource-idle"
+	Enum0x25VisibleContent Enum0x25 = "visible-content"
 )
 
 // Valid indicates whether the value is a known member of the Enum0x25 enum.
 func (e Enum0x25) Valid() bool {
 	switch e {
-	case Enum0x25H1:
+	case Enum0x25Html:
 		return true
-	case Enum0x25H2:
+	case Enum0x25MediaIdle:
 		return true
-	case Enum0x25H3:
+	case Enum0x25MutationIdle:
 		return true
-	case Enum0x25H4:
+	case Enum0x25NetworkIdle:
 		return true
-	case Enum0x25H5:
+	case Enum0x25ResourceIdle:
 		return true
-	case Enum0x25S1:
-		return true
-	case Enum0x25S2:
-		return true
-	case Enum0x25S3:
-		return true
-	case Enum0x25S4:
-		return true
-	case Enum0x25S5:
-		return true
-	case Enum0x25Structured:
-		return true
-	case Enum0x25True:
+	case Enum0x25VisibleContent:
 		return true
 	default:
 		return false
 	}
 }
 
-// AbuseAlleviationError0x2e defines model for AbuseAlleviationError@0x2e.
-type AbuseAlleviationError0x2e struct {
+// Defines values for Enum0x26.
+const (
+	Enum0x26H1         Enum0x26 = "h1"
+	Enum0x26H2         Enum0x26 = "h2"
+	Enum0x26H3         Enum0x26 = "h3"
+	Enum0x26H4         Enum0x26 = "h4"
+	Enum0x26H5         Enum0x26 = "h5"
+	Enum0x26S1         Enum0x26 = "s1"
+	Enum0x26S2         Enum0x26 = "s2"
+	Enum0x26S3         Enum0x26 = "s3"
+	Enum0x26S4         Enum0x26 = "s4"
+	Enum0x26S5         Enum0x26 = "s5"
+	Enum0x26Structured Enum0x26 = "structured"
+	Enum0x26True       Enum0x26 = "true"
+)
+
+// Valid indicates whether the value is a known member of the Enum0x26 enum.
+func (e Enum0x26) Valid() bool {
+	switch e {
+	case Enum0x26H1:
+		return true
+	case Enum0x26H2:
+		return true
+	case Enum0x26H3:
+		return true
+	case Enum0x26H4:
+		return true
+	case Enum0x26H5:
+		return true
+	case Enum0x26S1:
+		return true
+	case Enum0x26S2:
+		return true
+	case Enum0x26S3:
+		return true
+	case Enum0x26S4:
+		return true
+	case Enum0x26S5:
+		return true
+	case Enum0x26Structured:
+		return true
+	case Enum0x26True:
+		return true
+	default:
+		return false
+	}
+}
+
+// AbuseAlleviationError0x2f defines model for AbuseAlleviationError@0x2f.
+type AbuseAlleviationError0x2f struct {
 	// Code [REQUIRED]
 	//
 	// Expect HTTP response codes
@@ -491,17 +491,17 @@ type AbuseAlleviationError0x2e struct {
 	AdditionalProperties map[string]interface{} `json:"-"`
 }
 
-// Arraystring0x3a defines model for Array<string>@0x3a.
-type Arraystring0x3a = []string
+// Arraystring0x3b defines model for Array<string>@0x3b.
+type Arraystring0x3b = []string
 
-// Arraystring0x3c defines model for Array<string>@0x3c.
-type Arraystring0x3c = []string
+// Arraystring0x3d defines model for Array<string>@0x3d.
+type Arraystring0x3d = []string
 
-// Arraystring0x3e defines model for Array<string>@0x3e.
-type Arraystring0x3e = []string
+// Arraystring0x3f defines model for Array<string>@0x3f.
+type Arraystring0x3f = []string
 
-// AssertionFailureError0x34 defines model for AssertionFailureError@0x34.
-type AssertionFailureError0x34 struct {
+// AssertionFailureError0x35 defines model for AssertionFailureError@0x35.
+type AssertionFailureError0x35 struct {
 	// Code [REQUIRED]
 	//
 	// Expect HTTP response codes
@@ -538,8 +538,8 @@ type AssertionFailureError0x34 struct {
 	AdditionalProperties map[string]interface{} `json:"-"`
 }
 
-// AuthenticationFailedError0x29 defines model for AuthenticationFailedError@0x29.
-type AuthenticationFailedError0x29 struct {
+// AuthenticationFailedError0x2a defines model for AuthenticationFailedError@0x2a.
+type AuthenticationFailedError0x2a struct {
 	// Code [REQUIRED]
 	//
 	// Expect HTTP response codes
@@ -576,8 +576,8 @@ type AuthenticationFailedError0x29 struct {
 	AdditionalProperties map[string]interface{} `json:"-"`
 }
 
-// AuthenticationRequiredError0x2a defines model for AuthenticationRequiredError@0x2a.
-type AuthenticationRequiredError0x2a struct {
+// AuthenticationRequiredError0x2b defines model for AuthenticationRequiredError@0x2b.
+type AuthenticationRequiredError0x2b struct {
 	// Code [REQUIRED]
 	//
 	// Expect HTTP response codes
@@ -614,8 +614,8 @@ type AuthenticationRequiredError0x2a struct {
 	AdditionalProperties map[string]interface{} `json:"-"`
 }
 
-// BudgetExceededError0x30 defines model for BudgetExceededError@0x30.
-type BudgetExceededError0x30 struct {
+// BudgetExceededError0x31 defines model for BudgetExceededError@0x31.
+type BudgetExceededError0x31 struct {
 	// Code [REQUIRED]
 	//
 	// Expect HTTP response codes
@@ -652,8 +652,8 @@ type BudgetExceededError0x30 struct {
 	AdditionalProperties map[string]interface{} `json:"-"`
 }
 
-// Cookie0x16 defines model for Cookie@0x16.
-type Cookie0x16 struct {
+// Cookie0x17 defines model for Cookie@0x17.
+type Cookie0x17 struct {
 	// Domain - Cast to: &lt; **string** &gt;
 	//
 	// - Member of &lt;Cookie&gt;
@@ -686,7 +686,7 @@ type Cookie0x16 struct {
 	// SameSite - Cast to: &lt; **&quot;Strict&quot; | &quot;Lax&quot; | &quot;None&quot;|string** &gt;
 	//
 	// - Member of &lt;Cookie&gt;
-	SameSite *Cookie0x16_SameSite `json:"sameSite,omitempty"`
+	SameSite *Cookie0x17_SameSite `json:"sameSite,omitempty"`
 
 	// Secure - Cast to: &lt; **boolean** &gt;
 	//
@@ -701,21 +701,21 @@ type Cookie0x16 struct {
 	Value string `json:"value"`
 }
 
-// Cookie0x16SameSite0 Enum<"Strict" | "Lax" | "None">
-type Cookie0x16SameSite0 = Enum0x15
+// Cookie0x17SameSite0 Enum<"Strict" | "Lax" | "None">
+type Cookie0x17SameSite0 = Enum0x16
 
-// Cookie0x16SameSite1 defines model for Cookie0x16.SameSite.1.
-type Cookie0x16SameSite1 = string
+// Cookie0x17SameSite1 defines model for Cookie0x17.SameSite.1.
+type Cookie0x17SameSite1 = string
 
-// Cookie0x16_SameSite - Cast to: &lt; **&quot;Strict&quot; | &quot;Lax&quot; | &quot;None&quot;|string** &gt;
+// Cookie0x17_SameSite - Cast to: &lt; **&quot;Strict&quot; | &quot;Lax&quot; | &quot;None&quot;|string** &gt;
 //
 // - Member of &lt;Cookie&gt;
-type Cookie0x16_SameSite struct {
+type Cookie0x17_SameSite struct {
 	union json.RawMessage
 }
 
-// CrawlerOptions0x26 defines model for CrawlerOptions@0x26.
-type CrawlerOptions0x26 struct {
+// CrawlerOptions0x27 defines model for CrawlerOptions@0x27.
+type CrawlerOptions0x27 struct {
 	// AssertStatusCode - Cast to: &lt; **number** &gt;
 	//
 	// - Member of &lt;CrawlerOptions&gt;
@@ -746,7 +746,7 @@ type CrawlerOptions0x26 struct {
 	// Engine - Cast to: &lt; **&quot;auto&quot; | &quot;browser&quot; | &quot;curl&quot; | &quot;cf-browser-rendering&quot;|string** &gt;
 	//
 	// - Member of &lt;CrawlerOptions&gt;
-	Engine *CrawlerOptions0x26_Engine `json:"engine,omitempty"`
+	Engine *CrawlerOptions0x27_Engine `json:"engine,omitempty"`
 
 	// ExportStorageState - Cast to: &lt; **PseudoBooleanLoose** &gt;
 	//
@@ -758,7 +758,7 @@ type CrawlerOptions0x26 struct {
 	// - Cast to: &lt; **FancyFile|string** &gt;
 	//
 	// - Member of &lt;CrawlerOptions&gt;
-	File *CrawlerOptions0x26_File `json:"file,omitempty"`
+	File *CrawlerOptions0x27_File `json:"file,omitempty"`
 
 	// Html - Cast to: &lt; **string** &gt;
 	//
@@ -800,12 +800,12 @@ type CrawlerOptions0x26 struct {
 	// Markdown - Cast to: &lt; **TurnDownTweakableOptions** &gt;
 	//
 	// - Member of &lt;CrawlerOptions&gt;
-	Markdown *TurnDownTweakableOptions0x22 `json:"markdown,omitempty"`
+	Markdown *TurnDownTweakableOptions0x23 `json:"markdown,omitempty"`
 
 	// MarkdownChunking - Cast to: &lt; **&quot;true&quot; | &quot;h1&quot; | &quot;h2&quot; | &quot;h3&quot; | &quot;h4&quot; | &quot;h5&quot; | &quot;structured&quot; | &quot;s1&quot; | &quot;s2&quot; | &quot;s3&quot; | &quot;s4&quot; | &quot;s5&quot;|string** &gt;
 	//
 	// - Member of &lt;CrawlerOptions&gt;
-	MarkdownChunking *CrawlerOptions0x26_MarkdownChunking `json:"markdownChunking,omitempty"`
+	MarkdownChunking *CrawlerOptions0x27_MarkdownChunking `json:"markdownChunking,omitempty"`
 
 	// MaxTokens - Cast to: &lt; **number** &gt;
 	//
@@ -822,7 +822,7 @@ type CrawlerOptions0x26 struct {
 	// NoGfm - Cast to: &lt; **PseudoBoolean|string** &gt;
 	//
 	// - Member of &lt;CrawlerOptions&gt;
-	NoGfm *CrawlerOptions0x26_NoGfm `json:"noGfm,omitempty"`
+	NoGfm *CrawlerOptions0x27_NoGfm `json:"noGfm,omitempty"`
 
 	// NoServiceWorker - Cast to: &lt; **PseudoBooleanLoose** &gt;
 	//
@@ -832,23 +832,21 @@ type CrawlerOptions0x26 struct {
 	// Ocr - Cast to: &lt; **OCRPreferences** &gt;
 	//
 	// - Member of &lt;CrawlerOptions&gt;
-	Ocr *OCRPreferences0x23 `json:"ocr,omitempty"`
+	Ocr *OCRPreferences0x24 `json:"ocr,omitempty"`
 
-	// Page Steer which page to return for document files (1-indexed).
+	// Page Steer which page(s) to return for document files. See PageSelection.
 	//
-	// - Cast to: &lt; **number** &gt;
+	// - Cast to: &lt; **PageSelection** &gt;
 	//
 	// - Member of &lt;CrawlerOptions&gt;
-	//
-	// - Some validators will be applied on value(s): (v) =&gt; Number.isInteger(v) &amp;&amp; v &gt;= 1
-	Page *float64 `json:"page,omitempty"`
+	Page *PageSelection0x0f `json:"page,omitempty"`
 
 	// Pdf Base64 encoded PDF.
 	//
 	// - Cast to: &lt; **FancyFile|string** &gt;
 	//
 	// - Member of &lt;CrawlerOptions&gt;
-	Pdf *CrawlerOptions0x26_Pdf `json:"pdf,omitempty"`
+	Pdf *CrawlerOptions0x27_Pdf `json:"pdf,omitempty"`
 
 	// PreloadUrl - Cast to: &lt; **string** &gt;
 	//
@@ -858,7 +856,7 @@ type CrawlerOptions0x26 struct {
 	// Preset - Cast to: &lt; **&quot;reader&quot; | &quot;index&quot; | &quot;research&quot; | &quot;agent&quot; | &quot;spider&quot; | &quot;ocr&quot; | &quot;ocr+&quot; | &quot;ocr++&quot; | &quot;pdf&quot; | &quot;pdf+&quot; | &quot;pdf++&quot;** &gt;
 	//
 	// - Member of &lt;CrawlerOptions&gt;
-	Preset *Enum0x13 `json:"preset,omitempty"`
+	Preset *Enum0x14 `json:"preset,omitempty"`
 
 	// Proxy - Cast to: &lt; **string** &gt;
 	//
@@ -893,35 +891,35 @@ type CrawlerOptions0x26 struct {
 	// RespondTiming - Cast to: &lt; **&quot;html&quot; | &quot;visible-content&quot; | &quot;mutation-idle&quot; | &quot;resource-idle&quot; | &quot;media-idle&quot; | &quot;network-idle&quot;** &gt;
 	//
 	// - Member of &lt;CrawlerOptions&gt;
-	RespondTiming *Enum0x24 `json:"respondTiming,omitempty"`
+	RespondTiming *Enum0x25 `json:"respondTiming,omitempty"`
 
 	// RespondWith - Cast to: &lt; **&quot;content&quot; | &quot;markdown&quot; | &quot;html&quot; | &quot;text&quot; | &quot;pageshot&quot; | &quot;screenshot&quot; | &quot;vlm&quot; | &quot;readerlm-v2&quot; | &quot;frontmatter&quot; | &quot;readability&quot; | &quot;...|string** &gt;
 	//
 	// - Member of &lt;CrawlerOptions&gt;
 	//
 	// - Defaults to: &#39;content&#39;
-	RespondWith *CrawlerOptions0x26_RespondWith `json:"respondWith,omitempty"`
+	RespondWith *CrawlerOptions0x27_RespondWith `json:"respondWith,omitempty"`
 
 	// RetainImages - Cast to: &lt; **&quot;none&quot; | &quot;all&quot; | &quot;alt&quot; | &quot;all_p&quot; | &quot;alt_p&quot;** &gt;
 	//
 	// - Member of &lt;CrawlerOptions&gt;
 	//
 	// - Defaults to: &#39;all&#39;
-	RetainImages *Enum0x11 `json:"retainImages,omitempty"`
+	RetainImages *Enum0x12 `json:"retainImages,omitempty"`
 
 	// RetainLinks - Cast to: &lt; **&quot;none&quot; | &quot;all&quot; | &quot;text&quot; | &quot;gpt-oss&quot;** &gt;
 	//
 	// - Member of &lt;CrawlerOptions&gt;
 	//
 	// - Defaults to: &#39;all&#39;
-	RetainLinks *Enum0x14 `json:"retainLinks,omitempty"`
+	RetainLinks *Enum0x15 `json:"retainLinks,omitempty"`
 
 	// RetainMedia - Cast to: &lt; **&quot;none&quot; | &quot;text&quot; | &quot;link&quot; | &quot;image&quot; | &quot;html&quot;** &gt;
 	//
 	// - Member of &lt;CrawlerOptions&gt;
 	//
 	// - Defaults to: &#39;link&#39;
-	RetainMedia *Enum0x12 `json:"retainMedia,omitempty"`
+	RetainMedia *Enum0x13 `json:"retainMedia,omitempty"`
 
 	// RobotsTxt - Cast to: &lt; **string** &gt;
 	//
@@ -931,7 +929,7 @@ type CrawlerOptions0x26 struct {
 	// SetCookies - Cast to: &lt; **Array&lt;object|string&gt;** &gt;
 	//
 	// - Member of &lt;CrawlerOptions&gt;
-	SetCookies *[]CrawlerOptions0x26_SetCookies_Item `json:"setCookies,omitempty"`
+	SetCookies *[]CrawlerOptions0x27_SetCookies_Item `json:"setCookies,omitempty"`
 
 	// SkipCertVerification - Cast to: &lt; **PseudoBooleanLoose** &gt;
 	//
@@ -941,7 +939,7 @@ type CrawlerOptions0x26 struct {
 	// StorageState - Cast to: &lt; **StorageState** &gt;
 	//
 	// - Member of &lt;CrawlerOptions&gt;
-	StorageState *StorageState0x19 `json:"storageState,omitempty"`
+	StorageState *StorageState0x1a `json:"storageState,omitempty"`
 
 	// TargetSelector - Cast to: &lt; **Array&lt;string&gt;** &gt;
 	//
@@ -973,7 +971,7 @@ type CrawlerOptions0x26 struct {
 	// Viewport - Cast to: &lt; **Viewport** &gt;
 	//
 	// - Member of &lt;CrawlerOptions&gt;
-	Viewport *Viewport0x1b `json:"viewport,omitempty"`
+	Viewport *Viewport0x1c `json:"viewport,omitempty"`
 
 	// WaitForSelector - Cast to: &lt; **Array&lt;string&gt;** &gt;
 	//
@@ -983,12 +981,12 @@ type CrawlerOptions0x26 struct {
 	// WithGeneratedAlt - Cast to: &lt; **PseudoBoolean** &gt;
 	//
 	// - Member of &lt;CrawlerOptions&gt;
-	WithGeneratedAlt *PseudoBoolean0x10 `json:"withGeneratedAlt,omitempty"`
+	WithGeneratedAlt *PseudoBoolean0x11 `json:"withGeneratedAlt,omitempty"`
 
 	// WithIframe - Cast to: &lt; **PseudoBoolean|string** &gt;
 	//
 	// - Member of &lt;CrawlerOptions&gt;
-	WithIframe *CrawlerOptions0x26_WithIframe `json:"withIframe,omitempty"`
+	WithIframe *CrawlerOptions0x27_WithIframe `json:"withIframe,omitempty"`
 
 	// WithImagesSummary - Cast to: &lt; **PseudoBooleanLoose** &gt;
 	//
@@ -998,7 +996,7 @@ type CrawlerOptions0x26 struct {
 	// WithLinksSummary - Cast to: &lt; **PseudoBoolean|string** &gt;
 	//
 	// - Member of &lt;CrawlerOptions&gt;
-	WithLinksSummary *CrawlerOptions0x26_WithLinksSummary `json:"withLinksSummary,omitempty"`
+	WithLinksSummary *CrawlerOptions0x27_WithLinksSummary `json:"withLinksSummary,omitempty"`
 
 	// WithShadowDom - Cast to: &lt; **PseudoBooleanLoose** &gt;
 	//
@@ -1011,129 +1009,129 @@ type CrawlerOptions0x26 struct {
 	ZeroDataRetention *PseudoBooleanLoose0x0c `json:"zeroDataRetention,omitempty"`
 }
 
-// CrawlerOptions0x26Engine0 Enum<"auto" | "browser" | "curl" | "cf-browser-rendering">
-type CrawlerOptions0x26Engine0 = Enum0x1a
+// CrawlerOptions0x27Engine0 Enum<"auto" | "browser" | "curl" | "cf-browser-rendering">
+type CrawlerOptions0x27Engine0 = Enum0x1b
 
-// CrawlerOptions0x26Engine1 defines model for CrawlerOptions0x26.Engine.1.
-type CrawlerOptions0x26Engine1 = string
+// CrawlerOptions0x27Engine1 defines model for CrawlerOptions0x27.Engine.1.
+type CrawlerOptions0x27Engine1 = string
 
-// CrawlerOptions0x26_Engine - Cast to: &lt; **&quot;auto&quot; | &quot;browser&quot; | &quot;curl&quot; | &quot;cf-browser-rendering&quot;|string** &gt;
+// CrawlerOptions0x27_Engine - Cast to: &lt; **&quot;auto&quot; | &quot;browser&quot; | &quot;curl&quot; | &quot;cf-browser-rendering&quot;|string** &gt;
 //
 // - Member of &lt;CrawlerOptions&gt;
-type CrawlerOptions0x26_Engine struct {
+type CrawlerOptions0x27_Engine struct {
 	union json.RawMessage
 }
 
-// CrawlerOptions0x26File0 defines model for CrawlerOptions0x26.File.0.
-type CrawlerOptions0x26File0 = FancyFile0x0e
+// CrawlerOptions0x27File0 defines model for CrawlerOptions0x27.File.0.
+type CrawlerOptions0x27File0 = FancyFile0x0e
 
-// CrawlerOptions0x26File1 defines model for CrawlerOptions0x26.File.1.
-type CrawlerOptions0x26File1 = string
+// CrawlerOptions0x27File1 defines model for CrawlerOptions0x27.File.1.
+type CrawlerOptions0x27File1 = string
 
-// CrawlerOptions0x26_File Base64 encoded file.
+// CrawlerOptions0x27_File Base64 encoded file.
 //
 // - Cast to: &lt; **FancyFile|string** &gt;
 //
 // - Member of &lt;CrawlerOptions&gt;
-type CrawlerOptions0x26_File struct {
+type CrawlerOptions0x27_File struct {
 	union json.RawMessage
 }
 
-// CrawlerOptions0x26MarkdownChunking0 Enum<"true" | "h1" | "h2" | "h3" | "h4" | "h5" | "structured" | "s1" | "s2" | "s3" | "s4" | "s5">
-type CrawlerOptions0x26MarkdownChunking0 = Enum0x25
+// CrawlerOptions0x27MarkdownChunking0 Enum<"true" | "h1" | "h2" | "h3" | "h4" | "h5" | "structured" | "s1" | "s2" | "s3" | "s4" | "s5">
+type CrawlerOptions0x27MarkdownChunking0 = Enum0x26
 
-// CrawlerOptions0x26MarkdownChunking1 defines model for CrawlerOptions0x26.MarkdownChunking.1.
-type CrawlerOptions0x26MarkdownChunking1 = string
+// CrawlerOptions0x27MarkdownChunking1 defines model for CrawlerOptions0x27.MarkdownChunking.1.
+type CrawlerOptions0x27MarkdownChunking1 = string
 
-// CrawlerOptions0x26_MarkdownChunking - Cast to: &lt; **&quot;true&quot; | &quot;h1&quot; | &quot;h2&quot; | &quot;h3&quot; | &quot;h4&quot; | &quot;h5&quot; | &quot;structured&quot; | &quot;s1&quot; | &quot;s2&quot; | &quot;s3&quot; | &quot;s4&quot; | &quot;s5&quot;|string** &gt;
+// CrawlerOptions0x27_MarkdownChunking - Cast to: &lt; **&quot;true&quot; | &quot;h1&quot; | &quot;h2&quot; | &quot;h3&quot; | &quot;h4&quot; | &quot;h5&quot; | &quot;structured&quot; | &quot;s1&quot; | &quot;s2&quot; | &quot;s3&quot; | &quot;s4&quot; | &quot;s5&quot;|string** &gt;
 //
 // - Member of &lt;CrawlerOptions&gt;
-type CrawlerOptions0x26_MarkdownChunking struct {
+type CrawlerOptions0x27_MarkdownChunking struct {
 	union json.RawMessage
 }
 
-// CrawlerOptions0x26NoGfm0 A boolean value that can be represented in various formats.
-type CrawlerOptions0x26NoGfm0 = PseudoBoolean0x10
+// CrawlerOptions0x27NoGfm0 A boolean value that can be represented in various formats.
+type CrawlerOptions0x27NoGfm0 = PseudoBoolean0x11
 
-// CrawlerOptions0x26NoGfm1 defines model for CrawlerOptions0x26.NoGfm.1.
-type CrawlerOptions0x26NoGfm1 = string
+// CrawlerOptions0x27NoGfm1 defines model for CrawlerOptions0x27.NoGfm.1.
+type CrawlerOptions0x27NoGfm1 = string
 
-// CrawlerOptions0x26_NoGfm - Cast to: &lt; **PseudoBoolean|string** &gt;
+// CrawlerOptions0x27_NoGfm - Cast to: &lt; **PseudoBoolean|string** &gt;
 //
 // - Member of &lt;CrawlerOptions&gt;
-type CrawlerOptions0x26_NoGfm struct {
+type CrawlerOptions0x27_NoGfm struct {
 	union json.RawMessage
 }
 
-// CrawlerOptions0x26Pdf0 defines model for CrawlerOptions0x26.Pdf.0.
-type CrawlerOptions0x26Pdf0 = FancyFile0x0e
+// CrawlerOptions0x27Pdf0 defines model for CrawlerOptions0x27.Pdf.0.
+type CrawlerOptions0x27Pdf0 = FancyFile0x0e
 
-// CrawlerOptions0x26Pdf1 defines model for CrawlerOptions0x26.Pdf.1.
-type CrawlerOptions0x26Pdf1 = string
+// CrawlerOptions0x27Pdf1 defines model for CrawlerOptions0x27.Pdf.1.
+type CrawlerOptions0x27Pdf1 = string
 
-// CrawlerOptions0x26_Pdf Base64 encoded PDF.
+// CrawlerOptions0x27_Pdf Base64 encoded PDF.
 //
 // - Cast to: &lt; **FancyFile|string** &gt;
 //
 // - Member of &lt;CrawlerOptions&gt;
-type CrawlerOptions0x26_Pdf struct {
+type CrawlerOptions0x27_Pdf struct {
 	union json.RawMessage
 }
 
-// CrawlerOptions0x26RespondWith0 Enum<"content" | "markdown" | "html" | "text" | "pageshot" | "screenshot" | "vlm" | "readerlm-v2" | "frontmatter" | "readability" | "...>
-type CrawlerOptions0x26RespondWith0 = Enum0x0f
+// CrawlerOptions0x27RespondWith0 Enum<"content" | "markdown" | "html" | "text" | "pageshot" | "screenshot" | "vlm" | "readerlm-v2" | "frontmatter" | "readability" | "...>
+type CrawlerOptions0x27RespondWith0 = Enum0x10
 
-// CrawlerOptions0x26RespondWith1 defines model for CrawlerOptions0x26.RespondWith.1.
-type CrawlerOptions0x26RespondWith1 = string
+// CrawlerOptions0x27RespondWith1 defines model for CrawlerOptions0x27.RespondWith.1.
+type CrawlerOptions0x27RespondWith1 = string
 
-// CrawlerOptions0x26_RespondWith - Cast to: &lt; **&quot;content&quot; | &quot;markdown&quot; | &quot;html&quot; | &quot;text&quot; | &quot;pageshot&quot; | &quot;screenshot&quot; | &quot;vlm&quot; | &quot;readerlm-v2&quot; | &quot;frontmatter&quot; | &quot;readability&quot; | &quot;...|string** &gt;
+// CrawlerOptions0x27_RespondWith - Cast to: &lt; **&quot;content&quot; | &quot;markdown&quot; | &quot;html&quot; | &quot;text&quot; | &quot;pageshot&quot; | &quot;screenshot&quot; | &quot;vlm&quot; | &quot;readerlm-v2&quot; | &quot;frontmatter&quot; | &quot;readability&quot; | &quot;...|string** &gt;
 //
 // - Member of &lt;CrawlerOptions&gt;
 //
 // - Defaults to: &#39;content&#39;
-type CrawlerOptions0x26_RespondWith struct {
+type CrawlerOptions0x27_RespondWith struct {
 	union json.RawMessage
 }
 
-// CrawlerOptions0x26SetCookies0 Can be any value - string, number, boolean, array or object.
-type CrawlerOptions0x26SetCookies0 = interface{}
+// CrawlerOptions0x27SetCookies0 Can be any value - string, number, boolean, array or object.
+type CrawlerOptions0x27SetCookies0 = interface{}
 
-// CrawlerOptions0x26SetCookies1 defines model for CrawlerOptions0x26.SetCookies.1.
-type CrawlerOptions0x26SetCookies1 = string
+// CrawlerOptions0x27SetCookies1 defines model for CrawlerOptions0x27.SetCookies.1.
+type CrawlerOptions0x27SetCookies1 = string
 
-// CrawlerOptions0x26_SetCookies_Item defines model for CrawlerOptions@0x26.setCookies.Item.
-type CrawlerOptions0x26_SetCookies_Item struct {
+// CrawlerOptions0x27_SetCookies_Item defines model for CrawlerOptions@0x27.setCookies.Item.
+type CrawlerOptions0x27_SetCookies_Item struct {
 	union json.RawMessage
 }
 
-// CrawlerOptions0x26WithIframe0 A boolean value that can be represented in various formats.
-type CrawlerOptions0x26WithIframe0 = PseudoBoolean0x10
+// CrawlerOptions0x27WithIframe0 A boolean value that can be represented in various formats.
+type CrawlerOptions0x27WithIframe0 = PseudoBoolean0x11
 
-// CrawlerOptions0x26WithIframe1 defines model for CrawlerOptions0x26.WithIframe.1.
-type CrawlerOptions0x26WithIframe1 = string
+// CrawlerOptions0x27WithIframe1 defines model for CrawlerOptions0x27.WithIframe.1.
+type CrawlerOptions0x27WithIframe1 = string
 
-// CrawlerOptions0x26_WithIframe - Cast to: &lt; **PseudoBoolean|string** &gt;
+// CrawlerOptions0x27_WithIframe - Cast to: &lt; **PseudoBoolean|string** &gt;
 //
 // - Member of &lt;CrawlerOptions&gt;
-type CrawlerOptions0x26_WithIframe struct {
+type CrawlerOptions0x27_WithIframe struct {
 	union json.RawMessage
 }
 
-// CrawlerOptions0x26WithLinksSummary0 A boolean value that can be represented in various formats.
-type CrawlerOptions0x26WithLinksSummary0 = PseudoBoolean0x10
+// CrawlerOptions0x27WithLinksSummary0 A boolean value that can be represented in various formats.
+type CrawlerOptions0x27WithLinksSummary0 = PseudoBoolean0x11
 
-// CrawlerOptions0x26WithLinksSummary1 defines model for CrawlerOptions0x26.WithLinksSummary.1.
-type CrawlerOptions0x26WithLinksSummary1 = string
+// CrawlerOptions0x27WithLinksSummary1 defines model for CrawlerOptions0x27.WithLinksSummary.1.
+type CrawlerOptions0x27WithLinksSummary1 = string
 
-// CrawlerOptions0x26_WithLinksSummary - Cast to: &lt; **PseudoBoolean|string** &gt;
+// CrawlerOptions0x27_WithLinksSummary - Cast to: &lt; **PseudoBoolean|string** &gt;
 //
 // - Member of &lt;CrawlerOptions&gt;
-type CrawlerOptions0x26_WithLinksSummary struct {
+type CrawlerOptions0x27_WithLinksSummary struct {
 	union json.RawMessage
 }
 
-// CrawlerOptionsHeaderOnly0x39 defines model for CrawlerOptionsHeaderOnly@0x39.
-type CrawlerOptionsHeaderOnly0x39 struct {
+// CrawlerOptionsHeaderOnly0x3a defines model for CrawlerOptionsHeaderOnly@0x3a.
+type CrawlerOptionsHeaderOnly0x3a struct {
 	// AssertStatusCode - Cast to: &lt; **number** &gt;
 	//
 	// - Member of &lt;CrawlerOptionsHeaderOnly&gt;
@@ -1164,7 +1162,7 @@ type CrawlerOptionsHeaderOnly0x39 struct {
 	// Engine - Cast to: &lt; **&quot;auto&quot; | &quot;browser&quot; | &quot;curl&quot; | &quot;cf-browser-rendering&quot;|string** &gt;
 	//
 	// - Member of &lt;CrawlerOptionsHeaderOnly&gt;
-	Engine *CrawlerOptionsHeaderOnly0x39_Engine `json:"engine,omitempty"`
+	Engine *CrawlerOptionsHeaderOnly0x3a_Engine `json:"engine,omitempty"`
 
 	// ExportStorageState - Cast to: &lt; **PseudoBooleanLoose** &gt;
 	//
@@ -1176,7 +1174,7 @@ type CrawlerOptionsHeaderOnly0x39 struct {
 	// - Cast to: &lt; **FancyFile|string** &gt;
 	//
 	// - Member of &lt;CrawlerOptionsHeaderOnly&gt;
-	File *CrawlerOptionsHeaderOnly0x39_File `json:"file,omitempty"`
+	File *CrawlerOptionsHeaderOnly0x3a_File `json:"file,omitempty"`
 
 	// Html - Cast to: &lt; **string** &gt;
 	//
@@ -1218,12 +1216,12 @@ type CrawlerOptionsHeaderOnly0x39 struct {
 	// Markdown - Cast to: &lt; **TurnDownTweakableOptions** &gt;
 	//
 	// - Member of &lt;CrawlerOptionsHeaderOnly&gt;
-	Markdown *TurnDownTweakableOptions0x22 `json:"markdown,omitempty"`
+	Markdown *TurnDownTweakableOptions0x23 `json:"markdown,omitempty"`
 
 	// MarkdownChunking - Cast to: &lt; **&quot;true&quot; | &quot;h1&quot; | &quot;h2&quot; | &quot;h3&quot; | &quot;h4&quot; | &quot;h5&quot; | &quot;structured&quot; | &quot;s1&quot; | &quot;s2&quot; | &quot;s3&quot; | &quot;s4&quot; | &quot;s5&quot;|string** &gt;
 	//
 	// - Member of &lt;CrawlerOptionsHeaderOnly&gt;
-	MarkdownChunking *CrawlerOptionsHeaderOnly0x39_MarkdownChunking `json:"markdownChunking,omitempty"`
+	MarkdownChunking *CrawlerOptionsHeaderOnly0x3a_MarkdownChunking `json:"markdownChunking,omitempty"`
 
 	// MaxTokens - Cast to: &lt; **number** &gt;
 	//
@@ -1240,7 +1238,7 @@ type CrawlerOptionsHeaderOnly0x39 struct {
 	// NoGfm - Cast to: &lt; **PseudoBoolean|string** &gt;
 	//
 	// - Member of &lt;CrawlerOptionsHeaderOnly&gt;
-	NoGfm *CrawlerOptionsHeaderOnly0x39_NoGfm `json:"noGfm,omitempty"`
+	NoGfm *CrawlerOptionsHeaderOnly0x3a_NoGfm `json:"noGfm,omitempty"`
 
 	// NoServiceWorker - Cast to: &lt; **PseudoBooleanLoose** &gt;
 	//
@@ -1250,23 +1248,21 @@ type CrawlerOptionsHeaderOnly0x39 struct {
 	// Ocr - Cast to: &lt; **OCRPreferences** &gt;
 	//
 	// - Member of &lt;CrawlerOptionsHeaderOnly&gt;
-	Ocr *OCRPreferences0x23 `json:"ocr,omitempty"`
+	Ocr *OCRPreferences0x24 `json:"ocr,omitempty"`
 
-	// Page Steer which page to return for document files (1-indexed).
+	// Page Steer which page(s) to return for document files. See PageSelection.
 	//
-	// - Cast to: &lt; **number** &gt;
+	// - Cast to: &lt; **PageSelection** &gt;
 	//
 	// - Member of &lt;CrawlerOptionsHeaderOnly&gt;
-	//
-	// - Some validators will be applied on value(s): (v) =&gt; Number.isInteger(v) &amp;&amp; v &gt;= 1
-	Page *float64 `json:"page,omitempty"`
+	Page *PageSelection0x0f `json:"page,omitempty"`
 
 	// Pdf Base64 encoded PDF.
 	//
 	// - Cast to: &lt; **FancyFile|string** &gt;
 	//
 	// - Member of &lt;CrawlerOptionsHeaderOnly&gt;
-	Pdf *CrawlerOptionsHeaderOnly0x39_Pdf `json:"pdf,omitempty"`
+	Pdf *CrawlerOptionsHeaderOnly0x3a_Pdf `json:"pdf,omitempty"`
 
 	// PreloadUrl - Cast to: &lt; **string** &gt;
 	//
@@ -1276,7 +1272,7 @@ type CrawlerOptionsHeaderOnly0x39 struct {
 	// Preset - Cast to: &lt; **&quot;reader&quot; | &quot;index&quot; | &quot;research&quot; | &quot;agent&quot; | &quot;spider&quot; | &quot;ocr&quot; | &quot;ocr+&quot; | &quot;ocr++&quot; | &quot;pdf&quot; | &quot;pdf+&quot; | &quot;pdf++&quot;** &gt;
 	//
 	// - Member of &lt;CrawlerOptionsHeaderOnly&gt;
-	Preset *Enum0x13 `json:"preset,omitempty"`
+	Preset *Enum0x14 `json:"preset,omitempty"`
 
 	// Proxy - Cast to: &lt; **string** &gt;
 	//
@@ -1311,35 +1307,35 @@ type CrawlerOptionsHeaderOnly0x39 struct {
 	// RespondTiming - Cast to: &lt; **&quot;html&quot; | &quot;visible-content&quot; | &quot;mutation-idle&quot; | &quot;resource-idle&quot; | &quot;media-idle&quot; | &quot;network-idle&quot;** &gt;
 	//
 	// - Member of &lt;CrawlerOptionsHeaderOnly&gt;
-	RespondTiming *Enum0x24 `json:"respondTiming,omitempty"`
+	RespondTiming *Enum0x25 `json:"respondTiming,omitempty"`
 
 	// RespondWith - Cast to: &lt; **&quot;content&quot; | &quot;markdown&quot; | &quot;html&quot; | &quot;text&quot; | &quot;pageshot&quot; | &quot;screenshot&quot; | &quot;vlm&quot; | &quot;readerlm-v2&quot; | &quot;frontmatter&quot; | &quot;readability&quot; | &quot;...|string** &gt;
 	//
 	// - Member of &lt;CrawlerOptionsHeaderOnly&gt;
 	//
 	// - Defaults to: &#39;content&#39;
-	RespondWith *CrawlerOptionsHeaderOnly0x39_RespondWith `json:"respondWith,omitempty"`
+	RespondWith *CrawlerOptionsHeaderOnly0x3a_RespondWith `json:"respondWith,omitempty"`
 
 	// RetainImages - Cast to: &lt; **&quot;none&quot; | &quot;all&quot; | &quot;alt&quot; | &quot;all_p&quot; | &quot;alt_p&quot;** &gt;
 	//
 	// - Member of &lt;CrawlerOptionsHeaderOnly&gt;
 	//
 	// - Defaults to: &#39;all&#39;
-	RetainImages *Enum0x11 `json:"retainImages,omitempty"`
+	RetainImages *Enum0x12 `json:"retainImages,omitempty"`
 
 	// RetainLinks - Cast to: &lt; **&quot;none&quot; | &quot;all&quot; | &quot;text&quot; | &quot;gpt-oss&quot;** &gt;
 	//
 	// - Member of &lt;CrawlerOptionsHeaderOnly&gt;
 	//
 	// - Defaults to: &#39;all&#39;
-	RetainLinks *Enum0x14 `json:"retainLinks,omitempty"`
+	RetainLinks *Enum0x15 `json:"retainLinks,omitempty"`
 
 	// RetainMedia - Cast to: &lt; **&quot;none&quot; | &quot;text&quot; | &quot;link&quot; | &quot;image&quot; | &quot;html&quot;** &gt;
 	//
 	// - Member of &lt;CrawlerOptionsHeaderOnly&gt;
 	//
 	// - Defaults to: &#39;link&#39;
-	RetainMedia *Enum0x12 `json:"retainMedia,omitempty"`
+	RetainMedia *Enum0x13 `json:"retainMedia,omitempty"`
 
 	// RobotsTxt - Cast to: &lt; **string** &gt;
 	//
@@ -1349,7 +1345,7 @@ type CrawlerOptionsHeaderOnly0x39 struct {
 	// SetCookies - Cast to: &lt; **Array&lt;object|string&gt;** &gt;
 	//
 	// - Member of &lt;CrawlerOptionsHeaderOnly&gt;
-	SetCookies *[]CrawlerOptionsHeaderOnly0x39_SetCookies_Item `json:"setCookies,omitempty"`
+	SetCookies *[]CrawlerOptionsHeaderOnly0x3a_SetCookies_Item `json:"setCookies,omitempty"`
 
 	// SkipCertVerification - Cast to: &lt; **PseudoBooleanLoose** &gt;
 	//
@@ -1359,7 +1355,7 @@ type CrawlerOptionsHeaderOnly0x39 struct {
 	// StorageState - Cast to: &lt; **StorageState** &gt;
 	//
 	// - Member of &lt;CrawlerOptionsHeaderOnly&gt;
-	StorageState *StorageState0x19 `json:"storageState,omitempty"`
+	StorageState *StorageState0x1a `json:"storageState,omitempty"`
 
 	// TargetSelector - Cast to: &lt; **Array&lt;string&gt;** &gt;
 	//
@@ -1391,7 +1387,7 @@ type CrawlerOptionsHeaderOnly0x39 struct {
 	// Viewport - Cast to: &lt; **Viewport** &gt;
 	//
 	// - Member of &lt;CrawlerOptionsHeaderOnly&gt;
-	Viewport *Viewport0x1b `json:"viewport,omitempty"`
+	Viewport *Viewport0x1c `json:"viewport,omitempty"`
 
 	// WaitForSelector - Cast to: &lt; **Array&lt;string&gt;** &gt;
 	//
@@ -1401,12 +1397,12 @@ type CrawlerOptionsHeaderOnly0x39 struct {
 	// WithGeneratedAlt - Cast to: &lt; **PseudoBoolean** &gt;
 	//
 	// - Member of &lt;CrawlerOptionsHeaderOnly&gt;
-	WithGeneratedAlt *PseudoBoolean0x10 `json:"withGeneratedAlt,omitempty"`
+	WithGeneratedAlt *PseudoBoolean0x11 `json:"withGeneratedAlt,omitempty"`
 
 	// WithIframe - Cast to: &lt; **PseudoBoolean|string** &gt;
 	//
 	// - Member of &lt;CrawlerOptionsHeaderOnly&gt;
-	WithIframe *CrawlerOptionsHeaderOnly0x39_WithIframe `json:"withIframe,omitempty"`
+	WithIframe *CrawlerOptionsHeaderOnly0x3a_WithIframe `json:"withIframe,omitempty"`
 
 	// WithImagesSummary - Cast to: &lt; **PseudoBooleanLoose** &gt;
 	//
@@ -1416,7 +1412,7 @@ type CrawlerOptionsHeaderOnly0x39 struct {
 	// WithLinksSummary - Cast to: &lt; **PseudoBoolean|string** &gt;
 	//
 	// - Member of &lt;CrawlerOptionsHeaderOnly&gt;
-	WithLinksSummary *CrawlerOptionsHeaderOnly0x39_WithLinksSummary `json:"withLinksSummary,omitempty"`
+	WithLinksSummary *CrawlerOptionsHeaderOnly0x3a_WithLinksSummary `json:"withLinksSummary,omitempty"`
 
 	// WithShadowDom - Cast to: &lt; **PseudoBooleanLoose** &gt;
 	//
@@ -1429,129 +1425,129 @@ type CrawlerOptionsHeaderOnly0x39 struct {
 	ZeroDataRetention *PseudoBooleanLoose0x0c `json:"zeroDataRetention,omitempty"`
 }
 
-// CrawlerOptionsHeaderOnly0x39Engine0 Enum<"auto" | "browser" | "curl" | "cf-browser-rendering">
-type CrawlerOptionsHeaderOnly0x39Engine0 = Enum0x1a
+// CrawlerOptionsHeaderOnly0x3aEngine0 Enum<"auto" | "browser" | "curl" | "cf-browser-rendering">
+type CrawlerOptionsHeaderOnly0x3aEngine0 = Enum0x1b
 
-// CrawlerOptionsHeaderOnly0x39Engine1 defines model for CrawlerOptionsHeaderOnly0x39.Engine.1.
-type CrawlerOptionsHeaderOnly0x39Engine1 = string
+// CrawlerOptionsHeaderOnly0x3aEngine1 defines model for CrawlerOptionsHeaderOnly0x3a.Engine.1.
+type CrawlerOptionsHeaderOnly0x3aEngine1 = string
 
-// CrawlerOptionsHeaderOnly0x39_Engine - Cast to: &lt; **&quot;auto&quot; | &quot;browser&quot; | &quot;curl&quot; | &quot;cf-browser-rendering&quot;|string** &gt;
+// CrawlerOptionsHeaderOnly0x3a_Engine - Cast to: &lt; **&quot;auto&quot; | &quot;browser&quot; | &quot;curl&quot; | &quot;cf-browser-rendering&quot;|string** &gt;
 //
 // - Member of &lt;CrawlerOptionsHeaderOnly&gt;
-type CrawlerOptionsHeaderOnly0x39_Engine struct {
+type CrawlerOptionsHeaderOnly0x3a_Engine struct {
 	union json.RawMessage
 }
 
-// CrawlerOptionsHeaderOnly0x39File0 defines model for CrawlerOptionsHeaderOnly0x39.File.0.
-type CrawlerOptionsHeaderOnly0x39File0 = FancyFile0x0e
+// CrawlerOptionsHeaderOnly0x3aFile0 defines model for CrawlerOptionsHeaderOnly0x3a.File.0.
+type CrawlerOptionsHeaderOnly0x3aFile0 = FancyFile0x0e
 
-// CrawlerOptionsHeaderOnly0x39File1 defines model for CrawlerOptionsHeaderOnly0x39.File.1.
-type CrawlerOptionsHeaderOnly0x39File1 = string
+// CrawlerOptionsHeaderOnly0x3aFile1 defines model for CrawlerOptionsHeaderOnly0x3a.File.1.
+type CrawlerOptionsHeaderOnly0x3aFile1 = string
 
-// CrawlerOptionsHeaderOnly0x39_File Base64 encoded file.
+// CrawlerOptionsHeaderOnly0x3a_File Base64 encoded file.
 //
 // - Cast to: &lt; **FancyFile|string** &gt;
 //
 // - Member of &lt;CrawlerOptionsHeaderOnly&gt;
-type CrawlerOptionsHeaderOnly0x39_File struct {
+type CrawlerOptionsHeaderOnly0x3a_File struct {
 	union json.RawMessage
 }
 
-// CrawlerOptionsHeaderOnly0x39MarkdownChunking0 Enum<"true" | "h1" | "h2" | "h3" | "h4" | "h5" | "structured" | "s1" | "s2" | "s3" | "s4" | "s5">
-type CrawlerOptionsHeaderOnly0x39MarkdownChunking0 = Enum0x25
+// CrawlerOptionsHeaderOnly0x3aMarkdownChunking0 Enum<"true" | "h1" | "h2" | "h3" | "h4" | "h5" | "structured" | "s1" | "s2" | "s3" | "s4" | "s5">
+type CrawlerOptionsHeaderOnly0x3aMarkdownChunking0 = Enum0x26
 
-// CrawlerOptionsHeaderOnly0x39MarkdownChunking1 defines model for CrawlerOptionsHeaderOnly0x39.MarkdownChunking.1.
-type CrawlerOptionsHeaderOnly0x39MarkdownChunking1 = string
+// CrawlerOptionsHeaderOnly0x3aMarkdownChunking1 defines model for CrawlerOptionsHeaderOnly0x3a.MarkdownChunking.1.
+type CrawlerOptionsHeaderOnly0x3aMarkdownChunking1 = string
 
-// CrawlerOptionsHeaderOnly0x39_MarkdownChunking - Cast to: &lt; **&quot;true&quot; | &quot;h1&quot; | &quot;h2&quot; | &quot;h3&quot; | &quot;h4&quot; | &quot;h5&quot; | &quot;structured&quot; | &quot;s1&quot; | &quot;s2&quot; | &quot;s3&quot; | &quot;s4&quot; | &quot;s5&quot;|string** &gt;
+// CrawlerOptionsHeaderOnly0x3a_MarkdownChunking - Cast to: &lt; **&quot;true&quot; | &quot;h1&quot; | &quot;h2&quot; | &quot;h3&quot; | &quot;h4&quot; | &quot;h5&quot; | &quot;structured&quot; | &quot;s1&quot; | &quot;s2&quot; | &quot;s3&quot; | &quot;s4&quot; | &quot;s5&quot;|string** &gt;
 //
 // - Member of &lt;CrawlerOptionsHeaderOnly&gt;
-type CrawlerOptionsHeaderOnly0x39_MarkdownChunking struct {
+type CrawlerOptionsHeaderOnly0x3a_MarkdownChunking struct {
 	union json.RawMessage
 }
 
-// CrawlerOptionsHeaderOnly0x39NoGfm0 A boolean value that can be represented in various formats.
-type CrawlerOptionsHeaderOnly0x39NoGfm0 = PseudoBoolean0x10
+// CrawlerOptionsHeaderOnly0x3aNoGfm0 A boolean value that can be represented in various formats.
+type CrawlerOptionsHeaderOnly0x3aNoGfm0 = PseudoBoolean0x11
 
-// CrawlerOptionsHeaderOnly0x39NoGfm1 defines model for CrawlerOptionsHeaderOnly0x39.NoGfm.1.
-type CrawlerOptionsHeaderOnly0x39NoGfm1 = string
+// CrawlerOptionsHeaderOnly0x3aNoGfm1 defines model for CrawlerOptionsHeaderOnly0x3a.NoGfm.1.
+type CrawlerOptionsHeaderOnly0x3aNoGfm1 = string
 
-// CrawlerOptionsHeaderOnly0x39_NoGfm - Cast to: &lt; **PseudoBoolean|string** &gt;
+// CrawlerOptionsHeaderOnly0x3a_NoGfm - Cast to: &lt; **PseudoBoolean|string** &gt;
 //
 // - Member of &lt;CrawlerOptionsHeaderOnly&gt;
-type CrawlerOptionsHeaderOnly0x39_NoGfm struct {
+type CrawlerOptionsHeaderOnly0x3a_NoGfm struct {
 	union json.RawMessage
 }
 
-// CrawlerOptionsHeaderOnly0x39Pdf0 defines model for CrawlerOptionsHeaderOnly0x39.Pdf.0.
-type CrawlerOptionsHeaderOnly0x39Pdf0 = FancyFile0x0e
+// CrawlerOptionsHeaderOnly0x3aPdf0 defines model for CrawlerOptionsHeaderOnly0x3a.Pdf.0.
+type CrawlerOptionsHeaderOnly0x3aPdf0 = FancyFile0x0e
 
-// CrawlerOptionsHeaderOnly0x39Pdf1 defines model for CrawlerOptionsHeaderOnly0x39.Pdf.1.
-type CrawlerOptionsHeaderOnly0x39Pdf1 = string
+// CrawlerOptionsHeaderOnly0x3aPdf1 defines model for CrawlerOptionsHeaderOnly0x3a.Pdf.1.
+type CrawlerOptionsHeaderOnly0x3aPdf1 = string
 
-// CrawlerOptionsHeaderOnly0x39_Pdf Base64 encoded PDF.
+// CrawlerOptionsHeaderOnly0x3a_Pdf Base64 encoded PDF.
 //
 // - Cast to: &lt; **FancyFile|string** &gt;
 //
 // - Member of &lt;CrawlerOptionsHeaderOnly&gt;
-type CrawlerOptionsHeaderOnly0x39_Pdf struct {
+type CrawlerOptionsHeaderOnly0x3a_Pdf struct {
 	union json.RawMessage
 }
 
-// CrawlerOptionsHeaderOnly0x39RespondWith0 Enum<"content" | "markdown" | "html" | "text" | "pageshot" | "screenshot" | "vlm" | "readerlm-v2" | "frontmatter" | "readability" | "...>
-type CrawlerOptionsHeaderOnly0x39RespondWith0 = Enum0x0f
+// CrawlerOptionsHeaderOnly0x3aRespondWith0 Enum<"content" | "markdown" | "html" | "text" | "pageshot" | "screenshot" | "vlm" | "readerlm-v2" | "frontmatter" | "readability" | "...>
+type CrawlerOptionsHeaderOnly0x3aRespondWith0 = Enum0x10
 
-// CrawlerOptionsHeaderOnly0x39RespondWith1 defines model for CrawlerOptionsHeaderOnly0x39.RespondWith.1.
-type CrawlerOptionsHeaderOnly0x39RespondWith1 = string
+// CrawlerOptionsHeaderOnly0x3aRespondWith1 defines model for CrawlerOptionsHeaderOnly0x3a.RespondWith.1.
+type CrawlerOptionsHeaderOnly0x3aRespondWith1 = string
 
-// CrawlerOptionsHeaderOnly0x39_RespondWith - Cast to: &lt; **&quot;content&quot; | &quot;markdown&quot; | &quot;html&quot; | &quot;text&quot; | &quot;pageshot&quot; | &quot;screenshot&quot; | &quot;vlm&quot; | &quot;readerlm-v2&quot; | &quot;frontmatter&quot; | &quot;readability&quot; | &quot;...|string** &gt;
+// CrawlerOptionsHeaderOnly0x3a_RespondWith - Cast to: &lt; **&quot;content&quot; | &quot;markdown&quot; | &quot;html&quot; | &quot;text&quot; | &quot;pageshot&quot; | &quot;screenshot&quot; | &quot;vlm&quot; | &quot;readerlm-v2&quot; | &quot;frontmatter&quot; | &quot;readability&quot; | &quot;...|string** &gt;
 //
 // - Member of &lt;CrawlerOptionsHeaderOnly&gt;
 //
 // - Defaults to: &#39;content&#39;
-type CrawlerOptionsHeaderOnly0x39_RespondWith struct {
+type CrawlerOptionsHeaderOnly0x3a_RespondWith struct {
 	union json.RawMessage
 }
 
-// CrawlerOptionsHeaderOnly0x39SetCookies0 Can be any value - string, number, boolean, array or object.
-type CrawlerOptionsHeaderOnly0x39SetCookies0 = interface{}
+// CrawlerOptionsHeaderOnly0x3aSetCookies0 Can be any value - string, number, boolean, array or object.
+type CrawlerOptionsHeaderOnly0x3aSetCookies0 = interface{}
 
-// CrawlerOptionsHeaderOnly0x39SetCookies1 defines model for CrawlerOptionsHeaderOnly0x39.SetCookies.1.
-type CrawlerOptionsHeaderOnly0x39SetCookies1 = string
+// CrawlerOptionsHeaderOnly0x3aSetCookies1 defines model for CrawlerOptionsHeaderOnly0x3a.SetCookies.1.
+type CrawlerOptionsHeaderOnly0x3aSetCookies1 = string
 
-// CrawlerOptionsHeaderOnly0x39_SetCookies_Item defines model for CrawlerOptionsHeaderOnly@0x39.setCookies.Item.
-type CrawlerOptionsHeaderOnly0x39_SetCookies_Item struct {
+// CrawlerOptionsHeaderOnly0x3a_SetCookies_Item defines model for CrawlerOptionsHeaderOnly@0x3a.setCookies.Item.
+type CrawlerOptionsHeaderOnly0x3a_SetCookies_Item struct {
 	union json.RawMessage
 }
 
-// CrawlerOptionsHeaderOnly0x39WithIframe0 A boolean value that can be represented in various formats.
-type CrawlerOptionsHeaderOnly0x39WithIframe0 = PseudoBoolean0x10
+// CrawlerOptionsHeaderOnly0x3aWithIframe0 A boolean value that can be represented in various formats.
+type CrawlerOptionsHeaderOnly0x3aWithIframe0 = PseudoBoolean0x11
 
-// CrawlerOptionsHeaderOnly0x39WithIframe1 defines model for CrawlerOptionsHeaderOnly0x39.WithIframe.1.
-type CrawlerOptionsHeaderOnly0x39WithIframe1 = string
+// CrawlerOptionsHeaderOnly0x3aWithIframe1 defines model for CrawlerOptionsHeaderOnly0x3a.WithIframe.1.
+type CrawlerOptionsHeaderOnly0x3aWithIframe1 = string
 
-// CrawlerOptionsHeaderOnly0x39_WithIframe - Cast to: &lt; **PseudoBoolean|string** &gt;
+// CrawlerOptionsHeaderOnly0x3a_WithIframe - Cast to: &lt; **PseudoBoolean|string** &gt;
 //
 // - Member of &lt;CrawlerOptionsHeaderOnly&gt;
-type CrawlerOptionsHeaderOnly0x39_WithIframe struct {
+type CrawlerOptionsHeaderOnly0x3a_WithIframe struct {
 	union json.RawMessage
 }
 
-// CrawlerOptionsHeaderOnly0x39WithLinksSummary0 A boolean value that can be represented in various formats.
-type CrawlerOptionsHeaderOnly0x39WithLinksSummary0 = PseudoBoolean0x10
+// CrawlerOptionsHeaderOnly0x3aWithLinksSummary0 A boolean value that can be represented in various formats.
+type CrawlerOptionsHeaderOnly0x3aWithLinksSummary0 = PseudoBoolean0x11
 
-// CrawlerOptionsHeaderOnly0x39WithLinksSummary1 defines model for CrawlerOptionsHeaderOnly0x39.WithLinksSummary.1.
-type CrawlerOptionsHeaderOnly0x39WithLinksSummary1 = string
+// CrawlerOptionsHeaderOnly0x3aWithLinksSummary1 defines model for CrawlerOptionsHeaderOnly0x3a.WithLinksSummary.1.
+type CrawlerOptionsHeaderOnly0x3aWithLinksSummary1 = string
 
-// CrawlerOptionsHeaderOnly0x39_WithLinksSummary - Cast to: &lt; **PseudoBoolean|string** &gt;
+// CrawlerOptionsHeaderOnly0x3a_WithLinksSummary - Cast to: &lt; **PseudoBoolean|string** &gt;
 //
 // - Member of &lt;CrawlerOptionsHeaderOnly&gt;
-type CrawlerOptionsHeaderOnly0x39_WithLinksSummary struct {
+type CrawlerOptionsHeaderOnly0x3a_WithLinksSummary struct {
 	union json.RawMessage
 }
 
-// DataStreamBrokenError0x28 defines model for DataStreamBrokenError@0x28.
-type DataStreamBrokenError0x28 struct {
+// DataStreamBrokenError0x29 defines model for DataStreamBrokenError@0x29.
+type DataStreamBrokenError0x29 struct {
 	// Code [REQUIRED]
 	//
 	// Expect HTTP response codes
@@ -1588,8 +1584,8 @@ type DataStreamBrokenError0x28 struct {
 	AdditionalProperties map[string]interface{} `json:"-"`
 }
 
-// DownstreamServiceError0x37 defines model for DownstreamServiceError@0x37.
-type DownstreamServiceError0x37 struct {
+// DownstreamServiceError0x38 defines model for DownstreamServiceError@0x38.
+type DownstreamServiceError0x38 struct {
 	// Code [REQUIRED]
 	//
 	// Expect HTTP response codes
@@ -1626,8 +1622,8 @@ type DownstreamServiceError0x37 struct {
 	AdditionalProperties map[string]interface{} `json:"-"`
 }
 
-// DownstreamServiceFailureError0x33 defines model for DownstreamServiceFailureError@0x33.
-type DownstreamServiceFailureError0x33 struct {
+// DownstreamServiceFailureError0x34 defines model for DownstreamServiceFailureError@0x34.
+type DownstreamServiceFailureError0x34 struct {
 	// Code [REQUIRED]
 	//
 	// Expect HTTP response codes
@@ -1667,12 +1663,12 @@ type DownstreamServiceFailureError0x33 struct {
 // FancyFile0x0e defines model for FancyFile@0x0e.
 type FancyFile0x0e = openapi_types.File
 
-// FormattedPageDto0x41 defines model for FormattedPageDto@0x41.
-type FormattedPageDto0x41 struct {
+// FormattedPageDto0x42 defines model for FormattedPageDto@0x42.
+type FormattedPageDto0x42 struct {
 	// Chunks - Cast to: &lt; **Array&lt;string&gt;** &gt;
 	//
 	// - Member of &lt;FormattedPageDto&gt;
-	Chunks *Arraystring0x3a `json:"chunks,omitempty"`
+	Chunks *Arraystring0x3b `json:"chunks,omitempty"`
 
 	// Content - Cast to: &lt; **string** &gt;
 	//
@@ -1687,7 +1683,7 @@ type FormattedPageDto0x41 struct {
 	// External - Cast to: &lt; **object|Record&lt;string|symbol, Record&lt;string|symbol, Record&lt;string|symbol, string|object&gt;@0x08|object&gt;@0x09|object&gt;** &gt;
 	//
 	// - Member of &lt;FormattedPageDto&gt;
-	External *FormattedPageDto0x41_External `json:"external,omitempty"`
+	External *FormattedPageDto0x42_External `json:"external,omitempty"`
 
 	// Html - Cast to: &lt; **string** &gt;
 	//
@@ -1707,17 +1703,17 @@ type FormattedPageDto0x41 struct {
 	// Images - Cast to: &lt; **object|Record&lt;string|symbol, string&gt;|Array&lt;string&gt;** &gt;
 	//
 	// - Member of &lt;FormattedPageDto&gt;
-	Images *FormattedPageDto0x41_Images `json:"images,omitempty"`
+	Images *FormattedPageDto0x42_Images `json:"images,omitempty"`
 
 	// Links - Cast to: &lt; **object|Record&lt;string|symbol, string&gt;|Array&lt;string&gt;** &gt;
 	//
 	// - Member of &lt;FormattedPageDto&gt;
-	Links *FormattedPageDto0x41_Links `json:"links,omitempty"`
+	Links *FormattedPageDto0x42_Links `json:"links,omitempty"`
 
 	// Metadata - Cast to: &lt; **object|Record&lt;string|symbol, string&gt;** &gt;
 	//
 	// - Member of &lt;FormattedPageDto&gt;
-	Metadata *FormattedPageDto0x41_Metadata `json:"metadata,omitempty"`
+	Metadata *FormattedPageDto0x42_Metadata `json:"metadata,omitempty"`
 
 	// NumPages - Cast to: &lt; **number** &gt;
 	//
@@ -1769,66 +1765,66 @@ type FormattedPageDto0x41 struct {
 	Warning *string `json:"warning,omitempty"`
 }
 
-// FormattedPageDto0x41External0 Can be any value - string, number, boolean, array or object.
-type FormattedPageDto0x41External0 = interface{}
+// FormattedPageDto0x42External0 Can be any value - string, number, boolean, array or object.
+type FormattedPageDto0x42External0 = interface{}
 
-// FormattedPageDto0x41External1 defines model for FormattedPageDto0x41.External.1.
-type FormattedPageDto0x41External1 = RecordstringsymbolRecordstringsymbolRecordstringsymbolStringobject0x08object0x09object0x40
+// FormattedPageDto0x42External1 defines model for FormattedPageDto0x42.External.1.
+type FormattedPageDto0x42External1 = RecordstringsymbolRecordstringsymbolRecordstringsymbolStringobject0x08object0x09object0x41
 
-// FormattedPageDto0x41_External - Cast to: &lt; **object|Record&lt;string|symbol, Record&lt;string|symbol, Record&lt;string|symbol, string|object&gt;@0x08|object&gt;@0x09|object&gt;** &gt;
+// FormattedPageDto0x42_External - Cast to: &lt; **object|Record&lt;string|symbol, Record&lt;string|symbol, Record&lt;string|symbol, string|object&gt;@0x08|object&gt;@0x09|object&gt;** &gt;
 //
 // - Member of &lt;FormattedPageDto&gt;
-type FormattedPageDto0x41_External struct {
+type FormattedPageDto0x42_External struct {
 	union json.RawMessage
 }
 
-// FormattedPageDto0x41Images0 Can be any value - string, number, boolean, array or object.
-type FormattedPageDto0x41Images0 = interface{}
+// FormattedPageDto0x42Images0 Can be any value - string, number, boolean, array or object.
+type FormattedPageDto0x42Images0 = interface{}
 
-// FormattedPageDto0x41Images1 defines model for FormattedPageDto0x41.Images.1.
-type FormattedPageDto0x41Images1 = RecordstringsymbolString0x3d
+// FormattedPageDto0x42Images1 defines model for FormattedPageDto0x42.Images.1.
+type FormattedPageDto0x42Images1 = RecordstringsymbolString0x3e
 
-// FormattedPageDto0x41Images2 defines model for FormattedPageDto0x41.Images.2.
-type FormattedPageDto0x41Images2 = Arraystring0x3e
+// FormattedPageDto0x42Images2 defines model for FormattedPageDto0x42.Images.2.
+type FormattedPageDto0x42Images2 = Arraystring0x3f
 
-// FormattedPageDto0x41_Images - Cast to: &lt; **object|Record&lt;string|symbol, string&gt;|Array&lt;string&gt;** &gt;
+// FormattedPageDto0x42_Images - Cast to: &lt; **object|Record&lt;string|symbol, string&gt;|Array&lt;string&gt;** &gt;
 //
 // - Member of &lt;FormattedPageDto&gt;
-type FormattedPageDto0x41_Images struct {
+type FormattedPageDto0x42_Images struct {
 	union json.RawMessage
 }
 
-// FormattedPageDto0x41Links0 Can be any value - string, number, boolean, array or object.
-type FormattedPageDto0x41Links0 = interface{}
+// FormattedPageDto0x42Links0 Can be any value - string, number, boolean, array or object.
+type FormattedPageDto0x42Links0 = interface{}
 
-// FormattedPageDto0x41Links1 defines model for FormattedPageDto0x41.Links.1.
-type FormattedPageDto0x41Links1 = RecordstringsymbolString0x3b
+// FormattedPageDto0x42Links1 defines model for FormattedPageDto0x42.Links.1.
+type FormattedPageDto0x42Links1 = RecordstringsymbolString0x3c
 
-// FormattedPageDto0x41Links2 defines model for FormattedPageDto0x41.Links.2.
-type FormattedPageDto0x41Links2 = Arraystring0x3c
+// FormattedPageDto0x42Links2 defines model for FormattedPageDto0x42.Links.2.
+type FormattedPageDto0x42Links2 = Arraystring0x3d
 
-// FormattedPageDto0x41_Links - Cast to: &lt; **object|Record&lt;string|symbol, string&gt;|Array&lt;string&gt;** &gt;
+// FormattedPageDto0x42_Links - Cast to: &lt; **object|Record&lt;string|symbol, string&gt;|Array&lt;string&gt;** &gt;
 //
 // - Member of &lt;FormattedPageDto&gt;
-type FormattedPageDto0x41_Links struct {
+type FormattedPageDto0x42_Links struct {
 	union json.RawMessage
 }
 
-// FormattedPageDto0x41Metadata0 Can be any value - string, number, boolean, array or object.
-type FormattedPageDto0x41Metadata0 = interface{}
+// FormattedPageDto0x42Metadata0 Can be any value - string, number, boolean, array or object.
+type FormattedPageDto0x42Metadata0 = interface{}
 
-// FormattedPageDto0x41Metadata1 defines model for FormattedPageDto0x41.Metadata.1.
-type FormattedPageDto0x41Metadata1 = RecordstringsymbolString0x3f
+// FormattedPageDto0x42Metadata1 defines model for FormattedPageDto0x42.Metadata.1.
+type FormattedPageDto0x42Metadata1 = RecordstringsymbolString0x40
 
-// FormattedPageDto0x41_Metadata - Cast to: &lt; **object|Record&lt;string|symbol, string&gt;** &gt;
+// FormattedPageDto0x42_Metadata - Cast to: &lt; **object|Record&lt;string|symbol, string&gt;** &gt;
 //
 // - Member of &lt;FormattedPageDto&gt;
-type FormattedPageDto0x41_Metadata struct {
+type FormattedPageDto0x42_Metadata struct {
 	union json.RawMessage
 }
 
-// HarmfulContentError0x36 defines model for HarmfulContentError@0x36.
-type HarmfulContentError0x36 struct {
+// HarmfulContentError0x37 defines model for HarmfulContentError@0x37.
+type HarmfulContentError0x37 struct {
 	// Code [REQUIRED]
 	//
 	// Expect HTTP response codes
@@ -1865,8 +1861,8 @@ type HarmfulContentError0x36 struct {
 	AdditionalProperties map[string]interface{} `json:"-"`
 }
 
-// InsufficientBalanceError0x2c defines model for InsufficientBalanceError@0x2c.
-type InsufficientBalanceError0x2c struct {
+// InsufficientBalanceError0x2d defines model for InsufficientBalanceError@0x2d.
+type InsufficientBalanceError0x2d struct {
 	// Code [REQUIRED]
 	//
 	// Expect HTTP response codes
@@ -1906,8 +1902,8 @@ type InsufficientBalanceError0x2c struct {
 // JinaEmbeddingsAuthDTO0x0b defines model for JinaEmbeddingsAuthDTO@0x0b.
 type JinaEmbeddingsAuthDTO0x0b = interface{}
 
-// LocalStorageItem0x17 defines model for LocalStorageItem@0x17.
-type LocalStorageItem0x17 struct {
+// LocalStorageItem0x18 defines model for LocalStorageItem@0x18.
+type LocalStorageItem0x18 struct {
 	// Name [REQUIRED]
 	//
 	// - Cast to: &lt; **string** &gt;
@@ -1923,14 +1919,14 @@ type LocalStorageItem0x17 struct {
 	Value string `json:"value"`
 }
 
-// LocalStorageOrigin0x18 defines model for LocalStorageOrigin@0x18.
-type LocalStorageOrigin0x18 struct {
+// LocalStorageOrigin0x19 defines model for LocalStorageOrigin@0x19.
+type LocalStorageOrigin0x19 struct {
 	// LocalStorage - Cast to: &lt; **Array&lt;LocalStorageItem&gt;** &gt;
 	//
 	// - Member of &lt;LocalStorageOrigin&gt;
 	//
 	// - Defaults to: []
-	LocalStorage *[]LocalStorageItem0x17 `json:"localStorage,omitempty"`
+	LocalStorage *[]LocalStorageItem0x18 `json:"localStorage,omitempty"`
 
 	// Origin [REQUIRED]
 	//
@@ -1940,8 +1936,8 @@ type LocalStorageOrigin0x18 struct {
 	Origin string `json:"origin"`
 }
 
-// OCRPreferences0x23 defines model for OCRPreferences@0x23.
-type OCRPreferences0x23 struct {
+// OCRPreferences0x24 defines model for OCRPreferences@0x24.
+type OCRPreferences0x24 struct {
 	// BlockFormula Formula blocks should go through OCR (only applies in non-end-to-end mode)
 	//
 	// - Cast to: &lt; **boolean** &gt;
@@ -1982,8 +1978,8 @@ type OCRPreferences0x23 struct {
 	Table *bool `json:"table,omitempty"`
 }
 
-// OperationNotAllowedError0x2d defines model for OperationNotAllowedError@0x2d.
-type OperationNotAllowedError0x2d struct {
+// OperationNotAllowedError0x2e defines model for OperationNotAllowedError@0x2e.
+type OperationNotAllowedError0x2e struct {
 	// Code [REQUIRED]
 	//
 	// Expect HTTP response codes
@@ -2020,11 +2016,40 @@ type OperationNotAllowedError0x2d struct {
 	AdditionalProperties map[string]interface{} `json:"-"`
 }
 
-// OutputServerEventStream0x42 Binary data (stream)
-type OutputServerEventStream0x42 = openapi_types.File
+// OutputServerEventStream0x43 Binary data (stream)
+type OutputServerEventStream0x43 = openapi_types.File
 
-// ParamValidationError0x27 defines model for ParamValidationError@0x27.
-type ParamValidationError0x27 struct {
+// PageSelection0x0f Selection of document pages (1-indexed, 0 is the same as 1).
+//
+// Accepts a page number, a list and/or ranges like `1,3,5-7`.
+//
+// At most 35 pages can be selected.
+type PageSelection0x0f struct {
+	union json.RawMessage
+}
+
+// PageSelection0x0f0 defines model for PageSelection0x0f.0.
+type PageSelection0x0f0 = int
+
+// PageSelection0x0f1 defines model for PageSelection0x0f.1.
+type PageSelection0x0f1 = string
+
+// PageSelection0x0f2 defines model for PageSelection0x0f.2.
+type PageSelection0x0f2 = []PageSelection0x0f_2_Item
+
+// PageSelection0x0f20 defines model for PageSelection0x0f.2.0.
+type PageSelection0x0f20 = int
+
+// PageSelection0x0f21 defines model for PageSelection0x0f.2.1.
+type PageSelection0x0f21 = string
+
+// PageSelection0x0f_2_Item defines model for PageSelection@0x0f.2.Item.
+type PageSelection0x0f_2_Item struct {
+	union json.RawMessage
+}
+
+// ParamValidationError0x28 defines model for ParamValidationError@0x28.
+type ParamValidationError0x28 struct {
 	// Code [REQUIRED]
 	//
 	// Expect HTTP response codes
@@ -2061,16 +2086,16 @@ type ParamValidationError0x27 struct {
 	AdditionalProperties map[string]interface{} `json:"-"`
 }
 
-// PseudoBoolean0x10 A boolean value that can be represented in various formats.
-type PseudoBoolean0x10 struct {
+// PseudoBoolean0x11 A boolean value that can be represented in various formats.
+type PseudoBoolean0x11 struct {
 	union json.RawMessage
 }
 
-// PseudoBoolean0x100 defines model for PseudoBoolean0x10.0.
-type PseudoBoolean0x100 = bool
+// PseudoBoolean0x110 defines model for PseudoBoolean0x11.0.
+type PseudoBoolean0x110 = bool
 
-// PseudoBoolean0x101 A boolean value that can be represented in various formats.
-type PseudoBoolean0x101 = string
+// PseudoBoolean0x111 A boolean value that can be represented in various formats.
+type PseudoBoolean0x111 = string
 
 // PseudoBooleanLoose0x0c A boolean value that can be represented in various formats.
 type PseudoBooleanLoose0x0c struct {
@@ -2083,8 +2108,8 @@ type PseudoBooleanLoose0x0c0 = bool
 // PseudoBooleanLoose0x0c1 defines model for PseudoBooleanLoose0x0c.1.
 type PseudoBooleanLoose0x0c1 = string
 
-// RateLimitTriggeredError0x35 defines model for RateLimitTriggeredError@0x35.
-type RateLimitTriggeredError0x35 struct {
+// RateLimitTriggeredError0x36 defines model for RateLimitTriggeredError@0x36.
+type RateLimitTriggeredError0x36 struct {
 	// Code [REQUIRED]
 	//
 	// Expect HTTP response codes
@@ -2135,17 +2160,17 @@ type RateLimitTriggeredError0x35 struct {
 	AdditionalProperties map[string]interface{} `json:"-"`
 }
 
-// RecordstringsymbolRecordstringsymbolRecordstringsymbolStringobject0x08object0x09object0x40 defines model for Record<string|symbol, Record<string|symbol, Record<string|symbol, string|object>@0x08|object>@0x09|object>@0x40.
-type RecordstringsymbolRecordstringsymbolRecordstringsymbolStringobject0x08object0x09object0x40 map[string]RecordstringsymbolRecordstringsymbolRecordstringsymbolStringobject0x08object0x09object0x40_AdditionalProperties
+// RecordstringsymbolRecordstringsymbolRecordstringsymbolStringobject0x08object0x09object0x41 defines model for Record<string|symbol, Record<string|symbol, Record<string|symbol, string|object>@0x08|object>@0x09|object>@0x41.
+type RecordstringsymbolRecordstringsymbolRecordstringsymbolStringobject0x08object0x09object0x41 map[string]RecordstringsymbolRecordstringsymbolRecordstringsymbolStringobject0x08object0x09object0x41_AdditionalProperties
 
-// RecordstringsymbolRecordstringsymbolRecordstringsymbolStringobject0x08object0x09object0x400 defines model for RecordstringsymbolRecordstringsymbolRecordstringsymbolStringobject0x08object0x09object0x40.0.
-type RecordstringsymbolRecordstringsymbolRecordstringsymbolStringobject0x08object0x09object0x400 = RecordstringsymbolRecordstringsymbolStringobject0x08object0x09
+// RecordstringsymbolRecordstringsymbolRecordstringsymbolStringobject0x08object0x09object0x410 defines model for RecordstringsymbolRecordstringsymbolRecordstringsymbolStringobject0x08object0x09object0x41.0.
+type RecordstringsymbolRecordstringsymbolRecordstringsymbolStringobject0x08object0x09object0x410 = RecordstringsymbolRecordstringsymbolStringobject0x08object0x09
 
-// RecordstringsymbolRecordstringsymbolRecordstringsymbolStringobject0x08object0x09object0x401 Can be any value - string, number, boolean, array or object.
-type RecordstringsymbolRecordstringsymbolRecordstringsymbolStringobject0x08object0x09object0x401 = interface{}
+// RecordstringsymbolRecordstringsymbolRecordstringsymbolStringobject0x08object0x09object0x411 Can be any value - string, number, boolean, array or object.
+type RecordstringsymbolRecordstringsymbolRecordstringsymbolStringobject0x08object0x09object0x411 = interface{}
 
-// RecordstringsymbolRecordstringsymbolRecordstringsymbolStringobject0x08object0x09object0x40_AdditionalProperties defines model for Record<string|symbol, Record<string|symbol, Record<string|symbol, string|object>@0x08|object>@0x09|object>@0x40.AdditionalProperties.
-type RecordstringsymbolRecordstringsymbolRecordstringsymbolStringobject0x08object0x09object0x40_AdditionalProperties struct {
+// RecordstringsymbolRecordstringsymbolRecordstringsymbolStringobject0x08object0x09object0x41_AdditionalProperties defines model for Record<string|symbol, Record<string|symbol, Record<string|symbol, string|object>@0x08|object>@0x09|object>@0x41.AdditionalProperties.
+type RecordstringsymbolRecordstringsymbolRecordstringsymbolStringobject0x08object0x09object0x41_AdditionalProperties struct {
 	union json.RawMessage
 }
 
@@ -2163,14 +2188,14 @@ type RecordstringsymbolRecordstringsymbolStringobject0x08object0x09_AdditionalPr
 	union json.RawMessage
 }
 
-// RecordstringsymbolString0x3b defines model for Record<string|symbol, string>@0x3b.
-type RecordstringsymbolString0x3b map[string]string
+// RecordstringsymbolString0x3c defines model for Record<string|symbol, string>@0x3c.
+type RecordstringsymbolString0x3c map[string]string
 
-// RecordstringsymbolString0x3d defines model for Record<string|symbol, string>@0x3d.
-type RecordstringsymbolString0x3d map[string]string
+// RecordstringsymbolString0x3e defines model for Record<string|symbol, string>@0x3e.
+type RecordstringsymbolString0x3e map[string]string
 
-// RecordstringsymbolString0x3f defines model for Record<string|symbol, string>@0x3f.
-type RecordstringsymbolString0x3f map[string]string
+// RecordstringsymbolString0x40 defines model for Record<string|symbol, string>@0x40.
+type RecordstringsymbolString0x40 map[string]string
 
 // RecordstringsymbolStringobject0x08 defines model for Record<string|symbol, string|object>@0x08.
 type RecordstringsymbolStringobject0x08 map[string]RecordstringsymbolStringobject0x08_AdditionalProperties
@@ -2186,8 +2211,8 @@ type RecordstringsymbolStringobject0x08_AdditionalProperties struct {
 	union json.RawMessage
 }
 
-// ResourceNotFoundError0x43 defines model for ResourceNotFoundError@0x43.
-type ResourceNotFoundError0x43 struct {
+// ResourceNotFoundError0x44 defines model for ResourceNotFoundError@0x44.
+type ResourceNotFoundError0x44 struct {
 	// Code [REQUIRED]
 	//
 	// Expect HTTP response codes
@@ -2224,8 +2249,8 @@ type ResourceNotFoundError0x43 struct {
 	AdditionalProperties map[string]interface{} `json:"-"`
 }
 
-// ResourcePolicyDenyError0x2f defines model for ResourcePolicyDenyError@0x2f.
-type ResourcePolicyDenyError0x2f struct {
+// ResourcePolicyDenyError0x30 defines model for ResourcePolicyDenyError@0x30.
+type ResourcePolicyDenyError0x30 struct {
 	// Code [REQUIRED]
 	//
 	// Expect HTTP response codes
@@ -2262,8 +2287,8 @@ type ResourcePolicyDenyError0x2f struct {
 	AdditionalProperties map[string]interface{} `json:"-"`
 }
 
-// ServiceNodeResourceDrainError0x38 defines model for ServiceNodeResourceDrainError@0x38.
-type ServiceNodeResourceDrainError0x38 struct {
+// ServiceNodeResourceDrainError0x39 defines model for ServiceNodeResourceDrainError@0x39.
+type ServiceNodeResourceDrainError0x39 struct {
 	// Code [REQUIRED]
 	//
 	// Expect HTTP response codes
@@ -2300,25 +2325,25 @@ type ServiceNodeResourceDrainError0x38 struct {
 	AdditionalProperties map[string]interface{} `json:"-"`
 }
 
-// StorageState0x19 defines model for StorageState@0x19.
-type StorageState0x19 struct {
+// StorageState0x1a defines model for StorageState@0x1a.
+type StorageState0x1a struct {
 	// Cookies - Cast to: &lt; **Array&lt;Cookie&gt;** &gt;
 	//
 	// - Member of &lt;StorageState&gt;
 	//
 	// - Defaults to: []
-	Cookies *[]Cookie0x16 `json:"cookies,omitempty"`
+	Cookies *[]Cookie0x17 `json:"cookies,omitempty"`
 
 	// Origins - Cast to: &lt; **Array&lt;LocalStorageOrigin&gt;** &gt;
 	//
 	// - Member of &lt;StorageState&gt;
 	//
 	// - Defaults to: []
-	Origins *[]LocalStorageOrigin0x18 `json:"origins,omitempty"`
+	Origins *[]LocalStorageOrigin0x19 `json:"origins,omitempty"`
 }
 
-// SubmittedDataMalformedError0x32 defines model for SubmittedDataMalformedError@0x32.
-type SubmittedDataMalformedError0x32 struct {
+// SubmittedDataMalformedError0x33 defines model for SubmittedDataMalformedError@0x33.
+type SubmittedDataMalformedError0x33 struct {
 	// Code [REQUIRED]
 	//
 	// Expect HTTP response codes
@@ -2355,8 +2380,8 @@ type SubmittedDataMalformedError0x32 struct {
 	AdditionalProperties map[string]interface{} `json:"-"`
 }
 
-// TargetFileTooLargeError0x31 defines model for TargetFileTooLargeError@0x31.
-type TargetFileTooLargeError0x31 struct {
+// TargetFileTooLargeError0x32 defines model for TargetFileTooLargeError@0x32.
+type TargetFileTooLargeError0x32 struct {
 	// Code [REQUIRED]
 	//
 	// Expect HTTP response codes
@@ -2393,8 +2418,8 @@ type TargetFileTooLargeError0x31 struct {
 	AdditionalProperties map[string]interface{} `json:"-"`
 }
 
-// TierFeatureConstraintError0x2b defines model for TierFeatureConstraintError@0x2b.
-type TierFeatureConstraintError0x2b struct {
+// TierFeatureConstraintError0x2c defines model for TierFeatureConstraintError@0x2c.
+type TierFeatureConstraintError0x2c struct {
 	// Code [REQUIRED]
 	//
 	// Expect HTTP response codes
@@ -2431,28 +2456,28 @@ type TierFeatureConstraintError0x2b struct {
 	AdditionalProperties map[string]interface{} `json:"-"`
 }
 
-// TurnDownTweakableOptions0x22 defines model for TurnDownTweakableOptions@0x22.
-type TurnDownTweakableOptions0x22 struct {
+// TurnDownTweakableOptions0x23 defines model for TurnDownTweakableOptions@0x23.
+type TurnDownTweakableOptions0x23 struct {
 	// BulletListMarker Turndown options > bulletListMarker
 	//
 	// - Cast to: &lt; **&quot;-&quot; | &quot;+&quot; | &quot;*&quot;** &gt;
 	//
 	// - Member of &lt;TurnDownTweakableOptions&gt;
-	BulletListMarker *Enum0x1d `json:"bulletListMarker,omitempty"`
+	BulletListMarker *Enum0x1e `json:"bulletListMarker,omitempty"`
 
 	// EmDelimiter Turndown options > emDelimiter
 	//
 	// - Cast to: &lt; **&quot;_&quot; | &quot;*&quot;** &gt;
 	//
 	// - Member of &lt;TurnDownTweakableOptions&gt;
-	EmDelimiter *Enum0x1e `json:"emDelimiter,omitempty"`
+	EmDelimiter *Enum0x1f `json:"emDelimiter,omitempty"`
 
 	// HeadingStyle Turndown options > headingStyle
 	//
 	// - Cast to: &lt; **&quot;setext&quot; | &quot;atx&quot;** &gt;
 	//
 	// - Member of &lt;TurnDownTweakableOptions&gt;
-	HeadingStyle *Enum0x1c `json:"headingStyle,omitempty"`
+	HeadingStyle *Enum0x1d `json:"headingStyle,omitempty"`
 
 	// Hr Turndown options > hr
 	//
@@ -2468,25 +2493,25 @@ type TurnDownTweakableOptions0x22 struct {
 	// - Cast to: &lt; **&quot;full&quot; | &quot;collapsed&quot; | &quot;shortcut&quot; | &quot;discarded&quot;** &gt;
 	//
 	// - Member of &lt;TurnDownTweakableOptions&gt;
-	LinkReferenceStyle *Enum0x21 `json:"linkReferenceStyle,omitempty"`
+	LinkReferenceStyle *Enum0x22 `json:"linkReferenceStyle,omitempty"`
 
 	// LinkStyle Turndown options > linkStyle
 	//
 	// - Cast to: &lt; **&quot;inlined&quot; | &quot;referenced&quot; | &quot;discarded&quot;** &gt;
 	//
 	// - Member of &lt;TurnDownTweakableOptions&gt;
-	LinkStyle *Enum0x20 `json:"linkStyle,omitempty"`
+	LinkStyle *Enum0x21 `json:"linkStyle,omitempty"`
 
 	// StrongDelimiter Turndown options > strongDelimiter
 	//
 	// - Cast to: &lt; **&quot;__&quot; | &quot;**&quot;** &gt;
 	//
 	// - Member of &lt;TurnDownTweakableOptions&gt;
-	StrongDelimiter *Enum0x1f `json:"strongDelimiter,omitempty"`
+	StrongDelimiter *Enum0x20 `json:"strongDelimiter,omitempty"`
 }
 
-// Viewport0x1b defines model for Viewport@0x1b.
-type Viewport0x1b struct {
+// Viewport0x1c defines model for Viewport@0x1c.
+type Viewport0x1c struct {
 	// DeviceScaleFactor - Cast to: &lt; **number** &gt;
 	//
 	// - Member of &lt;Viewport&gt;
@@ -2525,50 +2550,50 @@ type Viewport0x1b struct {
 // Enum0x0d Enum<"initial" | "final">
 type Enum0x0d string
 
-// Enum0x0f Enum<"content" | "markdown" | "html" | "text" | "pageshot" | "screenshot" | "vlm" | "readerlm-v2" | "frontmatter" | "readability" | "...>
-type Enum0x0f string
+// Enum0x10 Enum<"content" | "markdown" | "html" | "text" | "pageshot" | "screenshot" | "vlm" | "readerlm-v2" | "frontmatter" | "readability" | "...>
+type Enum0x10 string
 
-// Enum0x11 Enum<"none" | "all" | "alt" | "all_p" | "alt_p">
-type Enum0x11 string
-
-// Enum0x12 Enum<"none" | "text" | "link" | "image" | "html">
+// Enum0x12 Enum<"none" | "all" | "alt" | "all_p" | "alt_p">
 type Enum0x12 string
 
-// Enum0x13 Enum<"reader" | "index" | "research" | "agent" | "spider" | "ocr" | "ocr+" | "ocr++" | "pdf" | "pdf+" | "pdf++">
+// Enum0x13 Enum<"none" | "text" | "link" | "image" | "html">
 type Enum0x13 string
 
-// Enum0x14 Enum<"none" | "all" | "text" | "gpt-oss">
+// Enum0x14 Enum<"reader" | "index" | "research" | "agent" | "spider" | "ocr" | "ocr+" | "ocr++" | "pdf" | "pdf+" | "pdf++">
 type Enum0x14 string
 
-// Enum0x15 Enum<"Strict" | "Lax" | "None">
+// Enum0x15 Enum<"none" | "all" | "text" | "gpt-oss">
 type Enum0x15 string
 
-// Enum0x1a Enum<"auto" | "browser" | "curl" | "cf-browser-rendering">
-type Enum0x1a string
+// Enum0x16 Enum<"Strict" | "Lax" | "None">
+type Enum0x16 string
 
-// Enum0x1c Enum<"setext" | "atx">
-type Enum0x1c string
+// Enum0x1b Enum<"auto" | "browser" | "curl" | "cf-browser-rendering">
+type Enum0x1b string
 
-// Enum0x1d Enum<"-" | "+" | "*">
+// Enum0x1d Enum<"setext" | "atx">
 type Enum0x1d string
 
-// Enum0x1e Enum<"_" | "*">
+// Enum0x1e Enum<"-" | "+" | "*">
 type Enum0x1e string
 
-// Enum0x1f Enum<"__" | "**">
+// Enum0x1f Enum<"_" | "*">
 type Enum0x1f string
 
-// Enum0x20 Enum<"inlined" | "referenced" | "discarded">
+// Enum0x20 Enum<"__" | "**">
 type Enum0x20 string
 
-// Enum0x21 Enum<"full" | "collapsed" | "shortcut" | "discarded">
+// Enum0x21 Enum<"inlined" | "referenced" | "discarded">
 type Enum0x21 string
 
-// Enum0x24 Enum<"html" | "visible-content" | "mutation-idle" | "resource-idle" | "media-idle" | "network-idle">
-type Enum0x24 string
+// Enum0x22 Enum<"full" | "collapsed" | "shortcut" | "discarded">
+type Enum0x22 string
 
-// Enum0x25 Enum<"true" | "h1" | "h2" | "h3" | "h4" | "h5" | "structured" | "s1" | "s2" | "s3" | "s4" | "s5">
+// Enum0x25 Enum<"html" | "visible-content" | "mutation-idle" | "resource-idle" | "media-idle" | "network-idle">
 type Enum0x25 string
+
+// Enum0x26 Enum<"true" | "h1" | "h2" | "h3" | "h4" | "h5" | "structured" | "s1" | "s2" | "s3" | "s4" | "s5">
+type Enum0x26 string
 
 // GetParams defines parameters for Get.
 type GetParams struct {
@@ -2583,15 +2608,15 @@ type GetParams struct {
 	File *struct {
 		union json.RawMessage
 	} `form:"file,omitempty" json:"file,omitempty"`
-	Page        *float64 `form:"page,omitempty" json:"page,omitempty"`
+	Page        *PageSelection0x0f `form:"page,omitempty" json:"page,omitempty"`
 	RespondWith *struct {
 		union json.RawMessage
 	} `form:"respondWith,omitempty" json:"respondWith,omitempty"`
-	WithGeneratedAlt *PseudoBoolean0x10 `form:"withGeneratedAlt,omitempty" json:"withGeneratedAlt,omitempty"`
-	RetainImages     *Enum0x11          `form:"retainImages,omitempty" json:"retainImages,omitempty"`
-	RetainMedia      *Enum0x12          `form:"retainMedia,omitempty" json:"retainMedia,omitempty"`
-	Preset           *Enum0x13          `form:"preset,omitempty" json:"preset,omitempty"`
-	RetainLinks      *Enum0x14          `form:"retainLinks,omitempty" json:"retainLinks,omitempty"`
+	WithGeneratedAlt *PseudoBoolean0x11 `form:"withGeneratedAlt,omitempty" json:"withGeneratedAlt,omitempty"`
+	RetainImages     *Enum0x12          `form:"retainImages,omitempty" json:"retainImages,omitempty"`
+	RetainMedia      *Enum0x13          `form:"retainMedia,omitempty" json:"retainMedia,omitempty"`
+	Preset           *Enum0x14          `form:"preset,omitempty" json:"preset,omitempty"`
+	RetainLinks      *Enum0x15          `form:"retainLinks,omitempty" json:"retainLinks,omitempty"`
 	WithLinksSummary *struct {
 		union json.RawMessage
 	} `form:"withLinksSummary,omitempty" json:"withLinksSummary,omitempty"`
@@ -2634,7 +2659,7 @@ type GetParams struct {
 	JsonSchema        *string                 `form:"jsonSchema,omitempty" json:"jsonSchema,omitempty"`
 	RobotsTxt         *string                 `form:"robotsTxt,omitempty" json:"robotsTxt,omitempty"`
 	ZeroDataRetention *PseudoBooleanLoose0x0c `form:"zeroDataRetention,omitempty" json:"zeroDataRetention,omitempty"`
-	RespondTiming     *Enum0x24               `form:"respondTiming,omitempty" json:"respondTiming,omitempty"`
+	RespondTiming     *Enum0x25               `form:"respondTiming,omitempty" json:"respondTiming,omitempty"`
 	MarkdownChunking  *struct {
 		union json.RawMessage
 	} `form:"markdownChunking,omitempty" json:"markdownChunking,omitempty"`
@@ -2947,7 +2972,11 @@ type GetParams struct {
 
 	// XPage Steer which page to return for uploaded files (PDF, DOC, XLS, PPT, etc.).
 	//
-	// 1-indexed; ignored when no file/PDF is uploaded.
+	// 1-indexed, 0 is the same as 1. Accepts a page number, a list and/or ranges like `1,3,5-7`.
+	//
+	// At most 35 pages can be selected. With multiple pages, DocLayout / OCR runs over each selected page.
+	//
+	// Ignored when the target is not a document.
 	XPage *string `json:"X-Page,omitempty"`
 
 	// XPreloadUrl URL to preload before scraping.
@@ -2974,25 +3003,25 @@ type GetParamsFile0 = FancyFile0x0e
 type GetParamsFile1 = string
 
 // GetParamsRespondWith0 defines parameters for Get.
-type GetParamsRespondWith0 = Enum0x0f
+type GetParamsRespondWith0 = Enum0x10
 
 // GetParamsRespondWith1 defines parameters for Get.
 type GetParamsRespondWith1 = string
 
 // GetParamsWithLinksSummary0 defines parameters for Get.
-type GetParamsWithLinksSummary0 = PseudoBoolean0x10
+type GetParamsWithLinksSummary0 = PseudoBoolean0x11
 
 // GetParamsWithLinksSummary1 defines parameters for Get.
 type GetParamsWithLinksSummary1 = string
 
 // GetParamsNoGfm0 defines parameters for Get.
-type GetParamsNoGfm0 = PseudoBoolean0x10
+type GetParamsNoGfm0 = PseudoBoolean0x11
 
 // GetParamsNoGfm1 defines parameters for Get.
 type GetParamsNoGfm1 = string
 
 // GetParamsWithIframe0 defines parameters for Get.
-type GetParamsWithIframe0 = PseudoBoolean0x10
+type GetParamsWithIframe0 = PseudoBoolean0x11
 
 // GetParamsWithIframe1 defines parameters for Get.
 type GetParamsWithIframe1 = string
@@ -3004,13 +3033,13 @@ type GetParamsSetCookies0 = interface{}
 type GetParamsSetCookies1 = string
 
 // GetParamsEngine0 defines parameters for Get.
-type GetParamsEngine0 = Enum0x1a
+type GetParamsEngine0 = Enum0x1b
 
 // GetParamsEngine1 defines parameters for Get.
 type GetParamsEngine1 = string
 
 // GetParamsMarkdownChunking0 defines parameters for Get.
-type GetParamsMarkdownChunking0 = Enum0x25
+type GetParamsMarkdownChunking0 = Enum0x26
 
 // GetParamsMarkdownChunking1 defines parameters for Get.
 type GetParamsMarkdownChunking1 = string
@@ -3110,10 +3139,10 @@ type Get200JSONResponseBody struct {
 }
 
 // Get400JSONResponseBody0 defines parameters for Get.
-type Get400JSONResponseBody0 = ParamValidationError0x27
+type Get400JSONResponseBody0 = ParamValidationError0x28
 
 // Get400JSONResponseBody1 defines parameters for Get.
-type Get400JSONResponseBody1 = DataStreamBrokenError0x28
+type Get400JSONResponseBody1 = DataStreamBrokenError0x29
 
 // Get400JSONResponseBody defines parameters for Get.
 type Get400JSONResponseBody struct {
@@ -3121,10 +3150,10 @@ type Get400JSONResponseBody struct {
 }
 
 // Get401JSONResponseBody0 defines parameters for Get.
-type Get401JSONResponseBody0 = AuthenticationFailedError0x29
+type Get401JSONResponseBody0 = AuthenticationFailedError0x2a
 
 // Get401JSONResponseBody1 defines parameters for Get.
-type Get401JSONResponseBody1 = AuthenticationRequiredError0x2a
+type Get401JSONResponseBody1 = AuthenticationRequiredError0x2b
 
 // Get401JSONResponseBody defines parameters for Get.
 type Get401JSONResponseBody struct {
@@ -3132,10 +3161,10 @@ type Get401JSONResponseBody struct {
 }
 
 // Get402JSONResponseBody0 defines parameters for Get.
-type Get402JSONResponseBody0 = TierFeatureConstraintError0x2b
+type Get402JSONResponseBody0 = TierFeatureConstraintError0x2c
 
 // Get402JSONResponseBody1 defines parameters for Get.
-type Get402JSONResponseBody1 = InsufficientBalanceError0x2c
+type Get402JSONResponseBody1 = InsufficientBalanceError0x2d
 
 // Get402JSONResponseBody defines parameters for Get.
 type Get402JSONResponseBody struct {
@@ -3143,10 +3172,10 @@ type Get402JSONResponseBody struct {
 }
 
 // Get403JSONResponseBody0 defines parameters for Get.
-type Get403JSONResponseBody0 = OperationNotAllowedError0x2d
+type Get403JSONResponseBody0 = OperationNotAllowedError0x2e
 
 // Get403JSONResponseBody1 defines parameters for Get.
-type Get403JSONResponseBody1 = AbuseAlleviationError0x2e
+type Get403JSONResponseBody1 = AbuseAlleviationError0x2f
 
 // Get403JSONResponseBody defines parameters for Get.
 type Get403JSONResponseBody struct {
@@ -3154,10 +3183,10 @@ type Get403JSONResponseBody struct {
 }
 
 // Get409JSONResponseBody0 defines parameters for Get.
-type Get409JSONResponseBody0 = ResourcePolicyDenyError0x2f
+type Get409JSONResponseBody0 = ResourcePolicyDenyError0x30
 
 // Get409JSONResponseBody1 defines parameters for Get.
-type Get409JSONResponseBody1 = BudgetExceededError0x30
+type Get409JSONResponseBody1 = BudgetExceededError0x31
 
 // Get409JSONResponseBody defines parameters for Get.
 type Get409JSONResponseBody struct {
@@ -3165,13 +3194,13 @@ type Get409JSONResponseBody struct {
 }
 
 // Get422JSONResponseBody0 defines parameters for Get.
-type Get422JSONResponseBody0 = SubmittedDataMalformedError0x32
+type Get422JSONResponseBody0 = SubmittedDataMalformedError0x33
 
 // Get422JSONResponseBody1 defines parameters for Get.
-type Get422JSONResponseBody1 = DownstreamServiceFailureError0x33
+type Get422JSONResponseBody1 = DownstreamServiceFailureError0x34
 
 // Get422JSONResponseBody2 defines parameters for Get.
-type Get422JSONResponseBody2 = AssertionFailureError0x34
+type Get422JSONResponseBody2 = AssertionFailureError0x35
 
 // Get422JSONResponseBody defines parameters for Get.
 type Get422JSONResponseBody struct {
@@ -3264,7 +3293,7 @@ type PostJSONBody struct {
 	// Markdown - Cast to: &lt; **TurnDownTweakableOptions** &gt;
 	//
 	// - Member of &lt;CrawlerOptions&gt;
-	Markdown *TurnDownTweakableOptions0x22 `json:"markdown,omitempty"`
+	Markdown *TurnDownTweakableOptions0x23 `json:"markdown,omitempty"`
 
 	// MarkdownChunking - Cast to: &lt; **&quot;true&quot; | &quot;h1&quot; | &quot;h2&quot; | &quot;h3&quot; | &quot;h4&quot; | &quot;h5&quot; | &quot;structured&quot; | &quot;s1&quot; | &quot;s2&quot; | &quot;s3&quot; | &quot;s4&quot; | &quot;s5&quot;|string** &gt;
 	//
@@ -3296,16 +3325,14 @@ type PostJSONBody struct {
 	// Ocr - Cast to: &lt; **OCRPreferences** &gt;
 	//
 	// - Member of &lt;CrawlerOptions&gt;
-	Ocr *OCRPreferences0x23 `json:"ocr,omitempty"`
+	Ocr *OCRPreferences0x24 `json:"ocr,omitempty"`
 
-	// Page Steer which page to return for document files (1-indexed).
+	// Page Steer which page(s) to return for document files. See PageSelection.
 	//
-	// - Cast to: &lt; **number** &gt;
+	// - Cast to: &lt; **PageSelection** &gt;
 	//
 	// - Member of &lt;CrawlerOptions&gt;
-	//
-	// - Some validators will be applied on value(s): (v) =&gt; Number.isInteger(v) &amp;&amp; v &gt;= 1
-	Page *float64 `json:"page,omitempty"`
+	Page *PageSelection0x0f `json:"page,omitempty"`
 
 	// Pdf Base64 encoded PDF.
 	//
@@ -3322,7 +3349,7 @@ type PostJSONBody struct {
 	// Preset - Cast to: &lt; **&quot;reader&quot; | &quot;index&quot; | &quot;research&quot; | &quot;agent&quot; | &quot;spider&quot; | &quot;ocr&quot; | &quot;ocr+&quot; | &quot;ocr++&quot; | &quot;pdf&quot; | &quot;pdf+&quot; | &quot;pdf++&quot;** &gt;
 	//
 	// - Member of &lt;CrawlerOptions&gt;
-	Preset *Enum0x13 `json:"preset,omitempty"`
+	Preset *Enum0x14 `json:"preset,omitempty"`
 
 	// Proxy - Cast to: &lt; **string** &gt;
 	//
@@ -3357,7 +3384,7 @@ type PostJSONBody struct {
 	// RespondTiming - Cast to: &lt; **&quot;html&quot; | &quot;visible-content&quot; | &quot;mutation-idle&quot; | &quot;resource-idle&quot; | &quot;media-idle&quot; | &quot;network-idle&quot;** &gt;
 	//
 	// - Member of &lt;CrawlerOptions&gt;
-	RespondTiming *Enum0x24 `json:"respondTiming,omitempty"`
+	RespondTiming *Enum0x25 `json:"respondTiming,omitempty"`
 
 	// RespondWith - Cast to: &lt; **&quot;content&quot; | &quot;markdown&quot; | &quot;html&quot; | &quot;text&quot; | &quot;pageshot&quot; | &quot;screenshot&quot; | &quot;vlm&quot; | &quot;readerlm-v2&quot; | &quot;frontmatter&quot; | &quot;readability&quot; | &quot;...|string** &gt;
 	//
@@ -3371,21 +3398,21 @@ type PostJSONBody struct {
 	// - Member of &lt;CrawlerOptions&gt;
 	//
 	// - Defaults to: &#39;all&#39;
-	RetainImages *Enum0x11 `json:"retainImages,omitempty"`
+	RetainImages *Enum0x12 `json:"retainImages,omitempty"`
 
 	// RetainLinks - Cast to: &lt; **&quot;none&quot; | &quot;all&quot; | &quot;text&quot; | &quot;gpt-oss&quot;** &gt;
 	//
 	// - Member of &lt;CrawlerOptions&gt;
 	//
 	// - Defaults to: &#39;all&#39;
-	RetainLinks *Enum0x14 `json:"retainLinks,omitempty"`
+	RetainLinks *Enum0x15 `json:"retainLinks,omitempty"`
 
 	// RetainMedia - Cast to: &lt; **&quot;none&quot; | &quot;text&quot; | &quot;link&quot; | &quot;image&quot; | &quot;html&quot;** &gt;
 	//
 	// - Member of &lt;CrawlerOptions&gt;
 	//
 	// - Defaults to: &#39;link&#39;
-	RetainMedia *Enum0x12 `json:"retainMedia,omitempty"`
+	RetainMedia *Enum0x13 `json:"retainMedia,omitempty"`
 
 	// RobotsTxt - Cast to: &lt; **string** &gt;
 	//
@@ -3405,7 +3432,7 @@ type PostJSONBody struct {
 	// StorageState - Cast to: &lt; **StorageState** &gt;
 	//
 	// - Member of &lt;CrawlerOptions&gt;
-	StorageState *StorageState0x19 `json:"storageState,omitempty"`
+	StorageState *StorageState0x1a `json:"storageState,omitempty"`
 
 	// TargetSelector - Cast to: &lt; **Array&lt;string&gt;** &gt;
 	//
@@ -3437,7 +3464,7 @@ type PostJSONBody struct {
 	// Viewport - Cast to: &lt; **Viewport** &gt;
 	//
 	// - Member of &lt;CrawlerOptions&gt;
-	Viewport *Viewport0x1b `json:"viewport,omitempty"`
+	Viewport *Viewport0x1c `json:"viewport,omitempty"`
 
 	// WaitForSelector - Cast to: &lt; **Array&lt;string&gt;** &gt;
 	//
@@ -3447,7 +3474,7 @@ type PostJSONBody struct {
 	// WithGeneratedAlt - Cast to: &lt; **PseudoBoolean** &gt;
 	//
 	// - Member of &lt;CrawlerOptions&gt;
-	WithGeneratedAlt *PseudoBoolean0x10 `json:"withGeneratedAlt,omitempty"`
+	WithGeneratedAlt *PseudoBoolean0x11 `json:"withGeneratedAlt,omitempty"`
 
 	// WithIframe - Cast to: &lt; **PseudoBoolean|string** &gt;
 	//
@@ -3580,14 +3607,12 @@ type PostFormdataBody struct {
 	// - Member of &lt;CrawlerOptions&gt;
 	NoServiceWorker *PseudoBooleanLoose0x0c `form:"noServiceWorker,omitempty" json:"noServiceWorker,omitempty"`
 
-	// Page Steer which page to return for document files (1-indexed).
+	// Page Steer which page(s) to return for document files. See PageSelection.
 	//
-	// - Cast to: &lt; **number** &gt;
+	// - Cast to: &lt; **PageSelection** &gt;
 	//
 	// - Member of &lt;CrawlerOptions&gt;
-	//
-	// - Some validators will be applied on value(s): (v) =&gt; Number.isInteger(v) &amp;&amp; v &gt;= 1
-	Page *float64 `form:"page,omitempty" json:"page,omitempty"`
+	Page *PageSelection0x0f `form:"page,omitempty" json:"page,omitempty"`
 
 	// Pdf Base64 encoded PDF.
 	//
@@ -3604,7 +3629,7 @@ type PostFormdataBody struct {
 	// Preset - Cast to: &lt; **&quot;reader&quot; | &quot;index&quot; | &quot;research&quot; | &quot;agent&quot; | &quot;spider&quot; | &quot;ocr&quot; | &quot;ocr+&quot; | &quot;ocr++&quot; | &quot;pdf&quot; | &quot;pdf+&quot; | &quot;pdf++&quot;** &gt;
 	//
 	// - Member of &lt;CrawlerOptions&gt;
-	Preset *Enum0x13 `form:"preset,omitempty" json:"preset,omitempty"`
+	Preset *Enum0x14 `form:"preset,omitempty" json:"preset,omitempty"`
 
 	// Proxy - Cast to: &lt; **string** &gt;
 	//
@@ -3639,7 +3664,7 @@ type PostFormdataBody struct {
 	// RespondTiming - Cast to: &lt; **&quot;html&quot; | &quot;visible-content&quot; | &quot;mutation-idle&quot; | &quot;resource-idle&quot; | &quot;media-idle&quot; | &quot;network-idle&quot;** &gt;
 	//
 	// - Member of &lt;CrawlerOptions&gt;
-	RespondTiming *Enum0x24 `form:"respondTiming,omitempty" json:"respondTiming,omitempty"`
+	RespondTiming *Enum0x25 `form:"respondTiming,omitempty" json:"respondTiming,omitempty"`
 
 	// RespondWith - Cast to: &lt; **&quot;content&quot; | &quot;markdown&quot; | &quot;html&quot; | &quot;text&quot; | &quot;pageshot&quot; | &quot;screenshot&quot; | &quot;vlm&quot; | &quot;readerlm-v2&quot; | &quot;frontmatter&quot; | &quot;readability&quot; | &quot;...|string** &gt;
 	//
@@ -3653,21 +3678,21 @@ type PostFormdataBody struct {
 	// - Member of &lt;CrawlerOptions&gt;
 	//
 	// - Defaults to: &#39;all&#39;
-	RetainImages *Enum0x11 `form:"retainImages,omitempty" json:"retainImages,omitempty"`
+	RetainImages *Enum0x12 `form:"retainImages,omitempty" json:"retainImages,omitempty"`
 
 	// RetainLinks - Cast to: &lt; **&quot;none&quot; | &quot;all&quot; | &quot;text&quot; | &quot;gpt-oss&quot;** &gt;
 	//
 	// - Member of &lt;CrawlerOptions&gt;
 	//
 	// - Defaults to: &#39;all&#39;
-	RetainLinks *Enum0x14 `form:"retainLinks,omitempty" json:"retainLinks,omitempty"`
+	RetainLinks *Enum0x15 `form:"retainLinks,omitempty" json:"retainLinks,omitempty"`
 
 	// RetainMedia - Cast to: &lt; **&quot;none&quot; | &quot;text&quot; | &quot;link&quot; | &quot;image&quot; | &quot;html&quot;** &gt;
 	//
 	// - Member of &lt;CrawlerOptions&gt;
 	//
 	// - Defaults to: &#39;link&#39;
-	RetainMedia *Enum0x12 `form:"retainMedia,omitempty" json:"retainMedia,omitempty"`
+	RetainMedia *Enum0x13 `form:"retainMedia,omitempty" json:"retainMedia,omitempty"`
 
 	// RobotsTxt - Cast to: &lt; **string** &gt;
 	//
@@ -3719,7 +3744,7 @@ type PostFormdataBody struct {
 	// WithGeneratedAlt - Cast to: &lt; **PseudoBoolean** &gt;
 	//
 	// - Member of &lt;CrawlerOptions&gt;
-	WithGeneratedAlt *PseudoBoolean0x10 `form:"withGeneratedAlt,omitempty" json:"withGeneratedAlt,omitempty"`
+	WithGeneratedAlt *PseudoBoolean0x11 `form:"withGeneratedAlt,omitempty" json:"withGeneratedAlt,omitempty"`
 
 	// WithIframe - Cast to: &lt; **PseudoBoolean|string** &gt;
 	//
@@ -3833,7 +3858,7 @@ type PostMultipartBody struct {
 	// Markdown - Cast to: &lt; **TurnDownTweakableOptions** &gt;
 	//
 	// - Member of &lt;CrawlerOptions&gt;
-	Markdown *TurnDownTweakableOptions0x22 `json:"markdown,omitempty"`
+	Markdown *TurnDownTweakableOptions0x23 `json:"markdown,omitempty"`
 
 	// MarkdownChunking - Cast to: &lt; **&quot;true&quot; | &quot;h1&quot; | &quot;h2&quot; | &quot;h3&quot; | &quot;h4&quot; | &quot;h5&quot; | &quot;structured&quot; | &quot;s1&quot; | &quot;s2&quot; | &quot;s3&quot; | &quot;s4&quot; | &quot;s5&quot;|string** &gt;
 	//
@@ -3865,16 +3890,14 @@ type PostMultipartBody struct {
 	// Ocr - Cast to: &lt; **OCRPreferences** &gt;
 	//
 	// - Member of &lt;CrawlerOptions&gt;
-	Ocr *OCRPreferences0x23 `json:"ocr,omitempty"`
+	Ocr *OCRPreferences0x24 `json:"ocr,omitempty"`
 
-	// Page Steer which page to return for document files (1-indexed).
+	// Page Steer which page(s) to return for document files. See PageSelection.
 	//
-	// - Cast to: &lt; **number** &gt;
+	// - Cast to: &lt; **PageSelection** &gt;
 	//
 	// - Member of &lt;CrawlerOptions&gt;
-	//
-	// - Some validators will be applied on value(s): (v) =&gt; Number.isInteger(v) &amp;&amp; v &gt;= 1
-	Page *float64 `json:"page,omitempty"`
+	Page *PageSelection0x0f `json:"page,omitempty"`
 
 	// Pdf Base64 encoded PDF.
 	//
@@ -3891,7 +3914,7 @@ type PostMultipartBody struct {
 	// Preset - Cast to: &lt; **&quot;reader&quot; | &quot;index&quot; | &quot;research&quot; | &quot;agent&quot; | &quot;spider&quot; | &quot;ocr&quot; | &quot;ocr+&quot; | &quot;ocr++&quot; | &quot;pdf&quot; | &quot;pdf+&quot; | &quot;pdf++&quot;** &gt;
 	//
 	// - Member of &lt;CrawlerOptions&gt;
-	Preset *Enum0x13 `json:"preset,omitempty"`
+	Preset *Enum0x14 `json:"preset,omitempty"`
 
 	// Proxy - Cast to: &lt; **string** &gt;
 	//
@@ -3926,7 +3949,7 @@ type PostMultipartBody struct {
 	// RespondTiming - Cast to: &lt; **&quot;html&quot; | &quot;visible-content&quot; | &quot;mutation-idle&quot; | &quot;resource-idle&quot; | &quot;media-idle&quot; | &quot;network-idle&quot;** &gt;
 	//
 	// - Member of &lt;CrawlerOptions&gt;
-	RespondTiming *Enum0x24 `json:"respondTiming,omitempty"`
+	RespondTiming *Enum0x25 `json:"respondTiming,omitempty"`
 
 	// RespondWith - Cast to: &lt; **&quot;content&quot; | &quot;markdown&quot; | &quot;html&quot; | &quot;text&quot; | &quot;pageshot&quot; | &quot;screenshot&quot; | &quot;vlm&quot; | &quot;readerlm-v2&quot; | &quot;frontmatter&quot; | &quot;readability&quot; | &quot;...|string** &gt;
 	//
@@ -3940,21 +3963,21 @@ type PostMultipartBody struct {
 	// - Member of &lt;CrawlerOptions&gt;
 	//
 	// - Defaults to: &#39;all&#39;
-	RetainImages *Enum0x11 `json:"retainImages,omitempty"`
+	RetainImages *Enum0x12 `json:"retainImages,omitempty"`
 
 	// RetainLinks - Cast to: &lt; **&quot;none&quot; | &quot;all&quot; | &quot;text&quot; | &quot;gpt-oss&quot;** &gt;
 	//
 	// - Member of &lt;CrawlerOptions&gt;
 	//
 	// - Defaults to: &#39;all&#39;
-	RetainLinks *Enum0x14 `json:"retainLinks,omitempty"`
+	RetainLinks *Enum0x15 `json:"retainLinks,omitempty"`
 
 	// RetainMedia - Cast to: &lt; **&quot;none&quot; | &quot;text&quot; | &quot;link&quot; | &quot;image&quot; | &quot;html&quot;** &gt;
 	//
 	// - Member of &lt;CrawlerOptions&gt;
 	//
 	// - Defaults to: &#39;link&#39;
-	RetainMedia *Enum0x12 `json:"retainMedia,omitempty"`
+	RetainMedia *Enum0x13 `json:"retainMedia,omitempty"`
 
 	// RobotsTxt - Cast to: &lt; **string** &gt;
 	//
@@ -3974,7 +3997,7 @@ type PostMultipartBody struct {
 	// StorageState - Cast to: &lt; **StorageState** &gt;
 	//
 	// - Member of &lt;CrawlerOptions&gt;
-	StorageState *StorageState0x19 `json:"storageState,omitempty"`
+	StorageState *StorageState0x1a `json:"storageState,omitempty"`
 
 	// TargetSelector - Cast to: &lt; **Array&lt;string&gt;** &gt;
 	//
@@ -4006,7 +4029,7 @@ type PostMultipartBody struct {
 	// Viewport - Cast to: &lt; **Viewport** &gt;
 	//
 	// - Member of &lt;CrawlerOptions&gt;
-	Viewport *Viewport0x1b `json:"viewport,omitempty"`
+	Viewport *Viewport0x1c `json:"viewport,omitempty"`
 
 	// WaitForSelector - Cast to: &lt; **Array&lt;string&gt;** &gt;
 	//
@@ -4016,7 +4039,7 @@ type PostMultipartBody struct {
 	// WithGeneratedAlt - Cast to: &lt; **PseudoBoolean** &gt;
 	//
 	// - Member of &lt;CrawlerOptions&gt;
-	WithGeneratedAlt *PseudoBoolean0x10 `json:"withGeneratedAlt,omitempty"`
+	WithGeneratedAlt *PseudoBoolean0x11 `json:"withGeneratedAlt,omitempty"`
 
 	// WithIframe - Cast to: &lt; **PseudoBoolean|string** &gt;
 	//
@@ -4057,15 +4080,15 @@ type PostParams struct {
 	File *struct {
 		union json.RawMessage
 	} `form:"file,omitempty" json:"file,omitempty"`
-	Page        *float64 `form:"page,omitempty" json:"page,omitempty"`
+	Page        *PageSelection0x0f `form:"page,omitempty" json:"page,omitempty"`
 	RespondWith *struct {
 		union json.RawMessage
 	} `form:"respondWith,omitempty" json:"respondWith,omitempty"`
-	WithGeneratedAlt *PseudoBoolean0x10 `form:"withGeneratedAlt,omitempty" json:"withGeneratedAlt,omitempty"`
-	RetainImages     *Enum0x11          `form:"retainImages,omitempty" json:"retainImages,omitempty"`
-	RetainMedia      *Enum0x12          `form:"retainMedia,omitempty" json:"retainMedia,omitempty"`
-	Preset           *Enum0x13          `form:"preset,omitempty" json:"preset,omitempty"`
-	RetainLinks      *Enum0x14          `form:"retainLinks,omitempty" json:"retainLinks,omitempty"`
+	WithGeneratedAlt *PseudoBoolean0x11 `form:"withGeneratedAlt,omitempty" json:"withGeneratedAlt,omitempty"`
+	RetainImages     *Enum0x12          `form:"retainImages,omitempty" json:"retainImages,omitempty"`
+	RetainMedia      *Enum0x13          `form:"retainMedia,omitempty" json:"retainMedia,omitempty"`
+	Preset           *Enum0x14          `form:"preset,omitempty" json:"preset,omitempty"`
+	RetainLinks      *Enum0x15          `form:"retainLinks,omitempty" json:"retainLinks,omitempty"`
 	WithLinksSummary *struct {
 		union json.RawMessage
 	} `form:"withLinksSummary,omitempty" json:"withLinksSummary,omitempty"`
@@ -4108,7 +4131,7 @@ type PostParams struct {
 	JsonSchema        *string                 `form:"jsonSchema,omitempty" json:"jsonSchema,omitempty"`
 	RobotsTxt         *string                 `form:"robotsTxt,omitempty" json:"robotsTxt,omitempty"`
 	ZeroDataRetention *PseudoBooleanLoose0x0c `form:"zeroDataRetention,omitempty" json:"zeroDataRetention,omitempty"`
-	RespondTiming     *Enum0x24               `form:"respondTiming,omitempty" json:"respondTiming,omitempty"`
+	RespondTiming     *Enum0x25               `form:"respondTiming,omitempty" json:"respondTiming,omitempty"`
 	MarkdownChunking  *struct {
 		union json.RawMessage
 	} `form:"markdownChunking,omitempty" json:"markdownChunking,omitempty"`
@@ -4421,7 +4444,11 @@ type PostParams struct {
 
 	// XPage Steer which page to return for uploaded files (PDF, DOC, XLS, PPT, etc.).
 	//
-	// 1-indexed; ignored when no file/PDF is uploaded.
+	// 1-indexed, 0 is the same as 1. Accepts a page number, a list and/or ranges like `1,3,5-7`.
+	//
+	// At most 35 pages can be selected. With multiple pages, DocLayout / OCR runs over each selected page.
+	//
+	// Ignored when the target is not a document.
 	XPage *string `json:"X-Page,omitempty"`
 
 	// XPreloadUrl URL to preload before scraping.
@@ -4448,25 +4475,25 @@ type PostParamsFile0 = FancyFile0x0e
 type PostParamsFile1 = string
 
 // PostParamsRespondWith0 defines parameters for Post.
-type PostParamsRespondWith0 = Enum0x0f
+type PostParamsRespondWith0 = Enum0x10
 
 // PostParamsRespondWith1 defines parameters for Post.
 type PostParamsRespondWith1 = string
 
 // PostParamsWithLinksSummary0 defines parameters for Post.
-type PostParamsWithLinksSummary0 = PseudoBoolean0x10
+type PostParamsWithLinksSummary0 = PseudoBoolean0x11
 
 // PostParamsWithLinksSummary1 defines parameters for Post.
 type PostParamsWithLinksSummary1 = string
 
 // PostParamsNoGfm0 defines parameters for Post.
-type PostParamsNoGfm0 = PseudoBoolean0x10
+type PostParamsNoGfm0 = PseudoBoolean0x11
 
 // PostParamsNoGfm1 defines parameters for Post.
 type PostParamsNoGfm1 = string
 
 // PostParamsWithIframe0 defines parameters for Post.
-type PostParamsWithIframe0 = PseudoBoolean0x10
+type PostParamsWithIframe0 = PseudoBoolean0x11
 
 // PostParamsWithIframe1 defines parameters for Post.
 type PostParamsWithIframe1 = string
@@ -4478,13 +4505,13 @@ type PostParamsSetCookies0 = interface{}
 type PostParamsSetCookies1 = string
 
 // PostParamsEngine0 defines parameters for Post.
-type PostParamsEngine0 = Enum0x1a
+type PostParamsEngine0 = Enum0x1b
 
 // PostParamsEngine1 defines parameters for Post.
 type PostParamsEngine1 = string
 
 // PostParamsMarkdownChunking0 defines parameters for Post.
-type PostParamsMarkdownChunking0 = Enum0x25
+type PostParamsMarkdownChunking0 = Enum0x26
 
 // PostParamsMarkdownChunking1 defines parameters for Post.
 type PostParamsMarkdownChunking1 = string
@@ -4493,7 +4520,7 @@ type PostParamsMarkdownChunking1 = string
 type PostParamsAuthorization0 = string
 
 // PostJSONBodyEngine0 defines parameters for Post.
-type PostJSONBodyEngine0 = Enum0x1a
+type PostJSONBodyEngine0 = Enum0x1b
 
 // PostJSONBodyEngine1 defines parameters for Post.
 type PostJSONBodyEngine1 = string
@@ -4515,7 +4542,7 @@ type PostJSONBody_File struct {
 }
 
 // PostJSONBodyMarkdownChunking0 defines parameters for Post.
-type PostJSONBodyMarkdownChunking0 = Enum0x25
+type PostJSONBodyMarkdownChunking0 = Enum0x26
 
 // PostJSONBodyMarkdownChunking1 defines parameters for Post.
 type PostJSONBodyMarkdownChunking1 = string
@@ -4526,7 +4553,7 @@ type PostJSONBody_MarkdownChunking struct {
 }
 
 // PostJSONBodyNoGfm0 defines parameters for Post.
-type PostJSONBodyNoGfm0 = PseudoBoolean0x10
+type PostJSONBodyNoGfm0 = PseudoBoolean0x11
 
 // PostJSONBodyNoGfm1 defines parameters for Post.
 type PostJSONBodyNoGfm1 = string
@@ -4548,7 +4575,7 @@ type PostJSONBody_Pdf struct {
 }
 
 // PostJSONBodyRespondWith0 defines parameters for Post.
-type PostJSONBodyRespondWith0 = Enum0x0f
+type PostJSONBodyRespondWith0 = Enum0x10
 
 // PostJSONBodyRespondWith1 defines parameters for Post.
 type PostJSONBodyRespondWith1 = string
@@ -4570,7 +4597,7 @@ type PostJSONBody_SetCookies_Item struct {
 }
 
 // PostJSONBodyWithIframe0 defines parameters for Post.
-type PostJSONBodyWithIframe0 = PseudoBoolean0x10
+type PostJSONBodyWithIframe0 = PseudoBoolean0x11
 
 // PostJSONBodyWithIframe1 defines parameters for Post.
 type PostJSONBodyWithIframe1 = string
@@ -4581,7 +4608,7 @@ type PostJSONBody_WithIframe struct {
 }
 
 // PostJSONBodyWithLinksSummary0 defines parameters for Post.
-type PostJSONBodyWithLinksSummary0 = PseudoBoolean0x10
+type PostJSONBodyWithLinksSummary0 = PseudoBoolean0x11
 
 // PostJSONBodyWithLinksSummary1 defines parameters for Post.
 type PostJSONBodyWithLinksSummary1 = string
@@ -4592,7 +4619,7 @@ type PostJSONBody_WithLinksSummary struct {
 }
 
 // PostFormdataBodyEngine0 defines parameters for Post.
-type PostFormdataBodyEngine0 = Enum0x1a
+type PostFormdataBodyEngine0 = Enum0x1b
 
 // PostFormdataBodyEngine1 defines parameters for Post.
 type PostFormdataBodyEngine1 = string
@@ -4614,7 +4641,7 @@ type PostFormdataBody_File struct {
 }
 
 // PostFormdataBodyMarkdownChunking0 defines parameters for Post.
-type PostFormdataBodyMarkdownChunking0 = Enum0x25
+type PostFormdataBodyMarkdownChunking0 = Enum0x26
 
 // PostFormdataBodyMarkdownChunking1 defines parameters for Post.
 type PostFormdataBodyMarkdownChunking1 = string
@@ -4625,7 +4652,7 @@ type PostFormdataBody_MarkdownChunking struct {
 }
 
 // PostFormdataBodyNoGfm0 defines parameters for Post.
-type PostFormdataBodyNoGfm0 = PseudoBoolean0x10
+type PostFormdataBodyNoGfm0 = PseudoBoolean0x11
 
 // PostFormdataBodyNoGfm1 defines parameters for Post.
 type PostFormdataBodyNoGfm1 = string
@@ -4647,7 +4674,7 @@ type PostFormdataBody_Pdf struct {
 }
 
 // PostFormdataBodyRespondWith0 defines parameters for Post.
-type PostFormdataBodyRespondWith0 = Enum0x0f
+type PostFormdataBodyRespondWith0 = Enum0x10
 
 // PostFormdataBodyRespondWith1 defines parameters for Post.
 type PostFormdataBodyRespondWith1 = string
@@ -4669,7 +4696,7 @@ type PostFormdataBody_SetCookies struct {
 }
 
 // PostFormdataBodyWithIframe0 defines parameters for Post.
-type PostFormdataBodyWithIframe0 = PseudoBoolean0x10
+type PostFormdataBodyWithIframe0 = PseudoBoolean0x11
 
 // PostFormdataBodyWithIframe1 defines parameters for Post.
 type PostFormdataBodyWithIframe1 = string
@@ -4680,7 +4707,7 @@ type PostFormdataBody_WithIframe struct {
 }
 
 // PostFormdataBodyWithLinksSummary0 defines parameters for Post.
-type PostFormdataBodyWithLinksSummary0 = PseudoBoolean0x10
+type PostFormdataBodyWithLinksSummary0 = PseudoBoolean0x11
 
 // PostFormdataBodyWithLinksSummary1 defines parameters for Post.
 type PostFormdataBodyWithLinksSummary1 = string
@@ -4691,7 +4718,7 @@ type PostFormdataBody_WithLinksSummary struct {
 }
 
 // PostMultipartBodyEngine0 defines parameters for Post.
-type PostMultipartBodyEngine0 = Enum0x1a
+type PostMultipartBodyEngine0 = Enum0x1b
 
 // PostMultipartBodyEngine1 defines parameters for Post.
 type PostMultipartBodyEngine1 = string
@@ -4713,7 +4740,7 @@ type PostMultipartBody_File struct {
 }
 
 // PostMultipartBodyMarkdownChunking0 defines parameters for Post.
-type PostMultipartBodyMarkdownChunking0 = Enum0x25
+type PostMultipartBodyMarkdownChunking0 = Enum0x26
 
 // PostMultipartBodyMarkdownChunking1 defines parameters for Post.
 type PostMultipartBodyMarkdownChunking1 = string
@@ -4724,7 +4751,7 @@ type PostMultipartBody_MarkdownChunking struct {
 }
 
 // PostMultipartBodyNoGfm0 defines parameters for Post.
-type PostMultipartBodyNoGfm0 = PseudoBoolean0x10
+type PostMultipartBodyNoGfm0 = PseudoBoolean0x11
 
 // PostMultipartBodyNoGfm1 defines parameters for Post.
 type PostMultipartBodyNoGfm1 = string
@@ -4746,7 +4773,7 @@ type PostMultipartBody_Pdf struct {
 }
 
 // PostMultipartBodyRespondWith0 defines parameters for Post.
-type PostMultipartBodyRespondWith0 = Enum0x0f
+type PostMultipartBodyRespondWith0 = Enum0x10
 
 // PostMultipartBodyRespondWith1 defines parameters for Post.
 type PostMultipartBodyRespondWith1 = string
@@ -4768,7 +4795,7 @@ type PostMultipartBody_SetCookies_Item struct {
 }
 
 // PostMultipartBodyWithIframe0 defines parameters for Post.
-type PostMultipartBodyWithIframe0 = PseudoBoolean0x10
+type PostMultipartBodyWithIframe0 = PseudoBoolean0x11
 
 // PostMultipartBodyWithIframe1 defines parameters for Post.
 type PostMultipartBodyWithIframe1 = string
@@ -4779,7 +4806,7 @@ type PostMultipartBody_WithIframe struct {
 }
 
 // PostMultipartBodyWithLinksSummary0 defines parameters for Post.
-type PostMultipartBodyWithLinksSummary0 = PseudoBoolean0x10
+type PostMultipartBodyWithLinksSummary0 = PseudoBoolean0x11
 
 // PostMultipartBodyWithLinksSummary1 defines parameters for Post.
 type PostMultipartBodyWithLinksSummary1 = string
@@ -4790,10 +4817,10 @@ type PostMultipartBody_WithLinksSummary struct {
 }
 
 // Post400JSONResponseBody0 defines parameters for Post.
-type Post400JSONResponseBody0 = ParamValidationError0x27
+type Post400JSONResponseBody0 = ParamValidationError0x28
 
 // Post400JSONResponseBody1 defines parameters for Post.
-type Post400JSONResponseBody1 = DataStreamBrokenError0x28
+type Post400JSONResponseBody1 = DataStreamBrokenError0x29
 
 // Post400JSONResponseBody defines parameters for Post.
 type Post400JSONResponseBody struct {
@@ -4801,10 +4828,10 @@ type Post400JSONResponseBody struct {
 }
 
 // Post401JSONResponseBody0 defines parameters for Post.
-type Post401JSONResponseBody0 = AuthenticationFailedError0x29
+type Post401JSONResponseBody0 = AuthenticationFailedError0x2a
 
 // Post401JSONResponseBody1 defines parameters for Post.
-type Post401JSONResponseBody1 = AuthenticationRequiredError0x2a
+type Post401JSONResponseBody1 = AuthenticationRequiredError0x2b
 
 // Post401JSONResponseBody defines parameters for Post.
 type Post401JSONResponseBody struct {
@@ -4812,10 +4839,10 @@ type Post401JSONResponseBody struct {
 }
 
 // Post402JSONResponseBody0 defines parameters for Post.
-type Post402JSONResponseBody0 = TierFeatureConstraintError0x2b
+type Post402JSONResponseBody0 = TierFeatureConstraintError0x2c
 
 // Post402JSONResponseBody1 defines parameters for Post.
-type Post402JSONResponseBody1 = InsufficientBalanceError0x2c
+type Post402JSONResponseBody1 = InsufficientBalanceError0x2d
 
 // Post402JSONResponseBody defines parameters for Post.
 type Post402JSONResponseBody struct {
@@ -4823,10 +4850,10 @@ type Post402JSONResponseBody struct {
 }
 
 // Post403JSONResponseBody0 defines parameters for Post.
-type Post403JSONResponseBody0 = OperationNotAllowedError0x2d
+type Post403JSONResponseBody0 = OperationNotAllowedError0x2e
 
 // Post403JSONResponseBody1 defines parameters for Post.
-type Post403JSONResponseBody1 = AbuseAlleviationError0x2e
+type Post403JSONResponseBody1 = AbuseAlleviationError0x2f
 
 // Post403JSONResponseBody defines parameters for Post.
 type Post403JSONResponseBody struct {
@@ -4834,10 +4861,10 @@ type Post403JSONResponseBody struct {
 }
 
 // Post409JSONResponseBody0 defines parameters for Post.
-type Post409JSONResponseBody0 = ResourcePolicyDenyError0x2f
+type Post409JSONResponseBody0 = ResourcePolicyDenyError0x30
 
 // Post409JSONResponseBody1 defines parameters for Post.
-type Post409JSONResponseBody1 = BudgetExceededError0x30
+type Post409JSONResponseBody1 = BudgetExceededError0x31
 
 // Post409JSONResponseBody defines parameters for Post.
 type Post409JSONResponseBody struct {
@@ -4845,13 +4872,13 @@ type Post409JSONResponseBody struct {
 }
 
 // Post422JSONResponseBody0 defines parameters for Post.
-type Post422JSONResponseBody0 = SubmittedDataMalformedError0x32
+type Post422JSONResponseBody0 = SubmittedDataMalformedError0x33
 
 // Post422JSONResponseBody1 defines parameters for Post.
-type Post422JSONResponseBody1 = DownstreamServiceFailureError0x33
+type Post422JSONResponseBody1 = DownstreamServiceFailureError0x34
 
 // Post422JSONResponseBody2 defines parameters for Post.
-type Post422JSONResponseBody2 = AssertionFailureError0x34
+type Post422JSONResponseBody2 = AssertionFailureError0x35
 
 // Post422JSONResponseBody defines parameters for Post.
 type Post422JSONResponseBody struct {
@@ -4971,15 +4998,15 @@ type GetTargetUrlParams struct {
 	File *struct {
 		union json.RawMessage
 	} `form:"file,omitempty" json:"file,omitempty"`
-	Page        *float64 `form:"page,omitempty" json:"page,omitempty"`
+	Page        *PageSelection0x0f `form:"page,omitempty" json:"page,omitempty"`
 	RespondWith *struct {
 		union json.RawMessage
 	} `form:"respondWith,omitempty" json:"respondWith,omitempty"`
-	WithGeneratedAlt *PseudoBoolean0x10 `form:"withGeneratedAlt,omitempty" json:"withGeneratedAlt,omitempty"`
-	RetainImages     *Enum0x11          `form:"retainImages,omitempty" json:"retainImages,omitempty"`
-	RetainMedia      *Enum0x12          `form:"retainMedia,omitempty" json:"retainMedia,omitempty"`
-	Preset           *Enum0x13          `form:"preset,omitempty" json:"preset,omitempty"`
-	RetainLinks      *Enum0x14          `form:"retainLinks,omitempty" json:"retainLinks,omitempty"`
+	WithGeneratedAlt *PseudoBoolean0x11 `form:"withGeneratedAlt,omitempty" json:"withGeneratedAlt,omitempty"`
+	RetainImages     *Enum0x12          `form:"retainImages,omitempty" json:"retainImages,omitempty"`
+	RetainMedia      *Enum0x13          `form:"retainMedia,omitempty" json:"retainMedia,omitempty"`
+	Preset           *Enum0x14          `form:"preset,omitempty" json:"preset,omitempty"`
+	RetainLinks      *Enum0x15          `form:"retainLinks,omitempty" json:"retainLinks,omitempty"`
 	WithLinksSummary *struct {
 		union json.RawMessage
 	} `form:"withLinksSummary,omitempty" json:"withLinksSummary,omitempty"`
@@ -5022,7 +5049,7 @@ type GetTargetUrlParams struct {
 	JsonSchema        *string                 `form:"jsonSchema,omitempty" json:"jsonSchema,omitempty"`
 	RobotsTxt         *string                 `form:"robotsTxt,omitempty" json:"robotsTxt,omitempty"`
 	ZeroDataRetention *PseudoBooleanLoose0x0c `form:"zeroDataRetention,omitempty" json:"zeroDataRetention,omitempty"`
-	RespondTiming     *Enum0x24               `form:"respondTiming,omitempty" json:"respondTiming,omitempty"`
+	RespondTiming     *Enum0x25               `form:"respondTiming,omitempty" json:"respondTiming,omitempty"`
 	MarkdownChunking  *struct {
 		union json.RawMessage
 	} `form:"markdownChunking,omitempty" json:"markdownChunking,omitempty"`
@@ -5335,7 +5362,11 @@ type GetTargetUrlParams struct {
 
 	// XPage Steer which page to return for uploaded files (PDF, DOC, XLS, PPT, etc.).
 	//
-	// 1-indexed; ignored when no file/PDF is uploaded.
+	// 1-indexed, 0 is the same as 1. Accepts a page number, a list and/or ranges like `1,3,5-7`.
+	//
+	// At most 35 pages can be selected. With multiple pages, DocLayout / OCR runs over each selected page.
+	//
+	// Ignored when the target is not a document.
 	XPage *string `json:"X-Page,omitempty"`
 
 	// XPreloadUrl URL to preload before scraping.
@@ -5362,25 +5393,25 @@ type GetTargetUrlParamsFile0 = FancyFile0x0e
 type GetTargetUrlParamsFile1 = string
 
 // GetTargetUrlParamsRespondWith0 defines parameters for GetTargetUrl.
-type GetTargetUrlParamsRespondWith0 = Enum0x0f
+type GetTargetUrlParamsRespondWith0 = Enum0x10
 
 // GetTargetUrlParamsRespondWith1 defines parameters for GetTargetUrl.
 type GetTargetUrlParamsRespondWith1 = string
 
 // GetTargetUrlParamsWithLinksSummary0 defines parameters for GetTargetUrl.
-type GetTargetUrlParamsWithLinksSummary0 = PseudoBoolean0x10
+type GetTargetUrlParamsWithLinksSummary0 = PseudoBoolean0x11
 
 // GetTargetUrlParamsWithLinksSummary1 defines parameters for GetTargetUrl.
 type GetTargetUrlParamsWithLinksSummary1 = string
 
 // GetTargetUrlParamsNoGfm0 defines parameters for GetTargetUrl.
-type GetTargetUrlParamsNoGfm0 = PseudoBoolean0x10
+type GetTargetUrlParamsNoGfm0 = PseudoBoolean0x11
 
 // GetTargetUrlParamsNoGfm1 defines parameters for GetTargetUrl.
 type GetTargetUrlParamsNoGfm1 = string
 
 // GetTargetUrlParamsWithIframe0 defines parameters for GetTargetUrl.
-type GetTargetUrlParamsWithIframe0 = PseudoBoolean0x10
+type GetTargetUrlParamsWithIframe0 = PseudoBoolean0x11
 
 // GetTargetUrlParamsWithIframe1 defines parameters for GetTargetUrl.
 type GetTargetUrlParamsWithIframe1 = string
@@ -5392,13 +5423,13 @@ type GetTargetUrlParamsSetCookies0 = interface{}
 type GetTargetUrlParamsSetCookies1 = string
 
 // GetTargetUrlParamsEngine0 defines parameters for GetTargetUrl.
-type GetTargetUrlParamsEngine0 = Enum0x1a
+type GetTargetUrlParamsEngine0 = Enum0x1b
 
 // GetTargetUrlParamsEngine1 defines parameters for GetTargetUrl.
 type GetTargetUrlParamsEngine1 = string
 
 // GetTargetUrlParamsMarkdownChunking0 defines parameters for GetTargetUrl.
-type GetTargetUrlParamsMarkdownChunking0 = Enum0x25
+type GetTargetUrlParamsMarkdownChunking0 = Enum0x26
 
 // GetTargetUrlParamsMarkdownChunking1 defines parameters for GetTargetUrl.
 type GetTargetUrlParamsMarkdownChunking1 = string
@@ -5407,10 +5438,10 @@ type GetTargetUrlParamsMarkdownChunking1 = string
 type GetTargetUrlParamsAuthorization0 = string
 
 // GetTargetUrl400JSONResponseBody0 defines parameters for GetTargetUrl.
-type GetTargetUrl400JSONResponseBody0 = ParamValidationError0x27
+type GetTargetUrl400JSONResponseBody0 = ParamValidationError0x28
 
 // GetTargetUrl400JSONResponseBody1 defines parameters for GetTargetUrl.
-type GetTargetUrl400JSONResponseBody1 = DataStreamBrokenError0x28
+type GetTargetUrl400JSONResponseBody1 = DataStreamBrokenError0x29
 
 // GetTargetUrl400JSONResponseBody defines parameters for GetTargetUrl.
 type GetTargetUrl400JSONResponseBody struct {
@@ -5418,10 +5449,10 @@ type GetTargetUrl400JSONResponseBody struct {
 }
 
 // GetTargetUrl401JSONResponseBody0 defines parameters for GetTargetUrl.
-type GetTargetUrl401JSONResponseBody0 = AuthenticationFailedError0x29
+type GetTargetUrl401JSONResponseBody0 = AuthenticationFailedError0x2a
 
 // GetTargetUrl401JSONResponseBody1 defines parameters for GetTargetUrl.
-type GetTargetUrl401JSONResponseBody1 = AuthenticationRequiredError0x2a
+type GetTargetUrl401JSONResponseBody1 = AuthenticationRequiredError0x2b
 
 // GetTargetUrl401JSONResponseBody defines parameters for GetTargetUrl.
 type GetTargetUrl401JSONResponseBody struct {
@@ -5429,10 +5460,10 @@ type GetTargetUrl401JSONResponseBody struct {
 }
 
 // GetTargetUrl402JSONResponseBody0 defines parameters for GetTargetUrl.
-type GetTargetUrl402JSONResponseBody0 = TierFeatureConstraintError0x2b
+type GetTargetUrl402JSONResponseBody0 = TierFeatureConstraintError0x2c
 
 // GetTargetUrl402JSONResponseBody1 defines parameters for GetTargetUrl.
-type GetTargetUrl402JSONResponseBody1 = InsufficientBalanceError0x2c
+type GetTargetUrl402JSONResponseBody1 = InsufficientBalanceError0x2d
 
 // GetTargetUrl402JSONResponseBody defines parameters for GetTargetUrl.
 type GetTargetUrl402JSONResponseBody struct {
@@ -5440,10 +5471,10 @@ type GetTargetUrl402JSONResponseBody struct {
 }
 
 // GetTargetUrl403JSONResponseBody0 defines parameters for GetTargetUrl.
-type GetTargetUrl403JSONResponseBody0 = OperationNotAllowedError0x2d
+type GetTargetUrl403JSONResponseBody0 = OperationNotAllowedError0x2e
 
 // GetTargetUrl403JSONResponseBody1 defines parameters for GetTargetUrl.
-type GetTargetUrl403JSONResponseBody1 = AbuseAlleviationError0x2e
+type GetTargetUrl403JSONResponseBody1 = AbuseAlleviationError0x2f
 
 // GetTargetUrl403JSONResponseBody defines parameters for GetTargetUrl.
 type GetTargetUrl403JSONResponseBody struct {
@@ -5451,10 +5482,10 @@ type GetTargetUrl403JSONResponseBody struct {
 }
 
 // GetTargetUrl409JSONResponseBody0 defines parameters for GetTargetUrl.
-type GetTargetUrl409JSONResponseBody0 = ResourcePolicyDenyError0x2f
+type GetTargetUrl409JSONResponseBody0 = ResourcePolicyDenyError0x30
 
 // GetTargetUrl409JSONResponseBody1 defines parameters for GetTargetUrl.
-type GetTargetUrl409JSONResponseBody1 = BudgetExceededError0x30
+type GetTargetUrl409JSONResponseBody1 = BudgetExceededError0x31
 
 // GetTargetUrl409JSONResponseBody defines parameters for GetTargetUrl.
 type GetTargetUrl409JSONResponseBody struct {
@@ -5462,13 +5493,13 @@ type GetTargetUrl409JSONResponseBody struct {
 }
 
 // GetTargetUrl422JSONResponseBody0 defines parameters for GetTargetUrl.
-type GetTargetUrl422JSONResponseBody0 = SubmittedDataMalformedError0x32
+type GetTargetUrl422JSONResponseBody0 = SubmittedDataMalformedError0x33
 
 // GetTargetUrl422JSONResponseBody1 defines parameters for GetTargetUrl.
-type GetTargetUrl422JSONResponseBody1 = DownstreamServiceFailureError0x33
+type GetTargetUrl422JSONResponseBody1 = DownstreamServiceFailureError0x34
 
 // GetTargetUrl422JSONResponseBody2 defines parameters for GetTargetUrl.
-type GetTargetUrl422JSONResponseBody2 = AssertionFailureError0x34
+type GetTargetUrl422JSONResponseBody2 = AssertionFailureError0x35
 
 // GetTargetUrl422JSONResponseBody defines parameters for GetTargetUrl.
 type GetTargetUrl422JSONResponseBody struct {
@@ -5561,7 +5592,7 @@ type PostTargetUrlJSONBody struct {
 	// Markdown - Cast to: &lt; **TurnDownTweakableOptions** &gt;
 	//
 	// - Member of &lt;CrawlerOptions&gt;
-	Markdown *TurnDownTweakableOptions0x22 `json:"markdown,omitempty"`
+	Markdown *TurnDownTweakableOptions0x23 `json:"markdown,omitempty"`
 
 	// MarkdownChunking - Cast to: &lt; **&quot;true&quot; | &quot;h1&quot; | &quot;h2&quot; | &quot;h3&quot; | &quot;h4&quot; | &quot;h5&quot; | &quot;structured&quot; | &quot;s1&quot; | &quot;s2&quot; | &quot;s3&quot; | &quot;s4&quot; | &quot;s5&quot;|string** &gt;
 	//
@@ -5593,16 +5624,14 @@ type PostTargetUrlJSONBody struct {
 	// Ocr - Cast to: &lt; **OCRPreferences** &gt;
 	//
 	// - Member of &lt;CrawlerOptions&gt;
-	Ocr *OCRPreferences0x23 `json:"ocr,omitempty"`
+	Ocr *OCRPreferences0x24 `json:"ocr,omitempty"`
 
-	// Page Steer which page to return for document files (1-indexed).
+	// Page Steer which page(s) to return for document files. See PageSelection.
 	//
-	// - Cast to: &lt; **number** &gt;
+	// - Cast to: &lt; **PageSelection** &gt;
 	//
 	// - Member of &lt;CrawlerOptions&gt;
-	//
-	// - Some validators will be applied on value(s): (v) =&gt; Number.isInteger(v) &amp;&amp; v &gt;= 1
-	Page *float64 `json:"page,omitempty"`
+	Page *PageSelection0x0f `json:"page,omitempty"`
 
 	// Pdf Base64 encoded PDF.
 	//
@@ -5619,7 +5648,7 @@ type PostTargetUrlJSONBody struct {
 	// Preset - Cast to: &lt; **&quot;reader&quot; | &quot;index&quot; | &quot;research&quot; | &quot;agent&quot; | &quot;spider&quot; | &quot;ocr&quot; | &quot;ocr+&quot; | &quot;ocr++&quot; | &quot;pdf&quot; | &quot;pdf+&quot; | &quot;pdf++&quot;** &gt;
 	//
 	// - Member of &lt;CrawlerOptions&gt;
-	Preset *Enum0x13 `json:"preset,omitempty"`
+	Preset *Enum0x14 `json:"preset,omitempty"`
 
 	// Proxy - Cast to: &lt; **string** &gt;
 	//
@@ -5654,7 +5683,7 @@ type PostTargetUrlJSONBody struct {
 	// RespondTiming - Cast to: &lt; **&quot;html&quot; | &quot;visible-content&quot; | &quot;mutation-idle&quot; | &quot;resource-idle&quot; | &quot;media-idle&quot; | &quot;network-idle&quot;** &gt;
 	//
 	// - Member of &lt;CrawlerOptions&gt;
-	RespondTiming *Enum0x24 `json:"respondTiming,omitempty"`
+	RespondTiming *Enum0x25 `json:"respondTiming,omitempty"`
 
 	// RespondWith - Cast to: &lt; **&quot;content&quot; | &quot;markdown&quot; | &quot;html&quot; | &quot;text&quot; | &quot;pageshot&quot; | &quot;screenshot&quot; | &quot;vlm&quot; | &quot;readerlm-v2&quot; | &quot;frontmatter&quot; | &quot;readability&quot; | &quot;...|string** &gt;
 	//
@@ -5668,21 +5697,21 @@ type PostTargetUrlJSONBody struct {
 	// - Member of &lt;CrawlerOptions&gt;
 	//
 	// - Defaults to: &#39;all&#39;
-	RetainImages *Enum0x11 `json:"retainImages,omitempty"`
+	RetainImages *Enum0x12 `json:"retainImages,omitempty"`
 
 	// RetainLinks - Cast to: &lt; **&quot;none&quot; | &quot;all&quot; | &quot;text&quot; | &quot;gpt-oss&quot;** &gt;
 	//
 	// - Member of &lt;CrawlerOptions&gt;
 	//
 	// - Defaults to: &#39;all&#39;
-	RetainLinks *Enum0x14 `json:"retainLinks,omitempty"`
+	RetainLinks *Enum0x15 `json:"retainLinks,omitempty"`
 
 	// RetainMedia - Cast to: &lt; **&quot;none&quot; | &quot;text&quot; | &quot;link&quot; | &quot;image&quot; | &quot;html&quot;** &gt;
 	//
 	// - Member of &lt;CrawlerOptions&gt;
 	//
 	// - Defaults to: &#39;link&#39;
-	RetainMedia *Enum0x12 `json:"retainMedia,omitempty"`
+	RetainMedia *Enum0x13 `json:"retainMedia,omitempty"`
 
 	// RobotsTxt - Cast to: &lt; **string** &gt;
 	//
@@ -5702,7 +5731,7 @@ type PostTargetUrlJSONBody struct {
 	// StorageState - Cast to: &lt; **StorageState** &gt;
 	//
 	// - Member of &lt;CrawlerOptions&gt;
-	StorageState *StorageState0x19 `json:"storageState,omitempty"`
+	StorageState *StorageState0x1a `json:"storageState,omitempty"`
 
 	// TargetSelector - Cast to: &lt; **Array&lt;string&gt;** &gt;
 	//
@@ -5734,7 +5763,7 @@ type PostTargetUrlJSONBody struct {
 	// Viewport - Cast to: &lt; **Viewport** &gt;
 	//
 	// - Member of &lt;CrawlerOptions&gt;
-	Viewport *Viewport0x1b `json:"viewport,omitempty"`
+	Viewport *Viewport0x1c `json:"viewport,omitempty"`
 
 	// WaitForSelector - Cast to: &lt; **Array&lt;string&gt;** &gt;
 	//
@@ -5744,7 +5773,7 @@ type PostTargetUrlJSONBody struct {
 	// WithGeneratedAlt - Cast to: &lt; **PseudoBoolean** &gt;
 	//
 	// - Member of &lt;CrawlerOptions&gt;
-	WithGeneratedAlt *PseudoBoolean0x10 `json:"withGeneratedAlt,omitempty"`
+	WithGeneratedAlt *PseudoBoolean0x11 `json:"withGeneratedAlt,omitempty"`
 
 	// WithIframe - Cast to: &lt; **PseudoBoolean|string** &gt;
 	//
@@ -5877,14 +5906,12 @@ type PostTargetUrlFormdataBody struct {
 	// - Member of &lt;CrawlerOptions&gt;
 	NoServiceWorker *PseudoBooleanLoose0x0c `form:"noServiceWorker,omitempty" json:"noServiceWorker,omitempty"`
 
-	// Page Steer which page to return for document files (1-indexed).
+	// Page Steer which page(s) to return for document files. See PageSelection.
 	//
-	// - Cast to: &lt; **number** &gt;
+	// - Cast to: &lt; **PageSelection** &gt;
 	//
 	// - Member of &lt;CrawlerOptions&gt;
-	//
-	// - Some validators will be applied on value(s): (v) =&gt; Number.isInteger(v) &amp;&amp; v &gt;= 1
-	Page *float64 `form:"page,omitempty" json:"page,omitempty"`
+	Page *PageSelection0x0f `form:"page,omitempty" json:"page,omitempty"`
 
 	// Pdf Base64 encoded PDF.
 	//
@@ -5901,7 +5928,7 @@ type PostTargetUrlFormdataBody struct {
 	// Preset - Cast to: &lt; **&quot;reader&quot; | &quot;index&quot; | &quot;research&quot; | &quot;agent&quot; | &quot;spider&quot; | &quot;ocr&quot; | &quot;ocr+&quot; | &quot;ocr++&quot; | &quot;pdf&quot; | &quot;pdf+&quot; | &quot;pdf++&quot;** &gt;
 	//
 	// - Member of &lt;CrawlerOptions&gt;
-	Preset *Enum0x13 `form:"preset,omitempty" json:"preset,omitempty"`
+	Preset *Enum0x14 `form:"preset,omitempty" json:"preset,omitempty"`
 
 	// Proxy - Cast to: &lt; **string** &gt;
 	//
@@ -5936,7 +5963,7 @@ type PostTargetUrlFormdataBody struct {
 	// RespondTiming - Cast to: &lt; **&quot;html&quot; | &quot;visible-content&quot; | &quot;mutation-idle&quot; | &quot;resource-idle&quot; | &quot;media-idle&quot; | &quot;network-idle&quot;** &gt;
 	//
 	// - Member of &lt;CrawlerOptions&gt;
-	RespondTiming *Enum0x24 `form:"respondTiming,omitempty" json:"respondTiming,omitempty"`
+	RespondTiming *Enum0x25 `form:"respondTiming,omitempty" json:"respondTiming,omitempty"`
 
 	// RespondWith - Cast to: &lt; **&quot;content&quot; | &quot;markdown&quot; | &quot;html&quot; | &quot;text&quot; | &quot;pageshot&quot; | &quot;screenshot&quot; | &quot;vlm&quot; | &quot;readerlm-v2&quot; | &quot;frontmatter&quot; | &quot;readability&quot; | &quot;...|string** &gt;
 	//
@@ -5950,21 +5977,21 @@ type PostTargetUrlFormdataBody struct {
 	// - Member of &lt;CrawlerOptions&gt;
 	//
 	// - Defaults to: &#39;all&#39;
-	RetainImages *Enum0x11 `form:"retainImages,omitempty" json:"retainImages,omitempty"`
+	RetainImages *Enum0x12 `form:"retainImages,omitempty" json:"retainImages,omitempty"`
 
 	// RetainLinks - Cast to: &lt; **&quot;none&quot; | &quot;all&quot; | &quot;text&quot; | &quot;gpt-oss&quot;** &gt;
 	//
 	// - Member of &lt;CrawlerOptions&gt;
 	//
 	// - Defaults to: &#39;all&#39;
-	RetainLinks *Enum0x14 `form:"retainLinks,omitempty" json:"retainLinks,omitempty"`
+	RetainLinks *Enum0x15 `form:"retainLinks,omitempty" json:"retainLinks,omitempty"`
 
 	// RetainMedia - Cast to: &lt; **&quot;none&quot; | &quot;text&quot; | &quot;link&quot; | &quot;image&quot; | &quot;html&quot;** &gt;
 	//
 	// - Member of &lt;CrawlerOptions&gt;
 	//
 	// - Defaults to: &#39;link&#39;
-	RetainMedia *Enum0x12 `form:"retainMedia,omitempty" json:"retainMedia,omitempty"`
+	RetainMedia *Enum0x13 `form:"retainMedia,omitempty" json:"retainMedia,omitempty"`
 
 	// RobotsTxt - Cast to: &lt; **string** &gt;
 	//
@@ -6016,7 +6043,7 @@ type PostTargetUrlFormdataBody struct {
 	// WithGeneratedAlt - Cast to: &lt; **PseudoBoolean** &gt;
 	//
 	// - Member of &lt;CrawlerOptions&gt;
-	WithGeneratedAlt *PseudoBoolean0x10 `form:"withGeneratedAlt,omitempty" json:"withGeneratedAlt,omitempty"`
+	WithGeneratedAlt *PseudoBoolean0x11 `form:"withGeneratedAlt,omitempty" json:"withGeneratedAlt,omitempty"`
 
 	// WithIframe - Cast to: &lt; **PseudoBoolean|string** &gt;
 	//
@@ -6130,7 +6157,7 @@ type PostTargetUrlMultipartBody struct {
 	// Markdown - Cast to: &lt; **TurnDownTweakableOptions** &gt;
 	//
 	// - Member of &lt;CrawlerOptions&gt;
-	Markdown *TurnDownTweakableOptions0x22 `json:"markdown,omitempty"`
+	Markdown *TurnDownTweakableOptions0x23 `json:"markdown,omitempty"`
 
 	// MarkdownChunking - Cast to: &lt; **&quot;true&quot; | &quot;h1&quot; | &quot;h2&quot; | &quot;h3&quot; | &quot;h4&quot; | &quot;h5&quot; | &quot;structured&quot; | &quot;s1&quot; | &quot;s2&quot; | &quot;s3&quot; | &quot;s4&quot; | &quot;s5&quot;|string** &gt;
 	//
@@ -6162,16 +6189,14 @@ type PostTargetUrlMultipartBody struct {
 	// Ocr - Cast to: &lt; **OCRPreferences** &gt;
 	//
 	// - Member of &lt;CrawlerOptions&gt;
-	Ocr *OCRPreferences0x23 `json:"ocr,omitempty"`
+	Ocr *OCRPreferences0x24 `json:"ocr,omitempty"`
 
-	// Page Steer which page to return for document files (1-indexed).
+	// Page Steer which page(s) to return for document files. See PageSelection.
 	//
-	// - Cast to: &lt; **number** &gt;
+	// - Cast to: &lt; **PageSelection** &gt;
 	//
 	// - Member of &lt;CrawlerOptions&gt;
-	//
-	// - Some validators will be applied on value(s): (v) =&gt; Number.isInteger(v) &amp;&amp; v &gt;= 1
-	Page *float64 `json:"page,omitempty"`
+	Page *PageSelection0x0f `json:"page,omitempty"`
 
 	// Pdf Base64 encoded PDF.
 	//
@@ -6188,7 +6213,7 @@ type PostTargetUrlMultipartBody struct {
 	// Preset - Cast to: &lt; **&quot;reader&quot; | &quot;index&quot; | &quot;research&quot; | &quot;agent&quot; | &quot;spider&quot; | &quot;ocr&quot; | &quot;ocr+&quot; | &quot;ocr++&quot; | &quot;pdf&quot; | &quot;pdf+&quot; | &quot;pdf++&quot;** &gt;
 	//
 	// - Member of &lt;CrawlerOptions&gt;
-	Preset *Enum0x13 `json:"preset,omitempty"`
+	Preset *Enum0x14 `json:"preset,omitempty"`
 
 	// Proxy - Cast to: &lt; **string** &gt;
 	//
@@ -6223,7 +6248,7 @@ type PostTargetUrlMultipartBody struct {
 	// RespondTiming - Cast to: &lt; **&quot;html&quot; | &quot;visible-content&quot; | &quot;mutation-idle&quot; | &quot;resource-idle&quot; | &quot;media-idle&quot; | &quot;network-idle&quot;** &gt;
 	//
 	// - Member of &lt;CrawlerOptions&gt;
-	RespondTiming *Enum0x24 `json:"respondTiming,omitempty"`
+	RespondTiming *Enum0x25 `json:"respondTiming,omitempty"`
 
 	// RespondWith - Cast to: &lt; **&quot;content&quot; | &quot;markdown&quot; | &quot;html&quot; | &quot;text&quot; | &quot;pageshot&quot; | &quot;screenshot&quot; | &quot;vlm&quot; | &quot;readerlm-v2&quot; | &quot;frontmatter&quot; | &quot;readability&quot; | &quot;...|string** &gt;
 	//
@@ -6237,21 +6262,21 @@ type PostTargetUrlMultipartBody struct {
 	// - Member of &lt;CrawlerOptions&gt;
 	//
 	// - Defaults to: &#39;all&#39;
-	RetainImages *Enum0x11 `json:"retainImages,omitempty"`
+	RetainImages *Enum0x12 `json:"retainImages,omitempty"`
 
 	// RetainLinks - Cast to: &lt; **&quot;none&quot; | &quot;all&quot; | &quot;text&quot; | &quot;gpt-oss&quot;** &gt;
 	//
 	// - Member of &lt;CrawlerOptions&gt;
 	//
 	// - Defaults to: &#39;all&#39;
-	RetainLinks *Enum0x14 `json:"retainLinks,omitempty"`
+	RetainLinks *Enum0x15 `json:"retainLinks,omitempty"`
 
 	// RetainMedia - Cast to: &lt; **&quot;none&quot; | &quot;text&quot; | &quot;link&quot; | &quot;image&quot; | &quot;html&quot;** &gt;
 	//
 	// - Member of &lt;CrawlerOptions&gt;
 	//
 	// - Defaults to: &#39;link&#39;
-	RetainMedia *Enum0x12 `json:"retainMedia,omitempty"`
+	RetainMedia *Enum0x13 `json:"retainMedia,omitempty"`
 
 	// RobotsTxt - Cast to: &lt; **string** &gt;
 	//
@@ -6271,7 +6296,7 @@ type PostTargetUrlMultipartBody struct {
 	// StorageState - Cast to: &lt; **StorageState** &gt;
 	//
 	// - Member of &lt;CrawlerOptions&gt;
-	StorageState *StorageState0x19 `json:"storageState,omitempty"`
+	StorageState *StorageState0x1a `json:"storageState,omitempty"`
 
 	// TargetSelector - Cast to: &lt; **Array&lt;string&gt;** &gt;
 	//
@@ -6303,7 +6328,7 @@ type PostTargetUrlMultipartBody struct {
 	// Viewport - Cast to: &lt; **Viewport** &gt;
 	//
 	// - Member of &lt;CrawlerOptions&gt;
-	Viewport *Viewport0x1b `json:"viewport,omitempty"`
+	Viewport *Viewport0x1c `json:"viewport,omitempty"`
 
 	// WaitForSelector - Cast to: &lt; **Array&lt;string&gt;** &gt;
 	//
@@ -6313,7 +6338,7 @@ type PostTargetUrlMultipartBody struct {
 	// WithGeneratedAlt - Cast to: &lt; **PseudoBoolean** &gt;
 	//
 	// - Member of &lt;CrawlerOptions&gt;
-	WithGeneratedAlt *PseudoBoolean0x10 `json:"withGeneratedAlt,omitempty"`
+	WithGeneratedAlt *PseudoBoolean0x11 `json:"withGeneratedAlt,omitempty"`
 
 	// WithIframe - Cast to: &lt; **PseudoBoolean|string** &gt;
 	//
@@ -6353,15 +6378,15 @@ type PostTargetUrlParams struct {
 	File *struct {
 		union json.RawMessage
 	} `form:"file,omitempty" json:"file,omitempty"`
-	Page        *float64 `form:"page,omitempty" json:"page,omitempty"`
+	Page        *PageSelection0x0f `form:"page,omitempty" json:"page,omitempty"`
 	RespondWith *struct {
 		union json.RawMessage
 	} `form:"respondWith,omitempty" json:"respondWith,omitempty"`
-	WithGeneratedAlt *PseudoBoolean0x10 `form:"withGeneratedAlt,omitempty" json:"withGeneratedAlt,omitempty"`
-	RetainImages     *Enum0x11          `form:"retainImages,omitempty" json:"retainImages,omitempty"`
-	RetainMedia      *Enum0x12          `form:"retainMedia,omitempty" json:"retainMedia,omitempty"`
-	Preset           *Enum0x13          `form:"preset,omitempty" json:"preset,omitempty"`
-	RetainLinks      *Enum0x14          `form:"retainLinks,omitempty" json:"retainLinks,omitempty"`
+	WithGeneratedAlt *PseudoBoolean0x11 `form:"withGeneratedAlt,omitempty" json:"withGeneratedAlt,omitempty"`
+	RetainImages     *Enum0x12          `form:"retainImages,omitempty" json:"retainImages,omitempty"`
+	RetainMedia      *Enum0x13          `form:"retainMedia,omitempty" json:"retainMedia,omitempty"`
+	Preset           *Enum0x14          `form:"preset,omitempty" json:"preset,omitempty"`
+	RetainLinks      *Enum0x15          `form:"retainLinks,omitempty" json:"retainLinks,omitempty"`
 	WithLinksSummary *struct {
 		union json.RawMessage
 	} `form:"withLinksSummary,omitempty" json:"withLinksSummary,omitempty"`
@@ -6404,7 +6429,7 @@ type PostTargetUrlParams struct {
 	JsonSchema        *string                 `form:"jsonSchema,omitempty" json:"jsonSchema,omitempty"`
 	RobotsTxt         *string                 `form:"robotsTxt,omitempty" json:"robotsTxt,omitempty"`
 	ZeroDataRetention *PseudoBooleanLoose0x0c `form:"zeroDataRetention,omitempty" json:"zeroDataRetention,omitempty"`
-	RespondTiming     *Enum0x24               `form:"respondTiming,omitempty" json:"respondTiming,omitempty"`
+	RespondTiming     *Enum0x25               `form:"respondTiming,omitempty" json:"respondTiming,omitempty"`
 	MarkdownChunking  *struct {
 		union json.RawMessage
 	} `form:"markdownChunking,omitempty" json:"markdownChunking,omitempty"`
@@ -6717,7 +6742,11 @@ type PostTargetUrlParams struct {
 
 	// XPage Steer which page to return for uploaded files (PDF, DOC, XLS, PPT, etc.).
 	//
-	// 1-indexed; ignored when no file/PDF is uploaded.
+	// 1-indexed, 0 is the same as 1. Accepts a page number, a list and/or ranges like `1,3,5-7`.
+	//
+	// At most 35 pages can be selected. With multiple pages, DocLayout / OCR runs over each selected page.
+	//
+	// Ignored when the target is not a document.
 	XPage *string `json:"X-Page,omitempty"`
 
 	// XPreloadUrl URL to preload before scraping.
@@ -6744,25 +6773,25 @@ type PostTargetUrlParamsFile0 = FancyFile0x0e
 type PostTargetUrlParamsFile1 = string
 
 // PostTargetUrlParamsRespondWith0 defines parameters for PostTargetUrl.
-type PostTargetUrlParamsRespondWith0 = Enum0x0f
+type PostTargetUrlParamsRespondWith0 = Enum0x10
 
 // PostTargetUrlParamsRespondWith1 defines parameters for PostTargetUrl.
 type PostTargetUrlParamsRespondWith1 = string
 
 // PostTargetUrlParamsWithLinksSummary0 defines parameters for PostTargetUrl.
-type PostTargetUrlParamsWithLinksSummary0 = PseudoBoolean0x10
+type PostTargetUrlParamsWithLinksSummary0 = PseudoBoolean0x11
 
 // PostTargetUrlParamsWithLinksSummary1 defines parameters for PostTargetUrl.
 type PostTargetUrlParamsWithLinksSummary1 = string
 
 // PostTargetUrlParamsNoGfm0 defines parameters for PostTargetUrl.
-type PostTargetUrlParamsNoGfm0 = PseudoBoolean0x10
+type PostTargetUrlParamsNoGfm0 = PseudoBoolean0x11
 
 // PostTargetUrlParamsNoGfm1 defines parameters for PostTargetUrl.
 type PostTargetUrlParamsNoGfm1 = string
 
 // PostTargetUrlParamsWithIframe0 defines parameters for PostTargetUrl.
-type PostTargetUrlParamsWithIframe0 = PseudoBoolean0x10
+type PostTargetUrlParamsWithIframe0 = PseudoBoolean0x11
 
 // PostTargetUrlParamsWithIframe1 defines parameters for PostTargetUrl.
 type PostTargetUrlParamsWithIframe1 = string
@@ -6774,13 +6803,13 @@ type PostTargetUrlParamsSetCookies0 = interface{}
 type PostTargetUrlParamsSetCookies1 = string
 
 // PostTargetUrlParamsEngine0 defines parameters for PostTargetUrl.
-type PostTargetUrlParamsEngine0 = Enum0x1a
+type PostTargetUrlParamsEngine0 = Enum0x1b
 
 // PostTargetUrlParamsEngine1 defines parameters for PostTargetUrl.
 type PostTargetUrlParamsEngine1 = string
 
 // PostTargetUrlParamsMarkdownChunking0 defines parameters for PostTargetUrl.
-type PostTargetUrlParamsMarkdownChunking0 = Enum0x25
+type PostTargetUrlParamsMarkdownChunking0 = Enum0x26
 
 // PostTargetUrlParamsMarkdownChunking1 defines parameters for PostTargetUrl.
 type PostTargetUrlParamsMarkdownChunking1 = string
@@ -6789,7 +6818,7 @@ type PostTargetUrlParamsMarkdownChunking1 = string
 type PostTargetUrlParamsAuthorization0 = string
 
 // PostTargetUrlJSONBodyEngine0 defines parameters for PostTargetUrl.
-type PostTargetUrlJSONBodyEngine0 = Enum0x1a
+type PostTargetUrlJSONBodyEngine0 = Enum0x1b
 
 // PostTargetUrlJSONBodyEngine1 defines parameters for PostTargetUrl.
 type PostTargetUrlJSONBodyEngine1 = string
@@ -6811,7 +6840,7 @@ type PostTargetUrlJSONBody_File struct {
 }
 
 // PostTargetUrlJSONBodyMarkdownChunking0 defines parameters for PostTargetUrl.
-type PostTargetUrlJSONBodyMarkdownChunking0 = Enum0x25
+type PostTargetUrlJSONBodyMarkdownChunking0 = Enum0x26
 
 // PostTargetUrlJSONBodyMarkdownChunking1 defines parameters for PostTargetUrl.
 type PostTargetUrlJSONBodyMarkdownChunking1 = string
@@ -6822,7 +6851,7 @@ type PostTargetUrlJSONBody_MarkdownChunking struct {
 }
 
 // PostTargetUrlJSONBodyNoGfm0 defines parameters for PostTargetUrl.
-type PostTargetUrlJSONBodyNoGfm0 = PseudoBoolean0x10
+type PostTargetUrlJSONBodyNoGfm0 = PseudoBoolean0x11
 
 // PostTargetUrlJSONBodyNoGfm1 defines parameters for PostTargetUrl.
 type PostTargetUrlJSONBodyNoGfm1 = string
@@ -6844,7 +6873,7 @@ type PostTargetUrlJSONBody_Pdf struct {
 }
 
 // PostTargetUrlJSONBodyRespondWith0 defines parameters for PostTargetUrl.
-type PostTargetUrlJSONBodyRespondWith0 = Enum0x0f
+type PostTargetUrlJSONBodyRespondWith0 = Enum0x10
 
 // PostTargetUrlJSONBodyRespondWith1 defines parameters for PostTargetUrl.
 type PostTargetUrlJSONBodyRespondWith1 = string
@@ -6866,7 +6895,7 @@ type PostTargetUrlJSONBody_SetCookies_Item struct {
 }
 
 // PostTargetUrlJSONBodyWithIframe0 defines parameters for PostTargetUrl.
-type PostTargetUrlJSONBodyWithIframe0 = PseudoBoolean0x10
+type PostTargetUrlJSONBodyWithIframe0 = PseudoBoolean0x11
 
 // PostTargetUrlJSONBodyWithIframe1 defines parameters for PostTargetUrl.
 type PostTargetUrlJSONBodyWithIframe1 = string
@@ -6877,7 +6906,7 @@ type PostTargetUrlJSONBody_WithIframe struct {
 }
 
 // PostTargetUrlJSONBodyWithLinksSummary0 defines parameters for PostTargetUrl.
-type PostTargetUrlJSONBodyWithLinksSummary0 = PseudoBoolean0x10
+type PostTargetUrlJSONBodyWithLinksSummary0 = PseudoBoolean0x11
 
 // PostTargetUrlJSONBodyWithLinksSummary1 defines parameters for PostTargetUrl.
 type PostTargetUrlJSONBodyWithLinksSummary1 = string
@@ -6888,7 +6917,7 @@ type PostTargetUrlJSONBody_WithLinksSummary struct {
 }
 
 // PostTargetUrlFormdataBodyEngine0 defines parameters for PostTargetUrl.
-type PostTargetUrlFormdataBodyEngine0 = Enum0x1a
+type PostTargetUrlFormdataBodyEngine0 = Enum0x1b
 
 // PostTargetUrlFormdataBodyEngine1 defines parameters for PostTargetUrl.
 type PostTargetUrlFormdataBodyEngine1 = string
@@ -6910,7 +6939,7 @@ type PostTargetUrlFormdataBody_File struct {
 }
 
 // PostTargetUrlFormdataBodyMarkdownChunking0 defines parameters for PostTargetUrl.
-type PostTargetUrlFormdataBodyMarkdownChunking0 = Enum0x25
+type PostTargetUrlFormdataBodyMarkdownChunking0 = Enum0x26
 
 // PostTargetUrlFormdataBodyMarkdownChunking1 defines parameters for PostTargetUrl.
 type PostTargetUrlFormdataBodyMarkdownChunking1 = string
@@ -6921,7 +6950,7 @@ type PostTargetUrlFormdataBody_MarkdownChunking struct {
 }
 
 // PostTargetUrlFormdataBodyNoGfm0 defines parameters for PostTargetUrl.
-type PostTargetUrlFormdataBodyNoGfm0 = PseudoBoolean0x10
+type PostTargetUrlFormdataBodyNoGfm0 = PseudoBoolean0x11
 
 // PostTargetUrlFormdataBodyNoGfm1 defines parameters for PostTargetUrl.
 type PostTargetUrlFormdataBodyNoGfm1 = string
@@ -6943,7 +6972,7 @@ type PostTargetUrlFormdataBody_Pdf struct {
 }
 
 // PostTargetUrlFormdataBodyRespondWith0 defines parameters for PostTargetUrl.
-type PostTargetUrlFormdataBodyRespondWith0 = Enum0x0f
+type PostTargetUrlFormdataBodyRespondWith0 = Enum0x10
 
 // PostTargetUrlFormdataBodyRespondWith1 defines parameters for PostTargetUrl.
 type PostTargetUrlFormdataBodyRespondWith1 = string
@@ -6965,7 +6994,7 @@ type PostTargetUrlFormdataBody_SetCookies struct {
 }
 
 // PostTargetUrlFormdataBodyWithIframe0 defines parameters for PostTargetUrl.
-type PostTargetUrlFormdataBodyWithIframe0 = PseudoBoolean0x10
+type PostTargetUrlFormdataBodyWithIframe0 = PseudoBoolean0x11
 
 // PostTargetUrlFormdataBodyWithIframe1 defines parameters for PostTargetUrl.
 type PostTargetUrlFormdataBodyWithIframe1 = string
@@ -6976,7 +7005,7 @@ type PostTargetUrlFormdataBody_WithIframe struct {
 }
 
 // PostTargetUrlFormdataBodyWithLinksSummary0 defines parameters for PostTargetUrl.
-type PostTargetUrlFormdataBodyWithLinksSummary0 = PseudoBoolean0x10
+type PostTargetUrlFormdataBodyWithLinksSummary0 = PseudoBoolean0x11
 
 // PostTargetUrlFormdataBodyWithLinksSummary1 defines parameters for PostTargetUrl.
 type PostTargetUrlFormdataBodyWithLinksSummary1 = string
@@ -6987,7 +7016,7 @@ type PostTargetUrlFormdataBody_WithLinksSummary struct {
 }
 
 // PostTargetUrlMultipartBodyEngine0 defines parameters for PostTargetUrl.
-type PostTargetUrlMultipartBodyEngine0 = Enum0x1a
+type PostTargetUrlMultipartBodyEngine0 = Enum0x1b
 
 // PostTargetUrlMultipartBodyEngine1 defines parameters for PostTargetUrl.
 type PostTargetUrlMultipartBodyEngine1 = string
@@ -7009,7 +7038,7 @@ type PostTargetUrlMultipartBody_File struct {
 }
 
 // PostTargetUrlMultipartBodyMarkdownChunking0 defines parameters for PostTargetUrl.
-type PostTargetUrlMultipartBodyMarkdownChunking0 = Enum0x25
+type PostTargetUrlMultipartBodyMarkdownChunking0 = Enum0x26
 
 // PostTargetUrlMultipartBodyMarkdownChunking1 defines parameters for PostTargetUrl.
 type PostTargetUrlMultipartBodyMarkdownChunking1 = string
@@ -7020,7 +7049,7 @@ type PostTargetUrlMultipartBody_MarkdownChunking struct {
 }
 
 // PostTargetUrlMultipartBodyNoGfm0 defines parameters for PostTargetUrl.
-type PostTargetUrlMultipartBodyNoGfm0 = PseudoBoolean0x10
+type PostTargetUrlMultipartBodyNoGfm0 = PseudoBoolean0x11
 
 // PostTargetUrlMultipartBodyNoGfm1 defines parameters for PostTargetUrl.
 type PostTargetUrlMultipartBodyNoGfm1 = string
@@ -7042,7 +7071,7 @@ type PostTargetUrlMultipartBody_Pdf struct {
 }
 
 // PostTargetUrlMultipartBodyRespondWith0 defines parameters for PostTargetUrl.
-type PostTargetUrlMultipartBodyRespondWith0 = Enum0x0f
+type PostTargetUrlMultipartBodyRespondWith0 = Enum0x10
 
 // PostTargetUrlMultipartBodyRespondWith1 defines parameters for PostTargetUrl.
 type PostTargetUrlMultipartBodyRespondWith1 = string
@@ -7064,7 +7093,7 @@ type PostTargetUrlMultipartBody_SetCookies_Item struct {
 }
 
 // PostTargetUrlMultipartBodyWithIframe0 defines parameters for PostTargetUrl.
-type PostTargetUrlMultipartBodyWithIframe0 = PseudoBoolean0x10
+type PostTargetUrlMultipartBodyWithIframe0 = PseudoBoolean0x11
 
 // PostTargetUrlMultipartBodyWithIframe1 defines parameters for PostTargetUrl.
 type PostTargetUrlMultipartBodyWithIframe1 = string
@@ -7075,7 +7104,7 @@ type PostTargetUrlMultipartBody_WithIframe struct {
 }
 
 // PostTargetUrlMultipartBodyWithLinksSummary0 defines parameters for PostTargetUrl.
-type PostTargetUrlMultipartBodyWithLinksSummary0 = PseudoBoolean0x10
+type PostTargetUrlMultipartBodyWithLinksSummary0 = PseudoBoolean0x11
 
 // PostTargetUrlMultipartBodyWithLinksSummary1 defines parameters for PostTargetUrl.
 type PostTargetUrlMultipartBodyWithLinksSummary1 = string
@@ -7086,10 +7115,10 @@ type PostTargetUrlMultipartBody_WithLinksSummary struct {
 }
 
 // PostTargetUrl400JSONResponseBody0 defines parameters for PostTargetUrl.
-type PostTargetUrl400JSONResponseBody0 = ParamValidationError0x27
+type PostTargetUrl400JSONResponseBody0 = ParamValidationError0x28
 
 // PostTargetUrl400JSONResponseBody1 defines parameters for PostTargetUrl.
-type PostTargetUrl400JSONResponseBody1 = DataStreamBrokenError0x28
+type PostTargetUrl400JSONResponseBody1 = DataStreamBrokenError0x29
 
 // PostTargetUrl400JSONResponseBody defines parameters for PostTargetUrl.
 type PostTargetUrl400JSONResponseBody struct {
@@ -7097,10 +7126,10 @@ type PostTargetUrl400JSONResponseBody struct {
 }
 
 // PostTargetUrl401JSONResponseBody0 defines parameters for PostTargetUrl.
-type PostTargetUrl401JSONResponseBody0 = AuthenticationFailedError0x29
+type PostTargetUrl401JSONResponseBody0 = AuthenticationFailedError0x2a
 
 // PostTargetUrl401JSONResponseBody1 defines parameters for PostTargetUrl.
-type PostTargetUrl401JSONResponseBody1 = AuthenticationRequiredError0x2a
+type PostTargetUrl401JSONResponseBody1 = AuthenticationRequiredError0x2b
 
 // PostTargetUrl401JSONResponseBody defines parameters for PostTargetUrl.
 type PostTargetUrl401JSONResponseBody struct {
@@ -7108,10 +7137,10 @@ type PostTargetUrl401JSONResponseBody struct {
 }
 
 // PostTargetUrl402JSONResponseBody0 defines parameters for PostTargetUrl.
-type PostTargetUrl402JSONResponseBody0 = TierFeatureConstraintError0x2b
+type PostTargetUrl402JSONResponseBody0 = TierFeatureConstraintError0x2c
 
 // PostTargetUrl402JSONResponseBody1 defines parameters for PostTargetUrl.
-type PostTargetUrl402JSONResponseBody1 = InsufficientBalanceError0x2c
+type PostTargetUrl402JSONResponseBody1 = InsufficientBalanceError0x2d
 
 // PostTargetUrl402JSONResponseBody defines parameters for PostTargetUrl.
 type PostTargetUrl402JSONResponseBody struct {
@@ -7119,10 +7148,10 @@ type PostTargetUrl402JSONResponseBody struct {
 }
 
 // PostTargetUrl403JSONResponseBody0 defines parameters for PostTargetUrl.
-type PostTargetUrl403JSONResponseBody0 = OperationNotAllowedError0x2d
+type PostTargetUrl403JSONResponseBody0 = OperationNotAllowedError0x2e
 
 // PostTargetUrl403JSONResponseBody1 defines parameters for PostTargetUrl.
-type PostTargetUrl403JSONResponseBody1 = AbuseAlleviationError0x2e
+type PostTargetUrl403JSONResponseBody1 = AbuseAlleviationError0x2f
 
 // PostTargetUrl403JSONResponseBody defines parameters for PostTargetUrl.
 type PostTargetUrl403JSONResponseBody struct {
@@ -7130,10 +7159,10 @@ type PostTargetUrl403JSONResponseBody struct {
 }
 
 // PostTargetUrl409JSONResponseBody0 defines parameters for PostTargetUrl.
-type PostTargetUrl409JSONResponseBody0 = ResourcePolicyDenyError0x2f
+type PostTargetUrl409JSONResponseBody0 = ResourcePolicyDenyError0x30
 
 // PostTargetUrl409JSONResponseBody1 defines parameters for PostTargetUrl.
-type PostTargetUrl409JSONResponseBody1 = BudgetExceededError0x30
+type PostTargetUrl409JSONResponseBody1 = BudgetExceededError0x31
 
 // PostTargetUrl409JSONResponseBody defines parameters for PostTargetUrl.
 type PostTargetUrl409JSONResponseBody struct {
@@ -7141,13 +7170,13 @@ type PostTargetUrl409JSONResponseBody struct {
 }
 
 // PostTargetUrl422JSONResponseBody0 defines parameters for PostTargetUrl.
-type PostTargetUrl422JSONResponseBody0 = SubmittedDataMalformedError0x32
+type PostTargetUrl422JSONResponseBody0 = SubmittedDataMalformedError0x33
 
 // PostTargetUrl422JSONResponseBody1 defines parameters for PostTargetUrl.
-type PostTargetUrl422JSONResponseBody1 = DownstreamServiceFailureError0x33
+type PostTargetUrl422JSONResponseBody1 = DownstreamServiceFailureError0x34
 
 // PostTargetUrl422JSONResponseBody2 defines parameters for PostTargetUrl.
-type PostTargetUrl422JSONResponseBody2 = AssertionFailureError0x34
+type PostTargetUrl422JSONResponseBody2 = AssertionFailureError0x35
 
 // PostTargetUrl422JSONResponseBody defines parameters for PostTargetUrl.
 type PostTargetUrl422JSONResponseBody struct {
@@ -7181,25 +7210,25 @@ type PostTargetUrlFormdataRequestBody PostTargetUrlFormdataBody
 // PostTargetUrlMultipartRequestBody defines body for PostTargetUrl for multipart/form-data ContentType.
 type PostTargetUrlMultipartRequestBody PostTargetUrlMultipartBody
 
-// Getter for additional properties for AbuseAlleviationError0x2e. Returns the specified
+// Getter for additional properties for AbuseAlleviationError0x2f. Returns the specified
 // element and whether it was found
-func (a AbuseAlleviationError0x2e) Get(fieldName string) (value interface{}, found bool) {
+func (a AbuseAlleviationError0x2f) Get(fieldName string) (value interface{}, found bool) {
 	if a.AdditionalProperties != nil {
 		value, found = a.AdditionalProperties[fieldName]
 	}
 	return
 }
 
-// Setter for additional properties for AbuseAlleviationError0x2e
-func (a *AbuseAlleviationError0x2e) Set(fieldName string, value interface{}) {
+// Setter for additional properties for AbuseAlleviationError0x2f
+func (a *AbuseAlleviationError0x2f) Set(fieldName string, value interface{}) {
 	if a.AdditionalProperties == nil {
 		a.AdditionalProperties = make(map[string]interface{})
 	}
 	a.AdditionalProperties[fieldName] = value
 }
 
-// Override default JSON handling for AbuseAlleviationError0x2e to handle AdditionalProperties
-func (a *AbuseAlleviationError0x2e) UnmarshalJSON(b []byte) error {
+// Override default JSON handling for AbuseAlleviationError0x2f to handle AdditionalProperties
+func (a *AbuseAlleviationError0x2f) UnmarshalJSON(b []byte) error {
 	object := make(map[string]json.RawMessage)
 	err := json.Unmarshal(b, &object)
 	if err != nil {
@@ -7252,8 +7281,8 @@ func (a *AbuseAlleviationError0x2e) UnmarshalJSON(b []byte) error {
 	return nil
 }
 
-// Override default JSON handling for AbuseAlleviationError0x2e to handle AdditionalProperties
-func (a AbuseAlleviationError0x2e) MarshalJSON() ([]byte, error) {
+// Override default JSON handling for AbuseAlleviationError0x2f to handle AdditionalProperties
+func (a AbuseAlleviationError0x2f) MarshalJSON() ([]byte, error) {
 	var err error
 	object := make(map[string]json.RawMessage)
 
@@ -7288,25 +7317,25 @@ func (a AbuseAlleviationError0x2e) MarshalJSON() ([]byte, error) {
 	return json.Marshal(object)
 }
 
-// Getter for additional properties for AssertionFailureError0x34. Returns the specified
+// Getter for additional properties for AssertionFailureError0x35. Returns the specified
 // element and whether it was found
-func (a AssertionFailureError0x34) Get(fieldName string) (value interface{}, found bool) {
+func (a AssertionFailureError0x35) Get(fieldName string) (value interface{}, found bool) {
 	if a.AdditionalProperties != nil {
 		value, found = a.AdditionalProperties[fieldName]
 	}
 	return
 }
 
-// Setter for additional properties for AssertionFailureError0x34
-func (a *AssertionFailureError0x34) Set(fieldName string, value interface{}) {
+// Setter for additional properties for AssertionFailureError0x35
+func (a *AssertionFailureError0x35) Set(fieldName string, value interface{}) {
 	if a.AdditionalProperties == nil {
 		a.AdditionalProperties = make(map[string]interface{})
 	}
 	a.AdditionalProperties[fieldName] = value
 }
 
-// Override default JSON handling for AssertionFailureError0x34 to handle AdditionalProperties
-func (a *AssertionFailureError0x34) UnmarshalJSON(b []byte) error {
+// Override default JSON handling for AssertionFailureError0x35 to handle AdditionalProperties
+func (a *AssertionFailureError0x35) UnmarshalJSON(b []byte) error {
 	object := make(map[string]json.RawMessage)
 	err := json.Unmarshal(b, &object)
 	if err != nil {
@@ -7359,8 +7388,8 @@ func (a *AssertionFailureError0x34) UnmarshalJSON(b []byte) error {
 	return nil
 }
 
-// Override default JSON handling for AssertionFailureError0x34 to handle AdditionalProperties
-func (a AssertionFailureError0x34) MarshalJSON() ([]byte, error) {
+// Override default JSON handling for AssertionFailureError0x35 to handle AdditionalProperties
+func (a AssertionFailureError0x35) MarshalJSON() ([]byte, error) {
 	var err error
 	object := make(map[string]json.RawMessage)
 
@@ -7395,25 +7424,25 @@ func (a AssertionFailureError0x34) MarshalJSON() ([]byte, error) {
 	return json.Marshal(object)
 }
 
-// Getter for additional properties for AuthenticationFailedError0x29. Returns the specified
+// Getter for additional properties for AuthenticationFailedError0x2a. Returns the specified
 // element and whether it was found
-func (a AuthenticationFailedError0x29) Get(fieldName string) (value interface{}, found bool) {
+func (a AuthenticationFailedError0x2a) Get(fieldName string) (value interface{}, found bool) {
 	if a.AdditionalProperties != nil {
 		value, found = a.AdditionalProperties[fieldName]
 	}
 	return
 }
 
-// Setter for additional properties for AuthenticationFailedError0x29
-func (a *AuthenticationFailedError0x29) Set(fieldName string, value interface{}) {
+// Setter for additional properties for AuthenticationFailedError0x2a
+func (a *AuthenticationFailedError0x2a) Set(fieldName string, value interface{}) {
 	if a.AdditionalProperties == nil {
 		a.AdditionalProperties = make(map[string]interface{})
 	}
 	a.AdditionalProperties[fieldName] = value
 }
 
-// Override default JSON handling for AuthenticationFailedError0x29 to handle AdditionalProperties
-func (a *AuthenticationFailedError0x29) UnmarshalJSON(b []byte) error {
+// Override default JSON handling for AuthenticationFailedError0x2a to handle AdditionalProperties
+func (a *AuthenticationFailedError0x2a) UnmarshalJSON(b []byte) error {
 	object := make(map[string]json.RawMessage)
 	err := json.Unmarshal(b, &object)
 	if err != nil {
@@ -7466,8 +7495,8 @@ func (a *AuthenticationFailedError0x29) UnmarshalJSON(b []byte) error {
 	return nil
 }
 
-// Override default JSON handling for AuthenticationFailedError0x29 to handle AdditionalProperties
-func (a AuthenticationFailedError0x29) MarshalJSON() ([]byte, error) {
+// Override default JSON handling for AuthenticationFailedError0x2a to handle AdditionalProperties
+func (a AuthenticationFailedError0x2a) MarshalJSON() ([]byte, error) {
 	var err error
 	object := make(map[string]json.RawMessage)
 
@@ -7502,25 +7531,25 @@ func (a AuthenticationFailedError0x29) MarshalJSON() ([]byte, error) {
 	return json.Marshal(object)
 }
 
-// Getter for additional properties for AuthenticationRequiredError0x2a. Returns the specified
+// Getter for additional properties for AuthenticationRequiredError0x2b. Returns the specified
 // element and whether it was found
-func (a AuthenticationRequiredError0x2a) Get(fieldName string) (value interface{}, found bool) {
+func (a AuthenticationRequiredError0x2b) Get(fieldName string) (value interface{}, found bool) {
 	if a.AdditionalProperties != nil {
 		value, found = a.AdditionalProperties[fieldName]
 	}
 	return
 }
 
-// Setter for additional properties for AuthenticationRequiredError0x2a
-func (a *AuthenticationRequiredError0x2a) Set(fieldName string, value interface{}) {
+// Setter for additional properties for AuthenticationRequiredError0x2b
+func (a *AuthenticationRequiredError0x2b) Set(fieldName string, value interface{}) {
 	if a.AdditionalProperties == nil {
 		a.AdditionalProperties = make(map[string]interface{})
 	}
 	a.AdditionalProperties[fieldName] = value
 }
 
-// Override default JSON handling for AuthenticationRequiredError0x2a to handle AdditionalProperties
-func (a *AuthenticationRequiredError0x2a) UnmarshalJSON(b []byte) error {
+// Override default JSON handling for AuthenticationRequiredError0x2b to handle AdditionalProperties
+func (a *AuthenticationRequiredError0x2b) UnmarshalJSON(b []byte) error {
 	object := make(map[string]json.RawMessage)
 	err := json.Unmarshal(b, &object)
 	if err != nil {
@@ -7573,8 +7602,8 @@ func (a *AuthenticationRequiredError0x2a) UnmarshalJSON(b []byte) error {
 	return nil
 }
 
-// Override default JSON handling for AuthenticationRequiredError0x2a to handle AdditionalProperties
-func (a AuthenticationRequiredError0x2a) MarshalJSON() ([]byte, error) {
+// Override default JSON handling for AuthenticationRequiredError0x2b to handle AdditionalProperties
+func (a AuthenticationRequiredError0x2b) MarshalJSON() ([]byte, error) {
 	var err error
 	object := make(map[string]json.RawMessage)
 
@@ -7609,25 +7638,25 @@ func (a AuthenticationRequiredError0x2a) MarshalJSON() ([]byte, error) {
 	return json.Marshal(object)
 }
 
-// Getter for additional properties for BudgetExceededError0x30. Returns the specified
+// Getter for additional properties for BudgetExceededError0x31. Returns the specified
 // element and whether it was found
-func (a BudgetExceededError0x30) Get(fieldName string) (value interface{}, found bool) {
+func (a BudgetExceededError0x31) Get(fieldName string) (value interface{}, found bool) {
 	if a.AdditionalProperties != nil {
 		value, found = a.AdditionalProperties[fieldName]
 	}
 	return
 }
 
-// Setter for additional properties for BudgetExceededError0x30
-func (a *BudgetExceededError0x30) Set(fieldName string, value interface{}) {
+// Setter for additional properties for BudgetExceededError0x31
+func (a *BudgetExceededError0x31) Set(fieldName string, value interface{}) {
 	if a.AdditionalProperties == nil {
 		a.AdditionalProperties = make(map[string]interface{})
 	}
 	a.AdditionalProperties[fieldName] = value
 }
 
-// Override default JSON handling for BudgetExceededError0x30 to handle AdditionalProperties
-func (a *BudgetExceededError0x30) UnmarshalJSON(b []byte) error {
+// Override default JSON handling for BudgetExceededError0x31 to handle AdditionalProperties
+func (a *BudgetExceededError0x31) UnmarshalJSON(b []byte) error {
 	object := make(map[string]json.RawMessage)
 	err := json.Unmarshal(b, &object)
 	if err != nil {
@@ -7680,8 +7709,8 @@ func (a *BudgetExceededError0x30) UnmarshalJSON(b []byte) error {
 	return nil
 }
 
-// Override default JSON handling for BudgetExceededError0x30 to handle AdditionalProperties
-func (a BudgetExceededError0x30) MarshalJSON() ([]byte, error) {
+// Override default JSON handling for BudgetExceededError0x31 to handle AdditionalProperties
+func (a BudgetExceededError0x31) MarshalJSON() ([]byte, error) {
 	var err error
 	object := make(map[string]json.RawMessage)
 
@@ -7716,25 +7745,25 @@ func (a BudgetExceededError0x30) MarshalJSON() ([]byte, error) {
 	return json.Marshal(object)
 }
 
-// Getter for additional properties for DataStreamBrokenError0x28. Returns the specified
+// Getter for additional properties for DataStreamBrokenError0x29. Returns the specified
 // element and whether it was found
-func (a DataStreamBrokenError0x28) Get(fieldName string) (value interface{}, found bool) {
+func (a DataStreamBrokenError0x29) Get(fieldName string) (value interface{}, found bool) {
 	if a.AdditionalProperties != nil {
 		value, found = a.AdditionalProperties[fieldName]
 	}
 	return
 }
 
-// Setter for additional properties for DataStreamBrokenError0x28
-func (a *DataStreamBrokenError0x28) Set(fieldName string, value interface{}) {
+// Setter for additional properties for DataStreamBrokenError0x29
+func (a *DataStreamBrokenError0x29) Set(fieldName string, value interface{}) {
 	if a.AdditionalProperties == nil {
 		a.AdditionalProperties = make(map[string]interface{})
 	}
 	a.AdditionalProperties[fieldName] = value
 }
 
-// Override default JSON handling for DataStreamBrokenError0x28 to handle AdditionalProperties
-func (a *DataStreamBrokenError0x28) UnmarshalJSON(b []byte) error {
+// Override default JSON handling for DataStreamBrokenError0x29 to handle AdditionalProperties
+func (a *DataStreamBrokenError0x29) UnmarshalJSON(b []byte) error {
 	object := make(map[string]json.RawMessage)
 	err := json.Unmarshal(b, &object)
 	if err != nil {
@@ -7787,8 +7816,8 @@ func (a *DataStreamBrokenError0x28) UnmarshalJSON(b []byte) error {
 	return nil
 }
 
-// Override default JSON handling for DataStreamBrokenError0x28 to handle AdditionalProperties
-func (a DataStreamBrokenError0x28) MarshalJSON() ([]byte, error) {
+// Override default JSON handling for DataStreamBrokenError0x29 to handle AdditionalProperties
+func (a DataStreamBrokenError0x29) MarshalJSON() ([]byte, error) {
 	var err error
 	object := make(map[string]json.RawMessage)
 
@@ -7823,25 +7852,25 @@ func (a DataStreamBrokenError0x28) MarshalJSON() ([]byte, error) {
 	return json.Marshal(object)
 }
 
-// Getter for additional properties for DownstreamServiceError0x37. Returns the specified
+// Getter for additional properties for DownstreamServiceError0x38. Returns the specified
 // element and whether it was found
-func (a DownstreamServiceError0x37) Get(fieldName string) (value interface{}, found bool) {
+func (a DownstreamServiceError0x38) Get(fieldName string) (value interface{}, found bool) {
 	if a.AdditionalProperties != nil {
 		value, found = a.AdditionalProperties[fieldName]
 	}
 	return
 }
 
-// Setter for additional properties for DownstreamServiceError0x37
-func (a *DownstreamServiceError0x37) Set(fieldName string, value interface{}) {
+// Setter for additional properties for DownstreamServiceError0x38
+func (a *DownstreamServiceError0x38) Set(fieldName string, value interface{}) {
 	if a.AdditionalProperties == nil {
 		a.AdditionalProperties = make(map[string]interface{})
 	}
 	a.AdditionalProperties[fieldName] = value
 }
 
-// Override default JSON handling for DownstreamServiceError0x37 to handle AdditionalProperties
-func (a *DownstreamServiceError0x37) UnmarshalJSON(b []byte) error {
+// Override default JSON handling for DownstreamServiceError0x38 to handle AdditionalProperties
+func (a *DownstreamServiceError0x38) UnmarshalJSON(b []byte) error {
 	object := make(map[string]json.RawMessage)
 	err := json.Unmarshal(b, &object)
 	if err != nil {
@@ -7894,8 +7923,8 @@ func (a *DownstreamServiceError0x37) UnmarshalJSON(b []byte) error {
 	return nil
 }
 
-// Override default JSON handling for DownstreamServiceError0x37 to handle AdditionalProperties
-func (a DownstreamServiceError0x37) MarshalJSON() ([]byte, error) {
+// Override default JSON handling for DownstreamServiceError0x38 to handle AdditionalProperties
+func (a DownstreamServiceError0x38) MarshalJSON() ([]byte, error) {
 	var err error
 	object := make(map[string]json.RawMessage)
 
@@ -7930,25 +7959,25 @@ func (a DownstreamServiceError0x37) MarshalJSON() ([]byte, error) {
 	return json.Marshal(object)
 }
 
-// Getter for additional properties for DownstreamServiceFailureError0x33. Returns the specified
+// Getter for additional properties for DownstreamServiceFailureError0x34. Returns the specified
 // element and whether it was found
-func (a DownstreamServiceFailureError0x33) Get(fieldName string) (value interface{}, found bool) {
+func (a DownstreamServiceFailureError0x34) Get(fieldName string) (value interface{}, found bool) {
 	if a.AdditionalProperties != nil {
 		value, found = a.AdditionalProperties[fieldName]
 	}
 	return
 }
 
-// Setter for additional properties for DownstreamServiceFailureError0x33
-func (a *DownstreamServiceFailureError0x33) Set(fieldName string, value interface{}) {
+// Setter for additional properties for DownstreamServiceFailureError0x34
+func (a *DownstreamServiceFailureError0x34) Set(fieldName string, value interface{}) {
 	if a.AdditionalProperties == nil {
 		a.AdditionalProperties = make(map[string]interface{})
 	}
 	a.AdditionalProperties[fieldName] = value
 }
 
-// Override default JSON handling for DownstreamServiceFailureError0x33 to handle AdditionalProperties
-func (a *DownstreamServiceFailureError0x33) UnmarshalJSON(b []byte) error {
+// Override default JSON handling for DownstreamServiceFailureError0x34 to handle AdditionalProperties
+func (a *DownstreamServiceFailureError0x34) UnmarshalJSON(b []byte) error {
 	object := make(map[string]json.RawMessage)
 	err := json.Unmarshal(b, &object)
 	if err != nil {
@@ -8001,8 +8030,8 @@ func (a *DownstreamServiceFailureError0x33) UnmarshalJSON(b []byte) error {
 	return nil
 }
 
-// Override default JSON handling for DownstreamServiceFailureError0x33 to handle AdditionalProperties
-func (a DownstreamServiceFailureError0x33) MarshalJSON() ([]byte, error) {
+// Override default JSON handling for DownstreamServiceFailureError0x34 to handle AdditionalProperties
+func (a DownstreamServiceFailureError0x34) MarshalJSON() ([]byte, error) {
 	var err error
 	object := make(map[string]json.RawMessage)
 
@@ -8037,25 +8066,25 @@ func (a DownstreamServiceFailureError0x33) MarshalJSON() ([]byte, error) {
 	return json.Marshal(object)
 }
 
-// Getter for additional properties for HarmfulContentError0x36. Returns the specified
+// Getter for additional properties for HarmfulContentError0x37. Returns the specified
 // element and whether it was found
-func (a HarmfulContentError0x36) Get(fieldName string) (value interface{}, found bool) {
+func (a HarmfulContentError0x37) Get(fieldName string) (value interface{}, found bool) {
 	if a.AdditionalProperties != nil {
 		value, found = a.AdditionalProperties[fieldName]
 	}
 	return
 }
 
-// Setter for additional properties for HarmfulContentError0x36
-func (a *HarmfulContentError0x36) Set(fieldName string, value interface{}) {
+// Setter for additional properties for HarmfulContentError0x37
+func (a *HarmfulContentError0x37) Set(fieldName string, value interface{}) {
 	if a.AdditionalProperties == nil {
 		a.AdditionalProperties = make(map[string]interface{})
 	}
 	a.AdditionalProperties[fieldName] = value
 }
 
-// Override default JSON handling for HarmfulContentError0x36 to handle AdditionalProperties
-func (a *HarmfulContentError0x36) UnmarshalJSON(b []byte) error {
+// Override default JSON handling for HarmfulContentError0x37 to handle AdditionalProperties
+func (a *HarmfulContentError0x37) UnmarshalJSON(b []byte) error {
 	object := make(map[string]json.RawMessage)
 	err := json.Unmarshal(b, &object)
 	if err != nil {
@@ -8108,8 +8137,8 @@ func (a *HarmfulContentError0x36) UnmarshalJSON(b []byte) error {
 	return nil
 }
 
-// Override default JSON handling for HarmfulContentError0x36 to handle AdditionalProperties
-func (a HarmfulContentError0x36) MarshalJSON() ([]byte, error) {
+// Override default JSON handling for HarmfulContentError0x37 to handle AdditionalProperties
+func (a HarmfulContentError0x37) MarshalJSON() ([]byte, error) {
 	var err error
 	object := make(map[string]json.RawMessage)
 
@@ -8144,25 +8173,25 @@ func (a HarmfulContentError0x36) MarshalJSON() ([]byte, error) {
 	return json.Marshal(object)
 }
 
-// Getter for additional properties for InsufficientBalanceError0x2c. Returns the specified
+// Getter for additional properties for InsufficientBalanceError0x2d. Returns the specified
 // element and whether it was found
-func (a InsufficientBalanceError0x2c) Get(fieldName string) (value interface{}, found bool) {
+func (a InsufficientBalanceError0x2d) Get(fieldName string) (value interface{}, found bool) {
 	if a.AdditionalProperties != nil {
 		value, found = a.AdditionalProperties[fieldName]
 	}
 	return
 }
 
-// Setter for additional properties for InsufficientBalanceError0x2c
-func (a *InsufficientBalanceError0x2c) Set(fieldName string, value interface{}) {
+// Setter for additional properties for InsufficientBalanceError0x2d
+func (a *InsufficientBalanceError0x2d) Set(fieldName string, value interface{}) {
 	if a.AdditionalProperties == nil {
 		a.AdditionalProperties = make(map[string]interface{})
 	}
 	a.AdditionalProperties[fieldName] = value
 }
 
-// Override default JSON handling for InsufficientBalanceError0x2c to handle AdditionalProperties
-func (a *InsufficientBalanceError0x2c) UnmarshalJSON(b []byte) error {
+// Override default JSON handling for InsufficientBalanceError0x2d to handle AdditionalProperties
+func (a *InsufficientBalanceError0x2d) UnmarshalJSON(b []byte) error {
 	object := make(map[string]json.RawMessage)
 	err := json.Unmarshal(b, &object)
 	if err != nil {
@@ -8215,8 +8244,8 @@ func (a *InsufficientBalanceError0x2c) UnmarshalJSON(b []byte) error {
 	return nil
 }
 
-// Override default JSON handling for InsufficientBalanceError0x2c to handle AdditionalProperties
-func (a InsufficientBalanceError0x2c) MarshalJSON() ([]byte, error) {
+// Override default JSON handling for InsufficientBalanceError0x2d to handle AdditionalProperties
+func (a InsufficientBalanceError0x2d) MarshalJSON() ([]byte, error) {
 	var err error
 	object := make(map[string]json.RawMessage)
 
@@ -8251,25 +8280,25 @@ func (a InsufficientBalanceError0x2c) MarshalJSON() ([]byte, error) {
 	return json.Marshal(object)
 }
 
-// Getter for additional properties for OperationNotAllowedError0x2d. Returns the specified
+// Getter for additional properties for OperationNotAllowedError0x2e. Returns the specified
 // element and whether it was found
-func (a OperationNotAllowedError0x2d) Get(fieldName string) (value interface{}, found bool) {
+func (a OperationNotAllowedError0x2e) Get(fieldName string) (value interface{}, found bool) {
 	if a.AdditionalProperties != nil {
 		value, found = a.AdditionalProperties[fieldName]
 	}
 	return
 }
 
-// Setter for additional properties for OperationNotAllowedError0x2d
-func (a *OperationNotAllowedError0x2d) Set(fieldName string, value interface{}) {
+// Setter for additional properties for OperationNotAllowedError0x2e
+func (a *OperationNotAllowedError0x2e) Set(fieldName string, value interface{}) {
 	if a.AdditionalProperties == nil {
 		a.AdditionalProperties = make(map[string]interface{})
 	}
 	a.AdditionalProperties[fieldName] = value
 }
 
-// Override default JSON handling for OperationNotAllowedError0x2d to handle AdditionalProperties
-func (a *OperationNotAllowedError0x2d) UnmarshalJSON(b []byte) error {
+// Override default JSON handling for OperationNotAllowedError0x2e to handle AdditionalProperties
+func (a *OperationNotAllowedError0x2e) UnmarshalJSON(b []byte) error {
 	object := make(map[string]json.RawMessage)
 	err := json.Unmarshal(b, &object)
 	if err != nil {
@@ -8322,8 +8351,8 @@ func (a *OperationNotAllowedError0x2d) UnmarshalJSON(b []byte) error {
 	return nil
 }
 
-// Override default JSON handling for OperationNotAllowedError0x2d to handle AdditionalProperties
-func (a OperationNotAllowedError0x2d) MarshalJSON() ([]byte, error) {
+// Override default JSON handling for OperationNotAllowedError0x2e to handle AdditionalProperties
+func (a OperationNotAllowedError0x2e) MarshalJSON() ([]byte, error) {
 	var err error
 	object := make(map[string]json.RawMessage)
 
@@ -8358,25 +8387,25 @@ func (a OperationNotAllowedError0x2d) MarshalJSON() ([]byte, error) {
 	return json.Marshal(object)
 }
 
-// Getter for additional properties for ParamValidationError0x27. Returns the specified
+// Getter for additional properties for ParamValidationError0x28. Returns the specified
 // element and whether it was found
-func (a ParamValidationError0x27) Get(fieldName string) (value interface{}, found bool) {
+func (a ParamValidationError0x28) Get(fieldName string) (value interface{}, found bool) {
 	if a.AdditionalProperties != nil {
 		value, found = a.AdditionalProperties[fieldName]
 	}
 	return
 }
 
-// Setter for additional properties for ParamValidationError0x27
-func (a *ParamValidationError0x27) Set(fieldName string, value interface{}) {
+// Setter for additional properties for ParamValidationError0x28
+func (a *ParamValidationError0x28) Set(fieldName string, value interface{}) {
 	if a.AdditionalProperties == nil {
 		a.AdditionalProperties = make(map[string]interface{})
 	}
 	a.AdditionalProperties[fieldName] = value
 }
 
-// Override default JSON handling for ParamValidationError0x27 to handle AdditionalProperties
-func (a *ParamValidationError0x27) UnmarshalJSON(b []byte) error {
+// Override default JSON handling for ParamValidationError0x28 to handle AdditionalProperties
+func (a *ParamValidationError0x28) UnmarshalJSON(b []byte) error {
 	object := make(map[string]json.RawMessage)
 	err := json.Unmarshal(b, &object)
 	if err != nil {
@@ -8429,8 +8458,8 @@ func (a *ParamValidationError0x27) UnmarshalJSON(b []byte) error {
 	return nil
 }
 
-// Override default JSON handling for ParamValidationError0x27 to handle AdditionalProperties
-func (a ParamValidationError0x27) MarshalJSON() ([]byte, error) {
+// Override default JSON handling for ParamValidationError0x28 to handle AdditionalProperties
+func (a ParamValidationError0x28) MarshalJSON() ([]byte, error) {
 	var err error
 	object := make(map[string]json.RawMessage)
 
@@ -8465,25 +8494,25 @@ func (a ParamValidationError0x27) MarshalJSON() ([]byte, error) {
 	return json.Marshal(object)
 }
 
-// Getter for additional properties for RateLimitTriggeredError0x35. Returns the specified
+// Getter for additional properties for RateLimitTriggeredError0x36. Returns the specified
 // element and whether it was found
-func (a RateLimitTriggeredError0x35) Get(fieldName string) (value interface{}, found bool) {
+func (a RateLimitTriggeredError0x36) Get(fieldName string) (value interface{}, found bool) {
 	if a.AdditionalProperties != nil {
 		value, found = a.AdditionalProperties[fieldName]
 	}
 	return
 }
 
-// Setter for additional properties for RateLimitTriggeredError0x35
-func (a *RateLimitTriggeredError0x35) Set(fieldName string, value interface{}) {
+// Setter for additional properties for RateLimitTriggeredError0x36
+func (a *RateLimitTriggeredError0x36) Set(fieldName string, value interface{}) {
 	if a.AdditionalProperties == nil {
 		a.AdditionalProperties = make(map[string]interface{})
 	}
 	a.AdditionalProperties[fieldName] = value
 }
 
-// Override default JSON handling for RateLimitTriggeredError0x35 to handle AdditionalProperties
-func (a *RateLimitTriggeredError0x35) UnmarshalJSON(b []byte) error {
+// Override default JSON handling for RateLimitTriggeredError0x36 to handle AdditionalProperties
+func (a *RateLimitTriggeredError0x36) UnmarshalJSON(b []byte) error {
 	object := make(map[string]json.RawMessage)
 	err := json.Unmarshal(b, &object)
 	if err != nil {
@@ -8552,8 +8581,8 @@ func (a *RateLimitTriggeredError0x35) UnmarshalJSON(b []byte) error {
 	return nil
 }
 
-// Override default JSON handling for RateLimitTriggeredError0x35 to handle AdditionalProperties
-func (a RateLimitTriggeredError0x35) MarshalJSON() ([]byte, error) {
+// Override default JSON handling for RateLimitTriggeredError0x36 to handle AdditionalProperties
+func (a RateLimitTriggeredError0x36) MarshalJSON() ([]byte, error) {
 	var err error
 	object := make(map[string]json.RawMessage)
 
@@ -8602,25 +8631,25 @@ func (a RateLimitTriggeredError0x35) MarshalJSON() ([]byte, error) {
 	return json.Marshal(object)
 }
 
-// Getter for additional properties for ResourceNotFoundError0x43. Returns the specified
+// Getter for additional properties for ResourceNotFoundError0x44. Returns the specified
 // element and whether it was found
-func (a ResourceNotFoundError0x43) Get(fieldName string) (value interface{}, found bool) {
+func (a ResourceNotFoundError0x44) Get(fieldName string) (value interface{}, found bool) {
 	if a.AdditionalProperties != nil {
 		value, found = a.AdditionalProperties[fieldName]
 	}
 	return
 }
 
-// Setter for additional properties for ResourceNotFoundError0x43
-func (a *ResourceNotFoundError0x43) Set(fieldName string, value interface{}) {
+// Setter for additional properties for ResourceNotFoundError0x44
+func (a *ResourceNotFoundError0x44) Set(fieldName string, value interface{}) {
 	if a.AdditionalProperties == nil {
 		a.AdditionalProperties = make(map[string]interface{})
 	}
 	a.AdditionalProperties[fieldName] = value
 }
 
-// Override default JSON handling for ResourceNotFoundError0x43 to handle AdditionalProperties
-func (a *ResourceNotFoundError0x43) UnmarshalJSON(b []byte) error {
+// Override default JSON handling for ResourceNotFoundError0x44 to handle AdditionalProperties
+func (a *ResourceNotFoundError0x44) UnmarshalJSON(b []byte) error {
 	object := make(map[string]json.RawMessage)
 	err := json.Unmarshal(b, &object)
 	if err != nil {
@@ -8673,8 +8702,8 @@ func (a *ResourceNotFoundError0x43) UnmarshalJSON(b []byte) error {
 	return nil
 }
 
-// Override default JSON handling for ResourceNotFoundError0x43 to handle AdditionalProperties
-func (a ResourceNotFoundError0x43) MarshalJSON() ([]byte, error) {
+// Override default JSON handling for ResourceNotFoundError0x44 to handle AdditionalProperties
+func (a ResourceNotFoundError0x44) MarshalJSON() ([]byte, error) {
 	var err error
 	object := make(map[string]json.RawMessage)
 
@@ -8709,25 +8738,25 @@ func (a ResourceNotFoundError0x43) MarshalJSON() ([]byte, error) {
 	return json.Marshal(object)
 }
 
-// Getter for additional properties for ResourcePolicyDenyError0x2f. Returns the specified
+// Getter for additional properties for ResourcePolicyDenyError0x30. Returns the specified
 // element and whether it was found
-func (a ResourcePolicyDenyError0x2f) Get(fieldName string) (value interface{}, found bool) {
+func (a ResourcePolicyDenyError0x30) Get(fieldName string) (value interface{}, found bool) {
 	if a.AdditionalProperties != nil {
 		value, found = a.AdditionalProperties[fieldName]
 	}
 	return
 }
 
-// Setter for additional properties for ResourcePolicyDenyError0x2f
-func (a *ResourcePolicyDenyError0x2f) Set(fieldName string, value interface{}) {
+// Setter for additional properties for ResourcePolicyDenyError0x30
+func (a *ResourcePolicyDenyError0x30) Set(fieldName string, value interface{}) {
 	if a.AdditionalProperties == nil {
 		a.AdditionalProperties = make(map[string]interface{})
 	}
 	a.AdditionalProperties[fieldName] = value
 }
 
-// Override default JSON handling for ResourcePolicyDenyError0x2f to handle AdditionalProperties
-func (a *ResourcePolicyDenyError0x2f) UnmarshalJSON(b []byte) error {
+// Override default JSON handling for ResourcePolicyDenyError0x30 to handle AdditionalProperties
+func (a *ResourcePolicyDenyError0x30) UnmarshalJSON(b []byte) error {
 	object := make(map[string]json.RawMessage)
 	err := json.Unmarshal(b, &object)
 	if err != nil {
@@ -8780,8 +8809,8 @@ func (a *ResourcePolicyDenyError0x2f) UnmarshalJSON(b []byte) error {
 	return nil
 }
 
-// Override default JSON handling for ResourcePolicyDenyError0x2f to handle AdditionalProperties
-func (a ResourcePolicyDenyError0x2f) MarshalJSON() ([]byte, error) {
+// Override default JSON handling for ResourcePolicyDenyError0x30 to handle AdditionalProperties
+func (a ResourcePolicyDenyError0x30) MarshalJSON() ([]byte, error) {
 	var err error
 	object := make(map[string]json.RawMessage)
 
@@ -8816,25 +8845,25 @@ func (a ResourcePolicyDenyError0x2f) MarshalJSON() ([]byte, error) {
 	return json.Marshal(object)
 }
 
-// Getter for additional properties for ServiceNodeResourceDrainError0x38. Returns the specified
+// Getter for additional properties for ServiceNodeResourceDrainError0x39. Returns the specified
 // element and whether it was found
-func (a ServiceNodeResourceDrainError0x38) Get(fieldName string) (value interface{}, found bool) {
+func (a ServiceNodeResourceDrainError0x39) Get(fieldName string) (value interface{}, found bool) {
 	if a.AdditionalProperties != nil {
 		value, found = a.AdditionalProperties[fieldName]
 	}
 	return
 }
 
-// Setter for additional properties for ServiceNodeResourceDrainError0x38
-func (a *ServiceNodeResourceDrainError0x38) Set(fieldName string, value interface{}) {
+// Setter for additional properties for ServiceNodeResourceDrainError0x39
+func (a *ServiceNodeResourceDrainError0x39) Set(fieldName string, value interface{}) {
 	if a.AdditionalProperties == nil {
 		a.AdditionalProperties = make(map[string]interface{})
 	}
 	a.AdditionalProperties[fieldName] = value
 }
 
-// Override default JSON handling for ServiceNodeResourceDrainError0x38 to handle AdditionalProperties
-func (a *ServiceNodeResourceDrainError0x38) UnmarshalJSON(b []byte) error {
+// Override default JSON handling for ServiceNodeResourceDrainError0x39 to handle AdditionalProperties
+func (a *ServiceNodeResourceDrainError0x39) UnmarshalJSON(b []byte) error {
 	object := make(map[string]json.RawMessage)
 	err := json.Unmarshal(b, &object)
 	if err != nil {
@@ -8887,8 +8916,8 @@ func (a *ServiceNodeResourceDrainError0x38) UnmarshalJSON(b []byte) error {
 	return nil
 }
 
-// Override default JSON handling for ServiceNodeResourceDrainError0x38 to handle AdditionalProperties
-func (a ServiceNodeResourceDrainError0x38) MarshalJSON() ([]byte, error) {
+// Override default JSON handling for ServiceNodeResourceDrainError0x39 to handle AdditionalProperties
+func (a ServiceNodeResourceDrainError0x39) MarshalJSON() ([]byte, error) {
 	var err error
 	object := make(map[string]json.RawMessage)
 
@@ -8923,25 +8952,25 @@ func (a ServiceNodeResourceDrainError0x38) MarshalJSON() ([]byte, error) {
 	return json.Marshal(object)
 }
 
-// Getter for additional properties for SubmittedDataMalformedError0x32. Returns the specified
+// Getter for additional properties for SubmittedDataMalformedError0x33. Returns the specified
 // element and whether it was found
-func (a SubmittedDataMalformedError0x32) Get(fieldName string) (value interface{}, found bool) {
+func (a SubmittedDataMalformedError0x33) Get(fieldName string) (value interface{}, found bool) {
 	if a.AdditionalProperties != nil {
 		value, found = a.AdditionalProperties[fieldName]
 	}
 	return
 }
 
-// Setter for additional properties for SubmittedDataMalformedError0x32
-func (a *SubmittedDataMalformedError0x32) Set(fieldName string, value interface{}) {
+// Setter for additional properties for SubmittedDataMalformedError0x33
+func (a *SubmittedDataMalformedError0x33) Set(fieldName string, value interface{}) {
 	if a.AdditionalProperties == nil {
 		a.AdditionalProperties = make(map[string]interface{})
 	}
 	a.AdditionalProperties[fieldName] = value
 }
 
-// Override default JSON handling for SubmittedDataMalformedError0x32 to handle AdditionalProperties
-func (a *SubmittedDataMalformedError0x32) UnmarshalJSON(b []byte) error {
+// Override default JSON handling for SubmittedDataMalformedError0x33 to handle AdditionalProperties
+func (a *SubmittedDataMalformedError0x33) UnmarshalJSON(b []byte) error {
 	object := make(map[string]json.RawMessage)
 	err := json.Unmarshal(b, &object)
 	if err != nil {
@@ -8994,8 +9023,8 @@ func (a *SubmittedDataMalformedError0x32) UnmarshalJSON(b []byte) error {
 	return nil
 }
 
-// Override default JSON handling for SubmittedDataMalformedError0x32 to handle AdditionalProperties
-func (a SubmittedDataMalformedError0x32) MarshalJSON() ([]byte, error) {
+// Override default JSON handling for SubmittedDataMalformedError0x33 to handle AdditionalProperties
+func (a SubmittedDataMalformedError0x33) MarshalJSON() ([]byte, error) {
 	var err error
 	object := make(map[string]json.RawMessage)
 
@@ -9030,25 +9059,25 @@ func (a SubmittedDataMalformedError0x32) MarshalJSON() ([]byte, error) {
 	return json.Marshal(object)
 }
 
-// Getter for additional properties for TargetFileTooLargeError0x31. Returns the specified
+// Getter for additional properties for TargetFileTooLargeError0x32. Returns the specified
 // element and whether it was found
-func (a TargetFileTooLargeError0x31) Get(fieldName string) (value interface{}, found bool) {
+func (a TargetFileTooLargeError0x32) Get(fieldName string) (value interface{}, found bool) {
 	if a.AdditionalProperties != nil {
 		value, found = a.AdditionalProperties[fieldName]
 	}
 	return
 }
 
-// Setter for additional properties for TargetFileTooLargeError0x31
-func (a *TargetFileTooLargeError0x31) Set(fieldName string, value interface{}) {
+// Setter for additional properties for TargetFileTooLargeError0x32
+func (a *TargetFileTooLargeError0x32) Set(fieldName string, value interface{}) {
 	if a.AdditionalProperties == nil {
 		a.AdditionalProperties = make(map[string]interface{})
 	}
 	a.AdditionalProperties[fieldName] = value
 }
 
-// Override default JSON handling for TargetFileTooLargeError0x31 to handle AdditionalProperties
-func (a *TargetFileTooLargeError0x31) UnmarshalJSON(b []byte) error {
+// Override default JSON handling for TargetFileTooLargeError0x32 to handle AdditionalProperties
+func (a *TargetFileTooLargeError0x32) UnmarshalJSON(b []byte) error {
 	object := make(map[string]json.RawMessage)
 	err := json.Unmarshal(b, &object)
 	if err != nil {
@@ -9101,8 +9130,8 @@ func (a *TargetFileTooLargeError0x31) UnmarshalJSON(b []byte) error {
 	return nil
 }
 
-// Override default JSON handling for TargetFileTooLargeError0x31 to handle AdditionalProperties
-func (a TargetFileTooLargeError0x31) MarshalJSON() ([]byte, error) {
+// Override default JSON handling for TargetFileTooLargeError0x32 to handle AdditionalProperties
+func (a TargetFileTooLargeError0x32) MarshalJSON() ([]byte, error) {
 	var err error
 	object := make(map[string]json.RawMessage)
 
@@ -9137,25 +9166,25 @@ func (a TargetFileTooLargeError0x31) MarshalJSON() ([]byte, error) {
 	return json.Marshal(object)
 }
 
-// Getter for additional properties for TierFeatureConstraintError0x2b. Returns the specified
+// Getter for additional properties for TierFeatureConstraintError0x2c. Returns the specified
 // element and whether it was found
-func (a TierFeatureConstraintError0x2b) Get(fieldName string) (value interface{}, found bool) {
+func (a TierFeatureConstraintError0x2c) Get(fieldName string) (value interface{}, found bool) {
 	if a.AdditionalProperties != nil {
 		value, found = a.AdditionalProperties[fieldName]
 	}
 	return
 }
 
-// Setter for additional properties for TierFeatureConstraintError0x2b
-func (a *TierFeatureConstraintError0x2b) Set(fieldName string, value interface{}) {
+// Setter for additional properties for TierFeatureConstraintError0x2c
+func (a *TierFeatureConstraintError0x2c) Set(fieldName string, value interface{}) {
 	if a.AdditionalProperties == nil {
 		a.AdditionalProperties = make(map[string]interface{})
 	}
 	a.AdditionalProperties[fieldName] = value
 }
 
-// Override default JSON handling for TierFeatureConstraintError0x2b to handle AdditionalProperties
-func (a *TierFeatureConstraintError0x2b) UnmarshalJSON(b []byte) error {
+// Override default JSON handling for TierFeatureConstraintError0x2c to handle AdditionalProperties
+func (a *TierFeatureConstraintError0x2c) UnmarshalJSON(b []byte) error {
 	object := make(map[string]json.RawMessage)
 	err := json.Unmarshal(b, &object)
 	if err != nil {
@@ -9208,8 +9237,8 @@ func (a *TierFeatureConstraintError0x2b) UnmarshalJSON(b []byte) error {
 	return nil
 }
 
-// Override default JSON handling for TierFeatureConstraintError0x2b to handle AdditionalProperties
-func (a TierFeatureConstraintError0x2b) MarshalJSON() ([]byte, error) {
+// Override default JSON handling for TierFeatureConstraintError0x2c to handle AdditionalProperties
+func (a TierFeatureConstraintError0x2c) MarshalJSON() ([]byte, error) {
 	var err error
 	object := make(map[string]json.RawMessage)
 
@@ -9244,22 +9273,22 @@ func (a TierFeatureConstraintError0x2b) MarshalJSON() ([]byte, error) {
 	return json.Marshal(object)
 }
 
-// AsCookie0x16SameSite0 returns the union data inside the Cookie0x16_SameSite as a Cookie0x16SameSite0
-func (t Cookie0x16_SameSite) AsCookie0x16SameSite0() (Cookie0x16SameSite0, error) {
-	var body Cookie0x16SameSite0
+// AsCookie0x17SameSite0 returns the union data inside the Cookie0x17_SameSite as a Cookie0x17SameSite0
+func (t Cookie0x17_SameSite) AsCookie0x17SameSite0() (Cookie0x17SameSite0, error) {
+	var body Cookie0x17SameSite0
 	err := json.Unmarshal(t.union, &body)
 	return body, err
 }
 
-// FromCookie0x16SameSite0 overwrites any union data inside the Cookie0x16_SameSite as the provided Cookie0x16SameSite0
-func (t *Cookie0x16_SameSite) FromCookie0x16SameSite0(v Cookie0x16SameSite0) error {
+// FromCookie0x17SameSite0 overwrites any union data inside the Cookie0x17_SameSite as the provided Cookie0x17SameSite0
+func (t *Cookie0x17_SameSite) FromCookie0x17SameSite0(v Cookie0x17SameSite0) error {
 	b, err := json.Marshal(v)
 	t.union = b
 	return err
 }
 
-// MergeCookie0x16SameSite0 performs a merge with any union data inside the Cookie0x16_SameSite, using the provided Cookie0x16SameSite0
-func (t *Cookie0x16_SameSite) MergeCookie0x16SameSite0(v Cookie0x16SameSite0) error {
+// MergeCookie0x17SameSite0 performs a merge with any union data inside the Cookie0x17_SameSite, using the provided Cookie0x17SameSite0
+func (t *Cookie0x17_SameSite) MergeCookie0x17SameSite0(v Cookie0x17SameSite0) error {
 	b, err := json.Marshal(v)
 	if err != nil {
 		return err
@@ -9270,22 +9299,22 @@ func (t *Cookie0x16_SameSite) MergeCookie0x16SameSite0(v Cookie0x16SameSite0) er
 	return err
 }
 
-// AsCookie0x16SameSite1 returns the union data inside the Cookie0x16_SameSite as a Cookie0x16SameSite1
-func (t Cookie0x16_SameSite) AsCookie0x16SameSite1() (Cookie0x16SameSite1, error) {
-	var body Cookie0x16SameSite1
+// AsCookie0x17SameSite1 returns the union data inside the Cookie0x17_SameSite as a Cookie0x17SameSite1
+func (t Cookie0x17_SameSite) AsCookie0x17SameSite1() (Cookie0x17SameSite1, error) {
+	var body Cookie0x17SameSite1
 	err := json.Unmarshal(t.union, &body)
 	return body, err
 }
 
-// FromCookie0x16SameSite1 overwrites any union data inside the Cookie0x16_SameSite as the provided Cookie0x16SameSite1
-func (t *Cookie0x16_SameSite) FromCookie0x16SameSite1(v Cookie0x16SameSite1) error {
+// FromCookie0x17SameSite1 overwrites any union data inside the Cookie0x17_SameSite as the provided Cookie0x17SameSite1
+func (t *Cookie0x17_SameSite) FromCookie0x17SameSite1(v Cookie0x17SameSite1) error {
 	b, err := json.Marshal(v)
 	t.union = b
 	return err
 }
 
-// MergeCookie0x16SameSite1 performs a merge with any union data inside the Cookie0x16_SameSite, using the provided Cookie0x16SameSite1
-func (t *Cookie0x16_SameSite) MergeCookie0x16SameSite1(v Cookie0x16SameSite1) error {
+// MergeCookie0x17SameSite1 performs a merge with any union data inside the Cookie0x17_SameSite, using the provided Cookie0x17SameSite1
+func (t *Cookie0x17_SameSite) MergeCookie0x17SameSite1(v Cookie0x17SameSite1) error {
 	b, err := json.Marshal(v)
 	if err != nil {
 		return err
@@ -9296,32 +9325,32 @@ func (t *Cookie0x16_SameSite) MergeCookie0x16SameSite1(v Cookie0x16SameSite1) er
 	return err
 }
 
-func (t Cookie0x16_SameSite) MarshalJSON() ([]byte, error) {
+func (t Cookie0x17_SameSite) MarshalJSON() ([]byte, error) {
 	b, err := t.union.MarshalJSON()
 	return b, err
 }
 
-func (t *Cookie0x16_SameSite) UnmarshalJSON(b []byte) error {
+func (t *Cookie0x17_SameSite) UnmarshalJSON(b []byte) error {
 	err := t.union.UnmarshalJSON(b)
 	return err
 }
 
-// AsCrawlerOptions0x26Engine0 returns the union data inside the CrawlerOptions0x26_Engine as a CrawlerOptions0x26Engine0
-func (t CrawlerOptions0x26_Engine) AsCrawlerOptions0x26Engine0() (CrawlerOptions0x26Engine0, error) {
-	var body CrawlerOptions0x26Engine0
+// AsCrawlerOptions0x27Engine0 returns the union data inside the CrawlerOptions0x27_Engine as a CrawlerOptions0x27Engine0
+func (t CrawlerOptions0x27_Engine) AsCrawlerOptions0x27Engine0() (CrawlerOptions0x27Engine0, error) {
+	var body CrawlerOptions0x27Engine0
 	err := json.Unmarshal(t.union, &body)
 	return body, err
 }
 
-// FromCrawlerOptions0x26Engine0 overwrites any union data inside the CrawlerOptions0x26_Engine as the provided CrawlerOptions0x26Engine0
-func (t *CrawlerOptions0x26_Engine) FromCrawlerOptions0x26Engine0(v CrawlerOptions0x26Engine0) error {
+// FromCrawlerOptions0x27Engine0 overwrites any union data inside the CrawlerOptions0x27_Engine as the provided CrawlerOptions0x27Engine0
+func (t *CrawlerOptions0x27_Engine) FromCrawlerOptions0x27Engine0(v CrawlerOptions0x27Engine0) error {
 	b, err := json.Marshal(v)
 	t.union = b
 	return err
 }
 
-// MergeCrawlerOptions0x26Engine0 performs a merge with any union data inside the CrawlerOptions0x26_Engine, using the provided CrawlerOptions0x26Engine0
-func (t *CrawlerOptions0x26_Engine) MergeCrawlerOptions0x26Engine0(v CrawlerOptions0x26Engine0) error {
+// MergeCrawlerOptions0x27Engine0 performs a merge with any union data inside the CrawlerOptions0x27_Engine, using the provided CrawlerOptions0x27Engine0
+func (t *CrawlerOptions0x27_Engine) MergeCrawlerOptions0x27Engine0(v CrawlerOptions0x27Engine0) error {
 	b, err := json.Marshal(v)
 	if err != nil {
 		return err
@@ -9332,22 +9361,22 @@ func (t *CrawlerOptions0x26_Engine) MergeCrawlerOptions0x26Engine0(v CrawlerOpti
 	return err
 }
 
-// AsCrawlerOptions0x26Engine1 returns the union data inside the CrawlerOptions0x26_Engine as a CrawlerOptions0x26Engine1
-func (t CrawlerOptions0x26_Engine) AsCrawlerOptions0x26Engine1() (CrawlerOptions0x26Engine1, error) {
-	var body CrawlerOptions0x26Engine1
+// AsCrawlerOptions0x27Engine1 returns the union data inside the CrawlerOptions0x27_Engine as a CrawlerOptions0x27Engine1
+func (t CrawlerOptions0x27_Engine) AsCrawlerOptions0x27Engine1() (CrawlerOptions0x27Engine1, error) {
+	var body CrawlerOptions0x27Engine1
 	err := json.Unmarshal(t.union, &body)
 	return body, err
 }
 
-// FromCrawlerOptions0x26Engine1 overwrites any union data inside the CrawlerOptions0x26_Engine as the provided CrawlerOptions0x26Engine1
-func (t *CrawlerOptions0x26_Engine) FromCrawlerOptions0x26Engine1(v CrawlerOptions0x26Engine1) error {
+// FromCrawlerOptions0x27Engine1 overwrites any union data inside the CrawlerOptions0x27_Engine as the provided CrawlerOptions0x27Engine1
+func (t *CrawlerOptions0x27_Engine) FromCrawlerOptions0x27Engine1(v CrawlerOptions0x27Engine1) error {
 	b, err := json.Marshal(v)
 	t.union = b
 	return err
 }
 
-// MergeCrawlerOptions0x26Engine1 performs a merge with any union data inside the CrawlerOptions0x26_Engine, using the provided CrawlerOptions0x26Engine1
-func (t *CrawlerOptions0x26_Engine) MergeCrawlerOptions0x26Engine1(v CrawlerOptions0x26Engine1) error {
+// MergeCrawlerOptions0x27Engine1 performs a merge with any union data inside the CrawlerOptions0x27_Engine, using the provided CrawlerOptions0x27Engine1
+func (t *CrawlerOptions0x27_Engine) MergeCrawlerOptions0x27Engine1(v CrawlerOptions0x27Engine1) error {
 	b, err := json.Marshal(v)
 	if err != nil {
 		return err
@@ -9358,32 +9387,32 @@ func (t *CrawlerOptions0x26_Engine) MergeCrawlerOptions0x26Engine1(v CrawlerOpti
 	return err
 }
 
-func (t CrawlerOptions0x26_Engine) MarshalJSON() ([]byte, error) {
+func (t CrawlerOptions0x27_Engine) MarshalJSON() ([]byte, error) {
 	b, err := t.union.MarshalJSON()
 	return b, err
 }
 
-func (t *CrawlerOptions0x26_Engine) UnmarshalJSON(b []byte) error {
+func (t *CrawlerOptions0x27_Engine) UnmarshalJSON(b []byte) error {
 	err := t.union.UnmarshalJSON(b)
 	return err
 }
 
-// AsCrawlerOptions0x26File0 returns the union data inside the CrawlerOptions0x26_File as a CrawlerOptions0x26File0
-func (t CrawlerOptions0x26_File) AsCrawlerOptions0x26File0() (CrawlerOptions0x26File0, error) {
-	var body CrawlerOptions0x26File0
+// AsCrawlerOptions0x27File0 returns the union data inside the CrawlerOptions0x27_File as a CrawlerOptions0x27File0
+func (t CrawlerOptions0x27_File) AsCrawlerOptions0x27File0() (CrawlerOptions0x27File0, error) {
+	var body CrawlerOptions0x27File0
 	err := json.Unmarshal(t.union, &body)
 	return body, err
 }
 
-// FromCrawlerOptions0x26File0 overwrites any union data inside the CrawlerOptions0x26_File as the provided CrawlerOptions0x26File0
-func (t *CrawlerOptions0x26_File) FromCrawlerOptions0x26File0(v CrawlerOptions0x26File0) error {
+// FromCrawlerOptions0x27File0 overwrites any union data inside the CrawlerOptions0x27_File as the provided CrawlerOptions0x27File0
+func (t *CrawlerOptions0x27_File) FromCrawlerOptions0x27File0(v CrawlerOptions0x27File0) error {
 	b, err := json.Marshal(v)
 	t.union = b
 	return err
 }
 
-// MergeCrawlerOptions0x26File0 performs a merge with any union data inside the CrawlerOptions0x26_File, using the provided CrawlerOptions0x26File0
-func (t *CrawlerOptions0x26_File) MergeCrawlerOptions0x26File0(v CrawlerOptions0x26File0) error {
+// MergeCrawlerOptions0x27File0 performs a merge with any union data inside the CrawlerOptions0x27_File, using the provided CrawlerOptions0x27File0
+func (t *CrawlerOptions0x27_File) MergeCrawlerOptions0x27File0(v CrawlerOptions0x27File0) error {
 	b, err := json.Marshal(v)
 	if err != nil {
 		return err
@@ -9394,22 +9423,22 @@ func (t *CrawlerOptions0x26_File) MergeCrawlerOptions0x26File0(v CrawlerOptions0
 	return err
 }
 
-// AsCrawlerOptions0x26File1 returns the union data inside the CrawlerOptions0x26_File as a CrawlerOptions0x26File1
-func (t CrawlerOptions0x26_File) AsCrawlerOptions0x26File1() (CrawlerOptions0x26File1, error) {
-	var body CrawlerOptions0x26File1
+// AsCrawlerOptions0x27File1 returns the union data inside the CrawlerOptions0x27_File as a CrawlerOptions0x27File1
+func (t CrawlerOptions0x27_File) AsCrawlerOptions0x27File1() (CrawlerOptions0x27File1, error) {
+	var body CrawlerOptions0x27File1
 	err := json.Unmarshal(t.union, &body)
 	return body, err
 }
 
-// FromCrawlerOptions0x26File1 overwrites any union data inside the CrawlerOptions0x26_File as the provided CrawlerOptions0x26File1
-func (t *CrawlerOptions0x26_File) FromCrawlerOptions0x26File1(v CrawlerOptions0x26File1) error {
+// FromCrawlerOptions0x27File1 overwrites any union data inside the CrawlerOptions0x27_File as the provided CrawlerOptions0x27File1
+func (t *CrawlerOptions0x27_File) FromCrawlerOptions0x27File1(v CrawlerOptions0x27File1) error {
 	b, err := json.Marshal(v)
 	t.union = b
 	return err
 }
 
-// MergeCrawlerOptions0x26File1 performs a merge with any union data inside the CrawlerOptions0x26_File, using the provided CrawlerOptions0x26File1
-func (t *CrawlerOptions0x26_File) MergeCrawlerOptions0x26File1(v CrawlerOptions0x26File1) error {
+// MergeCrawlerOptions0x27File1 performs a merge with any union data inside the CrawlerOptions0x27_File, using the provided CrawlerOptions0x27File1
+func (t *CrawlerOptions0x27_File) MergeCrawlerOptions0x27File1(v CrawlerOptions0x27File1) error {
 	b, err := json.Marshal(v)
 	if err != nil {
 		return err
@@ -9420,32 +9449,32 @@ func (t *CrawlerOptions0x26_File) MergeCrawlerOptions0x26File1(v CrawlerOptions0
 	return err
 }
 
-func (t CrawlerOptions0x26_File) MarshalJSON() ([]byte, error) {
+func (t CrawlerOptions0x27_File) MarshalJSON() ([]byte, error) {
 	b, err := t.union.MarshalJSON()
 	return b, err
 }
 
-func (t *CrawlerOptions0x26_File) UnmarshalJSON(b []byte) error {
+func (t *CrawlerOptions0x27_File) UnmarshalJSON(b []byte) error {
 	err := t.union.UnmarshalJSON(b)
 	return err
 }
 
-// AsCrawlerOptions0x26MarkdownChunking0 returns the union data inside the CrawlerOptions0x26_MarkdownChunking as a CrawlerOptions0x26MarkdownChunking0
-func (t CrawlerOptions0x26_MarkdownChunking) AsCrawlerOptions0x26MarkdownChunking0() (CrawlerOptions0x26MarkdownChunking0, error) {
-	var body CrawlerOptions0x26MarkdownChunking0
+// AsCrawlerOptions0x27MarkdownChunking0 returns the union data inside the CrawlerOptions0x27_MarkdownChunking as a CrawlerOptions0x27MarkdownChunking0
+func (t CrawlerOptions0x27_MarkdownChunking) AsCrawlerOptions0x27MarkdownChunking0() (CrawlerOptions0x27MarkdownChunking0, error) {
+	var body CrawlerOptions0x27MarkdownChunking0
 	err := json.Unmarshal(t.union, &body)
 	return body, err
 }
 
-// FromCrawlerOptions0x26MarkdownChunking0 overwrites any union data inside the CrawlerOptions0x26_MarkdownChunking as the provided CrawlerOptions0x26MarkdownChunking0
-func (t *CrawlerOptions0x26_MarkdownChunking) FromCrawlerOptions0x26MarkdownChunking0(v CrawlerOptions0x26MarkdownChunking0) error {
+// FromCrawlerOptions0x27MarkdownChunking0 overwrites any union data inside the CrawlerOptions0x27_MarkdownChunking as the provided CrawlerOptions0x27MarkdownChunking0
+func (t *CrawlerOptions0x27_MarkdownChunking) FromCrawlerOptions0x27MarkdownChunking0(v CrawlerOptions0x27MarkdownChunking0) error {
 	b, err := json.Marshal(v)
 	t.union = b
 	return err
 }
 
-// MergeCrawlerOptions0x26MarkdownChunking0 performs a merge with any union data inside the CrawlerOptions0x26_MarkdownChunking, using the provided CrawlerOptions0x26MarkdownChunking0
-func (t *CrawlerOptions0x26_MarkdownChunking) MergeCrawlerOptions0x26MarkdownChunking0(v CrawlerOptions0x26MarkdownChunking0) error {
+// MergeCrawlerOptions0x27MarkdownChunking0 performs a merge with any union data inside the CrawlerOptions0x27_MarkdownChunking, using the provided CrawlerOptions0x27MarkdownChunking0
+func (t *CrawlerOptions0x27_MarkdownChunking) MergeCrawlerOptions0x27MarkdownChunking0(v CrawlerOptions0x27MarkdownChunking0) error {
 	b, err := json.Marshal(v)
 	if err != nil {
 		return err
@@ -9456,22 +9485,22 @@ func (t *CrawlerOptions0x26_MarkdownChunking) MergeCrawlerOptions0x26MarkdownChu
 	return err
 }
 
-// AsCrawlerOptions0x26MarkdownChunking1 returns the union data inside the CrawlerOptions0x26_MarkdownChunking as a CrawlerOptions0x26MarkdownChunking1
-func (t CrawlerOptions0x26_MarkdownChunking) AsCrawlerOptions0x26MarkdownChunking1() (CrawlerOptions0x26MarkdownChunking1, error) {
-	var body CrawlerOptions0x26MarkdownChunking1
+// AsCrawlerOptions0x27MarkdownChunking1 returns the union data inside the CrawlerOptions0x27_MarkdownChunking as a CrawlerOptions0x27MarkdownChunking1
+func (t CrawlerOptions0x27_MarkdownChunking) AsCrawlerOptions0x27MarkdownChunking1() (CrawlerOptions0x27MarkdownChunking1, error) {
+	var body CrawlerOptions0x27MarkdownChunking1
 	err := json.Unmarshal(t.union, &body)
 	return body, err
 }
 
-// FromCrawlerOptions0x26MarkdownChunking1 overwrites any union data inside the CrawlerOptions0x26_MarkdownChunking as the provided CrawlerOptions0x26MarkdownChunking1
-func (t *CrawlerOptions0x26_MarkdownChunking) FromCrawlerOptions0x26MarkdownChunking1(v CrawlerOptions0x26MarkdownChunking1) error {
+// FromCrawlerOptions0x27MarkdownChunking1 overwrites any union data inside the CrawlerOptions0x27_MarkdownChunking as the provided CrawlerOptions0x27MarkdownChunking1
+func (t *CrawlerOptions0x27_MarkdownChunking) FromCrawlerOptions0x27MarkdownChunking1(v CrawlerOptions0x27MarkdownChunking1) error {
 	b, err := json.Marshal(v)
 	t.union = b
 	return err
 }
 
-// MergeCrawlerOptions0x26MarkdownChunking1 performs a merge with any union data inside the CrawlerOptions0x26_MarkdownChunking, using the provided CrawlerOptions0x26MarkdownChunking1
-func (t *CrawlerOptions0x26_MarkdownChunking) MergeCrawlerOptions0x26MarkdownChunking1(v CrawlerOptions0x26MarkdownChunking1) error {
+// MergeCrawlerOptions0x27MarkdownChunking1 performs a merge with any union data inside the CrawlerOptions0x27_MarkdownChunking, using the provided CrawlerOptions0x27MarkdownChunking1
+func (t *CrawlerOptions0x27_MarkdownChunking) MergeCrawlerOptions0x27MarkdownChunking1(v CrawlerOptions0x27MarkdownChunking1) error {
 	b, err := json.Marshal(v)
 	if err != nil {
 		return err
@@ -9482,32 +9511,32 @@ func (t *CrawlerOptions0x26_MarkdownChunking) MergeCrawlerOptions0x26MarkdownChu
 	return err
 }
 
-func (t CrawlerOptions0x26_MarkdownChunking) MarshalJSON() ([]byte, error) {
+func (t CrawlerOptions0x27_MarkdownChunking) MarshalJSON() ([]byte, error) {
 	b, err := t.union.MarshalJSON()
 	return b, err
 }
 
-func (t *CrawlerOptions0x26_MarkdownChunking) UnmarshalJSON(b []byte) error {
+func (t *CrawlerOptions0x27_MarkdownChunking) UnmarshalJSON(b []byte) error {
 	err := t.union.UnmarshalJSON(b)
 	return err
 }
 
-// AsCrawlerOptions0x26NoGfm0 returns the union data inside the CrawlerOptions0x26_NoGfm as a CrawlerOptions0x26NoGfm0
-func (t CrawlerOptions0x26_NoGfm) AsCrawlerOptions0x26NoGfm0() (CrawlerOptions0x26NoGfm0, error) {
-	var body CrawlerOptions0x26NoGfm0
+// AsCrawlerOptions0x27NoGfm0 returns the union data inside the CrawlerOptions0x27_NoGfm as a CrawlerOptions0x27NoGfm0
+func (t CrawlerOptions0x27_NoGfm) AsCrawlerOptions0x27NoGfm0() (CrawlerOptions0x27NoGfm0, error) {
+	var body CrawlerOptions0x27NoGfm0
 	err := json.Unmarshal(t.union, &body)
 	return body, err
 }
 
-// FromCrawlerOptions0x26NoGfm0 overwrites any union data inside the CrawlerOptions0x26_NoGfm as the provided CrawlerOptions0x26NoGfm0
-func (t *CrawlerOptions0x26_NoGfm) FromCrawlerOptions0x26NoGfm0(v CrawlerOptions0x26NoGfm0) error {
+// FromCrawlerOptions0x27NoGfm0 overwrites any union data inside the CrawlerOptions0x27_NoGfm as the provided CrawlerOptions0x27NoGfm0
+func (t *CrawlerOptions0x27_NoGfm) FromCrawlerOptions0x27NoGfm0(v CrawlerOptions0x27NoGfm0) error {
 	b, err := json.Marshal(v)
 	t.union = b
 	return err
 }
 
-// MergeCrawlerOptions0x26NoGfm0 performs a merge with any union data inside the CrawlerOptions0x26_NoGfm, using the provided CrawlerOptions0x26NoGfm0
-func (t *CrawlerOptions0x26_NoGfm) MergeCrawlerOptions0x26NoGfm0(v CrawlerOptions0x26NoGfm0) error {
+// MergeCrawlerOptions0x27NoGfm0 performs a merge with any union data inside the CrawlerOptions0x27_NoGfm, using the provided CrawlerOptions0x27NoGfm0
+func (t *CrawlerOptions0x27_NoGfm) MergeCrawlerOptions0x27NoGfm0(v CrawlerOptions0x27NoGfm0) error {
 	b, err := json.Marshal(v)
 	if err != nil {
 		return err
@@ -9518,22 +9547,22 @@ func (t *CrawlerOptions0x26_NoGfm) MergeCrawlerOptions0x26NoGfm0(v CrawlerOption
 	return err
 }
 
-// AsCrawlerOptions0x26NoGfm1 returns the union data inside the CrawlerOptions0x26_NoGfm as a CrawlerOptions0x26NoGfm1
-func (t CrawlerOptions0x26_NoGfm) AsCrawlerOptions0x26NoGfm1() (CrawlerOptions0x26NoGfm1, error) {
-	var body CrawlerOptions0x26NoGfm1
+// AsCrawlerOptions0x27NoGfm1 returns the union data inside the CrawlerOptions0x27_NoGfm as a CrawlerOptions0x27NoGfm1
+func (t CrawlerOptions0x27_NoGfm) AsCrawlerOptions0x27NoGfm1() (CrawlerOptions0x27NoGfm1, error) {
+	var body CrawlerOptions0x27NoGfm1
 	err := json.Unmarshal(t.union, &body)
 	return body, err
 }
 
-// FromCrawlerOptions0x26NoGfm1 overwrites any union data inside the CrawlerOptions0x26_NoGfm as the provided CrawlerOptions0x26NoGfm1
-func (t *CrawlerOptions0x26_NoGfm) FromCrawlerOptions0x26NoGfm1(v CrawlerOptions0x26NoGfm1) error {
+// FromCrawlerOptions0x27NoGfm1 overwrites any union data inside the CrawlerOptions0x27_NoGfm as the provided CrawlerOptions0x27NoGfm1
+func (t *CrawlerOptions0x27_NoGfm) FromCrawlerOptions0x27NoGfm1(v CrawlerOptions0x27NoGfm1) error {
 	b, err := json.Marshal(v)
 	t.union = b
 	return err
 }
 
-// MergeCrawlerOptions0x26NoGfm1 performs a merge with any union data inside the CrawlerOptions0x26_NoGfm, using the provided CrawlerOptions0x26NoGfm1
-func (t *CrawlerOptions0x26_NoGfm) MergeCrawlerOptions0x26NoGfm1(v CrawlerOptions0x26NoGfm1) error {
+// MergeCrawlerOptions0x27NoGfm1 performs a merge with any union data inside the CrawlerOptions0x27_NoGfm, using the provided CrawlerOptions0x27NoGfm1
+func (t *CrawlerOptions0x27_NoGfm) MergeCrawlerOptions0x27NoGfm1(v CrawlerOptions0x27NoGfm1) error {
 	b, err := json.Marshal(v)
 	if err != nil {
 		return err
@@ -9544,32 +9573,32 @@ func (t *CrawlerOptions0x26_NoGfm) MergeCrawlerOptions0x26NoGfm1(v CrawlerOption
 	return err
 }
 
-func (t CrawlerOptions0x26_NoGfm) MarshalJSON() ([]byte, error) {
+func (t CrawlerOptions0x27_NoGfm) MarshalJSON() ([]byte, error) {
 	b, err := t.union.MarshalJSON()
 	return b, err
 }
 
-func (t *CrawlerOptions0x26_NoGfm) UnmarshalJSON(b []byte) error {
+func (t *CrawlerOptions0x27_NoGfm) UnmarshalJSON(b []byte) error {
 	err := t.union.UnmarshalJSON(b)
 	return err
 }
 
-// AsCrawlerOptions0x26Pdf0 returns the union data inside the CrawlerOptions0x26_Pdf as a CrawlerOptions0x26Pdf0
-func (t CrawlerOptions0x26_Pdf) AsCrawlerOptions0x26Pdf0() (CrawlerOptions0x26Pdf0, error) {
-	var body CrawlerOptions0x26Pdf0
+// AsCrawlerOptions0x27Pdf0 returns the union data inside the CrawlerOptions0x27_Pdf as a CrawlerOptions0x27Pdf0
+func (t CrawlerOptions0x27_Pdf) AsCrawlerOptions0x27Pdf0() (CrawlerOptions0x27Pdf0, error) {
+	var body CrawlerOptions0x27Pdf0
 	err := json.Unmarshal(t.union, &body)
 	return body, err
 }
 
-// FromCrawlerOptions0x26Pdf0 overwrites any union data inside the CrawlerOptions0x26_Pdf as the provided CrawlerOptions0x26Pdf0
-func (t *CrawlerOptions0x26_Pdf) FromCrawlerOptions0x26Pdf0(v CrawlerOptions0x26Pdf0) error {
+// FromCrawlerOptions0x27Pdf0 overwrites any union data inside the CrawlerOptions0x27_Pdf as the provided CrawlerOptions0x27Pdf0
+func (t *CrawlerOptions0x27_Pdf) FromCrawlerOptions0x27Pdf0(v CrawlerOptions0x27Pdf0) error {
 	b, err := json.Marshal(v)
 	t.union = b
 	return err
 }
 
-// MergeCrawlerOptions0x26Pdf0 performs a merge with any union data inside the CrawlerOptions0x26_Pdf, using the provided CrawlerOptions0x26Pdf0
-func (t *CrawlerOptions0x26_Pdf) MergeCrawlerOptions0x26Pdf0(v CrawlerOptions0x26Pdf0) error {
+// MergeCrawlerOptions0x27Pdf0 performs a merge with any union data inside the CrawlerOptions0x27_Pdf, using the provided CrawlerOptions0x27Pdf0
+func (t *CrawlerOptions0x27_Pdf) MergeCrawlerOptions0x27Pdf0(v CrawlerOptions0x27Pdf0) error {
 	b, err := json.Marshal(v)
 	if err != nil {
 		return err
@@ -9580,22 +9609,22 @@ func (t *CrawlerOptions0x26_Pdf) MergeCrawlerOptions0x26Pdf0(v CrawlerOptions0x2
 	return err
 }
 
-// AsCrawlerOptions0x26Pdf1 returns the union data inside the CrawlerOptions0x26_Pdf as a CrawlerOptions0x26Pdf1
-func (t CrawlerOptions0x26_Pdf) AsCrawlerOptions0x26Pdf1() (CrawlerOptions0x26Pdf1, error) {
-	var body CrawlerOptions0x26Pdf1
+// AsCrawlerOptions0x27Pdf1 returns the union data inside the CrawlerOptions0x27_Pdf as a CrawlerOptions0x27Pdf1
+func (t CrawlerOptions0x27_Pdf) AsCrawlerOptions0x27Pdf1() (CrawlerOptions0x27Pdf1, error) {
+	var body CrawlerOptions0x27Pdf1
 	err := json.Unmarshal(t.union, &body)
 	return body, err
 }
 
-// FromCrawlerOptions0x26Pdf1 overwrites any union data inside the CrawlerOptions0x26_Pdf as the provided CrawlerOptions0x26Pdf1
-func (t *CrawlerOptions0x26_Pdf) FromCrawlerOptions0x26Pdf1(v CrawlerOptions0x26Pdf1) error {
+// FromCrawlerOptions0x27Pdf1 overwrites any union data inside the CrawlerOptions0x27_Pdf as the provided CrawlerOptions0x27Pdf1
+func (t *CrawlerOptions0x27_Pdf) FromCrawlerOptions0x27Pdf1(v CrawlerOptions0x27Pdf1) error {
 	b, err := json.Marshal(v)
 	t.union = b
 	return err
 }
 
-// MergeCrawlerOptions0x26Pdf1 performs a merge with any union data inside the CrawlerOptions0x26_Pdf, using the provided CrawlerOptions0x26Pdf1
-func (t *CrawlerOptions0x26_Pdf) MergeCrawlerOptions0x26Pdf1(v CrawlerOptions0x26Pdf1) error {
+// MergeCrawlerOptions0x27Pdf1 performs a merge with any union data inside the CrawlerOptions0x27_Pdf, using the provided CrawlerOptions0x27Pdf1
+func (t *CrawlerOptions0x27_Pdf) MergeCrawlerOptions0x27Pdf1(v CrawlerOptions0x27Pdf1) error {
 	b, err := json.Marshal(v)
 	if err != nil {
 		return err
@@ -9606,32 +9635,32 @@ func (t *CrawlerOptions0x26_Pdf) MergeCrawlerOptions0x26Pdf1(v CrawlerOptions0x2
 	return err
 }
 
-func (t CrawlerOptions0x26_Pdf) MarshalJSON() ([]byte, error) {
+func (t CrawlerOptions0x27_Pdf) MarshalJSON() ([]byte, error) {
 	b, err := t.union.MarshalJSON()
 	return b, err
 }
 
-func (t *CrawlerOptions0x26_Pdf) UnmarshalJSON(b []byte) error {
+func (t *CrawlerOptions0x27_Pdf) UnmarshalJSON(b []byte) error {
 	err := t.union.UnmarshalJSON(b)
 	return err
 }
 
-// AsCrawlerOptions0x26RespondWith0 returns the union data inside the CrawlerOptions0x26_RespondWith as a CrawlerOptions0x26RespondWith0
-func (t CrawlerOptions0x26_RespondWith) AsCrawlerOptions0x26RespondWith0() (CrawlerOptions0x26RespondWith0, error) {
-	var body CrawlerOptions0x26RespondWith0
+// AsCrawlerOptions0x27RespondWith0 returns the union data inside the CrawlerOptions0x27_RespondWith as a CrawlerOptions0x27RespondWith0
+func (t CrawlerOptions0x27_RespondWith) AsCrawlerOptions0x27RespondWith0() (CrawlerOptions0x27RespondWith0, error) {
+	var body CrawlerOptions0x27RespondWith0
 	err := json.Unmarshal(t.union, &body)
 	return body, err
 }
 
-// FromCrawlerOptions0x26RespondWith0 overwrites any union data inside the CrawlerOptions0x26_RespondWith as the provided CrawlerOptions0x26RespondWith0
-func (t *CrawlerOptions0x26_RespondWith) FromCrawlerOptions0x26RespondWith0(v CrawlerOptions0x26RespondWith0) error {
+// FromCrawlerOptions0x27RespondWith0 overwrites any union data inside the CrawlerOptions0x27_RespondWith as the provided CrawlerOptions0x27RespondWith0
+func (t *CrawlerOptions0x27_RespondWith) FromCrawlerOptions0x27RespondWith0(v CrawlerOptions0x27RespondWith0) error {
 	b, err := json.Marshal(v)
 	t.union = b
 	return err
 }
 
-// MergeCrawlerOptions0x26RespondWith0 performs a merge with any union data inside the CrawlerOptions0x26_RespondWith, using the provided CrawlerOptions0x26RespondWith0
-func (t *CrawlerOptions0x26_RespondWith) MergeCrawlerOptions0x26RespondWith0(v CrawlerOptions0x26RespondWith0) error {
+// MergeCrawlerOptions0x27RespondWith0 performs a merge with any union data inside the CrawlerOptions0x27_RespondWith, using the provided CrawlerOptions0x27RespondWith0
+func (t *CrawlerOptions0x27_RespondWith) MergeCrawlerOptions0x27RespondWith0(v CrawlerOptions0x27RespondWith0) error {
 	b, err := json.Marshal(v)
 	if err != nil {
 		return err
@@ -9642,22 +9671,22 @@ func (t *CrawlerOptions0x26_RespondWith) MergeCrawlerOptions0x26RespondWith0(v C
 	return err
 }
 
-// AsCrawlerOptions0x26RespondWith1 returns the union data inside the CrawlerOptions0x26_RespondWith as a CrawlerOptions0x26RespondWith1
-func (t CrawlerOptions0x26_RespondWith) AsCrawlerOptions0x26RespondWith1() (CrawlerOptions0x26RespondWith1, error) {
-	var body CrawlerOptions0x26RespondWith1
+// AsCrawlerOptions0x27RespondWith1 returns the union data inside the CrawlerOptions0x27_RespondWith as a CrawlerOptions0x27RespondWith1
+func (t CrawlerOptions0x27_RespondWith) AsCrawlerOptions0x27RespondWith1() (CrawlerOptions0x27RespondWith1, error) {
+	var body CrawlerOptions0x27RespondWith1
 	err := json.Unmarshal(t.union, &body)
 	return body, err
 }
 
-// FromCrawlerOptions0x26RespondWith1 overwrites any union data inside the CrawlerOptions0x26_RespondWith as the provided CrawlerOptions0x26RespondWith1
-func (t *CrawlerOptions0x26_RespondWith) FromCrawlerOptions0x26RespondWith1(v CrawlerOptions0x26RespondWith1) error {
+// FromCrawlerOptions0x27RespondWith1 overwrites any union data inside the CrawlerOptions0x27_RespondWith as the provided CrawlerOptions0x27RespondWith1
+func (t *CrawlerOptions0x27_RespondWith) FromCrawlerOptions0x27RespondWith1(v CrawlerOptions0x27RespondWith1) error {
 	b, err := json.Marshal(v)
 	t.union = b
 	return err
 }
 
-// MergeCrawlerOptions0x26RespondWith1 performs a merge with any union data inside the CrawlerOptions0x26_RespondWith, using the provided CrawlerOptions0x26RespondWith1
-func (t *CrawlerOptions0x26_RespondWith) MergeCrawlerOptions0x26RespondWith1(v CrawlerOptions0x26RespondWith1) error {
+// MergeCrawlerOptions0x27RespondWith1 performs a merge with any union data inside the CrawlerOptions0x27_RespondWith, using the provided CrawlerOptions0x27RespondWith1
+func (t *CrawlerOptions0x27_RespondWith) MergeCrawlerOptions0x27RespondWith1(v CrawlerOptions0x27RespondWith1) error {
 	b, err := json.Marshal(v)
 	if err != nil {
 		return err
@@ -9668,32 +9697,32 @@ func (t *CrawlerOptions0x26_RespondWith) MergeCrawlerOptions0x26RespondWith1(v C
 	return err
 }
 
-func (t CrawlerOptions0x26_RespondWith) MarshalJSON() ([]byte, error) {
+func (t CrawlerOptions0x27_RespondWith) MarshalJSON() ([]byte, error) {
 	b, err := t.union.MarshalJSON()
 	return b, err
 }
 
-func (t *CrawlerOptions0x26_RespondWith) UnmarshalJSON(b []byte) error {
+func (t *CrawlerOptions0x27_RespondWith) UnmarshalJSON(b []byte) error {
 	err := t.union.UnmarshalJSON(b)
 	return err
 }
 
-// AsCrawlerOptions0x26SetCookies0 returns the union data inside the CrawlerOptions0x26_SetCookies_Item as a CrawlerOptions0x26SetCookies0
-func (t CrawlerOptions0x26_SetCookies_Item) AsCrawlerOptions0x26SetCookies0() (CrawlerOptions0x26SetCookies0, error) {
-	var body CrawlerOptions0x26SetCookies0
+// AsCrawlerOptions0x27SetCookies0 returns the union data inside the CrawlerOptions0x27_SetCookies_Item as a CrawlerOptions0x27SetCookies0
+func (t CrawlerOptions0x27_SetCookies_Item) AsCrawlerOptions0x27SetCookies0() (CrawlerOptions0x27SetCookies0, error) {
+	var body CrawlerOptions0x27SetCookies0
 	err := json.Unmarshal(t.union, &body)
 	return body, err
 }
 
-// FromCrawlerOptions0x26SetCookies0 overwrites any union data inside the CrawlerOptions0x26_SetCookies_Item as the provided CrawlerOptions0x26SetCookies0
-func (t *CrawlerOptions0x26_SetCookies_Item) FromCrawlerOptions0x26SetCookies0(v CrawlerOptions0x26SetCookies0) error {
+// FromCrawlerOptions0x27SetCookies0 overwrites any union data inside the CrawlerOptions0x27_SetCookies_Item as the provided CrawlerOptions0x27SetCookies0
+func (t *CrawlerOptions0x27_SetCookies_Item) FromCrawlerOptions0x27SetCookies0(v CrawlerOptions0x27SetCookies0) error {
 	b, err := json.Marshal(v)
 	t.union = b
 	return err
 }
 
-// MergeCrawlerOptions0x26SetCookies0 performs a merge with any union data inside the CrawlerOptions0x26_SetCookies_Item, using the provided CrawlerOptions0x26SetCookies0
-func (t *CrawlerOptions0x26_SetCookies_Item) MergeCrawlerOptions0x26SetCookies0(v CrawlerOptions0x26SetCookies0) error {
+// MergeCrawlerOptions0x27SetCookies0 performs a merge with any union data inside the CrawlerOptions0x27_SetCookies_Item, using the provided CrawlerOptions0x27SetCookies0
+func (t *CrawlerOptions0x27_SetCookies_Item) MergeCrawlerOptions0x27SetCookies0(v CrawlerOptions0x27SetCookies0) error {
 	b, err := json.Marshal(v)
 	if err != nil {
 		return err
@@ -9704,22 +9733,22 @@ func (t *CrawlerOptions0x26_SetCookies_Item) MergeCrawlerOptions0x26SetCookies0(
 	return err
 }
 
-// AsCrawlerOptions0x26SetCookies1 returns the union data inside the CrawlerOptions0x26_SetCookies_Item as a CrawlerOptions0x26SetCookies1
-func (t CrawlerOptions0x26_SetCookies_Item) AsCrawlerOptions0x26SetCookies1() (CrawlerOptions0x26SetCookies1, error) {
-	var body CrawlerOptions0x26SetCookies1
+// AsCrawlerOptions0x27SetCookies1 returns the union data inside the CrawlerOptions0x27_SetCookies_Item as a CrawlerOptions0x27SetCookies1
+func (t CrawlerOptions0x27_SetCookies_Item) AsCrawlerOptions0x27SetCookies1() (CrawlerOptions0x27SetCookies1, error) {
+	var body CrawlerOptions0x27SetCookies1
 	err := json.Unmarshal(t.union, &body)
 	return body, err
 }
 
-// FromCrawlerOptions0x26SetCookies1 overwrites any union data inside the CrawlerOptions0x26_SetCookies_Item as the provided CrawlerOptions0x26SetCookies1
-func (t *CrawlerOptions0x26_SetCookies_Item) FromCrawlerOptions0x26SetCookies1(v CrawlerOptions0x26SetCookies1) error {
+// FromCrawlerOptions0x27SetCookies1 overwrites any union data inside the CrawlerOptions0x27_SetCookies_Item as the provided CrawlerOptions0x27SetCookies1
+func (t *CrawlerOptions0x27_SetCookies_Item) FromCrawlerOptions0x27SetCookies1(v CrawlerOptions0x27SetCookies1) error {
 	b, err := json.Marshal(v)
 	t.union = b
 	return err
 }
 
-// MergeCrawlerOptions0x26SetCookies1 performs a merge with any union data inside the CrawlerOptions0x26_SetCookies_Item, using the provided CrawlerOptions0x26SetCookies1
-func (t *CrawlerOptions0x26_SetCookies_Item) MergeCrawlerOptions0x26SetCookies1(v CrawlerOptions0x26SetCookies1) error {
+// MergeCrawlerOptions0x27SetCookies1 performs a merge with any union data inside the CrawlerOptions0x27_SetCookies_Item, using the provided CrawlerOptions0x27SetCookies1
+func (t *CrawlerOptions0x27_SetCookies_Item) MergeCrawlerOptions0x27SetCookies1(v CrawlerOptions0x27SetCookies1) error {
 	b, err := json.Marshal(v)
 	if err != nil {
 		return err
@@ -9730,32 +9759,32 @@ func (t *CrawlerOptions0x26_SetCookies_Item) MergeCrawlerOptions0x26SetCookies1(
 	return err
 }
 
-func (t CrawlerOptions0x26_SetCookies_Item) MarshalJSON() ([]byte, error) {
+func (t CrawlerOptions0x27_SetCookies_Item) MarshalJSON() ([]byte, error) {
 	b, err := t.union.MarshalJSON()
 	return b, err
 }
 
-func (t *CrawlerOptions0x26_SetCookies_Item) UnmarshalJSON(b []byte) error {
+func (t *CrawlerOptions0x27_SetCookies_Item) UnmarshalJSON(b []byte) error {
 	err := t.union.UnmarshalJSON(b)
 	return err
 }
 
-// AsCrawlerOptions0x26WithIframe0 returns the union data inside the CrawlerOptions0x26_WithIframe as a CrawlerOptions0x26WithIframe0
-func (t CrawlerOptions0x26_WithIframe) AsCrawlerOptions0x26WithIframe0() (CrawlerOptions0x26WithIframe0, error) {
-	var body CrawlerOptions0x26WithIframe0
+// AsCrawlerOptions0x27WithIframe0 returns the union data inside the CrawlerOptions0x27_WithIframe as a CrawlerOptions0x27WithIframe0
+func (t CrawlerOptions0x27_WithIframe) AsCrawlerOptions0x27WithIframe0() (CrawlerOptions0x27WithIframe0, error) {
+	var body CrawlerOptions0x27WithIframe0
 	err := json.Unmarshal(t.union, &body)
 	return body, err
 }
 
-// FromCrawlerOptions0x26WithIframe0 overwrites any union data inside the CrawlerOptions0x26_WithIframe as the provided CrawlerOptions0x26WithIframe0
-func (t *CrawlerOptions0x26_WithIframe) FromCrawlerOptions0x26WithIframe0(v CrawlerOptions0x26WithIframe0) error {
+// FromCrawlerOptions0x27WithIframe0 overwrites any union data inside the CrawlerOptions0x27_WithIframe as the provided CrawlerOptions0x27WithIframe0
+func (t *CrawlerOptions0x27_WithIframe) FromCrawlerOptions0x27WithIframe0(v CrawlerOptions0x27WithIframe0) error {
 	b, err := json.Marshal(v)
 	t.union = b
 	return err
 }
 
-// MergeCrawlerOptions0x26WithIframe0 performs a merge with any union data inside the CrawlerOptions0x26_WithIframe, using the provided CrawlerOptions0x26WithIframe0
-func (t *CrawlerOptions0x26_WithIframe) MergeCrawlerOptions0x26WithIframe0(v CrawlerOptions0x26WithIframe0) error {
+// MergeCrawlerOptions0x27WithIframe0 performs a merge with any union data inside the CrawlerOptions0x27_WithIframe, using the provided CrawlerOptions0x27WithIframe0
+func (t *CrawlerOptions0x27_WithIframe) MergeCrawlerOptions0x27WithIframe0(v CrawlerOptions0x27WithIframe0) error {
 	b, err := json.Marshal(v)
 	if err != nil {
 		return err
@@ -9766,22 +9795,22 @@ func (t *CrawlerOptions0x26_WithIframe) MergeCrawlerOptions0x26WithIframe0(v Cra
 	return err
 }
 
-// AsCrawlerOptions0x26WithIframe1 returns the union data inside the CrawlerOptions0x26_WithIframe as a CrawlerOptions0x26WithIframe1
-func (t CrawlerOptions0x26_WithIframe) AsCrawlerOptions0x26WithIframe1() (CrawlerOptions0x26WithIframe1, error) {
-	var body CrawlerOptions0x26WithIframe1
+// AsCrawlerOptions0x27WithIframe1 returns the union data inside the CrawlerOptions0x27_WithIframe as a CrawlerOptions0x27WithIframe1
+func (t CrawlerOptions0x27_WithIframe) AsCrawlerOptions0x27WithIframe1() (CrawlerOptions0x27WithIframe1, error) {
+	var body CrawlerOptions0x27WithIframe1
 	err := json.Unmarshal(t.union, &body)
 	return body, err
 }
 
-// FromCrawlerOptions0x26WithIframe1 overwrites any union data inside the CrawlerOptions0x26_WithIframe as the provided CrawlerOptions0x26WithIframe1
-func (t *CrawlerOptions0x26_WithIframe) FromCrawlerOptions0x26WithIframe1(v CrawlerOptions0x26WithIframe1) error {
+// FromCrawlerOptions0x27WithIframe1 overwrites any union data inside the CrawlerOptions0x27_WithIframe as the provided CrawlerOptions0x27WithIframe1
+func (t *CrawlerOptions0x27_WithIframe) FromCrawlerOptions0x27WithIframe1(v CrawlerOptions0x27WithIframe1) error {
 	b, err := json.Marshal(v)
 	t.union = b
 	return err
 }
 
-// MergeCrawlerOptions0x26WithIframe1 performs a merge with any union data inside the CrawlerOptions0x26_WithIframe, using the provided CrawlerOptions0x26WithIframe1
-func (t *CrawlerOptions0x26_WithIframe) MergeCrawlerOptions0x26WithIframe1(v CrawlerOptions0x26WithIframe1) error {
+// MergeCrawlerOptions0x27WithIframe1 performs a merge with any union data inside the CrawlerOptions0x27_WithIframe, using the provided CrawlerOptions0x27WithIframe1
+func (t *CrawlerOptions0x27_WithIframe) MergeCrawlerOptions0x27WithIframe1(v CrawlerOptions0x27WithIframe1) error {
 	b, err := json.Marshal(v)
 	if err != nil {
 		return err
@@ -9792,32 +9821,32 @@ func (t *CrawlerOptions0x26_WithIframe) MergeCrawlerOptions0x26WithIframe1(v Cra
 	return err
 }
 
-func (t CrawlerOptions0x26_WithIframe) MarshalJSON() ([]byte, error) {
+func (t CrawlerOptions0x27_WithIframe) MarshalJSON() ([]byte, error) {
 	b, err := t.union.MarshalJSON()
 	return b, err
 }
 
-func (t *CrawlerOptions0x26_WithIframe) UnmarshalJSON(b []byte) error {
+func (t *CrawlerOptions0x27_WithIframe) UnmarshalJSON(b []byte) error {
 	err := t.union.UnmarshalJSON(b)
 	return err
 }
 
-// AsCrawlerOptions0x26WithLinksSummary0 returns the union data inside the CrawlerOptions0x26_WithLinksSummary as a CrawlerOptions0x26WithLinksSummary0
-func (t CrawlerOptions0x26_WithLinksSummary) AsCrawlerOptions0x26WithLinksSummary0() (CrawlerOptions0x26WithLinksSummary0, error) {
-	var body CrawlerOptions0x26WithLinksSummary0
+// AsCrawlerOptions0x27WithLinksSummary0 returns the union data inside the CrawlerOptions0x27_WithLinksSummary as a CrawlerOptions0x27WithLinksSummary0
+func (t CrawlerOptions0x27_WithLinksSummary) AsCrawlerOptions0x27WithLinksSummary0() (CrawlerOptions0x27WithLinksSummary0, error) {
+	var body CrawlerOptions0x27WithLinksSummary0
 	err := json.Unmarshal(t.union, &body)
 	return body, err
 }
 
-// FromCrawlerOptions0x26WithLinksSummary0 overwrites any union data inside the CrawlerOptions0x26_WithLinksSummary as the provided CrawlerOptions0x26WithLinksSummary0
-func (t *CrawlerOptions0x26_WithLinksSummary) FromCrawlerOptions0x26WithLinksSummary0(v CrawlerOptions0x26WithLinksSummary0) error {
+// FromCrawlerOptions0x27WithLinksSummary0 overwrites any union data inside the CrawlerOptions0x27_WithLinksSummary as the provided CrawlerOptions0x27WithLinksSummary0
+func (t *CrawlerOptions0x27_WithLinksSummary) FromCrawlerOptions0x27WithLinksSummary0(v CrawlerOptions0x27WithLinksSummary0) error {
 	b, err := json.Marshal(v)
 	t.union = b
 	return err
 }
 
-// MergeCrawlerOptions0x26WithLinksSummary0 performs a merge with any union data inside the CrawlerOptions0x26_WithLinksSummary, using the provided CrawlerOptions0x26WithLinksSummary0
-func (t *CrawlerOptions0x26_WithLinksSummary) MergeCrawlerOptions0x26WithLinksSummary0(v CrawlerOptions0x26WithLinksSummary0) error {
+// MergeCrawlerOptions0x27WithLinksSummary0 performs a merge with any union data inside the CrawlerOptions0x27_WithLinksSummary, using the provided CrawlerOptions0x27WithLinksSummary0
+func (t *CrawlerOptions0x27_WithLinksSummary) MergeCrawlerOptions0x27WithLinksSummary0(v CrawlerOptions0x27WithLinksSummary0) error {
 	b, err := json.Marshal(v)
 	if err != nil {
 		return err
@@ -9828,22 +9857,22 @@ func (t *CrawlerOptions0x26_WithLinksSummary) MergeCrawlerOptions0x26WithLinksSu
 	return err
 }
 
-// AsCrawlerOptions0x26WithLinksSummary1 returns the union data inside the CrawlerOptions0x26_WithLinksSummary as a CrawlerOptions0x26WithLinksSummary1
-func (t CrawlerOptions0x26_WithLinksSummary) AsCrawlerOptions0x26WithLinksSummary1() (CrawlerOptions0x26WithLinksSummary1, error) {
-	var body CrawlerOptions0x26WithLinksSummary1
+// AsCrawlerOptions0x27WithLinksSummary1 returns the union data inside the CrawlerOptions0x27_WithLinksSummary as a CrawlerOptions0x27WithLinksSummary1
+func (t CrawlerOptions0x27_WithLinksSummary) AsCrawlerOptions0x27WithLinksSummary1() (CrawlerOptions0x27WithLinksSummary1, error) {
+	var body CrawlerOptions0x27WithLinksSummary1
 	err := json.Unmarshal(t.union, &body)
 	return body, err
 }
 
-// FromCrawlerOptions0x26WithLinksSummary1 overwrites any union data inside the CrawlerOptions0x26_WithLinksSummary as the provided CrawlerOptions0x26WithLinksSummary1
-func (t *CrawlerOptions0x26_WithLinksSummary) FromCrawlerOptions0x26WithLinksSummary1(v CrawlerOptions0x26WithLinksSummary1) error {
+// FromCrawlerOptions0x27WithLinksSummary1 overwrites any union data inside the CrawlerOptions0x27_WithLinksSummary as the provided CrawlerOptions0x27WithLinksSummary1
+func (t *CrawlerOptions0x27_WithLinksSummary) FromCrawlerOptions0x27WithLinksSummary1(v CrawlerOptions0x27WithLinksSummary1) error {
 	b, err := json.Marshal(v)
 	t.union = b
 	return err
 }
 
-// MergeCrawlerOptions0x26WithLinksSummary1 performs a merge with any union data inside the CrawlerOptions0x26_WithLinksSummary, using the provided CrawlerOptions0x26WithLinksSummary1
-func (t *CrawlerOptions0x26_WithLinksSummary) MergeCrawlerOptions0x26WithLinksSummary1(v CrawlerOptions0x26WithLinksSummary1) error {
+// MergeCrawlerOptions0x27WithLinksSummary1 performs a merge with any union data inside the CrawlerOptions0x27_WithLinksSummary, using the provided CrawlerOptions0x27WithLinksSummary1
+func (t *CrawlerOptions0x27_WithLinksSummary) MergeCrawlerOptions0x27WithLinksSummary1(v CrawlerOptions0x27WithLinksSummary1) error {
 	b, err := json.Marshal(v)
 	if err != nil {
 		return err
@@ -9854,32 +9883,32 @@ func (t *CrawlerOptions0x26_WithLinksSummary) MergeCrawlerOptions0x26WithLinksSu
 	return err
 }
 
-func (t CrawlerOptions0x26_WithLinksSummary) MarshalJSON() ([]byte, error) {
+func (t CrawlerOptions0x27_WithLinksSummary) MarshalJSON() ([]byte, error) {
 	b, err := t.union.MarshalJSON()
 	return b, err
 }
 
-func (t *CrawlerOptions0x26_WithLinksSummary) UnmarshalJSON(b []byte) error {
+func (t *CrawlerOptions0x27_WithLinksSummary) UnmarshalJSON(b []byte) error {
 	err := t.union.UnmarshalJSON(b)
 	return err
 }
 
-// AsCrawlerOptionsHeaderOnly0x39Engine0 returns the union data inside the CrawlerOptionsHeaderOnly0x39_Engine as a CrawlerOptionsHeaderOnly0x39Engine0
-func (t CrawlerOptionsHeaderOnly0x39_Engine) AsCrawlerOptionsHeaderOnly0x39Engine0() (CrawlerOptionsHeaderOnly0x39Engine0, error) {
-	var body CrawlerOptionsHeaderOnly0x39Engine0
+// AsCrawlerOptionsHeaderOnly0x3aEngine0 returns the union data inside the CrawlerOptionsHeaderOnly0x3a_Engine as a CrawlerOptionsHeaderOnly0x3aEngine0
+func (t CrawlerOptionsHeaderOnly0x3a_Engine) AsCrawlerOptionsHeaderOnly0x3aEngine0() (CrawlerOptionsHeaderOnly0x3aEngine0, error) {
+	var body CrawlerOptionsHeaderOnly0x3aEngine0
 	err := json.Unmarshal(t.union, &body)
 	return body, err
 }
 
-// FromCrawlerOptionsHeaderOnly0x39Engine0 overwrites any union data inside the CrawlerOptionsHeaderOnly0x39_Engine as the provided CrawlerOptionsHeaderOnly0x39Engine0
-func (t *CrawlerOptionsHeaderOnly0x39_Engine) FromCrawlerOptionsHeaderOnly0x39Engine0(v CrawlerOptionsHeaderOnly0x39Engine0) error {
+// FromCrawlerOptionsHeaderOnly0x3aEngine0 overwrites any union data inside the CrawlerOptionsHeaderOnly0x3a_Engine as the provided CrawlerOptionsHeaderOnly0x3aEngine0
+func (t *CrawlerOptionsHeaderOnly0x3a_Engine) FromCrawlerOptionsHeaderOnly0x3aEngine0(v CrawlerOptionsHeaderOnly0x3aEngine0) error {
 	b, err := json.Marshal(v)
 	t.union = b
 	return err
 }
 
-// MergeCrawlerOptionsHeaderOnly0x39Engine0 performs a merge with any union data inside the CrawlerOptionsHeaderOnly0x39_Engine, using the provided CrawlerOptionsHeaderOnly0x39Engine0
-func (t *CrawlerOptionsHeaderOnly0x39_Engine) MergeCrawlerOptionsHeaderOnly0x39Engine0(v CrawlerOptionsHeaderOnly0x39Engine0) error {
+// MergeCrawlerOptionsHeaderOnly0x3aEngine0 performs a merge with any union data inside the CrawlerOptionsHeaderOnly0x3a_Engine, using the provided CrawlerOptionsHeaderOnly0x3aEngine0
+func (t *CrawlerOptionsHeaderOnly0x3a_Engine) MergeCrawlerOptionsHeaderOnly0x3aEngine0(v CrawlerOptionsHeaderOnly0x3aEngine0) error {
 	b, err := json.Marshal(v)
 	if err != nil {
 		return err
@@ -9890,22 +9919,22 @@ func (t *CrawlerOptionsHeaderOnly0x39_Engine) MergeCrawlerOptionsHeaderOnly0x39E
 	return err
 }
 
-// AsCrawlerOptionsHeaderOnly0x39Engine1 returns the union data inside the CrawlerOptionsHeaderOnly0x39_Engine as a CrawlerOptionsHeaderOnly0x39Engine1
-func (t CrawlerOptionsHeaderOnly0x39_Engine) AsCrawlerOptionsHeaderOnly0x39Engine1() (CrawlerOptionsHeaderOnly0x39Engine1, error) {
-	var body CrawlerOptionsHeaderOnly0x39Engine1
+// AsCrawlerOptionsHeaderOnly0x3aEngine1 returns the union data inside the CrawlerOptionsHeaderOnly0x3a_Engine as a CrawlerOptionsHeaderOnly0x3aEngine1
+func (t CrawlerOptionsHeaderOnly0x3a_Engine) AsCrawlerOptionsHeaderOnly0x3aEngine1() (CrawlerOptionsHeaderOnly0x3aEngine1, error) {
+	var body CrawlerOptionsHeaderOnly0x3aEngine1
 	err := json.Unmarshal(t.union, &body)
 	return body, err
 }
 
-// FromCrawlerOptionsHeaderOnly0x39Engine1 overwrites any union data inside the CrawlerOptionsHeaderOnly0x39_Engine as the provided CrawlerOptionsHeaderOnly0x39Engine1
-func (t *CrawlerOptionsHeaderOnly0x39_Engine) FromCrawlerOptionsHeaderOnly0x39Engine1(v CrawlerOptionsHeaderOnly0x39Engine1) error {
+// FromCrawlerOptionsHeaderOnly0x3aEngine1 overwrites any union data inside the CrawlerOptionsHeaderOnly0x3a_Engine as the provided CrawlerOptionsHeaderOnly0x3aEngine1
+func (t *CrawlerOptionsHeaderOnly0x3a_Engine) FromCrawlerOptionsHeaderOnly0x3aEngine1(v CrawlerOptionsHeaderOnly0x3aEngine1) error {
 	b, err := json.Marshal(v)
 	t.union = b
 	return err
 }
 
-// MergeCrawlerOptionsHeaderOnly0x39Engine1 performs a merge with any union data inside the CrawlerOptionsHeaderOnly0x39_Engine, using the provided CrawlerOptionsHeaderOnly0x39Engine1
-func (t *CrawlerOptionsHeaderOnly0x39_Engine) MergeCrawlerOptionsHeaderOnly0x39Engine1(v CrawlerOptionsHeaderOnly0x39Engine1) error {
+// MergeCrawlerOptionsHeaderOnly0x3aEngine1 performs a merge with any union data inside the CrawlerOptionsHeaderOnly0x3a_Engine, using the provided CrawlerOptionsHeaderOnly0x3aEngine1
+func (t *CrawlerOptionsHeaderOnly0x3a_Engine) MergeCrawlerOptionsHeaderOnly0x3aEngine1(v CrawlerOptionsHeaderOnly0x3aEngine1) error {
 	b, err := json.Marshal(v)
 	if err != nil {
 		return err
@@ -9916,32 +9945,32 @@ func (t *CrawlerOptionsHeaderOnly0x39_Engine) MergeCrawlerOptionsHeaderOnly0x39E
 	return err
 }
 
-func (t CrawlerOptionsHeaderOnly0x39_Engine) MarshalJSON() ([]byte, error) {
+func (t CrawlerOptionsHeaderOnly0x3a_Engine) MarshalJSON() ([]byte, error) {
 	b, err := t.union.MarshalJSON()
 	return b, err
 }
 
-func (t *CrawlerOptionsHeaderOnly0x39_Engine) UnmarshalJSON(b []byte) error {
+func (t *CrawlerOptionsHeaderOnly0x3a_Engine) UnmarshalJSON(b []byte) error {
 	err := t.union.UnmarshalJSON(b)
 	return err
 }
 
-// AsCrawlerOptionsHeaderOnly0x39File0 returns the union data inside the CrawlerOptionsHeaderOnly0x39_File as a CrawlerOptionsHeaderOnly0x39File0
-func (t CrawlerOptionsHeaderOnly0x39_File) AsCrawlerOptionsHeaderOnly0x39File0() (CrawlerOptionsHeaderOnly0x39File0, error) {
-	var body CrawlerOptionsHeaderOnly0x39File0
+// AsCrawlerOptionsHeaderOnly0x3aFile0 returns the union data inside the CrawlerOptionsHeaderOnly0x3a_File as a CrawlerOptionsHeaderOnly0x3aFile0
+func (t CrawlerOptionsHeaderOnly0x3a_File) AsCrawlerOptionsHeaderOnly0x3aFile0() (CrawlerOptionsHeaderOnly0x3aFile0, error) {
+	var body CrawlerOptionsHeaderOnly0x3aFile0
 	err := json.Unmarshal(t.union, &body)
 	return body, err
 }
 
-// FromCrawlerOptionsHeaderOnly0x39File0 overwrites any union data inside the CrawlerOptionsHeaderOnly0x39_File as the provided CrawlerOptionsHeaderOnly0x39File0
-func (t *CrawlerOptionsHeaderOnly0x39_File) FromCrawlerOptionsHeaderOnly0x39File0(v CrawlerOptionsHeaderOnly0x39File0) error {
+// FromCrawlerOptionsHeaderOnly0x3aFile0 overwrites any union data inside the CrawlerOptionsHeaderOnly0x3a_File as the provided CrawlerOptionsHeaderOnly0x3aFile0
+func (t *CrawlerOptionsHeaderOnly0x3a_File) FromCrawlerOptionsHeaderOnly0x3aFile0(v CrawlerOptionsHeaderOnly0x3aFile0) error {
 	b, err := json.Marshal(v)
 	t.union = b
 	return err
 }
 
-// MergeCrawlerOptionsHeaderOnly0x39File0 performs a merge with any union data inside the CrawlerOptionsHeaderOnly0x39_File, using the provided CrawlerOptionsHeaderOnly0x39File0
-func (t *CrawlerOptionsHeaderOnly0x39_File) MergeCrawlerOptionsHeaderOnly0x39File0(v CrawlerOptionsHeaderOnly0x39File0) error {
+// MergeCrawlerOptionsHeaderOnly0x3aFile0 performs a merge with any union data inside the CrawlerOptionsHeaderOnly0x3a_File, using the provided CrawlerOptionsHeaderOnly0x3aFile0
+func (t *CrawlerOptionsHeaderOnly0x3a_File) MergeCrawlerOptionsHeaderOnly0x3aFile0(v CrawlerOptionsHeaderOnly0x3aFile0) error {
 	b, err := json.Marshal(v)
 	if err != nil {
 		return err
@@ -9952,22 +9981,22 @@ func (t *CrawlerOptionsHeaderOnly0x39_File) MergeCrawlerOptionsHeaderOnly0x39Fil
 	return err
 }
 
-// AsCrawlerOptionsHeaderOnly0x39File1 returns the union data inside the CrawlerOptionsHeaderOnly0x39_File as a CrawlerOptionsHeaderOnly0x39File1
-func (t CrawlerOptionsHeaderOnly0x39_File) AsCrawlerOptionsHeaderOnly0x39File1() (CrawlerOptionsHeaderOnly0x39File1, error) {
-	var body CrawlerOptionsHeaderOnly0x39File1
+// AsCrawlerOptionsHeaderOnly0x3aFile1 returns the union data inside the CrawlerOptionsHeaderOnly0x3a_File as a CrawlerOptionsHeaderOnly0x3aFile1
+func (t CrawlerOptionsHeaderOnly0x3a_File) AsCrawlerOptionsHeaderOnly0x3aFile1() (CrawlerOptionsHeaderOnly0x3aFile1, error) {
+	var body CrawlerOptionsHeaderOnly0x3aFile1
 	err := json.Unmarshal(t.union, &body)
 	return body, err
 }
 
-// FromCrawlerOptionsHeaderOnly0x39File1 overwrites any union data inside the CrawlerOptionsHeaderOnly0x39_File as the provided CrawlerOptionsHeaderOnly0x39File1
-func (t *CrawlerOptionsHeaderOnly0x39_File) FromCrawlerOptionsHeaderOnly0x39File1(v CrawlerOptionsHeaderOnly0x39File1) error {
+// FromCrawlerOptionsHeaderOnly0x3aFile1 overwrites any union data inside the CrawlerOptionsHeaderOnly0x3a_File as the provided CrawlerOptionsHeaderOnly0x3aFile1
+func (t *CrawlerOptionsHeaderOnly0x3a_File) FromCrawlerOptionsHeaderOnly0x3aFile1(v CrawlerOptionsHeaderOnly0x3aFile1) error {
 	b, err := json.Marshal(v)
 	t.union = b
 	return err
 }
 
-// MergeCrawlerOptionsHeaderOnly0x39File1 performs a merge with any union data inside the CrawlerOptionsHeaderOnly0x39_File, using the provided CrawlerOptionsHeaderOnly0x39File1
-func (t *CrawlerOptionsHeaderOnly0x39_File) MergeCrawlerOptionsHeaderOnly0x39File1(v CrawlerOptionsHeaderOnly0x39File1) error {
+// MergeCrawlerOptionsHeaderOnly0x3aFile1 performs a merge with any union data inside the CrawlerOptionsHeaderOnly0x3a_File, using the provided CrawlerOptionsHeaderOnly0x3aFile1
+func (t *CrawlerOptionsHeaderOnly0x3a_File) MergeCrawlerOptionsHeaderOnly0x3aFile1(v CrawlerOptionsHeaderOnly0x3aFile1) error {
 	b, err := json.Marshal(v)
 	if err != nil {
 		return err
@@ -9978,32 +10007,32 @@ func (t *CrawlerOptionsHeaderOnly0x39_File) MergeCrawlerOptionsHeaderOnly0x39Fil
 	return err
 }
 
-func (t CrawlerOptionsHeaderOnly0x39_File) MarshalJSON() ([]byte, error) {
+func (t CrawlerOptionsHeaderOnly0x3a_File) MarshalJSON() ([]byte, error) {
 	b, err := t.union.MarshalJSON()
 	return b, err
 }
 
-func (t *CrawlerOptionsHeaderOnly0x39_File) UnmarshalJSON(b []byte) error {
+func (t *CrawlerOptionsHeaderOnly0x3a_File) UnmarshalJSON(b []byte) error {
 	err := t.union.UnmarshalJSON(b)
 	return err
 }
 
-// AsCrawlerOptionsHeaderOnly0x39MarkdownChunking0 returns the union data inside the CrawlerOptionsHeaderOnly0x39_MarkdownChunking as a CrawlerOptionsHeaderOnly0x39MarkdownChunking0
-func (t CrawlerOptionsHeaderOnly0x39_MarkdownChunking) AsCrawlerOptionsHeaderOnly0x39MarkdownChunking0() (CrawlerOptionsHeaderOnly0x39MarkdownChunking0, error) {
-	var body CrawlerOptionsHeaderOnly0x39MarkdownChunking0
+// AsCrawlerOptionsHeaderOnly0x3aMarkdownChunking0 returns the union data inside the CrawlerOptionsHeaderOnly0x3a_MarkdownChunking as a CrawlerOptionsHeaderOnly0x3aMarkdownChunking0
+func (t CrawlerOptionsHeaderOnly0x3a_MarkdownChunking) AsCrawlerOptionsHeaderOnly0x3aMarkdownChunking0() (CrawlerOptionsHeaderOnly0x3aMarkdownChunking0, error) {
+	var body CrawlerOptionsHeaderOnly0x3aMarkdownChunking0
 	err := json.Unmarshal(t.union, &body)
 	return body, err
 }
 
-// FromCrawlerOptionsHeaderOnly0x39MarkdownChunking0 overwrites any union data inside the CrawlerOptionsHeaderOnly0x39_MarkdownChunking as the provided CrawlerOptionsHeaderOnly0x39MarkdownChunking0
-func (t *CrawlerOptionsHeaderOnly0x39_MarkdownChunking) FromCrawlerOptionsHeaderOnly0x39MarkdownChunking0(v CrawlerOptionsHeaderOnly0x39MarkdownChunking0) error {
+// FromCrawlerOptionsHeaderOnly0x3aMarkdownChunking0 overwrites any union data inside the CrawlerOptionsHeaderOnly0x3a_MarkdownChunking as the provided CrawlerOptionsHeaderOnly0x3aMarkdownChunking0
+func (t *CrawlerOptionsHeaderOnly0x3a_MarkdownChunking) FromCrawlerOptionsHeaderOnly0x3aMarkdownChunking0(v CrawlerOptionsHeaderOnly0x3aMarkdownChunking0) error {
 	b, err := json.Marshal(v)
 	t.union = b
 	return err
 }
 
-// MergeCrawlerOptionsHeaderOnly0x39MarkdownChunking0 performs a merge with any union data inside the CrawlerOptionsHeaderOnly0x39_MarkdownChunking, using the provided CrawlerOptionsHeaderOnly0x39MarkdownChunking0
-func (t *CrawlerOptionsHeaderOnly0x39_MarkdownChunking) MergeCrawlerOptionsHeaderOnly0x39MarkdownChunking0(v CrawlerOptionsHeaderOnly0x39MarkdownChunking0) error {
+// MergeCrawlerOptionsHeaderOnly0x3aMarkdownChunking0 performs a merge with any union data inside the CrawlerOptionsHeaderOnly0x3a_MarkdownChunking, using the provided CrawlerOptionsHeaderOnly0x3aMarkdownChunking0
+func (t *CrawlerOptionsHeaderOnly0x3a_MarkdownChunking) MergeCrawlerOptionsHeaderOnly0x3aMarkdownChunking0(v CrawlerOptionsHeaderOnly0x3aMarkdownChunking0) error {
 	b, err := json.Marshal(v)
 	if err != nil {
 		return err
@@ -10014,22 +10043,22 @@ func (t *CrawlerOptionsHeaderOnly0x39_MarkdownChunking) MergeCrawlerOptionsHeade
 	return err
 }
 
-// AsCrawlerOptionsHeaderOnly0x39MarkdownChunking1 returns the union data inside the CrawlerOptionsHeaderOnly0x39_MarkdownChunking as a CrawlerOptionsHeaderOnly0x39MarkdownChunking1
-func (t CrawlerOptionsHeaderOnly0x39_MarkdownChunking) AsCrawlerOptionsHeaderOnly0x39MarkdownChunking1() (CrawlerOptionsHeaderOnly0x39MarkdownChunking1, error) {
-	var body CrawlerOptionsHeaderOnly0x39MarkdownChunking1
+// AsCrawlerOptionsHeaderOnly0x3aMarkdownChunking1 returns the union data inside the CrawlerOptionsHeaderOnly0x3a_MarkdownChunking as a CrawlerOptionsHeaderOnly0x3aMarkdownChunking1
+func (t CrawlerOptionsHeaderOnly0x3a_MarkdownChunking) AsCrawlerOptionsHeaderOnly0x3aMarkdownChunking1() (CrawlerOptionsHeaderOnly0x3aMarkdownChunking1, error) {
+	var body CrawlerOptionsHeaderOnly0x3aMarkdownChunking1
 	err := json.Unmarshal(t.union, &body)
 	return body, err
 }
 
-// FromCrawlerOptionsHeaderOnly0x39MarkdownChunking1 overwrites any union data inside the CrawlerOptionsHeaderOnly0x39_MarkdownChunking as the provided CrawlerOptionsHeaderOnly0x39MarkdownChunking1
-func (t *CrawlerOptionsHeaderOnly0x39_MarkdownChunking) FromCrawlerOptionsHeaderOnly0x39MarkdownChunking1(v CrawlerOptionsHeaderOnly0x39MarkdownChunking1) error {
+// FromCrawlerOptionsHeaderOnly0x3aMarkdownChunking1 overwrites any union data inside the CrawlerOptionsHeaderOnly0x3a_MarkdownChunking as the provided CrawlerOptionsHeaderOnly0x3aMarkdownChunking1
+func (t *CrawlerOptionsHeaderOnly0x3a_MarkdownChunking) FromCrawlerOptionsHeaderOnly0x3aMarkdownChunking1(v CrawlerOptionsHeaderOnly0x3aMarkdownChunking1) error {
 	b, err := json.Marshal(v)
 	t.union = b
 	return err
 }
 
-// MergeCrawlerOptionsHeaderOnly0x39MarkdownChunking1 performs a merge with any union data inside the CrawlerOptionsHeaderOnly0x39_MarkdownChunking, using the provided CrawlerOptionsHeaderOnly0x39MarkdownChunking1
-func (t *CrawlerOptionsHeaderOnly0x39_MarkdownChunking) MergeCrawlerOptionsHeaderOnly0x39MarkdownChunking1(v CrawlerOptionsHeaderOnly0x39MarkdownChunking1) error {
+// MergeCrawlerOptionsHeaderOnly0x3aMarkdownChunking1 performs a merge with any union data inside the CrawlerOptionsHeaderOnly0x3a_MarkdownChunking, using the provided CrawlerOptionsHeaderOnly0x3aMarkdownChunking1
+func (t *CrawlerOptionsHeaderOnly0x3a_MarkdownChunking) MergeCrawlerOptionsHeaderOnly0x3aMarkdownChunking1(v CrawlerOptionsHeaderOnly0x3aMarkdownChunking1) error {
 	b, err := json.Marshal(v)
 	if err != nil {
 		return err
@@ -10040,32 +10069,32 @@ func (t *CrawlerOptionsHeaderOnly0x39_MarkdownChunking) MergeCrawlerOptionsHeade
 	return err
 }
 
-func (t CrawlerOptionsHeaderOnly0x39_MarkdownChunking) MarshalJSON() ([]byte, error) {
+func (t CrawlerOptionsHeaderOnly0x3a_MarkdownChunking) MarshalJSON() ([]byte, error) {
 	b, err := t.union.MarshalJSON()
 	return b, err
 }
 
-func (t *CrawlerOptionsHeaderOnly0x39_MarkdownChunking) UnmarshalJSON(b []byte) error {
+func (t *CrawlerOptionsHeaderOnly0x3a_MarkdownChunking) UnmarshalJSON(b []byte) error {
 	err := t.union.UnmarshalJSON(b)
 	return err
 }
 
-// AsCrawlerOptionsHeaderOnly0x39NoGfm0 returns the union data inside the CrawlerOptionsHeaderOnly0x39_NoGfm as a CrawlerOptionsHeaderOnly0x39NoGfm0
-func (t CrawlerOptionsHeaderOnly0x39_NoGfm) AsCrawlerOptionsHeaderOnly0x39NoGfm0() (CrawlerOptionsHeaderOnly0x39NoGfm0, error) {
-	var body CrawlerOptionsHeaderOnly0x39NoGfm0
+// AsCrawlerOptionsHeaderOnly0x3aNoGfm0 returns the union data inside the CrawlerOptionsHeaderOnly0x3a_NoGfm as a CrawlerOptionsHeaderOnly0x3aNoGfm0
+func (t CrawlerOptionsHeaderOnly0x3a_NoGfm) AsCrawlerOptionsHeaderOnly0x3aNoGfm0() (CrawlerOptionsHeaderOnly0x3aNoGfm0, error) {
+	var body CrawlerOptionsHeaderOnly0x3aNoGfm0
 	err := json.Unmarshal(t.union, &body)
 	return body, err
 }
 
-// FromCrawlerOptionsHeaderOnly0x39NoGfm0 overwrites any union data inside the CrawlerOptionsHeaderOnly0x39_NoGfm as the provided CrawlerOptionsHeaderOnly0x39NoGfm0
-func (t *CrawlerOptionsHeaderOnly0x39_NoGfm) FromCrawlerOptionsHeaderOnly0x39NoGfm0(v CrawlerOptionsHeaderOnly0x39NoGfm0) error {
+// FromCrawlerOptionsHeaderOnly0x3aNoGfm0 overwrites any union data inside the CrawlerOptionsHeaderOnly0x3a_NoGfm as the provided CrawlerOptionsHeaderOnly0x3aNoGfm0
+func (t *CrawlerOptionsHeaderOnly0x3a_NoGfm) FromCrawlerOptionsHeaderOnly0x3aNoGfm0(v CrawlerOptionsHeaderOnly0x3aNoGfm0) error {
 	b, err := json.Marshal(v)
 	t.union = b
 	return err
 }
 
-// MergeCrawlerOptionsHeaderOnly0x39NoGfm0 performs a merge with any union data inside the CrawlerOptionsHeaderOnly0x39_NoGfm, using the provided CrawlerOptionsHeaderOnly0x39NoGfm0
-func (t *CrawlerOptionsHeaderOnly0x39_NoGfm) MergeCrawlerOptionsHeaderOnly0x39NoGfm0(v CrawlerOptionsHeaderOnly0x39NoGfm0) error {
+// MergeCrawlerOptionsHeaderOnly0x3aNoGfm0 performs a merge with any union data inside the CrawlerOptionsHeaderOnly0x3a_NoGfm, using the provided CrawlerOptionsHeaderOnly0x3aNoGfm0
+func (t *CrawlerOptionsHeaderOnly0x3a_NoGfm) MergeCrawlerOptionsHeaderOnly0x3aNoGfm0(v CrawlerOptionsHeaderOnly0x3aNoGfm0) error {
 	b, err := json.Marshal(v)
 	if err != nil {
 		return err
@@ -10076,22 +10105,22 @@ func (t *CrawlerOptionsHeaderOnly0x39_NoGfm) MergeCrawlerOptionsHeaderOnly0x39No
 	return err
 }
 
-// AsCrawlerOptionsHeaderOnly0x39NoGfm1 returns the union data inside the CrawlerOptionsHeaderOnly0x39_NoGfm as a CrawlerOptionsHeaderOnly0x39NoGfm1
-func (t CrawlerOptionsHeaderOnly0x39_NoGfm) AsCrawlerOptionsHeaderOnly0x39NoGfm1() (CrawlerOptionsHeaderOnly0x39NoGfm1, error) {
-	var body CrawlerOptionsHeaderOnly0x39NoGfm1
+// AsCrawlerOptionsHeaderOnly0x3aNoGfm1 returns the union data inside the CrawlerOptionsHeaderOnly0x3a_NoGfm as a CrawlerOptionsHeaderOnly0x3aNoGfm1
+func (t CrawlerOptionsHeaderOnly0x3a_NoGfm) AsCrawlerOptionsHeaderOnly0x3aNoGfm1() (CrawlerOptionsHeaderOnly0x3aNoGfm1, error) {
+	var body CrawlerOptionsHeaderOnly0x3aNoGfm1
 	err := json.Unmarshal(t.union, &body)
 	return body, err
 }
 
-// FromCrawlerOptionsHeaderOnly0x39NoGfm1 overwrites any union data inside the CrawlerOptionsHeaderOnly0x39_NoGfm as the provided CrawlerOptionsHeaderOnly0x39NoGfm1
-func (t *CrawlerOptionsHeaderOnly0x39_NoGfm) FromCrawlerOptionsHeaderOnly0x39NoGfm1(v CrawlerOptionsHeaderOnly0x39NoGfm1) error {
+// FromCrawlerOptionsHeaderOnly0x3aNoGfm1 overwrites any union data inside the CrawlerOptionsHeaderOnly0x3a_NoGfm as the provided CrawlerOptionsHeaderOnly0x3aNoGfm1
+func (t *CrawlerOptionsHeaderOnly0x3a_NoGfm) FromCrawlerOptionsHeaderOnly0x3aNoGfm1(v CrawlerOptionsHeaderOnly0x3aNoGfm1) error {
 	b, err := json.Marshal(v)
 	t.union = b
 	return err
 }
 
-// MergeCrawlerOptionsHeaderOnly0x39NoGfm1 performs a merge with any union data inside the CrawlerOptionsHeaderOnly0x39_NoGfm, using the provided CrawlerOptionsHeaderOnly0x39NoGfm1
-func (t *CrawlerOptionsHeaderOnly0x39_NoGfm) MergeCrawlerOptionsHeaderOnly0x39NoGfm1(v CrawlerOptionsHeaderOnly0x39NoGfm1) error {
+// MergeCrawlerOptionsHeaderOnly0x3aNoGfm1 performs a merge with any union data inside the CrawlerOptionsHeaderOnly0x3a_NoGfm, using the provided CrawlerOptionsHeaderOnly0x3aNoGfm1
+func (t *CrawlerOptionsHeaderOnly0x3a_NoGfm) MergeCrawlerOptionsHeaderOnly0x3aNoGfm1(v CrawlerOptionsHeaderOnly0x3aNoGfm1) error {
 	b, err := json.Marshal(v)
 	if err != nil {
 		return err
@@ -10102,32 +10131,32 @@ func (t *CrawlerOptionsHeaderOnly0x39_NoGfm) MergeCrawlerOptionsHeaderOnly0x39No
 	return err
 }
 
-func (t CrawlerOptionsHeaderOnly0x39_NoGfm) MarshalJSON() ([]byte, error) {
+func (t CrawlerOptionsHeaderOnly0x3a_NoGfm) MarshalJSON() ([]byte, error) {
 	b, err := t.union.MarshalJSON()
 	return b, err
 }
 
-func (t *CrawlerOptionsHeaderOnly0x39_NoGfm) UnmarshalJSON(b []byte) error {
+func (t *CrawlerOptionsHeaderOnly0x3a_NoGfm) UnmarshalJSON(b []byte) error {
 	err := t.union.UnmarshalJSON(b)
 	return err
 }
 
-// AsCrawlerOptionsHeaderOnly0x39Pdf0 returns the union data inside the CrawlerOptionsHeaderOnly0x39_Pdf as a CrawlerOptionsHeaderOnly0x39Pdf0
-func (t CrawlerOptionsHeaderOnly0x39_Pdf) AsCrawlerOptionsHeaderOnly0x39Pdf0() (CrawlerOptionsHeaderOnly0x39Pdf0, error) {
-	var body CrawlerOptionsHeaderOnly0x39Pdf0
+// AsCrawlerOptionsHeaderOnly0x3aPdf0 returns the union data inside the CrawlerOptionsHeaderOnly0x3a_Pdf as a CrawlerOptionsHeaderOnly0x3aPdf0
+func (t CrawlerOptionsHeaderOnly0x3a_Pdf) AsCrawlerOptionsHeaderOnly0x3aPdf0() (CrawlerOptionsHeaderOnly0x3aPdf0, error) {
+	var body CrawlerOptionsHeaderOnly0x3aPdf0
 	err := json.Unmarshal(t.union, &body)
 	return body, err
 }
 
-// FromCrawlerOptionsHeaderOnly0x39Pdf0 overwrites any union data inside the CrawlerOptionsHeaderOnly0x39_Pdf as the provided CrawlerOptionsHeaderOnly0x39Pdf0
-func (t *CrawlerOptionsHeaderOnly0x39_Pdf) FromCrawlerOptionsHeaderOnly0x39Pdf0(v CrawlerOptionsHeaderOnly0x39Pdf0) error {
+// FromCrawlerOptionsHeaderOnly0x3aPdf0 overwrites any union data inside the CrawlerOptionsHeaderOnly0x3a_Pdf as the provided CrawlerOptionsHeaderOnly0x3aPdf0
+func (t *CrawlerOptionsHeaderOnly0x3a_Pdf) FromCrawlerOptionsHeaderOnly0x3aPdf0(v CrawlerOptionsHeaderOnly0x3aPdf0) error {
 	b, err := json.Marshal(v)
 	t.union = b
 	return err
 }
 
-// MergeCrawlerOptionsHeaderOnly0x39Pdf0 performs a merge with any union data inside the CrawlerOptionsHeaderOnly0x39_Pdf, using the provided CrawlerOptionsHeaderOnly0x39Pdf0
-func (t *CrawlerOptionsHeaderOnly0x39_Pdf) MergeCrawlerOptionsHeaderOnly0x39Pdf0(v CrawlerOptionsHeaderOnly0x39Pdf0) error {
+// MergeCrawlerOptionsHeaderOnly0x3aPdf0 performs a merge with any union data inside the CrawlerOptionsHeaderOnly0x3a_Pdf, using the provided CrawlerOptionsHeaderOnly0x3aPdf0
+func (t *CrawlerOptionsHeaderOnly0x3a_Pdf) MergeCrawlerOptionsHeaderOnly0x3aPdf0(v CrawlerOptionsHeaderOnly0x3aPdf0) error {
 	b, err := json.Marshal(v)
 	if err != nil {
 		return err
@@ -10138,22 +10167,22 @@ func (t *CrawlerOptionsHeaderOnly0x39_Pdf) MergeCrawlerOptionsHeaderOnly0x39Pdf0
 	return err
 }
 
-// AsCrawlerOptionsHeaderOnly0x39Pdf1 returns the union data inside the CrawlerOptionsHeaderOnly0x39_Pdf as a CrawlerOptionsHeaderOnly0x39Pdf1
-func (t CrawlerOptionsHeaderOnly0x39_Pdf) AsCrawlerOptionsHeaderOnly0x39Pdf1() (CrawlerOptionsHeaderOnly0x39Pdf1, error) {
-	var body CrawlerOptionsHeaderOnly0x39Pdf1
+// AsCrawlerOptionsHeaderOnly0x3aPdf1 returns the union data inside the CrawlerOptionsHeaderOnly0x3a_Pdf as a CrawlerOptionsHeaderOnly0x3aPdf1
+func (t CrawlerOptionsHeaderOnly0x3a_Pdf) AsCrawlerOptionsHeaderOnly0x3aPdf1() (CrawlerOptionsHeaderOnly0x3aPdf1, error) {
+	var body CrawlerOptionsHeaderOnly0x3aPdf1
 	err := json.Unmarshal(t.union, &body)
 	return body, err
 }
 
-// FromCrawlerOptionsHeaderOnly0x39Pdf1 overwrites any union data inside the CrawlerOptionsHeaderOnly0x39_Pdf as the provided CrawlerOptionsHeaderOnly0x39Pdf1
-func (t *CrawlerOptionsHeaderOnly0x39_Pdf) FromCrawlerOptionsHeaderOnly0x39Pdf1(v CrawlerOptionsHeaderOnly0x39Pdf1) error {
+// FromCrawlerOptionsHeaderOnly0x3aPdf1 overwrites any union data inside the CrawlerOptionsHeaderOnly0x3a_Pdf as the provided CrawlerOptionsHeaderOnly0x3aPdf1
+func (t *CrawlerOptionsHeaderOnly0x3a_Pdf) FromCrawlerOptionsHeaderOnly0x3aPdf1(v CrawlerOptionsHeaderOnly0x3aPdf1) error {
 	b, err := json.Marshal(v)
 	t.union = b
 	return err
 }
 
-// MergeCrawlerOptionsHeaderOnly0x39Pdf1 performs a merge with any union data inside the CrawlerOptionsHeaderOnly0x39_Pdf, using the provided CrawlerOptionsHeaderOnly0x39Pdf1
-func (t *CrawlerOptionsHeaderOnly0x39_Pdf) MergeCrawlerOptionsHeaderOnly0x39Pdf1(v CrawlerOptionsHeaderOnly0x39Pdf1) error {
+// MergeCrawlerOptionsHeaderOnly0x3aPdf1 performs a merge with any union data inside the CrawlerOptionsHeaderOnly0x3a_Pdf, using the provided CrawlerOptionsHeaderOnly0x3aPdf1
+func (t *CrawlerOptionsHeaderOnly0x3a_Pdf) MergeCrawlerOptionsHeaderOnly0x3aPdf1(v CrawlerOptionsHeaderOnly0x3aPdf1) error {
 	b, err := json.Marshal(v)
 	if err != nil {
 		return err
@@ -10164,32 +10193,32 @@ func (t *CrawlerOptionsHeaderOnly0x39_Pdf) MergeCrawlerOptionsHeaderOnly0x39Pdf1
 	return err
 }
 
-func (t CrawlerOptionsHeaderOnly0x39_Pdf) MarshalJSON() ([]byte, error) {
+func (t CrawlerOptionsHeaderOnly0x3a_Pdf) MarshalJSON() ([]byte, error) {
 	b, err := t.union.MarshalJSON()
 	return b, err
 }
 
-func (t *CrawlerOptionsHeaderOnly0x39_Pdf) UnmarshalJSON(b []byte) error {
+func (t *CrawlerOptionsHeaderOnly0x3a_Pdf) UnmarshalJSON(b []byte) error {
 	err := t.union.UnmarshalJSON(b)
 	return err
 }
 
-// AsCrawlerOptionsHeaderOnly0x39RespondWith0 returns the union data inside the CrawlerOptionsHeaderOnly0x39_RespondWith as a CrawlerOptionsHeaderOnly0x39RespondWith0
-func (t CrawlerOptionsHeaderOnly0x39_RespondWith) AsCrawlerOptionsHeaderOnly0x39RespondWith0() (CrawlerOptionsHeaderOnly0x39RespondWith0, error) {
-	var body CrawlerOptionsHeaderOnly0x39RespondWith0
+// AsCrawlerOptionsHeaderOnly0x3aRespondWith0 returns the union data inside the CrawlerOptionsHeaderOnly0x3a_RespondWith as a CrawlerOptionsHeaderOnly0x3aRespondWith0
+func (t CrawlerOptionsHeaderOnly0x3a_RespondWith) AsCrawlerOptionsHeaderOnly0x3aRespondWith0() (CrawlerOptionsHeaderOnly0x3aRespondWith0, error) {
+	var body CrawlerOptionsHeaderOnly0x3aRespondWith0
 	err := json.Unmarshal(t.union, &body)
 	return body, err
 }
 
-// FromCrawlerOptionsHeaderOnly0x39RespondWith0 overwrites any union data inside the CrawlerOptionsHeaderOnly0x39_RespondWith as the provided CrawlerOptionsHeaderOnly0x39RespondWith0
-func (t *CrawlerOptionsHeaderOnly0x39_RespondWith) FromCrawlerOptionsHeaderOnly0x39RespondWith0(v CrawlerOptionsHeaderOnly0x39RespondWith0) error {
+// FromCrawlerOptionsHeaderOnly0x3aRespondWith0 overwrites any union data inside the CrawlerOptionsHeaderOnly0x3a_RespondWith as the provided CrawlerOptionsHeaderOnly0x3aRespondWith0
+func (t *CrawlerOptionsHeaderOnly0x3a_RespondWith) FromCrawlerOptionsHeaderOnly0x3aRespondWith0(v CrawlerOptionsHeaderOnly0x3aRespondWith0) error {
 	b, err := json.Marshal(v)
 	t.union = b
 	return err
 }
 
-// MergeCrawlerOptionsHeaderOnly0x39RespondWith0 performs a merge with any union data inside the CrawlerOptionsHeaderOnly0x39_RespondWith, using the provided CrawlerOptionsHeaderOnly0x39RespondWith0
-func (t *CrawlerOptionsHeaderOnly0x39_RespondWith) MergeCrawlerOptionsHeaderOnly0x39RespondWith0(v CrawlerOptionsHeaderOnly0x39RespondWith0) error {
+// MergeCrawlerOptionsHeaderOnly0x3aRespondWith0 performs a merge with any union data inside the CrawlerOptionsHeaderOnly0x3a_RespondWith, using the provided CrawlerOptionsHeaderOnly0x3aRespondWith0
+func (t *CrawlerOptionsHeaderOnly0x3a_RespondWith) MergeCrawlerOptionsHeaderOnly0x3aRespondWith0(v CrawlerOptionsHeaderOnly0x3aRespondWith0) error {
 	b, err := json.Marshal(v)
 	if err != nil {
 		return err
@@ -10200,22 +10229,22 @@ func (t *CrawlerOptionsHeaderOnly0x39_RespondWith) MergeCrawlerOptionsHeaderOnly
 	return err
 }
 
-// AsCrawlerOptionsHeaderOnly0x39RespondWith1 returns the union data inside the CrawlerOptionsHeaderOnly0x39_RespondWith as a CrawlerOptionsHeaderOnly0x39RespondWith1
-func (t CrawlerOptionsHeaderOnly0x39_RespondWith) AsCrawlerOptionsHeaderOnly0x39RespondWith1() (CrawlerOptionsHeaderOnly0x39RespondWith1, error) {
-	var body CrawlerOptionsHeaderOnly0x39RespondWith1
+// AsCrawlerOptionsHeaderOnly0x3aRespondWith1 returns the union data inside the CrawlerOptionsHeaderOnly0x3a_RespondWith as a CrawlerOptionsHeaderOnly0x3aRespondWith1
+func (t CrawlerOptionsHeaderOnly0x3a_RespondWith) AsCrawlerOptionsHeaderOnly0x3aRespondWith1() (CrawlerOptionsHeaderOnly0x3aRespondWith1, error) {
+	var body CrawlerOptionsHeaderOnly0x3aRespondWith1
 	err := json.Unmarshal(t.union, &body)
 	return body, err
 }
 
-// FromCrawlerOptionsHeaderOnly0x39RespondWith1 overwrites any union data inside the CrawlerOptionsHeaderOnly0x39_RespondWith as the provided CrawlerOptionsHeaderOnly0x39RespondWith1
-func (t *CrawlerOptionsHeaderOnly0x39_RespondWith) FromCrawlerOptionsHeaderOnly0x39RespondWith1(v CrawlerOptionsHeaderOnly0x39RespondWith1) error {
+// FromCrawlerOptionsHeaderOnly0x3aRespondWith1 overwrites any union data inside the CrawlerOptionsHeaderOnly0x3a_RespondWith as the provided CrawlerOptionsHeaderOnly0x3aRespondWith1
+func (t *CrawlerOptionsHeaderOnly0x3a_RespondWith) FromCrawlerOptionsHeaderOnly0x3aRespondWith1(v CrawlerOptionsHeaderOnly0x3aRespondWith1) error {
 	b, err := json.Marshal(v)
 	t.union = b
 	return err
 }
 
-// MergeCrawlerOptionsHeaderOnly0x39RespondWith1 performs a merge with any union data inside the CrawlerOptionsHeaderOnly0x39_RespondWith, using the provided CrawlerOptionsHeaderOnly0x39RespondWith1
-func (t *CrawlerOptionsHeaderOnly0x39_RespondWith) MergeCrawlerOptionsHeaderOnly0x39RespondWith1(v CrawlerOptionsHeaderOnly0x39RespondWith1) error {
+// MergeCrawlerOptionsHeaderOnly0x3aRespondWith1 performs a merge with any union data inside the CrawlerOptionsHeaderOnly0x3a_RespondWith, using the provided CrawlerOptionsHeaderOnly0x3aRespondWith1
+func (t *CrawlerOptionsHeaderOnly0x3a_RespondWith) MergeCrawlerOptionsHeaderOnly0x3aRespondWith1(v CrawlerOptionsHeaderOnly0x3aRespondWith1) error {
 	b, err := json.Marshal(v)
 	if err != nil {
 		return err
@@ -10226,32 +10255,32 @@ func (t *CrawlerOptionsHeaderOnly0x39_RespondWith) MergeCrawlerOptionsHeaderOnly
 	return err
 }
 
-func (t CrawlerOptionsHeaderOnly0x39_RespondWith) MarshalJSON() ([]byte, error) {
+func (t CrawlerOptionsHeaderOnly0x3a_RespondWith) MarshalJSON() ([]byte, error) {
 	b, err := t.union.MarshalJSON()
 	return b, err
 }
 
-func (t *CrawlerOptionsHeaderOnly0x39_RespondWith) UnmarshalJSON(b []byte) error {
+func (t *CrawlerOptionsHeaderOnly0x3a_RespondWith) UnmarshalJSON(b []byte) error {
 	err := t.union.UnmarshalJSON(b)
 	return err
 }
 
-// AsCrawlerOptionsHeaderOnly0x39SetCookies0 returns the union data inside the CrawlerOptionsHeaderOnly0x39_SetCookies_Item as a CrawlerOptionsHeaderOnly0x39SetCookies0
-func (t CrawlerOptionsHeaderOnly0x39_SetCookies_Item) AsCrawlerOptionsHeaderOnly0x39SetCookies0() (CrawlerOptionsHeaderOnly0x39SetCookies0, error) {
-	var body CrawlerOptionsHeaderOnly0x39SetCookies0
+// AsCrawlerOptionsHeaderOnly0x3aSetCookies0 returns the union data inside the CrawlerOptionsHeaderOnly0x3a_SetCookies_Item as a CrawlerOptionsHeaderOnly0x3aSetCookies0
+func (t CrawlerOptionsHeaderOnly0x3a_SetCookies_Item) AsCrawlerOptionsHeaderOnly0x3aSetCookies0() (CrawlerOptionsHeaderOnly0x3aSetCookies0, error) {
+	var body CrawlerOptionsHeaderOnly0x3aSetCookies0
 	err := json.Unmarshal(t.union, &body)
 	return body, err
 }
 
-// FromCrawlerOptionsHeaderOnly0x39SetCookies0 overwrites any union data inside the CrawlerOptionsHeaderOnly0x39_SetCookies_Item as the provided CrawlerOptionsHeaderOnly0x39SetCookies0
-func (t *CrawlerOptionsHeaderOnly0x39_SetCookies_Item) FromCrawlerOptionsHeaderOnly0x39SetCookies0(v CrawlerOptionsHeaderOnly0x39SetCookies0) error {
+// FromCrawlerOptionsHeaderOnly0x3aSetCookies0 overwrites any union data inside the CrawlerOptionsHeaderOnly0x3a_SetCookies_Item as the provided CrawlerOptionsHeaderOnly0x3aSetCookies0
+func (t *CrawlerOptionsHeaderOnly0x3a_SetCookies_Item) FromCrawlerOptionsHeaderOnly0x3aSetCookies0(v CrawlerOptionsHeaderOnly0x3aSetCookies0) error {
 	b, err := json.Marshal(v)
 	t.union = b
 	return err
 }
 
-// MergeCrawlerOptionsHeaderOnly0x39SetCookies0 performs a merge with any union data inside the CrawlerOptionsHeaderOnly0x39_SetCookies_Item, using the provided CrawlerOptionsHeaderOnly0x39SetCookies0
-func (t *CrawlerOptionsHeaderOnly0x39_SetCookies_Item) MergeCrawlerOptionsHeaderOnly0x39SetCookies0(v CrawlerOptionsHeaderOnly0x39SetCookies0) error {
+// MergeCrawlerOptionsHeaderOnly0x3aSetCookies0 performs a merge with any union data inside the CrawlerOptionsHeaderOnly0x3a_SetCookies_Item, using the provided CrawlerOptionsHeaderOnly0x3aSetCookies0
+func (t *CrawlerOptionsHeaderOnly0x3a_SetCookies_Item) MergeCrawlerOptionsHeaderOnly0x3aSetCookies0(v CrawlerOptionsHeaderOnly0x3aSetCookies0) error {
 	b, err := json.Marshal(v)
 	if err != nil {
 		return err
@@ -10262,22 +10291,22 @@ func (t *CrawlerOptionsHeaderOnly0x39_SetCookies_Item) MergeCrawlerOptionsHeader
 	return err
 }
 
-// AsCrawlerOptionsHeaderOnly0x39SetCookies1 returns the union data inside the CrawlerOptionsHeaderOnly0x39_SetCookies_Item as a CrawlerOptionsHeaderOnly0x39SetCookies1
-func (t CrawlerOptionsHeaderOnly0x39_SetCookies_Item) AsCrawlerOptionsHeaderOnly0x39SetCookies1() (CrawlerOptionsHeaderOnly0x39SetCookies1, error) {
-	var body CrawlerOptionsHeaderOnly0x39SetCookies1
+// AsCrawlerOptionsHeaderOnly0x3aSetCookies1 returns the union data inside the CrawlerOptionsHeaderOnly0x3a_SetCookies_Item as a CrawlerOptionsHeaderOnly0x3aSetCookies1
+func (t CrawlerOptionsHeaderOnly0x3a_SetCookies_Item) AsCrawlerOptionsHeaderOnly0x3aSetCookies1() (CrawlerOptionsHeaderOnly0x3aSetCookies1, error) {
+	var body CrawlerOptionsHeaderOnly0x3aSetCookies1
 	err := json.Unmarshal(t.union, &body)
 	return body, err
 }
 
-// FromCrawlerOptionsHeaderOnly0x39SetCookies1 overwrites any union data inside the CrawlerOptionsHeaderOnly0x39_SetCookies_Item as the provided CrawlerOptionsHeaderOnly0x39SetCookies1
-func (t *CrawlerOptionsHeaderOnly0x39_SetCookies_Item) FromCrawlerOptionsHeaderOnly0x39SetCookies1(v CrawlerOptionsHeaderOnly0x39SetCookies1) error {
+// FromCrawlerOptionsHeaderOnly0x3aSetCookies1 overwrites any union data inside the CrawlerOptionsHeaderOnly0x3a_SetCookies_Item as the provided CrawlerOptionsHeaderOnly0x3aSetCookies1
+func (t *CrawlerOptionsHeaderOnly0x3a_SetCookies_Item) FromCrawlerOptionsHeaderOnly0x3aSetCookies1(v CrawlerOptionsHeaderOnly0x3aSetCookies1) error {
 	b, err := json.Marshal(v)
 	t.union = b
 	return err
 }
 
-// MergeCrawlerOptionsHeaderOnly0x39SetCookies1 performs a merge with any union data inside the CrawlerOptionsHeaderOnly0x39_SetCookies_Item, using the provided CrawlerOptionsHeaderOnly0x39SetCookies1
-func (t *CrawlerOptionsHeaderOnly0x39_SetCookies_Item) MergeCrawlerOptionsHeaderOnly0x39SetCookies1(v CrawlerOptionsHeaderOnly0x39SetCookies1) error {
+// MergeCrawlerOptionsHeaderOnly0x3aSetCookies1 performs a merge with any union data inside the CrawlerOptionsHeaderOnly0x3a_SetCookies_Item, using the provided CrawlerOptionsHeaderOnly0x3aSetCookies1
+func (t *CrawlerOptionsHeaderOnly0x3a_SetCookies_Item) MergeCrawlerOptionsHeaderOnly0x3aSetCookies1(v CrawlerOptionsHeaderOnly0x3aSetCookies1) error {
 	b, err := json.Marshal(v)
 	if err != nil {
 		return err
@@ -10288,32 +10317,32 @@ func (t *CrawlerOptionsHeaderOnly0x39_SetCookies_Item) MergeCrawlerOptionsHeader
 	return err
 }
 
-func (t CrawlerOptionsHeaderOnly0x39_SetCookies_Item) MarshalJSON() ([]byte, error) {
+func (t CrawlerOptionsHeaderOnly0x3a_SetCookies_Item) MarshalJSON() ([]byte, error) {
 	b, err := t.union.MarshalJSON()
 	return b, err
 }
 
-func (t *CrawlerOptionsHeaderOnly0x39_SetCookies_Item) UnmarshalJSON(b []byte) error {
+func (t *CrawlerOptionsHeaderOnly0x3a_SetCookies_Item) UnmarshalJSON(b []byte) error {
 	err := t.union.UnmarshalJSON(b)
 	return err
 }
 
-// AsCrawlerOptionsHeaderOnly0x39WithIframe0 returns the union data inside the CrawlerOptionsHeaderOnly0x39_WithIframe as a CrawlerOptionsHeaderOnly0x39WithIframe0
-func (t CrawlerOptionsHeaderOnly0x39_WithIframe) AsCrawlerOptionsHeaderOnly0x39WithIframe0() (CrawlerOptionsHeaderOnly0x39WithIframe0, error) {
-	var body CrawlerOptionsHeaderOnly0x39WithIframe0
+// AsCrawlerOptionsHeaderOnly0x3aWithIframe0 returns the union data inside the CrawlerOptionsHeaderOnly0x3a_WithIframe as a CrawlerOptionsHeaderOnly0x3aWithIframe0
+func (t CrawlerOptionsHeaderOnly0x3a_WithIframe) AsCrawlerOptionsHeaderOnly0x3aWithIframe0() (CrawlerOptionsHeaderOnly0x3aWithIframe0, error) {
+	var body CrawlerOptionsHeaderOnly0x3aWithIframe0
 	err := json.Unmarshal(t.union, &body)
 	return body, err
 }
 
-// FromCrawlerOptionsHeaderOnly0x39WithIframe0 overwrites any union data inside the CrawlerOptionsHeaderOnly0x39_WithIframe as the provided CrawlerOptionsHeaderOnly0x39WithIframe0
-func (t *CrawlerOptionsHeaderOnly0x39_WithIframe) FromCrawlerOptionsHeaderOnly0x39WithIframe0(v CrawlerOptionsHeaderOnly0x39WithIframe0) error {
+// FromCrawlerOptionsHeaderOnly0x3aWithIframe0 overwrites any union data inside the CrawlerOptionsHeaderOnly0x3a_WithIframe as the provided CrawlerOptionsHeaderOnly0x3aWithIframe0
+func (t *CrawlerOptionsHeaderOnly0x3a_WithIframe) FromCrawlerOptionsHeaderOnly0x3aWithIframe0(v CrawlerOptionsHeaderOnly0x3aWithIframe0) error {
 	b, err := json.Marshal(v)
 	t.union = b
 	return err
 }
 
-// MergeCrawlerOptionsHeaderOnly0x39WithIframe0 performs a merge with any union data inside the CrawlerOptionsHeaderOnly0x39_WithIframe, using the provided CrawlerOptionsHeaderOnly0x39WithIframe0
-func (t *CrawlerOptionsHeaderOnly0x39_WithIframe) MergeCrawlerOptionsHeaderOnly0x39WithIframe0(v CrawlerOptionsHeaderOnly0x39WithIframe0) error {
+// MergeCrawlerOptionsHeaderOnly0x3aWithIframe0 performs a merge with any union data inside the CrawlerOptionsHeaderOnly0x3a_WithIframe, using the provided CrawlerOptionsHeaderOnly0x3aWithIframe0
+func (t *CrawlerOptionsHeaderOnly0x3a_WithIframe) MergeCrawlerOptionsHeaderOnly0x3aWithIframe0(v CrawlerOptionsHeaderOnly0x3aWithIframe0) error {
 	b, err := json.Marshal(v)
 	if err != nil {
 		return err
@@ -10324,22 +10353,22 @@ func (t *CrawlerOptionsHeaderOnly0x39_WithIframe) MergeCrawlerOptionsHeaderOnly0
 	return err
 }
 
-// AsCrawlerOptionsHeaderOnly0x39WithIframe1 returns the union data inside the CrawlerOptionsHeaderOnly0x39_WithIframe as a CrawlerOptionsHeaderOnly0x39WithIframe1
-func (t CrawlerOptionsHeaderOnly0x39_WithIframe) AsCrawlerOptionsHeaderOnly0x39WithIframe1() (CrawlerOptionsHeaderOnly0x39WithIframe1, error) {
-	var body CrawlerOptionsHeaderOnly0x39WithIframe1
+// AsCrawlerOptionsHeaderOnly0x3aWithIframe1 returns the union data inside the CrawlerOptionsHeaderOnly0x3a_WithIframe as a CrawlerOptionsHeaderOnly0x3aWithIframe1
+func (t CrawlerOptionsHeaderOnly0x3a_WithIframe) AsCrawlerOptionsHeaderOnly0x3aWithIframe1() (CrawlerOptionsHeaderOnly0x3aWithIframe1, error) {
+	var body CrawlerOptionsHeaderOnly0x3aWithIframe1
 	err := json.Unmarshal(t.union, &body)
 	return body, err
 }
 
-// FromCrawlerOptionsHeaderOnly0x39WithIframe1 overwrites any union data inside the CrawlerOptionsHeaderOnly0x39_WithIframe as the provided CrawlerOptionsHeaderOnly0x39WithIframe1
-func (t *CrawlerOptionsHeaderOnly0x39_WithIframe) FromCrawlerOptionsHeaderOnly0x39WithIframe1(v CrawlerOptionsHeaderOnly0x39WithIframe1) error {
+// FromCrawlerOptionsHeaderOnly0x3aWithIframe1 overwrites any union data inside the CrawlerOptionsHeaderOnly0x3a_WithIframe as the provided CrawlerOptionsHeaderOnly0x3aWithIframe1
+func (t *CrawlerOptionsHeaderOnly0x3a_WithIframe) FromCrawlerOptionsHeaderOnly0x3aWithIframe1(v CrawlerOptionsHeaderOnly0x3aWithIframe1) error {
 	b, err := json.Marshal(v)
 	t.union = b
 	return err
 }
 
-// MergeCrawlerOptionsHeaderOnly0x39WithIframe1 performs a merge with any union data inside the CrawlerOptionsHeaderOnly0x39_WithIframe, using the provided CrawlerOptionsHeaderOnly0x39WithIframe1
-func (t *CrawlerOptionsHeaderOnly0x39_WithIframe) MergeCrawlerOptionsHeaderOnly0x39WithIframe1(v CrawlerOptionsHeaderOnly0x39WithIframe1) error {
+// MergeCrawlerOptionsHeaderOnly0x3aWithIframe1 performs a merge with any union data inside the CrawlerOptionsHeaderOnly0x3a_WithIframe, using the provided CrawlerOptionsHeaderOnly0x3aWithIframe1
+func (t *CrawlerOptionsHeaderOnly0x3a_WithIframe) MergeCrawlerOptionsHeaderOnly0x3aWithIframe1(v CrawlerOptionsHeaderOnly0x3aWithIframe1) error {
 	b, err := json.Marshal(v)
 	if err != nil {
 		return err
@@ -10350,32 +10379,32 @@ func (t *CrawlerOptionsHeaderOnly0x39_WithIframe) MergeCrawlerOptionsHeaderOnly0
 	return err
 }
 
-func (t CrawlerOptionsHeaderOnly0x39_WithIframe) MarshalJSON() ([]byte, error) {
+func (t CrawlerOptionsHeaderOnly0x3a_WithIframe) MarshalJSON() ([]byte, error) {
 	b, err := t.union.MarshalJSON()
 	return b, err
 }
 
-func (t *CrawlerOptionsHeaderOnly0x39_WithIframe) UnmarshalJSON(b []byte) error {
+func (t *CrawlerOptionsHeaderOnly0x3a_WithIframe) UnmarshalJSON(b []byte) error {
 	err := t.union.UnmarshalJSON(b)
 	return err
 }
 
-// AsCrawlerOptionsHeaderOnly0x39WithLinksSummary0 returns the union data inside the CrawlerOptionsHeaderOnly0x39_WithLinksSummary as a CrawlerOptionsHeaderOnly0x39WithLinksSummary0
-func (t CrawlerOptionsHeaderOnly0x39_WithLinksSummary) AsCrawlerOptionsHeaderOnly0x39WithLinksSummary0() (CrawlerOptionsHeaderOnly0x39WithLinksSummary0, error) {
-	var body CrawlerOptionsHeaderOnly0x39WithLinksSummary0
+// AsCrawlerOptionsHeaderOnly0x3aWithLinksSummary0 returns the union data inside the CrawlerOptionsHeaderOnly0x3a_WithLinksSummary as a CrawlerOptionsHeaderOnly0x3aWithLinksSummary0
+func (t CrawlerOptionsHeaderOnly0x3a_WithLinksSummary) AsCrawlerOptionsHeaderOnly0x3aWithLinksSummary0() (CrawlerOptionsHeaderOnly0x3aWithLinksSummary0, error) {
+	var body CrawlerOptionsHeaderOnly0x3aWithLinksSummary0
 	err := json.Unmarshal(t.union, &body)
 	return body, err
 }
 
-// FromCrawlerOptionsHeaderOnly0x39WithLinksSummary0 overwrites any union data inside the CrawlerOptionsHeaderOnly0x39_WithLinksSummary as the provided CrawlerOptionsHeaderOnly0x39WithLinksSummary0
-func (t *CrawlerOptionsHeaderOnly0x39_WithLinksSummary) FromCrawlerOptionsHeaderOnly0x39WithLinksSummary0(v CrawlerOptionsHeaderOnly0x39WithLinksSummary0) error {
+// FromCrawlerOptionsHeaderOnly0x3aWithLinksSummary0 overwrites any union data inside the CrawlerOptionsHeaderOnly0x3a_WithLinksSummary as the provided CrawlerOptionsHeaderOnly0x3aWithLinksSummary0
+func (t *CrawlerOptionsHeaderOnly0x3a_WithLinksSummary) FromCrawlerOptionsHeaderOnly0x3aWithLinksSummary0(v CrawlerOptionsHeaderOnly0x3aWithLinksSummary0) error {
 	b, err := json.Marshal(v)
 	t.union = b
 	return err
 }
 
-// MergeCrawlerOptionsHeaderOnly0x39WithLinksSummary0 performs a merge with any union data inside the CrawlerOptionsHeaderOnly0x39_WithLinksSummary, using the provided CrawlerOptionsHeaderOnly0x39WithLinksSummary0
-func (t *CrawlerOptionsHeaderOnly0x39_WithLinksSummary) MergeCrawlerOptionsHeaderOnly0x39WithLinksSummary0(v CrawlerOptionsHeaderOnly0x39WithLinksSummary0) error {
+// MergeCrawlerOptionsHeaderOnly0x3aWithLinksSummary0 performs a merge with any union data inside the CrawlerOptionsHeaderOnly0x3a_WithLinksSummary, using the provided CrawlerOptionsHeaderOnly0x3aWithLinksSummary0
+func (t *CrawlerOptionsHeaderOnly0x3a_WithLinksSummary) MergeCrawlerOptionsHeaderOnly0x3aWithLinksSummary0(v CrawlerOptionsHeaderOnly0x3aWithLinksSummary0) error {
 	b, err := json.Marshal(v)
 	if err != nil {
 		return err
@@ -10386,22 +10415,22 @@ func (t *CrawlerOptionsHeaderOnly0x39_WithLinksSummary) MergeCrawlerOptionsHeade
 	return err
 }
 
-// AsCrawlerOptionsHeaderOnly0x39WithLinksSummary1 returns the union data inside the CrawlerOptionsHeaderOnly0x39_WithLinksSummary as a CrawlerOptionsHeaderOnly0x39WithLinksSummary1
-func (t CrawlerOptionsHeaderOnly0x39_WithLinksSummary) AsCrawlerOptionsHeaderOnly0x39WithLinksSummary1() (CrawlerOptionsHeaderOnly0x39WithLinksSummary1, error) {
-	var body CrawlerOptionsHeaderOnly0x39WithLinksSummary1
+// AsCrawlerOptionsHeaderOnly0x3aWithLinksSummary1 returns the union data inside the CrawlerOptionsHeaderOnly0x3a_WithLinksSummary as a CrawlerOptionsHeaderOnly0x3aWithLinksSummary1
+func (t CrawlerOptionsHeaderOnly0x3a_WithLinksSummary) AsCrawlerOptionsHeaderOnly0x3aWithLinksSummary1() (CrawlerOptionsHeaderOnly0x3aWithLinksSummary1, error) {
+	var body CrawlerOptionsHeaderOnly0x3aWithLinksSummary1
 	err := json.Unmarshal(t.union, &body)
 	return body, err
 }
 
-// FromCrawlerOptionsHeaderOnly0x39WithLinksSummary1 overwrites any union data inside the CrawlerOptionsHeaderOnly0x39_WithLinksSummary as the provided CrawlerOptionsHeaderOnly0x39WithLinksSummary1
-func (t *CrawlerOptionsHeaderOnly0x39_WithLinksSummary) FromCrawlerOptionsHeaderOnly0x39WithLinksSummary1(v CrawlerOptionsHeaderOnly0x39WithLinksSummary1) error {
+// FromCrawlerOptionsHeaderOnly0x3aWithLinksSummary1 overwrites any union data inside the CrawlerOptionsHeaderOnly0x3a_WithLinksSummary as the provided CrawlerOptionsHeaderOnly0x3aWithLinksSummary1
+func (t *CrawlerOptionsHeaderOnly0x3a_WithLinksSummary) FromCrawlerOptionsHeaderOnly0x3aWithLinksSummary1(v CrawlerOptionsHeaderOnly0x3aWithLinksSummary1) error {
 	b, err := json.Marshal(v)
 	t.union = b
 	return err
 }
 
-// MergeCrawlerOptionsHeaderOnly0x39WithLinksSummary1 performs a merge with any union data inside the CrawlerOptionsHeaderOnly0x39_WithLinksSummary, using the provided CrawlerOptionsHeaderOnly0x39WithLinksSummary1
-func (t *CrawlerOptionsHeaderOnly0x39_WithLinksSummary) MergeCrawlerOptionsHeaderOnly0x39WithLinksSummary1(v CrawlerOptionsHeaderOnly0x39WithLinksSummary1) error {
+// MergeCrawlerOptionsHeaderOnly0x3aWithLinksSummary1 performs a merge with any union data inside the CrawlerOptionsHeaderOnly0x3a_WithLinksSummary, using the provided CrawlerOptionsHeaderOnly0x3aWithLinksSummary1
+func (t *CrawlerOptionsHeaderOnly0x3a_WithLinksSummary) MergeCrawlerOptionsHeaderOnly0x3aWithLinksSummary1(v CrawlerOptionsHeaderOnly0x3aWithLinksSummary1) error {
 	b, err := json.Marshal(v)
 	if err != nil {
 		return err
@@ -10412,32 +10441,32 @@ func (t *CrawlerOptionsHeaderOnly0x39_WithLinksSummary) MergeCrawlerOptionsHeade
 	return err
 }
 
-func (t CrawlerOptionsHeaderOnly0x39_WithLinksSummary) MarshalJSON() ([]byte, error) {
+func (t CrawlerOptionsHeaderOnly0x3a_WithLinksSummary) MarshalJSON() ([]byte, error) {
 	b, err := t.union.MarshalJSON()
 	return b, err
 }
 
-func (t *CrawlerOptionsHeaderOnly0x39_WithLinksSummary) UnmarshalJSON(b []byte) error {
+func (t *CrawlerOptionsHeaderOnly0x3a_WithLinksSummary) UnmarshalJSON(b []byte) error {
 	err := t.union.UnmarshalJSON(b)
 	return err
 }
 
-// AsFormattedPageDto0x41External0 returns the union data inside the FormattedPageDto0x41_External as a FormattedPageDto0x41External0
-func (t FormattedPageDto0x41_External) AsFormattedPageDto0x41External0() (FormattedPageDto0x41External0, error) {
-	var body FormattedPageDto0x41External0
+// AsFormattedPageDto0x42External0 returns the union data inside the FormattedPageDto0x42_External as a FormattedPageDto0x42External0
+func (t FormattedPageDto0x42_External) AsFormattedPageDto0x42External0() (FormattedPageDto0x42External0, error) {
+	var body FormattedPageDto0x42External0
 	err := json.Unmarshal(t.union, &body)
 	return body, err
 }
 
-// FromFormattedPageDto0x41External0 overwrites any union data inside the FormattedPageDto0x41_External as the provided FormattedPageDto0x41External0
-func (t *FormattedPageDto0x41_External) FromFormattedPageDto0x41External0(v FormattedPageDto0x41External0) error {
+// FromFormattedPageDto0x42External0 overwrites any union data inside the FormattedPageDto0x42_External as the provided FormattedPageDto0x42External0
+func (t *FormattedPageDto0x42_External) FromFormattedPageDto0x42External0(v FormattedPageDto0x42External0) error {
 	b, err := json.Marshal(v)
 	t.union = b
 	return err
 }
 
-// MergeFormattedPageDto0x41External0 performs a merge with any union data inside the FormattedPageDto0x41_External, using the provided FormattedPageDto0x41External0
-func (t *FormattedPageDto0x41_External) MergeFormattedPageDto0x41External0(v FormattedPageDto0x41External0) error {
+// MergeFormattedPageDto0x42External0 performs a merge with any union data inside the FormattedPageDto0x42_External, using the provided FormattedPageDto0x42External0
+func (t *FormattedPageDto0x42_External) MergeFormattedPageDto0x42External0(v FormattedPageDto0x42External0) error {
 	b, err := json.Marshal(v)
 	if err != nil {
 		return err
@@ -10448,22 +10477,22 @@ func (t *FormattedPageDto0x41_External) MergeFormattedPageDto0x41External0(v For
 	return err
 }
 
-// AsFormattedPageDto0x41External1 returns the union data inside the FormattedPageDto0x41_External as a FormattedPageDto0x41External1
-func (t FormattedPageDto0x41_External) AsFormattedPageDto0x41External1() (FormattedPageDto0x41External1, error) {
-	var body FormattedPageDto0x41External1
+// AsFormattedPageDto0x42External1 returns the union data inside the FormattedPageDto0x42_External as a FormattedPageDto0x42External1
+func (t FormattedPageDto0x42_External) AsFormattedPageDto0x42External1() (FormattedPageDto0x42External1, error) {
+	var body FormattedPageDto0x42External1
 	err := json.Unmarshal(t.union, &body)
 	return body, err
 }
 
-// FromFormattedPageDto0x41External1 overwrites any union data inside the FormattedPageDto0x41_External as the provided FormattedPageDto0x41External1
-func (t *FormattedPageDto0x41_External) FromFormattedPageDto0x41External1(v FormattedPageDto0x41External1) error {
+// FromFormattedPageDto0x42External1 overwrites any union data inside the FormattedPageDto0x42_External as the provided FormattedPageDto0x42External1
+func (t *FormattedPageDto0x42_External) FromFormattedPageDto0x42External1(v FormattedPageDto0x42External1) error {
 	b, err := json.Marshal(v)
 	t.union = b
 	return err
 }
 
-// MergeFormattedPageDto0x41External1 performs a merge with any union data inside the FormattedPageDto0x41_External, using the provided FormattedPageDto0x41External1
-func (t *FormattedPageDto0x41_External) MergeFormattedPageDto0x41External1(v FormattedPageDto0x41External1) error {
+// MergeFormattedPageDto0x42External1 performs a merge with any union data inside the FormattedPageDto0x42_External, using the provided FormattedPageDto0x42External1
+func (t *FormattedPageDto0x42_External) MergeFormattedPageDto0x42External1(v FormattedPageDto0x42External1) error {
 	b, err := json.Marshal(v)
 	if err != nil {
 		return err
@@ -10474,32 +10503,32 @@ func (t *FormattedPageDto0x41_External) MergeFormattedPageDto0x41External1(v For
 	return err
 }
 
-func (t FormattedPageDto0x41_External) MarshalJSON() ([]byte, error) {
+func (t FormattedPageDto0x42_External) MarshalJSON() ([]byte, error) {
 	b, err := t.union.MarshalJSON()
 	return b, err
 }
 
-func (t *FormattedPageDto0x41_External) UnmarshalJSON(b []byte) error {
+func (t *FormattedPageDto0x42_External) UnmarshalJSON(b []byte) error {
 	err := t.union.UnmarshalJSON(b)
 	return err
 }
 
-// AsFormattedPageDto0x41Images0 returns the union data inside the FormattedPageDto0x41_Images as a FormattedPageDto0x41Images0
-func (t FormattedPageDto0x41_Images) AsFormattedPageDto0x41Images0() (FormattedPageDto0x41Images0, error) {
-	var body FormattedPageDto0x41Images0
+// AsFormattedPageDto0x42Images0 returns the union data inside the FormattedPageDto0x42_Images as a FormattedPageDto0x42Images0
+func (t FormattedPageDto0x42_Images) AsFormattedPageDto0x42Images0() (FormattedPageDto0x42Images0, error) {
+	var body FormattedPageDto0x42Images0
 	err := json.Unmarshal(t.union, &body)
 	return body, err
 }
 
-// FromFormattedPageDto0x41Images0 overwrites any union data inside the FormattedPageDto0x41_Images as the provided FormattedPageDto0x41Images0
-func (t *FormattedPageDto0x41_Images) FromFormattedPageDto0x41Images0(v FormattedPageDto0x41Images0) error {
+// FromFormattedPageDto0x42Images0 overwrites any union data inside the FormattedPageDto0x42_Images as the provided FormattedPageDto0x42Images0
+func (t *FormattedPageDto0x42_Images) FromFormattedPageDto0x42Images0(v FormattedPageDto0x42Images0) error {
 	b, err := json.Marshal(v)
 	t.union = b
 	return err
 }
 
-// MergeFormattedPageDto0x41Images0 performs a merge with any union data inside the FormattedPageDto0x41_Images, using the provided FormattedPageDto0x41Images0
-func (t *FormattedPageDto0x41_Images) MergeFormattedPageDto0x41Images0(v FormattedPageDto0x41Images0) error {
+// MergeFormattedPageDto0x42Images0 performs a merge with any union data inside the FormattedPageDto0x42_Images, using the provided FormattedPageDto0x42Images0
+func (t *FormattedPageDto0x42_Images) MergeFormattedPageDto0x42Images0(v FormattedPageDto0x42Images0) error {
 	b, err := json.Marshal(v)
 	if err != nil {
 		return err
@@ -10510,22 +10539,22 @@ func (t *FormattedPageDto0x41_Images) MergeFormattedPageDto0x41Images0(v Formatt
 	return err
 }
 
-// AsFormattedPageDto0x41Images1 returns the union data inside the FormattedPageDto0x41_Images as a FormattedPageDto0x41Images1
-func (t FormattedPageDto0x41_Images) AsFormattedPageDto0x41Images1() (FormattedPageDto0x41Images1, error) {
-	var body FormattedPageDto0x41Images1
+// AsFormattedPageDto0x42Images1 returns the union data inside the FormattedPageDto0x42_Images as a FormattedPageDto0x42Images1
+func (t FormattedPageDto0x42_Images) AsFormattedPageDto0x42Images1() (FormattedPageDto0x42Images1, error) {
+	var body FormattedPageDto0x42Images1
 	err := json.Unmarshal(t.union, &body)
 	return body, err
 }
 
-// FromFormattedPageDto0x41Images1 overwrites any union data inside the FormattedPageDto0x41_Images as the provided FormattedPageDto0x41Images1
-func (t *FormattedPageDto0x41_Images) FromFormattedPageDto0x41Images1(v FormattedPageDto0x41Images1) error {
+// FromFormattedPageDto0x42Images1 overwrites any union data inside the FormattedPageDto0x42_Images as the provided FormattedPageDto0x42Images1
+func (t *FormattedPageDto0x42_Images) FromFormattedPageDto0x42Images1(v FormattedPageDto0x42Images1) error {
 	b, err := json.Marshal(v)
 	t.union = b
 	return err
 }
 
-// MergeFormattedPageDto0x41Images1 performs a merge with any union data inside the FormattedPageDto0x41_Images, using the provided FormattedPageDto0x41Images1
-func (t *FormattedPageDto0x41_Images) MergeFormattedPageDto0x41Images1(v FormattedPageDto0x41Images1) error {
+// MergeFormattedPageDto0x42Images1 performs a merge with any union data inside the FormattedPageDto0x42_Images, using the provided FormattedPageDto0x42Images1
+func (t *FormattedPageDto0x42_Images) MergeFormattedPageDto0x42Images1(v FormattedPageDto0x42Images1) error {
 	b, err := json.Marshal(v)
 	if err != nil {
 		return err
@@ -10536,22 +10565,22 @@ func (t *FormattedPageDto0x41_Images) MergeFormattedPageDto0x41Images1(v Formatt
 	return err
 }
 
-// AsFormattedPageDto0x41Images2 returns the union data inside the FormattedPageDto0x41_Images as a FormattedPageDto0x41Images2
-func (t FormattedPageDto0x41_Images) AsFormattedPageDto0x41Images2() (FormattedPageDto0x41Images2, error) {
-	var body FormattedPageDto0x41Images2
+// AsFormattedPageDto0x42Images2 returns the union data inside the FormattedPageDto0x42_Images as a FormattedPageDto0x42Images2
+func (t FormattedPageDto0x42_Images) AsFormattedPageDto0x42Images2() (FormattedPageDto0x42Images2, error) {
+	var body FormattedPageDto0x42Images2
 	err := json.Unmarshal(t.union, &body)
 	return body, err
 }
 
-// FromFormattedPageDto0x41Images2 overwrites any union data inside the FormattedPageDto0x41_Images as the provided FormattedPageDto0x41Images2
-func (t *FormattedPageDto0x41_Images) FromFormattedPageDto0x41Images2(v FormattedPageDto0x41Images2) error {
+// FromFormattedPageDto0x42Images2 overwrites any union data inside the FormattedPageDto0x42_Images as the provided FormattedPageDto0x42Images2
+func (t *FormattedPageDto0x42_Images) FromFormattedPageDto0x42Images2(v FormattedPageDto0x42Images2) error {
 	b, err := json.Marshal(v)
 	t.union = b
 	return err
 }
 
-// MergeFormattedPageDto0x41Images2 performs a merge with any union data inside the FormattedPageDto0x41_Images, using the provided FormattedPageDto0x41Images2
-func (t *FormattedPageDto0x41_Images) MergeFormattedPageDto0x41Images2(v FormattedPageDto0x41Images2) error {
+// MergeFormattedPageDto0x42Images2 performs a merge with any union data inside the FormattedPageDto0x42_Images, using the provided FormattedPageDto0x42Images2
+func (t *FormattedPageDto0x42_Images) MergeFormattedPageDto0x42Images2(v FormattedPageDto0x42Images2) error {
 	b, err := json.Marshal(v)
 	if err != nil {
 		return err
@@ -10562,32 +10591,32 @@ func (t *FormattedPageDto0x41_Images) MergeFormattedPageDto0x41Images2(v Formatt
 	return err
 }
 
-func (t FormattedPageDto0x41_Images) MarshalJSON() ([]byte, error) {
+func (t FormattedPageDto0x42_Images) MarshalJSON() ([]byte, error) {
 	b, err := t.union.MarshalJSON()
 	return b, err
 }
 
-func (t *FormattedPageDto0x41_Images) UnmarshalJSON(b []byte) error {
+func (t *FormattedPageDto0x42_Images) UnmarshalJSON(b []byte) error {
 	err := t.union.UnmarshalJSON(b)
 	return err
 }
 
-// AsFormattedPageDto0x41Links0 returns the union data inside the FormattedPageDto0x41_Links as a FormattedPageDto0x41Links0
-func (t FormattedPageDto0x41_Links) AsFormattedPageDto0x41Links0() (FormattedPageDto0x41Links0, error) {
-	var body FormattedPageDto0x41Links0
+// AsFormattedPageDto0x42Links0 returns the union data inside the FormattedPageDto0x42_Links as a FormattedPageDto0x42Links0
+func (t FormattedPageDto0x42_Links) AsFormattedPageDto0x42Links0() (FormattedPageDto0x42Links0, error) {
+	var body FormattedPageDto0x42Links0
 	err := json.Unmarshal(t.union, &body)
 	return body, err
 }
 
-// FromFormattedPageDto0x41Links0 overwrites any union data inside the FormattedPageDto0x41_Links as the provided FormattedPageDto0x41Links0
-func (t *FormattedPageDto0x41_Links) FromFormattedPageDto0x41Links0(v FormattedPageDto0x41Links0) error {
+// FromFormattedPageDto0x42Links0 overwrites any union data inside the FormattedPageDto0x42_Links as the provided FormattedPageDto0x42Links0
+func (t *FormattedPageDto0x42_Links) FromFormattedPageDto0x42Links0(v FormattedPageDto0x42Links0) error {
 	b, err := json.Marshal(v)
 	t.union = b
 	return err
 }
 
-// MergeFormattedPageDto0x41Links0 performs a merge with any union data inside the FormattedPageDto0x41_Links, using the provided FormattedPageDto0x41Links0
-func (t *FormattedPageDto0x41_Links) MergeFormattedPageDto0x41Links0(v FormattedPageDto0x41Links0) error {
+// MergeFormattedPageDto0x42Links0 performs a merge with any union data inside the FormattedPageDto0x42_Links, using the provided FormattedPageDto0x42Links0
+func (t *FormattedPageDto0x42_Links) MergeFormattedPageDto0x42Links0(v FormattedPageDto0x42Links0) error {
 	b, err := json.Marshal(v)
 	if err != nil {
 		return err
@@ -10598,22 +10627,22 @@ func (t *FormattedPageDto0x41_Links) MergeFormattedPageDto0x41Links0(v Formatted
 	return err
 }
 
-// AsFormattedPageDto0x41Links1 returns the union data inside the FormattedPageDto0x41_Links as a FormattedPageDto0x41Links1
-func (t FormattedPageDto0x41_Links) AsFormattedPageDto0x41Links1() (FormattedPageDto0x41Links1, error) {
-	var body FormattedPageDto0x41Links1
+// AsFormattedPageDto0x42Links1 returns the union data inside the FormattedPageDto0x42_Links as a FormattedPageDto0x42Links1
+func (t FormattedPageDto0x42_Links) AsFormattedPageDto0x42Links1() (FormattedPageDto0x42Links1, error) {
+	var body FormattedPageDto0x42Links1
 	err := json.Unmarshal(t.union, &body)
 	return body, err
 }
 
-// FromFormattedPageDto0x41Links1 overwrites any union data inside the FormattedPageDto0x41_Links as the provided FormattedPageDto0x41Links1
-func (t *FormattedPageDto0x41_Links) FromFormattedPageDto0x41Links1(v FormattedPageDto0x41Links1) error {
+// FromFormattedPageDto0x42Links1 overwrites any union data inside the FormattedPageDto0x42_Links as the provided FormattedPageDto0x42Links1
+func (t *FormattedPageDto0x42_Links) FromFormattedPageDto0x42Links1(v FormattedPageDto0x42Links1) error {
 	b, err := json.Marshal(v)
 	t.union = b
 	return err
 }
 
-// MergeFormattedPageDto0x41Links1 performs a merge with any union data inside the FormattedPageDto0x41_Links, using the provided FormattedPageDto0x41Links1
-func (t *FormattedPageDto0x41_Links) MergeFormattedPageDto0x41Links1(v FormattedPageDto0x41Links1) error {
+// MergeFormattedPageDto0x42Links1 performs a merge with any union data inside the FormattedPageDto0x42_Links, using the provided FormattedPageDto0x42Links1
+func (t *FormattedPageDto0x42_Links) MergeFormattedPageDto0x42Links1(v FormattedPageDto0x42Links1) error {
 	b, err := json.Marshal(v)
 	if err != nil {
 		return err
@@ -10624,22 +10653,22 @@ func (t *FormattedPageDto0x41_Links) MergeFormattedPageDto0x41Links1(v Formatted
 	return err
 }
 
-// AsFormattedPageDto0x41Links2 returns the union data inside the FormattedPageDto0x41_Links as a FormattedPageDto0x41Links2
-func (t FormattedPageDto0x41_Links) AsFormattedPageDto0x41Links2() (FormattedPageDto0x41Links2, error) {
-	var body FormattedPageDto0x41Links2
+// AsFormattedPageDto0x42Links2 returns the union data inside the FormattedPageDto0x42_Links as a FormattedPageDto0x42Links2
+func (t FormattedPageDto0x42_Links) AsFormattedPageDto0x42Links2() (FormattedPageDto0x42Links2, error) {
+	var body FormattedPageDto0x42Links2
 	err := json.Unmarshal(t.union, &body)
 	return body, err
 }
 
-// FromFormattedPageDto0x41Links2 overwrites any union data inside the FormattedPageDto0x41_Links as the provided FormattedPageDto0x41Links2
-func (t *FormattedPageDto0x41_Links) FromFormattedPageDto0x41Links2(v FormattedPageDto0x41Links2) error {
+// FromFormattedPageDto0x42Links2 overwrites any union data inside the FormattedPageDto0x42_Links as the provided FormattedPageDto0x42Links2
+func (t *FormattedPageDto0x42_Links) FromFormattedPageDto0x42Links2(v FormattedPageDto0x42Links2) error {
 	b, err := json.Marshal(v)
 	t.union = b
 	return err
 }
 
-// MergeFormattedPageDto0x41Links2 performs a merge with any union data inside the FormattedPageDto0x41_Links, using the provided FormattedPageDto0x41Links2
-func (t *FormattedPageDto0x41_Links) MergeFormattedPageDto0x41Links2(v FormattedPageDto0x41Links2) error {
+// MergeFormattedPageDto0x42Links2 performs a merge with any union data inside the FormattedPageDto0x42_Links, using the provided FormattedPageDto0x42Links2
+func (t *FormattedPageDto0x42_Links) MergeFormattedPageDto0x42Links2(v FormattedPageDto0x42Links2) error {
 	b, err := json.Marshal(v)
 	if err != nil {
 		return err
@@ -10650,32 +10679,32 @@ func (t *FormattedPageDto0x41_Links) MergeFormattedPageDto0x41Links2(v Formatted
 	return err
 }
 
-func (t FormattedPageDto0x41_Links) MarshalJSON() ([]byte, error) {
+func (t FormattedPageDto0x42_Links) MarshalJSON() ([]byte, error) {
 	b, err := t.union.MarshalJSON()
 	return b, err
 }
 
-func (t *FormattedPageDto0x41_Links) UnmarshalJSON(b []byte) error {
+func (t *FormattedPageDto0x42_Links) UnmarshalJSON(b []byte) error {
 	err := t.union.UnmarshalJSON(b)
 	return err
 }
 
-// AsFormattedPageDto0x41Metadata0 returns the union data inside the FormattedPageDto0x41_Metadata as a FormattedPageDto0x41Metadata0
-func (t FormattedPageDto0x41_Metadata) AsFormattedPageDto0x41Metadata0() (FormattedPageDto0x41Metadata0, error) {
-	var body FormattedPageDto0x41Metadata0
+// AsFormattedPageDto0x42Metadata0 returns the union data inside the FormattedPageDto0x42_Metadata as a FormattedPageDto0x42Metadata0
+func (t FormattedPageDto0x42_Metadata) AsFormattedPageDto0x42Metadata0() (FormattedPageDto0x42Metadata0, error) {
+	var body FormattedPageDto0x42Metadata0
 	err := json.Unmarshal(t.union, &body)
 	return body, err
 }
 
-// FromFormattedPageDto0x41Metadata0 overwrites any union data inside the FormattedPageDto0x41_Metadata as the provided FormattedPageDto0x41Metadata0
-func (t *FormattedPageDto0x41_Metadata) FromFormattedPageDto0x41Metadata0(v FormattedPageDto0x41Metadata0) error {
+// FromFormattedPageDto0x42Metadata0 overwrites any union data inside the FormattedPageDto0x42_Metadata as the provided FormattedPageDto0x42Metadata0
+func (t *FormattedPageDto0x42_Metadata) FromFormattedPageDto0x42Metadata0(v FormattedPageDto0x42Metadata0) error {
 	b, err := json.Marshal(v)
 	t.union = b
 	return err
 }
 
-// MergeFormattedPageDto0x41Metadata0 performs a merge with any union data inside the FormattedPageDto0x41_Metadata, using the provided FormattedPageDto0x41Metadata0
-func (t *FormattedPageDto0x41_Metadata) MergeFormattedPageDto0x41Metadata0(v FormattedPageDto0x41Metadata0) error {
+// MergeFormattedPageDto0x42Metadata0 performs a merge with any union data inside the FormattedPageDto0x42_Metadata, using the provided FormattedPageDto0x42Metadata0
+func (t *FormattedPageDto0x42_Metadata) MergeFormattedPageDto0x42Metadata0(v FormattedPageDto0x42Metadata0) error {
 	b, err := json.Marshal(v)
 	if err != nil {
 		return err
@@ -10686,22 +10715,22 @@ func (t *FormattedPageDto0x41_Metadata) MergeFormattedPageDto0x41Metadata0(v For
 	return err
 }
 
-// AsFormattedPageDto0x41Metadata1 returns the union data inside the FormattedPageDto0x41_Metadata as a FormattedPageDto0x41Metadata1
-func (t FormattedPageDto0x41_Metadata) AsFormattedPageDto0x41Metadata1() (FormattedPageDto0x41Metadata1, error) {
-	var body FormattedPageDto0x41Metadata1
+// AsFormattedPageDto0x42Metadata1 returns the union data inside the FormattedPageDto0x42_Metadata as a FormattedPageDto0x42Metadata1
+func (t FormattedPageDto0x42_Metadata) AsFormattedPageDto0x42Metadata1() (FormattedPageDto0x42Metadata1, error) {
+	var body FormattedPageDto0x42Metadata1
 	err := json.Unmarshal(t.union, &body)
 	return body, err
 }
 
-// FromFormattedPageDto0x41Metadata1 overwrites any union data inside the FormattedPageDto0x41_Metadata as the provided FormattedPageDto0x41Metadata1
-func (t *FormattedPageDto0x41_Metadata) FromFormattedPageDto0x41Metadata1(v FormattedPageDto0x41Metadata1) error {
+// FromFormattedPageDto0x42Metadata1 overwrites any union data inside the FormattedPageDto0x42_Metadata as the provided FormattedPageDto0x42Metadata1
+func (t *FormattedPageDto0x42_Metadata) FromFormattedPageDto0x42Metadata1(v FormattedPageDto0x42Metadata1) error {
 	b, err := json.Marshal(v)
 	t.union = b
 	return err
 }
 
-// MergeFormattedPageDto0x41Metadata1 performs a merge with any union data inside the FormattedPageDto0x41_Metadata, using the provided FormattedPageDto0x41Metadata1
-func (t *FormattedPageDto0x41_Metadata) MergeFormattedPageDto0x41Metadata1(v FormattedPageDto0x41Metadata1) error {
+// MergeFormattedPageDto0x42Metadata1 performs a merge with any union data inside the FormattedPageDto0x42_Metadata, using the provided FormattedPageDto0x42Metadata1
+func (t *FormattedPageDto0x42_Metadata) MergeFormattedPageDto0x42Metadata1(v FormattedPageDto0x42Metadata1) error {
 	b, err := json.Marshal(v)
 	if err != nil {
 		return err
@@ -10712,32 +10741,32 @@ func (t *FormattedPageDto0x41_Metadata) MergeFormattedPageDto0x41Metadata1(v For
 	return err
 }
 
-func (t FormattedPageDto0x41_Metadata) MarshalJSON() ([]byte, error) {
+func (t FormattedPageDto0x42_Metadata) MarshalJSON() ([]byte, error) {
 	b, err := t.union.MarshalJSON()
 	return b, err
 }
 
-func (t *FormattedPageDto0x41_Metadata) UnmarshalJSON(b []byte) error {
+func (t *FormattedPageDto0x42_Metadata) UnmarshalJSON(b []byte) error {
 	err := t.union.UnmarshalJSON(b)
 	return err
 }
 
-// AsPseudoBoolean0x100 returns the union data inside the PseudoBoolean0x10 as a PseudoBoolean0x100
-func (t PseudoBoolean0x10) AsPseudoBoolean0x100() (PseudoBoolean0x100, error) {
-	var body PseudoBoolean0x100
+// AsPageSelection0x0f0 returns the union data inside the PageSelection0x0f as a PageSelection0x0f0
+func (t PageSelection0x0f) AsPageSelection0x0f0() (PageSelection0x0f0, error) {
+	var body PageSelection0x0f0
 	err := json.Unmarshal(t.union, &body)
 	return body, err
 }
 
-// FromPseudoBoolean0x100 overwrites any union data inside the PseudoBoolean0x10 as the provided PseudoBoolean0x100
-func (t *PseudoBoolean0x10) FromPseudoBoolean0x100(v PseudoBoolean0x100) error {
+// FromPageSelection0x0f0 overwrites any union data inside the PageSelection0x0f as the provided PageSelection0x0f0
+func (t *PageSelection0x0f) FromPageSelection0x0f0(v PageSelection0x0f0) error {
 	b, err := json.Marshal(v)
 	t.union = b
 	return err
 }
 
-// MergePseudoBoolean0x100 performs a merge with any union data inside the PseudoBoolean0x10, using the provided PseudoBoolean0x100
-func (t *PseudoBoolean0x10) MergePseudoBoolean0x100(v PseudoBoolean0x100) error {
+// MergePageSelection0x0f0 performs a merge with any union data inside the PageSelection0x0f, using the provided PageSelection0x0f0
+func (t *PageSelection0x0f) MergePageSelection0x0f0(v PageSelection0x0f0) error {
 	b, err := json.Marshal(v)
 	if err != nil {
 		return err
@@ -10748,22 +10777,22 @@ func (t *PseudoBoolean0x10) MergePseudoBoolean0x100(v PseudoBoolean0x100) error 
 	return err
 }
 
-// AsPseudoBoolean0x101 returns the union data inside the PseudoBoolean0x10 as a PseudoBoolean0x101
-func (t PseudoBoolean0x10) AsPseudoBoolean0x101() (PseudoBoolean0x101, error) {
-	var body PseudoBoolean0x101
+// AsPageSelection0x0f1 returns the union data inside the PageSelection0x0f as a PageSelection0x0f1
+func (t PageSelection0x0f) AsPageSelection0x0f1() (PageSelection0x0f1, error) {
+	var body PageSelection0x0f1
 	err := json.Unmarshal(t.union, &body)
 	return body, err
 }
 
-// FromPseudoBoolean0x101 overwrites any union data inside the PseudoBoolean0x10 as the provided PseudoBoolean0x101
-func (t *PseudoBoolean0x10) FromPseudoBoolean0x101(v PseudoBoolean0x101) error {
+// FromPageSelection0x0f1 overwrites any union data inside the PageSelection0x0f as the provided PageSelection0x0f1
+func (t *PageSelection0x0f) FromPageSelection0x0f1(v PageSelection0x0f1) error {
 	b, err := json.Marshal(v)
 	t.union = b
 	return err
 }
 
-// MergePseudoBoolean0x101 performs a merge with any union data inside the PseudoBoolean0x10, using the provided PseudoBoolean0x101
-func (t *PseudoBoolean0x10) MergePseudoBoolean0x101(v PseudoBoolean0x101) error {
+// MergePageSelection0x0f1 performs a merge with any union data inside the PageSelection0x0f, using the provided PageSelection0x0f1
+func (t *PageSelection0x0f) MergePageSelection0x0f1(v PageSelection0x0f1) error {
 	b, err := json.Marshal(v)
 	if err != nil {
 		return err
@@ -10774,12 +10803,162 @@ func (t *PseudoBoolean0x10) MergePseudoBoolean0x101(v PseudoBoolean0x101) error 
 	return err
 }
 
-func (t PseudoBoolean0x10) MarshalJSON() ([]byte, error) {
+// AsPageSelection0x0f2 returns the union data inside the PageSelection0x0f as a PageSelection0x0f2
+func (t PageSelection0x0f) AsPageSelection0x0f2() (PageSelection0x0f2, error) {
+	var body PageSelection0x0f2
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromPageSelection0x0f2 overwrites any union data inside the PageSelection0x0f as the provided PageSelection0x0f2
+func (t *PageSelection0x0f) FromPageSelection0x0f2(v PageSelection0x0f2) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergePageSelection0x0f2 performs a merge with any union data inside the PageSelection0x0f, using the provided PageSelection0x0f2
+func (t *PageSelection0x0f) MergePageSelection0x0f2(v PageSelection0x0f2) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+func (t PageSelection0x0f) MarshalJSON() ([]byte, error) {
 	b, err := t.union.MarshalJSON()
 	return b, err
 }
 
-func (t *PseudoBoolean0x10) UnmarshalJSON(b []byte) error {
+func (t *PageSelection0x0f) UnmarshalJSON(b []byte) error {
+	err := t.union.UnmarshalJSON(b)
+	return err
+}
+
+// AsPageSelection0x0f20 returns the union data inside the PageSelection0x0f_2_Item as a PageSelection0x0f20
+func (t PageSelection0x0f_2_Item) AsPageSelection0x0f20() (PageSelection0x0f20, error) {
+	var body PageSelection0x0f20
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromPageSelection0x0f20 overwrites any union data inside the PageSelection0x0f_2_Item as the provided PageSelection0x0f20
+func (t *PageSelection0x0f_2_Item) FromPageSelection0x0f20(v PageSelection0x0f20) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergePageSelection0x0f20 performs a merge with any union data inside the PageSelection0x0f_2_Item, using the provided PageSelection0x0f20
+func (t *PageSelection0x0f_2_Item) MergePageSelection0x0f20(v PageSelection0x0f20) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsPageSelection0x0f21 returns the union data inside the PageSelection0x0f_2_Item as a PageSelection0x0f21
+func (t PageSelection0x0f_2_Item) AsPageSelection0x0f21() (PageSelection0x0f21, error) {
+	var body PageSelection0x0f21
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromPageSelection0x0f21 overwrites any union data inside the PageSelection0x0f_2_Item as the provided PageSelection0x0f21
+func (t *PageSelection0x0f_2_Item) FromPageSelection0x0f21(v PageSelection0x0f21) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergePageSelection0x0f21 performs a merge with any union data inside the PageSelection0x0f_2_Item, using the provided PageSelection0x0f21
+func (t *PageSelection0x0f_2_Item) MergePageSelection0x0f21(v PageSelection0x0f21) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+func (t PageSelection0x0f_2_Item) MarshalJSON() ([]byte, error) {
+	b, err := t.union.MarshalJSON()
+	return b, err
+}
+
+func (t *PageSelection0x0f_2_Item) UnmarshalJSON(b []byte) error {
+	err := t.union.UnmarshalJSON(b)
+	return err
+}
+
+// AsPseudoBoolean0x110 returns the union data inside the PseudoBoolean0x11 as a PseudoBoolean0x110
+func (t PseudoBoolean0x11) AsPseudoBoolean0x110() (PseudoBoolean0x110, error) {
+	var body PseudoBoolean0x110
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromPseudoBoolean0x110 overwrites any union data inside the PseudoBoolean0x11 as the provided PseudoBoolean0x110
+func (t *PseudoBoolean0x11) FromPseudoBoolean0x110(v PseudoBoolean0x110) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergePseudoBoolean0x110 performs a merge with any union data inside the PseudoBoolean0x11, using the provided PseudoBoolean0x110
+func (t *PseudoBoolean0x11) MergePseudoBoolean0x110(v PseudoBoolean0x110) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsPseudoBoolean0x111 returns the union data inside the PseudoBoolean0x11 as a PseudoBoolean0x111
+func (t PseudoBoolean0x11) AsPseudoBoolean0x111() (PseudoBoolean0x111, error) {
+	var body PseudoBoolean0x111
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromPseudoBoolean0x111 overwrites any union data inside the PseudoBoolean0x11 as the provided PseudoBoolean0x111
+func (t *PseudoBoolean0x11) FromPseudoBoolean0x111(v PseudoBoolean0x111) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergePseudoBoolean0x111 performs a merge with any union data inside the PseudoBoolean0x11, using the provided PseudoBoolean0x111
+func (t *PseudoBoolean0x11) MergePseudoBoolean0x111(v PseudoBoolean0x111) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+func (t PseudoBoolean0x11) MarshalJSON() ([]byte, error) {
+	b, err := t.union.MarshalJSON()
+	return b, err
+}
+
+func (t *PseudoBoolean0x11) UnmarshalJSON(b []byte) error {
 	err := t.union.UnmarshalJSON(b)
 	return err
 }
@@ -10846,22 +11025,22 @@ func (t *PseudoBooleanLoose0x0c) UnmarshalJSON(b []byte) error {
 	return err
 }
 
-// AsRecordstringsymbolRecordstringsymbolRecordstringsymbolStringobject0x08object0x09object0x400 returns the union data inside the RecordstringsymbolRecordstringsymbolRecordstringsymbolStringobject0x08object0x09object0x40_AdditionalProperties as a RecordstringsymbolRecordstringsymbolRecordstringsymbolStringobject0x08object0x09object0x400
-func (t RecordstringsymbolRecordstringsymbolRecordstringsymbolStringobject0x08object0x09object0x40_AdditionalProperties) AsRecordstringsymbolRecordstringsymbolRecordstringsymbolStringobject0x08object0x09object0x400() (RecordstringsymbolRecordstringsymbolRecordstringsymbolStringobject0x08object0x09object0x400, error) {
-	var body RecordstringsymbolRecordstringsymbolRecordstringsymbolStringobject0x08object0x09object0x400
+// AsRecordstringsymbolRecordstringsymbolRecordstringsymbolStringobject0x08object0x09object0x410 returns the union data inside the RecordstringsymbolRecordstringsymbolRecordstringsymbolStringobject0x08object0x09object0x41_AdditionalProperties as a RecordstringsymbolRecordstringsymbolRecordstringsymbolStringobject0x08object0x09object0x410
+func (t RecordstringsymbolRecordstringsymbolRecordstringsymbolStringobject0x08object0x09object0x41_AdditionalProperties) AsRecordstringsymbolRecordstringsymbolRecordstringsymbolStringobject0x08object0x09object0x410() (RecordstringsymbolRecordstringsymbolRecordstringsymbolStringobject0x08object0x09object0x410, error) {
+	var body RecordstringsymbolRecordstringsymbolRecordstringsymbolStringobject0x08object0x09object0x410
 	err := json.Unmarshal(t.union, &body)
 	return body, err
 }
 
-// FromRecordstringsymbolRecordstringsymbolRecordstringsymbolStringobject0x08object0x09object0x400 overwrites any union data inside the RecordstringsymbolRecordstringsymbolRecordstringsymbolStringobject0x08object0x09object0x40_AdditionalProperties as the provided RecordstringsymbolRecordstringsymbolRecordstringsymbolStringobject0x08object0x09object0x400
-func (t *RecordstringsymbolRecordstringsymbolRecordstringsymbolStringobject0x08object0x09object0x40_AdditionalProperties) FromRecordstringsymbolRecordstringsymbolRecordstringsymbolStringobject0x08object0x09object0x400(v RecordstringsymbolRecordstringsymbolRecordstringsymbolStringobject0x08object0x09object0x400) error {
+// FromRecordstringsymbolRecordstringsymbolRecordstringsymbolStringobject0x08object0x09object0x410 overwrites any union data inside the RecordstringsymbolRecordstringsymbolRecordstringsymbolStringobject0x08object0x09object0x41_AdditionalProperties as the provided RecordstringsymbolRecordstringsymbolRecordstringsymbolStringobject0x08object0x09object0x410
+func (t *RecordstringsymbolRecordstringsymbolRecordstringsymbolStringobject0x08object0x09object0x41_AdditionalProperties) FromRecordstringsymbolRecordstringsymbolRecordstringsymbolStringobject0x08object0x09object0x410(v RecordstringsymbolRecordstringsymbolRecordstringsymbolStringobject0x08object0x09object0x410) error {
 	b, err := json.Marshal(v)
 	t.union = b
 	return err
 }
 
-// MergeRecordstringsymbolRecordstringsymbolRecordstringsymbolStringobject0x08object0x09object0x400 performs a merge with any union data inside the RecordstringsymbolRecordstringsymbolRecordstringsymbolStringobject0x08object0x09object0x40_AdditionalProperties, using the provided RecordstringsymbolRecordstringsymbolRecordstringsymbolStringobject0x08object0x09object0x400
-func (t *RecordstringsymbolRecordstringsymbolRecordstringsymbolStringobject0x08object0x09object0x40_AdditionalProperties) MergeRecordstringsymbolRecordstringsymbolRecordstringsymbolStringobject0x08object0x09object0x400(v RecordstringsymbolRecordstringsymbolRecordstringsymbolStringobject0x08object0x09object0x400) error {
+// MergeRecordstringsymbolRecordstringsymbolRecordstringsymbolStringobject0x08object0x09object0x410 performs a merge with any union data inside the RecordstringsymbolRecordstringsymbolRecordstringsymbolStringobject0x08object0x09object0x41_AdditionalProperties, using the provided RecordstringsymbolRecordstringsymbolRecordstringsymbolStringobject0x08object0x09object0x410
+func (t *RecordstringsymbolRecordstringsymbolRecordstringsymbolStringobject0x08object0x09object0x41_AdditionalProperties) MergeRecordstringsymbolRecordstringsymbolRecordstringsymbolStringobject0x08object0x09object0x410(v RecordstringsymbolRecordstringsymbolRecordstringsymbolStringobject0x08object0x09object0x410) error {
 	b, err := json.Marshal(v)
 	if err != nil {
 		return err
@@ -10872,22 +11051,22 @@ func (t *RecordstringsymbolRecordstringsymbolRecordstringsymbolStringobject0x08o
 	return err
 }
 
-// AsRecordstringsymbolRecordstringsymbolRecordstringsymbolStringobject0x08object0x09object0x401 returns the union data inside the RecordstringsymbolRecordstringsymbolRecordstringsymbolStringobject0x08object0x09object0x40_AdditionalProperties as a RecordstringsymbolRecordstringsymbolRecordstringsymbolStringobject0x08object0x09object0x401
-func (t RecordstringsymbolRecordstringsymbolRecordstringsymbolStringobject0x08object0x09object0x40_AdditionalProperties) AsRecordstringsymbolRecordstringsymbolRecordstringsymbolStringobject0x08object0x09object0x401() (RecordstringsymbolRecordstringsymbolRecordstringsymbolStringobject0x08object0x09object0x401, error) {
-	var body RecordstringsymbolRecordstringsymbolRecordstringsymbolStringobject0x08object0x09object0x401
+// AsRecordstringsymbolRecordstringsymbolRecordstringsymbolStringobject0x08object0x09object0x411 returns the union data inside the RecordstringsymbolRecordstringsymbolRecordstringsymbolStringobject0x08object0x09object0x41_AdditionalProperties as a RecordstringsymbolRecordstringsymbolRecordstringsymbolStringobject0x08object0x09object0x411
+func (t RecordstringsymbolRecordstringsymbolRecordstringsymbolStringobject0x08object0x09object0x41_AdditionalProperties) AsRecordstringsymbolRecordstringsymbolRecordstringsymbolStringobject0x08object0x09object0x411() (RecordstringsymbolRecordstringsymbolRecordstringsymbolStringobject0x08object0x09object0x411, error) {
+	var body RecordstringsymbolRecordstringsymbolRecordstringsymbolStringobject0x08object0x09object0x411
 	err := json.Unmarshal(t.union, &body)
 	return body, err
 }
 
-// FromRecordstringsymbolRecordstringsymbolRecordstringsymbolStringobject0x08object0x09object0x401 overwrites any union data inside the RecordstringsymbolRecordstringsymbolRecordstringsymbolStringobject0x08object0x09object0x40_AdditionalProperties as the provided RecordstringsymbolRecordstringsymbolRecordstringsymbolStringobject0x08object0x09object0x401
-func (t *RecordstringsymbolRecordstringsymbolRecordstringsymbolStringobject0x08object0x09object0x40_AdditionalProperties) FromRecordstringsymbolRecordstringsymbolRecordstringsymbolStringobject0x08object0x09object0x401(v RecordstringsymbolRecordstringsymbolRecordstringsymbolStringobject0x08object0x09object0x401) error {
+// FromRecordstringsymbolRecordstringsymbolRecordstringsymbolStringobject0x08object0x09object0x411 overwrites any union data inside the RecordstringsymbolRecordstringsymbolRecordstringsymbolStringobject0x08object0x09object0x41_AdditionalProperties as the provided RecordstringsymbolRecordstringsymbolRecordstringsymbolStringobject0x08object0x09object0x411
+func (t *RecordstringsymbolRecordstringsymbolRecordstringsymbolStringobject0x08object0x09object0x41_AdditionalProperties) FromRecordstringsymbolRecordstringsymbolRecordstringsymbolStringobject0x08object0x09object0x411(v RecordstringsymbolRecordstringsymbolRecordstringsymbolStringobject0x08object0x09object0x411) error {
 	b, err := json.Marshal(v)
 	t.union = b
 	return err
 }
 
-// MergeRecordstringsymbolRecordstringsymbolRecordstringsymbolStringobject0x08object0x09object0x401 performs a merge with any union data inside the RecordstringsymbolRecordstringsymbolRecordstringsymbolStringobject0x08object0x09object0x40_AdditionalProperties, using the provided RecordstringsymbolRecordstringsymbolRecordstringsymbolStringobject0x08object0x09object0x401
-func (t *RecordstringsymbolRecordstringsymbolRecordstringsymbolStringobject0x08object0x09object0x40_AdditionalProperties) MergeRecordstringsymbolRecordstringsymbolRecordstringsymbolStringobject0x08object0x09object0x401(v RecordstringsymbolRecordstringsymbolRecordstringsymbolStringobject0x08object0x09object0x401) error {
+// MergeRecordstringsymbolRecordstringsymbolRecordstringsymbolStringobject0x08object0x09object0x411 performs a merge with any union data inside the RecordstringsymbolRecordstringsymbolRecordstringsymbolStringobject0x08object0x09object0x41_AdditionalProperties, using the provided RecordstringsymbolRecordstringsymbolRecordstringsymbolStringobject0x08object0x09object0x411
+func (t *RecordstringsymbolRecordstringsymbolRecordstringsymbolStringobject0x08object0x09object0x41_AdditionalProperties) MergeRecordstringsymbolRecordstringsymbolRecordstringsymbolStringobject0x08object0x09object0x411(v RecordstringsymbolRecordstringsymbolRecordstringsymbolStringobject0x08object0x09object0x411) error {
 	b, err := json.Marshal(v)
 	if err != nil {
 		return err
@@ -10898,12 +11077,12 @@ func (t *RecordstringsymbolRecordstringsymbolRecordstringsymbolStringobject0x08o
 	return err
 }
 
-func (t RecordstringsymbolRecordstringsymbolRecordstringsymbolStringobject0x08object0x09object0x40_AdditionalProperties) MarshalJSON() ([]byte, error) {
+func (t RecordstringsymbolRecordstringsymbolRecordstringsymbolStringobject0x08object0x09object0x41_AdditionalProperties) MarshalJSON() ([]byte, error) {
 	b, err := t.union.MarshalJSON()
 	return b, err
 }
 
-func (t *RecordstringsymbolRecordstringsymbolRecordstringsymbolStringobject0x08object0x09object0x40_AdditionalProperties) UnmarshalJSON(b []byte) error {
+func (t *RecordstringsymbolRecordstringsymbolRecordstringsymbolStringobject0x08object0x09object0x41_AdditionalProperties) UnmarshalJSON(b []byte) error {
 	err := t.union.UnmarshalJSON(b)
 	return err
 }

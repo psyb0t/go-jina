@@ -2,6 +2,12 @@
 
 All notable changes per release. Versions follow [semver](https://semver.org).
 
+## v0.2.0, 2026-10-19
+
+- In `jinareader`, `Page` on `GetParams`, `GetTargetUrlParams`, `PostParams`, `PostTargetUrlParams`, `PostJSONBody`, `PostFormdataBody`, `PostMultipartBody` and their `PostTargetUrl...` equivalents changed from `*float64` to `*PageSelection0x0f`. `PageSelection0x0f` takes a page number, a string range such as "1,3,5-7", or a list of numbers and ranges, matching the Reader API's page selection syntax. Code that sets `Page` to a `*float64` must change to build a `PageSelection0x0f` instead.
+- Adding that page selection type shifted the position-based names oapi-codegen gives every other generated anonymous and union type in `jinareader`. Most of the package's other exported identifiers were renamed one slot up, for example `Cookie0x16` is now `Cookie0x17`, `Enum0x14` is now `Enum0x15`, and `FormattedPageDto0x41` is now `FormattedPageDto0x42`. Code that names one of these generated types directly must update it; code that only calls the client methods and reads named fields is unaffected.
+- `jinareader` now generates from Jina Reader API spec version 0.5.0+eaf3e28, up from 0.5.0+a72eff0. The `jina` package and its spec version are unchanged.
+
 ## v0.1.2, 2026-10-17
 
 - Documentation only. The agent skill explains how to look up every endpoint, parameter and model with `go doc` or on pkg.go.dev, and declares its license.
