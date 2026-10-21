@@ -2,6 +2,12 @@
 
 All notable changes per release. Versions follow [semver](https://semver.org).
 
+## v0.2.2, 2026-10-21
+
+- The module requires Go 1.26.10, up from 1.26.9, and the development image uses it. Go 1.26.10 fixes GO-2026-6809 in `crypto/x509`, which govulncheck reports for every package that makes HTTPS requests, so the v0.2.1 release pipeline failed its security scan and v0.2.1 was never published.
+- Includes the v0.2.1 changes: the spec rewrite handles the Reader API's `/echo/{rest}` endpoint, and the issue-mirror pull is staggered.
+- Generated from the same spec versions as v0.2.0.
+
 ## v0.2.1, 2026-10-21
 
 - Regeneration no longer fails on the Reader API's new `/echo/{rest}` endpoint. Its request bodies declare an empty `allOf`, which made oapi-codegen panic, and its `rest` path parameter has no schema. The spec rewrite now drops empty `allOf` arrays and gives schemaless parameters `type: string`. The generated packages are unchanged in this release; the next regeneration picks up the endpoint.

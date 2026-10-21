@@ -15,7 +15,7 @@ Data flow per package, declared in its `gen.go`: `scripts/fetch-spec.sh` (downlo
 
 ## Stack
 
-- Go 1.26.9. oapi-codegen v2 as a `go.mod` tool; `github.com/oapi-codegen/runtime` at runtime.
+- Go 1.26.10. oapi-codegen v2 as a `go.mod` tool; `github.com/oapi-codegen/runtime` at runtime.
 - jq for the spec patches. No hand-written library code.
 
 ## Layout
