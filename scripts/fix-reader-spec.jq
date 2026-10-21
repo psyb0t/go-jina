@@ -14,6 +14,13 @@
 #    field a plain interface{} and always serializes it, so a request that
 #    leaves it unset panics on the nil value. On the wire a query or header
 #    value is a string anyway; a JSON value goes in as its encoded text.
+# 4. Empty `allOf` arrays are removed. oapi-codegen reads the first member of
+#    every `allOf` without checking its length and panics on `allOf: []`, as
+#    the request bodies of the `/echo/{rest}` endpoint declare. Without it the
+#    schema allows any value, which is what an empty `allOf` means.
+# 5. Parameters with neither `schema` nor `content` become `type: string`.
+#    oapi-codegen refuses to generate a parameter without one, and the `rest`
+#    path parameter of `/echo/{rest}` has none.
 
 def untyped:
   (has("type") or has("$ref") or has("oneOf") or has("anyOf") or has("allOf")) | not;
@@ -52,4 +59,24 @@ def type_untyped_params:
     else . end
   ));
 
-rename_url_param | drop_untyped_nullable_maps | type_untyped_params
+def drop_empty_allof:
+  walk(
+    if type == "object" and (.allOf | type) == "array" and (.allOf | length) == 0 then
+      del(.allOf)
+    else . end
+  );
+
+def type_schemaless_params:
+  def fix: map(if (has("schema") or has("content")) | not then . + {schema: {type: "string"}} else . end);
+  .paths |= map_values(
+    (if (.parameters | type) == "array" then .parameters |= fix else . end)
+    | map_values(
+        if type == "object" and (.parameters | type) == "array" then .parameters |= fix else . end
+      )
+  );
+
+rename_url_param
+| drop_untyped_nullable_maps
+| type_untyped_params
+| drop_empty_allof
+| type_schemaless_params

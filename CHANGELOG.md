@@ -2,6 +2,12 @@
 
 All notable changes per release. Versions follow [semver](https://semver.org).
 
+## v0.2.1, 2026-10-21
+
+- Regeneration no longer fails on the Reader API's new `/echo/{rest}` endpoint. Its request bodies declare an empty `allOf`, which made oapi-codegen panic, and its `rest` path parameter has no schema. The spec rewrite now drops empty `allOf` arrays and gives schemaless parameters `type: string`. The generated packages are unchanged in this release; the next regeneration picks up the endpoint.
+- The scheduled issue-mirror pull runs at a staggered time instead of a shared minute.
+- Generated from the same spec versions as v0.2.0.
+
 ## v0.2.0, 2026-10-19
 
 - In `jinareader`, `Page` on `GetParams`, `GetTargetUrlParams`, `PostParams`, `PostTargetUrlParams`, `PostJSONBody`, `PostFormdataBody`, `PostMultipartBody` and their `PostTargetUrl...` equivalents changed from `*float64` to `*PageSelection0x0f`. `PageSelection0x0f` takes a page number, a string range such as "1,3,5-7", or a list of numbers and ranges, matching the Reader API's page selection syntax. Code that sets `Page` to a `*float64` must change to build a `PageSelection0x0f` instead.
