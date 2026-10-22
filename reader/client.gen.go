@@ -124,6 +124,196 @@ type ClientInterface interface {
 	// Corresponds with POST / (the `Post` operationId).
 	PostWithFormdataBody(ctx context.Context, params *PostParams, body PostFormdataRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error)
 
+	// DeleteEcho echoAtRoot
+	//
+	// Echo back the details of the incoming HTTP request, with the Cloudflare-reported country of the client IP.
+	//
+	// Corresponds with DELETE /echo (the `DeleteEcho` operationId).
+	DeleteEcho(ctx context.Context, reqEditors ...RequestEditorFn) (*http.Response, error)
+
+	// GetEcho echoAtRoot
+	//
+	// Echo back the details of the incoming HTTP request, with the Cloudflare-reported country of the client IP.
+	//
+	// Corresponds with GET /echo (the `GetEcho` operationId).
+	GetEcho(ctx context.Context, reqEditors ...RequestEditorFn) (*http.Response, error)
+
+	// PatchEchoWithBody echoAtRoot
+	//
+	// Echo back the details of the incoming HTTP request, with the Cloudflare-reported country of the client IP.
+	//
+	// Takes any type of body and a specified content type.
+	//
+	// Corresponds with PATCH /echo (the `PatchEcho` operationId).
+	PatchEchoWithBody(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error)
+
+	// PatchEcho echoAtRoot
+	//
+	// Echo back the details of the incoming HTTP request, with the Cloudflare-reported country of the client IP.
+	//
+	// Takes a body of the `application/json` content type.
+	//
+	// Corresponds with PATCH /echo (the `PatchEcho` operationId).
+	PatchEcho(ctx context.Context, body PatchEchoJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error)
+
+	// PatchEchoWithFormdataBody echoAtRoot
+	//
+	// Echo back the details of the incoming HTTP request, with the Cloudflare-reported country of the client IP.
+	//
+	// Takes a body of the `application/x-www-form-urlencoded` content type.
+	//
+	// Corresponds with PATCH /echo (the `PatchEcho` operationId).
+	PatchEchoWithFormdataBody(ctx context.Context, body PatchEchoFormdataRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error)
+
+	// PostEchoWithBody echoAtRoot
+	//
+	// Echo back the details of the incoming HTTP request, with the Cloudflare-reported country of the client IP.
+	//
+	// Takes any type of body and a specified content type.
+	//
+	// Corresponds with POST /echo (the `PostEcho` operationId).
+	PostEchoWithBody(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error)
+
+	// PostEcho echoAtRoot
+	//
+	// Echo back the details of the incoming HTTP request, with the Cloudflare-reported country of the client IP.
+	//
+	// Takes a body of the `application/json` content type.
+	//
+	// Corresponds with POST /echo (the `PostEcho` operationId).
+	PostEcho(ctx context.Context, body PostEchoJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error)
+
+	// PostEchoWithFormdataBody echoAtRoot
+	//
+	// Echo back the details of the incoming HTTP request, with the Cloudflare-reported country of the client IP.
+	//
+	// Takes a body of the `application/x-www-form-urlencoded` content type.
+	//
+	// Corresponds with POST /echo (the `PostEcho` operationId).
+	PostEchoWithFormdataBody(ctx context.Context, body PostEchoFormdataRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error)
+
+	// PutEchoWithBody echoAtRoot
+	//
+	// Echo back the details of the incoming HTTP request, with the Cloudflare-reported country of the client IP.
+	//
+	// Takes any type of body and a specified content type.
+	//
+	// Corresponds with PUT /echo (the `PutEcho` operationId).
+	PutEchoWithBody(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error)
+
+	// PutEcho echoAtRoot
+	//
+	// Echo back the details of the incoming HTTP request, with the Cloudflare-reported country of the client IP.
+	//
+	// Takes a body of the `application/json` content type.
+	//
+	// Corresponds with PUT /echo (the `PutEcho` operationId).
+	PutEcho(ctx context.Context, body PutEchoJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error)
+
+	// PutEchoWithFormdataBody echoAtRoot
+	//
+	// Echo back the details of the incoming HTTP request, with the Cloudflare-reported country of the client IP.
+	//
+	// Takes a body of the `application/x-www-form-urlencoded` content type.
+	//
+	// Corresponds with PUT /echo (the `PutEcho` operationId).
+	PutEchoWithFormdataBody(ctx context.Context, body PutEchoFormdataRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error)
+
+	// DeleteEchoRest echo
+	//
+	// Echo back the details of the incoming HTTP request, with the Cloudflare-reported country of the client IP.
+	//
+	// Corresponds with DELETE /echo/{rest} (the `DeleteEchoRest` operationId).
+	DeleteEchoRest(ctx context.Context, rest string, reqEditors ...RequestEditorFn) (*http.Response, error)
+
+	// GetEchoRest echo
+	//
+	// Echo back the details of the incoming HTTP request, with the Cloudflare-reported country of the client IP.
+	//
+	// Corresponds with GET /echo/{rest} (the `GetEchoRest` operationId).
+	GetEchoRest(ctx context.Context, rest string, reqEditors ...RequestEditorFn) (*http.Response, error)
+
+	// PatchEchoRestWithBody echo
+	//
+	// Echo back the details of the incoming HTTP request, with the Cloudflare-reported country of the client IP.
+	//
+	// Takes any type of body and a specified content type.
+	//
+	// Corresponds with PATCH /echo/{rest} (the `PatchEchoRest` operationId).
+	PatchEchoRestWithBody(ctx context.Context, rest string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error)
+
+	// PatchEchoRest echo
+	//
+	// Echo back the details of the incoming HTTP request, with the Cloudflare-reported country of the client IP.
+	//
+	// Takes a body of the `application/json` content type.
+	//
+	// Corresponds with PATCH /echo/{rest} (the `PatchEchoRest` operationId).
+	PatchEchoRest(ctx context.Context, rest string, body PatchEchoRestJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error)
+
+	// PatchEchoRestWithFormdataBody echo
+	//
+	// Echo back the details of the incoming HTTP request, with the Cloudflare-reported country of the client IP.
+	//
+	// Takes a body of the `application/x-www-form-urlencoded` content type.
+	//
+	// Corresponds with PATCH /echo/{rest} (the `PatchEchoRest` operationId).
+	PatchEchoRestWithFormdataBody(ctx context.Context, rest string, body PatchEchoRestFormdataRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error)
+
+	// PostEchoRestWithBody echo
+	//
+	// Echo back the details of the incoming HTTP request, with the Cloudflare-reported country of the client IP.
+	//
+	// Takes any type of body and a specified content type.
+	//
+	// Corresponds with POST /echo/{rest} (the `PostEchoRest` operationId).
+	PostEchoRestWithBody(ctx context.Context, rest string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error)
+
+	// PostEchoRest echo
+	//
+	// Echo back the details of the incoming HTTP request, with the Cloudflare-reported country of the client IP.
+	//
+	// Takes a body of the `application/json` content type.
+	//
+	// Corresponds with POST /echo/{rest} (the `PostEchoRest` operationId).
+	PostEchoRest(ctx context.Context, rest string, body PostEchoRestJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error)
+
+	// PostEchoRestWithFormdataBody echo
+	//
+	// Echo back the details of the incoming HTTP request, with the Cloudflare-reported country of the client IP.
+	//
+	// Takes a body of the `application/x-www-form-urlencoded` content type.
+	//
+	// Corresponds with POST /echo/{rest} (the `PostEchoRest` operationId).
+	PostEchoRestWithFormdataBody(ctx context.Context, rest string, body PostEchoRestFormdataRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error)
+
+	// PutEchoRestWithBody echo
+	//
+	// Echo back the details of the incoming HTTP request, with the Cloudflare-reported country of the client IP.
+	//
+	// Takes any type of body and a specified content type.
+	//
+	// Corresponds with PUT /echo/{rest} (the `PutEchoRest` operationId).
+	PutEchoRestWithBody(ctx context.Context, rest string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error)
+
+	// PutEchoRest echo
+	//
+	// Echo back the details of the incoming HTTP request, with the Cloudflare-reported country of the client IP.
+	//
+	// Takes a body of the `application/json` content type.
+	//
+	// Corresponds with PUT /echo/{rest} (the `PutEchoRest` operationId).
+	PutEchoRest(ctx context.Context, rest string, body PutEchoRestJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error)
+
+	// PutEchoRestWithFormdataBody echo
+	//
+	// Echo back the details of the incoming HTTP request, with the Cloudflare-reported country of the client IP.
+	//
+	// Takes a body of the `application/x-www-form-urlencoded` content type.
+	//
+	// Corresponds with PUT /echo/{rest} (the `PutEchoRest` operationId).
+	PutEchoRestWithFormdataBody(ctx context.Context, rest string, body PutEchoRestFormdataRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error)
+
 	// GetEphemeralEncodedFid getEphemeral
 	//
 	// Get embedded ephemeral resources, including ephemeral resources such as short-lived signed links to files produced by a request. Links expire within 24 hours.
@@ -257,6 +447,416 @@ func (c *Client) Post(ctx context.Context, params *PostParams, body PostJSONRequ
 // Corresponds with POST / (the `Post` operationId).
 func (c *Client) PostWithFormdataBody(ctx context.Context, params *PostParams, body PostFormdataRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
 	req, err := NewPostRequestWithFormdataBody(c.Server, params, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+// DeleteEcho echoAtRoot
+//
+// Echo back the details of the incoming HTTP request, with the Cloudflare-reported country of the client IP.
+//
+// Corresponds with DELETE /echo (the `DeleteEcho` operationId).
+func (c *Client) DeleteEcho(ctx context.Context, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewDeleteEchoRequest(c.Server)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+// GetEcho echoAtRoot
+//
+// Echo back the details of the incoming HTTP request, with the Cloudflare-reported country of the client IP.
+//
+// Corresponds with GET /echo (the `GetEcho` operationId).
+func (c *Client) GetEcho(ctx context.Context, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewGetEchoRequest(c.Server)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+// PatchEchoWithBody echoAtRoot
+//
+// Echo back the details of the incoming HTTP request, with the Cloudflare-reported country of the client IP.
+//
+// Takes any type of body and a specified content type.
+//
+// Corresponds with PATCH /echo (the `PatchEcho` operationId).
+func (c *Client) PatchEchoWithBody(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewPatchEchoRequestWithBody(c.Server, contentType, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+// PatchEcho echoAtRoot
+//
+// Echo back the details of the incoming HTTP request, with the Cloudflare-reported country of the client IP.
+//
+// Takes a body of the `application/json` content type.
+//
+// Corresponds with PATCH /echo (the `PatchEcho` operationId).
+func (c *Client) PatchEcho(ctx context.Context, body PatchEchoJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewPatchEchoRequest(c.Server, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+// PatchEchoWithFormdataBody echoAtRoot
+//
+// Echo back the details of the incoming HTTP request, with the Cloudflare-reported country of the client IP.
+//
+// Takes a body of the `application/x-www-form-urlencoded` content type.
+//
+// Corresponds with PATCH /echo (the `PatchEcho` operationId).
+func (c *Client) PatchEchoWithFormdataBody(ctx context.Context, body PatchEchoFormdataRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewPatchEchoRequestWithFormdataBody(c.Server, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+// PostEchoWithBody echoAtRoot
+//
+// Echo back the details of the incoming HTTP request, with the Cloudflare-reported country of the client IP.
+//
+// Takes any type of body and a specified content type.
+//
+// Corresponds with POST /echo (the `PostEcho` operationId).
+func (c *Client) PostEchoWithBody(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewPostEchoRequestWithBody(c.Server, contentType, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+// PostEcho echoAtRoot
+//
+// Echo back the details of the incoming HTTP request, with the Cloudflare-reported country of the client IP.
+//
+// Takes a body of the `application/json` content type.
+//
+// Corresponds with POST /echo (the `PostEcho` operationId).
+func (c *Client) PostEcho(ctx context.Context, body PostEchoJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewPostEchoRequest(c.Server, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+// PostEchoWithFormdataBody echoAtRoot
+//
+// Echo back the details of the incoming HTTP request, with the Cloudflare-reported country of the client IP.
+//
+// Takes a body of the `application/x-www-form-urlencoded` content type.
+//
+// Corresponds with POST /echo (the `PostEcho` operationId).
+func (c *Client) PostEchoWithFormdataBody(ctx context.Context, body PostEchoFormdataRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewPostEchoRequestWithFormdataBody(c.Server, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+// PutEchoWithBody echoAtRoot
+//
+// Echo back the details of the incoming HTTP request, with the Cloudflare-reported country of the client IP.
+//
+// Takes any type of body and a specified content type.
+//
+// Corresponds with PUT /echo (the `PutEcho` operationId).
+func (c *Client) PutEchoWithBody(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewPutEchoRequestWithBody(c.Server, contentType, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+// PutEcho echoAtRoot
+//
+// Echo back the details of the incoming HTTP request, with the Cloudflare-reported country of the client IP.
+//
+// Takes a body of the `application/json` content type.
+//
+// Corresponds with PUT /echo (the `PutEcho` operationId).
+func (c *Client) PutEcho(ctx context.Context, body PutEchoJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewPutEchoRequest(c.Server, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+// PutEchoWithFormdataBody echoAtRoot
+//
+// Echo back the details of the incoming HTTP request, with the Cloudflare-reported country of the client IP.
+//
+// Takes a body of the `application/x-www-form-urlencoded` content type.
+//
+// Corresponds with PUT /echo (the `PutEcho` operationId).
+func (c *Client) PutEchoWithFormdataBody(ctx context.Context, body PutEchoFormdataRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewPutEchoRequestWithFormdataBody(c.Server, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+// DeleteEchoRest echo
+//
+// Echo back the details of the incoming HTTP request, with the Cloudflare-reported country of the client IP.
+//
+// Corresponds with DELETE /echo/{rest} (the `DeleteEchoRest` operationId).
+func (c *Client) DeleteEchoRest(ctx context.Context, rest string, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewDeleteEchoRestRequest(c.Server, rest)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+// GetEchoRest echo
+//
+// Echo back the details of the incoming HTTP request, with the Cloudflare-reported country of the client IP.
+//
+// Corresponds with GET /echo/{rest} (the `GetEchoRest` operationId).
+func (c *Client) GetEchoRest(ctx context.Context, rest string, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewGetEchoRestRequest(c.Server, rest)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+// PatchEchoRestWithBody echo
+//
+// Echo back the details of the incoming HTTP request, with the Cloudflare-reported country of the client IP.
+//
+// Takes any type of body and a specified content type.
+//
+// Corresponds with PATCH /echo/{rest} (the `PatchEchoRest` operationId).
+func (c *Client) PatchEchoRestWithBody(ctx context.Context, rest string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewPatchEchoRestRequestWithBody(c.Server, rest, contentType, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+// PatchEchoRest echo
+//
+// Echo back the details of the incoming HTTP request, with the Cloudflare-reported country of the client IP.
+//
+// Takes a body of the `application/json` content type.
+//
+// Corresponds with PATCH /echo/{rest} (the `PatchEchoRest` operationId).
+func (c *Client) PatchEchoRest(ctx context.Context, rest string, body PatchEchoRestJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewPatchEchoRestRequest(c.Server, rest, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+// PatchEchoRestWithFormdataBody echo
+//
+// Echo back the details of the incoming HTTP request, with the Cloudflare-reported country of the client IP.
+//
+// Takes a body of the `application/x-www-form-urlencoded` content type.
+//
+// Corresponds with PATCH /echo/{rest} (the `PatchEchoRest` operationId).
+func (c *Client) PatchEchoRestWithFormdataBody(ctx context.Context, rest string, body PatchEchoRestFormdataRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewPatchEchoRestRequestWithFormdataBody(c.Server, rest, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+// PostEchoRestWithBody echo
+//
+// Echo back the details of the incoming HTTP request, with the Cloudflare-reported country of the client IP.
+//
+// Takes any type of body and a specified content type.
+//
+// Corresponds with POST /echo/{rest} (the `PostEchoRest` operationId).
+func (c *Client) PostEchoRestWithBody(ctx context.Context, rest string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewPostEchoRestRequestWithBody(c.Server, rest, contentType, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+// PostEchoRest echo
+//
+// Echo back the details of the incoming HTTP request, with the Cloudflare-reported country of the client IP.
+//
+// Takes a body of the `application/json` content type.
+//
+// Corresponds with POST /echo/{rest} (the `PostEchoRest` operationId).
+func (c *Client) PostEchoRest(ctx context.Context, rest string, body PostEchoRestJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewPostEchoRestRequest(c.Server, rest, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+// PostEchoRestWithFormdataBody echo
+//
+// Echo back the details of the incoming HTTP request, with the Cloudflare-reported country of the client IP.
+//
+// Takes a body of the `application/x-www-form-urlencoded` content type.
+//
+// Corresponds with POST /echo/{rest} (the `PostEchoRest` operationId).
+func (c *Client) PostEchoRestWithFormdataBody(ctx context.Context, rest string, body PostEchoRestFormdataRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewPostEchoRestRequestWithFormdataBody(c.Server, rest, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+// PutEchoRestWithBody echo
+//
+// Echo back the details of the incoming HTTP request, with the Cloudflare-reported country of the client IP.
+//
+// Takes any type of body and a specified content type.
+//
+// Corresponds with PUT /echo/{rest} (the `PutEchoRest` operationId).
+func (c *Client) PutEchoRestWithBody(ctx context.Context, rest string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewPutEchoRestRequestWithBody(c.Server, rest, contentType, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+// PutEchoRest echo
+//
+// Echo back the details of the incoming HTTP request, with the Cloudflare-reported country of the client IP.
+//
+// Takes a body of the `application/json` content type.
+//
+// Corresponds with PUT /echo/{rest} (the `PutEchoRest` operationId).
+func (c *Client) PutEchoRest(ctx context.Context, rest string, body PutEchoRestJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewPutEchoRestRequest(c.Server, rest, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+// PutEchoRestWithFormdataBody echo
+//
+// Echo back the details of the incoming HTTP request, with the Cloudflare-reported country of the client IP.
+//
+// Takes a body of the `application/x-www-form-urlencoded` content type.
+//
+// Corresponds with PUT /echo/{rest} (the `PutEchoRest` operationId).
+func (c *Client) PutEchoRestWithFormdataBody(ctx context.Context, rest string, body PutEchoRestFormdataRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewPutEchoRestRequestWithFormdataBody(c.Server, rest, body)
 	if err != nil {
 		return nil, err
 	}
@@ -2781,6 +3381,455 @@ func NewPostRequestWithBody(server string, params *PostParams, contentType strin
 		}
 
 	}
+
+	return req, nil
+}
+
+// NewDeleteEchoRequest constructs an http.Request for the DeleteEcho method
+func NewDeleteEchoRequest(server string) (*http.Request, error) {
+	var err error
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/echo")
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	req, err := http.NewRequest(http.MethodDelete, queryURL.String(), nil)
+	if err != nil {
+		return nil, err
+	}
+
+	return req, nil
+}
+
+// NewGetEchoRequest constructs an http.Request for the GetEcho method
+func NewGetEchoRequest(server string) (*http.Request, error) {
+	var err error
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/echo")
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	req, err := http.NewRequest(http.MethodGet, queryURL.String(), nil)
+	if err != nil {
+		return nil, err
+	}
+
+	return req, nil
+}
+
+// NewPatchEchoRequest calls the generic PatchEcho builder with application/json body
+func NewPatchEchoRequest(server string, body PatchEchoJSONRequestBody) (*http.Request, error) {
+	var bodyReader io.Reader
+	buf, err := json.Marshal(body)
+	if err != nil {
+		return nil, err
+	}
+	bodyReader = bytes.NewReader(buf)
+	return NewPatchEchoRequestWithBody(server, "application/json", bodyReader)
+}
+
+// NewPatchEchoRequestWithFormdataBody calls the generic PatchEcho builder with application/x-www-form-urlencoded body
+func NewPatchEchoRequestWithFormdataBody(server string, body PatchEchoFormdataRequestBody) (*http.Request, error) {
+	var bodyReader io.Reader
+	bodyStr, err := runtime.MarshalForm(body, nil)
+	if err != nil {
+		return nil, err
+	}
+	bodyReader = strings.NewReader(bodyStr.Encode())
+	return NewPatchEchoRequestWithBody(server, "application/x-www-form-urlencoded", bodyReader)
+}
+
+// NewPatchEchoRequestWithBody constructs an http.Request for the PatchEcho method, with any body, and a specified content type
+func NewPatchEchoRequestWithBody(server string, contentType string, body io.Reader) (*http.Request, error) {
+	var err error
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/echo")
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	req, err := http.NewRequest(http.MethodPatch, queryURL.String(), body)
+	if err != nil {
+		return nil, err
+	}
+
+	req.Header.Add("Content-Type", contentType)
+
+	return req, nil
+}
+
+// NewPostEchoRequest calls the generic PostEcho builder with application/json body
+func NewPostEchoRequest(server string, body PostEchoJSONRequestBody) (*http.Request, error) {
+	var bodyReader io.Reader
+	buf, err := json.Marshal(body)
+	if err != nil {
+		return nil, err
+	}
+	bodyReader = bytes.NewReader(buf)
+	return NewPostEchoRequestWithBody(server, "application/json", bodyReader)
+}
+
+// NewPostEchoRequestWithFormdataBody calls the generic PostEcho builder with application/x-www-form-urlencoded body
+func NewPostEchoRequestWithFormdataBody(server string, body PostEchoFormdataRequestBody) (*http.Request, error) {
+	var bodyReader io.Reader
+	bodyStr, err := runtime.MarshalForm(body, nil)
+	if err != nil {
+		return nil, err
+	}
+	bodyReader = strings.NewReader(bodyStr.Encode())
+	return NewPostEchoRequestWithBody(server, "application/x-www-form-urlencoded", bodyReader)
+}
+
+// NewPostEchoRequestWithBody constructs an http.Request for the PostEcho method, with any body, and a specified content type
+func NewPostEchoRequestWithBody(server string, contentType string, body io.Reader) (*http.Request, error) {
+	var err error
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/echo")
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	req, err := http.NewRequest(http.MethodPost, queryURL.String(), body)
+	if err != nil {
+		return nil, err
+	}
+
+	req.Header.Add("Content-Type", contentType)
+
+	return req, nil
+}
+
+// NewPutEchoRequest calls the generic PutEcho builder with application/json body
+func NewPutEchoRequest(server string, body PutEchoJSONRequestBody) (*http.Request, error) {
+	var bodyReader io.Reader
+	buf, err := json.Marshal(body)
+	if err != nil {
+		return nil, err
+	}
+	bodyReader = bytes.NewReader(buf)
+	return NewPutEchoRequestWithBody(server, "application/json", bodyReader)
+}
+
+// NewPutEchoRequestWithFormdataBody calls the generic PutEcho builder with application/x-www-form-urlencoded body
+func NewPutEchoRequestWithFormdataBody(server string, body PutEchoFormdataRequestBody) (*http.Request, error) {
+	var bodyReader io.Reader
+	bodyStr, err := runtime.MarshalForm(body, nil)
+	if err != nil {
+		return nil, err
+	}
+	bodyReader = strings.NewReader(bodyStr.Encode())
+	return NewPutEchoRequestWithBody(server, "application/x-www-form-urlencoded", bodyReader)
+}
+
+// NewPutEchoRequestWithBody constructs an http.Request for the PutEcho method, with any body, and a specified content type
+func NewPutEchoRequestWithBody(server string, contentType string, body io.Reader) (*http.Request, error) {
+	var err error
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/echo")
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	req, err := http.NewRequest(http.MethodPut, queryURL.String(), body)
+	if err != nil {
+		return nil, err
+	}
+
+	req.Header.Add("Content-Type", contentType)
+
+	return req, nil
+}
+
+// NewDeleteEchoRestRequest constructs an http.Request for the DeleteEchoRest method
+func NewDeleteEchoRestRequest(server string, rest string) (*http.Request, error) {
+	var err error
+
+	var pathParam0 string
+
+	pathParam0, err = runtime.StyleParamWithOptions("simple", false, "rest", rest, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationPath, Type: "string", Format: ""})
+	if err != nil {
+		return nil, err
+	}
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/echo/%s", pathParam0)
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	req, err := http.NewRequest(http.MethodDelete, queryURL.String(), nil)
+	if err != nil {
+		return nil, err
+	}
+
+	return req, nil
+}
+
+// NewGetEchoRestRequest constructs an http.Request for the GetEchoRest method
+func NewGetEchoRestRequest(server string, rest string) (*http.Request, error) {
+	var err error
+
+	var pathParam0 string
+
+	pathParam0, err = runtime.StyleParamWithOptions("simple", false, "rest", rest, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationPath, Type: "string", Format: ""})
+	if err != nil {
+		return nil, err
+	}
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/echo/%s", pathParam0)
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	req, err := http.NewRequest(http.MethodGet, queryURL.String(), nil)
+	if err != nil {
+		return nil, err
+	}
+
+	return req, nil
+}
+
+// NewPatchEchoRestRequest calls the generic PatchEchoRest builder with application/json body
+func NewPatchEchoRestRequest(server string, rest string, body PatchEchoRestJSONRequestBody) (*http.Request, error) {
+	var bodyReader io.Reader
+	buf, err := json.Marshal(body)
+	if err != nil {
+		return nil, err
+	}
+	bodyReader = bytes.NewReader(buf)
+	return NewPatchEchoRestRequestWithBody(server, rest, "application/json", bodyReader)
+}
+
+// NewPatchEchoRestRequestWithFormdataBody calls the generic PatchEchoRest builder with application/x-www-form-urlencoded body
+func NewPatchEchoRestRequestWithFormdataBody(server string, rest string, body PatchEchoRestFormdataRequestBody) (*http.Request, error) {
+	var bodyReader io.Reader
+	bodyStr, err := runtime.MarshalForm(body, nil)
+	if err != nil {
+		return nil, err
+	}
+	bodyReader = strings.NewReader(bodyStr.Encode())
+	return NewPatchEchoRestRequestWithBody(server, rest, "application/x-www-form-urlencoded", bodyReader)
+}
+
+// NewPatchEchoRestRequestWithBody constructs an http.Request for the PatchEchoRest method, with any body, and a specified content type
+func NewPatchEchoRestRequestWithBody(server string, rest string, contentType string, body io.Reader) (*http.Request, error) {
+	var err error
+
+	var pathParam0 string
+
+	pathParam0, err = runtime.StyleParamWithOptions("simple", false, "rest", rest, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationPath, Type: "string", Format: ""})
+	if err != nil {
+		return nil, err
+	}
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/echo/%s", pathParam0)
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	req, err := http.NewRequest(http.MethodPatch, queryURL.String(), body)
+	if err != nil {
+		return nil, err
+	}
+
+	req.Header.Add("Content-Type", contentType)
+
+	return req, nil
+}
+
+// NewPostEchoRestRequest calls the generic PostEchoRest builder with application/json body
+func NewPostEchoRestRequest(server string, rest string, body PostEchoRestJSONRequestBody) (*http.Request, error) {
+	var bodyReader io.Reader
+	buf, err := json.Marshal(body)
+	if err != nil {
+		return nil, err
+	}
+	bodyReader = bytes.NewReader(buf)
+	return NewPostEchoRestRequestWithBody(server, rest, "application/json", bodyReader)
+}
+
+// NewPostEchoRestRequestWithFormdataBody calls the generic PostEchoRest builder with application/x-www-form-urlencoded body
+func NewPostEchoRestRequestWithFormdataBody(server string, rest string, body PostEchoRestFormdataRequestBody) (*http.Request, error) {
+	var bodyReader io.Reader
+	bodyStr, err := runtime.MarshalForm(body, nil)
+	if err != nil {
+		return nil, err
+	}
+	bodyReader = strings.NewReader(bodyStr.Encode())
+	return NewPostEchoRestRequestWithBody(server, rest, "application/x-www-form-urlencoded", bodyReader)
+}
+
+// NewPostEchoRestRequestWithBody constructs an http.Request for the PostEchoRest method, with any body, and a specified content type
+func NewPostEchoRestRequestWithBody(server string, rest string, contentType string, body io.Reader) (*http.Request, error) {
+	var err error
+
+	var pathParam0 string
+
+	pathParam0, err = runtime.StyleParamWithOptions("simple", false, "rest", rest, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationPath, Type: "string", Format: ""})
+	if err != nil {
+		return nil, err
+	}
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/echo/%s", pathParam0)
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	req, err := http.NewRequest(http.MethodPost, queryURL.String(), body)
+	if err != nil {
+		return nil, err
+	}
+
+	req.Header.Add("Content-Type", contentType)
+
+	return req, nil
+}
+
+// NewPutEchoRestRequest calls the generic PutEchoRest builder with application/json body
+func NewPutEchoRestRequest(server string, rest string, body PutEchoRestJSONRequestBody) (*http.Request, error) {
+	var bodyReader io.Reader
+	buf, err := json.Marshal(body)
+	if err != nil {
+		return nil, err
+	}
+	bodyReader = bytes.NewReader(buf)
+	return NewPutEchoRestRequestWithBody(server, rest, "application/json", bodyReader)
+}
+
+// NewPutEchoRestRequestWithFormdataBody calls the generic PutEchoRest builder with application/x-www-form-urlencoded body
+func NewPutEchoRestRequestWithFormdataBody(server string, rest string, body PutEchoRestFormdataRequestBody) (*http.Request, error) {
+	var bodyReader io.Reader
+	bodyStr, err := runtime.MarshalForm(body, nil)
+	if err != nil {
+		return nil, err
+	}
+	bodyReader = strings.NewReader(bodyStr.Encode())
+	return NewPutEchoRestRequestWithBody(server, rest, "application/x-www-form-urlencoded", bodyReader)
+}
+
+// NewPutEchoRestRequestWithBody constructs an http.Request for the PutEchoRest method, with any body, and a specified content type
+func NewPutEchoRestRequestWithBody(server string, rest string, contentType string, body io.Reader) (*http.Request, error) {
+	var err error
+
+	var pathParam0 string
+
+	pathParam0, err = runtime.StyleParamWithOptions("simple", false, "rest", rest, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationPath, Type: "string", Format: ""})
+	if err != nil {
+		return nil, err
+	}
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/echo/%s", pathParam0)
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	req, err := http.NewRequest(http.MethodPut, queryURL.String(), body)
+	if err != nil {
+		return nil, err
+	}
+
+	req.Header.Add("Content-Type", contentType)
 
 	return req, nil
 }
@@ -5419,6 +6468,204 @@ type ClientWithResponsesInterface interface {
 	// Corresponds with POST / (the `Post` operationId).
 	PostWithFormdataBodyWithResponse(ctx context.Context, params *PostParams, body PostFormdataRequestBody, reqEditors ...RequestEditorFn) (*PostResponse, error)
 
+	// DeleteEchoWithResponse echoAtRoot
+	//
+	// Echo back the details of the incoming HTTP request, with the Cloudflare-reported country of the client IP.
+	//
+	// Returns a wrapper object for the known response body format(s).
+	//
+	// Corresponds with DELETE /echo (the `DeleteEcho` operationId).
+	DeleteEchoWithResponse(ctx context.Context, reqEditors ...RequestEditorFn) (*DeleteEchoResponse, error)
+
+	// GetEchoWithResponse echoAtRoot
+	//
+	// Echo back the details of the incoming HTTP request, with the Cloudflare-reported country of the client IP.
+	//
+	// Returns a wrapper object for the known response body format(s).
+	//
+	// Corresponds with GET /echo (the `GetEcho` operationId).
+	GetEchoWithResponse(ctx context.Context, reqEditors ...RequestEditorFn) (*GetEchoResponse, error)
+
+	// PatchEchoWithBodyWithResponse echoAtRoot
+	//
+	// Echo back the details of the incoming HTTP request, with the Cloudflare-reported country of the client IP.
+	//
+	// Takes any type of body and a specified content type, and returns a wrapper object for the known response body format(s).
+	//
+	// Corresponds with PATCH /echo (the `PatchEcho` operationId).
+	PatchEchoWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*PatchEchoResponse, error)
+
+	// PatchEchoWithResponse echoAtRoot
+	//
+	// Echo back the details of the incoming HTTP request, with the Cloudflare-reported country of the client IP.
+	//
+	// Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
+	//
+	// Corresponds with PATCH /echo (the `PatchEcho` operationId).
+	PatchEchoWithResponse(ctx context.Context, body PatchEchoJSONRequestBody, reqEditors ...RequestEditorFn) (*PatchEchoResponse, error)
+
+	// PatchEchoWithFormdataBodyWithResponse echoAtRoot
+	//
+	// Echo back the details of the incoming HTTP request, with the Cloudflare-reported country of the client IP.
+	//
+	// Takes a body of the `application/x-www-form-urlencoded` content type, and returns a wrapper object for the known response body format(s).
+	//
+	// Corresponds with PATCH /echo (the `PatchEcho` operationId).
+	PatchEchoWithFormdataBodyWithResponse(ctx context.Context, body PatchEchoFormdataRequestBody, reqEditors ...RequestEditorFn) (*PatchEchoResponse, error)
+
+	// PostEchoWithBodyWithResponse echoAtRoot
+	//
+	// Echo back the details of the incoming HTTP request, with the Cloudflare-reported country of the client IP.
+	//
+	// Takes any type of body and a specified content type, and returns a wrapper object for the known response body format(s).
+	//
+	// Corresponds with POST /echo (the `PostEcho` operationId).
+	PostEchoWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*PostEchoResponse, error)
+
+	// PostEchoWithResponse echoAtRoot
+	//
+	// Echo back the details of the incoming HTTP request, with the Cloudflare-reported country of the client IP.
+	//
+	// Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
+	//
+	// Corresponds with POST /echo (the `PostEcho` operationId).
+	PostEchoWithResponse(ctx context.Context, body PostEchoJSONRequestBody, reqEditors ...RequestEditorFn) (*PostEchoResponse, error)
+
+	// PostEchoWithFormdataBodyWithResponse echoAtRoot
+	//
+	// Echo back the details of the incoming HTTP request, with the Cloudflare-reported country of the client IP.
+	//
+	// Takes a body of the `application/x-www-form-urlencoded` content type, and returns a wrapper object for the known response body format(s).
+	//
+	// Corresponds with POST /echo (the `PostEcho` operationId).
+	PostEchoWithFormdataBodyWithResponse(ctx context.Context, body PostEchoFormdataRequestBody, reqEditors ...RequestEditorFn) (*PostEchoResponse, error)
+
+	// PutEchoWithBodyWithResponse echoAtRoot
+	//
+	// Echo back the details of the incoming HTTP request, with the Cloudflare-reported country of the client IP.
+	//
+	// Takes any type of body and a specified content type, and returns a wrapper object for the known response body format(s).
+	//
+	// Corresponds with PUT /echo (the `PutEcho` operationId).
+	PutEchoWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*PutEchoResponse, error)
+
+	// PutEchoWithResponse echoAtRoot
+	//
+	// Echo back the details of the incoming HTTP request, with the Cloudflare-reported country of the client IP.
+	//
+	// Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
+	//
+	// Corresponds with PUT /echo (the `PutEcho` operationId).
+	PutEchoWithResponse(ctx context.Context, body PutEchoJSONRequestBody, reqEditors ...RequestEditorFn) (*PutEchoResponse, error)
+
+	// PutEchoWithFormdataBodyWithResponse echoAtRoot
+	//
+	// Echo back the details of the incoming HTTP request, with the Cloudflare-reported country of the client IP.
+	//
+	// Takes a body of the `application/x-www-form-urlencoded` content type, and returns a wrapper object for the known response body format(s).
+	//
+	// Corresponds with PUT /echo (the `PutEcho` operationId).
+	PutEchoWithFormdataBodyWithResponse(ctx context.Context, body PutEchoFormdataRequestBody, reqEditors ...RequestEditorFn) (*PutEchoResponse, error)
+
+	// DeleteEchoRestWithResponse echo
+	//
+	// Echo back the details of the incoming HTTP request, with the Cloudflare-reported country of the client IP.
+	//
+	// Returns a wrapper object for the known response body format(s).
+	//
+	// Corresponds with DELETE /echo/{rest} (the `DeleteEchoRest` operationId).
+	DeleteEchoRestWithResponse(ctx context.Context, rest string, reqEditors ...RequestEditorFn) (*DeleteEchoRestResponse, error)
+
+	// GetEchoRestWithResponse echo
+	//
+	// Echo back the details of the incoming HTTP request, with the Cloudflare-reported country of the client IP.
+	//
+	// Returns a wrapper object for the known response body format(s).
+	//
+	// Corresponds with GET /echo/{rest} (the `GetEchoRest` operationId).
+	GetEchoRestWithResponse(ctx context.Context, rest string, reqEditors ...RequestEditorFn) (*GetEchoRestResponse, error)
+
+	// PatchEchoRestWithBodyWithResponse echo
+	//
+	// Echo back the details of the incoming HTTP request, with the Cloudflare-reported country of the client IP.
+	//
+	// Takes any type of body and a specified content type, and returns a wrapper object for the known response body format(s).
+	//
+	// Corresponds with PATCH /echo/{rest} (the `PatchEchoRest` operationId).
+	PatchEchoRestWithBodyWithResponse(ctx context.Context, rest string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*PatchEchoRestResponse, error)
+
+	// PatchEchoRestWithResponse echo
+	//
+	// Echo back the details of the incoming HTTP request, with the Cloudflare-reported country of the client IP.
+	//
+	// Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
+	//
+	// Corresponds with PATCH /echo/{rest} (the `PatchEchoRest` operationId).
+	PatchEchoRestWithResponse(ctx context.Context, rest string, body PatchEchoRestJSONRequestBody, reqEditors ...RequestEditorFn) (*PatchEchoRestResponse, error)
+
+	// PatchEchoRestWithFormdataBodyWithResponse echo
+	//
+	// Echo back the details of the incoming HTTP request, with the Cloudflare-reported country of the client IP.
+	//
+	// Takes a body of the `application/x-www-form-urlencoded` content type, and returns a wrapper object for the known response body format(s).
+	//
+	// Corresponds with PATCH /echo/{rest} (the `PatchEchoRest` operationId).
+	PatchEchoRestWithFormdataBodyWithResponse(ctx context.Context, rest string, body PatchEchoRestFormdataRequestBody, reqEditors ...RequestEditorFn) (*PatchEchoRestResponse, error)
+
+	// PostEchoRestWithBodyWithResponse echo
+	//
+	// Echo back the details of the incoming HTTP request, with the Cloudflare-reported country of the client IP.
+	//
+	// Takes any type of body and a specified content type, and returns a wrapper object for the known response body format(s).
+	//
+	// Corresponds with POST /echo/{rest} (the `PostEchoRest` operationId).
+	PostEchoRestWithBodyWithResponse(ctx context.Context, rest string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*PostEchoRestResponse, error)
+
+	// PostEchoRestWithResponse echo
+	//
+	// Echo back the details of the incoming HTTP request, with the Cloudflare-reported country of the client IP.
+	//
+	// Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
+	//
+	// Corresponds with POST /echo/{rest} (the `PostEchoRest` operationId).
+	PostEchoRestWithResponse(ctx context.Context, rest string, body PostEchoRestJSONRequestBody, reqEditors ...RequestEditorFn) (*PostEchoRestResponse, error)
+
+	// PostEchoRestWithFormdataBodyWithResponse echo
+	//
+	// Echo back the details of the incoming HTTP request, with the Cloudflare-reported country of the client IP.
+	//
+	// Takes a body of the `application/x-www-form-urlencoded` content type, and returns a wrapper object for the known response body format(s).
+	//
+	// Corresponds with POST /echo/{rest} (the `PostEchoRest` operationId).
+	PostEchoRestWithFormdataBodyWithResponse(ctx context.Context, rest string, body PostEchoRestFormdataRequestBody, reqEditors ...RequestEditorFn) (*PostEchoRestResponse, error)
+
+	// PutEchoRestWithBodyWithResponse echo
+	//
+	// Echo back the details of the incoming HTTP request, with the Cloudflare-reported country of the client IP.
+	//
+	// Takes any type of body and a specified content type, and returns a wrapper object for the known response body format(s).
+	//
+	// Corresponds with PUT /echo/{rest} (the `PutEchoRest` operationId).
+	PutEchoRestWithBodyWithResponse(ctx context.Context, rest string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*PutEchoRestResponse, error)
+
+	// PutEchoRestWithResponse echo
+	//
+	// Echo back the details of the incoming HTTP request, with the Cloudflare-reported country of the client IP.
+	//
+	// Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
+	//
+	// Corresponds with PUT /echo/{rest} (the `PutEchoRest` operationId).
+	PutEchoRestWithResponse(ctx context.Context, rest string, body PutEchoRestJSONRequestBody, reqEditors ...RequestEditorFn) (*PutEchoRestResponse, error)
+
+	// PutEchoRestWithFormdataBodyWithResponse echo
+	//
+	// Echo back the details of the incoming HTTP request, with the Cloudflare-reported country of the client IP.
+	//
+	// Takes a body of the `application/x-www-form-urlencoded` content type, and returns a wrapper object for the known response body format(s).
+	//
+	// Corresponds with PUT /echo/{rest} (the `PutEchoRest` operationId).
+	PutEchoRestWithFormdataBodyWithResponse(ctx context.Context, rest string, body PutEchoRestFormdataRequestBody, reqEditors ...RequestEditorFn) (*PutEchoRestResponse, error)
+
 	// GetEphemeralEncodedFidWithResponse getEphemeral
 	//
 	// Get embedded ephemeral resources, including ephemeral resources such as short-lived signed links to files produced by a request. Links expire within 24 hours.
@@ -5802,6 +7049,1216 @@ func (r PostResponse) StatusCode() int {
 
 // ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
 func (r PostResponse) ContentType() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Header.Get("Content-Type")
+	}
+	return ""
+}
+
+type DeleteEchoResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	// JSON200 the response for an HTTP 200 `application/json` response
+	JSON200 *struct {
+		// Code [REQUIRED]
+		//
+		// Envelope code.
+		//
+		// Mirror of HTTP status code
+		//
+		// - Cast to: &lt; **number** &gt;
+		//
+		// - Member of &lt;ReaderEnvelope&gt;
+		//
+		// - Defaults to: 200
+		Code float64 `json:"code"`
+
+		// Data The result payload you expect
+		//
+		// - Cast to: &lt; **object** &gt;
+		//
+		// - Member of &lt;ReaderEnvelope&gt;
+		Data interface{} `json:"data,omitempty"`
+
+		// Meta The metadata that the payload sometimes came with
+		//
+		// - Cast to: &lt; **object** &gt;
+		//
+		// - Member of &lt;ReaderEnvelope&gt;
+		Meta interface{} `json:"meta,omitempty"`
+
+		// Status [REQUIRED]
+		//
+		// Envelope status.
+		//
+		// In extension to HTTP status code
+		//
+		// - Cast to: &lt; **number** &gt;
+		//
+		// - Member of &lt;ReaderEnvelope&gt;
+		//
+		// - Defaults to: 20000
+		Status float64 `json:"status"`
+	}
+}
+
+// GetJSON200 returns the response for an HTTP 200 `application/json` response
+func (r DeleteEchoResponse) GetJSON200() *struct {
+	// Code [REQUIRED]
+	//
+	// Envelope code.
+	//
+	// Mirror of HTTP status code
+	//
+	// - Cast to: &lt; **number** &gt;
+	//
+	// - Member of &lt;ReaderEnvelope&gt;
+	//
+	// - Defaults to: 200
+	Code float64 `json:"code"`
+
+	// Data The result payload you expect
+	//
+	// - Cast to: &lt; **object** &gt;
+	//
+	// - Member of &lt;ReaderEnvelope&gt;
+	Data interface{} `json:"data,omitempty"`
+
+	// Meta The metadata that the payload sometimes came with
+	//
+	// - Cast to: &lt; **object** &gt;
+	//
+	// - Member of &lt;ReaderEnvelope&gt;
+	Meta interface{} `json:"meta,omitempty"`
+
+	// Status [REQUIRED]
+	//
+	// Envelope status.
+	//
+	// In extension to HTTP status code
+	//
+	// - Cast to: &lt; **number** &gt;
+	//
+	// - Member of &lt;ReaderEnvelope&gt;
+	//
+	// - Defaults to: 20000
+	Status float64 `json:"status"`
+} {
+	return r.JSON200
+}
+
+// GetBody returns the raw response body bytes
+func (r DeleteEchoResponse) GetBody() []byte {
+	return r.Body
+}
+
+// Status returns HTTPResponse.Status
+func (r DeleteEchoResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r DeleteEchoResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
+func (r DeleteEchoResponse) ContentType() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Header.Get("Content-Type")
+	}
+	return ""
+}
+
+type GetEchoResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	// JSON200 the response for an HTTP 200 `application/json` response
+	JSON200 *struct {
+		// Code [REQUIRED]
+		//
+		// Envelope code.
+		//
+		// Mirror of HTTP status code
+		//
+		// - Cast to: &lt; **number** &gt;
+		//
+		// - Member of &lt;ReaderEnvelope&gt;
+		//
+		// - Defaults to: 200
+		Code float64 `json:"code"`
+
+		// Data The result payload you expect
+		//
+		// - Cast to: &lt; **object** &gt;
+		//
+		// - Member of &lt;ReaderEnvelope&gt;
+		Data interface{} `json:"data,omitempty"`
+
+		// Meta The metadata that the payload sometimes came with
+		//
+		// - Cast to: &lt; **object** &gt;
+		//
+		// - Member of &lt;ReaderEnvelope&gt;
+		Meta interface{} `json:"meta,omitempty"`
+
+		// Status [REQUIRED]
+		//
+		// Envelope status.
+		//
+		// In extension to HTTP status code
+		//
+		// - Cast to: &lt; **number** &gt;
+		//
+		// - Member of &lt;ReaderEnvelope&gt;
+		//
+		// - Defaults to: 20000
+		Status float64 `json:"status"`
+	}
+}
+
+// GetJSON200 returns the response for an HTTP 200 `application/json` response
+func (r GetEchoResponse) GetJSON200() *struct {
+	// Code [REQUIRED]
+	//
+	// Envelope code.
+	//
+	// Mirror of HTTP status code
+	//
+	// - Cast to: &lt; **number** &gt;
+	//
+	// - Member of &lt;ReaderEnvelope&gt;
+	//
+	// - Defaults to: 200
+	Code float64 `json:"code"`
+
+	// Data The result payload you expect
+	//
+	// - Cast to: &lt; **object** &gt;
+	//
+	// - Member of &lt;ReaderEnvelope&gt;
+	Data interface{} `json:"data,omitempty"`
+
+	// Meta The metadata that the payload sometimes came with
+	//
+	// - Cast to: &lt; **object** &gt;
+	//
+	// - Member of &lt;ReaderEnvelope&gt;
+	Meta interface{} `json:"meta,omitempty"`
+
+	// Status [REQUIRED]
+	//
+	// Envelope status.
+	//
+	// In extension to HTTP status code
+	//
+	// - Cast to: &lt; **number** &gt;
+	//
+	// - Member of &lt;ReaderEnvelope&gt;
+	//
+	// - Defaults to: 20000
+	Status float64 `json:"status"`
+} {
+	return r.JSON200
+}
+
+// GetBody returns the raw response body bytes
+func (r GetEchoResponse) GetBody() []byte {
+	return r.Body
+}
+
+// Status returns HTTPResponse.Status
+func (r GetEchoResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r GetEchoResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
+func (r GetEchoResponse) ContentType() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Header.Get("Content-Type")
+	}
+	return ""
+}
+
+type PatchEchoResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	// JSON200 the response for an HTTP 200 `application/json` response
+	JSON200 *struct {
+		// Code [REQUIRED]
+		//
+		// Envelope code.
+		//
+		// Mirror of HTTP status code
+		//
+		// - Cast to: &lt; **number** &gt;
+		//
+		// - Member of &lt;ReaderEnvelope&gt;
+		//
+		// - Defaults to: 200
+		Code float64 `json:"code"`
+
+		// Data The result payload you expect
+		//
+		// - Cast to: &lt; **object** &gt;
+		//
+		// - Member of &lt;ReaderEnvelope&gt;
+		Data interface{} `json:"data,omitempty"`
+
+		// Meta The metadata that the payload sometimes came with
+		//
+		// - Cast to: &lt; **object** &gt;
+		//
+		// - Member of &lt;ReaderEnvelope&gt;
+		Meta interface{} `json:"meta,omitempty"`
+
+		// Status [REQUIRED]
+		//
+		// Envelope status.
+		//
+		// In extension to HTTP status code
+		//
+		// - Cast to: &lt; **number** &gt;
+		//
+		// - Member of &lt;ReaderEnvelope&gt;
+		//
+		// - Defaults to: 20000
+		Status float64 `json:"status"`
+	}
+}
+
+// GetJSON200 returns the response for an HTTP 200 `application/json` response
+func (r PatchEchoResponse) GetJSON200() *struct {
+	// Code [REQUIRED]
+	//
+	// Envelope code.
+	//
+	// Mirror of HTTP status code
+	//
+	// - Cast to: &lt; **number** &gt;
+	//
+	// - Member of &lt;ReaderEnvelope&gt;
+	//
+	// - Defaults to: 200
+	Code float64 `json:"code"`
+
+	// Data The result payload you expect
+	//
+	// - Cast to: &lt; **object** &gt;
+	//
+	// - Member of &lt;ReaderEnvelope&gt;
+	Data interface{} `json:"data,omitempty"`
+
+	// Meta The metadata that the payload sometimes came with
+	//
+	// - Cast to: &lt; **object** &gt;
+	//
+	// - Member of &lt;ReaderEnvelope&gt;
+	Meta interface{} `json:"meta,omitempty"`
+
+	// Status [REQUIRED]
+	//
+	// Envelope status.
+	//
+	// In extension to HTTP status code
+	//
+	// - Cast to: &lt; **number** &gt;
+	//
+	// - Member of &lt;ReaderEnvelope&gt;
+	//
+	// - Defaults to: 20000
+	Status float64 `json:"status"`
+} {
+	return r.JSON200
+}
+
+// GetBody returns the raw response body bytes
+func (r PatchEchoResponse) GetBody() []byte {
+	return r.Body
+}
+
+// Status returns HTTPResponse.Status
+func (r PatchEchoResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r PatchEchoResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
+func (r PatchEchoResponse) ContentType() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Header.Get("Content-Type")
+	}
+	return ""
+}
+
+type PostEchoResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	// JSON200 the response for an HTTP 200 `application/json` response
+	JSON200 *struct {
+		// Code [REQUIRED]
+		//
+		// Envelope code.
+		//
+		// Mirror of HTTP status code
+		//
+		// - Cast to: &lt; **number** &gt;
+		//
+		// - Member of &lt;ReaderEnvelope&gt;
+		//
+		// - Defaults to: 200
+		Code float64 `json:"code"`
+
+		// Data The result payload you expect
+		//
+		// - Cast to: &lt; **object** &gt;
+		//
+		// - Member of &lt;ReaderEnvelope&gt;
+		Data interface{} `json:"data,omitempty"`
+
+		// Meta The metadata that the payload sometimes came with
+		//
+		// - Cast to: &lt; **object** &gt;
+		//
+		// - Member of &lt;ReaderEnvelope&gt;
+		Meta interface{} `json:"meta,omitempty"`
+
+		// Status [REQUIRED]
+		//
+		// Envelope status.
+		//
+		// In extension to HTTP status code
+		//
+		// - Cast to: &lt; **number** &gt;
+		//
+		// - Member of &lt;ReaderEnvelope&gt;
+		//
+		// - Defaults to: 20000
+		Status float64 `json:"status"`
+	}
+}
+
+// GetJSON200 returns the response for an HTTP 200 `application/json` response
+func (r PostEchoResponse) GetJSON200() *struct {
+	// Code [REQUIRED]
+	//
+	// Envelope code.
+	//
+	// Mirror of HTTP status code
+	//
+	// - Cast to: &lt; **number** &gt;
+	//
+	// - Member of &lt;ReaderEnvelope&gt;
+	//
+	// - Defaults to: 200
+	Code float64 `json:"code"`
+
+	// Data The result payload you expect
+	//
+	// - Cast to: &lt; **object** &gt;
+	//
+	// - Member of &lt;ReaderEnvelope&gt;
+	Data interface{} `json:"data,omitempty"`
+
+	// Meta The metadata that the payload sometimes came with
+	//
+	// - Cast to: &lt; **object** &gt;
+	//
+	// - Member of &lt;ReaderEnvelope&gt;
+	Meta interface{} `json:"meta,omitempty"`
+
+	// Status [REQUIRED]
+	//
+	// Envelope status.
+	//
+	// In extension to HTTP status code
+	//
+	// - Cast to: &lt; **number** &gt;
+	//
+	// - Member of &lt;ReaderEnvelope&gt;
+	//
+	// - Defaults to: 20000
+	Status float64 `json:"status"`
+} {
+	return r.JSON200
+}
+
+// GetBody returns the raw response body bytes
+func (r PostEchoResponse) GetBody() []byte {
+	return r.Body
+}
+
+// Status returns HTTPResponse.Status
+func (r PostEchoResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r PostEchoResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
+func (r PostEchoResponse) ContentType() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Header.Get("Content-Type")
+	}
+	return ""
+}
+
+type PutEchoResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	// JSON200 the response for an HTTP 200 `application/json` response
+	JSON200 *struct {
+		// Code [REQUIRED]
+		//
+		// Envelope code.
+		//
+		// Mirror of HTTP status code
+		//
+		// - Cast to: &lt; **number** &gt;
+		//
+		// - Member of &lt;ReaderEnvelope&gt;
+		//
+		// - Defaults to: 200
+		Code float64 `json:"code"`
+
+		// Data The result payload you expect
+		//
+		// - Cast to: &lt; **object** &gt;
+		//
+		// - Member of &lt;ReaderEnvelope&gt;
+		Data interface{} `json:"data,omitempty"`
+
+		// Meta The metadata that the payload sometimes came with
+		//
+		// - Cast to: &lt; **object** &gt;
+		//
+		// - Member of &lt;ReaderEnvelope&gt;
+		Meta interface{} `json:"meta,omitempty"`
+
+		// Status [REQUIRED]
+		//
+		// Envelope status.
+		//
+		// In extension to HTTP status code
+		//
+		// - Cast to: &lt; **number** &gt;
+		//
+		// - Member of &lt;ReaderEnvelope&gt;
+		//
+		// - Defaults to: 20000
+		Status float64 `json:"status"`
+	}
+}
+
+// GetJSON200 returns the response for an HTTP 200 `application/json` response
+func (r PutEchoResponse) GetJSON200() *struct {
+	// Code [REQUIRED]
+	//
+	// Envelope code.
+	//
+	// Mirror of HTTP status code
+	//
+	// - Cast to: &lt; **number** &gt;
+	//
+	// - Member of &lt;ReaderEnvelope&gt;
+	//
+	// - Defaults to: 200
+	Code float64 `json:"code"`
+
+	// Data The result payload you expect
+	//
+	// - Cast to: &lt; **object** &gt;
+	//
+	// - Member of &lt;ReaderEnvelope&gt;
+	Data interface{} `json:"data,omitempty"`
+
+	// Meta The metadata that the payload sometimes came with
+	//
+	// - Cast to: &lt; **object** &gt;
+	//
+	// - Member of &lt;ReaderEnvelope&gt;
+	Meta interface{} `json:"meta,omitempty"`
+
+	// Status [REQUIRED]
+	//
+	// Envelope status.
+	//
+	// In extension to HTTP status code
+	//
+	// - Cast to: &lt; **number** &gt;
+	//
+	// - Member of &lt;ReaderEnvelope&gt;
+	//
+	// - Defaults to: 20000
+	Status float64 `json:"status"`
+} {
+	return r.JSON200
+}
+
+// GetBody returns the raw response body bytes
+func (r PutEchoResponse) GetBody() []byte {
+	return r.Body
+}
+
+// Status returns HTTPResponse.Status
+func (r PutEchoResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r PutEchoResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
+func (r PutEchoResponse) ContentType() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Header.Get("Content-Type")
+	}
+	return ""
+}
+
+type DeleteEchoRestResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	// JSON200 the response for an HTTP 200 `application/json` response
+	JSON200 *struct {
+		// Code [REQUIRED]
+		//
+		// Envelope code.
+		//
+		// Mirror of HTTP status code
+		//
+		// - Cast to: &lt; **number** &gt;
+		//
+		// - Member of &lt;ReaderEnvelope&gt;
+		//
+		// - Defaults to: 200
+		Code float64 `json:"code"`
+
+		// Data The result payload you expect
+		//
+		// - Cast to: &lt; **object** &gt;
+		//
+		// - Member of &lt;ReaderEnvelope&gt;
+		Data interface{} `json:"data,omitempty"`
+
+		// Meta The metadata that the payload sometimes came with
+		//
+		// - Cast to: &lt; **object** &gt;
+		//
+		// - Member of &lt;ReaderEnvelope&gt;
+		Meta interface{} `json:"meta,omitempty"`
+
+		// Status [REQUIRED]
+		//
+		// Envelope status.
+		//
+		// In extension to HTTP status code
+		//
+		// - Cast to: &lt; **number** &gt;
+		//
+		// - Member of &lt;ReaderEnvelope&gt;
+		//
+		// - Defaults to: 20000
+		Status float64 `json:"status"`
+	}
+}
+
+// GetJSON200 returns the response for an HTTP 200 `application/json` response
+func (r DeleteEchoRestResponse) GetJSON200() *struct {
+	// Code [REQUIRED]
+	//
+	// Envelope code.
+	//
+	// Mirror of HTTP status code
+	//
+	// - Cast to: &lt; **number** &gt;
+	//
+	// - Member of &lt;ReaderEnvelope&gt;
+	//
+	// - Defaults to: 200
+	Code float64 `json:"code"`
+
+	// Data The result payload you expect
+	//
+	// - Cast to: &lt; **object** &gt;
+	//
+	// - Member of &lt;ReaderEnvelope&gt;
+	Data interface{} `json:"data,omitempty"`
+
+	// Meta The metadata that the payload sometimes came with
+	//
+	// - Cast to: &lt; **object** &gt;
+	//
+	// - Member of &lt;ReaderEnvelope&gt;
+	Meta interface{} `json:"meta,omitempty"`
+
+	// Status [REQUIRED]
+	//
+	// Envelope status.
+	//
+	// In extension to HTTP status code
+	//
+	// - Cast to: &lt; **number** &gt;
+	//
+	// - Member of &lt;ReaderEnvelope&gt;
+	//
+	// - Defaults to: 20000
+	Status float64 `json:"status"`
+} {
+	return r.JSON200
+}
+
+// GetBody returns the raw response body bytes
+func (r DeleteEchoRestResponse) GetBody() []byte {
+	return r.Body
+}
+
+// Status returns HTTPResponse.Status
+func (r DeleteEchoRestResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r DeleteEchoRestResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
+func (r DeleteEchoRestResponse) ContentType() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Header.Get("Content-Type")
+	}
+	return ""
+}
+
+type GetEchoRestResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	// JSON200 the response for an HTTP 200 `application/json` response
+	JSON200 *struct {
+		// Code [REQUIRED]
+		//
+		// Envelope code.
+		//
+		// Mirror of HTTP status code
+		//
+		// - Cast to: &lt; **number** &gt;
+		//
+		// - Member of &lt;ReaderEnvelope&gt;
+		//
+		// - Defaults to: 200
+		Code float64 `json:"code"`
+
+		// Data The result payload you expect
+		//
+		// - Cast to: &lt; **object** &gt;
+		//
+		// - Member of &lt;ReaderEnvelope&gt;
+		Data interface{} `json:"data,omitempty"`
+
+		// Meta The metadata that the payload sometimes came with
+		//
+		// - Cast to: &lt; **object** &gt;
+		//
+		// - Member of &lt;ReaderEnvelope&gt;
+		Meta interface{} `json:"meta,omitempty"`
+
+		// Status [REQUIRED]
+		//
+		// Envelope status.
+		//
+		// In extension to HTTP status code
+		//
+		// - Cast to: &lt; **number** &gt;
+		//
+		// - Member of &lt;ReaderEnvelope&gt;
+		//
+		// - Defaults to: 20000
+		Status float64 `json:"status"`
+	}
+}
+
+// GetJSON200 returns the response for an HTTP 200 `application/json` response
+func (r GetEchoRestResponse) GetJSON200() *struct {
+	// Code [REQUIRED]
+	//
+	// Envelope code.
+	//
+	// Mirror of HTTP status code
+	//
+	// - Cast to: &lt; **number** &gt;
+	//
+	// - Member of &lt;ReaderEnvelope&gt;
+	//
+	// - Defaults to: 200
+	Code float64 `json:"code"`
+
+	// Data The result payload you expect
+	//
+	// - Cast to: &lt; **object** &gt;
+	//
+	// - Member of &lt;ReaderEnvelope&gt;
+	Data interface{} `json:"data,omitempty"`
+
+	// Meta The metadata that the payload sometimes came with
+	//
+	// - Cast to: &lt; **object** &gt;
+	//
+	// - Member of &lt;ReaderEnvelope&gt;
+	Meta interface{} `json:"meta,omitempty"`
+
+	// Status [REQUIRED]
+	//
+	// Envelope status.
+	//
+	// In extension to HTTP status code
+	//
+	// - Cast to: &lt; **number** &gt;
+	//
+	// - Member of &lt;ReaderEnvelope&gt;
+	//
+	// - Defaults to: 20000
+	Status float64 `json:"status"`
+} {
+	return r.JSON200
+}
+
+// GetBody returns the raw response body bytes
+func (r GetEchoRestResponse) GetBody() []byte {
+	return r.Body
+}
+
+// Status returns HTTPResponse.Status
+func (r GetEchoRestResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r GetEchoRestResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
+func (r GetEchoRestResponse) ContentType() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Header.Get("Content-Type")
+	}
+	return ""
+}
+
+type PatchEchoRestResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	// JSON200 the response for an HTTP 200 `application/json` response
+	JSON200 *struct {
+		// Code [REQUIRED]
+		//
+		// Envelope code.
+		//
+		// Mirror of HTTP status code
+		//
+		// - Cast to: &lt; **number** &gt;
+		//
+		// - Member of &lt;ReaderEnvelope&gt;
+		//
+		// - Defaults to: 200
+		Code float64 `json:"code"`
+
+		// Data The result payload you expect
+		//
+		// - Cast to: &lt; **object** &gt;
+		//
+		// - Member of &lt;ReaderEnvelope&gt;
+		Data interface{} `json:"data,omitempty"`
+
+		// Meta The metadata that the payload sometimes came with
+		//
+		// - Cast to: &lt; **object** &gt;
+		//
+		// - Member of &lt;ReaderEnvelope&gt;
+		Meta interface{} `json:"meta,omitempty"`
+
+		// Status [REQUIRED]
+		//
+		// Envelope status.
+		//
+		// In extension to HTTP status code
+		//
+		// - Cast to: &lt; **number** &gt;
+		//
+		// - Member of &lt;ReaderEnvelope&gt;
+		//
+		// - Defaults to: 20000
+		Status float64 `json:"status"`
+	}
+}
+
+// GetJSON200 returns the response for an HTTP 200 `application/json` response
+func (r PatchEchoRestResponse) GetJSON200() *struct {
+	// Code [REQUIRED]
+	//
+	// Envelope code.
+	//
+	// Mirror of HTTP status code
+	//
+	// - Cast to: &lt; **number** &gt;
+	//
+	// - Member of &lt;ReaderEnvelope&gt;
+	//
+	// - Defaults to: 200
+	Code float64 `json:"code"`
+
+	// Data The result payload you expect
+	//
+	// - Cast to: &lt; **object** &gt;
+	//
+	// - Member of &lt;ReaderEnvelope&gt;
+	Data interface{} `json:"data,omitempty"`
+
+	// Meta The metadata that the payload sometimes came with
+	//
+	// - Cast to: &lt; **object** &gt;
+	//
+	// - Member of &lt;ReaderEnvelope&gt;
+	Meta interface{} `json:"meta,omitempty"`
+
+	// Status [REQUIRED]
+	//
+	// Envelope status.
+	//
+	// In extension to HTTP status code
+	//
+	// - Cast to: &lt; **number** &gt;
+	//
+	// - Member of &lt;ReaderEnvelope&gt;
+	//
+	// - Defaults to: 20000
+	Status float64 `json:"status"`
+} {
+	return r.JSON200
+}
+
+// GetBody returns the raw response body bytes
+func (r PatchEchoRestResponse) GetBody() []byte {
+	return r.Body
+}
+
+// Status returns HTTPResponse.Status
+func (r PatchEchoRestResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r PatchEchoRestResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
+func (r PatchEchoRestResponse) ContentType() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Header.Get("Content-Type")
+	}
+	return ""
+}
+
+type PostEchoRestResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	// JSON200 the response for an HTTP 200 `application/json` response
+	JSON200 *struct {
+		// Code [REQUIRED]
+		//
+		// Envelope code.
+		//
+		// Mirror of HTTP status code
+		//
+		// - Cast to: &lt; **number** &gt;
+		//
+		// - Member of &lt;ReaderEnvelope&gt;
+		//
+		// - Defaults to: 200
+		Code float64 `json:"code"`
+
+		// Data The result payload you expect
+		//
+		// - Cast to: &lt; **object** &gt;
+		//
+		// - Member of &lt;ReaderEnvelope&gt;
+		Data interface{} `json:"data,omitempty"`
+
+		// Meta The metadata that the payload sometimes came with
+		//
+		// - Cast to: &lt; **object** &gt;
+		//
+		// - Member of &lt;ReaderEnvelope&gt;
+		Meta interface{} `json:"meta,omitempty"`
+
+		// Status [REQUIRED]
+		//
+		// Envelope status.
+		//
+		// In extension to HTTP status code
+		//
+		// - Cast to: &lt; **number** &gt;
+		//
+		// - Member of &lt;ReaderEnvelope&gt;
+		//
+		// - Defaults to: 20000
+		Status float64 `json:"status"`
+	}
+}
+
+// GetJSON200 returns the response for an HTTP 200 `application/json` response
+func (r PostEchoRestResponse) GetJSON200() *struct {
+	// Code [REQUIRED]
+	//
+	// Envelope code.
+	//
+	// Mirror of HTTP status code
+	//
+	// - Cast to: &lt; **number** &gt;
+	//
+	// - Member of &lt;ReaderEnvelope&gt;
+	//
+	// - Defaults to: 200
+	Code float64 `json:"code"`
+
+	// Data The result payload you expect
+	//
+	// - Cast to: &lt; **object** &gt;
+	//
+	// - Member of &lt;ReaderEnvelope&gt;
+	Data interface{} `json:"data,omitempty"`
+
+	// Meta The metadata that the payload sometimes came with
+	//
+	// - Cast to: &lt; **object** &gt;
+	//
+	// - Member of &lt;ReaderEnvelope&gt;
+	Meta interface{} `json:"meta,omitempty"`
+
+	// Status [REQUIRED]
+	//
+	// Envelope status.
+	//
+	// In extension to HTTP status code
+	//
+	// - Cast to: &lt; **number** &gt;
+	//
+	// - Member of &lt;ReaderEnvelope&gt;
+	//
+	// - Defaults to: 20000
+	Status float64 `json:"status"`
+} {
+	return r.JSON200
+}
+
+// GetBody returns the raw response body bytes
+func (r PostEchoRestResponse) GetBody() []byte {
+	return r.Body
+}
+
+// Status returns HTTPResponse.Status
+func (r PostEchoRestResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r PostEchoRestResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
+func (r PostEchoRestResponse) ContentType() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Header.Get("Content-Type")
+	}
+	return ""
+}
+
+type PutEchoRestResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	// JSON200 the response for an HTTP 200 `application/json` response
+	JSON200 *struct {
+		// Code [REQUIRED]
+		//
+		// Envelope code.
+		//
+		// Mirror of HTTP status code
+		//
+		// - Cast to: &lt; **number** &gt;
+		//
+		// - Member of &lt;ReaderEnvelope&gt;
+		//
+		// - Defaults to: 200
+		Code float64 `json:"code"`
+
+		// Data The result payload you expect
+		//
+		// - Cast to: &lt; **object** &gt;
+		//
+		// - Member of &lt;ReaderEnvelope&gt;
+		Data interface{} `json:"data,omitempty"`
+
+		// Meta The metadata that the payload sometimes came with
+		//
+		// - Cast to: &lt; **object** &gt;
+		//
+		// - Member of &lt;ReaderEnvelope&gt;
+		Meta interface{} `json:"meta,omitempty"`
+
+		// Status [REQUIRED]
+		//
+		// Envelope status.
+		//
+		// In extension to HTTP status code
+		//
+		// - Cast to: &lt; **number** &gt;
+		//
+		// - Member of &lt;ReaderEnvelope&gt;
+		//
+		// - Defaults to: 20000
+		Status float64 `json:"status"`
+	}
+}
+
+// GetJSON200 returns the response for an HTTP 200 `application/json` response
+func (r PutEchoRestResponse) GetJSON200() *struct {
+	// Code [REQUIRED]
+	//
+	// Envelope code.
+	//
+	// Mirror of HTTP status code
+	//
+	// - Cast to: &lt; **number** &gt;
+	//
+	// - Member of &lt;ReaderEnvelope&gt;
+	//
+	// - Defaults to: 200
+	Code float64 `json:"code"`
+
+	// Data The result payload you expect
+	//
+	// - Cast to: &lt; **object** &gt;
+	//
+	// - Member of &lt;ReaderEnvelope&gt;
+	Data interface{} `json:"data,omitempty"`
+
+	// Meta The metadata that the payload sometimes came with
+	//
+	// - Cast to: &lt; **object** &gt;
+	//
+	// - Member of &lt;ReaderEnvelope&gt;
+	Meta interface{} `json:"meta,omitempty"`
+
+	// Status [REQUIRED]
+	//
+	// Envelope status.
+	//
+	// In extension to HTTP status code
+	//
+	// - Cast to: &lt; **number** &gt;
+	//
+	// - Member of &lt;ReaderEnvelope&gt;
+	//
+	// - Defaults to: 20000
+	Status float64 `json:"status"`
+} {
+	return r.JSON200
+}
+
+// GetBody returns the raw response body bytes
+func (r PutEchoRestResponse) GetBody() []byte {
+	return r.Body
+}
+
+// Status returns HTTPResponse.Status
+func (r PutEchoRestResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r PutEchoRestResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
+func (r PutEchoRestResponse) ContentType() string {
 	if r.HTTPResponse != nil {
 		return r.HTTPResponse.Header.Get("Content-Type")
 	}
@@ -6548,6 +9005,336 @@ func (c *ClientWithResponses) PostWithFormdataBodyWithResponse(ctx context.Conte
 	return ParsePostResponse(rsp)
 }
 
+// DeleteEchoWithResponse echoAtRoot
+//
+// Echo back the details of the incoming HTTP request, with the Cloudflare-reported country of the client IP.
+//
+// Returns a wrapper object for the known response body format(s).
+//
+// Corresponds with DELETE /echo (the `DeleteEcho` operationId).
+func (c *ClientWithResponses) DeleteEchoWithResponse(ctx context.Context, reqEditors ...RequestEditorFn) (*DeleteEchoResponse, error) {
+	rsp, err := c.DeleteEcho(ctx, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseDeleteEchoResponse(rsp)
+}
+
+// GetEchoWithResponse echoAtRoot
+//
+// Echo back the details of the incoming HTTP request, with the Cloudflare-reported country of the client IP.
+//
+// Returns a wrapper object for the known response body format(s).
+//
+// Corresponds with GET /echo (the `GetEcho` operationId).
+func (c *ClientWithResponses) GetEchoWithResponse(ctx context.Context, reqEditors ...RequestEditorFn) (*GetEchoResponse, error) {
+	rsp, err := c.GetEcho(ctx, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseGetEchoResponse(rsp)
+}
+
+// PatchEchoWithBodyWithResponse echoAtRoot
+//
+// Echo back the details of the incoming HTTP request, with the Cloudflare-reported country of the client IP.
+//
+// Takes any type of body and a specified content type, and returns a wrapper object for the known response body format(s).
+//
+// Corresponds with PATCH /echo (the `PatchEcho` operationId).
+func (c *ClientWithResponses) PatchEchoWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*PatchEchoResponse, error) {
+	rsp, err := c.PatchEchoWithBody(ctx, contentType, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParsePatchEchoResponse(rsp)
+}
+
+// PatchEchoWithResponse echoAtRoot
+//
+// Echo back the details of the incoming HTTP request, with the Cloudflare-reported country of the client IP.
+//
+// Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
+//
+// Corresponds with PATCH /echo (the `PatchEcho` operationId).
+func (c *ClientWithResponses) PatchEchoWithResponse(ctx context.Context, body PatchEchoJSONRequestBody, reqEditors ...RequestEditorFn) (*PatchEchoResponse, error) {
+	rsp, err := c.PatchEcho(ctx, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParsePatchEchoResponse(rsp)
+}
+
+// PatchEchoWithFormdataBodyWithResponse echoAtRoot
+//
+// Echo back the details of the incoming HTTP request, with the Cloudflare-reported country of the client IP.
+//
+// Takes a body of the `application/x-www-form-urlencoded` content type, and returns a wrapper object for the known response body format(s).
+//
+// Corresponds with PATCH /echo (the `PatchEcho` operationId).
+func (c *ClientWithResponses) PatchEchoWithFormdataBodyWithResponse(ctx context.Context, body PatchEchoFormdataRequestBody, reqEditors ...RequestEditorFn) (*PatchEchoResponse, error) {
+	rsp, err := c.PatchEchoWithFormdataBody(ctx, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParsePatchEchoResponse(rsp)
+}
+
+// PostEchoWithBodyWithResponse echoAtRoot
+//
+// Echo back the details of the incoming HTTP request, with the Cloudflare-reported country of the client IP.
+//
+// Takes any type of body and a specified content type, and returns a wrapper object for the known response body format(s).
+//
+// Corresponds with POST /echo (the `PostEcho` operationId).
+func (c *ClientWithResponses) PostEchoWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*PostEchoResponse, error) {
+	rsp, err := c.PostEchoWithBody(ctx, contentType, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParsePostEchoResponse(rsp)
+}
+
+// PostEchoWithResponse echoAtRoot
+//
+// Echo back the details of the incoming HTTP request, with the Cloudflare-reported country of the client IP.
+//
+// Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
+//
+// Corresponds with POST /echo (the `PostEcho` operationId).
+func (c *ClientWithResponses) PostEchoWithResponse(ctx context.Context, body PostEchoJSONRequestBody, reqEditors ...RequestEditorFn) (*PostEchoResponse, error) {
+	rsp, err := c.PostEcho(ctx, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParsePostEchoResponse(rsp)
+}
+
+// PostEchoWithFormdataBodyWithResponse echoAtRoot
+//
+// Echo back the details of the incoming HTTP request, with the Cloudflare-reported country of the client IP.
+//
+// Takes a body of the `application/x-www-form-urlencoded` content type, and returns a wrapper object for the known response body format(s).
+//
+// Corresponds with POST /echo (the `PostEcho` operationId).
+func (c *ClientWithResponses) PostEchoWithFormdataBodyWithResponse(ctx context.Context, body PostEchoFormdataRequestBody, reqEditors ...RequestEditorFn) (*PostEchoResponse, error) {
+	rsp, err := c.PostEchoWithFormdataBody(ctx, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParsePostEchoResponse(rsp)
+}
+
+// PutEchoWithBodyWithResponse echoAtRoot
+//
+// Echo back the details of the incoming HTTP request, with the Cloudflare-reported country of the client IP.
+//
+// Takes any type of body and a specified content type, and returns a wrapper object for the known response body format(s).
+//
+// Corresponds with PUT /echo (the `PutEcho` operationId).
+func (c *ClientWithResponses) PutEchoWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*PutEchoResponse, error) {
+	rsp, err := c.PutEchoWithBody(ctx, contentType, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParsePutEchoResponse(rsp)
+}
+
+// PutEchoWithResponse echoAtRoot
+//
+// Echo back the details of the incoming HTTP request, with the Cloudflare-reported country of the client IP.
+//
+// Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
+//
+// Corresponds with PUT /echo (the `PutEcho` operationId).
+func (c *ClientWithResponses) PutEchoWithResponse(ctx context.Context, body PutEchoJSONRequestBody, reqEditors ...RequestEditorFn) (*PutEchoResponse, error) {
+	rsp, err := c.PutEcho(ctx, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParsePutEchoResponse(rsp)
+}
+
+// PutEchoWithFormdataBodyWithResponse echoAtRoot
+//
+// Echo back the details of the incoming HTTP request, with the Cloudflare-reported country of the client IP.
+//
+// Takes a body of the `application/x-www-form-urlencoded` content type, and returns a wrapper object for the known response body format(s).
+//
+// Corresponds with PUT /echo (the `PutEcho` operationId).
+func (c *ClientWithResponses) PutEchoWithFormdataBodyWithResponse(ctx context.Context, body PutEchoFormdataRequestBody, reqEditors ...RequestEditorFn) (*PutEchoResponse, error) {
+	rsp, err := c.PutEchoWithFormdataBody(ctx, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParsePutEchoResponse(rsp)
+}
+
+// DeleteEchoRestWithResponse echo
+//
+// Echo back the details of the incoming HTTP request, with the Cloudflare-reported country of the client IP.
+//
+// Returns a wrapper object for the known response body format(s).
+//
+// Corresponds with DELETE /echo/{rest} (the `DeleteEchoRest` operationId).
+func (c *ClientWithResponses) DeleteEchoRestWithResponse(ctx context.Context, rest string, reqEditors ...RequestEditorFn) (*DeleteEchoRestResponse, error) {
+	rsp, err := c.DeleteEchoRest(ctx, rest, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseDeleteEchoRestResponse(rsp)
+}
+
+// GetEchoRestWithResponse echo
+//
+// Echo back the details of the incoming HTTP request, with the Cloudflare-reported country of the client IP.
+//
+// Returns a wrapper object for the known response body format(s).
+//
+// Corresponds with GET /echo/{rest} (the `GetEchoRest` operationId).
+func (c *ClientWithResponses) GetEchoRestWithResponse(ctx context.Context, rest string, reqEditors ...RequestEditorFn) (*GetEchoRestResponse, error) {
+	rsp, err := c.GetEchoRest(ctx, rest, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseGetEchoRestResponse(rsp)
+}
+
+// PatchEchoRestWithBodyWithResponse echo
+//
+// Echo back the details of the incoming HTTP request, with the Cloudflare-reported country of the client IP.
+//
+// Takes any type of body and a specified content type, and returns a wrapper object for the known response body format(s).
+//
+// Corresponds with PATCH /echo/{rest} (the `PatchEchoRest` operationId).
+func (c *ClientWithResponses) PatchEchoRestWithBodyWithResponse(ctx context.Context, rest string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*PatchEchoRestResponse, error) {
+	rsp, err := c.PatchEchoRestWithBody(ctx, rest, contentType, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParsePatchEchoRestResponse(rsp)
+}
+
+// PatchEchoRestWithResponse echo
+//
+// Echo back the details of the incoming HTTP request, with the Cloudflare-reported country of the client IP.
+//
+// Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
+//
+// Corresponds with PATCH /echo/{rest} (the `PatchEchoRest` operationId).
+func (c *ClientWithResponses) PatchEchoRestWithResponse(ctx context.Context, rest string, body PatchEchoRestJSONRequestBody, reqEditors ...RequestEditorFn) (*PatchEchoRestResponse, error) {
+	rsp, err := c.PatchEchoRest(ctx, rest, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParsePatchEchoRestResponse(rsp)
+}
+
+// PatchEchoRestWithFormdataBodyWithResponse echo
+//
+// Echo back the details of the incoming HTTP request, with the Cloudflare-reported country of the client IP.
+//
+// Takes a body of the `application/x-www-form-urlencoded` content type, and returns a wrapper object for the known response body format(s).
+//
+// Corresponds with PATCH /echo/{rest} (the `PatchEchoRest` operationId).
+func (c *ClientWithResponses) PatchEchoRestWithFormdataBodyWithResponse(ctx context.Context, rest string, body PatchEchoRestFormdataRequestBody, reqEditors ...RequestEditorFn) (*PatchEchoRestResponse, error) {
+	rsp, err := c.PatchEchoRestWithFormdataBody(ctx, rest, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParsePatchEchoRestResponse(rsp)
+}
+
+// PostEchoRestWithBodyWithResponse echo
+//
+// Echo back the details of the incoming HTTP request, with the Cloudflare-reported country of the client IP.
+//
+// Takes any type of body and a specified content type, and returns a wrapper object for the known response body format(s).
+//
+// Corresponds with POST /echo/{rest} (the `PostEchoRest` operationId).
+func (c *ClientWithResponses) PostEchoRestWithBodyWithResponse(ctx context.Context, rest string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*PostEchoRestResponse, error) {
+	rsp, err := c.PostEchoRestWithBody(ctx, rest, contentType, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParsePostEchoRestResponse(rsp)
+}
+
+// PostEchoRestWithResponse echo
+//
+// Echo back the details of the incoming HTTP request, with the Cloudflare-reported country of the client IP.
+//
+// Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
+//
+// Corresponds with POST /echo/{rest} (the `PostEchoRest` operationId).
+func (c *ClientWithResponses) PostEchoRestWithResponse(ctx context.Context, rest string, body PostEchoRestJSONRequestBody, reqEditors ...RequestEditorFn) (*PostEchoRestResponse, error) {
+	rsp, err := c.PostEchoRest(ctx, rest, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParsePostEchoRestResponse(rsp)
+}
+
+// PostEchoRestWithFormdataBodyWithResponse echo
+//
+// Echo back the details of the incoming HTTP request, with the Cloudflare-reported country of the client IP.
+//
+// Takes a body of the `application/x-www-form-urlencoded` content type, and returns a wrapper object for the known response body format(s).
+//
+// Corresponds with POST /echo/{rest} (the `PostEchoRest` operationId).
+func (c *ClientWithResponses) PostEchoRestWithFormdataBodyWithResponse(ctx context.Context, rest string, body PostEchoRestFormdataRequestBody, reqEditors ...RequestEditorFn) (*PostEchoRestResponse, error) {
+	rsp, err := c.PostEchoRestWithFormdataBody(ctx, rest, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParsePostEchoRestResponse(rsp)
+}
+
+// PutEchoRestWithBodyWithResponse echo
+//
+// Echo back the details of the incoming HTTP request, with the Cloudflare-reported country of the client IP.
+//
+// Takes any type of body and a specified content type, and returns a wrapper object for the known response body format(s).
+//
+// Corresponds with PUT /echo/{rest} (the `PutEchoRest` operationId).
+func (c *ClientWithResponses) PutEchoRestWithBodyWithResponse(ctx context.Context, rest string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*PutEchoRestResponse, error) {
+	rsp, err := c.PutEchoRestWithBody(ctx, rest, contentType, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParsePutEchoRestResponse(rsp)
+}
+
+// PutEchoRestWithResponse echo
+//
+// Echo back the details of the incoming HTTP request, with the Cloudflare-reported country of the client IP.
+//
+// Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
+//
+// Corresponds with PUT /echo/{rest} (the `PutEchoRest` operationId).
+func (c *ClientWithResponses) PutEchoRestWithResponse(ctx context.Context, rest string, body PutEchoRestJSONRequestBody, reqEditors ...RequestEditorFn) (*PutEchoRestResponse, error) {
+	rsp, err := c.PutEchoRest(ctx, rest, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParsePutEchoRestResponse(rsp)
+}
+
+// PutEchoRestWithFormdataBodyWithResponse echo
+//
+// Echo back the details of the incoming HTTP request, with the Cloudflare-reported country of the client IP.
+//
+// Takes a body of the `application/x-www-form-urlencoded` content type, and returns a wrapper object for the known response body format(s).
+//
+// Corresponds with PUT /echo/{rest} (the `PutEchoRest` operationId).
+func (c *ClientWithResponses) PutEchoRestWithFormdataBodyWithResponse(ctx context.Context, rest string, body PutEchoRestFormdataRequestBody, reqEditors ...RequestEditorFn) (*PutEchoRestResponse, error) {
+	rsp, err := c.PutEchoRestWithFormdataBody(ctx, rest, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParsePutEchoRestResponse(rsp)
+}
+
 // GetEphemeralEncodedFidWithResponse getEphemeral
 //
 // Get embedded ephemeral resources, including ephemeral resources such as short-lived signed links to files produced by a request. Links expire within 24 hours.
@@ -6911,6 +9698,666 @@ func ParsePostResponse(rsp *http.Response) (*PostResponse, error) {
 
 	case rsp.StatusCode == 200:
 		// Content-type (text/plain; charset=utf-8) unsupported
+
+	}
+
+	return response, nil
+}
+
+// ParseDeleteEchoResponse parses an HTTP response from a DeleteEchoWithResponse call
+func ParseDeleteEchoResponse(rsp *http.Response) (*DeleteEchoResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &DeleteEchoResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest struct {
+			// Code [REQUIRED]
+			//
+			// Envelope code.
+			//
+			// Mirror of HTTP status code
+			//
+			// - Cast to: &lt; **number** &gt;
+			//
+			// - Member of &lt;ReaderEnvelope&gt;
+			//
+			// - Defaults to: 200
+			Code float64 `json:"code"`
+
+			// Data The result payload you expect
+			//
+			// - Cast to: &lt; **object** &gt;
+			//
+			// - Member of &lt;ReaderEnvelope&gt;
+			Data interface{} `json:"data,omitempty"`
+
+			// Meta The metadata that the payload sometimes came with
+			//
+			// - Cast to: &lt; **object** &gt;
+			//
+			// - Member of &lt;ReaderEnvelope&gt;
+			Meta interface{} `json:"meta,omitempty"`
+
+			// Status [REQUIRED]
+			//
+			// Envelope status.
+			//
+			// In extension to HTTP status code
+			//
+			// - Cast to: &lt; **number** &gt;
+			//
+			// - Member of &lt;ReaderEnvelope&gt;
+			//
+			// - Defaults to: 20000
+			Status float64 `json:"status"`
+		}
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParseGetEchoResponse parses an HTTP response from a GetEchoWithResponse call
+func ParseGetEchoResponse(rsp *http.Response) (*GetEchoResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &GetEchoResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest struct {
+			// Code [REQUIRED]
+			//
+			// Envelope code.
+			//
+			// Mirror of HTTP status code
+			//
+			// - Cast to: &lt; **number** &gt;
+			//
+			// - Member of &lt;ReaderEnvelope&gt;
+			//
+			// - Defaults to: 200
+			Code float64 `json:"code"`
+
+			// Data The result payload you expect
+			//
+			// - Cast to: &lt; **object** &gt;
+			//
+			// - Member of &lt;ReaderEnvelope&gt;
+			Data interface{} `json:"data,omitempty"`
+
+			// Meta The metadata that the payload sometimes came with
+			//
+			// - Cast to: &lt; **object** &gt;
+			//
+			// - Member of &lt;ReaderEnvelope&gt;
+			Meta interface{} `json:"meta,omitempty"`
+
+			// Status [REQUIRED]
+			//
+			// Envelope status.
+			//
+			// In extension to HTTP status code
+			//
+			// - Cast to: &lt; **number** &gt;
+			//
+			// - Member of &lt;ReaderEnvelope&gt;
+			//
+			// - Defaults to: 20000
+			Status float64 `json:"status"`
+		}
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParsePatchEchoResponse parses an HTTP response from a PatchEchoWithResponse call
+func ParsePatchEchoResponse(rsp *http.Response) (*PatchEchoResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &PatchEchoResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest struct {
+			// Code [REQUIRED]
+			//
+			// Envelope code.
+			//
+			// Mirror of HTTP status code
+			//
+			// - Cast to: &lt; **number** &gt;
+			//
+			// - Member of &lt;ReaderEnvelope&gt;
+			//
+			// - Defaults to: 200
+			Code float64 `json:"code"`
+
+			// Data The result payload you expect
+			//
+			// - Cast to: &lt; **object** &gt;
+			//
+			// - Member of &lt;ReaderEnvelope&gt;
+			Data interface{} `json:"data,omitempty"`
+
+			// Meta The metadata that the payload sometimes came with
+			//
+			// - Cast to: &lt; **object** &gt;
+			//
+			// - Member of &lt;ReaderEnvelope&gt;
+			Meta interface{} `json:"meta,omitempty"`
+
+			// Status [REQUIRED]
+			//
+			// Envelope status.
+			//
+			// In extension to HTTP status code
+			//
+			// - Cast to: &lt; **number** &gt;
+			//
+			// - Member of &lt;ReaderEnvelope&gt;
+			//
+			// - Defaults to: 20000
+			Status float64 `json:"status"`
+		}
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParsePostEchoResponse parses an HTTP response from a PostEchoWithResponse call
+func ParsePostEchoResponse(rsp *http.Response) (*PostEchoResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &PostEchoResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest struct {
+			// Code [REQUIRED]
+			//
+			// Envelope code.
+			//
+			// Mirror of HTTP status code
+			//
+			// - Cast to: &lt; **number** &gt;
+			//
+			// - Member of &lt;ReaderEnvelope&gt;
+			//
+			// - Defaults to: 200
+			Code float64 `json:"code"`
+
+			// Data The result payload you expect
+			//
+			// - Cast to: &lt; **object** &gt;
+			//
+			// - Member of &lt;ReaderEnvelope&gt;
+			Data interface{} `json:"data,omitempty"`
+
+			// Meta The metadata that the payload sometimes came with
+			//
+			// - Cast to: &lt; **object** &gt;
+			//
+			// - Member of &lt;ReaderEnvelope&gt;
+			Meta interface{} `json:"meta,omitempty"`
+
+			// Status [REQUIRED]
+			//
+			// Envelope status.
+			//
+			// In extension to HTTP status code
+			//
+			// - Cast to: &lt; **number** &gt;
+			//
+			// - Member of &lt;ReaderEnvelope&gt;
+			//
+			// - Defaults to: 20000
+			Status float64 `json:"status"`
+		}
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParsePutEchoResponse parses an HTTP response from a PutEchoWithResponse call
+func ParsePutEchoResponse(rsp *http.Response) (*PutEchoResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &PutEchoResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest struct {
+			// Code [REQUIRED]
+			//
+			// Envelope code.
+			//
+			// Mirror of HTTP status code
+			//
+			// - Cast to: &lt; **number** &gt;
+			//
+			// - Member of &lt;ReaderEnvelope&gt;
+			//
+			// - Defaults to: 200
+			Code float64 `json:"code"`
+
+			// Data The result payload you expect
+			//
+			// - Cast to: &lt; **object** &gt;
+			//
+			// - Member of &lt;ReaderEnvelope&gt;
+			Data interface{} `json:"data,omitempty"`
+
+			// Meta The metadata that the payload sometimes came with
+			//
+			// - Cast to: &lt; **object** &gt;
+			//
+			// - Member of &lt;ReaderEnvelope&gt;
+			Meta interface{} `json:"meta,omitempty"`
+
+			// Status [REQUIRED]
+			//
+			// Envelope status.
+			//
+			// In extension to HTTP status code
+			//
+			// - Cast to: &lt; **number** &gt;
+			//
+			// - Member of &lt;ReaderEnvelope&gt;
+			//
+			// - Defaults to: 20000
+			Status float64 `json:"status"`
+		}
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParseDeleteEchoRestResponse parses an HTTP response from a DeleteEchoRestWithResponse call
+func ParseDeleteEchoRestResponse(rsp *http.Response) (*DeleteEchoRestResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &DeleteEchoRestResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest struct {
+			// Code [REQUIRED]
+			//
+			// Envelope code.
+			//
+			// Mirror of HTTP status code
+			//
+			// - Cast to: &lt; **number** &gt;
+			//
+			// - Member of &lt;ReaderEnvelope&gt;
+			//
+			// - Defaults to: 200
+			Code float64 `json:"code"`
+
+			// Data The result payload you expect
+			//
+			// - Cast to: &lt; **object** &gt;
+			//
+			// - Member of &lt;ReaderEnvelope&gt;
+			Data interface{} `json:"data,omitempty"`
+
+			// Meta The metadata that the payload sometimes came with
+			//
+			// - Cast to: &lt; **object** &gt;
+			//
+			// - Member of &lt;ReaderEnvelope&gt;
+			Meta interface{} `json:"meta,omitempty"`
+
+			// Status [REQUIRED]
+			//
+			// Envelope status.
+			//
+			// In extension to HTTP status code
+			//
+			// - Cast to: &lt; **number** &gt;
+			//
+			// - Member of &lt;ReaderEnvelope&gt;
+			//
+			// - Defaults to: 20000
+			Status float64 `json:"status"`
+		}
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParseGetEchoRestResponse parses an HTTP response from a GetEchoRestWithResponse call
+func ParseGetEchoRestResponse(rsp *http.Response) (*GetEchoRestResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &GetEchoRestResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest struct {
+			// Code [REQUIRED]
+			//
+			// Envelope code.
+			//
+			// Mirror of HTTP status code
+			//
+			// - Cast to: &lt; **number** &gt;
+			//
+			// - Member of &lt;ReaderEnvelope&gt;
+			//
+			// - Defaults to: 200
+			Code float64 `json:"code"`
+
+			// Data The result payload you expect
+			//
+			// - Cast to: &lt; **object** &gt;
+			//
+			// - Member of &lt;ReaderEnvelope&gt;
+			Data interface{} `json:"data,omitempty"`
+
+			// Meta The metadata that the payload sometimes came with
+			//
+			// - Cast to: &lt; **object** &gt;
+			//
+			// - Member of &lt;ReaderEnvelope&gt;
+			Meta interface{} `json:"meta,omitempty"`
+
+			// Status [REQUIRED]
+			//
+			// Envelope status.
+			//
+			// In extension to HTTP status code
+			//
+			// - Cast to: &lt; **number** &gt;
+			//
+			// - Member of &lt;ReaderEnvelope&gt;
+			//
+			// - Defaults to: 20000
+			Status float64 `json:"status"`
+		}
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParsePatchEchoRestResponse parses an HTTP response from a PatchEchoRestWithResponse call
+func ParsePatchEchoRestResponse(rsp *http.Response) (*PatchEchoRestResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &PatchEchoRestResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest struct {
+			// Code [REQUIRED]
+			//
+			// Envelope code.
+			//
+			// Mirror of HTTP status code
+			//
+			// - Cast to: &lt; **number** &gt;
+			//
+			// - Member of &lt;ReaderEnvelope&gt;
+			//
+			// - Defaults to: 200
+			Code float64 `json:"code"`
+
+			// Data The result payload you expect
+			//
+			// - Cast to: &lt; **object** &gt;
+			//
+			// - Member of &lt;ReaderEnvelope&gt;
+			Data interface{} `json:"data,omitempty"`
+
+			// Meta The metadata that the payload sometimes came with
+			//
+			// - Cast to: &lt; **object** &gt;
+			//
+			// - Member of &lt;ReaderEnvelope&gt;
+			Meta interface{} `json:"meta,omitempty"`
+
+			// Status [REQUIRED]
+			//
+			// Envelope status.
+			//
+			// In extension to HTTP status code
+			//
+			// - Cast to: &lt; **number** &gt;
+			//
+			// - Member of &lt;ReaderEnvelope&gt;
+			//
+			// - Defaults to: 20000
+			Status float64 `json:"status"`
+		}
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParsePostEchoRestResponse parses an HTTP response from a PostEchoRestWithResponse call
+func ParsePostEchoRestResponse(rsp *http.Response) (*PostEchoRestResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &PostEchoRestResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest struct {
+			// Code [REQUIRED]
+			//
+			// Envelope code.
+			//
+			// Mirror of HTTP status code
+			//
+			// - Cast to: &lt; **number** &gt;
+			//
+			// - Member of &lt;ReaderEnvelope&gt;
+			//
+			// - Defaults to: 200
+			Code float64 `json:"code"`
+
+			// Data The result payload you expect
+			//
+			// - Cast to: &lt; **object** &gt;
+			//
+			// - Member of &lt;ReaderEnvelope&gt;
+			Data interface{} `json:"data,omitempty"`
+
+			// Meta The metadata that the payload sometimes came with
+			//
+			// - Cast to: &lt; **object** &gt;
+			//
+			// - Member of &lt;ReaderEnvelope&gt;
+			Meta interface{} `json:"meta,omitempty"`
+
+			// Status [REQUIRED]
+			//
+			// Envelope status.
+			//
+			// In extension to HTTP status code
+			//
+			// - Cast to: &lt; **number** &gt;
+			//
+			// - Member of &lt;ReaderEnvelope&gt;
+			//
+			// - Defaults to: 20000
+			Status float64 `json:"status"`
+		}
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParsePutEchoRestResponse parses an HTTP response from a PutEchoRestWithResponse call
+func ParsePutEchoRestResponse(rsp *http.Response) (*PutEchoRestResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &PutEchoRestResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest struct {
+			// Code [REQUIRED]
+			//
+			// Envelope code.
+			//
+			// Mirror of HTTP status code
+			//
+			// - Cast to: &lt; **number** &gt;
+			//
+			// - Member of &lt;ReaderEnvelope&gt;
+			//
+			// - Defaults to: 200
+			Code float64 `json:"code"`
+
+			// Data The result payload you expect
+			//
+			// - Cast to: &lt; **object** &gt;
+			//
+			// - Member of &lt;ReaderEnvelope&gt;
+			Data interface{} `json:"data,omitempty"`
+
+			// Meta The metadata that the payload sometimes came with
+			//
+			// - Cast to: &lt; **object** &gt;
+			//
+			// - Member of &lt;ReaderEnvelope&gt;
+			Meta interface{} `json:"meta,omitempty"`
+
+			// Status [REQUIRED]
+			//
+			// Envelope status.
+			//
+			// In extension to HTTP status code
+			//
+			// - Cast to: &lt; **number** &gt;
+			//
+			// - Member of &lt;ReaderEnvelope&gt;
+			//
+			// - Defaults to: 20000
+			Status float64 `json:"status"`
+		}
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
 
 	}
 

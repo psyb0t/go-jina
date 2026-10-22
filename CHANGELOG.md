@@ -2,6 +2,16 @@
 
 All notable changes per release. Versions follow [semver](https://semver.org).
 
+## v0.3.0, 2026-10-22
+
+- Added the Reader API's `/echo/{rest}` endpoint to `jinareader` for the `GET`, `POST`, `PUT`, `PATCH` and `DELETE` methods, and the matching `/echo` endpoint without the path parameter.
+- Added client methods on `Client`: `GetEcho`, `PostEcho`, `PutEcho`, `PatchEcho`, `DeleteEcho`, `GetEchoRest`, `PostEchoRest`, `PutEchoRest`, `PatchEchoRest` and `DeleteEchoRest`, plus `WithBody` and `WithFormdataBody` variants for the `POST`, `PUT` and `PATCH` ones.
+- Added the same methods with a `WithResponse` suffix on `ClientWithResponses`, for example `GetEchoRestWithResponse`, and the response types `GetEchoResponse`, `PostEchoResponse`, `PutEchoResponse`, `PatchEchoResponse`, `DeleteEchoResponse` and their `EchoRest` equivalents.
+- Added request builders `NewGetEchoRequest`, `NewPostEchoRequest`, `NewPutEchoRestRequest` and the other `NewXxxEchoRequest` and `NewXxxEchoRestRequest` functions, and parsers such as `ParseGetEchoResponse` and `ParsePostEchoRestResponse`.
+- Added request body types such as `PostEchoJSONBody`, `PostEchoFormdataBody`, `PostEchoMultipartBody` and `PostEchoRestJSONRequestBody`, with equivalents for `PUT` and `PATCH`.
+- `ClientInterface` and `ClientWithResponsesInterface` gained the new methods. Code that implements either interface, such as a mock, must add them. Code that only calls `Client` or `ClientWithResponses` is unaffected.
+- `jinareader` generates from Jina Reader API spec version 0.5.0+b2f8a45. The `jina` package and its spec version are unchanged.
+
 ## v0.2.2, 2026-10-21
 
 - The module requires Go 1.26.10, up from 1.26.9, and the development image uses it. Go 1.26.10 fixes GO-2026-6809 in `crypto/x509`, which govulncheck reports for every package that makes HTTPS requests, so the v0.2.1 release pipeline failed its security scan and v0.2.1 was never published.
