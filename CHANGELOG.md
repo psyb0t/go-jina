@@ -2,6 +2,16 @@
 
 All notable changes per release. Versions follow [semver](https://semver.org).
 
+## v0.4.0, 2026-10-24
+
+- Added Reader API endpoints `GET /bot` and `GET /.well-known/http-message-signatures-directory` to `jinareader`: `Client.GetBot`, `Client.GetWellKnownHttpMessageSignaturesDirectory`, the `WithResponse` variants on `ClientWithResponses`, `NewGetBotRequest`, `NewGetWellKnownHttpMessageSignaturesDirectoryRequest`, `ParseGetBotResponse`, `ParseGetWellKnownHttpMessageSignaturesDirectoryResponse` and the response types `GetBotResponse` and `GetWellKnownHttpMessageSignaturesDirectoryResponse`.
+- Added the `WebBotAuth` field to `GetParams`, `GetTargetUrlParams`, `PostParams`, `PostTargetUrlParams` and the `Post` and `PostTargetUrl` JSON, form data and multipart body types.
+- `RobotsTxt` on those same params and body types changed from `*string` to a union type, for example `*PostJSONBody_RobotsTxt`. Code that sets `RobotsTxt` to a `*string` must change.
+- `ClientInterface` and `ClientWithResponsesInterface` gained `GetBot`, `GetWellKnownHttpMessageSignaturesDirectory` and their `WithResponse` equivalents. Code that implements either interface, such as a mock, must add them.
+- The position-based names oapi-codegen gives anonymous and union types in `jinareader` shifted again. Types such as `Cookie0x17`, `CrawlerOptions0x27` and `FormattedPageDto0x42` were renamed one slot up (for example `Cookie0x18`, `CrawlerOptions0x28`), and the numbered member aliases and `From`, `Merge` and `As` helpers on them were removed or renamed. Code that names these generated types directly must update it.
+- The Reader spec rewrite in `scripts/fix-reader-spec.jq` now replaces a `oneOf` member that wraps a single `$ref` in `allOf` with the bare `$ref`. This stops oapi-codegen from emitting a per-member alias for each such property, such as `PostParamsWebBotAuth0`.
+- `jinareader` generates from Jina Reader API spec version 0.5.0+2e3f8b4, up from 0.5.0+b2f8a45. The `jina` package and its spec version are unchanged.
+
 ## v0.3.0, 2026-10-22
 
 - Added the Reader API's `/echo/{rest}` endpoint to `jinareader` for the `GET`, `POST`, `PUT`, `PATCH` and `DELETE` methods, and the matching `/echo` endpoint without the path parameter.

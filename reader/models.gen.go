@@ -212,61 +212,61 @@ func (e Enum0x15) Valid() bool {
 
 // Defines values for Enum0x16.
 const (
-	Enum0x16Lax    Enum0x16 = "Lax"
-	Enum0x16None   Enum0x16 = "None"
-	Enum0x16Strict Enum0x16 = "Strict"
+	Enum0x16Authority Enum0x16 = "authority"
+	Enum0x16TargetUri Enum0x16 = "target-uri"
 )
 
 // Valid indicates whether the value is a known member of the Enum0x16 enum.
 func (e Enum0x16) Valid() bool {
 	switch e {
-	case Enum0x16Lax:
+	case Enum0x16Authority:
 		return true
-	case Enum0x16None:
-		return true
-	case Enum0x16Strict:
+	case Enum0x16TargetUri:
 		return true
 	default:
 		return false
 	}
 }
 
-// Defines values for Enum0x1b.
+// Defines values for Enum0x17.
 const (
-	Enum0x1bAuto               Enum0x1b = "auto"
-	Enum0x1bBrowser            Enum0x1b = "browser"
-	Enum0x1bCfBrowserRendering Enum0x1b = "cf-browser-rendering"
-	Enum0x1bCurl               Enum0x1b = "curl"
+	Enum0x17Lax    Enum0x17 = "Lax"
+	Enum0x17None   Enum0x17 = "None"
+	Enum0x17Strict Enum0x17 = "Strict"
 )
 
-// Valid indicates whether the value is a known member of the Enum0x1b enum.
-func (e Enum0x1b) Valid() bool {
+// Valid indicates whether the value is a known member of the Enum0x17 enum.
+func (e Enum0x17) Valid() bool {
 	switch e {
-	case Enum0x1bAuto:
+	case Enum0x17Lax:
 		return true
-	case Enum0x1bBrowser:
+	case Enum0x17None:
 		return true
-	case Enum0x1bCfBrowserRendering:
-		return true
-	case Enum0x1bCurl:
+	case Enum0x17Strict:
 		return true
 	default:
 		return false
 	}
 }
 
-// Defines values for Enum0x1d.
+// Defines values for Enum0x1c.
 const (
-	Enum0x1dAtx    Enum0x1d = "atx"
-	Enum0x1dSetext Enum0x1d = "setext"
+	Enum0x1cAuto               Enum0x1c = "auto"
+	Enum0x1cBrowser            Enum0x1c = "browser"
+	Enum0x1cCfBrowserRendering Enum0x1c = "cf-browser-rendering"
+	Enum0x1cCurl               Enum0x1c = "curl"
 )
 
-// Valid indicates whether the value is a known member of the Enum0x1d enum.
-func (e Enum0x1d) Valid() bool {
+// Valid indicates whether the value is a known member of the Enum0x1c enum.
+func (e Enum0x1c) Valid() bool {
 	switch e {
-	case Enum0x1dAtx:
+	case Enum0x1cAuto:
 		return true
-	case Enum0x1dSetext:
+	case Enum0x1cBrowser:
+		return true
+	case Enum0x1cCfBrowserRendering:
+		return true
+	case Enum0x1cCurl:
 		return true
 	default:
 		return false
@@ -275,19 +275,16 @@ func (e Enum0x1d) Valid() bool {
 
 // Defines values for Enum0x1e.
 const (
-	Enum0x1eAsterisk Enum0x1e = "*"
-	Enum0x1eMinus    Enum0x1e = "-"
-	Enum0x1ePlus     Enum0x1e = "+"
+	Enum0x1eAtx    Enum0x1e = "atx"
+	Enum0x1eSetext Enum0x1e = "setext"
 )
 
 // Valid indicates whether the value is a known member of the Enum0x1e enum.
 func (e Enum0x1e) Valid() bool {
 	switch e {
-	case Enum0x1eAsterisk:
+	case Enum0x1eAtx:
 		return true
-	case Enum0x1eMinus:
-		return true
-	case Enum0x1ePlus:
+	case Enum0x1eSetext:
 		return true
 	default:
 		return false
@@ -296,8 +293,9 @@ func (e Enum0x1e) Valid() bool {
 
 // Defines values for Enum0x1f.
 const (
-	Enum0x1fAsterisk   Enum0x1f = "*"
-	Enum0x1fUnderscore Enum0x1f = "_"
+	Enum0x1fAsterisk Enum0x1f = "*"
+	Enum0x1fMinus    Enum0x1f = "-"
+	Enum0x1fPlus     Enum0x1f = "+"
 )
 
 // Valid indicates whether the value is a known member of the Enum0x1f enum.
@@ -305,7 +303,9 @@ func (e Enum0x1f) Valid() bool {
 	switch e {
 	case Enum0x1fAsterisk:
 		return true
-	case Enum0x1fUnderscore:
+	case Enum0x1fMinus:
+		return true
+	case Enum0x1fPlus:
 		return true
 	default:
 		return false
@@ -314,16 +314,16 @@ func (e Enum0x1f) Valid() bool {
 
 // Defines values for Enum0x20.
 const (
-	Enum0x20AsteriskAsterisk     Enum0x20 = "**"
-	Enum0x20UnderscoreUnderscore Enum0x20 = "__"
+	Enum0x20Asterisk   Enum0x20 = "*"
+	Enum0x20Underscore Enum0x20 = "_"
 )
 
 // Valid indicates whether the value is a known member of the Enum0x20 enum.
 func (e Enum0x20) Valid() bool {
 	switch e {
-	case Enum0x20AsteriskAsterisk:
+	case Enum0x20Asterisk:
 		return true
-	case Enum0x20UnderscoreUnderscore:
+	case Enum0x20Underscore:
 		return true
 	default:
 		return false
@@ -332,19 +332,16 @@ func (e Enum0x20) Valid() bool {
 
 // Defines values for Enum0x21.
 const (
-	Enum0x21Discarded  Enum0x21 = "discarded"
-	Enum0x21Inlined    Enum0x21 = "inlined"
-	Enum0x21Referenced Enum0x21 = "referenced"
+	Enum0x21AsteriskAsterisk     Enum0x21 = "**"
+	Enum0x21UnderscoreUnderscore Enum0x21 = "__"
 )
 
 // Valid indicates whether the value is a known member of the Enum0x21 enum.
 func (e Enum0x21) Valid() bool {
 	switch e {
-	case Enum0x21Discarded:
+	case Enum0x21AsteriskAsterisk:
 		return true
-	case Enum0x21Inlined:
-		return true
-	case Enum0x21Referenced:
+	case Enum0x21UnderscoreUnderscore:
 		return true
 	default:
 		return false
@@ -353,52 +350,43 @@ func (e Enum0x21) Valid() bool {
 
 // Defines values for Enum0x22.
 const (
-	Enum0x22Collapsed Enum0x22 = "collapsed"
-	Enum0x22Discarded Enum0x22 = "discarded"
-	Enum0x22Full      Enum0x22 = "full"
-	Enum0x22Shortcut  Enum0x22 = "shortcut"
+	Enum0x22Discarded  Enum0x22 = "discarded"
+	Enum0x22Inlined    Enum0x22 = "inlined"
+	Enum0x22Referenced Enum0x22 = "referenced"
 )
 
 // Valid indicates whether the value is a known member of the Enum0x22 enum.
 func (e Enum0x22) Valid() bool {
 	switch e {
-	case Enum0x22Collapsed:
-		return true
 	case Enum0x22Discarded:
 		return true
-	case Enum0x22Full:
+	case Enum0x22Inlined:
 		return true
-	case Enum0x22Shortcut:
+	case Enum0x22Referenced:
 		return true
 	default:
 		return false
 	}
 }
 
-// Defines values for Enum0x25.
+// Defines values for Enum0x23.
 const (
-	Enum0x25Html           Enum0x25 = "html"
-	Enum0x25MediaIdle      Enum0x25 = "media-idle"
-	Enum0x25MutationIdle   Enum0x25 = "mutation-idle"
-	Enum0x25NetworkIdle    Enum0x25 = "network-idle"
-	Enum0x25ResourceIdle   Enum0x25 = "resource-idle"
-	Enum0x25VisibleContent Enum0x25 = "visible-content"
+	Enum0x23Collapsed Enum0x23 = "collapsed"
+	Enum0x23Discarded Enum0x23 = "discarded"
+	Enum0x23Full      Enum0x23 = "full"
+	Enum0x23Shortcut  Enum0x23 = "shortcut"
 )
 
-// Valid indicates whether the value is a known member of the Enum0x25 enum.
-func (e Enum0x25) Valid() bool {
+// Valid indicates whether the value is a known member of the Enum0x23 enum.
+func (e Enum0x23) Valid() bool {
 	switch e {
-	case Enum0x25Html:
+	case Enum0x23Collapsed:
 		return true
-	case Enum0x25MediaIdle:
+	case Enum0x23Discarded:
 		return true
-	case Enum0x25MutationIdle:
+	case Enum0x23Full:
 		return true
-	case Enum0x25NetworkIdle:
-		return true
-	case Enum0x25ResourceIdle:
-		return true
-	case Enum0x25VisibleContent:
+	case Enum0x23Shortcut:
 		return true
 	default:
 		return false
@@ -407,54 +395,84 @@ func (e Enum0x25) Valid() bool {
 
 // Defines values for Enum0x26.
 const (
-	Enum0x26H1         Enum0x26 = "h1"
-	Enum0x26H2         Enum0x26 = "h2"
-	Enum0x26H3         Enum0x26 = "h3"
-	Enum0x26H4         Enum0x26 = "h4"
-	Enum0x26H5         Enum0x26 = "h5"
-	Enum0x26S1         Enum0x26 = "s1"
-	Enum0x26S2         Enum0x26 = "s2"
-	Enum0x26S3         Enum0x26 = "s3"
-	Enum0x26S4         Enum0x26 = "s4"
-	Enum0x26S5         Enum0x26 = "s5"
-	Enum0x26Structured Enum0x26 = "structured"
-	Enum0x26True       Enum0x26 = "true"
+	Enum0x26Html           Enum0x26 = "html"
+	Enum0x26MediaIdle      Enum0x26 = "media-idle"
+	Enum0x26MutationIdle   Enum0x26 = "mutation-idle"
+	Enum0x26NetworkIdle    Enum0x26 = "network-idle"
+	Enum0x26ResourceIdle   Enum0x26 = "resource-idle"
+	Enum0x26VisibleContent Enum0x26 = "visible-content"
 )
 
 // Valid indicates whether the value is a known member of the Enum0x26 enum.
 func (e Enum0x26) Valid() bool {
 	switch e {
-	case Enum0x26H1:
+	case Enum0x26Html:
 		return true
-	case Enum0x26H2:
+	case Enum0x26MediaIdle:
 		return true
-	case Enum0x26H3:
+	case Enum0x26MutationIdle:
 		return true
-	case Enum0x26H4:
+	case Enum0x26NetworkIdle:
 		return true
-	case Enum0x26H5:
+	case Enum0x26ResourceIdle:
 		return true
-	case Enum0x26S1:
-		return true
-	case Enum0x26S2:
-		return true
-	case Enum0x26S3:
-		return true
-	case Enum0x26S4:
-		return true
-	case Enum0x26S5:
-		return true
-	case Enum0x26Structured:
-		return true
-	case Enum0x26True:
+	case Enum0x26VisibleContent:
 		return true
 	default:
 		return false
 	}
 }
 
-// AbuseAlleviationError0x2f defines model for AbuseAlleviationError@0x2f.
-type AbuseAlleviationError0x2f struct {
+// Defines values for Enum0x27.
+const (
+	Enum0x27H1         Enum0x27 = "h1"
+	Enum0x27H2         Enum0x27 = "h2"
+	Enum0x27H3         Enum0x27 = "h3"
+	Enum0x27H4         Enum0x27 = "h4"
+	Enum0x27H5         Enum0x27 = "h5"
+	Enum0x27S1         Enum0x27 = "s1"
+	Enum0x27S2         Enum0x27 = "s2"
+	Enum0x27S3         Enum0x27 = "s3"
+	Enum0x27S4         Enum0x27 = "s4"
+	Enum0x27S5         Enum0x27 = "s5"
+	Enum0x27Structured Enum0x27 = "structured"
+	Enum0x27True       Enum0x27 = "true"
+)
+
+// Valid indicates whether the value is a known member of the Enum0x27 enum.
+func (e Enum0x27) Valid() bool {
+	switch e {
+	case Enum0x27H1:
+		return true
+	case Enum0x27H2:
+		return true
+	case Enum0x27H3:
+		return true
+	case Enum0x27H4:
+		return true
+	case Enum0x27H5:
+		return true
+	case Enum0x27S1:
+		return true
+	case Enum0x27S2:
+		return true
+	case Enum0x27S3:
+		return true
+	case Enum0x27S4:
+		return true
+	case Enum0x27S5:
+		return true
+	case Enum0x27Structured:
+		return true
+	case Enum0x27True:
+		return true
+	default:
+		return false
+	}
+}
+
+// AbuseAlleviationError0x30 defines model for AbuseAlleviationError@0x30.
+type AbuseAlleviationError0x30 struct {
 	// Code [REQUIRED]
 	//
 	// Expect HTTP response codes
@@ -491,17 +509,17 @@ type AbuseAlleviationError0x2f struct {
 	AdditionalProperties map[string]interface{} `json:"-"`
 }
 
-// Arraystring0x3b defines model for Array<string>@0x3b.
-type Arraystring0x3b = []string
+// Arraystring0x3c defines model for Array<string>@0x3c.
+type Arraystring0x3c = []string
 
-// Arraystring0x3d defines model for Array<string>@0x3d.
-type Arraystring0x3d = []string
+// Arraystring0x3e defines model for Array<string>@0x3e.
+type Arraystring0x3e = []string
 
-// Arraystring0x3f defines model for Array<string>@0x3f.
-type Arraystring0x3f = []string
+// Arraystring0x40 defines model for Array<string>@0x40.
+type Arraystring0x40 = []string
 
-// AssertionFailureError0x35 defines model for AssertionFailureError@0x35.
-type AssertionFailureError0x35 struct {
+// AssertionFailureError0x36 defines model for AssertionFailureError@0x36.
+type AssertionFailureError0x36 struct {
 	// Code [REQUIRED]
 	//
 	// Expect HTTP response codes
@@ -538,8 +556,8 @@ type AssertionFailureError0x35 struct {
 	AdditionalProperties map[string]interface{} `json:"-"`
 }
 
-// AuthenticationFailedError0x2a defines model for AuthenticationFailedError@0x2a.
-type AuthenticationFailedError0x2a struct {
+// AuthenticationFailedError0x2b defines model for AuthenticationFailedError@0x2b.
+type AuthenticationFailedError0x2b struct {
 	// Code [REQUIRED]
 	//
 	// Expect HTTP response codes
@@ -576,8 +594,8 @@ type AuthenticationFailedError0x2a struct {
 	AdditionalProperties map[string]interface{} `json:"-"`
 }
 
-// AuthenticationRequiredError0x2b defines model for AuthenticationRequiredError@0x2b.
-type AuthenticationRequiredError0x2b struct {
+// AuthenticationRequiredError0x2c defines model for AuthenticationRequiredError@0x2c.
+type AuthenticationRequiredError0x2c struct {
 	// Code [REQUIRED]
 	//
 	// Expect HTTP response codes
@@ -614,8 +632,8 @@ type AuthenticationRequiredError0x2b struct {
 	AdditionalProperties map[string]interface{} `json:"-"`
 }
 
-// BudgetExceededError0x31 defines model for BudgetExceededError@0x31.
-type BudgetExceededError0x31 struct {
+// BudgetExceededError0x32 defines model for BudgetExceededError@0x32.
+type BudgetExceededError0x32 struct {
 	// Code [REQUIRED]
 	//
 	// Expect HTTP response codes
@@ -652,8 +670,8 @@ type BudgetExceededError0x31 struct {
 	AdditionalProperties map[string]interface{} `json:"-"`
 }
 
-// Cookie0x17 defines model for Cookie@0x17.
-type Cookie0x17 struct {
+// Cookie0x18 defines model for Cookie@0x18.
+type Cookie0x18 struct {
 	// Domain - Cast to: &lt; **string** &gt;
 	//
 	// - Member of &lt;Cookie&gt;
@@ -686,7 +704,7 @@ type Cookie0x17 struct {
 	// SameSite - Cast to: &lt; **&quot;Strict&quot; | &quot;Lax&quot; | &quot;None&quot;|string** &gt;
 	//
 	// - Member of &lt;Cookie&gt;
-	SameSite *Cookie0x17_SameSite `json:"sameSite,omitempty"`
+	SameSite *Cookie0x18_SameSite `json:"sameSite,omitempty"`
 
 	// Secure - Cast to: &lt; **boolean** &gt;
 	//
@@ -701,21 +719,18 @@ type Cookie0x17 struct {
 	Value string `json:"value"`
 }
 
-// Cookie0x17SameSite0 Enum<"Strict" | "Lax" | "None">
-type Cookie0x17SameSite0 = Enum0x16
+// Cookie0x18SameSite1 defines model for Cookie0x18.SameSite.1.
+type Cookie0x18SameSite1 = string
 
-// Cookie0x17SameSite1 defines model for Cookie0x17.SameSite.1.
-type Cookie0x17SameSite1 = string
-
-// Cookie0x17_SameSite - Cast to: &lt; **&quot;Strict&quot; | &quot;Lax&quot; | &quot;None&quot;|string** &gt;
+// Cookie0x18_SameSite - Cast to: &lt; **&quot;Strict&quot; | &quot;Lax&quot; | &quot;None&quot;|string** &gt;
 //
 // - Member of &lt;Cookie&gt;
-type Cookie0x17_SameSite struct {
+type Cookie0x18_SameSite struct {
 	union json.RawMessage
 }
 
-// CrawlerOptions0x27 defines model for CrawlerOptions@0x27.
-type CrawlerOptions0x27 struct {
+// CrawlerOptions0x28 defines model for CrawlerOptions@0x28.
+type CrawlerOptions0x28 struct {
 	// AssertStatusCode - Cast to: &lt; **number** &gt;
 	//
 	// - Member of &lt;CrawlerOptions&gt;
@@ -746,7 +761,7 @@ type CrawlerOptions0x27 struct {
 	// Engine - Cast to: &lt; **&quot;auto&quot; | &quot;browser&quot; | &quot;curl&quot; | &quot;cf-browser-rendering&quot;|string** &gt;
 	//
 	// - Member of &lt;CrawlerOptions&gt;
-	Engine *CrawlerOptions0x27_Engine `json:"engine,omitempty"`
+	Engine *CrawlerOptions0x28_Engine `json:"engine,omitempty"`
 
 	// ExportStorageState - Cast to: &lt; **PseudoBooleanLoose** &gt;
 	//
@@ -758,7 +773,7 @@ type CrawlerOptions0x27 struct {
 	// - Cast to: &lt; **FancyFile|string** &gt;
 	//
 	// - Member of &lt;CrawlerOptions&gt;
-	File *CrawlerOptions0x27_File `json:"file,omitempty"`
+	File *CrawlerOptions0x28_File `json:"file,omitempty"`
 
 	// Html - Cast to: &lt; **string** &gt;
 	//
@@ -800,12 +815,12 @@ type CrawlerOptions0x27 struct {
 	// Markdown - Cast to: &lt; **TurnDownTweakableOptions** &gt;
 	//
 	// - Member of &lt;CrawlerOptions&gt;
-	Markdown *TurnDownTweakableOptions0x23 `json:"markdown,omitempty"`
+	Markdown *TurnDownTweakableOptions0x24 `json:"markdown,omitempty"`
 
 	// MarkdownChunking - Cast to: &lt; **&quot;true&quot; | &quot;h1&quot; | &quot;h2&quot; | &quot;h3&quot; | &quot;h4&quot; | &quot;h5&quot; | &quot;structured&quot; | &quot;s1&quot; | &quot;s2&quot; | &quot;s3&quot; | &quot;s4&quot; | &quot;s5&quot;|string** &gt;
 	//
 	// - Member of &lt;CrawlerOptions&gt;
-	MarkdownChunking *CrawlerOptions0x27_MarkdownChunking `json:"markdownChunking,omitempty"`
+	MarkdownChunking *CrawlerOptions0x28_MarkdownChunking `json:"markdownChunking,omitempty"`
 
 	// MaxTokens - Cast to: &lt; **number** &gt;
 	//
@@ -822,7 +837,7 @@ type CrawlerOptions0x27 struct {
 	// NoGfm - Cast to: &lt; **PseudoBoolean|string** &gt;
 	//
 	// - Member of &lt;CrawlerOptions&gt;
-	NoGfm *CrawlerOptions0x27_NoGfm `json:"noGfm,omitempty"`
+	NoGfm *CrawlerOptions0x28_NoGfm `json:"noGfm,omitempty"`
 
 	// NoServiceWorker - Cast to: &lt; **PseudoBooleanLoose** &gt;
 	//
@@ -832,7 +847,7 @@ type CrawlerOptions0x27 struct {
 	// Ocr - Cast to: &lt; **OCRPreferences** &gt;
 	//
 	// - Member of &lt;CrawlerOptions&gt;
-	Ocr *OCRPreferences0x24 `json:"ocr,omitempty"`
+	Ocr *OCRPreferences0x25 `json:"ocr,omitempty"`
 
 	// Page Steer which page(s) to return for document files. See PageSelection.
 	//
@@ -846,7 +861,7 @@ type CrawlerOptions0x27 struct {
 	// - Cast to: &lt; **FancyFile|string** &gt;
 	//
 	// - Member of &lt;CrawlerOptions&gt;
-	Pdf *CrawlerOptions0x27_Pdf `json:"pdf,omitempty"`
+	Pdf *CrawlerOptions0x28_Pdf `json:"pdf,omitempty"`
 
 	// PreloadUrl - Cast to: &lt; **string** &gt;
 	//
@@ -891,14 +906,14 @@ type CrawlerOptions0x27 struct {
 	// RespondTiming - Cast to: &lt; **&quot;html&quot; | &quot;visible-content&quot; | &quot;mutation-idle&quot; | &quot;resource-idle&quot; | &quot;media-idle&quot; | &quot;network-idle&quot;** &gt;
 	//
 	// - Member of &lt;CrawlerOptions&gt;
-	RespondTiming *Enum0x25 `json:"respondTiming,omitempty"`
+	RespondTiming *Enum0x26 `json:"respondTiming,omitempty"`
 
 	// RespondWith - Cast to: &lt; **&quot;content&quot; | &quot;markdown&quot; | &quot;html&quot; | &quot;text&quot; | &quot;pageshot&quot; | &quot;screenshot&quot; | &quot;vlm&quot; | &quot;readerlm-v2&quot; | &quot;frontmatter&quot; | &quot;readability&quot; | &quot;...|string** &gt;
 	//
 	// - Member of &lt;CrawlerOptions&gt;
 	//
 	// - Defaults to: &#39;content&#39;
-	RespondWith *CrawlerOptions0x27_RespondWith `json:"respondWith,omitempty"`
+	RespondWith *CrawlerOptions0x28_RespondWith `json:"respondWith,omitempty"`
 
 	// RetainImages - Cast to: &lt; **&quot;none&quot; | &quot;all&quot; | &quot;alt&quot; | &quot;all_p&quot; | &quot;alt_p&quot;** &gt;
 	//
@@ -921,15 +936,15 @@ type CrawlerOptions0x27 struct {
 	// - Defaults to: &#39;link&#39;
 	RetainMedia *Enum0x13 `json:"retainMedia,omitempty"`
 
-	// RobotsTxt - Cast to: &lt; **string** &gt;
+	// RobotsTxt - Cast to: &lt; **PseudoBoolean|string** &gt;
 	//
 	// - Member of &lt;CrawlerOptions&gt;
-	RobotsTxt *string `json:"robotsTxt,omitempty"`
+	RobotsTxt *CrawlerOptions0x28_RobotsTxt `json:"robotsTxt,omitempty"`
 
 	// SetCookies - Cast to: &lt; **Array&lt;object|string&gt;** &gt;
 	//
 	// - Member of &lt;CrawlerOptions&gt;
-	SetCookies *[]CrawlerOptions0x27_SetCookies_Item `json:"setCookies,omitempty"`
+	SetCookies *[]CrawlerOptions0x28_SetCookies_Item `json:"setCookies,omitempty"`
 
 	// SkipCertVerification - Cast to: &lt; **PseudoBooleanLoose** &gt;
 	//
@@ -939,7 +954,7 @@ type CrawlerOptions0x27 struct {
 	// StorageState - Cast to: &lt; **StorageState** &gt;
 	//
 	// - Member of &lt;CrawlerOptions&gt;
-	StorageState *StorageState0x1a `json:"storageState,omitempty"`
+	StorageState *StorageState0x1b `json:"storageState,omitempty"`
 
 	// TargetSelector - Cast to: &lt; **Array&lt;string&gt;** &gt;
 	//
@@ -971,12 +986,17 @@ type CrawlerOptions0x27 struct {
 	// Viewport - Cast to: &lt; **Viewport** &gt;
 	//
 	// - Member of &lt;CrawlerOptions&gt;
-	Viewport *Viewport0x1c `json:"viewport,omitempty"`
+	Viewport *Viewport0x1d `json:"viewport,omitempty"`
 
 	// WaitForSelector - Cast to: &lt; **Array&lt;string&gt;** &gt;
 	//
 	// - Member of &lt;CrawlerOptions&gt;
 	WaitForSelector *[]string `json:"waitForSelector,omitempty"`
+
+	// WebBotAuth - Cast to: &lt; **PseudoBoolean|&quot;authority&quot; | &quot;target-uri&quot;** &gt;
+	//
+	// - Member of &lt;CrawlerOptions&gt;
+	WebBotAuth *CrawlerOptions0x28_WebBotAuth `json:"webBotAuth,omitempty"`
 
 	// WithGeneratedAlt - Cast to: &lt; **PseudoBoolean** &gt;
 	//
@@ -986,7 +1006,7 @@ type CrawlerOptions0x27 struct {
 	// WithIframe - Cast to: &lt; **PseudoBoolean|string** &gt;
 	//
 	// - Member of &lt;CrawlerOptions&gt;
-	WithIframe *CrawlerOptions0x27_WithIframe `json:"withIframe,omitempty"`
+	WithIframe *CrawlerOptions0x28_WithIframe `json:"withIframe,omitempty"`
 
 	// WithImagesSummary - Cast to: &lt; **PseudoBooleanLoose** &gt;
 	//
@@ -996,7 +1016,7 @@ type CrawlerOptions0x27 struct {
 	// WithLinksSummary - Cast to: &lt; **PseudoBoolean|string** &gt;
 	//
 	// - Member of &lt;CrawlerOptions&gt;
-	WithLinksSummary *CrawlerOptions0x27_WithLinksSummary `json:"withLinksSummary,omitempty"`
+	WithLinksSummary *CrawlerOptions0x28_WithLinksSummary `json:"withLinksSummary,omitempty"`
 
 	// WithShadowDom - Cast to: &lt; **PseudoBooleanLoose** &gt;
 	//
@@ -1009,129 +1029,122 @@ type CrawlerOptions0x27 struct {
 	ZeroDataRetention *PseudoBooleanLoose0x0c `json:"zeroDataRetention,omitempty"`
 }
 
-// CrawlerOptions0x27Engine0 Enum<"auto" | "browser" | "curl" | "cf-browser-rendering">
-type CrawlerOptions0x27Engine0 = Enum0x1b
+// CrawlerOptions0x28Engine1 defines model for CrawlerOptions0x28.Engine.1.
+type CrawlerOptions0x28Engine1 = string
 
-// CrawlerOptions0x27Engine1 defines model for CrawlerOptions0x27.Engine.1.
-type CrawlerOptions0x27Engine1 = string
-
-// CrawlerOptions0x27_Engine - Cast to: &lt; **&quot;auto&quot; | &quot;browser&quot; | &quot;curl&quot; | &quot;cf-browser-rendering&quot;|string** &gt;
+// CrawlerOptions0x28_Engine - Cast to: &lt; **&quot;auto&quot; | &quot;browser&quot; | &quot;curl&quot; | &quot;cf-browser-rendering&quot;|string** &gt;
 //
 // - Member of &lt;CrawlerOptions&gt;
-type CrawlerOptions0x27_Engine struct {
+type CrawlerOptions0x28_Engine struct {
 	union json.RawMessage
 }
 
-// CrawlerOptions0x27File0 defines model for CrawlerOptions0x27.File.0.
-type CrawlerOptions0x27File0 = FancyFile0x0e
+// CrawlerOptions0x28File1 defines model for CrawlerOptions0x28.File.1.
+type CrawlerOptions0x28File1 = string
 
-// CrawlerOptions0x27File1 defines model for CrawlerOptions0x27.File.1.
-type CrawlerOptions0x27File1 = string
-
-// CrawlerOptions0x27_File Base64 encoded file.
+// CrawlerOptions0x28_File Base64 encoded file.
 //
 // - Cast to: &lt; **FancyFile|string** &gt;
 //
 // - Member of &lt;CrawlerOptions&gt;
-type CrawlerOptions0x27_File struct {
+type CrawlerOptions0x28_File struct {
 	union json.RawMessage
 }
 
-// CrawlerOptions0x27MarkdownChunking0 Enum<"true" | "h1" | "h2" | "h3" | "h4" | "h5" | "structured" | "s1" | "s2" | "s3" | "s4" | "s5">
-type CrawlerOptions0x27MarkdownChunking0 = Enum0x26
+// CrawlerOptions0x28MarkdownChunking1 defines model for CrawlerOptions0x28.MarkdownChunking.1.
+type CrawlerOptions0x28MarkdownChunking1 = string
 
-// CrawlerOptions0x27MarkdownChunking1 defines model for CrawlerOptions0x27.MarkdownChunking.1.
-type CrawlerOptions0x27MarkdownChunking1 = string
-
-// CrawlerOptions0x27_MarkdownChunking - Cast to: &lt; **&quot;true&quot; | &quot;h1&quot; | &quot;h2&quot; | &quot;h3&quot; | &quot;h4&quot; | &quot;h5&quot; | &quot;structured&quot; | &quot;s1&quot; | &quot;s2&quot; | &quot;s3&quot; | &quot;s4&quot; | &quot;s5&quot;|string** &gt;
+// CrawlerOptions0x28_MarkdownChunking - Cast to: &lt; **&quot;true&quot; | &quot;h1&quot; | &quot;h2&quot; | &quot;h3&quot; | &quot;h4&quot; | &quot;h5&quot; | &quot;structured&quot; | &quot;s1&quot; | &quot;s2&quot; | &quot;s3&quot; | &quot;s4&quot; | &quot;s5&quot;|string** &gt;
 //
 // - Member of &lt;CrawlerOptions&gt;
-type CrawlerOptions0x27_MarkdownChunking struct {
+type CrawlerOptions0x28_MarkdownChunking struct {
 	union json.RawMessage
 }
 
-// CrawlerOptions0x27NoGfm0 A boolean value that can be represented in various formats.
-type CrawlerOptions0x27NoGfm0 = PseudoBoolean0x11
+// CrawlerOptions0x28NoGfm1 defines model for CrawlerOptions0x28.NoGfm.1.
+type CrawlerOptions0x28NoGfm1 = string
 
-// CrawlerOptions0x27NoGfm1 defines model for CrawlerOptions0x27.NoGfm.1.
-type CrawlerOptions0x27NoGfm1 = string
-
-// CrawlerOptions0x27_NoGfm - Cast to: &lt; **PseudoBoolean|string** &gt;
+// CrawlerOptions0x28_NoGfm - Cast to: &lt; **PseudoBoolean|string** &gt;
 //
 // - Member of &lt;CrawlerOptions&gt;
-type CrawlerOptions0x27_NoGfm struct {
+type CrawlerOptions0x28_NoGfm struct {
 	union json.RawMessage
 }
 
-// CrawlerOptions0x27Pdf0 defines model for CrawlerOptions0x27.Pdf.0.
-type CrawlerOptions0x27Pdf0 = FancyFile0x0e
+// CrawlerOptions0x28Pdf1 defines model for CrawlerOptions0x28.Pdf.1.
+type CrawlerOptions0x28Pdf1 = string
 
-// CrawlerOptions0x27Pdf1 defines model for CrawlerOptions0x27.Pdf.1.
-type CrawlerOptions0x27Pdf1 = string
-
-// CrawlerOptions0x27_Pdf Base64 encoded PDF.
+// CrawlerOptions0x28_Pdf Base64 encoded PDF.
 //
 // - Cast to: &lt; **FancyFile|string** &gt;
 //
 // - Member of &lt;CrawlerOptions&gt;
-type CrawlerOptions0x27_Pdf struct {
+type CrawlerOptions0x28_Pdf struct {
 	union json.RawMessage
 }
 
-// CrawlerOptions0x27RespondWith0 Enum<"content" | "markdown" | "html" | "text" | "pageshot" | "screenshot" | "vlm" | "readerlm-v2" | "frontmatter" | "readability" | "...>
-type CrawlerOptions0x27RespondWith0 = Enum0x10
+// CrawlerOptions0x28RespondWith1 defines model for CrawlerOptions0x28.RespondWith.1.
+type CrawlerOptions0x28RespondWith1 = string
 
-// CrawlerOptions0x27RespondWith1 defines model for CrawlerOptions0x27.RespondWith.1.
-type CrawlerOptions0x27RespondWith1 = string
-
-// CrawlerOptions0x27_RespondWith - Cast to: &lt; **&quot;content&quot; | &quot;markdown&quot; | &quot;html&quot; | &quot;text&quot; | &quot;pageshot&quot; | &quot;screenshot&quot; | &quot;vlm&quot; | &quot;readerlm-v2&quot; | &quot;frontmatter&quot; | &quot;readability&quot; | &quot;...|string** &gt;
+// CrawlerOptions0x28_RespondWith - Cast to: &lt; **&quot;content&quot; | &quot;markdown&quot; | &quot;html&quot; | &quot;text&quot; | &quot;pageshot&quot; | &quot;screenshot&quot; | &quot;vlm&quot; | &quot;readerlm-v2&quot; | &quot;frontmatter&quot; | &quot;readability&quot; | &quot;...|string** &gt;
 //
 // - Member of &lt;CrawlerOptions&gt;
 //
 // - Defaults to: &#39;content&#39;
-type CrawlerOptions0x27_RespondWith struct {
+type CrawlerOptions0x28_RespondWith struct {
 	union json.RawMessage
 }
 
-// CrawlerOptions0x27SetCookies0 Can be any value - string, number, boolean, array or object.
-type CrawlerOptions0x27SetCookies0 = interface{}
+// CrawlerOptions0x28RobotsTxt1 defines model for CrawlerOptions0x28.RobotsTxt.1.
+type CrawlerOptions0x28RobotsTxt1 = string
 
-// CrawlerOptions0x27SetCookies1 defines model for CrawlerOptions0x27.SetCookies.1.
-type CrawlerOptions0x27SetCookies1 = string
-
-// CrawlerOptions0x27_SetCookies_Item defines model for CrawlerOptions@0x27.setCookies.Item.
-type CrawlerOptions0x27_SetCookies_Item struct {
-	union json.RawMessage
-}
-
-// CrawlerOptions0x27WithIframe0 A boolean value that can be represented in various formats.
-type CrawlerOptions0x27WithIframe0 = PseudoBoolean0x11
-
-// CrawlerOptions0x27WithIframe1 defines model for CrawlerOptions0x27.WithIframe.1.
-type CrawlerOptions0x27WithIframe1 = string
-
-// CrawlerOptions0x27_WithIframe - Cast to: &lt; **PseudoBoolean|string** &gt;
+// CrawlerOptions0x28_RobotsTxt - Cast to: &lt; **PseudoBoolean|string** &gt;
 //
 // - Member of &lt;CrawlerOptions&gt;
-type CrawlerOptions0x27_WithIframe struct {
+type CrawlerOptions0x28_RobotsTxt struct {
 	union json.RawMessage
 }
 
-// CrawlerOptions0x27WithLinksSummary0 A boolean value that can be represented in various formats.
-type CrawlerOptions0x27WithLinksSummary0 = PseudoBoolean0x11
+// CrawlerOptions0x28SetCookies0 Can be any value - string, number, boolean, array or object.
+type CrawlerOptions0x28SetCookies0 = interface{}
 
-// CrawlerOptions0x27WithLinksSummary1 defines model for CrawlerOptions0x27.WithLinksSummary.1.
-type CrawlerOptions0x27WithLinksSummary1 = string
+// CrawlerOptions0x28SetCookies1 defines model for CrawlerOptions0x28.SetCookies.1.
+type CrawlerOptions0x28SetCookies1 = string
 
-// CrawlerOptions0x27_WithLinksSummary - Cast to: &lt; **PseudoBoolean|string** &gt;
+// CrawlerOptions0x28_SetCookies_Item defines model for CrawlerOptions@0x28.setCookies.Item.
+type CrawlerOptions0x28_SetCookies_Item struct {
+	union json.RawMessage
+}
+
+// CrawlerOptions0x28_WebBotAuth - Cast to: &lt; **PseudoBoolean|&quot;authority&quot; | &quot;target-uri&quot;** &gt;
 //
 // - Member of &lt;CrawlerOptions&gt;
-type CrawlerOptions0x27_WithLinksSummary struct {
+type CrawlerOptions0x28_WebBotAuth struct {
 	union json.RawMessage
 }
 
-// CrawlerOptionsHeaderOnly0x3a defines model for CrawlerOptionsHeaderOnly@0x3a.
-type CrawlerOptionsHeaderOnly0x3a struct {
+// CrawlerOptions0x28WithIframe1 defines model for CrawlerOptions0x28.WithIframe.1.
+type CrawlerOptions0x28WithIframe1 = string
+
+// CrawlerOptions0x28_WithIframe - Cast to: &lt; **PseudoBoolean|string** &gt;
+//
+// - Member of &lt;CrawlerOptions&gt;
+type CrawlerOptions0x28_WithIframe struct {
+	union json.RawMessage
+}
+
+// CrawlerOptions0x28WithLinksSummary1 defines model for CrawlerOptions0x28.WithLinksSummary.1.
+type CrawlerOptions0x28WithLinksSummary1 = string
+
+// CrawlerOptions0x28_WithLinksSummary - Cast to: &lt; **PseudoBoolean|string** &gt;
+//
+// - Member of &lt;CrawlerOptions&gt;
+type CrawlerOptions0x28_WithLinksSummary struct {
+	union json.RawMessage
+}
+
+// CrawlerOptionsHeaderOnly0x3b defines model for CrawlerOptionsHeaderOnly@0x3b.
+type CrawlerOptionsHeaderOnly0x3b struct {
 	// AssertStatusCode - Cast to: &lt; **number** &gt;
 	//
 	// - Member of &lt;CrawlerOptionsHeaderOnly&gt;
@@ -1162,7 +1175,7 @@ type CrawlerOptionsHeaderOnly0x3a struct {
 	// Engine - Cast to: &lt; **&quot;auto&quot; | &quot;browser&quot; | &quot;curl&quot; | &quot;cf-browser-rendering&quot;|string** &gt;
 	//
 	// - Member of &lt;CrawlerOptionsHeaderOnly&gt;
-	Engine *CrawlerOptionsHeaderOnly0x3a_Engine `json:"engine,omitempty"`
+	Engine *CrawlerOptionsHeaderOnly0x3b_Engine `json:"engine,omitempty"`
 
 	// ExportStorageState - Cast to: &lt; **PseudoBooleanLoose** &gt;
 	//
@@ -1174,7 +1187,7 @@ type CrawlerOptionsHeaderOnly0x3a struct {
 	// - Cast to: &lt; **FancyFile|string** &gt;
 	//
 	// - Member of &lt;CrawlerOptionsHeaderOnly&gt;
-	File *CrawlerOptionsHeaderOnly0x3a_File `json:"file,omitempty"`
+	File *CrawlerOptionsHeaderOnly0x3b_File `json:"file,omitempty"`
 
 	// Html - Cast to: &lt; **string** &gt;
 	//
@@ -1216,12 +1229,12 @@ type CrawlerOptionsHeaderOnly0x3a struct {
 	// Markdown - Cast to: &lt; **TurnDownTweakableOptions** &gt;
 	//
 	// - Member of &lt;CrawlerOptionsHeaderOnly&gt;
-	Markdown *TurnDownTweakableOptions0x23 `json:"markdown,omitempty"`
+	Markdown *TurnDownTweakableOptions0x24 `json:"markdown,omitempty"`
 
 	// MarkdownChunking - Cast to: &lt; **&quot;true&quot; | &quot;h1&quot; | &quot;h2&quot; | &quot;h3&quot; | &quot;h4&quot; | &quot;h5&quot; | &quot;structured&quot; | &quot;s1&quot; | &quot;s2&quot; | &quot;s3&quot; | &quot;s4&quot; | &quot;s5&quot;|string** &gt;
 	//
 	// - Member of &lt;CrawlerOptionsHeaderOnly&gt;
-	MarkdownChunking *CrawlerOptionsHeaderOnly0x3a_MarkdownChunking `json:"markdownChunking,omitempty"`
+	MarkdownChunking *CrawlerOptionsHeaderOnly0x3b_MarkdownChunking `json:"markdownChunking,omitempty"`
 
 	// MaxTokens - Cast to: &lt; **number** &gt;
 	//
@@ -1238,7 +1251,7 @@ type CrawlerOptionsHeaderOnly0x3a struct {
 	// NoGfm - Cast to: &lt; **PseudoBoolean|string** &gt;
 	//
 	// - Member of &lt;CrawlerOptionsHeaderOnly&gt;
-	NoGfm *CrawlerOptionsHeaderOnly0x3a_NoGfm `json:"noGfm,omitempty"`
+	NoGfm *CrawlerOptionsHeaderOnly0x3b_NoGfm `json:"noGfm,omitempty"`
 
 	// NoServiceWorker - Cast to: &lt; **PseudoBooleanLoose** &gt;
 	//
@@ -1248,7 +1261,7 @@ type CrawlerOptionsHeaderOnly0x3a struct {
 	// Ocr - Cast to: &lt; **OCRPreferences** &gt;
 	//
 	// - Member of &lt;CrawlerOptionsHeaderOnly&gt;
-	Ocr *OCRPreferences0x24 `json:"ocr,omitempty"`
+	Ocr *OCRPreferences0x25 `json:"ocr,omitempty"`
 
 	// Page Steer which page(s) to return for document files. See PageSelection.
 	//
@@ -1262,7 +1275,7 @@ type CrawlerOptionsHeaderOnly0x3a struct {
 	// - Cast to: &lt; **FancyFile|string** &gt;
 	//
 	// - Member of &lt;CrawlerOptionsHeaderOnly&gt;
-	Pdf *CrawlerOptionsHeaderOnly0x3a_Pdf `json:"pdf,omitempty"`
+	Pdf *CrawlerOptionsHeaderOnly0x3b_Pdf `json:"pdf,omitempty"`
 
 	// PreloadUrl - Cast to: &lt; **string** &gt;
 	//
@@ -1307,14 +1320,14 @@ type CrawlerOptionsHeaderOnly0x3a struct {
 	// RespondTiming - Cast to: &lt; **&quot;html&quot; | &quot;visible-content&quot; | &quot;mutation-idle&quot; | &quot;resource-idle&quot; | &quot;media-idle&quot; | &quot;network-idle&quot;** &gt;
 	//
 	// - Member of &lt;CrawlerOptionsHeaderOnly&gt;
-	RespondTiming *Enum0x25 `json:"respondTiming,omitempty"`
+	RespondTiming *Enum0x26 `json:"respondTiming,omitempty"`
 
 	// RespondWith - Cast to: &lt; **&quot;content&quot; | &quot;markdown&quot; | &quot;html&quot; | &quot;text&quot; | &quot;pageshot&quot; | &quot;screenshot&quot; | &quot;vlm&quot; | &quot;readerlm-v2&quot; | &quot;frontmatter&quot; | &quot;readability&quot; | &quot;...|string** &gt;
 	//
 	// - Member of &lt;CrawlerOptionsHeaderOnly&gt;
 	//
 	// - Defaults to: &#39;content&#39;
-	RespondWith *CrawlerOptionsHeaderOnly0x3a_RespondWith `json:"respondWith,omitempty"`
+	RespondWith *CrawlerOptionsHeaderOnly0x3b_RespondWith `json:"respondWith,omitempty"`
 
 	// RetainImages - Cast to: &lt; **&quot;none&quot; | &quot;all&quot; | &quot;alt&quot; | &quot;all_p&quot; | &quot;alt_p&quot;** &gt;
 	//
@@ -1337,15 +1350,15 @@ type CrawlerOptionsHeaderOnly0x3a struct {
 	// - Defaults to: &#39;link&#39;
 	RetainMedia *Enum0x13 `json:"retainMedia,omitempty"`
 
-	// RobotsTxt - Cast to: &lt; **string** &gt;
+	// RobotsTxt - Cast to: &lt; **PseudoBoolean|string** &gt;
 	//
 	// - Member of &lt;CrawlerOptionsHeaderOnly&gt;
-	RobotsTxt *string `json:"robotsTxt,omitempty"`
+	RobotsTxt *CrawlerOptionsHeaderOnly0x3b_RobotsTxt `json:"robotsTxt,omitempty"`
 
 	// SetCookies - Cast to: &lt; **Array&lt;object|string&gt;** &gt;
 	//
 	// - Member of &lt;CrawlerOptionsHeaderOnly&gt;
-	SetCookies *[]CrawlerOptionsHeaderOnly0x3a_SetCookies_Item `json:"setCookies,omitempty"`
+	SetCookies *[]CrawlerOptionsHeaderOnly0x3b_SetCookies_Item `json:"setCookies,omitempty"`
 
 	// SkipCertVerification - Cast to: &lt; **PseudoBooleanLoose** &gt;
 	//
@@ -1355,7 +1368,7 @@ type CrawlerOptionsHeaderOnly0x3a struct {
 	// StorageState - Cast to: &lt; **StorageState** &gt;
 	//
 	// - Member of &lt;CrawlerOptionsHeaderOnly&gt;
-	StorageState *StorageState0x1a `json:"storageState,omitempty"`
+	StorageState *StorageState0x1b `json:"storageState,omitempty"`
 
 	// TargetSelector - Cast to: &lt; **Array&lt;string&gt;** &gt;
 	//
@@ -1387,12 +1400,17 @@ type CrawlerOptionsHeaderOnly0x3a struct {
 	// Viewport - Cast to: &lt; **Viewport** &gt;
 	//
 	// - Member of &lt;CrawlerOptionsHeaderOnly&gt;
-	Viewport *Viewport0x1c `json:"viewport,omitempty"`
+	Viewport *Viewport0x1d `json:"viewport,omitempty"`
 
 	// WaitForSelector - Cast to: &lt; **Array&lt;string&gt;** &gt;
 	//
 	// - Member of &lt;CrawlerOptionsHeaderOnly&gt;
 	WaitForSelector *[]string `json:"waitForSelector,omitempty"`
+
+	// WebBotAuth - Cast to: &lt; **PseudoBoolean|&quot;authority&quot; | &quot;target-uri&quot;** &gt;
+	//
+	// - Member of &lt;CrawlerOptionsHeaderOnly&gt;
+	WebBotAuth *CrawlerOptionsHeaderOnly0x3b_WebBotAuth `json:"webBotAuth,omitempty"`
 
 	// WithGeneratedAlt - Cast to: &lt; **PseudoBoolean** &gt;
 	//
@@ -1402,7 +1420,7 @@ type CrawlerOptionsHeaderOnly0x3a struct {
 	// WithIframe - Cast to: &lt; **PseudoBoolean|string** &gt;
 	//
 	// - Member of &lt;CrawlerOptionsHeaderOnly&gt;
-	WithIframe *CrawlerOptionsHeaderOnly0x3a_WithIframe `json:"withIframe,omitempty"`
+	WithIframe *CrawlerOptionsHeaderOnly0x3b_WithIframe `json:"withIframe,omitempty"`
 
 	// WithImagesSummary - Cast to: &lt; **PseudoBooleanLoose** &gt;
 	//
@@ -1412,7 +1430,7 @@ type CrawlerOptionsHeaderOnly0x3a struct {
 	// WithLinksSummary - Cast to: &lt; **PseudoBoolean|string** &gt;
 	//
 	// - Member of &lt;CrawlerOptionsHeaderOnly&gt;
-	WithLinksSummary *CrawlerOptionsHeaderOnly0x3a_WithLinksSummary `json:"withLinksSummary,omitempty"`
+	WithLinksSummary *CrawlerOptionsHeaderOnly0x3b_WithLinksSummary `json:"withLinksSummary,omitempty"`
 
 	// WithShadowDom - Cast to: &lt; **PseudoBooleanLoose** &gt;
 	//
@@ -1425,129 +1443,122 @@ type CrawlerOptionsHeaderOnly0x3a struct {
 	ZeroDataRetention *PseudoBooleanLoose0x0c `json:"zeroDataRetention,omitempty"`
 }
 
-// CrawlerOptionsHeaderOnly0x3aEngine0 Enum<"auto" | "browser" | "curl" | "cf-browser-rendering">
-type CrawlerOptionsHeaderOnly0x3aEngine0 = Enum0x1b
+// CrawlerOptionsHeaderOnly0x3bEngine1 defines model for CrawlerOptionsHeaderOnly0x3b.Engine.1.
+type CrawlerOptionsHeaderOnly0x3bEngine1 = string
 
-// CrawlerOptionsHeaderOnly0x3aEngine1 defines model for CrawlerOptionsHeaderOnly0x3a.Engine.1.
-type CrawlerOptionsHeaderOnly0x3aEngine1 = string
-
-// CrawlerOptionsHeaderOnly0x3a_Engine - Cast to: &lt; **&quot;auto&quot; | &quot;browser&quot; | &quot;curl&quot; | &quot;cf-browser-rendering&quot;|string** &gt;
+// CrawlerOptionsHeaderOnly0x3b_Engine - Cast to: &lt; **&quot;auto&quot; | &quot;browser&quot; | &quot;curl&quot; | &quot;cf-browser-rendering&quot;|string** &gt;
 //
 // - Member of &lt;CrawlerOptionsHeaderOnly&gt;
-type CrawlerOptionsHeaderOnly0x3a_Engine struct {
+type CrawlerOptionsHeaderOnly0x3b_Engine struct {
 	union json.RawMessage
 }
 
-// CrawlerOptionsHeaderOnly0x3aFile0 defines model for CrawlerOptionsHeaderOnly0x3a.File.0.
-type CrawlerOptionsHeaderOnly0x3aFile0 = FancyFile0x0e
+// CrawlerOptionsHeaderOnly0x3bFile1 defines model for CrawlerOptionsHeaderOnly0x3b.File.1.
+type CrawlerOptionsHeaderOnly0x3bFile1 = string
 
-// CrawlerOptionsHeaderOnly0x3aFile1 defines model for CrawlerOptionsHeaderOnly0x3a.File.1.
-type CrawlerOptionsHeaderOnly0x3aFile1 = string
-
-// CrawlerOptionsHeaderOnly0x3a_File Base64 encoded file.
+// CrawlerOptionsHeaderOnly0x3b_File Base64 encoded file.
 //
 // - Cast to: &lt; **FancyFile|string** &gt;
 //
 // - Member of &lt;CrawlerOptionsHeaderOnly&gt;
-type CrawlerOptionsHeaderOnly0x3a_File struct {
+type CrawlerOptionsHeaderOnly0x3b_File struct {
 	union json.RawMessage
 }
 
-// CrawlerOptionsHeaderOnly0x3aMarkdownChunking0 Enum<"true" | "h1" | "h2" | "h3" | "h4" | "h5" | "structured" | "s1" | "s2" | "s3" | "s4" | "s5">
-type CrawlerOptionsHeaderOnly0x3aMarkdownChunking0 = Enum0x26
+// CrawlerOptionsHeaderOnly0x3bMarkdownChunking1 defines model for CrawlerOptionsHeaderOnly0x3b.MarkdownChunking.1.
+type CrawlerOptionsHeaderOnly0x3bMarkdownChunking1 = string
 
-// CrawlerOptionsHeaderOnly0x3aMarkdownChunking1 defines model for CrawlerOptionsHeaderOnly0x3a.MarkdownChunking.1.
-type CrawlerOptionsHeaderOnly0x3aMarkdownChunking1 = string
-
-// CrawlerOptionsHeaderOnly0x3a_MarkdownChunking - Cast to: &lt; **&quot;true&quot; | &quot;h1&quot; | &quot;h2&quot; | &quot;h3&quot; | &quot;h4&quot; | &quot;h5&quot; | &quot;structured&quot; | &quot;s1&quot; | &quot;s2&quot; | &quot;s3&quot; | &quot;s4&quot; | &quot;s5&quot;|string** &gt;
+// CrawlerOptionsHeaderOnly0x3b_MarkdownChunking - Cast to: &lt; **&quot;true&quot; | &quot;h1&quot; | &quot;h2&quot; | &quot;h3&quot; | &quot;h4&quot; | &quot;h5&quot; | &quot;structured&quot; | &quot;s1&quot; | &quot;s2&quot; | &quot;s3&quot; | &quot;s4&quot; | &quot;s5&quot;|string** &gt;
 //
 // - Member of &lt;CrawlerOptionsHeaderOnly&gt;
-type CrawlerOptionsHeaderOnly0x3a_MarkdownChunking struct {
+type CrawlerOptionsHeaderOnly0x3b_MarkdownChunking struct {
 	union json.RawMessage
 }
 
-// CrawlerOptionsHeaderOnly0x3aNoGfm0 A boolean value that can be represented in various formats.
-type CrawlerOptionsHeaderOnly0x3aNoGfm0 = PseudoBoolean0x11
+// CrawlerOptionsHeaderOnly0x3bNoGfm1 defines model for CrawlerOptionsHeaderOnly0x3b.NoGfm.1.
+type CrawlerOptionsHeaderOnly0x3bNoGfm1 = string
 
-// CrawlerOptionsHeaderOnly0x3aNoGfm1 defines model for CrawlerOptionsHeaderOnly0x3a.NoGfm.1.
-type CrawlerOptionsHeaderOnly0x3aNoGfm1 = string
-
-// CrawlerOptionsHeaderOnly0x3a_NoGfm - Cast to: &lt; **PseudoBoolean|string** &gt;
+// CrawlerOptionsHeaderOnly0x3b_NoGfm - Cast to: &lt; **PseudoBoolean|string** &gt;
 //
 // - Member of &lt;CrawlerOptionsHeaderOnly&gt;
-type CrawlerOptionsHeaderOnly0x3a_NoGfm struct {
+type CrawlerOptionsHeaderOnly0x3b_NoGfm struct {
 	union json.RawMessage
 }
 
-// CrawlerOptionsHeaderOnly0x3aPdf0 defines model for CrawlerOptionsHeaderOnly0x3a.Pdf.0.
-type CrawlerOptionsHeaderOnly0x3aPdf0 = FancyFile0x0e
+// CrawlerOptionsHeaderOnly0x3bPdf1 defines model for CrawlerOptionsHeaderOnly0x3b.Pdf.1.
+type CrawlerOptionsHeaderOnly0x3bPdf1 = string
 
-// CrawlerOptionsHeaderOnly0x3aPdf1 defines model for CrawlerOptionsHeaderOnly0x3a.Pdf.1.
-type CrawlerOptionsHeaderOnly0x3aPdf1 = string
-
-// CrawlerOptionsHeaderOnly0x3a_Pdf Base64 encoded PDF.
+// CrawlerOptionsHeaderOnly0x3b_Pdf Base64 encoded PDF.
 //
 // - Cast to: &lt; **FancyFile|string** &gt;
 //
 // - Member of &lt;CrawlerOptionsHeaderOnly&gt;
-type CrawlerOptionsHeaderOnly0x3a_Pdf struct {
+type CrawlerOptionsHeaderOnly0x3b_Pdf struct {
 	union json.RawMessage
 }
 
-// CrawlerOptionsHeaderOnly0x3aRespondWith0 Enum<"content" | "markdown" | "html" | "text" | "pageshot" | "screenshot" | "vlm" | "readerlm-v2" | "frontmatter" | "readability" | "...>
-type CrawlerOptionsHeaderOnly0x3aRespondWith0 = Enum0x10
+// CrawlerOptionsHeaderOnly0x3bRespondWith1 defines model for CrawlerOptionsHeaderOnly0x3b.RespondWith.1.
+type CrawlerOptionsHeaderOnly0x3bRespondWith1 = string
 
-// CrawlerOptionsHeaderOnly0x3aRespondWith1 defines model for CrawlerOptionsHeaderOnly0x3a.RespondWith.1.
-type CrawlerOptionsHeaderOnly0x3aRespondWith1 = string
-
-// CrawlerOptionsHeaderOnly0x3a_RespondWith - Cast to: &lt; **&quot;content&quot; | &quot;markdown&quot; | &quot;html&quot; | &quot;text&quot; | &quot;pageshot&quot; | &quot;screenshot&quot; | &quot;vlm&quot; | &quot;readerlm-v2&quot; | &quot;frontmatter&quot; | &quot;readability&quot; | &quot;...|string** &gt;
+// CrawlerOptionsHeaderOnly0x3b_RespondWith - Cast to: &lt; **&quot;content&quot; | &quot;markdown&quot; | &quot;html&quot; | &quot;text&quot; | &quot;pageshot&quot; | &quot;screenshot&quot; | &quot;vlm&quot; | &quot;readerlm-v2&quot; | &quot;frontmatter&quot; | &quot;readability&quot; | &quot;...|string** &gt;
 //
 // - Member of &lt;CrawlerOptionsHeaderOnly&gt;
 //
 // - Defaults to: &#39;content&#39;
-type CrawlerOptionsHeaderOnly0x3a_RespondWith struct {
+type CrawlerOptionsHeaderOnly0x3b_RespondWith struct {
 	union json.RawMessage
 }
 
-// CrawlerOptionsHeaderOnly0x3aSetCookies0 Can be any value - string, number, boolean, array or object.
-type CrawlerOptionsHeaderOnly0x3aSetCookies0 = interface{}
+// CrawlerOptionsHeaderOnly0x3bRobotsTxt1 defines model for CrawlerOptionsHeaderOnly0x3b.RobotsTxt.1.
+type CrawlerOptionsHeaderOnly0x3bRobotsTxt1 = string
 
-// CrawlerOptionsHeaderOnly0x3aSetCookies1 defines model for CrawlerOptionsHeaderOnly0x3a.SetCookies.1.
-type CrawlerOptionsHeaderOnly0x3aSetCookies1 = string
-
-// CrawlerOptionsHeaderOnly0x3a_SetCookies_Item defines model for CrawlerOptionsHeaderOnly@0x3a.setCookies.Item.
-type CrawlerOptionsHeaderOnly0x3a_SetCookies_Item struct {
-	union json.RawMessage
-}
-
-// CrawlerOptionsHeaderOnly0x3aWithIframe0 A boolean value that can be represented in various formats.
-type CrawlerOptionsHeaderOnly0x3aWithIframe0 = PseudoBoolean0x11
-
-// CrawlerOptionsHeaderOnly0x3aWithIframe1 defines model for CrawlerOptionsHeaderOnly0x3a.WithIframe.1.
-type CrawlerOptionsHeaderOnly0x3aWithIframe1 = string
-
-// CrawlerOptionsHeaderOnly0x3a_WithIframe - Cast to: &lt; **PseudoBoolean|string** &gt;
+// CrawlerOptionsHeaderOnly0x3b_RobotsTxt - Cast to: &lt; **PseudoBoolean|string** &gt;
 //
 // - Member of &lt;CrawlerOptionsHeaderOnly&gt;
-type CrawlerOptionsHeaderOnly0x3a_WithIframe struct {
+type CrawlerOptionsHeaderOnly0x3b_RobotsTxt struct {
 	union json.RawMessage
 }
 
-// CrawlerOptionsHeaderOnly0x3aWithLinksSummary0 A boolean value that can be represented in various formats.
-type CrawlerOptionsHeaderOnly0x3aWithLinksSummary0 = PseudoBoolean0x11
+// CrawlerOptionsHeaderOnly0x3bSetCookies0 Can be any value - string, number, boolean, array or object.
+type CrawlerOptionsHeaderOnly0x3bSetCookies0 = interface{}
 
-// CrawlerOptionsHeaderOnly0x3aWithLinksSummary1 defines model for CrawlerOptionsHeaderOnly0x3a.WithLinksSummary.1.
-type CrawlerOptionsHeaderOnly0x3aWithLinksSummary1 = string
+// CrawlerOptionsHeaderOnly0x3bSetCookies1 defines model for CrawlerOptionsHeaderOnly0x3b.SetCookies.1.
+type CrawlerOptionsHeaderOnly0x3bSetCookies1 = string
 
-// CrawlerOptionsHeaderOnly0x3a_WithLinksSummary - Cast to: &lt; **PseudoBoolean|string** &gt;
+// CrawlerOptionsHeaderOnly0x3b_SetCookies_Item defines model for CrawlerOptionsHeaderOnly@0x3b.setCookies.Item.
+type CrawlerOptionsHeaderOnly0x3b_SetCookies_Item struct {
+	union json.RawMessage
+}
+
+// CrawlerOptionsHeaderOnly0x3b_WebBotAuth - Cast to: &lt; **PseudoBoolean|&quot;authority&quot; | &quot;target-uri&quot;** &gt;
 //
 // - Member of &lt;CrawlerOptionsHeaderOnly&gt;
-type CrawlerOptionsHeaderOnly0x3a_WithLinksSummary struct {
+type CrawlerOptionsHeaderOnly0x3b_WebBotAuth struct {
 	union json.RawMessage
 }
 
-// DataStreamBrokenError0x29 defines model for DataStreamBrokenError@0x29.
-type DataStreamBrokenError0x29 struct {
+// CrawlerOptionsHeaderOnly0x3bWithIframe1 defines model for CrawlerOptionsHeaderOnly0x3b.WithIframe.1.
+type CrawlerOptionsHeaderOnly0x3bWithIframe1 = string
+
+// CrawlerOptionsHeaderOnly0x3b_WithIframe - Cast to: &lt; **PseudoBoolean|string** &gt;
+//
+// - Member of &lt;CrawlerOptionsHeaderOnly&gt;
+type CrawlerOptionsHeaderOnly0x3b_WithIframe struct {
+	union json.RawMessage
+}
+
+// CrawlerOptionsHeaderOnly0x3bWithLinksSummary1 defines model for CrawlerOptionsHeaderOnly0x3b.WithLinksSummary.1.
+type CrawlerOptionsHeaderOnly0x3bWithLinksSummary1 = string
+
+// CrawlerOptionsHeaderOnly0x3b_WithLinksSummary - Cast to: &lt; **PseudoBoolean|string** &gt;
+//
+// - Member of &lt;CrawlerOptionsHeaderOnly&gt;
+type CrawlerOptionsHeaderOnly0x3b_WithLinksSummary struct {
+	union json.RawMessage
+}
+
+// DataStreamBrokenError0x2a defines model for DataStreamBrokenError@0x2a.
+type DataStreamBrokenError0x2a struct {
 	// Code [REQUIRED]
 	//
 	// Expect HTTP response codes
@@ -1584,8 +1595,8 @@ type DataStreamBrokenError0x29 struct {
 	AdditionalProperties map[string]interface{} `json:"-"`
 }
 
-// DownstreamServiceError0x38 defines model for DownstreamServiceError@0x38.
-type DownstreamServiceError0x38 struct {
+// DownstreamServiceError0x39 defines model for DownstreamServiceError@0x39.
+type DownstreamServiceError0x39 struct {
 	// Code [REQUIRED]
 	//
 	// Expect HTTP response codes
@@ -1622,8 +1633,8 @@ type DownstreamServiceError0x38 struct {
 	AdditionalProperties map[string]interface{} `json:"-"`
 }
 
-// DownstreamServiceFailureError0x34 defines model for DownstreamServiceFailureError@0x34.
-type DownstreamServiceFailureError0x34 struct {
+// DownstreamServiceFailureError0x35 defines model for DownstreamServiceFailureError@0x35.
+type DownstreamServiceFailureError0x35 struct {
 	// Code [REQUIRED]
 	//
 	// Expect HTTP response codes
@@ -1663,12 +1674,12 @@ type DownstreamServiceFailureError0x34 struct {
 // FancyFile0x0e defines model for FancyFile@0x0e.
 type FancyFile0x0e = openapi_types.File
 
-// FormattedPageDto0x42 defines model for FormattedPageDto@0x42.
-type FormattedPageDto0x42 struct {
+// FormattedPageDto0x43 defines model for FormattedPageDto@0x43.
+type FormattedPageDto0x43 struct {
 	// Chunks - Cast to: &lt; **Array&lt;string&gt;** &gt;
 	//
 	// - Member of &lt;FormattedPageDto&gt;
-	Chunks *Arraystring0x3b `json:"chunks,omitempty"`
+	Chunks *Arraystring0x3c `json:"chunks,omitempty"`
 
 	// Content - Cast to: &lt; **string** &gt;
 	//
@@ -1683,7 +1694,7 @@ type FormattedPageDto0x42 struct {
 	// External - Cast to: &lt; **object|Record&lt;string|symbol, Record&lt;string|symbol, Record&lt;string|symbol, string|object&gt;@0x08|object&gt;@0x09|object&gt;** &gt;
 	//
 	// - Member of &lt;FormattedPageDto&gt;
-	External *FormattedPageDto0x42_External `json:"external,omitempty"`
+	External *FormattedPageDto0x43_External `json:"external,omitempty"`
 
 	// Html - Cast to: &lt; **string** &gt;
 	//
@@ -1703,17 +1714,17 @@ type FormattedPageDto0x42 struct {
 	// Images - Cast to: &lt; **object|Record&lt;string|symbol, string&gt;|Array&lt;string&gt;** &gt;
 	//
 	// - Member of &lt;FormattedPageDto&gt;
-	Images *FormattedPageDto0x42_Images `json:"images,omitempty"`
+	Images *FormattedPageDto0x43_Images `json:"images,omitempty"`
 
 	// Links - Cast to: &lt; **object|Record&lt;string|symbol, string&gt;|Array&lt;string&gt;** &gt;
 	//
 	// - Member of &lt;FormattedPageDto&gt;
-	Links *FormattedPageDto0x42_Links `json:"links,omitempty"`
+	Links *FormattedPageDto0x43_Links `json:"links,omitempty"`
 
 	// Metadata - Cast to: &lt; **object|Record&lt;string|symbol, string&gt;** &gt;
 	//
 	// - Member of &lt;FormattedPageDto&gt;
-	Metadata *FormattedPageDto0x42_Metadata `json:"metadata,omitempty"`
+	Metadata *FormattedPageDto0x43_Metadata `json:"metadata,omitempty"`
 
 	// NumPages - Cast to: &lt; **number** &gt;
 	//
@@ -1765,66 +1776,48 @@ type FormattedPageDto0x42 struct {
 	Warning *string `json:"warning,omitempty"`
 }
 
-// FormattedPageDto0x42External0 Can be any value - string, number, boolean, array or object.
-type FormattedPageDto0x42External0 = interface{}
+// FormattedPageDto0x43External0 Can be any value - string, number, boolean, array or object.
+type FormattedPageDto0x43External0 = interface{}
 
-// FormattedPageDto0x42External1 defines model for FormattedPageDto0x42.External.1.
-type FormattedPageDto0x42External1 = RecordstringsymbolRecordstringsymbolRecordstringsymbolStringobject0x08object0x09object0x41
-
-// FormattedPageDto0x42_External - Cast to: &lt; **object|Record&lt;string|symbol, Record&lt;string|symbol, Record&lt;string|symbol, string|object&gt;@0x08|object&gt;@0x09|object&gt;** &gt;
+// FormattedPageDto0x43_External - Cast to: &lt; **object|Record&lt;string|symbol, Record&lt;string|symbol, Record&lt;string|symbol, string|object&gt;@0x08|object&gt;@0x09|object&gt;** &gt;
 //
 // - Member of &lt;FormattedPageDto&gt;
-type FormattedPageDto0x42_External struct {
+type FormattedPageDto0x43_External struct {
 	union json.RawMessage
 }
 
-// FormattedPageDto0x42Images0 Can be any value - string, number, boolean, array or object.
-type FormattedPageDto0x42Images0 = interface{}
+// FormattedPageDto0x43Images0 Can be any value - string, number, boolean, array or object.
+type FormattedPageDto0x43Images0 = interface{}
 
-// FormattedPageDto0x42Images1 defines model for FormattedPageDto0x42.Images.1.
-type FormattedPageDto0x42Images1 = RecordstringsymbolString0x3e
-
-// FormattedPageDto0x42Images2 defines model for FormattedPageDto0x42.Images.2.
-type FormattedPageDto0x42Images2 = Arraystring0x3f
-
-// FormattedPageDto0x42_Images - Cast to: &lt; **object|Record&lt;string|symbol, string&gt;|Array&lt;string&gt;** &gt;
+// FormattedPageDto0x43_Images - Cast to: &lt; **object|Record&lt;string|symbol, string&gt;|Array&lt;string&gt;** &gt;
 //
 // - Member of &lt;FormattedPageDto&gt;
-type FormattedPageDto0x42_Images struct {
+type FormattedPageDto0x43_Images struct {
 	union json.RawMessage
 }
 
-// FormattedPageDto0x42Links0 Can be any value - string, number, boolean, array or object.
-type FormattedPageDto0x42Links0 = interface{}
+// FormattedPageDto0x43Links0 Can be any value - string, number, boolean, array or object.
+type FormattedPageDto0x43Links0 = interface{}
 
-// FormattedPageDto0x42Links1 defines model for FormattedPageDto0x42.Links.1.
-type FormattedPageDto0x42Links1 = RecordstringsymbolString0x3c
-
-// FormattedPageDto0x42Links2 defines model for FormattedPageDto0x42.Links.2.
-type FormattedPageDto0x42Links2 = Arraystring0x3d
-
-// FormattedPageDto0x42_Links - Cast to: &lt; **object|Record&lt;string|symbol, string&gt;|Array&lt;string&gt;** &gt;
+// FormattedPageDto0x43_Links - Cast to: &lt; **object|Record&lt;string|symbol, string&gt;|Array&lt;string&gt;** &gt;
 //
 // - Member of &lt;FormattedPageDto&gt;
-type FormattedPageDto0x42_Links struct {
+type FormattedPageDto0x43_Links struct {
 	union json.RawMessage
 }
 
-// FormattedPageDto0x42Metadata0 Can be any value - string, number, boolean, array or object.
-type FormattedPageDto0x42Metadata0 = interface{}
+// FormattedPageDto0x43Metadata0 Can be any value - string, number, boolean, array or object.
+type FormattedPageDto0x43Metadata0 = interface{}
 
-// FormattedPageDto0x42Metadata1 defines model for FormattedPageDto0x42.Metadata.1.
-type FormattedPageDto0x42Metadata1 = RecordstringsymbolString0x40
-
-// FormattedPageDto0x42_Metadata - Cast to: &lt; **object|Record&lt;string|symbol, string&gt;** &gt;
+// FormattedPageDto0x43_Metadata - Cast to: &lt; **object|Record&lt;string|symbol, string&gt;** &gt;
 //
 // - Member of &lt;FormattedPageDto&gt;
-type FormattedPageDto0x42_Metadata struct {
+type FormattedPageDto0x43_Metadata struct {
 	union json.RawMessage
 }
 
-// HarmfulContentError0x37 defines model for HarmfulContentError@0x37.
-type HarmfulContentError0x37 struct {
+// HarmfulContentError0x38 defines model for HarmfulContentError@0x38.
+type HarmfulContentError0x38 struct {
 	// Code [REQUIRED]
 	//
 	// Expect HTTP response codes
@@ -1861,8 +1854,8 @@ type HarmfulContentError0x37 struct {
 	AdditionalProperties map[string]interface{} `json:"-"`
 }
 
-// InsufficientBalanceError0x2d defines model for InsufficientBalanceError@0x2d.
-type InsufficientBalanceError0x2d struct {
+// InsufficientBalanceError0x2e defines model for InsufficientBalanceError@0x2e.
+type InsufficientBalanceError0x2e struct {
 	// Code [REQUIRED]
 	//
 	// Expect HTTP response codes
@@ -1902,8 +1895,8 @@ type InsufficientBalanceError0x2d struct {
 // JinaEmbeddingsAuthDTO0x0b defines model for JinaEmbeddingsAuthDTO@0x0b.
 type JinaEmbeddingsAuthDTO0x0b = interface{}
 
-// LocalStorageItem0x18 defines model for LocalStorageItem@0x18.
-type LocalStorageItem0x18 struct {
+// LocalStorageItem0x19 defines model for LocalStorageItem@0x19.
+type LocalStorageItem0x19 struct {
 	// Name [REQUIRED]
 	//
 	// - Cast to: &lt; **string** &gt;
@@ -1919,14 +1912,14 @@ type LocalStorageItem0x18 struct {
 	Value string `json:"value"`
 }
 
-// LocalStorageOrigin0x19 defines model for LocalStorageOrigin@0x19.
-type LocalStorageOrigin0x19 struct {
+// LocalStorageOrigin0x1a defines model for LocalStorageOrigin@0x1a.
+type LocalStorageOrigin0x1a struct {
 	// LocalStorage - Cast to: &lt; **Array&lt;LocalStorageItem&gt;** &gt;
 	//
 	// - Member of &lt;LocalStorageOrigin&gt;
 	//
 	// - Defaults to: []
-	LocalStorage *[]LocalStorageItem0x18 `json:"localStorage,omitempty"`
+	LocalStorage *[]LocalStorageItem0x19 `json:"localStorage,omitempty"`
 
 	// Origin [REQUIRED]
 	//
@@ -1936,8 +1929,8 @@ type LocalStorageOrigin0x19 struct {
 	Origin string `json:"origin"`
 }
 
-// OCRPreferences0x24 defines model for OCRPreferences@0x24.
-type OCRPreferences0x24 struct {
+// OCRPreferences0x25 defines model for OCRPreferences@0x25.
+type OCRPreferences0x25 struct {
 	// BlockFormula Formula blocks should go through OCR (only applies in non-end-to-end mode)
 	//
 	// - Cast to: &lt; **boolean** &gt;
@@ -1978,8 +1971,8 @@ type OCRPreferences0x24 struct {
 	Table *bool `json:"table,omitempty"`
 }
 
-// OperationNotAllowedError0x2e defines model for OperationNotAllowedError@0x2e.
-type OperationNotAllowedError0x2e struct {
+// OperationNotAllowedError0x2f defines model for OperationNotAllowedError@0x2f.
+type OperationNotAllowedError0x2f struct {
 	// Code [REQUIRED]
 	//
 	// Expect HTTP response codes
@@ -2016,8 +2009,8 @@ type OperationNotAllowedError0x2e struct {
 	AdditionalProperties map[string]interface{} `json:"-"`
 }
 
-// OutputServerEventStream0x43 Binary data (stream)
-type OutputServerEventStream0x43 = openapi_types.File
+// OutputServerEventStream0x44 Binary data (stream)
+type OutputServerEventStream0x44 = openapi_types.File
 
 // PageSelection0x0f Selection of document pages (1-indexed, 0 is the same as 1).
 //
@@ -2048,8 +2041,8 @@ type PageSelection0x0f_2_Item struct {
 	union json.RawMessage
 }
 
-// ParamValidationError0x28 defines model for ParamValidationError@0x28.
-type ParamValidationError0x28 struct {
+// ParamValidationError0x29 defines model for ParamValidationError@0x29.
+type ParamValidationError0x29 struct {
 	// Code [REQUIRED]
 	//
 	// Expect HTTP response codes
@@ -2108,8 +2101,8 @@ type PseudoBooleanLoose0x0c0 = bool
 // PseudoBooleanLoose0x0c1 defines model for PseudoBooleanLoose0x0c.1.
 type PseudoBooleanLoose0x0c1 = string
 
-// RateLimitTriggeredError0x36 defines model for RateLimitTriggeredError@0x36.
-type RateLimitTriggeredError0x36 struct {
+// RateLimitTriggeredError0x37 defines model for RateLimitTriggeredError@0x37.
+type RateLimitTriggeredError0x37 struct {
 	// Code [REQUIRED]
 	//
 	// Expect HTTP response codes
@@ -2160,25 +2153,19 @@ type RateLimitTriggeredError0x36 struct {
 	AdditionalProperties map[string]interface{} `json:"-"`
 }
 
-// RecordstringsymbolRecordstringsymbolRecordstringsymbolStringobject0x08object0x09object0x41 defines model for Record<string|symbol, Record<string|symbol, Record<string|symbol, string|object>@0x08|object>@0x09|object>@0x41.
-type RecordstringsymbolRecordstringsymbolRecordstringsymbolStringobject0x08object0x09object0x41 map[string]RecordstringsymbolRecordstringsymbolRecordstringsymbolStringobject0x08object0x09object0x41_AdditionalProperties
+// RecordstringsymbolRecordstringsymbolRecordstringsymbolStringobject0x08object0x09object0x42 defines model for Record<string|symbol, Record<string|symbol, Record<string|symbol, string|object>@0x08|object>@0x09|object>@0x42.
+type RecordstringsymbolRecordstringsymbolRecordstringsymbolStringobject0x08object0x09object0x42 map[string]RecordstringsymbolRecordstringsymbolRecordstringsymbolStringobject0x08object0x09object0x42_AdditionalProperties
 
-// RecordstringsymbolRecordstringsymbolRecordstringsymbolStringobject0x08object0x09object0x410 defines model for RecordstringsymbolRecordstringsymbolRecordstringsymbolStringobject0x08object0x09object0x41.0.
-type RecordstringsymbolRecordstringsymbolRecordstringsymbolStringobject0x08object0x09object0x410 = RecordstringsymbolRecordstringsymbolStringobject0x08object0x09
+// RecordstringsymbolRecordstringsymbolRecordstringsymbolStringobject0x08object0x09object0x421 Can be any value - string, number, boolean, array or object.
+type RecordstringsymbolRecordstringsymbolRecordstringsymbolStringobject0x08object0x09object0x421 = interface{}
 
-// RecordstringsymbolRecordstringsymbolRecordstringsymbolStringobject0x08object0x09object0x411 Can be any value - string, number, boolean, array or object.
-type RecordstringsymbolRecordstringsymbolRecordstringsymbolStringobject0x08object0x09object0x411 = interface{}
-
-// RecordstringsymbolRecordstringsymbolRecordstringsymbolStringobject0x08object0x09object0x41_AdditionalProperties defines model for Record<string|symbol, Record<string|symbol, Record<string|symbol, string|object>@0x08|object>@0x09|object>@0x41.AdditionalProperties.
-type RecordstringsymbolRecordstringsymbolRecordstringsymbolStringobject0x08object0x09object0x41_AdditionalProperties struct {
+// RecordstringsymbolRecordstringsymbolRecordstringsymbolStringobject0x08object0x09object0x42_AdditionalProperties defines model for Record<string|symbol, Record<string|symbol, Record<string|symbol, string|object>@0x08|object>@0x09|object>@0x42.AdditionalProperties.
+type RecordstringsymbolRecordstringsymbolRecordstringsymbolStringobject0x08object0x09object0x42_AdditionalProperties struct {
 	union json.RawMessage
 }
 
 // RecordstringsymbolRecordstringsymbolStringobject0x08object0x09 defines model for Record<string|symbol, Record<string|symbol, string|object>@0x08|object>@0x09.
 type RecordstringsymbolRecordstringsymbolStringobject0x08object0x09 map[string]RecordstringsymbolRecordstringsymbolStringobject0x08object0x09_AdditionalProperties
-
-// RecordstringsymbolRecordstringsymbolStringobject0x08object0x090 defines model for RecordstringsymbolRecordstringsymbolStringobject0x08object0x09.0.
-type RecordstringsymbolRecordstringsymbolStringobject0x08object0x090 = RecordstringsymbolStringobject0x08
 
 // RecordstringsymbolRecordstringsymbolStringobject0x08object0x091 Can be any value - string, number, boolean, array or object.
 type RecordstringsymbolRecordstringsymbolStringobject0x08object0x091 = interface{}
@@ -2188,14 +2175,14 @@ type RecordstringsymbolRecordstringsymbolStringobject0x08object0x09_AdditionalPr
 	union json.RawMessage
 }
 
-// RecordstringsymbolString0x3c defines model for Record<string|symbol, string>@0x3c.
-type RecordstringsymbolString0x3c map[string]string
+// RecordstringsymbolString0x3d defines model for Record<string|symbol, string>@0x3d.
+type RecordstringsymbolString0x3d map[string]string
 
-// RecordstringsymbolString0x3e defines model for Record<string|symbol, string>@0x3e.
-type RecordstringsymbolString0x3e map[string]string
+// RecordstringsymbolString0x3f defines model for Record<string|symbol, string>@0x3f.
+type RecordstringsymbolString0x3f map[string]string
 
-// RecordstringsymbolString0x40 defines model for Record<string|symbol, string>@0x40.
-type RecordstringsymbolString0x40 map[string]string
+// RecordstringsymbolString0x41 defines model for Record<string|symbol, string>@0x41.
+type RecordstringsymbolString0x41 map[string]string
 
 // RecordstringsymbolStringobject0x08 defines model for Record<string|symbol, string|object>@0x08.
 type RecordstringsymbolStringobject0x08 map[string]RecordstringsymbolStringobject0x08_AdditionalProperties
@@ -2211,8 +2198,8 @@ type RecordstringsymbolStringobject0x08_AdditionalProperties struct {
 	union json.RawMessage
 }
 
-// ResourceNotFoundError0x44 defines model for ResourceNotFoundError@0x44.
-type ResourceNotFoundError0x44 struct {
+// ResourceNotFoundError0x45 defines model for ResourceNotFoundError@0x45.
+type ResourceNotFoundError0x45 struct {
 	// Code [REQUIRED]
 	//
 	// Expect HTTP response codes
@@ -2249,8 +2236,8 @@ type ResourceNotFoundError0x44 struct {
 	AdditionalProperties map[string]interface{} `json:"-"`
 }
 
-// ResourcePolicyDenyError0x30 defines model for ResourcePolicyDenyError@0x30.
-type ResourcePolicyDenyError0x30 struct {
+// ResourcePolicyDenyError0x31 defines model for ResourcePolicyDenyError@0x31.
+type ResourcePolicyDenyError0x31 struct {
 	// Code [REQUIRED]
 	//
 	// Expect HTTP response codes
@@ -2287,8 +2274,8 @@ type ResourcePolicyDenyError0x30 struct {
 	AdditionalProperties map[string]interface{} `json:"-"`
 }
 
-// ServiceNodeResourceDrainError0x39 defines model for ServiceNodeResourceDrainError@0x39.
-type ServiceNodeResourceDrainError0x39 struct {
+// ServiceNodeResourceDrainError0x3a defines model for ServiceNodeResourceDrainError@0x3a.
+type ServiceNodeResourceDrainError0x3a struct {
 	// Code [REQUIRED]
 	//
 	// Expect HTTP response codes
@@ -2325,25 +2312,25 @@ type ServiceNodeResourceDrainError0x39 struct {
 	AdditionalProperties map[string]interface{} `json:"-"`
 }
 
-// StorageState0x1a defines model for StorageState@0x1a.
-type StorageState0x1a struct {
+// StorageState0x1b defines model for StorageState@0x1b.
+type StorageState0x1b struct {
 	// Cookies - Cast to: &lt; **Array&lt;Cookie&gt;** &gt;
 	//
 	// - Member of &lt;StorageState&gt;
 	//
 	// - Defaults to: []
-	Cookies *[]Cookie0x17 `json:"cookies,omitempty"`
+	Cookies *[]Cookie0x18 `json:"cookies,omitempty"`
 
 	// Origins - Cast to: &lt; **Array&lt;LocalStorageOrigin&gt;** &gt;
 	//
 	// - Member of &lt;StorageState&gt;
 	//
 	// - Defaults to: []
-	Origins *[]LocalStorageOrigin0x19 `json:"origins,omitempty"`
+	Origins *[]LocalStorageOrigin0x1a `json:"origins,omitempty"`
 }
 
-// SubmittedDataMalformedError0x33 defines model for SubmittedDataMalformedError@0x33.
-type SubmittedDataMalformedError0x33 struct {
+// SubmittedDataMalformedError0x34 defines model for SubmittedDataMalformedError@0x34.
+type SubmittedDataMalformedError0x34 struct {
 	// Code [REQUIRED]
 	//
 	// Expect HTTP response codes
@@ -2380,8 +2367,8 @@ type SubmittedDataMalformedError0x33 struct {
 	AdditionalProperties map[string]interface{} `json:"-"`
 }
 
-// TargetFileTooLargeError0x32 defines model for TargetFileTooLargeError@0x32.
-type TargetFileTooLargeError0x32 struct {
+// TargetFileTooLargeError0x33 defines model for TargetFileTooLargeError@0x33.
+type TargetFileTooLargeError0x33 struct {
 	// Code [REQUIRED]
 	//
 	// Expect HTTP response codes
@@ -2418,8 +2405,8 @@ type TargetFileTooLargeError0x32 struct {
 	AdditionalProperties map[string]interface{} `json:"-"`
 }
 
-// TierFeatureConstraintError0x2c defines model for TierFeatureConstraintError@0x2c.
-type TierFeatureConstraintError0x2c struct {
+// TierFeatureConstraintError0x2d defines model for TierFeatureConstraintError@0x2d.
+type TierFeatureConstraintError0x2d struct {
 	// Code [REQUIRED]
 	//
 	// Expect HTTP response codes
@@ -2456,28 +2443,28 @@ type TierFeatureConstraintError0x2c struct {
 	AdditionalProperties map[string]interface{} `json:"-"`
 }
 
-// TurnDownTweakableOptions0x23 defines model for TurnDownTweakableOptions@0x23.
-type TurnDownTweakableOptions0x23 struct {
+// TurnDownTweakableOptions0x24 defines model for TurnDownTweakableOptions@0x24.
+type TurnDownTweakableOptions0x24 struct {
 	// BulletListMarker Turndown options > bulletListMarker
 	//
 	// - Cast to: &lt; **&quot;-&quot; | &quot;+&quot; | &quot;*&quot;** &gt;
 	//
 	// - Member of &lt;TurnDownTweakableOptions&gt;
-	BulletListMarker *Enum0x1e `json:"bulletListMarker,omitempty"`
+	BulletListMarker *Enum0x1f `json:"bulletListMarker,omitempty"`
 
 	// EmDelimiter Turndown options > emDelimiter
 	//
 	// - Cast to: &lt; **&quot;_&quot; | &quot;*&quot;** &gt;
 	//
 	// - Member of &lt;TurnDownTweakableOptions&gt;
-	EmDelimiter *Enum0x1f `json:"emDelimiter,omitempty"`
+	EmDelimiter *Enum0x20 `json:"emDelimiter,omitempty"`
 
 	// HeadingStyle Turndown options > headingStyle
 	//
 	// - Cast to: &lt; **&quot;setext&quot; | &quot;atx&quot;** &gt;
 	//
 	// - Member of &lt;TurnDownTweakableOptions&gt;
-	HeadingStyle *Enum0x1d `json:"headingStyle,omitempty"`
+	HeadingStyle *Enum0x1e `json:"headingStyle,omitempty"`
 
 	// Hr Turndown options > hr
 	//
@@ -2493,25 +2480,25 @@ type TurnDownTweakableOptions0x23 struct {
 	// - Cast to: &lt; **&quot;full&quot; | &quot;collapsed&quot; | &quot;shortcut&quot; | &quot;discarded&quot;** &gt;
 	//
 	// - Member of &lt;TurnDownTweakableOptions&gt;
-	LinkReferenceStyle *Enum0x22 `json:"linkReferenceStyle,omitempty"`
+	LinkReferenceStyle *Enum0x23 `json:"linkReferenceStyle,omitempty"`
 
 	// LinkStyle Turndown options > linkStyle
 	//
 	// - Cast to: &lt; **&quot;inlined&quot; | &quot;referenced&quot; | &quot;discarded&quot;** &gt;
 	//
 	// - Member of &lt;TurnDownTweakableOptions&gt;
-	LinkStyle *Enum0x21 `json:"linkStyle,omitempty"`
+	LinkStyle *Enum0x22 `json:"linkStyle,omitempty"`
 
 	// StrongDelimiter Turndown options > strongDelimiter
 	//
 	// - Cast to: &lt; **&quot;__&quot; | &quot;**&quot;** &gt;
 	//
 	// - Member of &lt;TurnDownTweakableOptions&gt;
-	StrongDelimiter *Enum0x20 `json:"strongDelimiter,omitempty"`
+	StrongDelimiter *Enum0x21 `json:"strongDelimiter,omitempty"`
 }
 
-// Viewport0x1c defines model for Viewport@0x1c.
-type Viewport0x1c struct {
+// Viewport0x1d defines model for Viewport@0x1d.
+type Viewport0x1d struct {
 	// DeviceScaleFactor - Cast to: &lt; **number** &gt;
 	//
 	// - Member of &lt;Viewport&gt;
@@ -2565,35 +2552,38 @@ type Enum0x14 string
 // Enum0x15 Enum<"none" | "all" | "text" | "gpt-oss">
 type Enum0x15 string
 
-// Enum0x16 Enum<"Strict" | "Lax" | "None">
+// Enum0x16 Enum<"authority" | "target-uri">
 type Enum0x16 string
 
-// Enum0x1b Enum<"auto" | "browser" | "curl" | "cf-browser-rendering">
-type Enum0x1b string
+// Enum0x17 Enum<"Strict" | "Lax" | "None">
+type Enum0x17 string
 
-// Enum0x1d Enum<"setext" | "atx">
-type Enum0x1d string
+// Enum0x1c Enum<"auto" | "browser" | "curl" | "cf-browser-rendering">
+type Enum0x1c string
 
-// Enum0x1e Enum<"-" | "+" | "*">
+// Enum0x1e Enum<"setext" | "atx">
 type Enum0x1e string
 
-// Enum0x1f Enum<"_" | "*">
+// Enum0x1f Enum<"-" | "+" | "*">
 type Enum0x1f string
 
-// Enum0x20 Enum<"__" | "**">
+// Enum0x20 Enum<"_" | "*">
 type Enum0x20 string
 
-// Enum0x21 Enum<"inlined" | "referenced" | "discarded">
+// Enum0x21 Enum<"__" | "**">
 type Enum0x21 string
 
-// Enum0x22 Enum<"full" | "collapsed" | "shortcut" | "discarded">
+// Enum0x22 Enum<"inlined" | "referenced" | "discarded">
 type Enum0x22 string
 
-// Enum0x25 Enum<"html" | "visible-content" | "mutation-idle" | "resource-idle" | "media-idle" | "network-idle">
-type Enum0x25 string
+// Enum0x23 Enum<"full" | "collapsed" | "shortcut" | "discarded">
+type Enum0x23 string
 
-// Enum0x26 Enum<"true" | "h1" | "h2" | "h3" | "h4" | "h5" | "structured" | "s1" | "s2" | "s3" | "s4" | "s5">
+// Enum0x26 Enum<"html" | "visible-content" | "mutation-idle" | "resource-idle" | "media-idle" | "network-idle">
 type Enum0x26 string
+
+// Enum0x27 Enum<"true" | "h1" | "h2" | "h3" | "h4" | "h5" | "structured" | "s1" | "s2" | "s3" | "s4" | "s5">
+type Enum0x27 string
 
 // GetParams defines parameters for Get.
 type GetParams struct {
@@ -2637,7 +2627,10 @@ type GetParams struct {
 	} `form:"withIframe,omitempty" json:"withIframe,omitempty"`
 	WithShadowDom        *PseudoBooleanLoose0x0c `form:"withShadowDom,omitempty" json:"withShadowDom,omitempty"`
 	SkipCertVerification *PseudoBooleanLoose0x0c `form:"skipCertVerification,omitempty" json:"skipCertVerification,omitempty"`
-	SetCookies           *struct {
+	WebBotAuth           *struct {
+		union json.RawMessage
+	} `form:"webBotAuth,omitempty" json:"webBotAuth,omitempty"`
+	SetCookies *struct {
 		union json.RawMessage
 	} `form:"setCookies,omitempty" json:"setCookies,omitempty"`
 	ExportStorageState *PseudoBooleanLoose0x0c `form:"exportStorageState,omitempty" json:"exportStorageState,omitempty"`
@@ -2648,18 +2641,20 @@ type GetParams struct {
 	Engine             *struct {
 		union json.RawMessage
 	} `form:"engine,omitempty" json:"engine,omitempty"`
-	InjectPageScript  *string                 `form:"injectPageScript,omitempty" json:"injectPageScript,omitempty"`
-	InjectFrameScript *string                 `form:"injectFrameScript,omitempty" json:"injectFrameScript,omitempty"`
-	Timeout           *float64                `form:"timeout,omitempty" json:"timeout,omitempty"`
-	Locale            *string                 `form:"locale,omitempty" json:"locale,omitempty"`
-	Referer           *string                 `form:"referer,omitempty" json:"referer,omitempty"`
-	TokenBudget       *float64                `form:"tokenBudget,omitempty" json:"tokenBudget,omitempty"`
-	AssertStatusCode  *float64                `form:"assertStatusCode,omitempty" json:"assertStatusCode,omitempty"`
-	Instruction       *string                 `form:"instruction,omitempty" json:"instruction,omitempty"`
-	JsonSchema        *string                 `form:"jsonSchema,omitempty" json:"jsonSchema,omitempty"`
-	RobotsTxt         *string                 `form:"robotsTxt,omitempty" json:"robotsTxt,omitempty"`
+	InjectPageScript  *string  `form:"injectPageScript,omitempty" json:"injectPageScript,omitempty"`
+	InjectFrameScript *string  `form:"injectFrameScript,omitempty" json:"injectFrameScript,omitempty"`
+	Timeout           *float64 `form:"timeout,omitempty" json:"timeout,omitempty"`
+	Locale            *string  `form:"locale,omitempty" json:"locale,omitempty"`
+	Referer           *string  `form:"referer,omitempty" json:"referer,omitempty"`
+	TokenBudget       *float64 `form:"tokenBudget,omitempty" json:"tokenBudget,omitempty"`
+	AssertStatusCode  *float64 `form:"assertStatusCode,omitempty" json:"assertStatusCode,omitempty"`
+	Instruction       *string  `form:"instruction,omitempty" json:"instruction,omitempty"`
+	JsonSchema        *string  `form:"jsonSchema,omitempty" json:"jsonSchema,omitempty"`
+	RobotsTxt         *struct {
+		union json.RawMessage
+	} `form:"robotsTxt,omitempty" json:"robotsTxt,omitempty"`
 	ZeroDataRetention *PseudoBooleanLoose0x0c `form:"zeroDataRetention,omitempty" json:"zeroDataRetention,omitempty"`
-	RespondTiming     *Enum0x25               `form:"respondTiming,omitempty" json:"respondTiming,omitempty"`
+	RespondTiming     *Enum0x26               `form:"respondTiming,omitempty" json:"respondTiming,omitempty"`
 	MarkdownChunking  *struct {
 		union json.RawMessage
 	} `form:"markdownChunking,omitempty" json:"markdownChunking,omitempty"`
@@ -2990,38 +2985,20 @@ type GetParams struct {
 	XNoServiceWorker *string `json:"X-No-Service-Worker,omitempty"`
 }
 
-// GetParamsPdf0 defines parameters for Get.
-type GetParamsPdf0 = FancyFile0x0e
-
 // GetParamsPdf1 defines parameters for Get.
 type GetParamsPdf1 = string
-
-// GetParamsFile0 defines parameters for Get.
-type GetParamsFile0 = FancyFile0x0e
 
 // GetParamsFile1 defines parameters for Get.
 type GetParamsFile1 = string
 
-// GetParamsRespondWith0 defines parameters for Get.
-type GetParamsRespondWith0 = Enum0x10
-
 // GetParamsRespondWith1 defines parameters for Get.
 type GetParamsRespondWith1 = string
-
-// GetParamsWithLinksSummary0 defines parameters for Get.
-type GetParamsWithLinksSummary0 = PseudoBoolean0x11
 
 // GetParamsWithLinksSummary1 defines parameters for Get.
 type GetParamsWithLinksSummary1 = string
 
-// GetParamsNoGfm0 defines parameters for Get.
-type GetParamsNoGfm0 = PseudoBoolean0x11
-
 // GetParamsNoGfm1 defines parameters for Get.
 type GetParamsNoGfm1 = string
-
-// GetParamsWithIframe0 defines parameters for Get.
-type GetParamsWithIframe0 = PseudoBoolean0x11
 
 // GetParamsWithIframe1 defines parameters for Get.
 type GetParamsWithIframe1 = string
@@ -3032,14 +3009,11 @@ type GetParamsSetCookies0 = interface{}
 // GetParamsSetCookies1 defines parameters for Get.
 type GetParamsSetCookies1 = string
 
-// GetParamsEngine0 defines parameters for Get.
-type GetParamsEngine0 = Enum0x1b
-
 // GetParamsEngine1 defines parameters for Get.
 type GetParamsEngine1 = string
 
-// GetParamsMarkdownChunking0 defines parameters for Get.
-type GetParamsMarkdownChunking0 = Enum0x26
+// GetParamsRobotsTxt1 defines parameters for Get.
+type GetParamsRobotsTxt1 = string
 
 // GetParamsMarkdownChunking1 defines parameters for Get.
 type GetParamsMarkdownChunking1 = string
@@ -3138,69 +3112,30 @@ type Get200JSONResponseBody struct {
 	union json.RawMessage
 }
 
-// Get400JSONResponseBody0 defines parameters for Get.
-type Get400JSONResponseBody0 = ParamValidationError0x28
-
-// Get400JSONResponseBody1 defines parameters for Get.
-type Get400JSONResponseBody1 = DataStreamBrokenError0x29
-
 // Get400JSONResponseBody defines parameters for Get.
 type Get400JSONResponseBody struct {
 	union json.RawMessage
 }
-
-// Get401JSONResponseBody0 defines parameters for Get.
-type Get401JSONResponseBody0 = AuthenticationFailedError0x2a
-
-// Get401JSONResponseBody1 defines parameters for Get.
-type Get401JSONResponseBody1 = AuthenticationRequiredError0x2b
 
 // Get401JSONResponseBody defines parameters for Get.
 type Get401JSONResponseBody struct {
 	union json.RawMessage
 }
 
-// Get402JSONResponseBody0 defines parameters for Get.
-type Get402JSONResponseBody0 = TierFeatureConstraintError0x2c
-
-// Get402JSONResponseBody1 defines parameters for Get.
-type Get402JSONResponseBody1 = InsufficientBalanceError0x2d
-
 // Get402JSONResponseBody defines parameters for Get.
 type Get402JSONResponseBody struct {
 	union json.RawMessage
 }
-
-// Get403JSONResponseBody0 defines parameters for Get.
-type Get403JSONResponseBody0 = OperationNotAllowedError0x2e
-
-// Get403JSONResponseBody1 defines parameters for Get.
-type Get403JSONResponseBody1 = AbuseAlleviationError0x2f
 
 // Get403JSONResponseBody defines parameters for Get.
 type Get403JSONResponseBody struct {
 	union json.RawMessage
 }
 
-// Get409JSONResponseBody0 defines parameters for Get.
-type Get409JSONResponseBody0 = ResourcePolicyDenyError0x30
-
-// Get409JSONResponseBody1 defines parameters for Get.
-type Get409JSONResponseBody1 = BudgetExceededError0x31
-
 // Get409JSONResponseBody defines parameters for Get.
 type Get409JSONResponseBody struct {
 	union json.RawMessage
 }
-
-// Get422JSONResponseBody0 defines parameters for Get.
-type Get422JSONResponseBody0 = SubmittedDataMalformedError0x33
-
-// Get422JSONResponseBody1 defines parameters for Get.
-type Get422JSONResponseBody1 = DownstreamServiceFailureError0x34
-
-// Get422JSONResponseBody2 defines parameters for Get.
-type Get422JSONResponseBody2 = AssertionFailureError0x35
 
 // Get422JSONResponseBody defines parameters for Get.
 type Get422JSONResponseBody struct {
@@ -3293,7 +3228,7 @@ type PostJSONBody struct {
 	// Markdown - Cast to: &lt; **TurnDownTweakableOptions** &gt;
 	//
 	// - Member of &lt;CrawlerOptions&gt;
-	Markdown *TurnDownTweakableOptions0x23 `json:"markdown,omitempty"`
+	Markdown *TurnDownTweakableOptions0x24 `json:"markdown,omitempty"`
 
 	// MarkdownChunking - Cast to: &lt; **&quot;true&quot; | &quot;h1&quot; | &quot;h2&quot; | &quot;h3&quot; | &quot;h4&quot; | &quot;h5&quot; | &quot;structured&quot; | &quot;s1&quot; | &quot;s2&quot; | &quot;s3&quot; | &quot;s4&quot; | &quot;s5&quot;|string** &gt;
 	//
@@ -3325,7 +3260,7 @@ type PostJSONBody struct {
 	// Ocr - Cast to: &lt; **OCRPreferences** &gt;
 	//
 	// - Member of &lt;CrawlerOptions&gt;
-	Ocr *OCRPreferences0x24 `json:"ocr,omitempty"`
+	Ocr *OCRPreferences0x25 `json:"ocr,omitempty"`
 
 	// Page Steer which page(s) to return for document files. See PageSelection.
 	//
@@ -3384,7 +3319,7 @@ type PostJSONBody struct {
 	// RespondTiming - Cast to: &lt; **&quot;html&quot; | &quot;visible-content&quot; | &quot;mutation-idle&quot; | &quot;resource-idle&quot; | &quot;media-idle&quot; | &quot;network-idle&quot;** &gt;
 	//
 	// - Member of &lt;CrawlerOptions&gt;
-	RespondTiming *Enum0x25 `json:"respondTiming,omitempty"`
+	RespondTiming *Enum0x26 `json:"respondTiming,omitempty"`
 
 	// RespondWith - Cast to: &lt; **&quot;content&quot; | &quot;markdown&quot; | &quot;html&quot; | &quot;text&quot; | &quot;pageshot&quot; | &quot;screenshot&quot; | &quot;vlm&quot; | &quot;readerlm-v2&quot; | &quot;frontmatter&quot; | &quot;readability&quot; | &quot;...|string** &gt;
 	//
@@ -3414,10 +3349,10 @@ type PostJSONBody struct {
 	// - Defaults to: &#39;link&#39;
 	RetainMedia *Enum0x13 `json:"retainMedia,omitempty"`
 
-	// RobotsTxt - Cast to: &lt; **string** &gt;
+	// RobotsTxt - Cast to: &lt; **PseudoBoolean|string** &gt;
 	//
 	// - Member of &lt;CrawlerOptions&gt;
-	RobotsTxt *string `json:"robotsTxt,omitempty"`
+	RobotsTxt *PostJSONBody_RobotsTxt `json:"robotsTxt,omitempty"`
 
 	// SetCookies - Cast to: &lt; **Array&lt;object|string&gt;** &gt;
 	//
@@ -3432,7 +3367,7 @@ type PostJSONBody struct {
 	// StorageState - Cast to: &lt; **StorageState** &gt;
 	//
 	// - Member of &lt;CrawlerOptions&gt;
-	StorageState *StorageState0x1a `json:"storageState,omitempty"`
+	StorageState *StorageState0x1b `json:"storageState,omitempty"`
 
 	// TargetSelector - Cast to: &lt; **Array&lt;string&gt;** &gt;
 	//
@@ -3464,12 +3399,17 @@ type PostJSONBody struct {
 	// Viewport - Cast to: &lt; **Viewport** &gt;
 	//
 	// - Member of &lt;CrawlerOptions&gt;
-	Viewport *Viewport0x1c `json:"viewport,omitempty"`
+	Viewport *Viewport0x1d `json:"viewport,omitempty"`
 
 	// WaitForSelector - Cast to: &lt; **Array&lt;string&gt;** &gt;
 	//
 	// - Member of &lt;CrawlerOptions&gt;
 	WaitForSelector *[]string `json:"waitForSelector,omitempty"`
+
+	// WebBotAuth - Cast to: &lt; **PseudoBoolean|&quot;authority&quot; | &quot;target-uri&quot;** &gt;
+	//
+	// - Member of &lt;CrawlerOptions&gt;
+	WebBotAuth *PostJSONBody_WebBotAuth `json:"webBotAuth,omitempty"`
 
 	// WithGeneratedAlt - Cast to: &lt; **PseudoBoolean** &gt;
 	//
@@ -3664,7 +3604,7 @@ type PostFormdataBody struct {
 	// RespondTiming - Cast to: &lt; **&quot;html&quot; | &quot;visible-content&quot; | &quot;mutation-idle&quot; | &quot;resource-idle&quot; | &quot;media-idle&quot; | &quot;network-idle&quot;** &gt;
 	//
 	// - Member of &lt;CrawlerOptions&gt;
-	RespondTiming *Enum0x25 `form:"respondTiming,omitempty" json:"respondTiming,omitempty"`
+	RespondTiming *Enum0x26 `form:"respondTiming,omitempty" json:"respondTiming,omitempty"`
 
 	// RespondWith - Cast to: &lt; **&quot;content&quot; | &quot;markdown&quot; | &quot;html&quot; | &quot;text&quot; | &quot;pageshot&quot; | &quot;screenshot&quot; | &quot;vlm&quot; | &quot;readerlm-v2&quot; | &quot;frontmatter&quot; | &quot;readability&quot; | &quot;...|string** &gt;
 	//
@@ -3694,10 +3634,10 @@ type PostFormdataBody struct {
 	// - Defaults to: &#39;link&#39;
 	RetainMedia *Enum0x13 `form:"retainMedia,omitempty" json:"retainMedia,omitempty"`
 
-	// RobotsTxt - Cast to: &lt; **string** &gt;
+	// RobotsTxt - Cast to: &lt; **PseudoBoolean|string** &gt;
 	//
 	// - Member of &lt;CrawlerOptions&gt;
-	RobotsTxt *string `form:"robotsTxt,omitempty" json:"robotsTxt,omitempty"`
+	RobotsTxt *PostFormdataBody_RobotsTxt `form:"robotsTxt,omitempty" json:"robotsTxt,omitempty"`
 
 	// SetCookies - Cast to: &lt; **Array&lt;object|string&gt;** &gt;
 	//
@@ -3740,6 +3680,11 @@ type PostFormdataBody struct {
 	//
 	// - Member of &lt;CrawlerOptions&gt;
 	WaitForSelector *string `form:"waitForSelector,omitempty" json:"waitForSelector,omitempty"`
+
+	// WebBotAuth - Cast to: &lt; **PseudoBoolean|&quot;authority&quot; | &quot;target-uri&quot;** &gt;
+	//
+	// - Member of &lt;CrawlerOptions&gt;
+	WebBotAuth *PostFormdataBody_WebBotAuth `form:"webBotAuth,omitempty" json:"webBotAuth,omitempty"`
 
 	// WithGeneratedAlt - Cast to: &lt; **PseudoBoolean** &gt;
 	//
@@ -3858,7 +3803,7 @@ type PostMultipartBody struct {
 	// Markdown - Cast to: &lt; **TurnDownTweakableOptions** &gt;
 	//
 	// - Member of &lt;CrawlerOptions&gt;
-	Markdown *TurnDownTweakableOptions0x23 `json:"markdown,omitempty"`
+	Markdown *TurnDownTweakableOptions0x24 `json:"markdown,omitempty"`
 
 	// MarkdownChunking - Cast to: &lt; **&quot;true&quot; | &quot;h1&quot; | &quot;h2&quot; | &quot;h3&quot; | &quot;h4&quot; | &quot;h5&quot; | &quot;structured&quot; | &quot;s1&quot; | &quot;s2&quot; | &quot;s3&quot; | &quot;s4&quot; | &quot;s5&quot;|string** &gt;
 	//
@@ -3890,7 +3835,7 @@ type PostMultipartBody struct {
 	// Ocr - Cast to: &lt; **OCRPreferences** &gt;
 	//
 	// - Member of &lt;CrawlerOptions&gt;
-	Ocr *OCRPreferences0x24 `json:"ocr,omitempty"`
+	Ocr *OCRPreferences0x25 `json:"ocr,omitempty"`
 
 	// Page Steer which page(s) to return for document files. See PageSelection.
 	//
@@ -3949,7 +3894,7 @@ type PostMultipartBody struct {
 	// RespondTiming - Cast to: &lt; **&quot;html&quot; | &quot;visible-content&quot; | &quot;mutation-idle&quot; | &quot;resource-idle&quot; | &quot;media-idle&quot; | &quot;network-idle&quot;** &gt;
 	//
 	// - Member of &lt;CrawlerOptions&gt;
-	RespondTiming *Enum0x25 `json:"respondTiming,omitempty"`
+	RespondTiming *Enum0x26 `json:"respondTiming,omitempty"`
 
 	// RespondWith - Cast to: &lt; **&quot;content&quot; | &quot;markdown&quot; | &quot;html&quot; | &quot;text&quot; | &quot;pageshot&quot; | &quot;screenshot&quot; | &quot;vlm&quot; | &quot;readerlm-v2&quot; | &quot;frontmatter&quot; | &quot;readability&quot; | &quot;...|string** &gt;
 	//
@@ -3979,10 +3924,10 @@ type PostMultipartBody struct {
 	// - Defaults to: &#39;link&#39;
 	RetainMedia *Enum0x13 `json:"retainMedia,omitempty"`
 
-	// RobotsTxt - Cast to: &lt; **string** &gt;
+	// RobotsTxt - Cast to: &lt; **PseudoBoolean|string** &gt;
 	//
 	// - Member of &lt;CrawlerOptions&gt;
-	RobotsTxt *string `json:"robotsTxt,omitempty"`
+	RobotsTxt *PostMultipartBody_RobotsTxt `json:"robotsTxt,omitempty"`
 
 	// SetCookies - Cast to: &lt; **Array&lt;object|string&gt;** &gt;
 	//
@@ -3997,7 +3942,7 @@ type PostMultipartBody struct {
 	// StorageState - Cast to: &lt; **StorageState** &gt;
 	//
 	// - Member of &lt;CrawlerOptions&gt;
-	StorageState *StorageState0x1a `json:"storageState,omitempty"`
+	StorageState *StorageState0x1b `json:"storageState,omitempty"`
 
 	// TargetSelector - Cast to: &lt; **Array&lt;string&gt;** &gt;
 	//
@@ -4029,12 +3974,17 @@ type PostMultipartBody struct {
 	// Viewport - Cast to: &lt; **Viewport** &gt;
 	//
 	// - Member of &lt;CrawlerOptions&gt;
-	Viewport *Viewport0x1c `json:"viewport,omitempty"`
+	Viewport *Viewport0x1d `json:"viewport,omitempty"`
 
 	// WaitForSelector - Cast to: &lt; **Array&lt;string&gt;** &gt;
 	//
 	// - Member of &lt;CrawlerOptions&gt;
 	WaitForSelector *[]string `json:"waitForSelector,omitempty"`
+
+	// WebBotAuth - Cast to: &lt; **PseudoBoolean|&quot;authority&quot; | &quot;target-uri&quot;** &gt;
+	//
+	// - Member of &lt;CrawlerOptions&gt;
+	WebBotAuth *PostMultipartBody_WebBotAuth `json:"webBotAuth,omitempty"`
 
 	// WithGeneratedAlt - Cast to: &lt; **PseudoBoolean** &gt;
 	//
@@ -4109,7 +4059,10 @@ type PostParams struct {
 	} `form:"withIframe,omitempty" json:"withIframe,omitempty"`
 	WithShadowDom        *PseudoBooleanLoose0x0c `form:"withShadowDom,omitempty" json:"withShadowDom,omitempty"`
 	SkipCertVerification *PseudoBooleanLoose0x0c `form:"skipCertVerification,omitempty" json:"skipCertVerification,omitempty"`
-	SetCookies           *struct {
+	WebBotAuth           *struct {
+		union json.RawMessage
+	} `form:"webBotAuth,omitempty" json:"webBotAuth,omitempty"`
+	SetCookies *struct {
 		union json.RawMessage
 	} `form:"setCookies,omitempty" json:"setCookies,omitempty"`
 	ExportStorageState *PseudoBooleanLoose0x0c `form:"exportStorageState,omitempty" json:"exportStorageState,omitempty"`
@@ -4120,18 +4073,20 @@ type PostParams struct {
 	Engine             *struct {
 		union json.RawMessage
 	} `form:"engine,omitempty" json:"engine,omitempty"`
-	InjectPageScript  *string                 `form:"injectPageScript,omitempty" json:"injectPageScript,omitempty"`
-	InjectFrameScript *string                 `form:"injectFrameScript,omitempty" json:"injectFrameScript,omitempty"`
-	Timeout           *float64                `form:"timeout,omitempty" json:"timeout,omitempty"`
-	Locale            *string                 `form:"locale,omitempty" json:"locale,omitempty"`
-	Referer           *string                 `form:"referer,omitempty" json:"referer,omitempty"`
-	TokenBudget       *float64                `form:"tokenBudget,omitempty" json:"tokenBudget,omitempty"`
-	AssertStatusCode  *float64                `form:"assertStatusCode,omitempty" json:"assertStatusCode,omitempty"`
-	Instruction       *string                 `form:"instruction,omitempty" json:"instruction,omitempty"`
-	JsonSchema        *string                 `form:"jsonSchema,omitempty" json:"jsonSchema,omitempty"`
-	RobotsTxt         *string                 `form:"robotsTxt,omitempty" json:"robotsTxt,omitempty"`
+	InjectPageScript  *string  `form:"injectPageScript,omitempty" json:"injectPageScript,omitempty"`
+	InjectFrameScript *string  `form:"injectFrameScript,omitempty" json:"injectFrameScript,omitempty"`
+	Timeout           *float64 `form:"timeout,omitempty" json:"timeout,omitempty"`
+	Locale            *string  `form:"locale,omitempty" json:"locale,omitempty"`
+	Referer           *string  `form:"referer,omitempty" json:"referer,omitempty"`
+	TokenBudget       *float64 `form:"tokenBudget,omitempty" json:"tokenBudget,omitempty"`
+	AssertStatusCode  *float64 `form:"assertStatusCode,omitempty" json:"assertStatusCode,omitempty"`
+	Instruction       *string  `form:"instruction,omitempty" json:"instruction,omitempty"`
+	JsonSchema        *string  `form:"jsonSchema,omitempty" json:"jsonSchema,omitempty"`
+	RobotsTxt         *struct {
+		union json.RawMessage
+	} `form:"robotsTxt,omitempty" json:"robotsTxt,omitempty"`
 	ZeroDataRetention *PseudoBooleanLoose0x0c `form:"zeroDataRetention,omitempty" json:"zeroDataRetention,omitempty"`
-	RespondTiming     *Enum0x25               `form:"respondTiming,omitempty" json:"respondTiming,omitempty"`
+	RespondTiming     *Enum0x26               `form:"respondTiming,omitempty" json:"respondTiming,omitempty"`
 	MarkdownChunking  *struct {
 		union json.RawMessage
 	} `form:"markdownChunking,omitempty" json:"markdownChunking,omitempty"`
@@ -4462,38 +4417,20 @@ type PostParams struct {
 	XNoServiceWorker *string `json:"X-No-Service-Worker,omitempty"`
 }
 
-// PostParamsPdf0 defines parameters for Post.
-type PostParamsPdf0 = FancyFile0x0e
-
 // PostParamsPdf1 defines parameters for Post.
 type PostParamsPdf1 = string
-
-// PostParamsFile0 defines parameters for Post.
-type PostParamsFile0 = FancyFile0x0e
 
 // PostParamsFile1 defines parameters for Post.
 type PostParamsFile1 = string
 
-// PostParamsRespondWith0 defines parameters for Post.
-type PostParamsRespondWith0 = Enum0x10
-
 // PostParamsRespondWith1 defines parameters for Post.
 type PostParamsRespondWith1 = string
-
-// PostParamsWithLinksSummary0 defines parameters for Post.
-type PostParamsWithLinksSummary0 = PseudoBoolean0x11
 
 // PostParamsWithLinksSummary1 defines parameters for Post.
 type PostParamsWithLinksSummary1 = string
 
-// PostParamsNoGfm0 defines parameters for Post.
-type PostParamsNoGfm0 = PseudoBoolean0x11
-
 // PostParamsNoGfm1 defines parameters for Post.
 type PostParamsNoGfm1 = string
-
-// PostParamsWithIframe0 defines parameters for Post.
-type PostParamsWithIframe0 = PseudoBoolean0x11
 
 // PostParamsWithIframe1 defines parameters for Post.
 type PostParamsWithIframe1 = string
@@ -4504,23 +4441,17 @@ type PostParamsSetCookies0 = interface{}
 // PostParamsSetCookies1 defines parameters for Post.
 type PostParamsSetCookies1 = string
 
-// PostParamsEngine0 defines parameters for Post.
-type PostParamsEngine0 = Enum0x1b
-
 // PostParamsEngine1 defines parameters for Post.
 type PostParamsEngine1 = string
 
-// PostParamsMarkdownChunking0 defines parameters for Post.
-type PostParamsMarkdownChunking0 = Enum0x26
+// PostParamsRobotsTxt1 defines parameters for Post.
+type PostParamsRobotsTxt1 = string
 
 // PostParamsMarkdownChunking1 defines parameters for Post.
 type PostParamsMarkdownChunking1 = string
 
 // PostParamsAuthorization0 defines parameters for Post.
 type PostParamsAuthorization0 = string
-
-// PostJSONBodyEngine0 defines parameters for Post.
-type PostJSONBodyEngine0 = Enum0x1b
 
 // PostJSONBodyEngine1 defines parameters for Post.
 type PostJSONBodyEngine1 = string
@@ -4530,9 +4461,6 @@ type PostJSONBody_Engine struct {
 	union json.RawMessage
 }
 
-// PostJSONBodyFile0 defines parameters for Post.
-type PostJSONBodyFile0 = FancyFile0x0e
-
 // PostJSONBodyFile1 defines parameters for Post.
 type PostJSONBodyFile1 = string
 
@@ -4540,9 +4468,6 @@ type PostJSONBodyFile1 = string
 type PostJSONBody_File struct {
 	union json.RawMessage
 }
-
-// PostJSONBodyMarkdownChunking0 defines parameters for Post.
-type PostJSONBodyMarkdownChunking0 = Enum0x26
 
 // PostJSONBodyMarkdownChunking1 defines parameters for Post.
 type PostJSONBodyMarkdownChunking1 = string
@@ -4552,9 +4477,6 @@ type PostJSONBody_MarkdownChunking struct {
 	union json.RawMessage
 }
 
-// PostJSONBodyNoGfm0 defines parameters for Post.
-type PostJSONBodyNoGfm0 = PseudoBoolean0x11
-
 // PostJSONBodyNoGfm1 defines parameters for Post.
 type PostJSONBodyNoGfm1 = string
 
@@ -4562,9 +4484,6 @@ type PostJSONBodyNoGfm1 = string
 type PostJSONBody_NoGfm struct {
 	union json.RawMessage
 }
-
-// PostJSONBodyPdf0 defines parameters for Post.
-type PostJSONBodyPdf0 = FancyFile0x0e
 
 // PostJSONBodyPdf1 defines parameters for Post.
 type PostJSONBodyPdf1 = string
@@ -4574,14 +4493,19 @@ type PostJSONBody_Pdf struct {
 	union json.RawMessage
 }
 
-// PostJSONBodyRespondWith0 defines parameters for Post.
-type PostJSONBodyRespondWith0 = Enum0x10
-
 // PostJSONBodyRespondWith1 defines parameters for Post.
 type PostJSONBodyRespondWith1 = string
 
 // PostJSONBody_RespondWith defines parameters for Post.
 type PostJSONBody_RespondWith struct {
+	union json.RawMessage
+}
+
+// PostJSONBodyRobotsTxt1 defines parameters for Post.
+type PostJSONBodyRobotsTxt1 = string
+
+// PostJSONBody_RobotsTxt defines parameters for Post.
+type PostJSONBody_RobotsTxt struct {
 	union json.RawMessage
 }
 
@@ -4596,8 +4520,10 @@ type PostJSONBody_SetCookies_Item struct {
 	union json.RawMessage
 }
 
-// PostJSONBodyWithIframe0 defines parameters for Post.
-type PostJSONBodyWithIframe0 = PseudoBoolean0x11
+// PostJSONBody_WebBotAuth defines parameters for Post.
+type PostJSONBody_WebBotAuth struct {
+	union json.RawMessage
+}
 
 // PostJSONBodyWithIframe1 defines parameters for Post.
 type PostJSONBodyWithIframe1 = string
@@ -4607,9 +4533,6 @@ type PostJSONBody_WithIframe struct {
 	union json.RawMessage
 }
 
-// PostJSONBodyWithLinksSummary0 defines parameters for Post.
-type PostJSONBodyWithLinksSummary0 = PseudoBoolean0x11
-
 // PostJSONBodyWithLinksSummary1 defines parameters for Post.
 type PostJSONBodyWithLinksSummary1 = string
 
@@ -4617,9 +4540,6 @@ type PostJSONBodyWithLinksSummary1 = string
 type PostJSONBody_WithLinksSummary struct {
 	union json.RawMessage
 }
-
-// PostFormdataBodyEngine0 defines parameters for Post.
-type PostFormdataBodyEngine0 = Enum0x1b
 
 // PostFormdataBodyEngine1 defines parameters for Post.
 type PostFormdataBodyEngine1 = string
@@ -4629,9 +4549,6 @@ type PostFormdataBody_Engine struct {
 	union json.RawMessage
 }
 
-// PostFormdataBodyFile0 defines parameters for Post.
-type PostFormdataBodyFile0 = FancyFile0x0e
-
 // PostFormdataBodyFile1 defines parameters for Post.
 type PostFormdataBodyFile1 = string
 
@@ -4639,9 +4556,6 @@ type PostFormdataBodyFile1 = string
 type PostFormdataBody_File struct {
 	union json.RawMessage
 }
-
-// PostFormdataBodyMarkdownChunking0 defines parameters for Post.
-type PostFormdataBodyMarkdownChunking0 = Enum0x26
 
 // PostFormdataBodyMarkdownChunking1 defines parameters for Post.
 type PostFormdataBodyMarkdownChunking1 = string
@@ -4651,9 +4565,6 @@ type PostFormdataBody_MarkdownChunking struct {
 	union json.RawMessage
 }
 
-// PostFormdataBodyNoGfm0 defines parameters for Post.
-type PostFormdataBodyNoGfm0 = PseudoBoolean0x11
-
 // PostFormdataBodyNoGfm1 defines parameters for Post.
 type PostFormdataBodyNoGfm1 = string
 
@@ -4661,9 +4572,6 @@ type PostFormdataBodyNoGfm1 = string
 type PostFormdataBody_NoGfm struct {
 	union json.RawMessage
 }
-
-// PostFormdataBodyPdf0 defines parameters for Post.
-type PostFormdataBodyPdf0 = FancyFile0x0e
 
 // PostFormdataBodyPdf1 defines parameters for Post.
 type PostFormdataBodyPdf1 = string
@@ -4673,14 +4581,19 @@ type PostFormdataBody_Pdf struct {
 	union json.RawMessage
 }
 
-// PostFormdataBodyRespondWith0 defines parameters for Post.
-type PostFormdataBodyRespondWith0 = Enum0x10
-
 // PostFormdataBodyRespondWith1 defines parameters for Post.
 type PostFormdataBodyRespondWith1 = string
 
 // PostFormdataBody_RespondWith defines parameters for Post.
 type PostFormdataBody_RespondWith struct {
+	union json.RawMessage
+}
+
+// PostFormdataBodyRobotsTxt1 defines parameters for Post.
+type PostFormdataBodyRobotsTxt1 = string
+
+// PostFormdataBody_RobotsTxt defines parameters for Post.
+type PostFormdataBody_RobotsTxt struct {
 	union json.RawMessage
 }
 
@@ -4695,8 +4608,10 @@ type PostFormdataBody_SetCookies struct {
 	union json.RawMessage
 }
 
-// PostFormdataBodyWithIframe0 defines parameters for Post.
-type PostFormdataBodyWithIframe0 = PseudoBoolean0x11
+// PostFormdataBody_WebBotAuth defines parameters for Post.
+type PostFormdataBody_WebBotAuth struct {
+	union json.RawMessage
+}
 
 // PostFormdataBodyWithIframe1 defines parameters for Post.
 type PostFormdataBodyWithIframe1 = string
@@ -4706,9 +4621,6 @@ type PostFormdataBody_WithIframe struct {
 	union json.RawMessage
 }
 
-// PostFormdataBodyWithLinksSummary0 defines parameters for Post.
-type PostFormdataBodyWithLinksSummary0 = PseudoBoolean0x11
-
 // PostFormdataBodyWithLinksSummary1 defines parameters for Post.
 type PostFormdataBodyWithLinksSummary1 = string
 
@@ -4716,9 +4628,6 @@ type PostFormdataBodyWithLinksSummary1 = string
 type PostFormdataBody_WithLinksSummary struct {
 	union json.RawMessage
 }
-
-// PostMultipartBodyEngine0 defines parameters for Post.
-type PostMultipartBodyEngine0 = Enum0x1b
 
 // PostMultipartBodyEngine1 defines parameters for Post.
 type PostMultipartBodyEngine1 = string
@@ -4728,9 +4637,6 @@ type PostMultipartBody_Engine struct {
 	union json.RawMessage
 }
 
-// PostMultipartBodyFile0 defines parameters for Post.
-type PostMultipartBodyFile0 = FancyFile0x0e
-
 // PostMultipartBodyFile1 defines parameters for Post.
 type PostMultipartBodyFile1 = string
 
@@ -4738,9 +4644,6 @@ type PostMultipartBodyFile1 = string
 type PostMultipartBody_File struct {
 	union json.RawMessage
 }
-
-// PostMultipartBodyMarkdownChunking0 defines parameters for Post.
-type PostMultipartBodyMarkdownChunking0 = Enum0x26
 
 // PostMultipartBodyMarkdownChunking1 defines parameters for Post.
 type PostMultipartBodyMarkdownChunking1 = string
@@ -4750,9 +4653,6 @@ type PostMultipartBody_MarkdownChunking struct {
 	union json.RawMessage
 }
 
-// PostMultipartBodyNoGfm0 defines parameters for Post.
-type PostMultipartBodyNoGfm0 = PseudoBoolean0x11
-
 // PostMultipartBodyNoGfm1 defines parameters for Post.
 type PostMultipartBodyNoGfm1 = string
 
@@ -4760,9 +4660,6 @@ type PostMultipartBodyNoGfm1 = string
 type PostMultipartBody_NoGfm struct {
 	union json.RawMessage
 }
-
-// PostMultipartBodyPdf0 defines parameters for Post.
-type PostMultipartBodyPdf0 = FancyFile0x0e
 
 // PostMultipartBodyPdf1 defines parameters for Post.
 type PostMultipartBodyPdf1 = string
@@ -4772,14 +4669,19 @@ type PostMultipartBody_Pdf struct {
 	union json.RawMessage
 }
 
-// PostMultipartBodyRespondWith0 defines parameters for Post.
-type PostMultipartBodyRespondWith0 = Enum0x10
-
 // PostMultipartBodyRespondWith1 defines parameters for Post.
 type PostMultipartBodyRespondWith1 = string
 
 // PostMultipartBody_RespondWith defines parameters for Post.
 type PostMultipartBody_RespondWith struct {
+	union json.RawMessage
+}
+
+// PostMultipartBodyRobotsTxt1 defines parameters for Post.
+type PostMultipartBodyRobotsTxt1 = string
+
+// PostMultipartBody_RobotsTxt defines parameters for Post.
+type PostMultipartBody_RobotsTxt struct {
 	union json.RawMessage
 }
 
@@ -4794,8 +4696,10 @@ type PostMultipartBody_SetCookies_Item struct {
 	union json.RawMessage
 }
 
-// PostMultipartBodyWithIframe0 defines parameters for Post.
-type PostMultipartBodyWithIframe0 = PseudoBoolean0x11
+// PostMultipartBody_WebBotAuth defines parameters for Post.
+type PostMultipartBody_WebBotAuth struct {
+	union json.RawMessage
+}
 
 // PostMultipartBodyWithIframe1 defines parameters for Post.
 type PostMultipartBodyWithIframe1 = string
@@ -4805,9 +4709,6 @@ type PostMultipartBody_WithIframe struct {
 	union json.RawMessage
 }
 
-// PostMultipartBodyWithLinksSummary0 defines parameters for Post.
-type PostMultipartBodyWithLinksSummary0 = PseudoBoolean0x11
-
 // PostMultipartBodyWithLinksSummary1 defines parameters for Post.
 type PostMultipartBodyWithLinksSummary1 = string
 
@@ -4816,69 +4717,30 @@ type PostMultipartBody_WithLinksSummary struct {
 	union json.RawMessage
 }
 
-// Post400JSONResponseBody0 defines parameters for Post.
-type Post400JSONResponseBody0 = ParamValidationError0x28
-
-// Post400JSONResponseBody1 defines parameters for Post.
-type Post400JSONResponseBody1 = DataStreamBrokenError0x29
-
 // Post400JSONResponseBody defines parameters for Post.
 type Post400JSONResponseBody struct {
 	union json.RawMessage
 }
-
-// Post401JSONResponseBody0 defines parameters for Post.
-type Post401JSONResponseBody0 = AuthenticationFailedError0x2a
-
-// Post401JSONResponseBody1 defines parameters for Post.
-type Post401JSONResponseBody1 = AuthenticationRequiredError0x2b
 
 // Post401JSONResponseBody defines parameters for Post.
 type Post401JSONResponseBody struct {
 	union json.RawMessage
 }
 
-// Post402JSONResponseBody0 defines parameters for Post.
-type Post402JSONResponseBody0 = TierFeatureConstraintError0x2c
-
-// Post402JSONResponseBody1 defines parameters for Post.
-type Post402JSONResponseBody1 = InsufficientBalanceError0x2d
-
 // Post402JSONResponseBody defines parameters for Post.
 type Post402JSONResponseBody struct {
 	union json.RawMessage
 }
-
-// Post403JSONResponseBody0 defines parameters for Post.
-type Post403JSONResponseBody0 = OperationNotAllowedError0x2e
-
-// Post403JSONResponseBody1 defines parameters for Post.
-type Post403JSONResponseBody1 = AbuseAlleviationError0x2f
 
 // Post403JSONResponseBody defines parameters for Post.
 type Post403JSONResponseBody struct {
 	union json.RawMessage
 }
 
-// Post409JSONResponseBody0 defines parameters for Post.
-type Post409JSONResponseBody0 = ResourcePolicyDenyError0x30
-
-// Post409JSONResponseBody1 defines parameters for Post.
-type Post409JSONResponseBody1 = BudgetExceededError0x31
-
 // Post409JSONResponseBody defines parameters for Post.
 type Post409JSONResponseBody struct {
 	union json.RawMessage
 }
-
-// Post422JSONResponseBody0 defines parameters for Post.
-type Post422JSONResponseBody0 = SubmittedDataMalformedError0x33
-
-// Post422JSONResponseBody1 defines parameters for Post.
-type Post422JSONResponseBody1 = DownstreamServiceFailureError0x34
-
-// Post422JSONResponseBody2 defines parameters for Post.
-type Post422JSONResponseBody2 = AssertionFailureError0x35
 
 // Post422JSONResponseBody defines parameters for Post.
 type Post422JSONResponseBody struct {
@@ -5087,7 +4949,10 @@ type GetTargetUrlParams struct {
 	} `form:"withIframe,omitempty" json:"withIframe,omitempty"`
 	WithShadowDom        *PseudoBooleanLoose0x0c `form:"withShadowDom,omitempty" json:"withShadowDom,omitempty"`
 	SkipCertVerification *PseudoBooleanLoose0x0c `form:"skipCertVerification,omitempty" json:"skipCertVerification,omitempty"`
-	SetCookies           *struct {
+	WebBotAuth           *struct {
+		union json.RawMessage
+	} `form:"webBotAuth,omitempty" json:"webBotAuth,omitempty"`
+	SetCookies *struct {
 		union json.RawMessage
 	} `form:"setCookies,omitempty" json:"setCookies,omitempty"`
 	ExportStorageState *PseudoBooleanLoose0x0c `form:"exportStorageState,omitempty" json:"exportStorageState,omitempty"`
@@ -5098,18 +4963,20 @@ type GetTargetUrlParams struct {
 	Engine             *struct {
 		union json.RawMessage
 	} `form:"engine,omitempty" json:"engine,omitempty"`
-	InjectPageScript  *string                 `form:"injectPageScript,omitempty" json:"injectPageScript,omitempty"`
-	InjectFrameScript *string                 `form:"injectFrameScript,omitempty" json:"injectFrameScript,omitempty"`
-	Timeout           *float64                `form:"timeout,omitempty" json:"timeout,omitempty"`
-	Locale            *string                 `form:"locale,omitempty" json:"locale,omitempty"`
-	Referer           *string                 `form:"referer,omitempty" json:"referer,omitempty"`
-	TokenBudget       *float64                `form:"tokenBudget,omitempty" json:"tokenBudget,omitempty"`
-	AssertStatusCode  *float64                `form:"assertStatusCode,omitempty" json:"assertStatusCode,omitempty"`
-	Instruction       *string                 `form:"instruction,omitempty" json:"instruction,omitempty"`
-	JsonSchema        *string                 `form:"jsonSchema,omitempty" json:"jsonSchema,omitempty"`
-	RobotsTxt         *string                 `form:"robotsTxt,omitempty" json:"robotsTxt,omitempty"`
+	InjectPageScript  *string  `form:"injectPageScript,omitempty" json:"injectPageScript,omitempty"`
+	InjectFrameScript *string  `form:"injectFrameScript,omitempty" json:"injectFrameScript,omitempty"`
+	Timeout           *float64 `form:"timeout,omitempty" json:"timeout,omitempty"`
+	Locale            *string  `form:"locale,omitempty" json:"locale,omitempty"`
+	Referer           *string  `form:"referer,omitempty" json:"referer,omitempty"`
+	TokenBudget       *float64 `form:"tokenBudget,omitempty" json:"tokenBudget,omitempty"`
+	AssertStatusCode  *float64 `form:"assertStatusCode,omitempty" json:"assertStatusCode,omitempty"`
+	Instruction       *string  `form:"instruction,omitempty" json:"instruction,omitempty"`
+	JsonSchema        *string  `form:"jsonSchema,omitempty" json:"jsonSchema,omitempty"`
+	RobotsTxt         *struct {
+		union json.RawMessage
+	} `form:"robotsTxt,omitempty" json:"robotsTxt,omitempty"`
 	ZeroDataRetention *PseudoBooleanLoose0x0c `form:"zeroDataRetention,omitempty" json:"zeroDataRetention,omitempty"`
-	RespondTiming     *Enum0x25               `form:"respondTiming,omitempty" json:"respondTiming,omitempty"`
+	RespondTiming     *Enum0x26               `form:"respondTiming,omitempty" json:"respondTiming,omitempty"`
 	MarkdownChunking  *struct {
 		union json.RawMessage
 	} `form:"markdownChunking,omitempty" json:"markdownChunking,omitempty"`
@@ -5440,38 +5307,20 @@ type GetTargetUrlParams struct {
 	XNoServiceWorker *string `json:"X-No-Service-Worker,omitempty"`
 }
 
-// GetTargetUrlParamsPdf0 defines parameters for GetTargetUrl.
-type GetTargetUrlParamsPdf0 = FancyFile0x0e
-
 // GetTargetUrlParamsPdf1 defines parameters for GetTargetUrl.
 type GetTargetUrlParamsPdf1 = string
-
-// GetTargetUrlParamsFile0 defines parameters for GetTargetUrl.
-type GetTargetUrlParamsFile0 = FancyFile0x0e
 
 // GetTargetUrlParamsFile1 defines parameters for GetTargetUrl.
 type GetTargetUrlParamsFile1 = string
 
-// GetTargetUrlParamsRespondWith0 defines parameters for GetTargetUrl.
-type GetTargetUrlParamsRespondWith0 = Enum0x10
-
 // GetTargetUrlParamsRespondWith1 defines parameters for GetTargetUrl.
 type GetTargetUrlParamsRespondWith1 = string
-
-// GetTargetUrlParamsWithLinksSummary0 defines parameters for GetTargetUrl.
-type GetTargetUrlParamsWithLinksSummary0 = PseudoBoolean0x11
 
 // GetTargetUrlParamsWithLinksSummary1 defines parameters for GetTargetUrl.
 type GetTargetUrlParamsWithLinksSummary1 = string
 
-// GetTargetUrlParamsNoGfm0 defines parameters for GetTargetUrl.
-type GetTargetUrlParamsNoGfm0 = PseudoBoolean0x11
-
 // GetTargetUrlParamsNoGfm1 defines parameters for GetTargetUrl.
 type GetTargetUrlParamsNoGfm1 = string
-
-// GetTargetUrlParamsWithIframe0 defines parameters for GetTargetUrl.
-type GetTargetUrlParamsWithIframe0 = PseudoBoolean0x11
 
 // GetTargetUrlParamsWithIframe1 defines parameters for GetTargetUrl.
 type GetTargetUrlParamsWithIframe1 = string
@@ -5482,14 +5331,11 @@ type GetTargetUrlParamsSetCookies0 = interface{}
 // GetTargetUrlParamsSetCookies1 defines parameters for GetTargetUrl.
 type GetTargetUrlParamsSetCookies1 = string
 
-// GetTargetUrlParamsEngine0 defines parameters for GetTargetUrl.
-type GetTargetUrlParamsEngine0 = Enum0x1b
-
 // GetTargetUrlParamsEngine1 defines parameters for GetTargetUrl.
 type GetTargetUrlParamsEngine1 = string
 
-// GetTargetUrlParamsMarkdownChunking0 defines parameters for GetTargetUrl.
-type GetTargetUrlParamsMarkdownChunking0 = Enum0x26
+// GetTargetUrlParamsRobotsTxt1 defines parameters for GetTargetUrl.
+type GetTargetUrlParamsRobotsTxt1 = string
 
 // GetTargetUrlParamsMarkdownChunking1 defines parameters for GetTargetUrl.
 type GetTargetUrlParamsMarkdownChunking1 = string
@@ -5497,69 +5343,30 @@ type GetTargetUrlParamsMarkdownChunking1 = string
 // GetTargetUrlParamsAuthorization0 defines parameters for GetTargetUrl.
 type GetTargetUrlParamsAuthorization0 = string
 
-// GetTargetUrl400JSONResponseBody0 defines parameters for GetTargetUrl.
-type GetTargetUrl400JSONResponseBody0 = ParamValidationError0x28
-
-// GetTargetUrl400JSONResponseBody1 defines parameters for GetTargetUrl.
-type GetTargetUrl400JSONResponseBody1 = DataStreamBrokenError0x29
-
 // GetTargetUrl400JSONResponseBody defines parameters for GetTargetUrl.
 type GetTargetUrl400JSONResponseBody struct {
 	union json.RawMessage
 }
-
-// GetTargetUrl401JSONResponseBody0 defines parameters for GetTargetUrl.
-type GetTargetUrl401JSONResponseBody0 = AuthenticationFailedError0x2a
-
-// GetTargetUrl401JSONResponseBody1 defines parameters for GetTargetUrl.
-type GetTargetUrl401JSONResponseBody1 = AuthenticationRequiredError0x2b
 
 // GetTargetUrl401JSONResponseBody defines parameters for GetTargetUrl.
 type GetTargetUrl401JSONResponseBody struct {
 	union json.RawMessage
 }
 
-// GetTargetUrl402JSONResponseBody0 defines parameters for GetTargetUrl.
-type GetTargetUrl402JSONResponseBody0 = TierFeatureConstraintError0x2c
-
-// GetTargetUrl402JSONResponseBody1 defines parameters for GetTargetUrl.
-type GetTargetUrl402JSONResponseBody1 = InsufficientBalanceError0x2d
-
 // GetTargetUrl402JSONResponseBody defines parameters for GetTargetUrl.
 type GetTargetUrl402JSONResponseBody struct {
 	union json.RawMessage
 }
-
-// GetTargetUrl403JSONResponseBody0 defines parameters for GetTargetUrl.
-type GetTargetUrl403JSONResponseBody0 = OperationNotAllowedError0x2e
-
-// GetTargetUrl403JSONResponseBody1 defines parameters for GetTargetUrl.
-type GetTargetUrl403JSONResponseBody1 = AbuseAlleviationError0x2f
 
 // GetTargetUrl403JSONResponseBody defines parameters for GetTargetUrl.
 type GetTargetUrl403JSONResponseBody struct {
 	union json.RawMessage
 }
 
-// GetTargetUrl409JSONResponseBody0 defines parameters for GetTargetUrl.
-type GetTargetUrl409JSONResponseBody0 = ResourcePolicyDenyError0x30
-
-// GetTargetUrl409JSONResponseBody1 defines parameters for GetTargetUrl.
-type GetTargetUrl409JSONResponseBody1 = BudgetExceededError0x31
-
 // GetTargetUrl409JSONResponseBody defines parameters for GetTargetUrl.
 type GetTargetUrl409JSONResponseBody struct {
 	union json.RawMessage
 }
-
-// GetTargetUrl422JSONResponseBody0 defines parameters for GetTargetUrl.
-type GetTargetUrl422JSONResponseBody0 = SubmittedDataMalformedError0x33
-
-// GetTargetUrl422JSONResponseBody1 defines parameters for GetTargetUrl.
-type GetTargetUrl422JSONResponseBody1 = DownstreamServiceFailureError0x34
-
-// GetTargetUrl422JSONResponseBody2 defines parameters for GetTargetUrl.
-type GetTargetUrl422JSONResponseBody2 = AssertionFailureError0x35
 
 // GetTargetUrl422JSONResponseBody defines parameters for GetTargetUrl.
 type GetTargetUrl422JSONResponseBody struct {
@@ -5652,7 +5459,7 @@ type PostTargetUrlJSONBody struct {
 	// Markdown - Cast to: &lt; **TurnDownTweakableOptions** &gt;
 	//
 	// - Member of &lt;CrawlerOptions&gt;
-	Markdown *TurnDownTweakableOptions0x23 `json:"markdown,omitempty"`
+	Markdown *TurnDownTweakableOptions0x24 `json:"markdown,omitempty"`
 
 	// MarkdownChunking - Cast to: &lt; **&quot;true&quot; | &quot;h1&quot; | &quot;h2&quot; | &quot;h3&quot; | &quot;h4&quot; | &quot;h5&quot; | &quot;structured&quot; | &quot;s1&quot; | &quot;s2&quot; | &quot;s3&quot; | &quot;s4&quot; | &quot;s5&quot;|string** &gt;
 	//
@@ -5684,7 +5491,7 @@ type PostTargetUrlJSONBody struct {
 	// Ocr - Cast to: &lt; **OCRPreferences** &gt;
 	//
 	// - Member of &lt;CrawlerOptions&gt;
-	Ocr *OCRPreferences0x24 `json:"ocr,omitempty"`
+	Ocr *OCRPreferences0x25 `json:"ocr,omitempty"`
 
 	// Page Steer which page(s) to return for document files. See PageSelection.
 	//
@@ -5743,7 +5550,7 @@ type PostTargetUrlJSONBody struct {
 	// RespondTiming - Cast to: &lt; **&quot;html&quot; | &quot;visible-content&quot; | &quot;mutation-idle&quot; | &quot;resource-idle&quot; | &quot;media-idle&quot; | &quot;network-idle&quot;** &gt;
 	//
 	// - Member of &lt;CrawlerOptions&gt;
-	RespondTiming *Enum0x25 `json:"respondTiming,omitempty"`
+	RespondTiming *Enum0x26 `json:"respondTiming,omitempty"`
 
 	// RespondWith - Cast to: &lt; **&quot;content&quot; | &quot;markdown&quot; | &quot;html&quot; | &quot;text&quot; | &quot;pageshot&quot; | &quot;screenshot&quot; | &quot;vlm&quot; | &quot;readerlm-v2&quot; | &quot;frontmatter&quot; | &quot;readability&quot; | &quot;...|string** &gt;
 	//
@@ -5773,10 +5580,10 @@ type PostTargetUrlJSONBody struct {
 	// - Defaults to: &#39;link&#39;
 	RetainMedia *Enum0x13 `json:"retainMedia,omitempty"`
 
-	// RobotsTxt - Cast to: &lt; **string** &gt;
+	// RobotsTxt - Cast to: &lt; **PseudoBoolean|string** &gt;
 	//
 	// - Member of &lt;CrawlerOptions&gt;
-	RobotsTxt *string `json:"robotsTxt,omitempty"`
+	RobotsTxt *PostTargetUrlJSONBody_RobotsTxt `json:"robotsTxt,omitempty"`
 
 	// SetCookies - Cast to: &lt; **Array&lt;object|string&gt;** &gt;
 	//
@@ -5791,7 +5598,7 @@ type PostTargetUrlJSONBody struct {
 	// StorageState - Cast to: &lt; **StorageState** &gt;
 	//
 	// - Member of &lt;CrawlerOptions&gt;
-	StorageState *StorageState0x1a `json:"storageState,omitempty"`
+	StorageState *StorageState0x1b `json:"storageState,omitempty"`
 
 	// TargetSelector - Cast to: &lt; **Array&lt;string&gt;** &gt;
 	//
@@ -5823,12 +5630,17 @@ type PostTargetUrlJSONBody struct {
 	// Viewport - Cast to: &lt; **Viewport** &gt;
 	//
 	// - Member of &lt;CrawlerOptions&gt;
-	Viewport *Viewport0x1c `json:"viewport,omitempty"`
+	Viewport *Viewport0x1d `json:"viewport,omitempty"`
 
 	// WaitForSelector - Cast to: &lt; **Array&lt;string&gt;** &gt;
 	//
 	// - Member of &lt;CrawlerOptions&gt;
 	WaitForSelector *[]string `json:"waitForSelector,omitempty"`
+
+	// WebBotAuth - Cast to: &lt; **PseudoBoolean|&quot;authority&quot; | &quot;target-uri&quot;** &gt;
+	//
+	// - Member of &lt;CrawlerOptions&gt;
+	WebBotAuth *PostTargetUrlJSONBody_WebBotAuth `json:"webBotAuth,omitempty"`
 
 	// WithGeneratedAlt - Cast to: &lt; **PseudoBoolean** &gt;
 	//
@@ -6023,7 +5835,7 @@ type PostTargetUrlFormdataBody struct {
 	// RespondTiming - Cast to: &lt; **&quot;html&quot; | &quot;visible-content&quot; | &quot;mutation-idle&quot; | &quot;resource-idle&quot; | &quot;media-idle&quot; | &quot;network-idle&quot;** &gt;
 	//
 	// - Member of &lt;CrawlerOptions&gt;
-	RespondTiming *Enum0x25 `form:"respondTiming,omitempty" json:"respondTiming,omitempty"`
+	RespondTiming *Enum0x26 `form:"respondTiming,omitempty" json:"respondTiming,omitempty"`
 
 	// RespondWith - Cast to: &lt; **&quot;content&quot; | &quot;markdown&quot; | &quot;html&quot; | &quot;text&quot; | &quot;pageshot&quot; | &quot;screenshot&quot; | &quot;vlm&quot; | &quot;readerlm-v2&quot; | &quot;frontmatter&quot; | &quot;readability&quot; | &quot;...|string** &gt;
 	//
@@ -6053,10 +5865,10 @@ type PostTargetUrlFormdataBody struct {
 	// - Defaults to: &#39;link&#39;
 	RetainMedia *Enum0x13 `form:"retainMedia,omitempty" json:"retainMedia,omitempty"`
 
-	// RobotsTxt - Cast to: &lt; **string** &gt;
+	// RobotsTxt - Cast to: &lt; **PseudoBoolean|string** &gt;
 	//
 	// - Member of &lt;CrawlerOptions&gt;
-	RobotsTxt *string `form:"robotsTxt,omitempty" json:"robotsTxt,omitempty"`
+	RobotsTxt *PostTargetUrlFormdataBody_RobotsTxt `form:"robotsTxt,omitempty" json:"robotsTxt,omitempty"`
 
 	// SetCookies - Cast to: &lt; **Array&lt;object|string&gt;** &gt;
 	//
@@ -6099,6 +5911,11 @@ type PostTargetUrlFormdataBody struct {
 	//
 	// - Member of &lt;CrawlerOptions&gt;
 	WaitForSelector *string `form:"waitForSelector,omitempty" json:"waitForSelector,omitempty"`
+
+	// WebBotAuth - Cast to: &lt; **PseudoBoolean|&quot;authority&quot; | &quot;target-uri&quot;** &gt;
+	//
+	// - Member of &lt;CrawlerOptions&gt;
+	WebBotAuth *PostTargetUrlFormdataBody_WebBotAuth `form:"webBotAuth,omitempty" json:"webBotAuth,omitempty"`
 
 	// WithGeneratedAlt - Cast to: &lt; **PseudoBoolean** &gt;
 	//
@@ -6217,7 +6034,7 @@ type PostTargetUrlMultipartBody struct {
 	// Markdown - Cast to: &lt; **TurnDownTweakableOptions** &gt;
 	//
 	// - Member of &lt;CrawlerOptions&gt;
-	Markdown *TurnDownTweakableOptions0x23 `json:"markdown,omitempty"`
+	Markdown *TurnDownTweakableOptions0x24 `json:"markdown,omitempty"`
 
 	// MarkdownChunking - Cast to: &lt; **&quot;true&quot; | &quot;h1&quot; | &quot;h2&quot; | &quot;h3&quot; | &quot;h4&quot; | &quot;h5&quot; | &quot;structured&quot; | &quot;s1&quot; | &quot;s2&quot; | &quot;s3&quot; | &quot;s4&quot; | &quot;s5&quot;|string** &gt;
 	//
@@ -6249,7 +6066,7 @@ type PostTargetUrlMultipartBody struct {
 	// Ocr - Cast to: &lt; **OCRPreferences** &gt;
 	//
 	// - Member of &lt;CrawlerOptions&gt;
-	Ocr *OCRPreferences0x24 `json:"ocr,omitempty"`
+	Ocr *OCRPreferences0x25 `json:"ocr,omitempty"`
 
 	// Page Steer which page(s) to return for document files. See PageSelection.
 	//
@@ -6308,7 +6125,7 @@ type PostTargetUrlMultipartBody struct {
 	// RespondTiming - Cast to: &lt; **&quot;html&quot; | &quot;visible-content&quot; | &quot;mutation-idle&quot; | &quot;resource-idle&quot; | &quot;media-idle&quot; | &quot;network-idle&quot;** &gt;
 	//
 	// - Member of &lt;CrawlerOptions&gt;
-	RespondTiming *Enum0x25 `json:"respondTiming,omitempty"`
+	RespondTiming *Enum0x26 `json:"respondTiming,omitempty"`
 
 	// RespondWith - Cast to: &lt; **&quot;content&quot; | &quot;markdown&quot; | &quot;html&quot; | &quot;text&quot; | &quot;pageshot&quot; | &quot;screenshot&quot; | &quot;vlm&quot; | &quot;readerlm-v2&quot; | &quot;frontmatter&quot; | &quot;readability&quot; | &quot;...|string** &gt;
 	//
@@ -6338,10 +6155,10 @@ type PostTargetUrlMultipartBody struct {
 	// - Defaults to: &#39;link&#39;
 	RetainMedia *Enum0x13 `json:"retainMedia,omitempty"`
 
-	// RobotsTxt - Cast to: &lt; **string** &gt;
+	// RobotsTxt - Cast to: &lt; **PseudoBoolean|string** &gt;
 	//
 	// - Member of &lt;CrawlerOptions&gt;
-	RobotsTxt *string `json:"robotsTxt,omitempty"`
+	RobotsTxt *PostTargetUrlMultipartBody_RobotsTxt `json:"robotsTxt,omitempty"`
 
 	// SetCookies - Cast to: &lt; **Array&lt;object|string&gt;** &gt;
 	//
@@ -6356,7 +6173,7 @@ type PostTargetUrlMultipartBody struct {
 	// StorageState - Cast to: &lt; **StorageState** &gt;
 	//
 	// - Member of &lt;CrawlerOptions&gt;
-	StorageState *StorageState0x1a `json:"storageState,omitempty"`
+	StorageState *StorageState0x1b `json:"storageState,omitempty"`
 
 	// TargetSelector - Cast to: &lt; **Array&lt;string&gt;** &gt;
 	//
@@ -6388,12 +6205,17 @@ type PostTargetUrlMultipartBody struct {
 	// Viewport - Cast to: &lt; **Viewport** &gt;
 	//
 	// - Member of &lt;CrawlerOptions&gt;
-	Viewport *Viewport0x1c `json:"viewport,omitempty"`
+	Viewport *Viewport0x1d `json:"viewport,omitempty"`
 
 	// WaitForSelector - Cast to: &lt; **Array&lt;string&gt;** &gt;
 	//
 	// - Member of &lt;CrawlerOptions&gt;
 	WaitForSelector *[]string `json:"waitForSelector,omitempty"`
+
+	// WebBotAuth - Cast to: &lt; **PseudoBoolean|&quot;authority&quot; | &quot;target-uri&quot;** &gt;
+	//
+	// - Member of &lt;CrawlerOptions&gt;
+	WebBotAuth *PostTargetUrlMultipartBody_WebBotAuth `json:"webBotAuth,omitempty"`
 
 	// WithGeneratedAlt - Cast to: &lt; **PseudoBoolean** &gt;
 	//
@@ -6467,7 +6289,10 @@ type PostTargetUrlParams struct {
 	} `form:"withIframe,omitempty" json:"withIframe,omitempty"`
 	WithShadowDom        *PseudoBooleanLoose0x0c `form:"withShadowDom,omitempty" json:"withShadowDom,omitempty"`
 	SkipCertVerification *PseudoBooleanLoose0x0c `form:"skipCertVerification,omitempty" json:"skipCertVerification,omitempty"`
-	SetCookies           *struct {
+	WebBotAuth           *struct {
+		union json.RawMessage
+	} `form:"webBotAuth,omitempty" json:"webBotAuth,omitempty"`
+	SetCookies *struct {
 		union json.RawMessage
 	} `form:"setCookies,omitempty" json:"setCookies,omitempty"`
 	ExportStorageState *PseudoBooleanLoose0x0c `form:"exportStorageState,omitempty" json:"exportStorageState,omitempty"`
@@ -6478,18 +6303,20 @@ type PostTargetUrlParams struct {
 	Engine             *struct {
 		union json.RawMessage
 	} `form:"engine,omitempty" json:"engine,omitempty"`
-	InjectPageScript  *string                 `form:"injectPageScript,omitempty" json:"injectPageScript,omitempty"`
-	InjectFrameScript *string                 `form:"injectFrameScript,omitempty" json:"injectFrameScript,omitempty"`
-	Timeout           *float64                `form:"timeout,omitempty" json:"timeout,omitempty"`
-	Locale            *string                 `form:"locale,omitempty" json:"locale,omitempty"`
-	Referer           *string                 `form:"referer,omitempty" json:"referer,omitempty"`
-	TokenBudget       *float64                `form:"tokenBudget,omitempty" json:"tokenBudget,omitempty"`
-	AssertStatusCode  *float64                `form:"assertStatusCode,omitempty" json:"assertStatusCode,omitempty"`
-	Instruction       *string                 `form:"instruction,omitempty" json:"instruction,omitempty"`
-	JsonSchema        *string                 `form:"jsonSchema,omitempty" json:"jsonSchema,omitempty"`
-	RobotsTxt         *string                 `form:"robotsTxt,omitempty" json:"robotsTxt,omitempty"`
+	InjectPageScript  *string  `form:"injectPageScript,omitempty" json:"injectPageScript,omitempty"`
+	InjectFrameScript *string  `form:"injectFrameScript,omitempty" json:"injectFrameScript,omitempty"`
+	Timeout           *float64 `form:"timeout,omitempty" json:"timeout,omitempty"`
+	Locale            *string  `form:"locale,omitempty" json:"locale,omitempty"`
+	Referer           *string  `form:"referer,omitempty" json:"referer,omitempty"`
+	TokenBudget       *float64 `form:"tokenBudget,omitempty" json:"tokenBudget,omitempty"`
+	AssertStatusCode  *float64 `form:"assertStatusCode,omitempty" json:"assertStatusCode,omitempty"`
+	Instruction       *string  `form:"instruction,omitempty" json:"instruction,omitempty"`
+	JsonSchema        *string  `form:"jsonSchema,omitempty" json:"jsonSchema,omitempty"`
+	RobotsTxt         *struct {
+		union json.RawMessage
+	} `form:"robotsTxt,omitempty" json:"robotsTxt,omitempty"`
 	ZeroDataRetention *PseudoBooleanLoose0x0c `form:"zeroDataRetention,omitempty" json:"zeroDataRetention,omitempty"`
-	RespondTiming     *Enum0x25               `form:"respondTiming,omitempty" json:"respondTiming,omitempty"`
+	RespondTiming     *Enum0x26               `form:"respondTiming,omitempty" json:"respondTiming,omitempty"`
 	MarkdownChunking  *struct {
 		union json.RawMessage
 	} `form:"markdownChunking,omitempty" json:"markdownChunking,omitempty"`
@@ -6820,38 +6647,20 @@ type PostTargetUrlParams struct {
 	XNoServiceWorker *string `json:"X-No-Service-Worker,omitempty"`
 }
 
-// PostTargetUrlParamsPdf0 defines parameters for PostTargetUrl.
-type PostTargetUrlParamsPdf0 = FancyFile0x0e
-
 // PostTargetUrlParamsPdf1 defines parameters for PostTargetUrl.
 type PostTargetUrlParamsPdf1 = string
-
-// PostTargetUrlParamsFile0 defines parameters for PostTargetUrl.
-type PostTargetUrlParamsFile0 = FancyFile0x0e
 
 // PostTargetUrlParamsFile1 defines parameters for PostTargetUrl.
 type PostTargetUrlParamsFile1 = string
 
-// PostTargetUrlParamsRespondWith0 defines parameters for PostTargetUrl.
-type PostTargetUrlParamsRespondWith0 = Enum0x10
-
 // PostTargetUrlParamsRespondWith1 defines parameters for PostTargetUrl.
 type PostTargetUrlParamsRespondWith1 = string
-
-// PostTargetUrlParamsWithLinksSummary0 defines parameters for PostTargetUrl.
-type PostTargetUrlParamsWithLinksSummary0 = PseudoBoolean0x11
 
 // PostTargetUrlParamsWithLinksSummary1 defines parameters for PostTargetUrl.
 type PostTargetUrlParamsWithLinksSummary1 = string
 
-// PostTargetUrlParamsNoGfm0 defines parameters for PostTargetUrl.
-type PostTargetUrlParamsNoGfm0 = PseudoBoolean0x11
-
 // PostTargetUrlParamsNoGfm1 defines parameters for PostTargetUrl.
 type PostTargetUrlParamsNoGfm1 = string
-
-// PostTargetUrlParamsWithIframe0 defines parameters for PostTargetUrl.
-type PostTargetUrlParamsWithIframe0 = PseudoBoolean0x11
 
 // PostTargetUrlParamsWithIframe1 defines parameters for PostTargetUrl.
 type PostTargetUrlParamsWithIframe1 = string
@@ -6862,23 +6671,17 @@ type PostTargetUrlParamsSetCookies0 = interface{}
 // PostTargetUrlParamsSetCookies1 defines parameters for PostTargetUrl.
 type PostTargetUrlParamsSetCookies1 = string
 
-// PostTargetUrlParamsEngine0 defines parameters for PostTargetUrl.
-type PostTargetUrlParamsEngine0 = Enum0x1b
-
 // PostTargetUrlParamsEngine1 defines parameters for PostTargetUrl.
 type PostTargetUrlParamsEngine1 = string
 
-// PostTargetUrlParamsMarkdownChunking0 defines parameters for PostTargetUrl.
-type PostTargetUrlParamsMarkdownChunking0 = Enum0x26
+// PostTargetUrlParamsRobotsTxt1 defines parameters for PostTargetUrl.
+type PostTargetUrlParamsRobotsTxt1 = string
 
 // PostTargetUrlParamsMarkdownChunking1 defines parameters for PostTargetUrl.
 type PostTargetUrlParamsMarkdownChunking1 = string
 
 // PostTargetUrlParamsAuthorization0 defines parameters for PostTargetUrl.
 type PostTargetUrlParamsAuthorization0 = string
-
-// PostTargetUrlJSONBodyEngine0 defines parameters for PostTargetUrl.
-type PostTargetUrlJSONBodyEngine0 = Enum0x1b
 
 // PostTargetUrlJSONBodyEngine1 defines parameters for PostTargetUrl.
 type PostTargetUrlJSONBodyEngine1 = string
@@ -6888,9 +6691,6 @@ type PostTargetUrlJSONBody_Engine struct {
 	union json.RawMessage
 }
 
-// PostTargetUrlJSONBodyFile0 defines parameters for PostTargetUrl.
-type PostTargetUrlJSONBodyFile0 = FancyFile0x0e
-
 // PostTargetUrlJSONBodyFile1 defines parameters for PostTargetUrl.
 type PostTargetUrlJSONBodyFile1 = string
 
@@ -6898,9 +6698,6 @@ type PostTargetUrlJSONBodyFile1 = string
 type PostTargetUrlJSONBody_File struct {
 	union json.RawMessage
 }
-
-// PostTargetUrlJSONBodyMarkdownChunking0 defines parameters for PostTargetUrl.
-type PostTargetUrlJSONBodyMarkdownChunking0 = Enum0x26
 
 // PostTargetUrlJSONBodyMarkdownChunking1 defines parameters for PostTargetUrl.
 type PostTargetUrlJSONBodyMarkdownChunking1 = string
@@ -6910,9 +6707,6 @@ type PostTargetUrlJSONBody_MarkdownChunking struct {
 	union json.RawMessage
 }
 
-// PostTargetUrlJSONBodyNoGfm0 defines parameters for PostTargetUrl.
-type PostTargetUrlJSONBodyNoGfm0 = PseudoBoolean0x11
-
 // PostTargetUrlJSONBodyNoGfm1 defines parameters for PostTargetUrl.
 type PostTargetUrlJSONBodyNoGfm1 = string
 
@@ -6920,9 +6714,6 @@ type PostTargetUrlJSONBodyNoGfm1 = string
 type PostTargetUrlJSONBody_NoGfm struct {
 	union json.RawMessage
 }
-
-// PostTargetUrlJSONBodyPdf0 defines parameters for PostTargetUrl.
-type PostTargetUrlJSONBodyPdf0 = FancyFile0x0e
 
 // PostTargetUrlJSONBodyPdf1 defines parameters for PostTargetUrl.
 type PostTargetUrlJSONBodyPdf1 = string
@@ -6932,14 +6723,19 @@ type PostTargetUrlJSONBody_Pdf struct {
 	union json.RawMessage
 }
 
-// PostTargetUrlJSONBodyRespondWith0 defines parameters for PostTargetUrl.
-type PostTargetUrlJSONBodyRespondWith0 = Enum0x10
-
 // PostTargetUrlJSONBodyRespondWith1 defines parameters for PostTargetUrl.
 type PostTargetUrlJSONBodyRespondWith1 = string
 
 // PostTargetUrlJSONBody_RespondWith defines parameters for PostTargetUrl.
 type PostTargetUrlJSONBody_RespondWith struct {
+	union json.RawMessage
+}
+
+// PostTargetUrlJSONBodyRobotsTxt1 defines parameters for PostTargetUrl.
+type PostTargetUrlJSONBodyRobotsTxt1 = string
+
+// PostTargetUrlJSONBody_RobotsTxt defines parameters for PostTargetUrl.
+type PostTargetUrlJSONBody_RobotsTxt struct {
 	union json.RawMessage
 }
 
@@ -6954,8 +6750,10 @@ type PostTargetUrlJSONBody_SetCookies_Item struct {
 	union json.RawMessage
 }
 
-// PostTargetUrlJSONBodyWithIframe0 defines parameters for PostTargetUrl.
-type PostTargetUrlJSONBodyWithIframe0 = PseudoBoolean0x11
+// PostTargetUrlJSONBody_WebBotAuth defines parameters for PostTargetUrl.
+type PostTargetUrlJSONBody_WebBotAuth struct {
+	union json.RawMessage
+}
 
 // PostTargetUrlJSONBodyWithIframe1 defines parameters for PostTargetUrl.
 type PostTargetUrlJSONBodyWithIframe1 = string
@@ -6965,9 +6763,6 @@ type PostTargetUrlJSONBody_WithIframe struct {
 	union json.RawMessage
 }
 
-// PostTargetUrlJSONBodyWithLinksSummary0 defines parameters for PostTargetUrl.
-type PostTargetUrlJSONBodyWithLinksSummary0 = PseudoBoolean0x11
-
 // PostTargetUrlJSONBodyWithLinksSummary1 defines parameters for PostTargetUrl.
 type PostTargetUrlJSONBodyWithLinksSummary1 = string
 
@@ -6975,9 +6770,6 @@ type PostTargetUrlJSONBodyWithLinksSummary1 = string
 type PostTargetUrlJSONBody_WithLinksSummary struct {
 	union json.RawMessage
 }
-
-// PostTargetUrlFormdataBodyEngine0 defines parameters for PostTargetUrl.
-type PostTargetUrlFormdataBodyEngine0 = Enum0x1b
 
 // PostTargetUrlFormdataBodyEngine1 defines parameters for PostTargetUrl.
 type PostTargetUrlFormdataBodyEngine1 = string
@@ -6987,9 +6779,6 @@ type PostTargetUrlFormdataBody_Engine struct {
 	union json.RawMessage
 }
 
-// PostTargetUrlFormdataBodyFile0 defines parameters for PostTargetUrl.
-type PostTargetUrlFormdataBodyFile0 = FancyFile0x0e
-
 // PostTargetUrlFormdataBodyFile1 defines parameters for PostTargetUrl.
 type PostTargetUrlFormdataBodyFile1 = string
 
@@ -6997,9 +6786,6 @@ type PostTargetUrlFormdataBodyFile1 = string
 type PostTargetUrlFormdataBody_File struct {
 	union json.RawMessage
 }
-
-// PostTargetUrlFormdataBodyMarkdownChunking0 defines parameters for PostTargetUrl.
-type PostTargetUrlFormdataBodyMarkdownChunking0 = Enum0x26
 
 // PostTargetUrlFormdataBodyMarkdownChunking1 defines parameters for PostTargetUrl.
 type PostTargetUrlFormdataBodyMarkdownChunking1 = string
@@ -7009,9 +6795,6 @@ type PostTargetUrlFormdataBody_MarkdownChunking struct {
 	union json.RawMessage
 }
 
-// PostTargetUrlFormdataBodyNoGfm0 defines parameters for PostTargetUrl.
-type PostTargetUrlFormdataBodyNoGfm0 = PseudoBoolean0x11
-
 // PostTargetUrlFormdataBodyNoGfm1 defines parameters for PostTargetUrl.
 type PostTargetUrlFormdataBodyNoGfm1 = string
 
@@ -7019,9 +6802,6 @@ type PostTargetUrlFormdataBodyNoGfm1 = string
 type PostTargetUrlFormdataBody_NoGfm struct {
 	union json.RawMessage
 }
-
-// PostTargetUrlFormdataBodyPdf0 defines parameters for PostTargetUrl.
-type PostTargetUrlFormdataBodyPdf0 = FancyFile0x0e
 
 // PostTargetUrlFormdataBodyPdf1 defines parameters for PostTargetUrl.
 type PostTargetUrlFormdataBodyPdf1 = string
@@ -7031,14 +6811,19 @@ type PostTargetUrlFormdataBody_Pdf struct {
 	union json.RawMessage
 }
 
-// PostTargetUrlFormdataBodyRespondWith0 defines parameters for PostTargetUrl.
-type PostTargetUrlFormdataBodyRespondWith0 = Enum0x10
-
 // PostTargetUrlFormdataBodyRespondWith1 defines parameters for PostTargetUrl.
 type PostTargetUrlFormdataBodyRespondWith1 = string
 
 // PostTargetUrlFormdataBody_RespondWith defines parameters for PostTargetUrl.
 type PostTargetUrlFormdataBody_RespondWith struct {
+	union json.RawMessage
+}
+
+// PostTargetUrlFormdataBodyRobotsTxt1 defines parameters for PostTargetUrl.
+type PostTargetUrlFormdataBodyRobotsTxt1 = string
+
+// PostTargetUrlFormdataBody_RobotsTxt defines parameters for PostTargetUrl.
+type PostTargetUrlFormdataBody_RobotsTxt struct {
 	union json.RawMessage
 }
 
@@ -7053,8 +6838,10 @@ type PostTargetUrlFormdataBody_SetCookies struct {
 	union json.RawMessage
 }
 
-// PostTargetUrlFormdataBodyWithIframe0 defines parameters for PostTargetUrl.
-type PostTargetUrlFormdataBodyWithIframe0 = PseudoBoolean0x11
+// PostTargetUrlFormdataBody_WebBotAuth defines parameters for PostTargetUrl.
+type PostTargetUrlFormdataBody_WebBotAuth struct {
+	union json.RawMessage
+}
 
 // PostTargetUrlFormdataBodyWithIframe1 defines parameters for PostTargetUrl.
 type PostTargetUrlFormdataBodyWithIframe1 = string
@@ -7064,9 +6851,6 @@ type PostTargetUrlFormdataBody_WithIframe struct {
 	union json.RawMessage
 }
 
-// PostTargetUrlFormdataBodyWithLinksSummary0 defines parameters for PostTargetUrl.
-type PostTargetUrlFormdataBodyWithLinksSummary0 = PseudoBoolean0x11
-
 // PostTargetUrlFormdataBodyWithLinksSummary1 defines parameters for PostTargetUrl.
 type PostTargetUrlFormdataBodyWithLinksSummary1 = string
 
@@ -7074,9 +6858,6 @@ type PostTargetUrlFormdataBodyWithLinksSummary1 = string
 type PostTargetUrlFormdataBody_WithLinksSummary struct {
 	union json.RawMessage
 }
-
-// PostTargetUrlMultipartBodyEngine0 defines parameters for PostTargetUrl.
-type PostTargetUrlMultipartBodyEngine0 = Enum0x1b
 
 // PostTargetUrlMultipartBodyEngine1 defines parameters for PostTargetUrl.
 type PostTargetUrlMultipartBodyEngine1 = string
@@ -7086,9 +6867,6 @@ type PostTargetUrlMultipartBody_Engine struct {
 	union json.RawMessage
 }
 
-// PostTargetUrlMultipartBodyFile0 defines parameters for PostTargetUrl.
-type PostTargetUrlMultipartBodyFile0 = FancyFile0x0e
-
 // PostTargetUrlMultipartBodyFile1 defines parameters for PostTargetUrl.
 type PostTargetUrlMultipartBodyFile1 = string
 
@@ -7096,9 +6874,6 @@ type PostTargetUrlMultipartBodyFile1 = string
 type PostTargetUrlMultipartBody_File struct {
 	union json.RawMessage
 }
-
-// PostTargetUrlMultipartBodyMarkdownChunking0 defines parameters for PostTargetUrl.
-type PostTargetUrlMultipartBodyMarkdownChunking0 = Enum0x26
 
 // PostTargetUrlMultipartBodyMarkdownChunking1 defines parameters for PostTargetUrl.
 type PostTargetUrlMultipartBodyMarkdownChunking1 = string
@@ -7108,9 +6883,6 @@ type PostTargetUrlMultipartBody_MarkdownChunking struct {
 	union json.RawMessage
 }
 
-// PostTargetUrlMultipartBodyNoGfm0 defines parameters for PostTargetUrl.
-type PostTargetUrlMultipartBodyNoGfm0 = PseudoBoolean0x11
-
 // PostTargetUrlMultipartBodyNoGfm1 defines parameters for PostTargetUrl.
 type PostTargetUrlMultipartBodyNoGfm1 = string
 
@@ -7118,9 +6890,6 @@ type PostTargetUrlMultipartBodyNoGfm1 = string
 type PostTargetUrlMultipartBody_NoGfm struct {
 	union json.RawMessage
 }
-
-// PostTargetUrlMultipartBodyPdf0 defines parameters for PostTargetUrl.
-type PostTargetUrlMultipartBodyPdf0 = FancyFile0x0e
 
 // PostTargetUrlMultipartBodyPdf1 defines parameters for PostTargetUrl.
 type PostTargetUrlMultipartBodyPdf1 = string
@@ -7130,14 +6899,19 @@ type PostTargetUrlMultipartBody_Pdf struct {
 	union json.RawMessage
 }
 
-// PostTargetUrlMultipartBodyRespondWith0 defines parameters for PostTargetUrl.
-type PostTargetUrlMultipartBodyRespondWith0 = Enum0x10
-
 // PostTargetUrlMultipartBodyRespondWith1 defines parameters for PostTargetUrl.
 type PostTargetUrlMultipartBodyRespondWith1 = string
 
 // PostTargetUrlMultipartBody_RespondWith defines parameters for PostTargetUrl.
 type PostTargetUrlMultipartBody_RespondWith struct {
+	union json.RawMessage
+}
+
+// PostTargetUrlMultipartBodyRobotsTxt1 defines parameters for PostTargetUrl.
+type PostTargetUrlMultipartBodyRobotsTxt1 = string
+
+// PostTargetUrlMultipartBody_RobotsTxt defines parameters for PostTargetUrl.
+type PostTargetUrlMultipartBody_RobotsTxt struct {
 	union json.RawMessage
 }
 
@@ -7152,8 +6926,10 @@ type PostTargetUrlMultipartBody_SetCookies_Item struct {
 	union json.RawMessage
 }
 
-// PostTargetUrlMultipartBodyWithIframe0 defines parameters for PostTargetUrl.
-type PostTargetUrlMultipartBodyWithIframe0 = PseudoBoolean0x11
+// PostTargetUrlMultipartBody_WebBotAuth defines parameters for PostTargetUrl.
+type PostTargetUrlMultipartBody_WebBotAuth struct {
+	union json.RawMessage
+}
 
 // PostTargetUrlMultipartBodyWithIframe1 defines parameters for PostTargetUrl.
 type PostTargetUrlMultipartBodyWithIframe1 = string
@@ -7163,9 +6939,6 @@ type PostTargetUrlMultipartBody_WithIframe struct {
 	union json.RawMessage
 }
 
-// PostTargetUrlMultipartBodyWithLinksSummary0 defines parameters for PostTargetUrl.
-type PostTargetUrlMultipartBodyWithLinksSummary0 = PseudoBoolean0x11
-
 // PostTargetUrlMultipartBodyWithLinksSummary1 defines parameters for PostTargetUrl.
 type PostTargetUrlMultipartBodyWithLinksSummary1 = string
 
@@ -7174,69 +6947,30 @@ type PostTargetUrlMultipartBody_WithLinksSummary struct {
 	union json.RawMessage
 }
 
-// PostTargetUrl400JSONResponseBody0 defines parameters for PostTargetUrl.
-type PostTargetUrl400JSONResponseBody0 = ParamValidationError0x28
-
-// PostTargetUrl400JSONResponseBody1 defines parameters for PostTargetUrl.
-type PostTargetUrl400JSONResponseBody1 = DataStreamBrokenError0x29
-
 // PostTargetUrl400JSONResponseBody defines parameters for PostTargetUrl.
 type PostTargetUrl400JSONResponseBody struct {
 	union json.RawMessage
 }
-
-// PostTargetUrl401JSONResponseBody0 defines parameters for PostTargetUrl.
-type PostTargetUrl401JSONResponseBody0 = AuthenticationFailedError0x2a
-
-// PostTargetUrl401JSONResponseBody1 defines parameters for PostTargetUrl.
-type PostTargetUrl401JSONResponseBody1 = AuthenticationRequiredError0x2b
 
 // PostTargetUrl401JSONResponseBody defines parameters for PostTargetUrl.
 type PostTargetUrl401JSONResponseBody struct {
 	union json.RawMessage
 }
 
-// PostTargetUrl402JSONResponseBody0 defines parameters for PostTargetUrl.
-type PostTargetUrl402JSONResponseBody0 = TierFeatureConstraintError0x2c
-
-// PostTargetUrl402JSONResponseBody1 defines parameters for PostTargetUrl.
-type PostTargetUrl402JSONResponseBody1 = InsufficientBalanceError0x2d
-
 // PostTargetUrl402JSONResponseBody defines parameters for PostTargetUrl.
 type PostTargetUrl402JSONResponseBody struct {
 	union json.RawMessage
 }
-
-// PostTargetUrl403JSONResponseBody0 defines parameters for PostTargetUrl.
-type PostTargetUrl403JSONResponseBody0 = OperationNotAllowedError0x2e
-
-// PostTargetUrl403JSONResponseBody1 defines parameters for PostTargetUrl.
-type PostTargetUrl403JSONResponseBody1 = AbuseAlleviationError0x2f
 
 // PostTargetUrl403JSONResponseBody defines parameters for PostTargetUrl.
 type PostTargetUrl403JSONResponseBody struct {
 	union json.RawMessage
 }
 
-// PostTargetUrl409JSONResponseBody0 defines parameters for PostTargetUrl.
-type PostTargetUrl409JSONResponseBody0 = ResourcePolicyDenyError0x30
-
-// PostTargetUrl409JSONResponseBody1 defines parameters for PostTargetUrl.
-type PostTargetUrl409JSONResponseBody1 = BudgetExceededError0x31
-
 // PostTargetUrl409JSONResponseBody defines parameters for PostTargetUrl.
 type PostTargetUrl409JSONResponseBody struct {
 	union json.RawMessage
 }
-
-// PostTargetUrl422JSONResponseBody0 defines parameters for PostTargetUrl.
-type PostTargetUrl422JSONResponseBody0 = SubmittedDataMalformedError0x33
-
-// PostTargetUrl422JSONResponseBody1 defines parameters for PostTargetUrl.
-type PostTargetUrl422JSONResponseBody1 = DownstreamServiceFailureError0x34
-
-// PostTargetUrl422JSONResponseBody2 defines parameters for PostTargetUrl.
-type PostTargetUrl422JSONResponseBody2 = AssertionFailureError0x35
 
 // PostTargetUrl422JSONResponseBody defines parameters for PostTargetUrl.
 type PostTargetUrl422JSONResponseBody struct {
@@ -7324,25 +7058,25 @@ type PostTargetUrlFormdataRequestBody PostTargetUrlFormdataBody
 // PostTargetUrlMultipartRequestBody defines body for PostTargetUrl for multipart/form-data ContentType.
 type PostTargetUrlMultipartRequestBody PostTargetUrlMultipartBody
 
-// Getter for additional properties for AbuseAlleviationError0x2f. Returns the specified
+// Getter for additional properties for AbuseAlleviationError0x30. Returns the specified
 // element and whether it was found
-func (a AbuseAlleviationError0x2f) Get(fieldName string) (value interface{}, found bool) {
+func (a AbuseAlleviationError0x30) Get(fieldName string) (value interface{}, found bool) {
 	if a.AdditionalProperties != nil {
 		value, found = a.AdditionalProperties[fieldName]
 	}
 	return
 }
 
-// Setter for additional properties for AbuseAlleviationError0x2f
-func (a *AbuseAlleviationError0x2f) Set(fieldName string, value interface{}) {
+// Setter for additional properties for AbuseAlleviationError0x30
+func (a *AbuseAlleviationError0x30) Set(fieldName string, value interface{}) {
 	if a.AdditionalProperties == nil {
 		a.AdditionalProperties = make(map[string]interface{})
 	}
 	a.AdditionalProperties[fieldName] = value
 }
 
-// Override default JSON handling for AbuseAlleviationError0x2f to handle AdditionalProperties
-func (a *AbuseAlleviationError0x2f) UnmarshalJSON(b []byte) error {
+// Override default JSON handling for AbuseAlleviationError0x30 to handle AdditionalProperties
+func (a *AbuseAlleviationError0x30) UnmarshalJSON(b []byte) error {
 	object := make(map[string]json.RawMessage)
 	err := json.Unmarshal(b, &object)
 	if err != nil {
@@ -7395,8 +7129,8 @@ func (a *AbuseAlleviationError0x2f) UnmarshalJSON(b []byte) error {
 	return nil
 }
 
-// Override default JSON handling for AbuseAlleviationError0x2f to handle AdditionalProperties
-func (a AbuseAlleviationError0x2f) MarshalJSON() ([]byte, error) {
+// Override default JSON handling for AbuseAlleviationError0x30 to handle AdditionalProperties
+func (a AbuseAlleviationError0x30) MarshalJSON() ([]byte, error) {
 	var err error
 	object := make(map[string]json.RawMessage)
 
@@ -7431,25 +7165,25 @@ func (a AbuseAlleviationError0x2f) MarshalJSON() ([]byte, error) {
 	return json.Marshal(object)
 }
 
-// Getter for additional properties for AssertionFailureError0x35. Returns the specified
+// Getter for additional properties for AssertionFailureError0x36. Returns the specified
 // element and whether it was found
-func (a AssertionFailureError0x35) Get(fieldName string) (value interface{}, found bool) {
+func (a AssertionFailureError0x36) Get(fieldName string) (value interface{}, found bool) {
 	if a.AdditionalProperties != nil {
 		value, found = a.AdditionalProperties[fieldName]
 	}
 	return
 }
 
-// Setter for additional properties for AssertionFailureError0x35
-func (a *AssertionFailureError0x35) Set(fieldName string, value interface{}) {
+// Setter for additional properties for AssertionFailureError0x36
+func (a *AssertionFailureError0x36) Set(fieldName string, value interface{}) {
 	if a.AdditionalProperties == nil {
 		a.AdditionalProperties = make(map[string]interface{})
 	}
 	a.AdditionalProperties[fieldName] = value
 }
 
-// Override default JSON handling for AssertionFailureError0x35 to handle AdditionalProperties
-func (a *AssertionFailureError0x35) UnmarshalJSON(b []byte) error {
+// Override default JSON handling for AssertionFailureError0x36 to handle AdditionalProperties
+func (a *AssertionFailureError0x36) UnmarshalJSON(b []byte) error {
 	object := make(map[string]json.RawMessage)
 	err := json.Unmarshal(b, &object)
 	if err != nil {
@@ -7502,8 +7236,8 @@ func (a *AssertionFailureError0x35) UnmarshalJSON(b []byte) error {
 	return nil
 }
 
-// Override default JSON handling for AssertionFailureError0x35 to handle AdditionalProperties
-func (a AssertionFailureError0x35) MarshalJSON() ([]byte, error) {
+// Override default JSON handling for AssertionFailureError0x36 to handle AdditionalProperties
+func (a AssertionFailureError0x36) MarshalJSON() ([]byte, error) {
 	var err error
 	object := make(map[string]json.RawMessage)
 
@@ -7538,25 +7272,25 @@ func (a AssertionFailureError0x35) MarshalJSON() ([]byte, error) {
 	return json.Marshal(object)
 }
 
-// Getter for additional properties for AuthenticationFailedError0x2a. Returns the specified
+// Getter for additional properties for AuthenticationFailedError0x2b. Returns the specified
 // element and whether it was found
-func (a AuthenticationFailedError0x2a) Get(fieldName string) (value interface{}, found bool) {
+func (a AuthenticationFailedError0x2b) Get(fieldName string) (value interface{}, found bool) {
 	if a.AdditionalProperties != nil {
 		value, found = a.AdditionalProperties[fieldName]
 	}
 	return
 }
 
-// Setter for additional properties for AuthenticationFailedError0x2a
-func (a *AuthenticationFailedError0x2a) Set(fieldName string, value interface{}) {
+// Setter for additional properties for AuthenticationFailedError0x2b
+func (a *AuthenticationFailedError0x2b) Set(fieldName string, value interface{}) {
 	if a.AdditionalProperties == nil {
 		a.AdditionalProperties = make(map[string]interface{})
 	}
 	a.AdditionalProperties[fieldName] = value
 }
 
-// Override default JSON handling for AuthenticationFailedError0x2a to handle AdditionalProperties
-func (a *AuthenticationFailedError0x2a) UnmarshalJSON(b []byte) error {
+// Override default JSON handling for AuthenticationFailedError0x2b to handle AdditionalProperties
+func (a *AuthenticationFailedError0x2b) UnmarshalJSON(b []byte) error {
 	object := make(map[string]json.RawMessage)
 	err := json.Unmarshal(b, &object)
 	if err != nil {
@@ -7609,8 +7343,8 @@ func (a *AuthenticationFailedError0x2a) UnmarshalJSON(b []byte) error {
 	return nil
 }
 
-// Override default JSON handling for AuthenticationFailedError0x2a to handle AdditionalProperties
-func (a AuthenticationFailedError0x2a) MarshalJSON() ([]byte, error) {
+// Override default JSON handling for AuthenticationFailedError0x2b to handle AdditionalProperties
+func (a AuthenticationFailedError0x2b) MarshalJSON() ([]byte, error) {
 	var err error
 	object := make(map[string]json.RawMessage)
 
@@ -7645,25 +7379,25 @@ func (a AuthenticationFailedError0x2a) MarshalJSON() ([]byte, error) {
 	return json.Marshal(object)
 }
 
-// Getter for additional properties for AuthenticationRequiredError0x2b. Returns the specified
+// Getter for additional properties for AuthenticationRequiredError0x2c. Returns the specified
 // element and whether it was found
-func (a AuthenticationRequiredError0x2b) Get(fieldName string) (value interface{}, found bool) {
+func (a AuthenticationRequiredError0x2c) Get(fieldName string) (value interface{}, found bool) {
 	if a.AdditionalProperties != nil {
 		value, found = a.AdditionalProperties[fieldName]
 	}
 	return
 }
 
-// Setter for additional properties for AuthenticationRequiredError0x2b
-func (a *AuthenticationRequiredError0x2b) Set(fieldName string, value interface{}) {
+// Setter for additional properties for AuthenticationRequiredError0x2c
+func (a *AuthenticationRequiredError0x2c) Set(fieldName string, value interface{}) {
 	if a.AdditionalProperties == nil {
 		a.AdditionalProperties = make(map[string]interface{})
 	}
 	a.AdditionalProperties[fieldName] = value
 }
 
-// Override default JSON handling for AuthenticationRequiredError0x2b to handle AdditionalProperties
-func (a *AuthenticationRequiredError0x2b) UnmarshalJSON(b []byte) error {
+// Override default JSON handling for AuthenticationRequiredError0x2c to handle AdditionalProperties
+func (a *AuthenticationRequiredError0x2c) UnmarshalJSON(b []byte) error {
 	object := make(map[string]json.RawMessage)
 	err := json.Unmarshal(b, &object)
 	if err != nil {
@@ -7716,8 +7450,8 @@ func (a *AuthenticationRequiredError0x2b) UnmarshalJSON(b []byte) error {
 	return nil
 }
 
-// Override default JSON handling for AuthenticationRequiredError0x2b to handle AdditionalProperties
-func (a AuthenticationRequiredError0x2b) MarshalJSON() ([]byte, error) {
+// Override default JSON handling for AuthenticationRequiredError0x2c to handle AdditionalProperties
+func (a AuthenticationRequiredError0x2c) MarshalJSON() ([]byte, error) {
 	var err error
 	object := make(map[string]json.RawMessage)
 
@@ -7752,25 +7486,25 @@ func (a AuthenticationRequiredError0x2b) MarshalJSON() ([]byte, error) {
 	return json.Marshal(object)
 }
 
-// Getter for additional properties for BudgetExceededError0x31. Returns the specified
+// Getter for additional properties for BudgetExceededError0x32. Returns the specified
 // element and whether it was found
-func (a BudgetExceededError0x31) Get(fieldName string) (value interface{}, found bool) {
+func (a BudgetExceededError0x32) Get(fieldName string) (value interface{}, found bool) {
 	if a.AdditionalProperties != nil {
 		value, found = a.AdditionalProperties[fieldName]
 	}
 	return
 }
 
-// Setter for additional properties for BudgetExceededError0x31
-func (a *BudgetExceededError0x31) Set(fieldName string, value interface{}) {
+// Setter for additional properties for BudgetExceededError0x32
+func (a *BudgetExceededError0x32) Set(fieldName string, value interface{}) {
 	if a.AdditionalProperties == nil {
 		a.AdditionalProperties = make(map[string]interface{})
 	}
 	a.AdditionalProperties[fieldName] = value
 }
 
-// Override default JSON handling for BudgetExceededError0x31 to handle AdditionalProperties
-func (a *BudgetExceededError0x31) UnmarshalJSON(b []byte) error {
+// Override default JSON handling for BudgetExceededError0x32 to handle AdditionalProperties
+func (a *BudgetExceededError0x32) UnmarshalJSON(b []byte) error {
 	object := make(map[string]json.RawMessage)
 	err := json.Unmarshal(b, &object)
 	if err != nil {
@@ -7823,8 +7557,8 @@ func (a *BudgetExceededError0x31) UnmarshalJSON(b []byte) error {
 	return nil
 }
 
-// Override default JSON handling for BudgetExceededError0x31 to handle AdditionalProperties
-func (a BudgetExceededError0x31) MarshalJSON() ([]byte, error) {
+// Override default JSON handling for BudgetExceededError0x32 to handle AdditionalProperties
+func (a BudgetExceededError0x32) MarshalJSON() ([]byte, error) {
 	var err error
 	object := make(map[string]json.RawMessage)
 
@@ -7859,25 +7593,25 @@ func (a BudgetExceededError0x31) MarshalJSON() ([]byte, error) {
 	return json.Marshal(object)
 }
 
-// Getter for additional properties for DataStreamBrokenError0x29. Returns the specified
+// Getter for additional properties for DataStreamBrokenError0x2a. Returns the specified
 // element and whether it was found
-func (a DataStreamBrokenError0x29) Get(fieldName string) (value interface{}, found bool) {
+func (a DataStreamBrokenError0x2a) Get(fieldName string) (value interface{}, found bool) {
 	if a.AdditionalProperties != nil {
 		value, found = a.AdditionalProperties[fieldName]
 	}
 	return
 }
 
-// Setter for additional properties for DataStreamBrokenError0x29
-func (a *DataStreamBrokenError0x29) Set(fieldName string, value interface{}) {
+// Setter for additional properties for DataStreamBrokenError0x2a
+func (a *DataStreamBrokenError0x2a) Set(fieldName string, value interface{}) {
 	if a.AdditionalProperties == nil {
 		a.AdditionalProperties = make(map[string]interface{})
 	}
 	a.AdditionalProperties[fieldName] = value
 }
 
-// Override default JSON handling for DataStreamBrokenError0x29 to handle AdditionalProperties
-func (a *DataStreamBrokenError0x29) UnmarshalJSON(b []byte) error {
+// Override default JSON handling for DataStreamBrokenError0x2a to handle AdditionalProperties
+func (a *DataStreamBrokenError0x2a) UnmarshalJSON(b []byte) error {
 	object := make(map[string]json.RawMessage)
 	err := json.Unmarshal(b, &object)
 	if err != nil {
@@ -7930,8 +7664,8 @@ func (a *DataStreamBrokenError0x29) UnmarshalJSON(b []byte) error {
 	return nil
 }
 
-// Override default JSON handling for DataStreamBrokenError0x29 to handle AdditionalProperties
-func (a DataStreamBrokenError0x29) MarshalJSON() ([]byte, error) {
+// Override default JSON handling for DataStreamBrokenError0x2a to handle AdditionalProperties
+func (a DataStreamBrokenError0x2a) MarshalJSON() ([]byte, error) {
 	var err error
 	object := make(map[string]json.RawMessage)
 
@@ -7966,25 +7700,25 @@ func (a DataStreamBrokenError0x29) MarshalJSON() ([]byte, error) {
 	return json.Marshal(object)
 }
 
-// Getter for additional properties for DownstreamServiceError0x38. Returns the specified
+// Getter for additional properties for DownstreamServiceError0x39. Returns the specified
 // element and whether it was found
-func (a DownstreamServiceError0x38) Get(fieldName string) (value interface{}, found bool) {
+func (a DownstreamServiceError0x39) Get(fieldName string) (value interface{}, found bool) {
 	if a.AdditionalProperties != nil {
 		value, found = a.AdditionalProperties[fieldName]
 	}
 	return
 }
 
-// Setter for additional properties for DownstreamServiceError0x38
-func (a *DownstreamServiceError0x38) Set(fieldName string, value interface{}) {
+// Setter for additional properties for DownstreamServiceError0x39
+func (a *DownstreamServiceError0x39) Set(fieldName string, value interface{}) {
 	if a.AdditionalProperties == nil {
 		a.AdditionalProperties = make(map[string]interface{})
 	}
 	a.AdditionalProperties[fieldName] = value
 }
 
-// Override default JSON handling for DownstreamServiceError0x38 to handle AdditionalProperties
-func (a *DownstreamServiceError0x38) UnmarshalJSON(b []byte) error {
+// Override default JSON handling for DownstreamServiceError0x39 to handle AdditionalProperties
+func (a *DownstreamServiceError0x39) UnmarshalJSON(b []byte) error {
 	object := make(map[string]json.RawMessage)
 	err := json.Unmarshal(b, &object)
 	if err != nil {
@@ -8037,8 +7771,8 @@ func (a *DownstreamServiceError0x38) UnmarshalJSON(b []byte) error {
 	return nil
 }
 
-// Override default JSON handling for DownstreamServiceError0x38 to handle AdditionalProperties
-func (a DownstreamServiceError0x38) MarshalJSON() ([]byte, error) {
+// Override default JSON handling for DownstreamServiceError0x39 to handle AdditionalProperties
+func (a DownstreamServiceError0x39) MarshalJSON() ([]byte, error) {
 	var err error
 	object := make(map[string]json.RawMessage)
 
@@ -8073,25 +7807,25 @@ func (a DownstreamServiceError0x38) MarshalJSON() ([]byte, error) {
 	return json.Marshal(object)
 }
 
-// Getter for additional properties for DownstreamServiceFailureError0x34. Returns the specified
+// Getter for additional properties for DownstreamServiceFailureError0x35. Returns the specified
 // element and whether it was found
-func (a DownstreamServiceFailureError0x34) Get(fieldName string) (value interface{}, found bool) {
+func (a DownstreamServiceFailureError0x35) Get(fieldName string) (value interface{}, found bool) {
 	if a.AdditionalProperties != nil {
 		value, found = a.AdditionalProperties[fieldName]
 	}
 	return
 }
 
-// Setter for additional properties for DownstreamServiceFailureError0x34
-func (a *DownstreamServiceFailureError0x34) Set(fieldName string, value interface{}) {
+// Setter for additional properties for DownstreamServiceFailureError0x35
+func (a *DownstreamServiceFailureError0x35) Set(fieldName string, value interface{}) {
 	if a.AdditionalProperties == nil {
 		a.AdditionalProperties = make(map[string]interface{})
 	}
 	a.AdditionalProperties[fieldName] = value
 }
 
-// Override default JSON handling for DownstreamServiceFailureError0x34 to handle AdditionalProperties
-func (a *DownstreamServiceFailureError0x34) UnmarshalJSON(b []byte) error {
+// Override default JSON handling for DownstreamServiceFailureError0x35 to handle AdditionalProperties
+func (a *DownstreamServiceFailureError0x35) UnmarshalJSON(b []byte) error {
 	object := make(map[string]json.RawMessage)
 	err := json.Unmarshal(b, &object)
 	if err != nil {
@@ -8144,8 +7878,8 @@ func (a *DownstreamServiceFailureError0x34) UnmarshalJSON(b []byte) error {
 	return nil
 }
 
-// Override default JSON handling for DownstreamServiceFailureError0x34 to handle AdditionalProperties
-func (a DownstreamServiceFailureError0x34) MarshalJSON() ([]byte, error) {
+// Override default JSON handling for DownstreamServiceFailureError0x35 to handle AdditionalProperties
+func (a DownstreamServiceFailureError0x35) MarshalJSON() ([]byte, error) {
 	var err error
 	object := make(map[string]json.RawMessage)
 
@@ -8180,25 +7914,25 @@ func (a DownstreamServiceFailureError0x34) MarshalJSON() ([]byte, error) {
 	return json.Marshal(object)
 }
 
-// Getter for additional properties for HarmfulContentError0x37. Returns the specified
+// Getter for additional properties for HarmfulContentError0x38. Returns the specified
 // element and whether it was found
-func (a HarmfulContentError0x37) Get(fieldName string) (value interface{}, found bool) {
+func (a HarmfulContentError0x38) Get(fieldName string) (value interface{}, found bool) {
 	if a.AdditionalProperties != nil {
 		value, found = a.AdditionalProperties[fieldName]
 	}
 	return
 }
 
-// Setter for additional properties for HarmfulContentError0x37
-func (a *HarmfulContentError0x37) Set(fieldName string, value interface{}) {
+// Setter for additional properties for HarmfulContentError0x38
+func (a *HarmfulContentError0x38) Set(fieldName string, value interface{}) {
 	if a.AdditionalProperties == nil {
 		a.AdditionalProperties = make(map[string]interface{})
 	}
 	a.AdditionalProperties[fieldName] = value
 }
 
-// Override default JSON handling for HarmfulContentError0x37 to handle AdditionalProperties
-func (a *HarmfulContentError0x37) UnmarshalJSON(b []byte) error {
+// Override default JSON handling for HarmfulContentError0x38 to handle AdditionalProperties
+func (a *HarmfulContentError0x38) UnmarshalJSON(b []byte) error {
 	object := make(map[string]json.RawMessage)
 	err := json.Unmarshal(b, &object)
 	if err != nil {
@@ -8251,8 +7985,8 @@ func (a *HarmfulContentError0x37) UnmarshalJSON(b []byte) error {
 	return nil
 }
 
-// Override default JSON handling for HarmfulContentError0x37 to handle AdditionalProperties
-func (a HarmfulContentError0x37) MarshalJSON() ([]byte, error) {
+// Override default JSON handling for HarmfulContentError0x38 to handle AdditionalProperties
+func (a HarmfulContentError0x38) MarshalJSON() ([]byte, error) {
 	var err error
 	object := make(map[string]json.RawMessage)
 
@@ -8287,25 +8021,25 @@ func (a HarmfulContentError0x37) MarshalJSON() ([]byte, error) {
 	return json.Marshal(object)
 }
 
-// Getter for additional properties for InsufficientBalanceError0x2d. Returns the specified
+// Getter for additional properties for InsufficientBalanceError0x2e. Returns the specified
 // element and whether it was found
-func (a InsufficientBalanceError0x2d) Get(fieldName string) (value interface{}, found bool) {
+func (a InsufficientBalanceError0x2e) Get(fieldName string) (value interface{}, found bool) {
 	if a.AdditionalProperties != nil {
 		value, found = a.AdditionalProperties[fieldName]
 	}
 	return
 }
 
-// Setter for additional properties for InsufficientBalanceError0x2d
-func (a *InsufficientBalanceError0x2d) Set(fieldName string, value interface{}) {
+// Setter for additional properties for InsufficientBalanceError0x2e
+func (a *InsufficientBalanceError0x2e) Set(fieldName string, value interface{}) {
 	if a.AdditionalProperties == nil {
 		a.AdditionalProperties = make(map[string]interface{})
 	}
 	a.AdditionalProperties[fieldName] = value
 }
 
-// Override default JSON handling for InsufficientBalanceError0x2d to handle AdditionalProperties
-func (a *InsufficientBalanceError0x2d) UnmarshalJSON(b []byte) error {
+// Override default JSON handling for InsufficientBalanceError0x2e to handle AdditionalProperties
+func (a *InsufficientBalanceError0x2e) UnmarshalJSON(b []byte) error {
 	object := make(map[string]json.RawMessage)
 	err := json.Unmarshal(b, &object)
 	if err != nil {
@@ -8358,8 +8092,8 @@ func (a *InsufficientBalanceError0x2d) UnmarshalJSON(b []byte) error {
 	return nil
 }
 
-// Override default JSON handling for InsufficientBalanceError0x2d to handle AdditionalProperties
-func (a InsufficientBalanceError0x2d) MarshalJSON() ([]byte, error) {
+// Override default JSON handling for InsufficientBalanceError0x2e to handle AdditionalProperties
+func (a InsufficientBalanceError0x2e) MarshalJSON() ([]byte, error) {
 	var err error
 	object := make(map[string]json.RawMessage)
 
@@ -8394,25 +8128,25 @@ func (a InsufficientBalanceError0x2d) MarshalJSON() ([]byte, error) {
 	return json.Marshal(object)
 }
 
-// Getter for additional properties for OperationNotAllowedError0x2e. Returns the specified
+// Getter for additional properties for OperationNotAllowedError0x2f. Returns the specified
 // element and whether it was found
-func (a OperationNotAllowedError0x2e) Get(fieldName string) (value interface{}, found bool) {
+func (a OperationNotAllowedError0x2f) Get(fieldName string) (value interface{}, found bool) {
 	if a.AdditionalProperties != nil {
 		value, found = a.AdditionalProperties[fieldName]
 	}
 	return
 }
 
-// Setter for additional properties for OperationNotAllowedError0x2e
-func (a *OperationNotAllowedError0x2e) Set(fieldName string, value interface{}) {
+// Setter for additional properties for OperationNotAllowedError0x2f
+func (a *OperationNotAllowedError0x2f) Set(fieldName string, value interface{}) {
 	if a.AdditionalProperties == nil {
 		a.AdditionalProperties = make(map[string]interface{})
 	}
 	a.AdditionalProperties[fieldName] = value
 }
 
-// Override default JSON handling for OperationNotAllowedError0x2e to handle AdditionalProperties
-func (a *OperationNotAllowedError0x2e) UnmarshalJSON(b []byte) error {
+// Override default JSON handling for OperationNotAllowedError0x2f to handle AdditionalProperties
+func (a *OperationNotAllowedError0x2f) UnmarshalJSON(b []byte) error {
 	object := make(map[string]json.RawMessage)
 	err := json.Unmarshal(b, &object)
 	if err != nil {
@@ -8465,8 +8199,8 @@ func (a *OperationNotAllowedError0x2e) UnmarshalJSON(b []byte) error {
 	return nil
 }
 
-// Override default JSON handling for OperationNotAllowedError0x2e to handle AdditionalProperties
-func (a OperationNotAllowedError0x2e) MarshalJSON() ([]byte, error) {
+// Override default JSON handling for OperationNotAllowedError0x2f to handle AdditionalProperties
+func (a OperationNotAllowedError0x2f) MarshalJSON() ([]byte, error) {
 	var err error
 	object := make(map[string]json.RawMessage)
 
@@ -8501,25 +8235,25 @@ func (a OperationNotAllowedError0x2e) MarshalJSON() ([]byte, error) {
 	return json.Marshal(object)
 }
 
-// Getter for additional properties for ParamValidationError0x28. Returns the specified
+// Getter for additional properties for ParamValidationError0x29. Returns the specified
 // element and whether it was found
-func (a ParamValidationError0x28) Get(fieldName string) (value interface{}, found bool) {
+func (a ParamValidationError0x29) Get(fieldName string) (value interface{}, found bool) {
 	if a.AdditionalProperties != nil {
 		value, found = a.AdditionalProperties[fieldName]
 	}
 	return
 }
 
-// Setter for additional properties for ParamValidationError0x28
-func (a *ParamValidationError0x28) Set(fieldName string, value interface{}) {
+// Setter for additional properties for ParamValidationError0x29
+func (a *ParamValidationError0x29) Set(fieldName string, value interface{}) {
 	if a.AdditionalProperties == nil {
 		a.AdditionalProperties = make(map[string]interface{})
 	}
 	a.AdditionalProperties[fieldName] = value
 }
 
-// Override default JSON handling for ParamValidationError0x28 to handle AdditionalProperties
-func (a *ParamValidationError0x28) UnmarshalJSON(b []byte) error {
+// Override default JSON handling for ParamValidationError0x29 to handle AdditionalProperties
+func (a *ParamValidationError0x29) UnmarshalJSON(b []byte) error {
 	object := make(map[string]json.RawMessage)
 	err := json.Unmarshal(b, &object)
 	if err != nil {
@@ -8572,8 +8306,8 @@ func (a *ParamValidationError0x28) UnmarshalJSON(b []byte) error {
 	return nil
 }
 
-// Override default JSON handling for ParamValidationError0x28 to handle AdditionalProperties
-func (a ParamValidationError0x28) MarshalJSON() ([]byte, error) {
+// Override default JSON handling for ParamValidationError0x29 to handle AdditionalProperties
+func (a ParamValidationError0x29) MarshalJSON() ([]byte, error) {
 	var err error
 	object := make(map[string]json.RawMessage)
 
@@ -8608,25 +8342,25 @@ func (a ParamValidationError0x28) MarshalJSON() ([]byte, error) {
 	return json.Marshal(object)
 }
 
-// Getter for additional properties for RateLimitTriggeredError0x36. Returns the specified
+// Getter for additional properties for RateLimitTriggeredError0x37. Returns the specified
 // element and whether it was found
-func (a RateLimitTriggeredError0x36) Get(fieldName string) (value interface{}, found bool) {
+func (a RateLimitTriggeredError0x37) Get(fieldName string) (value interface{}, found bool) {
 	if a.AdditionalProperties != nil {
 		value, found = a.AdditionalProperties[fieldName]
 	}
 	return
 }
 
-// Setter for additional properties for RateLimitTriggeredError0x36
-func (a *RateLimitTriggeredError0x36) Set(fieldName string, value interface{}) {
+// Setter for additional properties for RateLimitTriggeredError0x37
+func (a *RateLimitTriggeredError0x37) Set(fieldName string, value interface{}) {
 	if a.AdditionalProperties == nil {
 		a.AdditionalProperties = make(map[string]interface{})
 	}
 	a.AdditionalProperties[fieldName] = value
 }
 
-// Override default JSON handling for RateLimitTriggeredError0x36 to handle AdditionalProperties
-func (a *RateLimitTriggeredError0x36) UnmarshalJSON(b []byte) error {
+// Override default JSON handling for RateLimitTriggeredError0x37 to handle AdditionalProperties
+func (a *RateLimitTriggeredError0x37) UnmarshalJSON(b []byte) error {
 	object := make(map[string]json.RawMessage)
 	err := json.Unmarshal(b, &object)
 	if err != nil {
@@ -8695,8 +8429,8 @@ func (a *RateLimitTriggeredError0x36) UnmarshalJSON(b []byte) error {
 	return nil
 }
 
-// Override default JSON handling for RateLimitTriggeredError0x36 to handle AdditionalProperties
-func (a RateLimitTriggeredError0x36) MarshalJSON() ([]byte, error) {
+// Override default JSON handling for RateLimitTriggeredError0x37 to handle AdditionalProperties
+func (a RateLimitTriggeredError0x37) MarshalJSON() ([]byte, error) {
 	var err error
 	object := make(map[string]json.RawMessage)
 
@@ -8745,25 +8479,25 @@ func (a RateLimitTriggeredError0x36) MarshalJSON() ([]byte, error) {
 	return json.Marshal(object)
 }
 
-// Getter for additional properties for ResourceNotFoundError0x44. Returns the specified
+// Getter for additional properties for ResourceNotFoundError0x45. Returns the specified
 // element and whether it was found
-func (a ResourceNotFoundError0x44) Get(fieldName string) (value interface{}, found bool) {
+func (a ResourceNotFoundError0x45) Get(fieldName string) (value interface{}, found bool) {
 	if a.AdditionalProperties != nil {
 		value, found = a.AdditionalProperties[fieldName]
 	}
 	return
 }
 
-// Setter for additional properties for ResourceNotFoundError0x44
-func (a *ResourceNotFoundError0x44) Set(fieldName string, value interface{}) {
+// Setter for additional properties for ResourceNotFoundError0x45
+func (a *ResourceNotFoundError0x45) Set(fieldName string, value interface{}) {
 	if a.AdditionalProperties == nil {
 		a.AdditionalProperties = make(map[string]interface{})
 	}
 	a.AdditionalProperties[fieldName] = value
 }
 
-// Override default JSON handling for ResourceNotFoundError0x44 to handle AdditionalProperties
-func (a *ResourceNotFoundError0x44) UnmarshalJSON(b []byte) error {
+// Override default JSON handling for ResourceNotFoundError0x45 to handle AdditionalProperties
+func (a *ResourceNotFoundError0x45) UnmarshalJSON(b []byte) error {
 	object := make(map[string]json.RawMessage)
 	err := json.Unmarshal(b, &object)
 	if err != nil {
@@ -8816,8 +8550,8 @@ func (a *ResourceNotFoundError0x44) UnmarshalJSON(b []byte) error {
 	return nil
 }
 
-// Override default JSON handling for ResourceNotFoundError0x44 to handle AdditionalProperties
-func (a ResourceNotFoundError0x44) MarshalJSON() ([]byte, error) {
+// Override default JSON handling for ResourceNotFoundError0x45 to handle AdditionalProperties
+func (a ResourceNotFoundError0x45) MarshalJSON() ([]byte, error) {
 	var err error
 	object := make(map[string]json.RawMessage)
 
@@ -8852,25 +8586,25 @@ func (a ResourceNotFoundError0x44) MarshalJSON() ([]byte, error) {
 	return json.Marshal(object)
 }
 
-// Getter for additional properties for ResourcePolicyDenyError0x30. Returns the specified
+// Getter for additional properties for ResourcePolicyDenyError0x31. Returns the specified
 // element and whether it was found
-func (a ResourcePolicyDenyError0x30) Get(fieldName string) (value interface{}, found bool) {
+func (a ResourcePolicyDenyError0x31) Get(fieldName string) (value interface{}, found bool) {
 	if a.AdditionalProperties != nil {
 		value, found = a.AdditionalProperties[fieldName]
 	}
 	return
 }
 
-// Setter for additional properties for ResourcePolicyDenyError0x30
-func (a *ResourcePolicyDenyError0x30) Set(fieldName string, value interface{}) {
+// Setter for additional properties for ResourcePolicyDenyError0x31
+func (a *ResourcePolicyDenyError0x31) Set(fieldName string, value interface{}) {
 	if a.AdditionalProperties == nil {
 		a.AdditionalProperties = make(map[string]interface{})
 	}
 	a.AdditionalProperties[fieldName] = value
 }
 
-// Override default JSON handling for ResourcePolicyDenyError0x30 to handle AdditionalProperties
-func (a *ResourcePolicyDenyError0x30) UnmarshalJSON(b []byte) error {
+// Override default JSON handling for ResourcePolicyDenyError0x31 to handle AdditionalProperties
+func (a *ResourcePolicyDenyError0x31) UnmarshalJSON(b []byte) error {
 	object := make(map[string]json.RawMessage)
 	err := json.Unmarshal(b, &object)
 	if err != nil {
@@ -8923,8 +8657,8 @@ func (a *ResourcePolicyDenyError0x30) UnmarshalJSON(b []byte) error {
 	return nil
 }
 
-// Override default JSON handling for ResourcePolicyDenyError0x30 to handle AdditionalProperties
-func (a ResourcePolicyDenyError0x30) MarshalJSON() ([]byte, error) {
+// Override default JSON handling for ResourcePolicyDenyError0x31 to handle AdditionalProperties
+func (a ResourcePolicyDenyError0x31) MarshalJSON() ([]byte, error) {
 	var err error
 	object := make(map[string]json.RawMessage)
 
@@ -8959,25 +8693,25 @@ func (a ResourcePolicyDenyError0x30) MarshalJSON() ([]byte, error) {
 	return json.Marshal(object)
 }
 
-// Getter for additional properties for ServiceNodeResourceDrainError0x39. Returns the specified
+// Getter for additional properties for ServiceNodeResourceDrainError0x3a. Returns the specified
 // element and whether it was found
-func (a ServiceNodeResourceDrainError0x39) Get(fieldName string) (value interface{}, found bool) {
+func (a ServiceNodeResourceDrainError0x3a) Get(fieldName string) (value interface{}, found bool) {
 	if a.AdditionalProperties != nil {
 		value, found = a.AdditionalProperties[fieldName]
 	}
 	return
 }
 
-// Setter for additional properties for ServiceNodeResourceDrainError0x39
-func (a *ServiceNodeResourceDrainError0x39) Set(fieldName string, value interface{}) {
+// Setter for additional properties for ServiceNodeResourceDrainError0x3a
+func (a *ServiceNodeResourceDrainError0x3a) Set(fieldName string, value interface{}) {
 	if a.AdditionalProperties == nil {
 		a.AdditionalProperties = make(map[string]interface{})
 	}
 	a.AdditionalProperties[fieldName] = value
 }
 
-// Override default JSON handling for ServiceNodeResourceDrainError0x39 to handle AdditionalProperties
-func (a *ServiceNodeResourceDrainError0x39) UnmarshalJSON(b []byte) error {
+// Override default JSON handling for ServiceNodeResourceDrainError0x3a to handle AdditionalProperties
+func (a *ServiceNodeResourceDrainError0x3a) UnmarshalJSON(b []byte) error {
 	object := make(map[string]json.RawMessage)
 	err := json.Unmarshal(b, &object)
 	if err != nil {
@@ -9030,8 +8764,8 @@ func (a *ServiceNodeResourceDrainError0x39) UnmarshalJSON(b []byte) error {
 	return nil
 }
 
-// Override default JSON handling for ServiceNodeResourceDrainError0x39 to handle AdditionalProperties
-func (a ServiceNodeResourceDrainError0x39) MarshalJSON() ([]byte, error) {
+// Override default JSON handling for ServiceNodeResourceDrainError0x3a to handle AdditionalProperties
+func (a ServiceNodeResourceDrainError0x3a) MarshalJSON() ([]byte, error) {
 	var err error
 	object := make(map[string]json.RawMessage)
 
@@ -9066,25 +8800,25 @@ func (a ServiceNodeResourceDrainError0x39) MarshalJSON() ([]byte, error) {
 	return json.Marshal(object)
 }
 
-// Getter for additional properties for SubmittedDataMalformedError0x33. Returns the specified
+// Getter for additional properties for SubmittedDataMalformedError0x34. Returns the specified
 // element and whether it was found
-func (a SubmittedDataMalformedError0x33) Get(fieldName string) (value interface{}, found bool) {
+func (a SubmittedDataMalformedError0x34) Get(fieldName string) (value interface{}, found bool) {
 	if a.AdditionalProperties != nil {
 		value, found = a.AdditionalProperties[fieldName]
 	}
 	return
 }
 
-// Setter for additional properties for SubmittedDataMalformedError0x33
-func (a *SubmittedDataMalformedError0x33) Set(fieldName string, value interface{}) {
+// Setter for additional properties for SubmittedDataMalformedError0x34
+func (a *SubmittedDataMalformedError0x34) Set(fieldName string, value interface{}) {
 	if a.AdditionalProperties == nil {
 		a.AdditionalProperties = make(map[string]interface{})
 	}
 	a.AdditionalProperties[fieldName] = value
 }
 
-// Override default JSON handling for SubmittedDataMalformedError0x33 to handle AdditionalProperties
-func (a *SubmittedDataMalformedError0x33) UnmarshalJSON(b []byte) error {
+// Override default JSON handling for SubmittedDataMalformedError0x34 to handle AdditionalProperties
+func (a *SubmittedDataMalformedError0x34) UnmarshalJSON(b []byte) error {
 	object := make(map[string]json.RawMessage)
 	err := json.Unmarshal(b, &object)
 	if err != nil {
@@ -9137,8 +8871,8 @@ func (a *SubmittedDataMalformedError0x33) UnmarshalJSON(b []byte) error {
 	return nil
 }
 
-// Override default JSON handling for SubmittedDataMalformedError0x33 to handle AdditionalProperties
-func (a SubmittedDataMalformedError0x33) MarshalJSON() ([]byte, error) {
+// Override default JSON handling for SubmittedDataMalformedError0x34 to handle AdditionalProperties
+func (a SubmittedDataMalformedError0x34) MarshalJSON() ([]byte, error) {
 	var err error
 	object := make(map[string]json.RawMessage)
 
@@ -9173,25 +8907,25 @@ func (a SubmittedDataMalformedError0x33) MarshalJSON() ([]byte, error) {
 	return json.Marshal(object)
 }
 
-// Getter for additional properties for TargetFileTooLargeError0x32. Returns the specified
+// Getter for additional properties for TargetFileTooLargeError0x33. Returns the specified
 // element and whether it was found
-func (a TargetFileTooLargeError0x32) Get(fieldName string) (value interface{}, found bool) {
+func (a TargetFileTooLargeError0x33) Get(fieldName string) (value interface{}, found bool) {
 	if a.AdditionalProperties != nil {
 		value, found = a.AdditionalProperties[fieldName]
 	}
 	return
 }
 
-// Setter for additional properties for TargetFileTooLargeError0x32
-func (a *TargetFileTooLargeError0x32) Set(fieldName string, value interface{}) {
+// Setter for additional properties for TargetFileTooLargeError0x33
+func (a *TargetFileTooLargeError0x33) Set(fieldName string, value interface{}) {
 	if a.AdditionalProperties == nil {
 		a.AdditionalProperties = make(map[string]interface{})
 	}
 	a.AdditionalProperties[fieldName] = value
 }
 
-// Override default JSON handling for TargetFileTooLargeError0x32 to handle AdditionalProperties
-func (a *TargetFileTooLargeError0x32) UnmarshalJSON(b []byte) error {
+// Override default JSON handling for TargetFileTooLargeError0x33 to handle AdditionalProperties
+func (a *TargetFileTooLargeError0x33) UnmarshalJSON(b []byte) error {
 	object := make(map[string]json.RawMessage)
 	err := json.Unmarshal(b, &object)
 	if err != nil {
@@ -9244,8 +8978,8 @@ func (a *TargetFileTooLargeError0x32) UnmarshalJSON(b []byte) error {
 	return nil
 }
 
-// Override default JSON handling for TargetFileTooLargeError0x32 to handle AdditionalProperties
-func (a TargetFileTooLargeError0x32) MarshalJSON() ([]byte, error) {
+// Override default JSON handling for TargetFileTooLargeError0x33 to handle AdditionalProperties
+func (a TargetFileTooLargeError0x33) MarshalJSON() ([]byte, error) {
 	var err error
 	object := make(map[string]json.RawMessage)
 
@@ -9280,25 +9014,25 @@ func (a TargetFileTooLargeError0x32) MarshalJSON() ([]byte, error) {
 	return json.Marshal(object)
 }
 
-// Getter for additional properties for TierFeatureConstraintError0x2c. Returns the specified
+// Getter for additional properties for TierFeatureConstraintError0x2d. Returns the specified
 // element and whether it was found
-func (a TierFeatureConstraintError0x2c) Get(fieldName string) (value interface{}, found bool) {
+func (a TierFeatureConstraintError0x2d) Get(fieldName string) (value interface{}, found bool) {
 	if a.AdditionalProperties != nil {
 		value, found = a.AdditionalProperties[fieldName]
 	}
 	return
 }
 
-// Setter for additional properties for TierFeatureConstraintError0x2c
-func (a *TierFeatureConstraintError0x2c) Set(fieldName string, value interface{}) {
+// Setter for additional properties for TierFeatureConstraintError0x2d
+func (a *TierFeatureConstraintError0x2d) Set(fieldName string, value interface{}) {
 	if a.AdditionalProperties == nil {
 		a.AdditionalProperties = make(map[string]interface{})
 	}
 	a.AdditionalProperties[fieldName] = value
 }
 
-// Override default JSON handling for TierFeatureConstraintError0x2c to handle AdditionalProperties
-func (a *TierFeatureConstraintError0x2c) UnmarshalJSON(b []byte) error {
+// Override default JSON handling for TierFeatureConstraintError0x2d to handle AdditionalProperties
+func (a *TierFeatureConstraintError0x2d) UnmarshalJSON(b []byte) error {
 	object := make(map[string]json.RawMessage)
 	err := json.Unmarshal(b, &object)
 	if err != nil {
@@ -9351,8 +9085,8 @@ func (a *TierFeatureConstraintError0x2c) UnmarshalJSON(b []byte) error {
 	return nil
 }
 
-// Override default JSON handling for TierFeatureConstraintError0x2c to handle AdditionalProperties
-func (a TierFeatureConstraintError0x2c) MarshalJSON() ([]byte, error) {
+// Override default JSON handling for TierFeatureConstraintError0x2d to handle AdditionalProperties
+func (a TierFeatureConstraintError0x2d) MarshalJSON() ([]byte, error) {
 	var err error
 	object := make(map[string]json.RawMessage)
 
@@ -9387,22 +9121,22 @@ func (a TierFeatureConstraintError0x2c) MarshalJSON() ([]byte, error) {
 	return json.Marshal(object)
 }
 
-// AsCookie0x17SameSite0 returns the union data inside the Cookie0x17_SameSite as a Cookie0x17SameSite0
-func (t Cookie0x17_SameSite) AsCookie0x17SameSite0() (Cookie0x17SameSite0, error) {
-	var body Cookie0x17SameSite0
+// AsEnum0x17 returns the union data inside the Cookie0x18_SameSite as a Enum0x17
+func (t Cookie0x18_SameSite) AsEnum0x17() (Enum0x17, error) {
+	var body Enum0x17
 	err := json.Unmarshal(t.union, &body)
 	return body, err
 }
 
-// FromCookie0x17SameSite0 overwrites any union data inside the Cookie0x17_SameSite as the provided Cookie0x17SameSite0
-func (t *Cookie0x17_SameSite) FromCookie0x17SameSite0(v Cookie0x17SameSite0) error {
+// FromEnum0x17 overwrites any union data inside the Cookie0x18_SameSite as the provided Enum0x17
+func (t *Cookie0x18_SameSite) FromEnum0x17(v Enum0x17) error {
 	b, err := json.Marshal(v)
 	t.union = b
 	return err
 }
 
-// MergeCookie0x17SameSite0 performs a merge with any union data inside the Cookie0x17_SameSite, using the provided Cookie0x17SameSite0
-func (t *Cookie0x17_SameSite) MergeCookie0x17SameSite0(v Cookie0x17SameSite0) error {
+// MergeEnum0x17 performs a merge with any union data inside the Cookie0x18_SameSite, using the provided Enum0x17
+func (t *Cookie0x18_SameSite) MergeEnum0x17(v Enum0x17) error {
 	b, err := json.Marshal(v)
 	if err != nil {
 		return err
@@ -9413,22 +9147,22 @@ func (t *Cookie0x17_SameSite) MergeCookie0x17SameSite0(v Cookie0x17SameSite0) er
 	return err
 }
 
-// AsCookie0x17SameSite1 returns the union data inside the Cookie0x17_SameSite as a Cookie0x17SameSite1
-func (t Cookie0x17_SameSite) AsCookie0x17SameSite1() (Cookie0x17SameSite1, error) {
-	var body Cookie0x17SameSite1
+// AsCookie0x18SameSite1 returns the union data inside the Cookie0x18_SameSite as a Cookie0x18SameSite1
+func (t Cookie0x18_SameSite) AsCookie0x18SameSite1() (Cookie0x18SameSite1, error) {
+	var body Cookie0x18SameSite1
 	err := json.Unmarshal(t.union, &body)
 	return body, err
 }
 
-// FromCookie0x17SameSite1 overwrites any union data inside the Cookie0x17_SameSite as the provided Cookie0x17SameSite1
-func (t *Cookie0x17_SameSite) FromCookie0x17SameSite1(v Cookie0x17SameSite1) error {
+// FromCookie0x18SameSite1 overwrites any union data inside the Cookie0x18_SameSite as the provided Cookie0x18SameSite1
+func (t *Cookie0x18_SameSite) FromCookie0x18SameSite1(v Cookie0x18SameSite1) error {
 	b, err := json.Marshal(v)
 	t.union = b
 	return err
 }
 
-// MergeCookie0x17SameSite1 performs a merge with any union data inside the Cookie0x17_SameSite, using the provided Cookie0x17SameSite1
-func (t *Cookie0x17_SameSite) MergeCookie0x17SameSite1(v Cookie0x17SameSite1) error {
+// MergeCookie0x18SameSite1 performs a merge with any union data inside the Cookie0x18_SameSite, using the provided Cookie0x18SameSite1
+func (t *Cookie0x18_SameSite) MergeCookie0x18SameSite1(v Cookie0x18SameSite1) error {
 	b, err := json.Marshal(v)
 	if err != nil {
 		return err
@@ -9439,32 +9173,32 @@ func (t *Cookie0x17_SameSite) MergeCookie0x17SameSite1(v Cookie0x17SameSite1) er
 	return err
 }
 
-func (t Cookie0x17_SameSite) MarshalJSON() ([]byte, error) {
+func (t Cookie0x18_SameSite) MarshalJSON() ([]byte, error) {
 	b, err := t.union.MarshalJSON()
 	return b, err
 }
 
-func (t *Cookie0x17_SameSite) UnmarshalJSON(b []byte) error {
+func (t *Cookie0x18_SameSite) UnmarshalJSON(b []byte) error {
 	err := t.union.UnmarshalJSON(b)
 	return err
 }
 
-// AsCrawlerOptions0x27Engine0 returns the union data inside the CrawlerOptions0x27_Engine as a CrawlerOptions0x27Engine0
-func (t CrawlerOptions0x27_Engine) AsCrawlerOptions0x27Engine0() (CrawlerOptions0x27Engine0, error) {
-	var body CrawlerOptions0x27Engine0
+// AsEnum0x1c returns the union data inside the CrawlerOptions0x28_Engine as a Enum0x1c
+func (t CrawlerOptions0x28_Engine) AsEnum0x1c() (Enum0x1c, error) {
+	var body Enum0x1c
 	err := json.Unmarshal(t.union, &body)
 	return body, err
 }
 
-// FromCrawlerOptions0x27Engine0 overwrites any union data inside the CrawlerOptions0x27_Engine as the provided CrawlerOptions0x27Engine0
-func (t *CrawlerOptions0x27_Engine) FromCrawlerOptions0x27Engine0(v CrawlerOptions0x27Engine0) error {
+// FromEnum0x1c overwrites any union data inside the CrawlerOptions0x28_Engine as the provided Enum0x1c
+func (t *CrawlerOptions0x28_Engine) FromEnum0x1c(v Enum0x1c) error {
 	b, err := json.Marshal(v)
 	t.union = b
 	return err
 }
 
-// MergeCrawlerOptions0x27Engine0 performs a merge with any union data inside the CrawlerOptions0x27_Engine, using the provided CrawlerOptions0x27Engine0
-func (t *CrawlerOptions0x27_Engine) MergeCrawlerOptions0x27Engine0(v CrawlerOptions0x27Engine0) error {
+// MergeEnum0x1c performs a merge with any union data inside the CrawlerOptions0x28_Engine, using the provided Enum0x1c
+func (t *CrawlerOptions0x28_Engine) MergeEnum0x1c(v Enum0x1c) error {
 	b, err := json.Marshal(v)
 	if err != nil {
 		return err
@@ -9475,22 +9209,22 @@ func (t *CrawlerOptions0x27_Engine) MergeCrawlerOptions0x27Engine0(v CrawlerOpti
 	return err
 }
 
-// AsCrawlerOptions0x27Engine1 returns the union data inside the CrawlerOptions0x27_Engine as a CrawlerOptions0x27Engine1
-func (t CrawlerOptions0x27_Engine) AsCrawlerOptions0x27Engine1() (CrawlerOptions0x27Engine1, error) {
-	var body CrawlerOptions0x27Engine1
+// AsCrawlerOptions0x28Engine1 returns the union data inside the CrawlerOptions0x28_Engine as a CrawlerOptions0x28Engine1
+func (t CrawlerOptions0x28_Engine) AsCrawlerOptions0x28Engine1() (CrawlerOptions0x28Engine1, error) {
+	var body CrawlerOptions0x28Engine1
 	err := json.Unmarshal(t.union, &body)
 	return body, err
 }
 
-// FromCrawlerOptions0x27Engine1 overwrites any union data inside the CrawlerOptions0x27_Engine as the provided CrawlerOptions0x27Engine1
-func (t *CrawlerOptions0x27_Engine) FromCrawlerOptions0x27Engine1(v CrawlerOptions0x27Engine1) error {
+// FromCrawlerOptions0x28Engine1 overwrites any union data inside the CrawlerOptions0x28_Engine as the provided CrawlerOptions0x28Engine1
+func (t *CrawlerOptions0x28_Engine) FromCrawlerOptions0x28Engine1(v CrawlerOptions0x28Engine1) error {
 	b, err := json.Marshal(v)
 	t.union = b
 	return err
 }
 
-// MergeCrawlerOptions0x27Engine1 performs a merge with any union data inside the CrawlerOptions0x27_Engine, using the provided CrawlerOptions0x27Engine1
-func (t *CrawlerOptions0x27_Engine) MergeCrawlerOptions0x27Engine1(v CrawlerOptions0x27Engine1) error {
+// MergeCrawlerOptions0x28Engine1 performs a merge with any union data inside the CrawlerOptions0x28_Engine, using the provided CrawlerOptions0x28Engine1
+func (t *CrawlerOptions0x28_Engine) MergeCrawlerOptions0x28Engine1(v CrawlerOptions0x28Engine1) error {
 	b, err := json.Marshal(v)
 	if err != nil {
 		return err
@@ -9501,32 +9235,32 @@ func (t *CrawlerOptions0x27_Engine) MergeCrawlerOptions0x27Engine1(v CrawlerOpti
 	return err
 }
 
-func (t CrawlerOptions0x27_Engine) MarshalJSON() ([]byte, error) {
+func (t CrawlerOptions0x28_Engine) MarshalJSON() ([]byte, error) {
 	b, err := t.union.MarshalJSON()
 	return b, err
 }
 
-func (t *CrawlerOptions0x27_Engine) UnmarshalJSON(b []byte) error {
+func (t *CrawlerOptions0x28_Engine) UnmarshalJSON(b []byte) error {
 	err := t.union.UnmarshalJSON(b)
 	return err
 }
 
-// AsCrawlerOptions0x27File0 returns the union data inside the CrawlerOptions0x27_File as a CrawlerOptions0x27File0
-func (t CrawlerOptions0x27_File) AsCrawlerOptions0x27File0() (CrawlerOptions0x27File0, error) {
-	var body CrawlerOptions0x27File0
+// AsFancyFile0x0e returns the union data inside the CrawlerOptions0x28_File as a FancyFile0x0e
+func (t CrawlerOptions0x28_File) AsFancyFile0x0e() (FancyFile0x0e, error) {
+	var body FancyFile0x0e
 	err := json.Unmarshal(t.union, &body)
 	return body, err
 }
 
-// FromCrawlerOptions0x27File0 overwrites any union data inside the CrawlerOptions0x27_File as the provided CrawlerOptions0x27File0
-func (t *CrawlerOptions0x27_File) FromCrawlerOptions0x27File0(v CrawlerOptions0x27File0) error {
+// FromFancyFile0x0e overwrites any union data inside the CrawlerOptions0x28_File as the provided FancyFile0x0e
+func (t *CrawlerOptions0x28_File) FromFancyFile0x0e(v FancyFile0x0e) error {
 	b, err := json.Marshal(v)
 	t.union = b
 	return err
 }
 
-// MergeCrawlerOptions0x27File0 performs a merge with any union data inside the CrawlerOptions0x27_File, using the provided CrawlerOptions0x27File0
-func (t *CrawlerOptions0x27_File) MergeCrawlerOptions0x27File0(v CrawlerOptions0x27File0) error {
+// MergeFancyFile0x0e performs a merge with any union data inside the CrawlerOptions0x28_File, using the provided FancyFile0x0e
+func (t *CrawlerOptions0x28_File) MergeFancyFile0x0e(v FancyFile0x0e) error {
 	b, err := json.Marshal(v)
 	if err != nil {
 		return err
@@ -9537,22 +9271,22 @@ func (t *CrawlerOptions0x27_File) MergeCrawlerOptions0x27File0(v CrawlerOptions0
 	return err
 }
 
-// AsCrawlerOptions0x27File1 returns the union data inside the CrawlerOptions0x27_File as a CrawlerOptions0x27File1
-func (t CrawlerOptions0x27_File) AsCrawlerOptions0x27File1() (CrawlerOptions0x27File1, error) {
-	var body CrawlerOptions0x27File1
+// AsCrawlerOptions0x28File1 returns the union data inside the CrawlerOptions0x28_File as a CrawlerOptions0x28File1
+func (t CrawlerOptions0x28_File) AsCrawlerOptions0x28File1() (CrawlerOptions0x28File1, error) {
+	var body CrawlerOptions0x28File1
 	err := json.Unmarshal(t.union, &body)
 	return body, err
 }
 
-// FromCrawlerOptions0x27File1 overwrites any union data inside the CrawlerOptions0x27_File as the provided CrawlerOptions0x27File1
-func (t *CrawlerOptions0x27_File) FromCrawlerOptions0x27File1(v CrawlerOptions0x27File1) error {
+// FromCrawlerOptions0x28File1 overwrites any union data inside the CrawlerOptions0x28_File as the provided CrawlerOptions0x28File1
+func (t *CrawlerOptions0x28_File) FromCrawlerOptions0x28File1(v CrawlerOptions0x28File1) error {
 	b, err := json.Marshal(v)
 	t.union = b
 	return err
 }
 
-// MergeCrawlerOptions0x27File1 performs a merge with any union data inside the CrawlerOptions0x27_File, using the provided CrawlerOptions0x27File1
-func (t *CrawlerOptions0x27_File) MergeCrawlerOptions0x27File1(v CrawlerOptions0x27File1) error {
+// MergeCrawlerOptions0x28File1 performs a merge with any union data inside the CrawlerOptions0x28_File, using the provided CrawlerOptions0x28File1
+func (t *CrawlerOptions0x28_File) MergeCrawlerOptions0x28File1(v CrawlerOptions0x28File1) error {
 	b, err := json.Marshal(v)
 	if err != nil {
 		return err
@@ -9563,32 +9297,32 @@ func (t *CrawlerOptions0x27_File) MergeCrawlerOptions0x27File1(v CrawlerOptions0
 	return err
 }
 
-func (t CrawlerOptions0x27_File) MarshalJSON() ([]byte, error) {
+func (t CrawlerOptions0x28_File) MarshalJSON() ([]byte, error) {
 	b, err := t.union.MarshalJSON()
 	return b, err
 }
 
-func (t *CrawlerOptions0x27_File) UnmarshalJSON(b []byte) error {
+func (t *CrawlerOptions0x28_File) UnmarshalJSON(b []byte) error {
 	err := t.union.UnmarshalJSON(b)
 	return err
 }
 
-// AsCrawlerOptions0x27MarkdownChunking0 returns the union data inside the CrawlerOptions0x27_MarkdownChunking as a CrawlerOptions0x27MarkdownChunking0
-func (t CrawlerOptions0x27_MarkdownChunking) AsCrawlerOptions0x27MarkdownChunking0() (CrawlerOptions0x27MarkdownChunking0, error) {
-	var body CrawlerOptions0x27MarkdownChunking0
+// AsEnum0x27 returns the union data inside the CrawlerOptions0x28_MarkdownChunking as a Enum0x27
+func (t CrawlerOptions0x28_MarkdownChunking) AsEnum0x27() (Enum0x27, error) {
+	var body Enum0x27
 	err := json.Unmarshal(t.union, &body)
 	return body, err
 }
 
-// FromCrawlerOptions0x27MarkdownChunking0 overwrites any union data inside the CrawlerOptions0x27_MarkdownChunking as the provided CrawlerOptions0x27MarkdownChunking0
-func (t *CrawlerOptions0x27_MarkdownChunking) FromCrawlerOptions0x27MarkdownChunking0(v CrawlerOptions0x27MarkdownChunking0) error {
+// FromEnum0x27 overwrites any union data inside the CrawlerOptions0x28_MarkdownChunking as the provided Enum0x27
+func (t *CrawlerOptions0x28_MarkdownChunking) FromEnum0x27(v Enum0x27) error {
 	b, err := json.Marshal(v)
 	t.union = b
 	return err
 }
 
-// MergeCrawlerOptions0x27MarkdownChunking0 performs a merge with any union data inside the CrawlerOptions0x27_MarkdownChunking, using the provided CrawlerOptions0x27MarkdownChunking0
-func (t *CrawlerOptions0x27_MarkdownChunking) MergeCrawlerOptions0x27MarkdownChunking0(v CrawlerOptions0x27MarkdownChunking0) error {
+// MergeEnum0x27 performs a merge with any union data inside the CrawlerOptions0x28_MarkdownChunking, using the provided Enum0x27
+func (t *CrawlerOptions0x28_MarkdownChunking) MergeEnum0x27(v Enum0x27) error {
 	b, err := json.Marshal(v)
 	if err != nil {
 		return err
@@ -9599,22 +9333,22 @@ func (t *CrawlerOptions0x27_MarkdownChunking) MergeCrawlerOptions0x27MarkdownChu
 	return err
 }
 
-// AsCrawlerOptions0x27MarkdownChunking1 returns the union data inside the CrawlerOptions0x27_MarkdownChunking as a CrawlerOptions0x27MarkdownChunking1
-func (t CrawlerOptions0x27_MarkdownChunking) AsCrawlerOptions0x27MarkdownChunking1() (CrawlerOptions0x27MarkdownChunking1, error) {
-	var body CrawlerOptions0x27MarkdownChunking1
+// AsCrawlerOptions0x28MarkdownChunking1 returns the union data inside the CrawlerOptions0x28_MarkdownChunking as a CrawlerOptions0x28MarkdownChunking1
+func (t CrawlerOptions0x28_MarkdownChunking) AsCrawlerOptions0x28MarkdownChunking1() (CrawlerOptions0x28MarkdownChunking1, error) {
+	var body CrawlerOptions0x28MarkdownChunking1
 	err := json.Unmarshal(t.union, &body)
 	return body, err
 }
 
-// FromCrawlerOptions0x27MarkdownChunking1 overwrites any union data inside the CrawlerOptions0x27_MarkdownChunking as the provided CrawlerOptions0x27MarkdownChunking1
-func (t *CrawlerOptions0x27_MarkdownChunking) FromCrawlerOptions0x27MarkdownChunking1(v CrawlerOptions0x27MarkdownChunking1) error {
+// FromCrawlerOptions0x28MarkdownChunking1 overwrites any union data inside the CrawlerOptions0x28_MarkdownChunking as the provided CrawlerOptions0x28MarkdownChunking1
+func (t *CrawlerOptions0x28_MarkdownChunking) FromCrawlerOptions0x28MarkdownChunking1(v CrawlerOptions0x28MarkdownChunking1) error {
 	b, err := json.Marshal(v)
 	t.union = b
 	return err
 }
 
-// MergeCrawlerOptions0x27MarkdownChunking1 performs a merge with any union data inside the CrawlerOptions0x27_MarkdownChunking, using the provided CrawlerOptions0x27MarkdownChunking1
-func (t *CrawlerOptions0x27_MarkdownChunking) MergeCrawlerOptions0x27MarkdownChunking1(v CrawlerOptions0x27MarkdownChunking1) error {
+// MergeCrawlerOptions0x28MarkdownChunking1 performs a merge with any union data inside the CrawlerOptions0x28_MarkdownChunking, using the provided CrawlerOptions0x28MarkdownChunking1
+func (t *CrawlerOptions0x28_MarkdownChunking) MergeCrawlerOptions0x28MarkdownChunking1(v CrawlerOptions0x28MarkdownChunking1) error {
 	b, err := json.Marshal(v)
 	if err != nil {
 		return err
@@ -9625,32 +9359,32 @@ func (t *CrawlerOptions0x27_MarkdownChunking) MergeCrawlerOptions0x27MarkdownChu
 	return err
 }
 
-func (t CrawlerOptions0x27_MarkdownChunking) MarshalJSON() ([]byte, error) {
+func (t CrawlerOptions0x28_MarkdownChunking) MarshalJSON() ([]byte, error) {
 	b, err := t.union.MarshalJSON()
 	return b, err
 }
 
-func (t *CrawlerOptions0x27_MarkdownChunking) UnmarshalJSON(b []byte) error {
+func (t *CrawlerOptions0x28_MarkdownChunking) UnmarshalJSON(b []byte) error {
 	err := t.union.UnmarshalJSON(b)
 	return err
 }
 
-// AsCrawlerOptions0x27NoGfm0 returns the union data inside the CrawlerOptions0x27_NoGfm as a CrawlerOptions0x27NoGfm0
-func (t CrawlerOptions0x27_NoGfm) AsCrawlerOptions0x27NoGfm0() (CrawlerOptions0x27NoGfm0, error) {
-	var body CrawlerOptions0x27NoGfm0
+// AsPseudoBoolean0x11 returns the union data inside the CrawlerOptions0x28_NoGfm as a PseudoBoolean0x11
+func (t CrawlerOptions0x28_NoGfm) AsPseudoBoolean0x11() (PseudoBoolean0x11, error) {
+	var body PseudoBoolean0x11
 	err := json.Unmarshal(t.union, &body)
 	return body, err
 }
 
-// FromCrawlerOptions0x27NoGfm0 overwrites any union data inside the CrawlerOptions0x27_NoGfm as the provided CrawlerOptions0x27NoGfm0
-func (t *CrawlerOptions0x27_NoGfm) FromCrawlerOptions0x27NoGfm0(v CrawlerOptions0x27NoGfm0) error {
+// FromPseudoBoolean0x11 overwrites any union data inside the CrawlerOptions0x28_NoGfm as the provided PseudoBoolean0x11
+func (t *CrawlerOptions0x28_NoGfm) FromPseudoBoolean0x11(v PseudoBoolean0x11) error {
 	b, err := json.Marshal(v)
 	t.union = b
 	return err
 }
 
-// MergeCrawlerOptions0x27NoGfm0 performs a merge with any union data inside the CrawlerOptions0x27_NoGfm, using the provided CrawlerOptions0x27NoGfm0
-func (t *CrawlerOptions0x27_NoGfm) MergeCrawlerOptions0x27NoGfm0(v CrawlerOptions0x27NoGfm0) error {
+// MergePseudoBoolean0x11 performs a merge with any union data inside the CrawlerOptions0x28_NoGfm, using the provided PseudoBoolean0x11
+func (t *CrawlerOptions0x28_NoGfm) MergePseudoBoolean0x11(v PseudoBoolean0x11) error {
 	b, err := json.Marshal(v)
 	if err != nil {
 		return err
@@ -9661,22 +9395,22 @@ func (t *CrawlerOptions0x27_NoGfm) MergeCrawlerOptions0x27NoGfm0(v CrawlerOption
 	return err
 }
 
-// AsCrawlerOptions0x27NoGfm1 returns the union data inside the CrawlerOptions0x27_NoGfm as a CrawlerOptions0x27NoGfm1
-func (t CrawlerOptions0x27_NoGfm) AsCrawlerOptions0x27NoGfm1() (CrawlerOptions0x27NoGfm1, error) {
-	var body CrawlerOptions0x27NoGfm1
+// AsCrawlerOptions0x28NoGfm1 returns the union data inside the CrawlerOptions0x28_NoGfm as a CrawlerOptions0x28NoGfm1
+func (t CrawlerOptions0x28_NoGfm) AsCrawlerOptions0x28NoGfm1() (CrawlerOptions0x28NoGfm1, error) {
+	var body CrawlerOptions0x28NoGfm1
 	err := json.Unmarshal(t.union, &body)
 	return body, err
 }
 
-// FromCrawlerOptions0x27NoGfm1 overwrites any union data inside the CrawlerOptions0x27_NoGfm as the provided CrawlerOptions0x27NoGfm1
-func (t *CrawlerOptions0x27_NoGfm) FromCrawlerOptions0x27NoGfm1(v CrawlerOptions0x27NoGfm1) error {
+// FromCrawlerOptions0x28NoGfm1 overwrites any union data inside the CrawlerOptions0x28_NoGfm as the provided CrawlerOptions0x28NoGfm1
+func (t *CrawlerOptions0x28_NoGfm) FromCrawlerOptions0x28NoGfm1(v CrawlerOptions0x28NoGfm1) error {
 	b, err := json.Marshal(v)
 	t.union = b
 	return err
 }
 
-// MergeCrawlerOptions0x27NoGfm1 performs a merge with any union data inside the CrawlerOptions0x27_NoGfm, using the provided CrawlerOptions0x27NoGfm1
-func (t *CrawlerOptions0x27_NoGfm) MergeCrawlerOptions0x27NoGfm1(v CrawlerOptions0x27NoGfm1) error {
+// MergeCrawlerOptions0x28NoGfm1 performs a merge with any union data inside the CrawlerOptions0x28_NoGfm, using the provided CrawlerOptions0x28NoGfm1
+func (t *CrawlerOptions0x28_NoGfm) MergeCrawlerOptions0x28NoGfm1(v CrawlerOptions0x28NoGfm1) error {
 	b, err := json.Marshal(v)
 	if err != nil {
 		return err
@@ -9687,32 +9421,32 @@ func (t *CrawlerOptions0x27_NoGfm) MergeCrawlerOptions0x27NoGfm1(v CrawlerOption
 	return err
 }
 
-func (t CrawlerOptions0x27_NoGfm) MarshalJSON() ([]byte, error) {
+func (t CrawlerOptions0x28_NoGfm) MarshalJSON() ([]byte, error) {
 	b, err := t.union.MarshalJSON()
 	return b, err
 }
 
-func (t *CrawlerOptions0x27_NoGfm) UnmarshalJSON(b []byte) error {
+func (t *CrawlerOptions0x28_NoGfm) UnmarshalJSON(b []byte) error {
 	err := t.union.UnmarshalJSON(b)
 	return err
 }
 
-// AsCrawlerOptions0x27Pdf0 returns the union data inside the CrawlerOptions0x27_Pdf as a CrawlerOptions0x27Pdf0
-func (t CrawlerOptions0x27_Pdf) AsCrawlerOptions0x27Pdf0() (CrawlerOptions0x27Pdf0, error) {
-	var body CrawlerOptions0x27Pdf0
+// AsFancyFile0x0e returns the union data inside the CrawlerOptions0x28_Pdf as a FancyFile0x0e
+func (t CrawlerOptions0x28_Pdf) AsFancyFile0x0e() (FancyFile0x0e, error) {
+	var body FancyFile0x0e
 	err := json.Unmarshal(t.union, &body)
 	return body, err
 }
 
-// FromCrawlerOptions0x27Pdf0 overwrites any union data inside the CrawlerOptions0x27_Pdf as the provided CrawlerOptions0x27Pdf0
-func (t *CrawlerOptions0x27_Pdf) FromCrawlerOptions0x27Pdf0(v CrawlerOptions0x27Pdf0) error {
+// FromFancyFile0x0e overwrites any union data inside the CrawlerOptions0x28_Pdf as the provided FancyFile0x0e
+func (t *CrawlerOptions0x28_Pdf) FromFancyFile0x0e(v FancyFile0x0e) error {
 	b, err := json.Marshal(v)
 	t.union = b
 	return err
 }
 
-// MergeCrawlerOptions0x27Pdf0 performs a merge with any union data inside the CrawlerOptions0x27_Pdf, using the provided CrawlerOptions0x27Pdf0
-func (t *CrawlerOptions0x27_Pdf) MergeCrawlerOptions0x27Pdf0(v CrawlerOptions0x27Pdf0) error {
+// MergeFancyFile0x0e performs a merge with any union data inside the CrawlerOptions0x28_Pdf, using the provided FancyFile0x0e
+func (t *CrawlerOptions0x28_Pdf) MergeFancyFile0x0e(v FancyFile0x0e) error {
 	b, err := json.Marshal(v)
 	if err != nil {
 		return err
@@ -9723,22 +9457,22 @@ func (t *CrawlerOptions0x27_Pdf) MergeCrawlerOptions0x27Pdf0(v CrawlerOptions0x2
 	return err
 }
 
-// AsCrawlerOptions0x27Pdf1 returns the union data inside the CrawlerOptions0x27_Pdf as a CrawlerOptions0x27Pdf1
-func (t CrawlerOptions0x27_Pdf) AsCrawlerOptions0x27Pdf1() (CrawlerOptions0x27Pdf1, error) {
-	var body CrawlerOptions0x27Pdf1
+// AsCrawlerOptions0x28Pdf1 returns the union data inside the CrawlerOptions0x28_Pdf as a CrawlerOptions0x28Pdf1
+func (t CrawlerOptions0x28_Pdf) AsCrawlerOptions0x28Pdf1() (CrawlerOptions0x28Pdf1, error) {
+	var body CrawlerOptions0x28Pdf1
 	err := json.Unmarshal(t.union, &body)
 	return body, err
 }
 
-// FromCrawlerOptions0x27Pdf1 overwrites any union data inside the CrawlerOptions0x27_Pdf as the provided CrawlerOptions0x27Pdf1
-func (t *CrawlerOptions0x27_Pdf) FromCrawlerOptions0x27Pdf1(v CrawlerOptions0x27Pdf1) error {
+// FromCrawlerOptions0x28Pdf1 overwrites any union data inside the CrawlerOptions0x28_Pdf as the provided CrawlerOptions0x28Pdf1
+func (t *CrawlerOptions0x28_Pdf) FromCrawlerOptions0x28Pdf1(v CrawlerOptions0x28Pdf1) error {
 	b, err := json.Marshal(v)
 	t.union = b
 	return err
 }
 
-// MergeCrawlerOptions0x27Pdf1 performs a merge with any union data inside the CrawlerOptions0x27_Pdf, using the provided CrawlerOptions0x27Pdf1
-func (t *CrawlerOptions0x27_Pdf) MergeCrawlerOptions0x27Pdf1(v CrawlerOptions0x27Pdf1) error {
+// MergeCrawlerOptions0x28Pdf1 performs a merge with any union data inside the CrawlerOptions0x28_Pdf, using the provided CrawlerOptions0x28Pdf1
+func (t *CrawlerOptions0x28_Pdf) MergeCrawlerOptions0x28Pdf1(v CrawlerOptions0x28Pdf1) error {
 	b, err := json.Marshal(v)
 	if err != nil {
 		return err
@@ -9749,32 +9483,32 @@ func (t *CrawlerOptions0x27_Pdf) MergeCrawlerOptions0x27Pdf1(v CrawlerOptions0x2
 	return err
 }
 
-func (t CrawlerOptions0x27_Pdf) MarshalJSON() ([]byte, error) {
+func (t CrawlerOptions0x28_Pdf) MarshalJSON() ([]byte, error) {
 	b, err := t.union.MarshalJSON()
 	return b, err
 }
 
-func (t *CrawlerOptions0x27_Pdf) UnmarshalJSON(b []byte) error {
+func (t *CrawlerOptions0x28_Pdf) UnmarshalJSON(b []byte) error {
 	err := t.union.UnmarshalJSON(b)
 	return err
 }
 
-// AsCrawlerOptions0x27RespondWith0 returns the union data inside the CrawlerOptions0x27_RespondWith as a CrawlerOptions0x27RespondWith0
-func (t CrawlerOptions0x27_RespondWith) AsCrawlerOptions0x27RespondWith0() (CrawlerOptions0x27RespondWith0, error) {
-	var body CrawlerOptions0x27RespondWith0
+// AsEnum0x10 returns the union data inside the CrawlerOptions0x28_RespondWith as a Enum0x10
+func (t CrawlerOptions0x28_RespondWith) AsEnum0x10() (Enum0x10, error) {
+	var body Enum0x10
 	err := json.Unmarshal(t.union, &body)
 	return body, err
 }
 
-// FromCrawlerOptions0x27RespondWith0 overwrites any union data inside the CrawlerOptions0x27_RespondWith as the provided CrawlerOptions0x27RespondWith0
-func (t *CrawlerOptions0x27_RespondWith) FromCrawlerOptions0x27RespondWith0(v CrawlerOptions0x27RespondWith0) error {
+// FromEnum0x10 overwrites any union data inside the CrawlerOptions0x28_RespondWith as the provided Enum0x10
+func (t *CrawlerOptions0x28_RespondWith) FromEnum0x10(v Enum0x10) error {
 	b, err := json.Marshal(v)
 	t.union = b
 	return err
 }
 
-// MergeCrawlerOptions0x27RespondWith0 performs a merge with any union data inside the CrawlerOptions0x27_RespondWith, using the provided CrawlerOptions0x27RespondWith0
-func (t *CrawlerOptions0x27_RespondWith) MergeCrawlerOptions0x27RespondWith0(v CrawlerOptions0x27RespondWith0) error {
+// MergeEnum0x10 performs a merge with any union data inside the CrawlerOptions0x28_RespondWith, using the provided Enum0x10
+func (t *CrawlerOptions0x28_RespondWith) MergeEnum0x10(v Enum0x10) error {
 	b, err := json.Marshal(v)
 	if err != nil {
 		return err
@@ -9785,22 +9519,22 @@ func (t *CrawlerOptions0x27_RespondWith) MergeCrawlerOptions0x27RespondWith0(v C
 	return err
 }
 
-// AsCrawlerOptions0x27RespondWith1 returns the union data inside the CrawlerOptions0x27_RespondWith as a CrawlerOptions0x27RespondWith1
-func (t CrawlerOptions0x27_RespondWith) AsCrawlerOptions0x27RespondWith1() (CrawlerOptions0x27RespondWith1, error) {
-	var body CrawlerOptions0x27RespondWith1
+// AsCrawlerOptions0x28RespondWith1 returns the union data inside the CrawlerOptions0x28_RespondWith as a CrawlerOptions0x28RespondWith1
+func (t CrawlerOptions0x28_RespondWith) AsCrawlerOptions0x28RespondWith1() (CrawlerOptions0x28RespondWith1, error) {
+	var body CrawlerOptions0x28RespondWith1
 	err := json.Unmarshal(t.union, &body)
 	return body, err
 }
 
-// FromCrawlerOptions0x27RespondWith1 overwrites any union data inside the CrawlerOptions0x27_RespondWith as the provided CrawlerOptions0x27RespondWith1
-func (t *CrawlerOptions0x27_RespondWith) FromCrawlerOptions0x27RespondWith1(v CrawlerOptions0x27RespondWith1) error {
+// FromCrawlerOptions0x28RespondWith1 overwrites any union data inside the CrawlerOptions0x28_RespondWith as the provided CrawlerOptions0x28RespondWith1
+func (t *CrawlerOptions0x28_RespondWith) FromCrawlerOptions0x28RespondWith1(v CrawlerOptions0x28RespondWith1) error {
 	b, err := json.Marshal(v)
 	t.union = b
 	return err
 }
 
-// MergeCrawlerOptions0x27RespondWith1 performs a merge with any union data inside the CrawlerOptions0x27_RespondWith, using the provided CrawlerOptions0x27RespondWith1
-func (t *CrawlerOptions0x27_RespondWith) MergeCrawlerOptions0x27RespondWith1(v CrawlerOptions0x27RespondWith1) error {
+// MergeCrawlerOptions0x28RespondWith1 performs a merge with any union data inside the CrawlerOptions0x28_RespondWith, using the provided CrawlerOptions0x28RespondWith1
+func (t *CrawlerOptions0x28_RespondWith) MergeCrawlerOptions0x28RespondWith1(v CrawlerOptions0x28RespondWith1) error {
 	b, err := json.Marshal(v)
 	if err != nil {
 		return err
@@ -9811,32 +9545,32 @@ func (t *CrawlerOptions0x27_RespondWith) MergeCrawlerOptions0x27RespondWith1(v C
 	return err
 }
 
-func (t CrawlerOptions0x27_RespondWith) MarshalJSON() ([]byte, error) {
+func (t CrawlerOptions0x28_RespondWith) MarshalJSON() ([]byte, error) {
 	b, err := t.union.MarshalJSON()
 	return b, err
 }
 
-func (t *CrawlerOptions0x27_RespondWith) UnmarshalJSON(b []byte) error {
+func (t *CrawlerOptions0x28_RespondWith) UnmarshalJSON(b []byte) error {
 	err := t.union.UnmarshalJSON(b)
 	return err
 }
 
-// AsCrawlerOptions0x27SetCookies0 returns the union data inside the CrawlerOptions0x27_SetCookies_Item as a CrawlerOptions0x27SetCookies0
-func (t CrawlerOptions0x27_SetCookies_Item) AsCrawlerOptions0x27SetCookies0() (CrawlerOptions0x27SetCookies0, error) {
-	var body CrawlerOptions0x27SetCookies0
+// AsPseudoBoolean0x11 returns the union data inside the CrawlerOptions0x28_RobotsTxt as a PseudoBoolean0x11
+func (t CrawlerOptions0x28_RobotsTxt) AsPseudoBoolean0x11() (PseudoBoolean0x11, error) {
+	var body PseudoBoolean0x11
 	err := json.Unmarshal(t.union, &body)
 	return body, err
 }
 
-// FromCrawlerOptions0x27SetCookies0 overwrites any union data inside the CrawlerOptions0x27_SetCookies_Item as the provided CrawlerOptions0x27SetCookies0
-func (t *CrawlerOptions0x27_SetCookies_Item) FromCrawlerOptions0x27SetCookies0(v CrawlerOptions0x27SetCookies0) error {
+// FromPseudoBoolean0x11 overwrites any union data inside the CrawlerOptions0x28_RobotsTxt as the provided PseudoBoolean0x11
+func (t *CrawlerOptions0x28_RobotsTxt) FromPseudoBoolean0x11(v PseudoBoolean0x11) error {
 	b, err := json.Marshal(v)
 	t.union = b
 	return err
 }
 
-// MergeCrawlerOptions0x27SetCookies0 performs a merge with any union data inside the CrawlerOptions0x27_SetCookies_Item, using the provided CrawlerOptions0x27SetCookies0
-func (t *CrawlerOptions0x27_SetCookies_Item) MergeCrawlerOptions0x27SetCookies0(v CrawlerOptions0x27SetCookies0) error {
+// MergePseudoBoolean0x11 performs a merge with any union data inside the CrawlerOptions0x28_RobotsTxt, using the provided PseudoBoolean0x11
+func (t *CrawlerOptions0x28_RobotsTxt) MergePseudoBoolean0x11(v PseudoBoolean0x11) error {
 	b, err := json.Marshal(v)
 	if err != nil {
 		return err
@@ -9847,22 +9581,22 @@ func (t *CrawlerOptions0x27_SetCookies_Item) MergeCrawlerOptions0x27SetCookies0(
 	return err
 }
 
-// AsCrawlerOptions0x27SetCookies1 returns the union data inside the CrawlerOptions0x27_SetCookies_Item as a CrawlerOptions0x27SetCookies1
-func (t CrawlerOptions0x27_SetCookies_Item) AsCrawlerOptions0x27SetCookies1() (CrawlerOptions0x27SetCookies1, error) {
-	var body CrawlerOptions0x27SetCookies1
+// AsCrawlerOptions0x28RobotsTxt1 returns the union data inside the CrawlerOptions0x28_RobotsTxt as a CrawlerOptions0x28RobotsTxt1
+func (t CrawlerOptions0x28_RobotsTxt) AsCrawlerOptions0x28RobotsTxt1() (CrawlerOptions0x28RobotsTxt1, error) {
+	var body CrawlerOptions0x28RobotsTxt1
 	err := json.Unmarshal(t.union, &body)
 	return body, err
 }
 
-// FromCrawlerOptions0x27SetCookies1 overwrites any union data inside the CrawlerOptions0x27_SetCookies_Item as the provided CrawlerOptions0x27SetCookies1
-func (t *CrawlerOptions0x27_SetCookies_Item) FromCrawlerOptions0x27SetCookies1(v CrawlerOptions0x27SetCookies1) error {
+// FromCrawlerOptions0x28RobotsTxt1 overwrites any union data inside the CrawlerOptions0x28_RobotsTxt as the provided CrawlerOptions0x28RobotsTxt1
+func (t *CrawlerOptions0x28_RobotsTxt) FromCrawlerOptions0x28RobotsTxt1(v CrawlerOptions0x28RobotsTxt1) error {
 	b, err := json.Marshal(v)
 	t.union = b
 	return err
 }
 
-// MergeCrawlerOptions0x27SetCookies1 performs a merge with any union data inside the CrawlerOptions0x27_SetCookies_Item, using the provided CrawlerOptions0x27SetCookies1
-func (t *CrawlerOptions0x27_SetCookies_Item) MergeCrawlerOptions0x27SetCookies1(v CrawlerOptions0x27SetCookies1) error {
+// MergeCrawlerOptions0x28RobotsTxt1 performs a merge with any union data inside the CrawlerOptions0x28_RobotsTxt, using the provided CrawlerOptions0x28RobotsTxt1
+func (t *CrawlerOptions0x28_RobotsTxt) MergeCrawlerOptions0x28RobotsTxt1(v CrawlerOptions0x28RobotsTxt1) error {
 	b, err := json.Marshal(v)
 	if err != nil {
 		return err
@@ -9873,32 +9607,32 @@ func (t *CrawlerOptions0x27_SetCookies_Item) MergeCrawlerOptions0x27SetCookies1(
 	return err
 }
 
-func (t CrawlerOptions0x27_SetCookies_Item) MarshalJSON() ([]byte, error) {
+func (t CrawlerOptions0x28_RobotsTxt) MarshalJSON() ([]byte, error) {
 	b, err := t.union.MarshalJSON()
 	return b, err
 }
 
-func (t *CrawlerOptions0x27_SetCookies_Item) UnmarshalJSON(b []byte) error {
+func (t *CrawlerOptions0x28_RobotsTxt) UnmarshalJSON(b []byte) error {
 	err := t.union.UnmarshalJSON(b)
 	return err
 }
 
-// AsCrawlerOptions0x27WithIframe0 returns the union data inside the CrawlerOptions0x27_WithIframe as a CrawlerOptions0x27WithIframe0
-func (t CrawlerOptions0x27_WithIframe) AsCrawlerOptions0x27WithIframe0() (CrawlerOptions0x27WithIframe0, error) {
-	var body CrawlerOptions0x27WithIframe0
+// AsCrawlerOptions0x28SetCookies0 returns the union data inside the CrawlerOptions0x28_SetCookies_Item as a CrawlerOptions0x28SetCookies0
+func (t CrawlerOptions0x28_SetCookies_Item) AsCrawlerOptions0x28SetCookies0() (CrawlerOptions0x28SetCookies0, error) {
+	var body CrawlerOptions0x28SetCookies0
 	err := json.Unmarshal(t.union, &body)
 	return body, err
 }
 
-// FromCrawlerOptions0x27WithIframe0 overwrites any union data inside the CrawlerOptions0x27_WithIframe as the provided CrawlerOptions0x27WithIframe0
-func (t *CrawlerOptions0x27_WithIframe) FromCrawlerOptions0x27WithIframe0(v CrawlerOptions0x27WithIframe0) error {
+// FromCrawlerOptions0x28SetCookies0 overwrites any union data inside the CrawlerOptions0x28_SetCookies_Item as the provided CrawlerOptions0x28SetCookies0
+func (t *CrawlerOptions0x28_SetCookies_Item) FromCrawlerOptions0x28SetCookies0(v CrawlerOptions0x28SetCookies0) error {
 	b, err := json.Marshal(v)
 	t.union = b
 	return err
 }
 
-// MergeCrawlerOptions0x27WithIframe0 performs a merge with any union data inside the CrawlerOptions0x27_WithIframe, using the provided CrawlerOptions0x27WithIframe0
-func (t *CrawlerOptions0x27_WithIframe) MergeCrawlerOptions0x27WithIframe0(v CrawlerOptions0x27WithIframe0) error {
+// MergeCrawlerOptions0x28SetCookies0 performs a merge with any union data inside the CrawlerOptions0x28_SetCookies_Item, using the provided CrawlerOptions0x28SetCookies0
+func (t *CrawlerOptions0x28_SetCookies_Item) MergeCrawlerOptions0x28SetCookies0(v CrawlerOptions0x28SetCookies0) error {
 	b, err := json.Marshal(v)
 	if err != nil {
 		return err
@@ -9909,22 +9643,22 @@ func (t *CrawlerOptions0x27_WithIframe) MergeCrawlerOptions0x27WithIframe0(v Cra
 	return err
 }
 
-// AsCrawlerOptions0x27WithIframe1 returns the union data inside the CrawlerOptions0x27_WithIframe as a CrawlerOptions0x27WithIframe1
-func (t CrawlerOptions0x27_WithIframe) AsCrawlerOptions0x27WithIframe1() (CrawlerOptions0x27WithIframe1, error) {
-	var body CrawlerOptions0x27WithIframe1
+// AsCrawlerOptions0x28SetCookies1 returns the union data inside the CrawlerOptions0x28_SetCookies_Item as a CrawlerOptions0x28SetCookies1
+func (t CrawlerOptions0x28_SetCookies_Item) AsCrawlerOptions0x28SetCookies1() (CrawlerOptions0x28SetCookies1, error) {
+	var body CrawlerOptions0x28SetCookies1
 	err := json.Unmarshal(t.union, &body)
 	return body, err
 }
 
-// FromCrawlerOptions0x27WithIframe1 overwrites any union data inside the CrawlerOptions0x27_WithIframe as the provided CrawlerOptions0x27WithIframe1
-func (t *CrawlerOptions0x27_WithIframe) FromCrawlerOptions0x27WithIframe1(v CrawlerOptions0x27WithIframe1) error {
+// FromCrawlerOptions0x28SetCookies1 overwrites any union data inside the CrawlerOptions0x28_SetCookies_Item as the provided CrawlerOptions0x28SetCookies1
+func (t *CrawlerOptions0x28_SetCookies_Item) FromCrawlerOptions0x28SetCookies1(v CrawlerOptions0x28SetCookies1) error {
 	b, err := json.Marshal(v)
 	t.union = b
 	return err
 }
 
-// MergeCrawlerOptions0x27WithIframe1 performs a merge with any union data inside the CrawlerOptions0x27_WithIframe, using the provided CrawlerOptions0x27WithIframe1
-func (t *CrawlerOptions0x27_WithIframe) MergeCrawlerOptions0x27WithIframe1(v CrawlerOptions0x27WithIframe1) error {
+// MergeCrawlerOptions0x28SetCookies1 performs a merge with any union data inside the CrawlerOptions0x28_SetCookies_Item, using the provided CrawlerOptions0x28SetCookies1
+func (t *CrawlerOptions0x28_SetCookies_Item) MergeCrawlerOptions0x28SetCookies1(v CrawlerOptions0x28SetCookies1) error {
 	b, err := json.Marshal(v)
 	if err != nil {
 		return err
@@ -9935,32 +9669,32 @@ func (t *CrawlerOptions0x27_WithIframe) MergeCrawlerOptions0x27WithIframe1(v Cra
 	return err
 }
 
-func (t CrawlerOptions0x27_WithIframe) MarshalJSON() ([]byte, error) {
+func (t CrawlerOptions0x28_SetCookies_Item) MarshalJSON() ([]byte, error) {
 	b, err := t.union.MarshalJSON()
 	return b, err
 }
 
-func (t *CrawlerOptions0x27_WithIframe) UnmarshalJSON(b []byte) error {
+func (t *CrawlerOptions0x28_SetCookies_Item) UnmarshalJSON(b []byte) error {
 	err := t.union.UnmarshalJSON(b)
 	return err
 }
 
-// AsCrawlerOptions0x27WithLinksSummary0 returns the union data inside the CrawlerOptions0x27_WithLinksSummary as a CrawlerOptions0x27WithLinksSummary0
-func (t CrawlerOptions0x27_WithLinksSummary) AsCrawlerOptions0x27WithLinksSummary0() (CrawlerOptions0x27WithLinksSummary0, error) {
-	var body CrawlerOptions0x27WithLinksSummary0
+// AsPseudoBoolean0x11 returns the union data inside the CrawlerOptions0x28_WebBotAuth as a PseudoBoolean0x11
+func (t CrawlerOptions0x28_WebBotAuth) AsPseudoBoolean0x11() (PseudoBoolean0x11, error) {
+	var body PseudoBoolean0x11
 	err := json.Unmarshal(t.union, &body)
 	return body, err
 }
 
-// FromCrawlerOptions0x27WithLinksSummary0 overwrites any union data inside the CrawlerOptions0x27_WithLinksSummary as the provided CrawlerOptions0x27WithLinksSummary0
-func (t *CrawlerOptions0x27_WithLinksSummary) FromCrawlerOptions0x27WithLinksSummary0(v CrawlerOptions0x27WithLinksSummary0) error {
+// FromPseudoBoolean0x11 overwrites any union data inside the CrawlerOptions0x28_WebBotAuth as the provided PseudoBoolean0x11
+func (t *CrawlerOptions0x28_WebBotAuth) FromPseudoBoolean0x11(v PseudoBoolean0x11) error {
 	b, err := json.Marshal(v)
 	t.union = b
 	return err
 }
 
-// MergeCrawlerOptions0x27WithLinksSummary0 performs a merge with any union data inside the CrawlerOptions0x27_WithLinksSummary, using the provided CrawlerOptions0x27WithLinksSummary0
-func (t *CrawlerOptions0x27_WithLinksSummary) MergeCrawlerOptions0x27WithLinksSummary0(v CrawlerOptions0x27WithLinksSummary0) error {
+// MergePseudoBoolean0x11 performs a merge with any union data inside the CrawlerOptions0x28_WebBotAuth, using the provided PseudoBoolean0x11
+func (t *CrawlerOptions0x28_WebBotAuth) MergePseudoBoolean0x11(v PseudoBoolean0x11) error {
 	b, err := json.Marshal(v)
 	if err != nil {
 		return err
@@ -9971,22 +9705,22 @@ func (t *CrawlerOptions0x27_WithLinksSummary) MergeCrawlerOptions0x27WithLinksSu
 	return err
 }
 
-// AsCrawlerOptions0x27WithLinksSummary1 returns the union data inside the CrawlerOptions0x27_WithLinksSummary as a CrawlerOptions0x27WithLinksSummary1
-func (t CrawlerOptions0x27_WithLinksSummary) AsCrawlerOptions0x27WithLinksSummary1() (CrawlerOptions0x27WithLinksSummary1, error) {
-	var body CrawlerOptions0x27WithLinksSummary1
+// AsEnum0x16 returns the union data inside the CrawlerOptions0x28_WebBotAuth as a Enum0x16
+func (t CrawlerOptions0x28_WebBotAuth) AsEnum0x16() (Enum0x16, error) {
+	var body Enum0x16
 	err := json.Unmarshal(t.union, &body)
 	return body, err
 }
 
-// FromCrawlerOptions0x27WithLinksSummary1 overwrites any union data inside the CrawlerOptions0x27_WithLinksSummary as the provided CrawlerOptions0x27WithLinksSummary1
-func (t *CrawlerOptions0x27_WithLinksSummary) FromCrawlerOptions0x27WithLinksSummary1(v CrawlerOptions0x27WithLinksSummary1) error {
+// FromEnum0x16 overwrites any union data inside the CrawlerOptions0x28_WebBotAuth as the provided Enum0x16
+func (t *CrawlerOptions0x28_WebBotAuth) FromEnum0x16(v Enum0x16) error {
 	b, err := json.Marshal(v)
 	t.union = b
 	return err
 }
 
-// MergeCrawlerOptions0x27WithLinksSummary1 performs a merge with any union data inside the CrawlerOptions0x27_WithLinksSummary, using the provided CrawlerOptions0x27WithLinksSummary1
-func (t *CrawlerOptions0x27_WithLinksSummary) MergeCrawlerOptions0x27WithLinksSummary1(v CrawlerOptions0x27WithLinksSummary1) error {
+// MergeEnum0x16 performs a merge with any union data inside the CrawlerOptions0x28_WebBotAuth, using the provided Enum0x16
+func (t *CrawlerOptions0x28_WebBotAuth) MergeEnum0x16(v Enum0x16) error {
 	b, err := json.Marshal(v)
 	if err != nil {
 		return err
@@ -9997,32 +9731,32 @@ func (t *CrawlerOptions0x27_WithLinksSummary) MergeCrawlerOptions0x27WithLinksSu
 	return err
 }
 
-func (t CrawlerOptions0x27_WithLinksSummary) MarshalJSON() ([]byte, error) {
+func (t CrawlerOptions0x28_WebBotAuth) MarshalJSON() ([]byte, error) {
 	b, err := t.union.MarshalJSON()
 	return b, err
 }
 
-func (t *CrawlerOptions0x27_WithLinksSummary) UnmarshalJSON(b []byte) error {
+func (t *CrawlerOptions0x28_WebBotAuth) UnmarshalJSON(b []byte) error {
 	err := t.union.UnmarshalJSON(b)
 	return err
 }
 
-// AsCrawlerOptionsHeaderOnly0x3aEngine0 returns the union data inside the CrawlerOptionsHeaderOnly0x3a_Engine as a CrawlerOptionsHeaderOnly0x3aEngine0
-func (t CrawlerOptionsHeaderOnly0x3a_Engine) AsCrawlerOptionsHeaderOnly0x3aEngine0() (CrawlerOptionsHeaderOnly0x3aEngine0, error) {
-	var body CrawlerOptionsHeaderOnly0x3aEngine0
+// AsPseudoBoolean0x11 returns the union data inside the CrawlerOptions0x28_WithIframe as a PseudoBoolean0x11
+func (t CrawlerOptions0x28_WithIframe) AsPseudoBoolean0x11() (PseudoBoolean0x11, error) {
+	var body PseudoBoolean0x11
 	err := json.Unmarshal(t.union, &body)
 	return body, err
 }
 
-// FromCrawlerOptionsHeaderOnly0x3aEngine0 overwrites any union data inside the CrawlerOptionsHeaderOnly0x3a_Engine as the provided CrawlerOptionsHeaderOnly0x3aEngine0
-func (t *CrawlerOptionsHeaderOnly0x3a_Engine) FromCrawlerOptionsHeaderOnly0x3aEngine0(v CrawlerOptionsHeaderOnly0x3aEngine0) error {
+// FromPseudoBoolean0x11 overwrites any union data inside the CrawlerOptions0x28_WithIframe as the provided PseudoBoolean0x11
+func (t *CrawlerOptions0x28_WithIframe) FromPseudoBoolean0x11(v PseudoBoolean0x11) error {
 	b, err := json.Marshal(v)
 	t.union = b
 	return err
 }
 
-// MergeCrawlerOptionsHeaderOnly0x3aEngine0 performs a merge with any union data inside the CrawlerOptionsHeaderOnly0x3a_Engine, using the provided CrawlerOptionsHeaderOnly0x3aEngine0
-func (t *CrawlerOptionsHeaderOnly0x3a_Engine) MergeCrawlerOptionsHeaderOnly0x3aEngine0(v CrawlerOptionsHeaderOnly0x3aEngine0) error {
+// MergePseudoBoolean0x11 performs a merge with any union data inside the CrawlerOptions0x28_WithIframe, using the provided PseudoBoolean0x11
+func (t *CrawlerOptions0x28_WithIframe) MergePseudoBoolean0x11(v PseudoBoolean0x11) error {
 	b, err := json.Marshal(v)
 	if err != nil {
 		return err
@@ -10033,22 +9767,22 @@ func (t *CrawlerOptionsHeaderOnly0x3a_Engine) MergeCrawlerOptionsHeaderOnly0x3aE
 	return err
 }
 
-// AsCrawlerOptionsHeaderOnly0x3aEngine1 returns the union data inside the CrawlerOptionsHeaderOnly0x3a_Engine as a CrawlerOptionsHeaderOnly0x3aEngine1
-func (t CrawlerOptionsHeaderOnly0x3a_Engine) AsCrawlerOptionsHeaderOnly0x3aEngine1() (CrawlerOptionsHeaderOnly0x3aEngine1, error) {
-	var body CrawlerOptionsHeaderOnly0x3aEngine1
+// AsCrawlerOptions0x28WithIframe1 returns the union data inside the CrawlerOptions0x28_WithIframe as a CrawlerOptions0x28WithIframe1
+func (t CrawlerOptions0x28_WithIframe) AsCrawlerOptions0x28WithIframe1() (CrawlerOptions0x28WithIframe1, error) {
+	var body CrawlerOptions0x28WithIframe1
 	err := json.Unmarshal(t.union, &body)
 	return body, err
 }
 
-// FromCrawlerOptionsHeaderOnly0x3aEngine1 overwrites any union data inside the CrawlerOptionsHeaderOnly0x3a_Engine as the provided CrawlerOptionsHeaderOnly0x3aEngine1
-func (t *CrawlerOptionsHeaderOnly0x3a_Engine) FromCrawlerOptionsHeaderOnly0x3aEngine1(v CrawlerOptionsHeaderOnly0x3aEngine1) error {
+// FromCrawlerOptions0x28WithIframe1 overwrites any union data inside the CrawlerOptions0x28_WithIframe as the provided CrawlerOptions0x28WithIframe1
+func (t *CrawlerOptions0x28_WithIframe) FromCrawlerOptions0x28WithIframe1(v CrawlerOptions0x28WithIframe1) error {
 	b, err := json.Marshal(v)
 	t.union = b
 	return err
 }
 
-// MergeCrawlerOptionsHeaderOnly0x3aEngine1 performs a merge with any union data inside the CrawlerOptionsHeaderOnly0x3a_Engine, using the provided CrawlerOptionsHeaderOnly0x3aEngine1
-func (t *CrawlerOptionsHeaderOnly0x3a_Engine) MergeCrawlerOptionsHeaderOnly0x3aEngine1(v CrawlerOptionsHeaderOnly0x3aEngine1) error {
+// MergeCrawlerOptions0x28WithIframe1 performs a merge with any union data inside the CrawlerOptions0x28_WithIframe, using the provided CrawlerOptions0x28WithIframe1
+func (t *CrawlerOptions0x28_WithIframe) MergeCrawlerOptions0x28WithIframe1(v CrawlerOptions0x28WithIframe1) error {
 	b, err := json.Marshal(v)
 	if err != nil {
 		return err
@@ -10059,32 +9793,32 @@ func (t *CrawlerOptionsHeaderOnly0x3a_Engine) MergeCrawlerOptionsHeaderOnly0x3aE
 	return err
 }
 
-func (t CrawlerOptionsHeaderOnly0x3a_Engine) MarshalJSON() ([]byte, error) {
+func (t CrawlerOptions0x28_WithIframe) MarshalJSON() ([]byte, error) {
 	b, err := t.union.MarshalJSON()
 	return b, err
 }
 
-func (t *CrawlerOptionsHeaderOnly0x3a_Engine) UnmarshalJSON(b []byte) error {
+func (t *CrawlerOptions0x28_WithIframe) UnmarshalJSON(b []byte) error {
 	err := t.union.UnmarshalJSON(b)
 	return err
 }
 
-// AsCrawlerOptionsHeaderOnly0x3aFile0 returns the union data inside the CrawlerOptionsHeaderOnly0x3a_File as a CrawlerOptionsHeaderOnly0x3aFile0
-func (t CrawlerOptionsHeaderOnly0x3a_File) AsCrawlerOptionsHeaderOnly0x3aFile0() (CrawlerOptionsHeaderOnly0x3aFile0, error) {
-	var body CrawlerOptionsHeaderOnly0x3aFile0
+// AsPseudoBoolean0x11 returns the union data inside the CrawlerOptions0x28_WithLinksSummary as a PseudoBoolean0x11
+func (t CrawlerOptions0x28_WithLinksSummary) AsPseudoBoolean0x11() (PseudoBoolean0x11, error) {
+	var body PseudoBoolean0x11
 	err := json.Unmarshal(t.union, &body)
 	return body, err
 }
 
-// FromCrawlerOptionsHeaderOnly0x3aFile0 overwrites any union data inside the CrawlerOptionsHeaderOnly0x3a_File as the provided CrawlerOptionsHeaderOnly0x3aFile0
-func (t *CrawlerOptionsHeaderOnly0x3a_File) FromCrawlerOptionsHeaderOnly0x3aFile0(v CrawlerOptionsHeaderOnly0x3aFile0) error {
+// FromPseudoBoolean0x11 overwrites any union data inside the CrawlerOptions0x28_WithLinksSummary as the provided PseudoBoolean0x11
+func (t *CrawlerOptions0x28_WithLinksSummary) FromPseudoBoolean0x11(v PseudoBoolean0x11) error {
 	b, err := json.Marshal(v)
 	t.union = b
 	return err
 }
 
-// MergeCrawlerOptionsHeaderOnly0x3aFile0 performs a merge with any union data inside the CrawlerOptionsHeaderOnly0x3a_File, using the provided CrawlerOptionsHeaderOnly0x3aFile0
-func (t *CrawlerOptionsHeaderOnly0x3a_File) MergeCrawlerOptionsHeaderOnly0x3aFile0(v CrawlerOptionsHeaderOnly0x3aFile0) error {
+// MergePseudoBoolean0x11 performs a merge with any union data inside the CrawlerOptions0x28_WithLinksSummary, using the provided PseudoBoolean0x11
+func (t *CrawlerOptions0x28_WithLinksSummary) MergePseudoBoolean0x11(v PseudoBoolean0x11) error {
 	b, err := json.Marshal(v)
 	if err != nil {
 		return err
@@ -10095,22 +9829,22 @@ func (t *CrawlerOptionsHeaderOnly0x3a_File) MergeCrawlerOptionsHeaderOnly0x3aFil
 	return err
 }
 
-// AsCrawlerOptionsHeaderOnly0x3aFile1 returns the union data inside the CrawlerOptionsHeaderOnly0x3a_File as a CrawlerOptionsHeaderOnly0x3aFile1
-func (t CrawlerOptionsHeaderOnly0x3a_File) AsCrawlerOptionsHeaderOnly0x3aFile1() (CrawlerOptionsHeaderOnly0x3aFile1, error) {
-	var body CrawlerOptionsHeaderOnly0x3aFile1
+// AsCrawlerOptions0x28WithLinksSummary1 returns the union data inside the CrawlerOptions0x28_WithLinksSummary as a CrawlerOptions0x28WithLinksSummary1
+func (t CrawlerOptions0x28_WithLinksSummary) AsCrawlerOptions0x28WithLinksSummary1() (CrawlerOptions0x28WithLinksSummary1, error) {
+	var body CrawlerOptions0x28WithLinksSummary1
 	err := json.Unmarshal(t.union, &body)
 	return body, err
 }
 
-// FromCrawlerOptionsHeaderOnly0x3aFile1 overwrites any union data inside the CrawlerOptionsHeaderOnly0x3a_File as the provided CrawlerOptionsHeaderOnly0x3aFile1
-func (t *CrawlerOptionsHeaderOnly0x3a_File) FromCrawlerOptionsHeaderOnly0x3aFile1(v CrawlerOptionsHeaderOnly0x3aFile1) error {
+// FromCrawlerOptions0x28WithLinksSummary1 overwrites any union data inside the CrawlerOptions0x28_WithLinksSummary as the provided CrawlerOptions0x28WithLinksSummary1
+func (t *CrawlerOptions0x28_WithLinksSummary) FromCrawlerOptions0x28WithLinksSummary1(v CrawlerOptions0x28WithLinksSummary1) error {
 	b, err := json.Marshal(v)
 	t.union = b
 	return err
 }
 
-// MergeCrawlerOptionsHeaderOnly0x3aFile1 performs a merge with any union data inside the CrawlerOptionsHeaderOnly0x3a_File, using the provided CrawlerOptionsHeaderOnly0x3aFile1
-func (t *CrawlerOptionsHeaderOnly0x3a_File) MergeCrawlerOptionsHeaderOnly0x3aFile1(v CrawlerOptionsHeaderOnly0x3aFile1) error {
+// MergeCrawlerOptions0x28WithLinksSummary1 performs a merge with any union data inside the CrawlerOptions0x28_WithLinksSummary, using the provided CrawlerOptions0x28WithLinksSummary1
+func (t *CrawlerOptions0x28_WithLinksSummary) MergeCrawlerOptions0x28WithLinksSummary1(v CrawlerOptions0x28WithLinksSummary1) error {
 	b, err := json.Marshal(v)
 	if err != nil {
 		return err
@@ -10121,32 +9855,32 @@ func (t *CrawlerOptionsHeaderOnly0x3a_File) MergeCrawlerOptionsHeaderOnly0x3aFil
 	return err
 }
 
-func (t CrawlerOptionsHeaderOnly0x3a_File) MarshalJSON() ([]byte, error) {
+func (t CrawlerOptions0x28_WithLinksSummary) MarshalJSON() ([]byte, error) {
 	b, err := t.union.MarshalJSON()
 	return b, err
 }
 
-func (t *CrawlerOptionsHeaderOnly0x3a_File) UnmarshalJSON(b []byte) error {
+func (t *CrawlerOptions0x28_WithLinksSummary) UnmarshalJSON(b []byte) error {
 	err := t.union.UnmarshalJSON(b)
 	return err
 }
 
-// AsCrawlerOptionsHeaderOnly0x3aMarkdownChunking0 returns the union data inside the CrawlerOptionsHeaderOnly0x3a_MarkdownChunking as a CrawlerOptionsHeaderOnly0x3aMarkdownChunking0
-func (t CrawlerOptionsHeaderOnly0x3a_MarkdownChunking) AsCrawlerOptionsHeaderOnly0x3aMarkdownChunking0() (CrawlerOptionsHeaderOnly0x3aMarkdownChunking0, error) {
-	var body CrawlerOptionsHeaderOnly0x3aMarkdownChunking0
+// AsEnum0x1c returns the union data inside the CrawlerOptionsHeaderOnly0x3b_Engine as a Enum0x1c
+func (t CrawlerOptionsHeaderOnly0x3b_Engine) AsEnum0x1c() (Enum0x1c, error) {
+	var body Enum0x1c
 	err := json.Unmarshal(t.union, &body)
 	return body, err
 }
 
-// FromCrawlerOptionsHeaderOnly0x3aMarkdownChunking0 overwrites any union data inside the CrawlerOptionsHeaderOnly0x3a_MarkdownChunking as the provided CrawlerOptionsHeaderOnly0x3aMarkdownChunking0
-func (t *CrawlerOptionsHeaderOnly0x3a_MarkdownChunking) FromCrawlerOptionsHeaderOnly0x3aMarkdownChunking0(v CrawlerOptionsHeaderOnly0x3aMarkdownChunking0) error {
+// FromEnum0x1c overwrites any union data inside the CrawlerOptionsHeaderOnly0x3b_Engine as the provided Enum0x1c
+func (t *CrawlerOptionsHeaderOnly0x3b_Engine) FromEnum0x1c(v Enum0x1c) error {
 	b, err := json.Marshal(v)
 	t.union = b
 	return err
 }
 
-// MergeCrawlerOptionsHeaderOnly0x3aMarkdownChunking0 performs a merge with any union data inside the CrawlerOptionsHeaderOnly0x3a_MarkdownChunking, using the provided CrawlerOptionsHeaderOnly0x3aMarkdownChunking0
-func (t *CrawlerOptionsHeaderOnly0x3a_MarkdownChunking) MergeCrawlerOptionsHeaderOnly0x3aMarkdownChunking0(v CrawlerOptionsHeaderOnly0x3aMarkdownChunking0) error {
+// MergeEnum0x1c performs a merge with any union data inside the CrawlerOptionsHeaderOnly0x3b_Engine, using the provided Enum0x1c
+func (t *CrawlerOptionsHeaderOnly0x3b_Engine) MergeEnum0x1c(v Enum0x1c) error {
 	b, err := json.Marshal(v)
 	if err != nil {
 		return err
@@ -10157,22 +9891,22 @@ func (t *CrawlerOptionsHeaderOnly0x3a_MarkdownChunking) MergeCrawlerOptionsHeade
 	return err
 }
 
-// AsCrawlerOptionsHeaderOnly0x3aMarkdownChunking1 returns the union data inside the CrawlerOptionsHeaderOnly0x3a_MarkdownChunking as a CrawlerOptionsHeaderOnly0x3aMarkdownChunking1
-func (t CrawlerOptionsHeaderOnly0x3a_MarkdownChunking) AsCrawlerOptionsHeaderOnly0x3aMarkdownChunking1() (CrawlerOptionsHeaderOnly0x3aMarkdownChunking1, error) {
-	var body CrawlerOptionsHeaderOnly0x3aMarkdownChunking1
+// AsCrawlerOptionsHeaderOnly0x3bEngine1 returns the union data inside the CrawlerOptionsHeaderOnly0x3b_Engine as a CrawlerOptionsHeaderOnly0x3bEngine1
+func (t CrawlerOptionsHeaderOnly0x3b_Engine) AsCrawlerOptionsHeaderOnly0x3bEngine1() (CrawlerOptionsHeaderOnly0x3bEngine1, error) {
+	var body CrawlerOptionsHeaderOnly0x3bEngine1
 	err := json.Unmarshal(t.union, &body)
 	return body, err
 }
 
-// FromCrawlerOptionsHeaderOnly0x3aMarkdownChunking1 overwrites any union data inside the CrawlerOptionsHeaderOnly0x3a_MarkdownChunking as the provided CrawlerOptionsHeaderOnly0x3aMarkdownChunking1
-func (t *CrawlerOptionsHeaderOnly0x3a_MarkdownChunking) FromCrawlerOptionsHeaderOnly0x3aMarkdownChunking1(v CrawlerOptionsHeaderOnly0x3aMarkdownChunking1) error {
+// FromCrawlerOptionsHeaderOnly0x3bEngine1 overwrites any union data inside the CrawlerOptionsHeaderOnly0x3b_Engine as the provided CrawlerOptionsHeaderOnly0x3bEngine1
+func (t *CrawlerOptionsHeaderOnly0x3b_Engine) FromCrawlerOptionsHeaderOnly0x3bEngine1(v CrawlerOptionsHeaderOnly0x3bEngine1) error {
 	b, err := json.Marshal(v)
 	t.union = b
 	return err
 }
 
-// MergeCrawlerOptionsHeaderOnly0x3aMarkdownChunking1 performs a merge with any union data inside the CrawlerOptionsHeaderOnly0x3a_MarkdownChunking, using the provided CrawlerOptionsHeaderOnly0x3aMarkdownChunking1
-func (t *CrawlerOptionsHeaderOnly0x3a_MarkdownChunking) MergeCrawlerOptionsHeaderOnly0x3aMarkdownChunking1(v CrawlerOptionsHeaderOnly0x3aMarkdownChunking1) error {
+// MergeCrawlerOptionsHeaderOnly0x3bEngine1 performs a merge with any union data inside the CrawlerOptionsHeaderOnly0x3b_Engine, using the provided CrawlerOptionsHeaderOnly0x3bEngine1
+func (t *CrawlerOptionsHeaderOnly0x3b_Engine) MergeCrawlerOptionsHeaderOnly0x3bEngine1(v CrawlerOptionsHeaderOnly0x3bEngine1) error {
 	b, err := json.Marshal(v)
 	if err != nil {
 		return err
@@ -10183,32 +9917,32 @@ func (t *CrawlerOptionsHeaderOnly0x3a_MarkdownChunking) MergeCrawlerOptionsHeade
 	return err
 }
 
-func (t CrawlerOptionsHeaderOnly0x3a_MarkdownChunking) MarshalJSON() ([]byte, error) {
+func (t CrawlerOptionsHeaderOnly0x3b_Engine) MarshalJSON() ([]byte, error) {
 	b, err := t.union.MarshalJSON()
 	return b, err
 }
 
-func (t *CrawlerOptionsHeaderOnly0x3a_MarkdownChunking) UnmarshalJSON(b []byte) error {
+func (t *CrawlerOptionsHeaderOnly0x3b_Engine) UnmarshalJSON(b []byte) error {
 	err := t.union.UnmarshalJSON(b)
 	return err
 }
 
-// AsCrawlerOptionsHeaderOnly0x3aNoGfm0 returns the union data inside the CrawlerOptionsHeaderOnly0x3a_NoGfm as a CrawlerOptionsHeaderOnly0x3aNoGfm0
-func (t CrawlerOptionsHeaderOnly0x3a_NoGfm) AsCrawlerOptionsHeaderOnly0x3aNoGfm0() (CrawlerOptionsHeaderOnly0x3aNoGfm0, error) {
-	var body CrawlerOptionsHeaderOnly0x3aNoGfm0
+// AsFancyFile0x0e returns the union data inside the CrawlerOptionsHeaderOnly0x3b_File as a FancyFile0x0e
+func (t CrawlerOptionsHeaderOnly0x3b_File) AsFancyFile0x0e() (FancyFile0x0e, error) {
+	var body FancyFile0x0e
 	err := json.Unmarshal(t.union, &body)
 	return body, err
 }
 
-// FromCrawlerOptionsHeaderOnly0x3aNoGfm0 overwrites any union data inside the CrawlerOptionsHeaderOnly0x3a_NoGfm as the provided CrawlerOptionsHeaderOnly0x3aNoGfm0
-func (t *CrawlerOptionsHeaderOnly0x3a_NoGfm) FromCrawlerOptionsHeaderOnly0x3aNoGfm0(v CrawlerOptionsHeaderOnly0x3aNoGfm0) error {
+// FromFancyFile0x0e overwrites any union data inside the CrawlerOptionsHeaderOnly0x3b_File as the provided FancyFile0x0e
+func (t *CrawlerOptionsHeaderOnly0x3b_File) FromFancyFile0x0e(v FancyFile0x0e) error {
 	b, err := json.Marshal(v)
 	t.union = b
 	return err
 }
 
-// MergeCrawlerOptionsHeaderOnly0x3aNoGfm0 performs a merge with any union data inside the CrawlerOptionsHeaderOnly0x3a_NoGfm, using the provided CrawlerOptionsHeaderOnly0x3aNoGfm0
-func (t *CrawlerOptionsHeaderOnly0x3a_NoGfm) MergeCrawlerOptionsHeaderOnly0x3aNoGfm0(v CrawlerOptionsHeaderOnly0x3aNoGfm0) error {
+// MergeFancyFile0x0e performs a merge with any union data inside the CrawlerOptionsHeaderOnly0x3b_File, using the provided FancyFile0x0e
+func (t *CrawlerOptionsHeaderOnly0x3b_File) MergeFancyFile0x0e(v FancyFile0x0e) error {
 	b, err := json.Marshal(v)
 	if err != nil {
 		return err
@@ -10219,22 +9953,22 @@ func (t *CrawlerOptionsHeaderOnly0x3a_NoGfm) MergeCrawlerOptionsHeaderOnly0x3aNo
 	return err
 }
 
-// AsCrawlerOptionsHeaderOnly0x3aNoGfm1 returns the union data inside the CrawlerOptionsHeaderOnly0x3a_NoGfm as a CrawlerOptionsHeaderOnly0x3aNoGfm1
-func (t CrawlerOptionsHeaderOnly0x3a_NoGfm) AsCrawlerOptionsHeaderOnly0x3aNoGfm1() (CrawlerOptionsHeaderOnly0x3aNoGfm1, error) {
-	var body CrawlerOptionsHeaderOnly0x3aNoGfm1
+// AsCrawlerOptionsHeaderOnly0x3bFile1 returns the union data inside the CrawlerOptionsHeaderOnly0x3b_File as a CrawlerOptionsHeaderOnly0x3bFile1
+func (t CrawlerOptionsHeaderOnly0x3b_File) AsCrawlerOptionsHeaderOnly0x3bFile1() (CrawlerOptionsHeaderOnly0x3bFile1, error) {
+	var body CrawlerOptionsHeaderOnly0x3bFile1
 	err := json.Unmarshal(t.union, &body)
 	return body, err
 }
 
-// FromCrawlerOptionsHeaderOnly0x3aNoGfm1 overwrites any union data inside the CrawlerOptionsHeaderOnly0x3a_NoGfm as the provided CrawlerOptionsHeaderOnly0x3aNoGfm1
-func (t *CrawlerOptionsHeaderOnly0x3a_NoGfm) FromCrawlerOptionsHeaderOnly0x3aNoGfm1(v CrawlerOptionsHeaderOnly0x3aNoGfm1) error {
+// FromCrawlerOptionsHeaderOnly0x3bFile1 overwrites any union data inside the CrawlerOptionsHeaderOnly0x3b_File as the provided CrawlerOptionsHeaderOnly0x3bFile1
+func (t *CrawlerOptionsHeaderOnly0x3b_File) FromCrawlerOptionsHeaderOnly0x3bFile1(v CrawlerOptionsHeaderOnly0x3bFile1) error {
 	b, err := json.Marshal(v)
 	t.union = b
 	return err
 }
 
-// MergeCrawlerOptionsHeaderOnly0x3aNoGfm1 performs a merge with any union data inside the CrawlerOptionsHeaderOnly0x3a_NoGfm, using the provided CrawlerOptionsHeaderOnly0x3aNoGfm1
-func (t *CrawlerOptionsHeaderOnly0x3a_NoGfm) MergeCrawlerOptionsHeaderOnly0x3aNoGfm1(v CrawlerOptionsHeaderOnly0x3aNoGfm1) error {
+// MergeCrawlerOptionsHeaderOnly0x3bFile1 performs a merge with any union data inside the CrawlerOptionsHeaderOnly0x3b_File, using the provided CrawlerOptionsHeaderOnly0x3bFile1
+func (t *CrawlerOptionsHeaderOnly0x3b_File) MergeCrawlerOptionsHeaderOnly0x3bFile1(v CrawlerOptionsHeaderOnly0x3bFile1) error {
 	b, err := json.Marshal(v)
 	if err != nil {
 		return err
@@ -10245,32 +9979,32 @@ func (t *CrawlerOptionsHeaderOnly0x3a_NoGfm) MergeCrawlerOptionsHeaderOnly0x3aNo
 	return err
 }
 
-func (t CrawlerOptionsHeaderOnly0x3a_NoGfm) MarshalJSON() ([]byte, error) {
+func (t CrawlerOptionsHeaderOnly0x3b_File) MarshalJSON() ([]byte, error) {
 	b, err := t.union.MarshalJSON()
 	return b, err
 }
 
-func (t *CrawlerOptionsHeaderOnly0x3a_NoGfm) UnmarshalJSON(b []byte) error {
+func (t *CrawlerOptionsHeaderOnly0x3b_File) UnmarshalJSON(b []byte) error {
 	err := t.union.UnmarshalJSON(b)
 	return err
 }
 
-// AsCrawlerOptionsHeaderOnly0x3aPdf0 returns the union data inside the CrawlerOptionsHeaderOnly0x3a_Pdf as a CrawlerOptionsHeaderOnly0x3aPdf0
-func (t CrawlerOptionsHeaderOnly0x3a_Pdf) AsCrawlerOptionsHeaderOnly0x3aPdf0() (CrawlerOptionsHeaderOnly0x3aPdf0, error) {
-	var body CrawlerOptionsHeaderOnly0x3aPdf0
+// AsEnum0x27 returns the union data inside the CrawlerOptionsHeaderOnly0x3b_MarkdownChunking as a Enum0x27
+func (t CrawlerOptionsHeaderOnly0x3b_MarkdownChunking) AsEnum0x27() (Enum0x27, error) {
+	var body Enum0x27
 	err := json.Unmarshal(t.union, &body)
 	return body, err
 }
 
-// FromCrawlerOptionsHeaderOnly0x3aPdf0 overwrites any union data inside the CrawlerOptionsHeaderOnly0x3a_Pdf as the provided CrawlerOptionsHeaderOnly0x3aPdf0
-func (t *CrawlerOptionsHeaderOnly0x3a_Pdf) FromCrawlerOptionsHeaderOnly0x3aPdf0(v CrawlerOptionsHeaderOnly0x3aPdf0) error {
+// FromEnum0x27 overwrites any union data inside the CrawlerOptionsHeaderOnly0x3b_MarkdownChunking as the provided Enum0x27
+func (t *CrawlerOptionsHeaderOnly0x3b_MarkdownChunking) FromEnum0x27(v Enum0x27) error {
 	b, err := json.Marshal(v)
 	t.union = b
 	return err
 }
 
-// MergeCrawlerOptionsHeaderOnly0x3aPdf0 performs a merge with any union data inside the CrawlerOptionsHeaderOnly0x3a_Pdf, using the provided CrawlerOptionsHeaderOnly0x3aPdf0
-func (t *CrawlerOptionsHeaderOnly0x3a_Pdf) MergeCrawlerOptionsHeaderOnly0x3aPdf0(v CrawlerOptionsHeaderOnly0x3aPdf0) error {
+// MergeEnum0x27 performs a merge with any union data inside the CrawlerOptionsHeaderOnly0x3b_MarkdownChunking, using the provided Enum0x27
+func (t *CrawlerOptionsHeaderOnly0x3b_MarkdownChunking) MergeEnum0x27(v Enum0x27) error {
 	b, err := json.Marshal(v)
 	if err != nil {
 		return err
@@ -10281,22 +10015,22 @@ func (t *CrawlerOptionsHeaderOnly0x3a_Pdf) MergeCrawlerOptionsHeaderOnly0x3aPdf0
 	return err
 }
 
-// AsCrawlerOptionsHeaderOnly0x3aPdf1 returns the union data inside the CrawlerOptionsHeaderOnly0x3a_Pdf as a CrawlerOptionsHeaderOnly0x3aPdf1
-func (t CrawlerOptionsHeaderOnly0x3a_Pdf) AsCrawlerOptionsHeaderOnly0x3aPdf1() (CrawlerOptionsHeaderOnly0x3aPdf1, error) {
-	var body CrawlerOptionsHeaderOnly0x3aPdf1
+// AsCrawlerOptionsHeaderOnly0x3bMarkdownChunking1 returns the union data inside the CrawlerOptionsHeaderOnly0x3b_MarkdownChunking as a CrawlerOptionsHeaderOnly0x3bMarkdownChunking1
+func (t CrawlerOptionsHeaderOnly0x3b_MarkdownChunking) AsCrawlerOptionsHeaderOnly0x3bMarkdownChunking1() (CrawlerOptionsHeaderOnly0x3bMarkdownChunking1, error) {
+	var body CrawlerOptionsHeaderOnly0x3bMarkdownChunking1
 	err := json.Unmarshal(t.union, &body)
 	return body, err
 }
 
-// FromCrawlerOptionsHeaderOnly0x3aPdf1 overwrites any union data inside the CrawlerOptionsHeaderOnly0x3a_Pdf as the provided CrawlerOptionsHeaderOnly0x3aPdf1
-func (t *CrawlerOptionsHeaderOnly0x3a_Pdf) FromCrawlerOptionsHeaderOnly0x3aPdf1(v CrawlerOptionsHeaderOnly0x3aPdf1) error {
+// FromCrawlerOptionsHeaderOnly0x3bMarkdownChunking1 overwrites any union data inside the CrawlerOptionsHeaderOnly0x3b_MarkdownChunking as the provided CrawlerOptionsHeaderOnly0x3bMarkdownChunking1
+func (t *CrawlerOptionsHeaderOnly0x3b_MarkdownChunking) FromCrawlerOptionsHeaderOnly0x3bMarkdownChunking1(v CrawlerOptionsHeaderOnly0x3bMarkdownChunking1) error {
 	b, err := json.Marshal(v)
 	t.union = b
 	return err
 }
 
-// MergeCrawlerOptionsHeaderOnly0x3aPdf1 performs a merge with any union data inside the CrawlerOptionsHeaderOnly0x3a_Pdf, using the provided CrawlerOptionsHeaderOnly0x3aPdf1
-func (t *CrawlerOptionsHeaderOnly0x3a_Pdf) MergeCrawlerOptionsHeaderOnly0x3aPdf1(v CrawlerOptionsHeaderOnly0x3aPdf1) error {
+// MergeCrawlerOptionsHeaderOnly0x3bMarkdownChunking1 performs a merge with any union data inside the CrawlerOptionsHeaderOnly0x3b_MarkdownChunking, using the provided CrawlerOptionsHeaderOnly0x3bMarkdownChunking1
+func (t *CrawlerOptionsHeaderOnly0x3b_MarkdownChunking) MergeCrawlerOptionsHeaderOnly0x3bMarkdownChunking1(v CrawlerOptionsHeaderOnly0x3bMarkdownChunking1) error {
 	b, err := json.Marshal(v)
 	if err != nil {
 		return err
@@ -10307,32 +10041,32 @@ func (t *CrawlerOptionsHeaderOnly0x3a_Pdf) MergeCrawlerOptionsHeaderOnly0x3aPdf1
 	return err
 }
 
-func (t CrawlerOptionsHeaderOnly0x3a_Pdf) MarshalJSON() ([]byte, error) {
+func (t CrawlerOptionsHeaderOnly0x3b_MarkdownChunking) MarshalJSON() ([]byte, error) {
 	b, err := t.union.MarshalJSON()
 	return b, err
 }
 
-func (t *CrawlerOptionsHeaderOnly0x3a_Pdf) UnmarshalJSON(b []byte) error {
+func (t *CrawlerOptionsHeaderOnly0x3b_MarkdownChunking) UnmarshalJSON(b []byte) error {
 	err := t.union.UnmarshalJSON(b)
 	return err
 }
 
-// AsCrawlerOptionsHeaderOnly0x3aRespondWith0 returns the union data inside the CrawlerOptionsHeaderOnly0x3a_RespondWith as a CrawlerOptionsHeaderOnly0x3aRespondWith0
-func (t CrawlerOptionsHeaderOnly0x3a_RespondWith) AsCrawlerOptionsHeaderOnly0x3aRespondWith0() (CrawlerOptionsHeaderOnly0x3aRespondWith0, error) {
-	var body CrawlerOptionsHeaderOnly0x3aRespondWith0
+// AsPseudoBoolean0x11 returns the union data inside the CrawlerOptionsHeaderOnly0x3b_NoGfm as a PseudoBoolean0x11
+func (t CrawlerOptionsHeaderOnly0x3b_NoGfm) AsPseudoBoolean0x11() (PseudoBoolean0x11, error) {
+	var body PseudoBoolean0x11
 	err := json.Unmarshal(t.union, &body)
 	return body, err
 }
 
-// FromCrawlerOptionsHeaderOnly0x3aRespondWith0 overwrites any union data inside the CrawlerOptionsHeaderOnly0x3a_RespondWith as the provided CrawlerOptionsHeaderOnly0x3aRespondWith0
-func (t *CrawlerOptionsHeaderOnly0x3a_RespondWith) FromCrawlerOptionsHeaderOnly0x3aRespondWith0(v CrawlerOptionsHeaderOnly0x3aRespondWith0) error {
+// FromPseudoBoolean0x11 overwrites any union data inside the CrawlerOptionsHeaderOnly0x3b_NoGfm as the provided PseudoBoolean0x11
+func (t *CrawlerOptionsHeaderOnly0x3b_NoGfm) FromPseudoBoolean0x11(v PseudoBoolean0x11) error {
 	b, err := json.Marshal(v)
 	t.union = b
 	return err
 }
 
-// MergeCrawlerOptionsHeaderOnly0x3aRespondWith0 performs a merge with any union data inside the CrawlerOptionsHeaderOnly0x3a_RespondWith, using the provided CrawlerOptionsHeaderOnly0x3aRespondWith0
-func (t *CrawlerOptionsHeaderOnly0x3a_RespondWith) MergeCrawlerOptionsHeaderOnly0x3aRespondWith0(v CrawlerOptionsHeaderOnly0x3aRespondWith0) error {
+// MergePseudoBoolean0x11 performs a merge with any union data inside the CrawlerOptionsHeaderOnly0x3b_NoGfm, using the provided PseudoBoolean0x11
+func (t *CrawlerOptionsHeaderOnly0x3b_NoGfm) MergePseudoBoolean0x11(v PseudoBoolean0x11) error {
 	b, err := json.Marshal(v)
 	if err != nil {
 		return err
@@ -10343,22 +10077,22 @@ func (t *CrawlerOptionsHeaderOnly0x3a_RespondWith) MergeCrawlerOptionsHeaderOnly
 	return err
 }
 
-// AsCrawlerOptionsHeaderOnly0x3aRespondWith1 returns the union data inside the CrawlerOptionsHeaderOnly0x3a_RespondWith as a CrawlerOptionsHeaderOnly0x3aRespondWith1
-func (t CrawlerOptionsHeaderOnly0x3a_RespondWith) AsCrawlerOptionsHeaderOnly0x3aRespondWith1() (CrawlerOptionsHeaderOnly0x3aRespondWith1, error) {
-	var body CrawlerOptionsHeaderOnly0x3aRespondWith1
+// AsCrawlerOptionsHeaderOnly0x3bNoGfm1 returns the union data inside the CrawlerOptionsHeaderOnly0x3b_NoGfm as a CrawlerOptionsHeaderOnly0x3bNoGfm1
+func (t CrawlerOptionsHeaderOnly0x3b_NoGfm) AsCrawlerOptionsHeaderOnly0x3bNoGfm1() (CrawlerOptionsHeaderOnly0x3bNoGfm1, error) {
+	var body CrawlerOptionsHeaderOnly0x3bNoGfm1
 	err := json.Unmarshal(t.union, &body)
 	return body, err
 }
 
-// FromCrawlerOptionsHeaderOnly0x3aRespondWith1 overwrites any union data inside the CrawlerOptionsHeaderOnly0x3a_RespondWith as the provided CrawlerOptionsHeaderOnly0x3aRespondWith1
-func (t *CrawlerOptionsHeaderOnly0x3a_RespondWith) FromCrawlerOptionsHeaderOnly0x3aRespondWith1(v CrawlerOptionsHeaderOnly0x3aRespondWith1) error {
+// FromCrawlerOptionsHeaderOnly0x3bNoGfm1 overwrites any union data inside the CrawlerOptionsHeaderOnly0x3b_NoGfm as the provided CrawlerOptionsHeaderOnly0x3bNoGfm1
+func (t *CrawlerOptionsHeaderOnly0x3b_NoGfm) FromCrawlerOptionsHeaderOnly0x3bNoGfm1(v CrawlerOptionsHeaderOnly0x3bNoGfm1) error {
 	b, err := json.Marshal(v)
 	t.union = b
 	return err
 }
 
-// MergeCrawlerOptionsHeaderOnly0x3aRespondWith1 performs a merge with any union data inside the CrawlerOptionsHeaderOnly0x3a_RespondWith, using the provided CrawlerOptionsHeaderOnly0x3aRespondWith1
-func (t *CrawlerOptionsHeaderOnly0x3a_RespondWith) MergeCrawlerOptionsHeaderOnly0x3aRespondWith1(v CrawlerOptionsHeaderOnly0x3aRespondWith1) error {
+// MergeCrawlerOptionsHeaderOnly0x3bNoGfm1 performs a merge with any union data inside the CrawlerOptionsHeaderOnly0x3b_NoGfm, using the provided CrawlerOptionsHeaderOnly0x3bNoGfm1
+func (t *CrawlerOptionsHeaderOnly0x3b_NoGfm) MergeCrawlerOptionsHeaderOnly0x3bNoGfm1(v CrawlerOptionsHeaderOnly0x3bNoGfm1) error {
 	b, err := json.Marshal(v)
 	if err != nil {
 		return err
@@ -10369,32 +10103,32 @@ func (t *CrawlerOptionsHeaderOnly0x3a_RespondWith) MergeCrawlerOptionsHeaderOnly
 	return err
 }
 
-func (t CrawlerOptionsHeaderOnly0x3a_RespondWith) MarshalJSON() ([]byte, error) {
+func (t CrawlerOptionsHeaderOnly0x3b_NoGfm) MarshalJSON() ([]byte, error) {
 	b, err := t.union.MarshalJSON()
 	return b, err
 }
 
-func (t *CrawlerOptionsHeaderOnly0x3a_RespondWith) UnmarshalJSON(b []byte) error {
+func (t *CrawlerOptionsHeaderOnly0x3b_NoGfm) UnmarshalJSON(b []byte) error {
 	err := t.union.UnmarshalJSON(b)
 	return err
 }
 
-// AsCrawlerOptionsHeaderOnly0x3aSetCookies0 returns the union data inside the CrawlerOptionsHeaderOnly0x3a_SetCookies_Item as a CrawlerOptionsHeaderOnly0x3aSetCookies0
-func (t CrawlerOptionsHeaderOnly0x3a_SetCookies_Item) AsCrawlerOptionsHeaderOnly0x3aSetCookies0() (CrawlerOptionsHeaderOnly0x3aSetCookies0, error) {
-	var body CrawlerOptionsHeaderOnly0x3aSetCookies0
+// AsFancyFile0x0e returns the union data inside the CrawlerOptionsHeaderOnly0x3b_Pdf as a FancyFile0x0e
+func (t CrawlerOptionsHeaderOnly0x3b_Pdf) AsFancyFile0x0e() (FancyFile0x0e, error) {
+	var body FancyFile0x0e
 	err := json.Unmarshal(t.union, &body)
 	return body, err
 }
 
-// FromCrawlerOptionsHeaderOnly0x3aSetCookies0 overwrites any union data inside the CrawlerOptionsHeaderOnly0x3a_SetCookies_Item as the provided CrawlerOptionsHeaderOnly0x3aSetCookies0
-func (t *CrawlerOptionsHeaderOnly0x3a_SetCookies_Item) FromCrawlerOptionsHeaderOnly0x3aSetCookies0(v CrawlerOptionsHeaderOnly0x3aSetCookies0) error {
+// FromFancyFile0x0e overwrites any union data inside the CrawlerOptionsHeaderOnly0x3b_Pdf as the provided FancyFile0x0e
+func (t *CrawlerOptionsHeaderOnly0x3b_Pdf) FromFancyFile0x0e(v FancyFile0x0e) error {
 	b, err := json.Marshal(v)
 	t.union = b
 	return err
 }
 
-// MergeCrawlerOptionsHeaderOnly0x3aSetCookies0 performs a merge with any union data inside the CrawlerOptionsHeaderOnly0x3a_SetCookies_Item, using the provided CrawlerOptionsHeaderOnly0x3aSetCookies0
-func (t *CrawlerOptionsHeaderOnly0x3a_SetCookies_Item) MergeCrawlerOptionsHeaderOnly0x3aSetCookies0(v CrawlerOptionsHeaderOnly0x3aSetCookies0) error {
+// MergeFancyFile0x0e performs a merge with any union data inside the CrawlerOptionsHeaderOnly0x3b_Pdf, using the provided FancyFile0x0e
+func (t *CrawlerOptionsHeaderOnly0x3b_Pdf) MergeFancyFile0x0e(v FancyFile0x0e) error {
 	b, err := json.Marshal(v)
 	if err != nil {
 		return err
@@ -10405,22 +10139,22 @@ func (t *CrawlerOptionsHeaderOnly0x3a_SetCookies_Item) MergeCrawlerOptionsHeader
 	return err
 }
 
-// AsCrawlerOptionsHeaderOnly0x3aSetCookies1 returns the union data inside the CrawlerOptionsHeaderOnly0x3a_SetCookies_Item as a CrawlerOptionsHeaderOnly0x3aSetCookies1
-func (t CrawlerOptionsHeaderOnly0x3a_SetCookies_Item) AsCrawlerOptionsHeaderOnly0x3aSetCookies1() (CrawlerOptionsHeaderOnly0x3aSetCookies1, error) {
-	var body CrawlerOptionsHeaderOnly0x3aSetCookies1
+// AsCrawlerOptionsHeaderOnly0x3bPdf1 returns the union data inside the CrawlerOptionsHeaderOnly0x3b_Pdf as a CrawlerOptionsHeaderOnly0x3bPdf1
+func (t CrawlerOptionsHeaderOnly0x3b_Pdf) AsCrawlerOptionsHeaderOnly0x3bPdf1() (CrawlerOptionsHeaderOnly0x3bPdf1, error) {
+	var body CrawlerOptionsHeaderOnly0x3bPdf1
 	err := json.Unmarshal(t.union, &body)
 	return body, err
 }
 
-// FromCrawlerOptionsHeaderOnly0x3aSetCookies1 overwrites any union data inside the CrawlerOptionsHeaderOnly0x3a_SetCookies_Item as the provided CrawlerOptionsHeaderOnly0x3aSetCookies1
-func (t *CrawlerOptionsHeaderOnly0x3a_SetCookies_Item) FromCrawlerOptionsHeaderOnly0x3aSetCookies1(v CrawlerOptionsHeaderOnly0x3aSetCookies1) error {
+// FromCrawlerOptionsHeaderOnly0x3bPdf1 overwrites any union data inside the CrawlerOptionsHeaderOnly0x3b_Pdf as the provided CrawlerOptionsHeaderOnly0x3bPdf1
+func (t *CrawlerOptionsHeaderOnly0x3b_Pdf) FromCrawlerOptionsHeaderOnly0x3bPdf1(v CrawlerOptionsHeaderOnly0x3bPdf1) error {
 	b, err := json.Marshal(v)
 	t.union = b
 	return err
 }
 
-// MergeCrawlerOptionsHeaderOnly0x3aSetCookies1 performs a merge with any union data inside the CrawlerOptionsHeaderOnly0x3a_SetCookies_Item, using the provided CrawlerOptionsHeaderOnly0x3aSetCookies1
-func (t *CrawlerOptionsHeaderOnly0x3a_SetCookies_Item) MergeCrawlerOptionsHeaderOnly0x3aSetCookies1(v CrawlerOptionsHeaderOnly0x3aSetCookies1) error {
+// MergeCrawlerOptionsHeaderOnly0x3bPdf1 performs a merge with any union data inside the CrawlerOptionsHeaderOnly0x3b_Pdf, using the provided CrawlerOptionsHeaderOnly0x3bPdf1
+func (t *CrawlerOptionsHeaderOnly0x3b_Pdf) MergeCrawlerOptionsHeaderOnly0x3bPdf1(v CrawlerOptionsHeaderOnly0x3bPdf1) error {
 	b, err := json.Marshal(v)
 	if err != nil {
 		return err
@@ -10431,32 +10165,32 @@ func (t *CrawlerOptionsHeaderOnly0x3a_SetCookies_Item) MergeCrawlerOptionsHeader
 	return err
 }
 
-func (t CrawlerOptionsHeaderOnly0x3a_SetCookies_Item) MarshalJSON() ([]byte, error) {
+func (t CrawlerOptionsHeaderOnly0x3b_Pdf) MarshalJSON() ([]byte, error) {
 	b, err := t.union.MarshalJSON()
 	return b, err
 }
 
-func (t *CrawlerOptionsHeaderOnly0x3a_SetCookies_Item) UnmarshalJSON(b []byte) error {
+func (t *CrawlerOptionsHeaderOnly0x3b_Pdf) UnmarshalJSON(b []byte) error {
 	err := t.union.UnmarshalJSON(b)
 	return err
 }
 
-// AsCrawlerOptionsHeaderOnly0x3aWithIframe0 returns the union data inside the CrawlerOptionsHeaderOnly0x3a_WithIframe as a CrawlerOptionsHeaderOnly0x3aWithIframe0
-func (t CrawlerOptionsHeaderOnly0x3a_WithIframe) AsCrawlerOptionsHeaderOnly0x3aWithIframe0() (CrawlerOptionsHeaderOnly0x3aWithIframe0, error) {
-	var body CrawlerOptionsHeaderOnly0x3aWithIframe0
+// AsEnum0x10 returns the union data inside the CrawlerOptionsHeaderOnly0x3b_RespondWith as a Enum0x10
+func (t CrawlerOptionsHeaderOnly0x3b_RespondWith) AsEnum0x10() (Enum0x10, error) {
+	var body Enum0x10
 	err := json.Unmarshal(t.union, &body)
 	return body, err
 }
 
-// FromCrawlerOptionsHeaderOnly0x3aWithIframe0 overwrites any union data inside the CrawlerOptionsHeaderOnly0x3a_WithIframe as the provided CrawlerOptionsHeaderOnly0x3aWithIframe0
-func (t *CrawlerOptionsHeaderOnly0x3a_WithIframe) FromCrawlerOptionsHeaderOnly0x3aWithIframe0(v CrawlerOptionsHeaderOnly0x3aWithIframe0) error {
+// FromEnum0x10 overwrites any union data inside the CrawlerOptionsHeaderOnly0x3b_RespondWith as the provided Enum0x10
+func (t *CrawlerOptionsHeaderOnly0x3b_RespondWith) FromEnum0x10(v Enum0x10) error {
 	b, err := json.Marshal(v)
 	t.union = b
 	return err
 }
 
-// MergeCrawlerOptionsHeaderOnly0x3aWithIframe0 performs a merge with any union data inside the CrawlerOptionsHeaderOnly0x3a_WithIframe, using the provided CrawlerOptionsHeaderOnly0x3aWithIframe0
-func (t *CrawlerOptionsHeaderOnly0x3a_WithIframe) MergeCrawlerOptionsHeaderOnly0x3aWithIframe0(v CrawlerOptionsHeaderOnly0x3aWithIframe0) error {
+// MergeEnum0x10 performs a merge with any union data inside the CrawlerOptionsHeaderOnly0x3b_RespondWith, using the provided Enum0x10
+func (t *CrawlerOptionsHeaderOnly0x3b_RespondWith) MergeEnum0x10(v Enum0x10) error {
 	b, err := json.Marshal(v)
 	if err != nil {
 		return err
@@ -10467,22 +10201,22 @@ func (t *CrawlerOptionsHeaderOnly0x3a_WithIframe) MergeCrawlerOptionsHeaderOnly0
 	return err
 }
 
-// AsCrawlerOptionsHeaderOnly0x3aWithIframe1 returns the union data inside the CrawlerOptionsHeaderOnly0x3a_WithIframe as a CrawlerOptionsHeaderOnly0x3aWithIframe1
-func (t CrawlerOptionsHeaderOnly0x3a_WithIframe) AsCrawlerOptionsHeaderOnly0x3aWithIframe1() (CrawlerOptionsHeaderOnly0x3aWithIframe1, error) {
-	var body CrawlerOptionsHeaderOnly0x3aWithIframe1
+// AsCrawlerOptionsHeaderOnly0x3bRespondWith1 returns the union data inside the CrawlerOptionsHeaderOnly0x3b_RespondWith as a CrawlerOptionsHeaderOnly0x3bRespondWith1
+func (t CrawlerOptionsHeaderOnly0x3b_RespondWith) AsCrawlerOptionsHeaderOnly0x3bRespondWith1() (CrawlerOptionsHeaderOnly0x3bRespondWith1, error) {
+	var body CrawlerOptionsHeaderOnly0x3bRespondWith1
 	err := json.Unmarshal(t.union, &body)
 	return body, err
 }
 
-// FromCrawlerOptionsHeaderOnly0x3aWithIframe1 overwrites any union data inside the CrawlerOptionsHeaderOnly0x3a_WithIframe as the provided CrawlerOptionsHeaderOnly0x3aWithIframe1
-func (t *CrawlerOptionsHeaderOnly0x3a_WithIframe) FromCrawlerOptionsHeaderOnly0x3aWithIframe1(v CrawlerOptionsHeaderOnly0x3aWithIframe1) error {
+// FromCrawlerOptionsHeaderOnly0x3bRespondWith1 overwrites any union data inside the CrawlerOptionsHeaderOnly0x3b_RespondWith as the provided CrawlerOptionsHeaderOnly0x3bRespondWith1
+func (t *CrawlerOptionsHeaderOnly0x3b_RespondWith) FromCrawlerOptionsHeaderOnly0x3bRespondWith1(v CrawlerOptionsHeaderOnly0x3bRespondWith1) error {
 	b, err := json.Marshal(v)
 	t.union = b
 	return err
 }
 
-// MergeCrawlerOptionsHeaderOnly0x3aWithIframe1 performs a merge with any union data inside the CrawlerOptionsHeaderOnly0x3a_WithIframe, using the provided CrawlerOptionsHeaderOnly0x3aWithIframe1
-func (t *CrawlerOptionsHeaderOnly0x3a_WithIframe) MergeCrawlerOptionsHeaderOnly0x3aWithIframe1(v CrawlerOptionsHeaderOnly0x3aWithIframe1) error {
+// MergeCrawlerOptionsHeaderOnly0x3bRespondWith1 performs a merge with any union data inside the CrawlerOptionsHeaderOnly0x3b_RespondWith, using the provided CrawlerOptionsHeaderOnly0x3bRespondWith1
+func (t *CrawlerOptionsHeaderOnly0x3b_RespondWith) MergeCrawlerOptionsHeaderOnly0x3bRespondWith1(v CrawlerOptionsHeaderOnly0x3bRespondWith1) error {
 	b, err := json.Marshal(v)
 	if err != nil {
 		return err
@@ -10493,32 +10227,32 @@ func (t *CrawlerOptionsHeaderOnly0x3a_WithIframe) MergeCrawlerOptionsHeaderOnly0
 	return err
 }
 
-func (t CrawlerOptionsHeaderOnly0x3a_WithIframe) MarshalJSON() ([]byte, error) {
+func (t CrawlerOptionsHeaderOnly0x3b_RespondWith) MarshalJSON() ([]byte, error) {
 	b, err := t.union.MarshalJSON()
 	return b, err
 }
 
-func (t *CrawlerOptionsHeaderOnly0x3a_WithIframe) UnmarshalJSON(b []byte) error {
+func (t *CrawlerOptionsHeaderOnly0x3b_RespondWith) UnmarshalJSON(b []byte) error {
 	err := t.union.UnmarshalJSON(b)
 	return err
 }
 
-// AsCrawlerOptionsHeaderOnly0x3aWithLinksSummary0 returns the union data inside the CrawlerOptionsHeaderOnly0x3a_WithLinksSummary as a CrawlerOptionsHeaderOnly0x3aWithLinksSummary0
-func (t CrawlerOptionsHeaderOnly0x3a_WithLinksSummary) AsCrawlerOptionsHeaderOnly0x3aWithLinksSummary0() (CrawlerOptionsHeaderOnly0x3aWithLinksSummary0, error) {
-	var body CrawlerOptionsHeaderOnly0x3aWithLinksSummary0
+// AsPseudoBoolean0x11 returns the union data inside the CrawlerOptionsHeaderOnly0x3b_RobotsTxt as a PseudoBoolean0x11
+func (t CrawlerOptionsHeaderOnly0x3b_RobotsTxt) AsPseudoBoolean0x11() (PseudoBoolean0x11, error) {
+	var body PseudoBoolean0x11
 	err := json.Unmarshal(t.union, &body)
 	return body, err
 }
 
-// FromCrawlerOptionsHeaderOnly0x3aWithLinksSummary0 overwrites any union data inside the CrawlerOptionsHeaderOnly0x3a_WithLinksSummary as the provided CrawlerOptionsHeaderOnly0x3aWithLinksSummary0
-func (t *CrawlerOptionsHeaderOnly0x3a_WithLinksSummary) FromCrawlerOptionsHeaderOnly0x3aWithLinksSummary0(v CrawlerOptionsHeaderOnly0x3aWithLinksSummary0) error {
+// FromPseudoBoolean0x11 overwrites any union data inside the CrawlerOptionsHeaderOnly0x3b_RobotsTxt as the provided PseudoBoolean0x11
+func (t *CrawlerOptionsHeaderOnly0x3b_RobotsTxt) FromPseudoBoolean0x11(v PseudoBoolean0x11) error {
 	b, err := json.Marshal(v)
 	t.union = b
 	return err
 }
 
-// MergeCrawlerOptionsHeaderOnly0x3aWithLinksSummary0 performs a merge with any union data inside the CrawlerOptionsHeaderOnly0x3a_WithLinksSummary, using the provided CrawlerOptionsHeaderOnly0x3aWithLinksSummary0
-func (t *CrawlerOptionsHeaderOnly0x3a_WithLinksSummary) MergeCrawlerOptionsHeaderOnly0x3aWithLinksSummary0(v CrawlerOptionsHeaderOnly0x3aWithLinksSummary0) error {
+// MergePseudoBoolean0x11 performs a merge with any union data inside the CrawlerOptionsHeaderOnly0x3b_RobotsTxt, using the provided PseudoBoolean0x11
+func (t *CrawlerOptionsHeaderOnly0x3b_RobotsTxt) MergePseudoBoolean0x11(v PseudoBoolean0x11) error {
 	b, err := json.Marshal(v)
 	if err != nil {
 		return err
@@ -10529,22 +10263,22 @@ func (t *CrawlerOptionsHeaderOnly0x3a_WithLinksSummary) MergeCrawlerOptionsHeade
 	return err
 }
 
-// AsCrawlerOptionsHeaderOnly0x3aWithLinksSummary1 returns the union data inside the CrawlerOptionsHeaderOnly0x3a_WithLinksSummary as a CrawlerOptionsHeaderOnly0x3aWithLinksSummary1
-func (t CrawlerOptionsHeaderOnly0x3a_WithLinksSummary) AsCrawlerOptionsHeaderOnly0x3aWithLinksSummary1() (CrawlerOptionsHeaderOnly0x3aWithLinksSummary1, error) {
-	var body CrawlerOptionsHeaderOnly0x3aWithLinksSummary1
+// AsCrawlerOptionsHeaderOnly0x3bRobotsTxt1 returns the union data inside the CrawlerOptionsHeaderOnly0x3b_RobotsTxt as a CrawlerOptionsHeaderOnly0x3bRobotsTxt1
+func (t CrawlerOptionsHeaderOnly0x3b_RobotsTxt) AsCrawlerOptionsHeaderOnly0x3bRobotsTxt1() (CrawlerOptionsHeaderOnly0x3bRobotsTxt1, error) {
+	var body CrawlerOptionsHeaderOnly0x3bRobotsTxt1
 	err := json.Unmarshal(t.union, &body)
 	return body, err
 }
 
-// FromCrawlerOptionsHeaderOnly0x3aWithLinksSummary1 overwrites any union data inside the CrawlerOptionsHeaderOnly0x3a_WithLinksSummary as the provided CrawlerOptionsHeaderOnly0x3aWithLinksSummary1
-func (t *CrawlerOptionsHeaderOnly0x3a_WithLinksSummary) FromCrawlerOptionsHeaderOnly0x3aWithLinksSummary1(v CrawlerOptionsHeaderOnly0x3aWithLinksSummary1) error {
+// FromCrawlerOptionsHeaderOnly0x3bRobotsTxt1 overwrites any union data inside the CrawlerOptionsHeaderOnly0x3b_RobotsTxt as the provided CrawlerOptionsHeaderOnly0x3bRobotsTxt1
+func (t *CrawlerOptionsHeaderOnly0x3b_RobotsTxt) FromCrawlerOptionsHeaderOnly0x3bRobotsTxt1(v CrawlerOptionsHeaderOnly0x3bRobotsTxt1) error {
 	b, err := json.Marshal(v)
 	t.union = b
 	return err
 }
 
-// MergeCrawlerOptionsHeaderOnly0x3aWithLinksSummary1 performs a merge with any union data inside the CrawlerOptionsHeaderOnly0x3a_WithLinksSummary, using the provided CrawlerOptionsHeaderOnly0x3aWithLinksSummary1
-func (t *CrawlerOptionsHeaderOnly0x3a_WithLinksSummary) MergeCrawlerOptionsHeaderOnly0x3aWithLinksSummary1(v CrawlerOptionsHeaderOnly0x3aWithLinksSummary1) error {
+// MergeCrawlerOptionsHeaderOnly0x3bRobotsTxt1 performs a merge with any union data inside the CrawlerOptionsHeaderOnly0x3b_RobotsTxt, using the provided CrawlerOptionsHeaderOnly0x3bRobotsTxt1
+func (t *CrawlerOptionsHeaderOnly0x3b_RobotsTxt) MergeCrawlerOptionsHeaderOnly0x3bRobotsTxt1(v CrawlerOptionsHeaderOnly0x3bRobotsTxt1) error {
 	b, err := json.Marshal(v)
 	if err != nil {
 		return err
@@ -10555,32 +10289,32 @@ func (t *CrawlerOptionsHeaderOnly0x3a_WithLinksSummary) MergeCrawlerOptionsHeade
 	return err
 }
 
-func (t CrawlerOptionsHeaderOnly0x3a_WithLinksSummary) MarshalJSON() ([]byte, error) {
+func (t CrawlerOptionsHeaderOnly0x3b_RobotsTxt) MarshalJSON() ([]byte, error) {
 	b, err := t.union.MarshalJSON()
 	return b, err
 }
 
-func (t *CrawlerOptionsHeaderOnly0x3a_WithLinksSummary) UnmarshalJSON(b []byte) error {
+func (t *CrawlerOptionsHeaderOnly0x3b_RobotsTxt) UnmarshalJSON(b []byte) error {
 	err := t.union.UnmarshalJSON(b)
 	return err
 }
 
-// AsFormattedPageDto0x42External0 returns the union data inside the FormattedPageDto0x42_External as a FormattedPageDto0x42External0
-func (t FormattedPageDto0x42_External) AsFormattedPageDto0x42External0() (FormattedPageDto0x42External0, error) {
-	var body FormattedPageDto0x42External0
+// AsCrawlerOptionsHeaderOnly0x3bSetCookies0 returns the union data inside the CrawlerOptionsHeaderOnly0x3b_SetCookies_Item as a CrawlerOptionsHeaderOnly0x3bSetCookies0
+func (t CrawlerOptionsHeaderOnly0x3b_SetCookies_Item) AsCrawlerOptionsHeaderOnly0x3bSetCookies0() (CrawlerOptionsHeaderOnly0x3bSetCookies0, error) {
+	var body CrawlerOptionsHeaderOnly0x3bSetCookies0
 	err := json.Unmarshal(t.union, &body)
 	return body, err
 }
 
-// FromFormattedPageDto0x42External0 overwrites any union data inside the FormattedPageDto0x42_External as the provided FormattedPageDto0x42External0
-func (t *FormattedPageDto0x42_External) FromFormattedPageDto0x42External0(v FormattedPageDto0x42External0) error {
+// FromCrawlerOptionsHeaderOnly0x3bSetCookies0 overwrites any union data inside the CrawlerOptionsHeaderOnly0x3b_SetCookies_Item as the provided CrawlerOptionsHeaderOnly0x3bSetCookies0
+func (t *CrawlerOptionsHeaderOnly0x3b_SetCookies_Item) FromCrawlerOptionsHeaderOnly0x3bSetCookies0(v CrawlerOptionsHeaderOnly0x3bSetCookies0) error {
 	b, err := json.Marshal(v)
 	t.union = b
 	return err
 }
 
-// MergeFormattedPageDto0x42External0 performs a merge with any union data inside the FormattedPageDto0x42_External, using the provided FormattedPageDto0x42External0
-func (t *FormattedPageDto0x42_External) MergeFormattedPageDto0x42External0(v FormattedPageDto0x42External0) error {
+// MergeCrawlerOptionsHeaderOnly0x3bSetCookies0 performs a merge with any union data inside the CrawlerOptionsHeaderOnly0x3b_SetCookies_Item, using the provided CrawlerOptionsHeaderOnly0x3bSetCookies0
+func (t *CrawlerOptionsHeaderOnly0x3b_SetCookies_Item) MergeCrawlerOptionsHeaderOnly0x3bSetCookies0(v CrawlerOptionsHeaderOnly0x3bSetCookies0) error {
 	b, err := json.Marshal(v)
 	if err != nil {
 		return err
@@ -10591,22 +10325,22 @@ func (t *FormattedPageDto0x42_External) MergeFormattedPageDto0x42External0(v For
 	return err
 }
 
-// AsFormattedPageDto0x42External1 returns the union data inside the FormattedPageDto0x42_External as a FormattedPageDto0x42External1
-func (t FormattedPageDto0x42_External) AsFormattedPageDto0x42External1() (FormattedPageDto0x42External1, error) {
-	var body FormattedPageDto0x42External1
+// AsCrawlerOptionsHeaderOnly0x3bSetCookies1 returns the union data inside the CrawlerOptionsHeaderOnly0x3b_SetCookies_Item as a CrawlerOptionsHeaderOnly0x3bSetCookies1
+func (t CrawlerOptionsHeaderOnly0x3b_SetCookies_Item) AsCrawlerOptionsHeaderOnly0x3bSetCookies1() (CrawlerOptionsHeaderOnly0x3bSetCookies1, error) {
+	var body CrawlerOptionsHeaderOnly0x3bSetCookies1
 	err := json.Unmarshal(t.union, &body)
 	return body, err
 }
 
-// FromFormattedPageDto0x42External1 overwrites any union data inside the FormattedPageDto0x42_External as the provided FormattedPageDto0x42External1
-func (t *FormattedPageDto0x42_External) FromFormattedPageDto0x42External1(v FormattedPageDto0x42External1) error {
+// FromCrawlerOptionsHeaderOnly0x3bSetCookies1 overwrites any union data inside the CrawlerOptionsHeaderOnly0x3b_SetCookies_Item as the provided CrawlerOptionsHeaderOnly0x3bSetCookies1
+func (t *CrawlerOptionsHeaderOnly0x3b_SetCookies_Item) FromCrawlerOptionsHeaderOnly0x3bSetCookies1(v CrawlerOptionsHeaderOnly0x3bSetCookies1) error {
 	b, err := json.Marshal(v)
 	t.union = b
 	return err
 }
 
-// MergeFormattedPageDto0x42External1 performs a merge with any union data inside the FormattedPageDto0x42_External, using the provided FormattedPageDto0x42External1
-func (t *FormattedPageDto0x42_External) MergeFormattedPageDto0x42External1(v FormattedPageDto0x42External1) error {
+// MergeCrawlerOptionsHeaderOnly0x3bSetCookies1 performs a merge with any union data inside the CrawlerOptionsHeaderOnly0x3b_SetCookies_Item, using the provided CrawlerOptionsHeaderOnly0x3bSetCookies1
+func (t *CrawlerOptionsHeaderOnly0x3b_SetCookies_Item) MergeCrawlerOptionsHeaderOnly0x3bSetCookies1(v CrawlerOptionsHeaderOnly0x3bSetCookies1) error {
 	b, err := json.Marshal(v)
 	if err != nil {
 		return err
@@ -10617,32 +10351,32 @@ func (t *FormattedPageDto0x42_External) MergeFormattedPageDto0x42External1(v For
 	return err
 }
 
-func (t FormattedPageDto0x42_External) MarshalJSON() ([]byte, error) {
+func (t CrawlerOptionsHeaderOnly0x3b_SetCookies_Item) MarshalJSON() ([]byte, error) {
 	b, err := t.union.MarshalJSON()
 	return b, err
 }
 
-func (t *FormattedPageDto0x42_External) UnmarshalJSON(b []byte) error {
+func (t *CrawlerOptionsHeaderOnly0x3b_SetCookies_Item) UnmarshalJSON(b []byte) error {
 	err := t.union.UnmarshalJSON(b)
 	return err
 }
 
-// AsFormattedPageDto0x42Images0 returns the union data inside the FormattedPageDto0x42_Images as a FormattedPageDto0x42Images0
-func (t FormattedPageDto0x42_Images) AsFormattedPageDto0x42Images0() (FormattedPageDto0x42Images0, error) {
-	var body FormattedPageDto0x42Images0
+// AsPseudoBoolean0x11 returns the union data inside the CrawlerOptionsHeaderOnly0x3b_WebBotAuth as a PseudoBoolean0x11
+func (t CrawlerOptionsHeaderOnly0x3b_WebBotAuth) AsPseudoBoolean0x11() (PseudoBoolean0x11, error) {
+	var body PseudoBoolean0x11
 	err := json.Unmarshal(t.union, &body)
 	return body, err
 }
 
-// FromFormattedPageDto0x42Images0 overwrites any union data inside the FormattedPageDto0x42_Images as the provided FormattedPageDto0x42Images0
-func (t *FormattedPageDto0x42_Images) FromFormattedPageDto0x42Images0(v FormattedPageDto0x42Images0) error {
+// FromPseudoBoolean0x11 overwrites any union data inside the CrawlerOptionsHeaderOnly0x3b_WebBotAuth as the provided PseudoBoolean0x11
+func (t *CrawlerOptionsHeaderOnly0x3b_WebBotAuth) FromPseudoBoolean0x11(v PseudoBoolean0x11) error {
 	b, err := json.Marshal(v)
 	t.union = b
 	return err
 }
 
-// MergeFormattedPageDto0x42Images0 performs a merge with any union data inside the FormattedPageDto0x42_Images, using the provided FormattedPageDto0x42Images0
-func (t *FormattedPageDto0x42_Images) MergeFormattedPageDto0x42Images0(v FormattedPageDto0x42Images0) error {
+// MergePseudoBoolean0x11 performs a merge with any union data inside the CrawlerOptionsHeaderOnly0x3b_WebBotAuth, using the provided PseudoBoolean0x11
+func (t *CrawlerOptionsHeaderOnly0x3b_WebBotAuth) MergePseudoBoolean0x11(v PseudoBoolean0x11) error {
 	b, err := json.Marshal(v)
 	if err != nil {
 		return err
@@ -10653,22 +10387,22 @@ func (t *FormattedPageDto0x42_Images) MergeFormattedPageDto0x42Images0(v Formatt
 	return err
 }
 
-// AsFormattedPageDto0x42Images1 returns the union data inside the FormattedPageDto0x42_Images as a FormattedPageDto0x42Images1
-func (t FormattedPageDto0x42_Images) AsFormattedPageDto0x42Images1() (FormattedPageDto0x42Images1, error) {
-	var body FormattedPageDto0x42Images1
+// AsEnum0x16 returns the union data inside the CrawlerOptionsHeaderOnly0x3b_WebBotAuth as a Enum0x16
+func (t CrawlerOptionsHeaderOnly0x3b_WebBotAuth) AsEnum0x16() (Enum0x16, error) {
+	var body Enum0x16
 	err := json.Unmarshal(t.union, &body)
 	return body, err
 }
 
-// FromFormattedPageDto0x42Images1 overwrites any union data inside the FormattedPageDto0x42_Images as the provided FormattedPageDto0x42Images1
-func (t *FormattedPageDto0x42_Images) FromFormattedPageDto0x42Images1(v FormattedPageDto0x42Images1) error {
+// FromEnum0x16 overwrites any union data inside the CrawlerOptionsHeaderOnly0x3b_WebBotAuth as the provided Enum0x16
+func (t *CrawlerOptionsHeaderOnly0x3b_WebBotAuth) FromEnum0x16(v Enum0x16) error {
 	b, err := json.Marshal(v)
 	t.union = b
 	return err
 }
 
-// MergeFormattedPageDto0x42Images1 performs a merge with any union data inside the FormattedPageDto0x42_Images, using the provided FormattedPageDto0x42Images1
-func (t *FormattedPageDto0x42_Images) MergeFormattedPageDto0x42Images1(v FormattedPageDto0x42Images1) error {
+// MergeEnum0x16 performs a merge with any union data inside the CrawlerOptionsHeaderOnly0x3b_WebBotAuth, using the provided Enum0x16
+func (t *CrawlerOptionsHeaderOnly0x3b_WebBotAuth) MergeEnum0x16(v Enum0x16) error {
 	b, err := json.Marshal(v)
 	if err != nil {
 		return err
@@ -10679,58 +10413,32 @@ func (t *FormattedPageDto0x42_Images) MergeFormattedPageDto0x42Images1(v Formatt
 	return err
 }
 
-// AsFormattedPageDto0x42Images2 returns the union data inside the FormattedPageDto0x42_Images as a FormattedPageDto0x42Images2
-func (t FormattedPageDto0x42_Images) AsFormattedPageDto0x42Images2() (FormattedPageDto0x42Images2, error) {
-	var body FormattedPageDto0x42Images2
-	err := json.Unmarshal(t.union, &body)
-	return body, err
-}
-
-// FromFormattedPageDto0x42Images2 overwrites any union data inside the FormattedPageDto0x42_Images as the provided FormattedPageDto0x42Images2
-func (t *FormattedPageDto0x42_Images) FromFormattedPageDto0x42Images2(v FormattedPageDto0x42Images2) error {
-	b, err := json.Marshal(v)
-	t.union = b
-	return err
-}
-
-// MergeFormattedPageDto0x42Images2 performs a merge with any union data inside the FormattedPageDto0x42_Images, using the provided FormattedPageDto0x42Images2
-func (t *FormattedPageDto0x42_Images) MergeFormattedPageDto0x42Images2(v FormattedPageDto0x42Images2) error {
-	b, err := json.Marshal(v)
-	if err != nil {
-		return err
-	}
-
-	merged, err := runtime.JSONMerge(t.union, b)
-	t.union = merged
-	return err
-}
-
-func (t FormattedPageDto0x42_Images) MarshalJSON() ([]byte, error) {
+func (t CrawlerOptionsHeaderOnly0x3b_WebBotAuth) MarshalJSON() ([]byte, error) {
 	b, err := t.union.MarshalJSON()
 	return b, err
 }
 
-func (t *FormattedPageDto0x42_Images) UnmarshalJSON(b []byte) error {
+func (t *CrawlerOptionsHeaderOnly0x3b_WebBotAuth) UnmarshalJSON(b []byte) error {
 	err := t.union.UnmarshalJSON(b)
 	return err
 }
 
-// AsFormattedPageDto0x42Links0 returns the union data inside the FormattedPageDto0x42_Links as a FormattedPageDto0x42Links0
-func (t FormattedPageDto0x42_Links) AsFormattedPageDto0x42Links0() (FormattedPageDto0x42Links0, error) {
-	var body FormattedPageDto0x42Links0
+// AsPseudoBoolean0x11 returns the union data inside the CrawlerOptionsHeaderOnly0x3b_WithIframe as a PseudoBoolean0x11
+func (t CrawlerOptionsHeaderOnly0x3b_WithIframe) AsPseudoBoolean0x11() (PseudoBoolean0x11, error) {
+	var body PseudoBoolean0x11
 	err := json.Unmarshal(t.union, &body)
 	return body, err
 }
 
-// FromFormattedPageDto0x42Links0 overwrites any union data inside the FormattedPageDto0x42_Links as the provided FormattedPageDto0x42Links0
-func (t *FormattedPageDto0x42_Links) FromFormattedPageDto0x42Links0(v FormattedPageDto0x42Links0) error {
+// FromPseudoBoolean0x11 overwrites any union data inside the CrawlerOptionsHeaderOnly0x3b_WithIframe as the provided PseudoBoolean0x11
+func (t *CrawlerOptionsHeaderOnly0x3b_WithIframe) FromPseudoBoolean0x11(v PseudoBoolean0x11) error {
 	b, err := json.Marshal(v)
 	t.union = b
 	return err
 }
 
-// MergeFormattedPageDto0x42Links0 performs a merge with any union data inside the FormattedPageDto0x42_Links, using the provided FormattedPageDto0x42Links0
-func (t *FormattedPageDto0x42_Links) MergeFormattedPageDto0x42Links0(v FormattedPageDto0x42Links0) error {
+// MergePseudoBoolean0x11 performs a merge with any union data inside the CrawlerOptionsHeaderOnly0x3b_WithIframe, using the provided PseudoBoolean0x11
+func (t *CrawlerOptionsHeaderOnly0x3b_WithIframe) MergePseudoBoolean0x11(v PseudoBoolean0x11) error {
 	b, err := json.Marshal(v)
 	if err != nil {
 		return err
@@ -10741,22 +10449,22 @@ func (t *FormattedPageDto0x42_Links) MergeFormattedPageDto0x42Links0(v Formatted
 	return err
 }
 
-// AsFormattedPageDto0x42Links1 returns the union data inside the FormattedPageDto0x42_Links as a FormattedPageDto0x42Links1
-func (t FormattedPageDto0x42_Links) AsFormattedPageDto0x42Links1() (FormattedPageDto0x42Links1, error) {
-	var body FormattedPageDto0x42Links1
+// AsCrawlerOptionsHeaderOnly0x3bWithIframe1 returns the union data inside the CrawlerOptionsHeaderOnly0x3b_WithIframe as a CrawlerOptionsHeaderOnly0x3bWithIframe1
+func (t CrawlerOptionsHeaderOnly0x3b_WithIframe) AsCrawlerOptionsHeaderOnly0x3bWithIframe1() (CrawlerOptionsHeaderOnly0x3bWithIframe1, error) {
+	var body CrawlerOptionsHeaderOnly0x3bWithIframe1
 	err := json.Unmarshal(t.union, &body)
 	return body, err
 }
 
-// FromFormattedPageDto0x42Links1 overwrites any union data inside the FormattedPageDto0x42_Links as the provided FormattedPageDto0x42Links1
-func (t *FormattedPageDto0x42_Links) FromFormattedPageDto0x42Links1(v FormattedPageDto0x42Links1) error {
+// FromCrawlerOptionsHeaderOnly0x3bWithIframe1 overwrites any union data inside the CrawlerOptionsHeaderOnly0x3b_WithIframe as the provided CrawlerOptionsHeaderOnly0x3bWithIframe1
+func (t *CrawlerOptionsHeaderOnly0x3b_WithIframe) FromCrawlerOptionsHeaderOnly0x3bWithIframe1(v CrawlerOptionsHeaderOnly0x3bWithIframe1) error {
 	b, err := json.Marshal(v)
 	t.union = b
 	return err
 }
 
-// MergeFormattedPageDto0x42Links1 performs a merge with any union data inside the FormattedPageDto0x42_Links, using the provided FormattedPageDto0x42Links1
-func (t *FormattedPageDto0x42_Links) MergeFormattedPageDto0x42Links1(v FormattedPageDto0x42Links1) error {
+// MergeCrawlerOptionsHeaderOnly0x3bWithIframe1 performs a merge with any union data inside the CrawlerOptionsHeaderOnly0x3b_WithIframe, using the provided CrawlerOptionsHeaderOnly0x3bWithIframe1
+func (t *CrawlerOptionsHeaderOnly0x3b_WithIframe) MergeCrawlerOptionsHeaderOnly0x3bWithIframe1(v CrawlerOptionsHeaderOnly0x3bWithIframe1) error {
 	b, err := json.Marshal(v)
 	if err != nil {
 		return err
@@ -10767,58 +10475,32 @@ func (t *FormattedPageDto0x42_Links) MergeFormattedPageDto0x42Links1(v Formatted
 	return err
 }
 
-// AsFormattedPageDto0x42Links2 returns the union data inside the FormattedPageDto0x42_Links as a FormattedPageDto0x42Links2
-func (t FormattedPageDto0x42_Links) AsFormattedPageDto0x42Links2() (FormattedPageDto0x42Links2, error) {
-	var body FormattedPageDto0x42Links2
-	err := json.Unmarshal(t.union, &body)
-	return body, err
-}
-
-// FromFormattedPageDto0x42Links2 overwrites any union data inside the FormattedPageDto0x42_Links as the provided FormattedPageDto0x42Links2
-func (t *FormattedPageDto0x42_Links) FromFormattedPageDto0x42Links2(v FormattedPageDto0x42Links2) error {
-	b, err := json.Marshal(v)
-	t.union = b
-	return err
-}
-
-// MergeFormattedPageDto0x42Links2 performs a merge with any union data inside the FormattedPageDto0x42_Links, using the provided FormattedPageDto0x42Links2
-func (t *FormattedPageDto0x42_Links) MergeFormattedPageDto0x42Links2(v FormattedPageDto0x42Links2) error {
-	b, err := json.Marshal(v)
-	if err != nil {
-		return err
-	}
-
-	merged, err := runtime.JSONMerge(t.union, b)
-	t.union = merged
-	return err
-}
-
-func (t FormattedPageDto0x42_Links) MarshalJSON() ([]byte, error) {
+func (t CrawlerOptionsHeaderOnly0x3b_WithIframe) MarshalJSON() ([]byte, error) {
 	b, err := t.union.MarshalJSON()
 	return b, err
 }
 
-func (t *FormattedPageDto0x42_Links) UnmarshalJSON(b []byte) error {
+func (t *CrawlerOptionsHeaderOnly0x3b_WithIframe) UnmarshalJSON(b []byte) error {
 	err := t.union.UnmarshalJSON(b)
 	return err
 }
 
-// AsFormattedPageDto0x42Metadata0 returns the union data inside the FormattedPageDto0x42_Metadata as a FormattedPageDto0x42Metadata0
-func (t FormattedPageDto0x42_Metadata) AsFormattedPageDto0x42Metadata0() (FormattedPageDto0x42Metadata0, error) {
-	var body FormattedPageDto0x42Metadata0
+// AsPseudoBoolean0x11 returns the union data inside the CrawlerOptionsHeaderOnly0x3b_WithLinksSummary as a PseudoBoolean0x11
+func (t CrawlerOptionsHeaderOnly0x3b_WithLinksSummary) AsPseudoBoolean0x11() (PseudoBoolean0x11, error) {
+	var body PseudoBoolean0x11
 	err := json.Unmarshal(t.union, &body)
 	return body, err
 }
 
-// FromFormattedPageDto0x42Metadata0 overwrites any union data inside the FormattedPageDto0x42_Metadata as the provided FormattedPageDto0x42Metadata0
-func (t *FormattedPageDto0x42_Metadata) FromFormattedPageDto0x42Metadata0(v FormattedPageDto0x42Metadata0) error {
+// FromPseudoBoolean0x11 overwrites any union data inside the CrawlerOptionsHeaderOnly0x3b_WithLinksSummary as the provided PseudoBoolean0x11
+func (t *CrawlerOptionsHeaderOnly0x3b_WithLinksSummary) FromPseudoBoolean0x11(v PseudoBoolean0x11) error {
 	b, err := json.Marshal(v)
 	t.union = b
 	return err
 }
 
-// MergeFormattedPageDto0x42Metadata0 performs a merge with any union data inside the FormattedPageDto0x42_Metadata, using the provided FormattedPageDto0x42Metadata0
-func (t *FormattedPageDto0x42_Metadata) MergeFormattedPageDto0x42Metadata0(v FormattedPageDto0x42Metadata0) error {
+// MergePseudoBoolean0x11 performs a merge with any union data inside the CrawlerOptionsHeaderOnly0x3b_WithLinksSummary, using the provided PseudoBoolean0x11
+func (t *CrawlerOptionsHeaderOnly0x3b_WithLinksSummary) MergePseudoBoolean0x11(v PseudoBoolean0x11) error {
 	b, err := json.Marshal(v)
 	if err != nil {
 		return err
@@ -10829,22 +10511,22 @@ func (t *FormattedPageDto0x42_Metadata) MergeFormattedPageDto0x42Metadata0(v For
 	return err
 }
 
-// AsFormattedPageDto0x42Metadata1 returns the union data inside the FormattedPageDto0x42_Metadata as a FormattedPageDto0x42Metadata1
-func (t FormattedPageDto0x42_Metadata) AsFormattedPageDto0x42Metadata1() (FormattedPageDto0x42Metadata1, error) {
-	var body FormattedPageDto0x42Metadata1
+// AsCrawlerOptionsHeaderOnly0x3bWithLinksSummary1 returns the union data inside the CrawlerOptionsHeaderOnly0x3b_WithLinksSummary as a CrawlerOptionsHeaderOnly0x3bWithLinksSummary1
+func (t CrawlerOptionsHeaderOnly0x3b_WithLinksSummary) AsCrawlerOptionsHeaderOnly0x3bWithLinksSummary1() (CrawlerOptionsHeaderOnly0x3bWithLinksSummary1, error) {
+	var body CrawlerOptionsHeaderOnly0x3bWithLinksSummary1
 	err := json.Unmarshal(t.union, &body)
 	return body, err
 }
 
-// FromFormattedPageDto0x42Metadata1 overwrites any union data inside the FormattedPageDto0x42_Metadata as the provided FormattedPageDto0x42Metadata1
-func (t *FormattedPageDto0x42_Metadata) FromFormattedPageDto0x42Metadata1(v FormattedPageDto0x42Metadata1) error {
+// FromCrawlerOptionsHeaderOnly0x3bWithLinksSummary1 overwrites any union data inside the CrawlerOptionsHeaderOnly0x3b_WithLinksSummary as the provided CrawlerOptionsHeaderOnly0x3bWithLinksSummary1
+func (t *CrawlerOptionsHeaderOnly0x3b_WithLinksSummary) FromCrawlerOptionsHeaderOnly0x3bWithLinksSummary1(v CrawlerOptionsHeaderOnly0x3bWithLinksSummary1) error {
 	b, err := json.Marshal(v)
 	t.union = b
 	return err
 }
 
-// MergeFormattedPageDto0x42Metadata1 performs a merge with any union data inside the FormattedPageDto0x42_Metadata, using the provided FormattedPageDto0x42Metadata1
-func (t *FormattedPageDto0x42_Metadata) MergeFormattedPageDto0x42Metadata1(v FormattedPageDto0x42Metadata1) error {
+// MergeCrawlerOptionsHeaderOnly0x3bWithLinksSummary1 performs a merge with any union data inside the CrawlerOptionsHeaderOnly0x3b_WithLinksSummary, using the provided CrawlerOptionsHeaderOnly0x3bWithLinksSummary1
+func (t *CrawlerOptionsHeaderOnly0x3b_WithLinksSummary) MergeCrawlerOptionsHeaderOnly0x3bWithLinksSummary1(v CrawlerOptionsHeaderOnly0x3bWithLinksSummary1) error {
 	b, err := json.Marshal(v)
 	if err != nil {
 		return err
@@ -10855,12 +10537,312 @@ func (t *FormattedPageDto0x42_Metadata) MergeFormattedPageDto0x42Metadata1(v For
 	return err
 }
 
-func (t FormattedPageDto0x42_Metadata) MarshalJSON() ([]byte, error) {
+func (t CrawlerOptionsHeaderOnly0x3b_WithLinksSummary) MarshalJSON() ([]byte, error) {
 	b, err := t.union.MarshalJSON()
 	return b, err
 }
 
-func (t *FormattedPageDto0x42_Metadata) UnmarshalJSON(b []byte) error {
+func (t *CrawlerOptionsHeaderOnly0x3b_WithLinksSummary) UnmarshalJSON(b []byte) error {
+	err := t.union.UnmarshalJSON(b)
+	return err
+}
+
+// AsFormattedPageDto0x43External0 returns the union data inside the FormattedPageDto0x43_External as a FormattedPageDto0x43External0
+func (t FormattedPageDto0x43_External) AsFormattedPageDto0x43External0() (FormattedPageDto0x43External0, error) {
+	var body FormattedPageDto0x43External0
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromFormattedPageDto0x43External0 overwrites any union data inside the FormattedPageDto0x43_External as the provided FormattedPageDto0x43External0
+func (t *FormattedPageDto0x43_External) FromFormattedPageDto0x43External0(v FormattedPageDto0x43External0) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeFormattedPageDto0x43External0 performs a merge with any union data inside the FormattedPageDto0x43_External, using the provided FormattedPageDto0x43External0
+func (t *FormattedPageDto0x43_External) MergeFormattedPageDto0x43External0(v FormattedPageDto0x43External0) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsRecordstringsymbolRecordstringsymbolRecordstringsymbolStringobject0x08object0x09object0x42 returns the union data inside the FormattedPageDto0x43_External as a RecordstringsymbolRecordstringsymbolRecordstringsymbolStringobject0x08object0x09object0x42
+func (t FormattedPageDto0x43_External) AsRecordstringsymbolRecordstringsymbolRecordstringsymbolStringobject0x08object0x09object0x42() (RecordstringsymbolRecordstringsymbolRecordstringsymbolStringobject0x08object0x09object0x42, error) {
+	var body RecordstringsymbolRecordstringsymbolRecordstringsymbolStringobject0x08object0x09object0x42
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromRecordstringsymbolRecordstringsymbolRecordstringsymbolStringobject0x08object0x09object0x42 overwrites any union data inside the FormattedPageDto0x43_External as the provided RecordstringsymbolRecordstringsymbolRecordstringsymbolStringobject0x08object0x09object0x42
+func (t *FormattedPageDto0x43_External) FromRecordstringsymbolRecordstringsymbolRecordstringsymbolStringobject0x08object0x09object0x42(v RecordstringsymbolRecordstringsymbolRecordstringsymbolStringobject0x08object0x09object0x42) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeRecordstringsymbolRecordstringsymbolRecordstringsymbolStringobject0x08object0x09object0x42 performs a merge with any union data inside the FormattedPageDto0x43_External, using the provided RecordstringsymbolRecordstringsymbolRecordstringsymbolStringobject0x08object0x09object0x42
+func (t *FormattedPageDto0x43_External) MergeRecordstringsymbolRecordstringsymbolRecordstringsymbolStringobject0x08object0x09object0x42(v RecordstringsymbolRecordstringsymbolRecordstringsymbolStringobject0x08object0x09object0x42) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+func (t FormattedPageDto0x43_External) MarshalJSON() ([]byte, error) {
+	b, err := t.union.MarshalJSON()
+	return b, err
+}
+
+func (t *FormattedPageDto0x43_External) UnmarshalJSON(b []byte) error {
+	err := t.union.UnmarshalJSON(b)
+	return err
+}
+
+// AsFormattedPageDto0x43Images0 returns the union data inside the FormattedPageDto0x43_Images as a FormattedPageDto0x43Images0
+func (t FormattedPageDto0x43_Images) AsFormattedPageDto0x43Images0() (FormattedPageDto0x43Images0, error) {
+	var body FormattedPageDto0x43Images0
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromFormattedPageDto0x43Images0 overwrites any union data inside the FormattedPageDto0x43_Images as the provided FormattedPageDto0x43Images0
+func (t *FormattedPageDto0x43_Images) FromFormattedPageDto0x43Images0(v FormattedPageDto0x43Images0) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeFormattedPageDto0x43Images0 performs a merge with any union data inside the FormattedPageDto0x43_Images, using the provided FormattedPageDto0x43Images0
+func (t *FormattedPageDto0x43_Images) MergeFormattedPageDto0x43Images0(v FormattedPageDto0x43Images0) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsRecordstringsymbolString0x3f returns the union data inside the FormattedPageDto0x43_Images as a RecordstringsymbolString0x3f
+func (t FormattedPageDto0x43_Images) AsRecordstringsymbolString0x3f() (RecordstringsymbolString0x3f, error) {
+	var body RecordstringsymbolString0x3f
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromRecordstringsymbolString0x3f overwrites any union data inside the FormattedPageDto0x43_Images as the provided RecordstringsymbolString0x3f
+func (t *FormattedPageDto0x43_Images) FromRecordstringsymbolString0x3f(v RecordstringsymbolString0x3f) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeRecordstringsymbolString0x3f performs a merge with any union data inside the FormattedPageDto0x43_Images, using the provided RecordstringsymbolString0x3f
+func (t *FormattedPageDto0x43_Images) MergeRecordstringsymbolString0x3f(v RecordstringsymbolString0x3f) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsArraystring0x40 returns the union data inside the FormattedPageDto0x43_Images as a Arraystring0x40
+func (t FormattedPageDto0x43_Images) AsArraystring0x40() (Arraystring0x40, error) {
+	var body Arraystring0x40
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromArraystring0x40 overwrites any union data inside the FormattedPageDto0x43_Images as the provided Arraystring0x40
+func (t *FormattedPageDto0x43_Images) FromArraystring0x40(v Arraystring0x40) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeArraystring0x40 performs a merge with any union data inside the FormattedPageDto0x43_Images, using the provided Arraystring0x40
+func (t *FormattedPageDto0x43_Images) MergeArraystring0x40(v Arraystring0x40) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+func (t FormattedPageDto0x43_Images) MarshalJSON() ([]byte, error) {
+	b, err := t.union.MarshalJSON()
+	return b, err
+}
+
+func (t *FormattedPageDto0x43_Images) UnmarshalJSON(b []byte) error {
+	err := t.union.UnmarshalJSON(b)
+	return err
+}
+
+// AsFormattedPageDto0x43Links0 returns the union data inside the FormattedPageDto0x43_Links as a FormattedPageDto0x43Links0
+func (t FormattedPageDto0x43_Links) AsFormattedPageDto0x43Links0() (FormattedPageDto0x43Links0, error) {
+	var body FormattedPageDto0x43Links0
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromFormattedPageDto0x43Links0 overwrites any union data inside the FormattedPageDto0x43_Links as the provided FormattedPageDto0x43Links0
+func (t *FormattedPageDto0x43_Links) FromFormattedPageDto0x43Links0(v FormattedPageDto0x43Links0) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeFormattedPageDto0x43Links0 performs a merge with any union data inside the FormattedPageDto0x43_Links, using the provided FormattedPageDto0x43Links0
+func (t *FormattedPageDto0x43_Links) MergeFormattedPageDto0x43Links0(v FormattedPageDto0x43Links0) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsRecordstringsymbolString0x3d returns the union data inside the FormattedPageDto0x43_Links as a RecordstringsymbolString0x3d
+func (t FormattedPageDto0x43_Links) AsRecordstringsymbolString0x3d() (RecordstringsymbolString0x3d, error) {
+	var body RecordstringsymbolString0x3d
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromRecordstringsymbolString0x3d overwrites any union data inside the FormattedPageDto0x43_Links as the provided RecordstringsymbolString0x3d
+func (t *FormattedPageDto0x43_Links) FromRecordstringsymbolString0x3d(v RecordstringsymbolString0x3d) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeRecordstringsymbolString0x3d performs a merge with any union data inside the FormattedPageDto0x43_Links, using the provided RecordstringsymbolString0x3d
+func (t *FormattedPageDto0x43_Links) MergeRecordstringsymbolString0x3d(v RecordstringsymbolString0x3d) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsArraystring0x3e returns the union data inside the FormattedPageDto0x43_Links as a Arraystring0x3e
+func (t FormattedPageDto0x43_Links) AsArraystring0x3e() (Arraystring0x3e, error) {
+	var body Arraystring0x3e
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromArraystring0x3e overwrites any union data inside the FormattedPageDto0x43_Links as the provided Arraystring0x3e
+func (t *FormattedPageDto0x43_Links) FromArraystring0x3e(v Arraystring0x3e) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeArraystring0x3e performs a merge with any union data inside the FormattedPageDto0x43_Links, using the provided Arraystring0x3e
+func (t *FormattedPageDto0x43_Links) MergeArraystring0x3e(v Arraystring0x3e) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+func (t FormattedPageDto0x43_Links) MarshalJSON() ([]byte, error) {
+	b, err := t.union.MarshalJSON()
+	return b, err
+}
+
+func (t *FormattedPageDto0x43_Links) UnmarshalJSON(b []byte) error {
+	err := t.union.UnmarshalJSON(b)
+	return err
+}
+
+// AsFormattedPageDto0x43Metadata0 returns the union data inside the FormattedPageDto0x43_Metadata as a FormattedPageDto0x43Metadata0
+func (t FormattedPageDto0x43_Metadata) AsFormattedPageDto0x43Metadata0() (FormattedPageDto0x43Metadata0, error) {
+	var body FormattedPageDto0x43Metadata0
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromFormattedPageDto0x43Metadata0 overwrites any union data inside the FormattedPageDto0x43_Metadata as the provided FormattedPageDto0x43Metadata0
+func (t *FormattedPageDto0x43_Metadata) FromFormattedPageDto0x43Metadata0(v FormattedPageDto0x43Metadata0) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeFormattedPageDto0x43Metadata0 performs a merge with any union data inside the FormattedPageDto0x43_Metadata, using the provided FormattedPageDto0x43Metadata0
+func (t *FormattedPageDto0x43_Metadata) MergeFormattedPageDto0x43Metadata0(v FormattedPageDto0x43Metadata0) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsRecordstringsymbolString0x41 returns the union data inside the FormattedPageDto0x43_Metadata as a RecordstringsymbolString0x41
+func (t FormattedPageDto0x43_Metadata) AsRecordstringsymbolString0x41() (RecordstringsymbolString0x41, error) {
+	var body RecordstringsymbolString0x41
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromRecordstringsymbolString0x41 overwrites any union data inside the FormattedPageDto0x43_Metadata as the provided RecordstringsymbolString0x41
+func (t *FormattedPageDto0x43_Metadata) FromRecordstringsymbolString0x41(v RecordstringsymbolString0x41) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeRecordstringsymbolString0x41 performs a merge with any union data inside the FormattedPageDto0x43_Metadata, using the provided RecordstringsymbolString0x41
+func (t *FormattedPageDto0x43_Metadata) MergeRecordstringsymbolString0x41(v RecordstringsymbolString0x41) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+func (t FormattedPageDto0x43_Metadata) MarshalJSON() ([]byte, error) {
+	b, err := t.union.MarshalJSON()
+	return b, err
+}
+
+func (t *FormattedPageDto0x43_Metadata) UnmarshalJSON(b []byte) error {
 	err := t.union.UnmarshalJSON(b)
 	return err
 }
@@ -11139,22 +11121,22 @@ func (t *PseudoBooleanLoose0x0c) UnmarshalJSON(b []byte) error {
 	return err
 }
 
-// AsRecordstringsymbolRecordstringsymbolRecordstringsymbolStringobject0x08object0x09object0x410 returns the union data inside the RecordstringsymbolRecordstringsymbolRecordstringsymbolStringobject0x08object0x09object0x41_AdditionalProperties as a RecordstringsymbolRecordstringsymbolRecordstringsymbolStringobject0x08object0x09object0x410
-func (t RecordstringsymbolRecordstringsymbolRecordstringsymbolStringobject0x08object0x09object0x41_AdditionalProperties) AsRecordstringsymbolRecordstringsymbolRecordstringsymbolStringobject0x08object0x09object0x410() (RecordstringsymbolRecordstringsymbolRecordstringsymbolStringobject0x08object0x09object0x410, error) {
-	var body RecordstringsymbolRecordstringsymbolRecordstringsymbolStringobject0x08object0x09object0x410
+// AsRecordstringsymbolRecordstringsymbolStringobject0x08object0x09 returns the union data inside the RecordstringsymbolRecordstringsymbolRecordstringsymbolStringobject0x08object0x09object0x42_AdditionalProperties as a RecordstringsymbolRecordstringsymbolStringobject0x08object0x09
+func (t RecordstringsymbolRecordstringsymbolRecordstringsymbolStringobject0x08object0x09object0x42_AdditionalProperties) AsRecordstringsymbolRecordstringsymbolStringobject0x08object0x09() (RecordstringsymbolRecordstringsymbolStringobject0x08object0x09, error) {
+	var body RecordstringsymbolRecordstringsymbolStringobject0x08object0x09
 	err := json.Unmarshal(t.union, &body)
 	return body, err
 }
 
-// FromRecordstringsymbolRecordstringsymbolRecordstringsymbolStringobject0x08object0x09object0x410 overwrites any union data inside the RecordstringsymbolRecordstringsymbolRecordstringsymbolStringobject0x08object0x09object0x41_AdditionalProperties as the provided RecordstringsymbolRecordstringsymbolRecordstringsymbolStringobject0x08object0x09object0x410
-func (t *RecordstringsymbolRecordstringsymbolRecordstringsymbolStringobject0x08object0x09object0x41_AdditionalProperties) FromRecordstringsymbolRecordstringsymbolRecordstringsymbolStringobject0x08object0x09object0x410(v RecordstringsymbolRecordstringsymbolRecordstringsymbolStringobject0x08object0x09object0x410) error {
+// FromRecordstringsymbolRecordstringsymbolStringobject0x08object0x09 overwrites any union data inside the RecordstringsymbolRecordstringsymbolRecordstringsymbolStringobject0x08object0x09object0x42_AdditionalProperties as the provided RecordstringsymbolRecordstringsymbolStringobject0x08object0x09
+func (t *RecordstringsymbolRecordstringsymbolRecordstringsymbolStringobject0x08object0x09object0x42_AdditionalProperties) FromRecordstringsymbolRecordstringsymbolStringobject0x08object0x09(v RecordstringsymbolRecordstringsymbolStringobject0x08object0x09) error {
 	b, err := json.Marshal(v)
 	t.union = b
 	return err
 }
 
-// MergeRecordstringsymbolRecordstringsymbolRecordstringsymbolStringobject0x08object0x09object0x410 performs a merge with any union data inside the RecordstringsymbolRecordstringsymbolRecordstringsymbolStringobject0x08object0x09object0x41_AdditionalProperties, using the provided RecordstringsymbolRecordstringsymbolRecordstringsymbolStringobject0x08object0x09object0x410
-func (t *RecordstringsymbolRecordstringsymbolRecordstringsymbolStringobject0x08object0x09object0x41_AdditionalProperties) MergeRecordstringsymbolRecordstringsymbolRecordstringsymbolStringobject0x08object0x09object0x410(v RecordstringsymbolRecordstringsymbolRecordstringsymbolStringobject0x08object0x09object0x410) error {
+// MergeRecordstringsymbolRecordstringsymbolStringobject0x08object0x09 performs a merge with any union data inside the RecordstringsymbolRecordstringsymbolRecordstringsymbolStringobject0x08object0x09object0x42_AdditionalProperties, using the provided RecordstringsymbolRecordstringsymbolStringobject0x08object0x09
+func (t *RecordstringsymbolRecordstringsymbolRecordstringsymbolStringobject0x08object0x09object0x42_AdditionalProperties) MergeRecordstringsymbolRecordstringsymbolStringobject0x08object0x09(v RecordstringsymbolRecordstringsymbolStringobject0x08object0x09) error {
 	b, err := json.Marshal(v)
 	if err != nil {
 		return err
@@ -11165,22 +11147,22 @@ func (t *RecordstringsymbolRecordstringsymbolRecordstringsymbolStringobject0x08o
 	return err
 }
 
-// AsRecordstringsymbolRecordstringsymbolRecordstringsymbolStringobject0x08object0x09object0x411 returns the union data inside the RecordstringsymbolRecordstringsymbolRecordstringsymbolStringobject0x08object0x09object0x41_AdditionalProperties as a RecordstringsymbolRecordstringsymbolRecordstringsymbolStringobject0x08object0x09object0x411
-func (t RecordstringsymbolRecordstringsymbolRecordstringsymbolStringobject0x08object0x09object0x41_AdditionalProperties) AsRecordstringsymbolRecordstringsymbolRecordstringsymbolStringobject0x08object0x09object0x411() (RecordstringsymbolRecordstringsymbolRecordstringsymbolStringobject0x08object0x09object0x411, error) {
-	var body RecordstringsymbolRecordstringsymbolRecordstringsymbolStringobject0x08object0x09object0x411
+// AsRecordstringsymbolRecordstringsymbolRecordstringsymbolStringobject0x08object0x09object0x421 returns the union data inside the RecordstringsymbolRecordstringsymbolRecordstringsymbolStringobject0x08object0x09object0x42_AdditionalProperties as a RecordstringsymbolRecordstringsymbolRecordstringsymbolStringobject0x08object0x09object0x421
+func (t RecordstringsymbolRecordstringsymbolRecordstringsymbolStringobject0x08object0x09object0x42_AdditionalProperties) AsRecordstringsymbolRecordstringsymbolRecordstringsymbolStringobject0x08object0x09object0x421() (RecordstringsymbolRecordstringsymbolRecordstringsymbolStringobject0x08object0x09object0x421, error) {
+	var body RecordstringsymbolRecordstringsymbolRecordstringsymbolStringobject0x08object0x09object0x421
 	err := json.Unmarshal(t.union, &body)
 	return body, err
 }
 
-// FromRecordstringsymbolRecordstringsymbolRecordstringsymbolStringobject0x08object0x09object0x411 overwrites any union data inside the RecordstringsymbolRecordstringsymbolRecordstringsymbolStringobject0x08object0x09object0x41_AdditionalProperties as the provided RecordstringsymbolRecordstringsymbolRecordstringsymbolStringobject0x08object0x09object0x411
-func (t *RecordstringsymbolRecordstringsymbolRecordstringsymbolStringobject0x08object0x09object0x41_AdditionalProperties) FromRecordstringsymbolRecordstringsymbolRecordstringsymbolStringobject0x08object0x09object0x411(v RecordstringsymbolRecordstringsymbolRecordstringsymbolStringobject0x08object0x09object0x411) error {
+// FromRecordstringsymbolRecordstringsymbolRecordstringsymbolStringobject0x08object0x09object0x421 overwrites any union data inside the RecordstringsymbolRecordstringsymbolRecordstringsymbolStringobject0x08object0x09object0x42_AdditionalProperties as the provided RecordstringsymbolRecordstringsymbolRecordstringsymbolStringobject0x08object0x09object0x421
+func (t *RecordstringsymbolRecordstringsymbolRecordstringsymbolStringobject0x08object0x09object0x42_AdditionalProperties) FromRecordstringsymbolRecordstringsymbolRecordstringsymbolStringobject0x08object0x09object0x421(v RecordstringsymbolRecordstringsymbolRecordstringsymbolStringobject0x08object0x09object0x421) error {
 	b, err := json.Marshal(v)
 	t.union = b
 	return err
 }
 
-// MergeRecordstringsymbolRecordstringsymbolRecordstringsymbolStringobject0x08object0x09object0x411 performs a merge with any union data inside the RecordstringsymbolRecordstringsymbolRecordstringsymbolStringobject0x08object0x09object0x41_AdditionalProperties, using the provided RecordstringsymbolRecordstringsymbolRecordstringsymbolStringobject0x08object0x09object0x411
-func (t *RecordstringsymbolRecordstringsymbolRecordstringsymbolStringobject0x08object0x09object0x41_AdditionalProperties) MergeRecordstringsymbolRecordstringsymbolRecordstringsymbolStringobject0x08object0x09object0x411(v RecordstringsymbolRecordstringsymbolRecordstringsymbolStringobject0x08object0x09object0x411) error {
+// MergeRecordstringsymbolRecordstringsymbolRecordstringsymbolStringobject0x08object0x09object0x421 performs a merge with any union data inside the RecordstringsymbolRecordstringsymbolRecordstringsymbolStringobject0x08object0x09object0x42_AdditionalProperties, using the provided RecordstringsymbolRecordstringsymbolRecordstringsymbolStringobject0x08object0x09object0x421
+func (t *RecordstringsymbolRecordstringsymbolRecordstringsymbolStringobject0x08object0x09object0x42_AdditionalProperties) MergeRecordstringsymbolRecordstringsymbolRecordstringsymbolStringobject0x08object0x09object0x421(v RecordstringsymbolRecordstringsymbolRecordstringsymbolStringobject0x08object0x09object0x421) error {
 	b, err := json.Marshal(v)
 	if err != nil {
 		return err
@@ -11191,32 +11173,32 @@ func (t *RecordstringsymbolRecordstringsymbolRecordstringsymbolStringobject0x08o
 	return err
 }
 
-func (t RecordstringsymbolRecordstringsymbolRecordstringsymbolStringobject0x08object0x09object0x41_AdditionalProperties) MarshalJSON() ([]byte, error) {
+func (t RecordstringsymbolRecordstringsymbolRecordstringsymbolStringobject0x08object0x09object0x42_AdditionalProperties) MarshalJSON() ([]byte, error) {
 	b, err := t.union.MarshalJSON()
 	return b, err
 }
 
-func (t *RecordstringsymbolRecordstringsymbolRecordstringsymbolStringobject0x08object0x09object0x41_AdditionalProperties) UnmarshalJSON(b []byte) error {
+func (t *RecordstringsymbolRecordstringsymbolRecordstringsymbolStringobject0x08object0x09object0x42_AdditionalProperties) UnmarshalJSON(b []byte) error {
 	err := t.union.UnmarshalJSON(b)
 	return err
 }
 
-// AsRecordstringsymbolRecordstringsymbolStringobject0x08object0x090 returns the union data inside the RecordstringsymbolRecordstringsymbolStringobject0x08object0x09_AdditionalProperties as a RecordstringsymbolRecordstringsymbolStringobject0x08object0x090
-func (t RecordstringsymbolRecordstringsymbolStringobject0x08object0x09_AdditionalProperties) AsRecordstringsymbolRecordstringsymbolStringobject0x08object0x090() (RecordstringsymbolRecordstringsymbolStringobject0x08object0x090, error) {
-	var body RecordstringsymbolRecordstringsymbolStringobject0x08object0x090
+// AsRecordstringsymbolStringobject0x08 returns the union data inside the RecordstringsymbolRecordstringsymbolStringobject0x08object0x09_AdditionalProperties as a RecordstringsymbolStringobject0x08
+func (t RecordstringsymbolRecordstringsymbolStringobject0x08object0x09_AdditionalProperties) AsRecordstringsymbolStringobject0x08() (RecordstringsymbolStringobject0x08, error) {
+	var body RecordstringsymbolStringobject0x08
 	err := json.Unmarshal(t.union, &body)
 	return body, err
 }
 
-// FromRecordstringsymbolRecordstringsymbolStringobject0x08object0x090 overwrites any union data inside the RecordstringsymbolRecordstringsymbolStringobject0x08object0x09_AdditionalProperties as the provided RecordstringsymbolRecordstringsymbolStringobject0x08object0x090
-func (t *RecordstringsymbolRecordstringsymbolStringobject0x08object0x09_AdditionalProperties) FromRecordstringsymbolRecordstringsymbolStringobject0x08object0x090(v RecordstringsymbolRecordstringsymbolStringobject0x08object0x090) error {
+// FromRecordstringsymbolStringobject0x08 overwrites any union data inside the RecordstringsymbolRecordstringsymbolStringobject0x08object0x09_AdditionalProperties as the provided RecordstringsymbolStringobject0x08
+func (t *RecordstringsymbolRecordstringsymbolStringobject0x08object0x09_AdditionalProperties) FromRecordstringsymbolStringobject0x08(v RecordstringsymbolStringobject0x08) error {
 	b, err := json.Marshal(v)
 	t.union = b
 	return err
 }
 
-// MergeRecordstringsymbolRecordstringsymbolStringobject0x08object0x090 performs a merge with any union data inside the RecordstringsymbolRecordstringsymbolStringobject0x08object0x09_AdditionalProperties, using the provided RecordstringsymbolRecordstringsymbolStringobject0x08object0x090
-func (t *RecordstringsymbolRecordstringsymbolStringobject0x08object0x09_AdditionalProperties) MergeRecordstringsymbolRecordstringsymbolStringobject0x08object0x090(v RecordstringsymbolRecordstringsymbolStringobject0x08object0x090) error {
+// MergeRecordstringsymbolStringobject0x08 performs a merge with any union data inside the RecordstringsymbolRecordstringsymbolStringobject0x08object0x09_AdditionalProperties, using the provided RecordstringsymbolStringobject0x08
+func (t *RecordstringsymbolRecordstringsymbolStringobject0x08object0x09_AdditionalProperties) MergeRecordstringsymbolStringobject0x08(v RecordstringsymbolStringobject0x08) error {
 	b, err := json.Marshal(v)
 	if err != nil {
 		return err
@@ -11387,22 +11369,22 @@ func (t *Get200JSONResponseBody) UnmarshalJSON(b []byte) error {
 	return err
 }
 
-// AsGet400JSONResponseBody0 returns the union data inside the Get400JSONResponseBody as a Get400JSONResponseBody0
-func (t Get400JSONResponseBody) AsGet400JSONResponseBody0() (Get400JSONResponseBody0, error) {
-	var body Get400JSONResponseBody0
+// AsParamValidationError0x29 returns the union data inside the Get400JSONResponseBody as a ParamValidationError0x29
+func (t Get400JSONResponseBody) AsParamValidationError0x29() (ParamValidationError0x29, error) {
+	var body ParamValidationError0x29
 	err := json.Unmarshal(t.union, &body)
 	return body, err
 }
 
-// FromGet400JSONResponseBody0 overwrites any union data inside the Get400JSONResponseBody as the provided Get400JSONResponseBody0
-func (t *Get400JSONResponseBody) FromGet400JSONResponseBody0(v Get400JSONResponseBody0) error {
+// FromParamValidationError0x29 overwrites any union data inside the Get400JSONResponseBody as the provided ParamValidationError0x29
+func (t *Get400JSONResponseBody) FromParamValidationError0x29(v ParamValidationError0x29) error {
 	b, err := json.Marshal(v)
 	t.union = b
 	return err
 }
 
-// MergeGet400JSONResponseBody0 performs a merge with any union data inside the Get400JSONResponseBody, using the provided Get400JSONResponseBody0
-func (t *Get400JSONResponseBody) MergeGet400JSONResponseBody0(v Get400JSONResponseBody0) error {
+// MergeParamValidationError0x29 performs a merge with any union data inside the Get400JSONResponseBody, using the provided ParamValidationError0x29
+func (t *Get400JSONResponseBody) MergeParamValidationError0x29(v ParamValidationError0x29) error {
 	b, err := json.Marshal(v)
 	if err != nil {
 		return err
@@ -11413,22 +11395,22 @@ func (t *Get400JSONResponseBody) MergeGet400JSONResponseBody0(v Get400JSONRespon
 	return err
 }
 
-// AsGet400JSONResponseBody1 returns the union data inside the Get400JSONResponseBody as a Get400JSONResponseBody1
-func (t Get400JSONResponseBody) AsGet400JSONResponseBody1() (Get400JSONResponseBody1, error) {
-	var body Get400JSONResponseBody1
+// AsDataStreamBrokenError0x2a returns the union data inside the Get400JSONResponseBody as a DataStreamBrokenError0x2a
+func (t Get400JSONResponseBody) AsDataStreamBrokenError0x2a() (DataStreamBrokenError0x2a, error) {
+	var body DataStreamBrokenError0x2a
 	err := json.Unmarshal(t.union, &body)
 	return body, err
 }
 
-// FromGet400JSONResponseBody1 overwrites any union data inside the Get400JSONResponseBody as the provided Get400JSONResponseBody1
-func (t *Get400JSONResponseBody) FromGet400JSONResponseBody1(v Get400JSONResponseBody1) error {
+// FromDataStreamBrokenError0x2a overwrites any union data inside the Get400JSONResponseBody as the provided DataStreamBrokenError0x2a
+func (t *Get400JSONResponseBody) FromDataStreamBrokenError0x2a(v DataStreamBrokenError0x2a) error {
 	b, err := json.Marshal(v)
 	t.union = b
 	return err
 }
 
-// MergeGet400JSONResponseBody1 performs a merge with any union data inside the Get400JSONResponseBody, using the provided Get400JSONResponseBody1
-func (t *Get400JSONResponseBody) MergeGet400JSONResponseBody1(v Get400JSONResponseBody1) error {
+// MergeDataStreamBrokenError0x2a performs a merge with any union data inside the Get400JSONResponseBody, using the provided DataStreamBrokenError0x2a
+func (t *Get400JSONResponseBody) MergeDataStreamBrokenError0x2a(v DataStreamBrokenError0x2a) error {
 	b, err := json.Marshal(v)
 	if err != nil {
 		return err
@@ -11449,22 +11431,22 @@ func (t *Get400JSONResponseBody) UnmarshalJSON(b []byte) error {
 	return err
 }
 
-// AsGet401JSONResponseBody0 returns the union data inside the Get401JSONResponseBody as a Get401JSONResponseBody0
-func (t Get401JSONResponseBody) AsGet401JSONResponseBody0() (Get401JSONResponseBody0, error) {
-	var body Get401JSONResponseBody0
+// AsAuthenticationFailedError0x2b returns the union data inside the Get401JSONResponseBody as a AuthenticationFailedError0x2b
+func (t Get401JSONResponseBody) AsAuthenticationFailedError0x2b() (AuthenticationFailedError0x2b, error) {
+	var body AuthenticationFailedError0x2b
 	err := json.Unmarshal(t.union, &body)
 	return body, err
 }
 
-// FromGet401JSONResponseBody0 overwrites any union data inside the Get401JSONResponseBody as the provided Get401JSONResponseBody0
-func (t *Get401JSONResponseBody) FromGet401JSONResponseBody0(v Get401JSONResponseBody0) error {
+// FromAuthenticationFailedError0x2b overwrites any union data inside the Get401JSONResponseBody as the provided AuthenticationFailedError0x2b
+func (t *Get401JSONResponseBody) FromAuthenticationFailedError0x2b(v AuthenticationFailedError0x2b) error {
 	b, err := json.Marshal(v)
 	t.union = b
 	return err
 }
 
-// MergeGet401JSONResponseBody0 performs a merge with any union data inside the Get401JSONResponseBody, using the provided Get401JSONResponseBody0
-func (t *Get401JSONResponseBody) MergeGet401JSONResponseBody0(v Get401JSONResponseBody0) error {
+// MergeAuthenticationFailedError0x2b performs a merge with any union data inside the Get401JSONResponseBody, using the provided AuthenticationFailedError0x2b
+func (t *Get401JSONResponseBody) MergeAuthenticationFailedError0x2b(v AuthenticationFailedError0x2b) error {
 	b, err := json.Marshal(v)
 	if err != nil {
 		return err
@@ -11475,22 +11457,22 @@ func (t *Get401JSONResponseBody) MergeGet401JSONResponseBody0(v Get401JSONRespon
 	return err
 }
 
-// AsGet401JSONResponseBody1 returns the union data inside the Get401JSONResponseBody as a Get401JSONResponseBody1
-func (t Get401JSONResponseBody) AsGet401JSONResponseBody1() (Get401JSONResponseBody1, error) {
-	var body Get401JSONResponseBody1
+// AsAuthenticationRequiredError0x2c returns the union data inside the Get401JSONResponseBody as a AuthenticationRequiredError0x2c
+func (t Get401JSONResponseBody) AsAuthenticationRequiredError0x2c() (AuthenticationRequiredError0x2c, error) {
+	var body AuthenticationRequiredError0x2c
 	err := json.Unmarshal(t.union, &body)
 	return body, err
 }
 
-// FromGet401JSONResponseBody1 overwrites any union data inside the Get401JSONResponseBody as the provided Get401JSONResponseBody1
-func (t *Get401JSONResponseBody) FromGet401JSONResponseBody1(v Get401JSONResponseBody1) error {
+// FromAuthenticationRequiredError0x2c overwrites any union data inside the Get401JSONResponseBody as the provided AuthenticationRequiredError0x2c
+func (t *Get401JSONResponseBody) FromAuthenticationRequiredError0x2c(v AuthenticationRequiredError0x2c) error {
 	b, err := json.Marshal(v)
 	t.union = b
 	return err
 }
 
-// MergeGet401JSONResponseBody1 performs a merge with any union data inside the Get401JSONResponseBody, using the provided Get401JSONResponseBody1
-func (t *Get401JSONResponseBody) MergeGet401JSONResponseBody1(v Get401JSONResponseBody1) error {
+// MergeAuthenticationRequiredError0x2c performs a merge with any union data inside the Get401JSONResponseBody, using the provided AuthenticationRequiredError0x2c
+func (t *Get401JSONResponseBody) MergeAuthenticationRequiredError0x2c(v AuthenticationRequiredError0x2c) error {
 	b, err := json.Marshal(v)
 	if err != nil {
 		return err
@@ -11511,22 +11493,22 @@ func (t *Get401JSONResponseBody) UnmarshalJSON(b []byte) error {
 	return err
 }
 
-// AsGet402JSONResponseBody0 returns the union data inside the Get402JSONResponseBody as a Get402JSONResponseBody0
-func (t Get402JSONResponseBody) AsGet402JSONResponseBody0() (Get402JSONResponseBody0, error) {
-	var body Get402JSONResponseBody0
+// AsTierFeatureConstraintError0x2d returns the union data inside the Get402JSONResponseBody as a TierFeatureConstraintError0x2d
+func (t Get402JSONResponseBody) AsTierFeatureConstraintError0x2d() (TierFeatureConstraintError0x2d, error) {
+	var body TierFeatureConstraintError0x2d
 	err := json.Unmarshal(t.union, &body)
 	return body, err
 }
 
-// FromGet402JSONResponseBody0 overwrites any union data inside the Get402JSONResponseBody as the provided Get402JSONResponseBody0
-func (t *Get402JSONResponseBody) FromGet402JSONResponseBody0(v Get402JSONResponseBody0) error {
+// FromTierFeatureConstraintError0x2d overwrites any union data inside the Get402JSONResponseBody as the provided TierFeatureConstraintError0x2d
+func (t *Get402JSONResponseBody) FromTierFeatureConstraintError0x2d(v TierFeatureConstraintError0x2d) error {
 	b, err := json.Marshal(v)
 	t.union = b
 	return err
 }
 
-// MergeGet402JSONResponseBody0 performs a merge with any union data inside the Get402JSONResponseBody, using the provided Get402JSONResponseBody0
-func (t *Get402JSONResponseBody) MergeGet402JSONResponseBody0(v Get402JSONResponseBody0) error {
+// MergeTierFeatureConstraintError0x2d performs a merge with any union data inside the Get402JSONResponseBody, using the provided TierFeatureConstraintError0x2d
+func (t *Get402JSONResponseBody) MergeTierFeatureConstraintError0x2d(v TierFeatureConstraintError0x2d) error {
 	b, err := json.Marshal(v)
 	if err != nil {
 		return err
@@ -11537,22 +11519,22 @@ func (t *Get402JSONResponseBody) MergeGet402JSONResponseBody0(v Get402JSONRespon
 	return err
 }
 
-// AsGet402JSONResponseBody1 returns the union data inside the Get402JSONResponseBody as a Get402JSONResponseBody1
-func (t Get402JSONResponseBody) AsGet402JSONResponseBody1() (Get402JSONResponseBody1, error) {
-	var body Get402JSONResponseBody1
+// AsInsufficientBalanceError0x2e returns the union data inside the Get402JSONResponseBody as a InsufficientBalanceError0x2e
+func (t Get402JSONResponseBody) AsInsufficientBalanceError0x2e() (InsufficientBalanceError0x2e, error) {
+	var body InsufficientBalanceError0x2e
 	err := json.Unmarshal(t.union, &body)
 	return body, err
 }
 
-// FromGet402JSONResponseBody1 overwrites any union data inside the Get402JSONResponseBody as the provided Get402JSONResponseBody1
-func (t *Get402JSONResponseBody) FromGet402JSONResponseBody1(v Get402JSONResponseBody1) error {
+// FromInsufficientBalanceError0x2e overwrites any union data inside the Get402JSONResponseBody as the provided InsufficientBalanceError0x2e
+func (t *Get402JSONResponseBody) FromInsufficientBalanceError0x2e(v InsufficientBalanceError0x2e) error {
 	b, err := json.Marshal(v)
 	t.union = b
 	return err
 }
 
-// MergeGet402JSONResponseBody1 performs a merge with any union data inside the Get402JSONResponseBody, using the provided Get402JSONResponseBody1
-func (t *Get402JSONResponseBody) MergeGet402JSONResponseBody1(v Get402JSONResponseBody1) error {
+// MergeInsufficientBalanceError0x2e performs a merge with any union data inside the Get402JSONResponseBody, using the provided InsufficientBalanceError0x2e
+func (t *Get402JSONResponseBody) MergeInsufficientBalanceError0x2e(v InsufficientBalanceError0x2e) error {
 	b, err := json.Marshal(v)
 	if err != nil {
 		return err
@@ -11573,22 +11555,22 @@ func (t *Get402JSONResponseBody) UnmarshalJSON(b []byte) error {
 	return err
 }
 
-// AsGet403JSONResponseBody0 returns the union data inside the Get403JSONResponseBody as a Get403JSONResponseBody0
-func (t Get403JSONResponseBody) AsGet403JSONResponseBody0() (Get403JSONResponseBody0, error) {
-	var body Get403JSONResponseBody0
+// AsOperationNotAllowedError0x2f returns the union data inside the Get403JSONResponseBody as a OperationNotAllowedError0x2f
+func (t Get403JSONResponseBody) AsOperationNotAllowedError0x2f() (OperationNotAllowedError0x2f, error) {
+	var body OperationNotAllowedError0x2f
 	err := json.Unmarshal(t.union, &body)
 	return body, err
 }
 
-// FromGet403JSONResponseBody0 overwrites any union data inside the Get403JSONResponseBody as the provided Get403JSONResponseBody0
-func (t *Get403JSONResponseBody) FromGet403JSONResponseBody0(v Get403JSONResponseBody0) error {
+// FromOperationNotAllowedError0x2f overwrites any union data inside the Get403JSONResponseBody as the provided OperationNotAllowedError0x2f
+func (t *Get403JSONResponseBody) FromOperationNotAllowedError0x2f(v OperationNotAllowedError0x2f) error {
 	b, err := json.Marshal(v)
 	t.union = b
 	return err
 }
 
-// MergeGet403JSONResponseBody0 performs a merge with any union data inside the Get403JSONResponseBody, using the provided Get403JSONResponseBody0
-func (t *Get403JSONResponseBody) MergeGet403JSONResponseBody0(v Get403JSONResponseBody0) error {
+// MergeOperationNotAllowedError0x2f performs a merge with any union data inside the Get403JSONResponseBody, using the provided OperationNotAllowedError0x2f
+func (t *Get403JSONResponseBody) MergeOperationNotAllowedError0x2f(v OperationNotAllowedError0x2f) error {
 	b, err := json.Marshal(v)
 	if err != nil {
 		return err
@@ -11599,22 +11581,22 @@ func (t *Get403JSONResponseBody) MergeGet403JSONResponseBody0(v Get403JSONRespon
 	return err
 }
 
-// AsGet403JSONResponseBody1 returns the union data inside the Get403JSONResponseBody as a Get403JSONResponseBody1
-func (t Get403JSONResponseBody) AsGet403JSONResponseBody1() (Get403JSONResponseBody1, error) {
-	var body Get403JSONResponseBody1
+// AsAbuseAlleviationError0x30 returns the union data inside the Get403JSONResponseBody as a AbuseAlleviationError0x30
+func (t Get403JSONResponseBody) AsAbuseAlleviationError0x30() (AbuseAlleviationError0x30, error) {
+	var body AbuseAlleviationError0x30
 	err := json.Unmarshal(t.union, &body)
 	return body, err
 }
 
-// FromGet403JSONResponseBody1 overwrites any union data inside the Get403JSONResponseBody as the provided Get403JSONResponseBody1
-func (t *Get403JSONResponseBody) FromGet403JSONResponseBody1(v Get403JSONResponseBody1) error {
+// FromAbuseAlleviationError0x30 overwrites any union data inside the Get403JSONResponseBody as the provided AbuseAlleviationError0x30
+func (t *Get403JSONResponseBody) FromAbuseAlleviationError0x30(v AbuseAlleviationError0x30) error {
 	b, err := json.Marshal(v)
 	t.union = b
 	return err
 }
 
-// MergeGet403JSONResponseBody1 performs a merge with any union data inside the Get403JSONResponseBody, using the provided Get403JSONResponseBody1
-func (t *Get403JSONResponseBody) MergeGet403JSONResponseBody1(v Get403JSONResponseBody1) error {
+// MergeAbuseAlleviationError0x30 performs a merge with any union data inside the Get403JSONResponseBody, using the provided AbuseAlleviationError0x30
+func (t *Get403JSONResponseBody) MergeAbuseAlleviationError0x30(v AbuseAlleviationError0x30) error {
 	b, err := json.Marshal(v)
 	if err != nil {
 		return err
@@ -11635,22 +11617,22 @@ func (t *Get403JSONResponseBody) UnmarshalJSON(b []byte) error {
 	return err
 }
 
-// AsGet409JSONResponseBody0 returns the union data inside the Get409JSONResponseBody as a Get409JSONResponseBody0
-func (t Get409JSONResponseBody) AsGet409JSONResponseBody0() (Get409JSONResponseBody0, error) {
-	var body Get409JSONResponseBody0
+// AsResourcePolicyDenyError0x31 returns the union data inside the Get409JSONResponseBody as a ResourcePolicyDenyError0x31
+func (t Get409JSONResponseBody) AsResourcePolicyDenyError0x31() (ResourcePolicyDenyError0x31, error) {
+	var body ResourcePolicyDenyError0x31
 	err := json.Unmarshal(t.union, &body)
 	return body, err
 }
 
-// FromGet409JSONResponseBody0 overwrites any union data inside the Get409JSONResponseBody as the provided Get409JSONResponseBody0
-func (t *Get409JSONResponseBody) FromGet409JSONResponseBody0(v Get409JSONResponseBody0) error {
+// FromResourcePolicyDenyError0x31 overwrites any union data inside the Get409JSONResponseBody as the provided ResourcePolicyDenyError0x31
+func (t *Get409JSONResponseBody) FromResourcePolicyDenyError0x31(v ResourcePolicyDenyError0x31) error {
 	b, err := json.Marshal(v)
 	t.union = b
 	return err
 }
 
-// MergeGet409JSONResponseBody0 performs a merge with any union data inside the Get409JSONResponseBody, using the provided Get409JSONResponseBody0
-func (t *Get409JSONResponseBody) MergeGet409JSONResponseBody0(v Get409JSONResponseBody0) error {
+// MergeResourcePolicyDenyError0x31 performs a merge with any union data inside the Get409JSONResponseBody, using the provided ResourcePolicyDenyError0x31
+func (t *Get409JSONResponseBody) MergeResourcePolicyDenyError0x31(v ResourcePolicyDenyError0x31) error {
 	b, err := json.Marshal(v)
 	if err != nil {
 		return err
@@ -11661,22 +11643,22 @@ func (t *Get409JSONResponseBody) MergeGet409JSONResponseBody0(v Get409JSONRespon
 	return err
 }
 
-// AsGet409JSONResponseBody1 returns the union data inside the Get409JSONResponseBody as a Get409JSONResponseBody1
-func (t Get409JSONResponseBody) AsGet409JSONResponseBody1() (Get409JSONResponseBody1, error) {
-	var body Get409JSONResponseBody1
+// AsBudgetExceededError0x32 returns the union data inside the Get409JSONResponseBody as a BudgetExceededError0x32
+func (t Get409JSONResponseBody) AsBudgetExceededError0x32() (BudgetExceededError0x32, error) {
+	var body BudgetExceededError0x32
 	err := json.Unmarshal(t.union, &body)
 	return body, err
 }
 
-// FromGet409JSONResponseBody1 overwrites any union data inside the Get409JSONResponseBody as the provided Get409JSONResponseBody1
-func (t *Get409JSONResponseBody) FromGet409JSONResponseBody1(v Get409JSONResponseBody1) error {
+// FromBudgetExceededError0x32 overwrites any union data inside the Get409JSONResponseBody as the provided BudgetExceededError0x32
+func (t *Get409JSONResponseBody) FromBudgetExceededError0x32(v BudgetExceededError0x32) error {
 	b, err := json.Marshal(v)
 	t.union = b
 	return err
 }
 
-// MergeGet409JSONResponseBody1 performs a merge with any union data inside the Get409JSONResponseBody, using the provided Get409JSONResponseBody1
-func (t *Get409JSONResponseBody) MergeGet409JSONResponseBody1(v Get409JSONResponseBody1) error {
+// MergeBudgetExceededError0x32 performs a merge with any union data inside the Get409JSONResponseBody, using the provided BudgetExceededError0x32
+func (t *Get409JSONResponseBody) MergeBudgetExceededError0x32(v BudgetExceededError0x32) error {
 	b, err := json.Marshal(v)
 	if err != nil {
 		return err
@@ -11697,22 +11679,22 @@ func (t *Get409JSONResponseBody) UnmarshalJSON(b []byte) error {
 	return err
 }
 
-// AsGet422JSONResponseBody0 returns the union data inside the Get422JSONResponseBody as a Get422JSONResponseBody0
-func (t Get422JSONResponseBody) AsGet422JSONResponseBody0() (Get422JSONResponseBody0, error) {
-	var body Get422JSONResponseBody0
+// AsSubmittedDataMalformedError0x34 returns the union data inside the Get422JSONResponseBody as a SubmittedDataMalformedError0x34
+func (t Get422JSONResponseBody) AsSubmittedDataMalformedError0x34() (SubmittedDataMalformedError0x34, error) {
+	var body SubmittedDataMalformedError0x34
 	err := json.Unmarshal(t.union, &body)
 	return body, err
 }
 
-// FromGet422JSONResponseBody0 overwrites any union data inside the Get422JSONResponseBody as the provided Get422JSONResponseBody0
-func (t *Get422JSONResponseBody) FromGet422JSONResponseBody0(v Get422JSONResponseBody0) error {
+// FromSubmittedDataMalformedError0x34 overwrites any union data inside the Get422JSONResponseBody as the provided SubmittedDataMalformedError0x34
+func (t *Get422JSONResponseBody) FromSubmittedDataMalformedError0x34(v SubmittedDataMalformedError0x34) error {
 	b, err := json.Marshal(v)
 	t.union = b
 	return err
 }
 
-// MergeGet422JSONResponseBody0 performs a merge with any union data inside the Get422JSONResponseBody, using the provided Get422JSONResponseBody0
-func (t *Get422JSONResponseBody) MergeGet422JSONResponseBody0(v Get422JSONResponseBody0) error {
+// MergeSubmittedDataMalformedError0x34 performs a merge with any union data inside the Get422JSONResponseBody, using the provided SubmittedDataMalformedError0x34
+func (t *Get422JSONResponseBody) MergeSubmittedDataMalformedError0x34(v SubmittedDataMalformedError0x34) error {
 	b, err := json.Marshal(v)
 	if err != nil {
 		return err
@@ -11723,22 +11705,22 @@ func (t *Get422JSONResponseBody) MergeGet422JSONResponseBody0(v Get422JSONRespon
 	return err
 }
 
-// AsGet422JSONResponseBody1 returns the union data inside the Get422JSONResponseBody as a Get422JSONResponseBody1
-func (t Get422JSONResponseBody) AsGet422JSONResponseBody1() (Get422JSONResponseBody1, error) {
-	var body Get422JSONResponseBody1
+// AsDownstreamServiceFailureError0x35 returns the union data inside the Get422JSONResponseBody as a DownstreamServiceFailureError0x35
+func (t Get422JSONResponseBody) AsDownstreamServiceFailureError0x35() (DownstreamServiceFailureError0x35, error) {
+	var body DownstreamServiceFailureError0x35
 	err := json.Unmarshal(t.union, &body)
 	return body, err
 }
 
-// FromGet422JSONResponseBody1 overwrites any union data inside the Get422JSONResponseBody as the provided Get422JSONResponseBody1
-func (t *Get422JSONResponseBody) FromGet422JSONResponseBody1(v Get422JSONResponseBody1) error {
+// FromDownstreamServiceFailureError0x35 overwrites any union data inside the Get422JSONResponseBody as the provided DownstreamServiceFailureError0x35
+func (t *Get422JSONResponseBody) FromDownstreamServiceFailureError0x35(v DownstreamServiceFailureError0x35) error {
 	b, err := json.Marshal(v)
 	t.union = b
 	return err
 }
 
-// MergeGet422JSONResponseBody1 performs a merge with any union data inside the Get422JSONResponseBody, using the provided Get422JSONResponseBody1
-func (t *Get422JSONResponseBody) MergeGet422JSONResponseBody1(v Get422JSONResponseBody1) error {
+// MergeDownstreamServiceFailureError0x35 performs a merge with any union data inside the Get422JSONResponseBody, using the provided DownstreamServiceFailureError0x35
+func (t *Get422JSONResponseBody) MergeDownstreamServiceFailureError0x35(v DownstreamServiceFailureError0x35) error {
 	b, err := json.Marshal(v)
 	if err != nil {
 		return err
@@ -11749,22 +11731,22 @@ func (t *Get422JSONResponseBody) MergeGet422JSONResponseBody1(v Get422JSONRespon
 	return err
 }
 
-// AsGet422JSONResponseBody2 returns the union data inside the Get422JSONResponseBody as a Get422JSONResponseBody2
-func (t Get422JSONResponseBody) AsGet422JSONResponseBody2() (Get422JSONResponseBody2, error) {
-	var body Get422JSONResponseBody2
+// AsAssertionFailureError0x36 returns the union data inside the Get422JSONResponseBody as a AssertionFailureError0x36
+func (t Get422JSONResponseBody) AsAssertionFailureError0x36() (AssertionFailureError0x36, error) {
+	var body AssertionFailureError0x36
 	err := json.Unmarshal(t.union, &body)
 	return body, err
 }
 
-// FromGet422JSONResponseBody2 overwrites any union data inside the Get422JSONResponseBody as the provided Get422JSONResponseBody2
-func (t *Get422JSONResponseBody) FromGet422JSONResponseBody2(v Get422JSONResponseBody2) error {
+// FromAssertionFailureError0x36 overwrites any union data inside the Get422JSONResponseBody as the provided AssertionFailureError0x36
+func (t *Get422JSONResponseBody) FromAssertionFailureError0x36(v AssertionFailureError0x36) error {
 	b, err := json.Marshal(v)
 	t.union = b
 	return err
 }
 
-// MergeGet422JSONResponseBody2 performs a merge with any union data inside the Get422JSONResponseBody, using the provided Get422JSONResponseBody2
-func (t *Get422JSONResponseBody) MergeGet422JSONResponseBody2(v Get422JSONResponseBody2) error {
+// MergeAssertionFailureError0x36 performs a merge with any union data inside the Get422JSONResponseBody, using the provided AssertionFailureError0x36
+func (t *Get422JSONResponseBody) MergeAssertionFailureError0x36(v AssertionFailureError0x36) error {
 	b, err := json.Marshal(v)
 	if err != nil {
 		return err
@@ -11785,22 +11767,22 @@ func (t *Get422JSONResponseBody) UnmarshalJSON(b []byte) error {
 	return err
 }
 
-// AsPostJSONBodyEngine0 returns the union data inside the PostJSONBody_Engine as a PostJSONBodyEngine0
-func (t PostJSONBody_Engine) AsPostJSONBodyEngine0() (PostJSONBodyEngine0, error) {
-	var body PostJSONBodyEngine0
+// AsEnum0x1c returns the union data inside the PostJSONBody_Engine as a Enum0x1c
+func (t PostJSONBody_Engine) AsEnum0x1c() (Enum0x1c, error) {
+	var body Enum0x1c
 	err := json.Unmarshal(t.union, &body)
 	return body, err
 }
 
-// FromPostJSONBodyEngine0 overwrites any union data inside the PostJSONBody_Engine as the provided PostJSONBodyEngine0
-func (t *PostJSONBody_Engine) FromPostJSONBodyEngine0(v PostJSONBodyEngine0) error {
+// FromEnum0x1c overwrites any union data inside the PostJSONBody_Engine as the provided Enum0x1c
+func (t *PostJSONBody_Engine) FromEnum0x1c(v Enum0x1c) error {
 	b, err := json.Marshal(v)
 	t.union = b
 	return err
 }
 
-// MergePostJSONBodyEngine0 performs a merge with any union data inside the PostJSONBody_Engine, using the provided PostJSONBodyEngine0
-func (t *PostJSONBody_Engine) MergePostJSONBodyEngine0(v PostJSONBodyEngine0) error {
+// MergeEnum0x1c performs a merge with any union data inside the PostJSONBody_Engine, using the provided Enum0x1c
+func (t *PostJSONBody_Engine) MergeEnum0x1c(v Enum0x1c) error {
 	b, err := json.Marshal(v)
 	if err != nil {
 		return err
@@ -11847,22 +11829,22 @@ func (t *PostJSONBody_Engine) UnmarshalJSON(b []byte) error {
 	return err
 }
 
-// AsPostJSONBodyFile0 returns the union data inside the PostJSONBody_File as a PostJSONBodyFile0
-func (t PostJSONBody_File) AsPostJSONBodyFile0() (PostJSONBodyFile0, error) {
-	var body PostJSONBodyFile0
+// AsFancyFile0x0e returns the union data inside the PostJSONBody_File as a FancyFile0x0e
+func (t PostJSONBody_File) AsFancyFile0x0e() (FancyFile0x0e, error) {
+	var body FancyFile0x0e
 	err := json.Unmarshal(t.union, &body)
 	return body, err
 }
 
-// FromPostJSONBodyFile0 overwrites any union data inside the PostJSONBody_File as the provided PostJSONBodyFile0
-func (t *PostJSONBody_File) FromPostJSONBodyFile0(v PostJSONBodyFile0) error {
+// FromFancyFile0x0e overwrites any union data inside the PostJSONBody_File as the provided FancyFile0x0e
+func (t *PostJSONBody_File) FromFancyFile0x0e(v FancyFile0x0e) error {
 	b, err := json.Marshal(v)
 	t.union = b
 	return err
 }
 
-// MergePostJSONBodyFile0 performs a merge with any union data inside the PostJSONBody_File, using the provided PostJSONBodyFile0
-func (t *PostJSONBody_File) MergePostJSONBodyFile0(v PostJSONBodyFile0) error {
+// MergeFancyFile0x0e performs a merge with any union data inside the PostJSONBody_File, using the provided FancyFile0x0e
+func (t *PostJSONBody_File) MergeFancyFile0x0e(v FancyFile0x0e) error {
 	b, err := json.Marshal(v)
 	if err != nil {
 		return err
@@ -11909,22 +11891,22 @@ func (t *PostJSONBody_File) UnmarshalJSON(b []byte) error {
 	return err
 }
 
-// AsPostJSONBodyMarkdownChunking0 returns the union data inside the PostJSONBody_MarkdownChunking as a PostJSONBodyMarkdownChunking0
-func (t PostJSONBody_MarkdownChunking) AsPostJSONBodyMarkdownChunking0() (PostJSONBodyMarkdownChunking0, error) {
-	var body PostJSONBodyMarkdownChunking0
+// AsEnum0x27 returns the union data inside the PostJSONBody_MarkdownChunking as a Enum0x27
+func (t PostJSONBody_MarkdownChunking) AsEnum0x27() (Enum0x27, error) {
+	var body Enum0x27
 	err := json.Unmarshal(t.union, &body)
 	return body, err
 }
 
-// FromPostJSONBodyMarkdownChunking0 overwrites any union data inside the PostJSONBody_MarkdownChunking as the provided PostJSONBodyMarkdownChunking0
-func (t *PostJSONBody_MarkdownChunking) FromPostJSONBodyMarkdownChunking0(v PostJSONBodyMarkdownChunking0) error {
+// FromEnum0x27 overwrites any union data inside the PostJSONBody_MarkdownChunking as the provided Enum0x27
+func (t *PostJSONBody_MarkdownChunking) FromEnum0x27(v Enum0x27) error {
 	b, err := json.Marshal(v)
 	t.union = b
 	return err
 }
 
-// MergePostJSONBodyMarkdownChunking0 performs a merge with any union data inside the PostJSONBody_MarkdownChunking, using the provided PostJSONBodyMarkdownChunking0
-func (t *PostJSONBody_MarkdownChunking) MergePostJSONBodyMarkdownChunking0(v PostJSONBodyMarkdownChunking0) error {
+// MergeEnum0x27 performs a merge with any union data inside the PostJSONBody_MarkdownChunking, using the provided Enum0x27
+func (t *PostJSONBody_MarkdownChunking) MergeEnum0x27(v Enum0x27) error {
 	b, err := json.Marshal(v)
 	if err != nil {
 		return err
@@ -11971,22 +11953,22 @@ func (t *PostJSONBody_MarkdownChunking) UnmarshalJSON(b []byte) error {
 	return err
 }
 
-// AsPostJSONBodyNoGfm0 returns the union data inside the PostJSONBody_NoGfm as a PostJSONBodyNoGfm0
-func (t PostJSONBody_NoGfm) AsPostJSONBodyNoGfm0() (PostJSONBodyNoGfm0, error) {
-	var body PostJSONBodyNoGfm0
+// AsPseudoBoolean0x11 returns the union data inside the PostJSONBody_NoGfm as a PseudoBoolean0x11
+func (t PostJSONBody_NoGfm) AsPseudoBoolean0x11() (PseudoBoolean0x11, error) {
+	var body PseudoBoolean0x11
 	err := json.Unmarshal(t.union, &body)
 	return body, err
 }
 
-// FromPostJSONBodyNoGfm0 overwrites any union data inside the PostJSONBody_NoGfm as the provided PostJSONBodyNoGfm0
-func (t *PostJSONBody_NoGfm) FromPostJSONBodyNoGfm0(v PostJSONBodyNoGfm0) error {
+// FromPseudoBoolean0x11 overwrites any union data inside the PostJSONBody_NoGfm as the provided PseudoBoolean0x11
+func (t *PostJSONBody_NoGfm) FromPseudoBoolean0x11(v PseudoBoolean0x11) error {
 	b, err := json.Marshal(v)
 	t.union = b
 	return err
 }
 
-// MergePostJSONBodyNoGfm0 performs a merge with any union data inside the PostJSONBody_NoGfm, using the provided PostJSONBodyNoGfm0
-func (t *PostJSONBody_NoGfm) MergePostJSONBodyNoGfm0(v PostJSONBodyNoGfm0) error {
+// MergePseudoBoolean0x11 performs a merge with any union data inside the PostJSONBody_NoGfm, using the provided PseudoBoolean0x11
+func (t *PostJSONBody_NoGfm) MergePseudoBoolean0x11(v PseudoBoolean0x11) error {
 	b, err := json.Marshal(v)
 	if err != nil {
 		return err
@@ -12033,22 +12015,22 @@ func (t *PostJSONBody_NoGfm) UnmarshalJSON(b []byte) error {
 	return err
 }
 
-// AsPostJSONBodyPdf0 returns the union data inside the PostJSONBody_Pdf as a PostJSONBodyPdf0
-func (t PostJSONBody_Pdf) AsPostJSONBodyPdf0() (PostJSONBodyPdf0, error) {
-	var body PostJSONBodyPdf0
+// AsFancyFile0x0e returns the union data inside the PostJSONBody_Pdf as a FancyFile0x0e
+func (t PostJSONBody_Pdf) AsFancyFile0x0e() (FancyFile0x0e, error) {
+	var body FancyFile0x0e
 	err := json.Unmarshal(t.union, &body)
 	return body, err
 }
 
-// FromPostJSONBodyPdf0 overwrites any union data inside the PostJSONBody_Pdf as the provided PostJSONBodyPdf0
-func (t *PostJSONBody_Pdf) FromPostJSONBodyPdf0(v PostJSONBodyPdf0) error {
+// FromFancyFile0x0e overwrites any union data inside the PostJSONBody_Pdf as the provided FancyFile0x0e
+func (t *PostJSONBody_Pdf) FromFancyFile0x0e(v FancyFile0x0e) error {
 	b, err := json.Marshal(v)
 	t.union = b
 	return err
 }
 
-// MergePostJSONBodyPdf0 performs a merge with any union data inside the PostJSONBody_Pdf, using the provided PostJSONBodyPdf0
-func (t *PostJSONBody_Pdf) MergePostJSONBodyPdf0(v PostJSONBodyPdf0) error {
+// MergeFancyFile0x0e performs a merge with any union data inside the PostJSONBody_Pdf, using the provided FancyFile0x0e
+func (t *PostJSONBody_Pdf) MergeFancyFile0x0e(v FancyFile0x0e) error {
 	b, err := json.Marshal(v)
 	if err != nil {
 		return err
@@ -12095,22 +12077,22 @@ func (t *PostJSONBody_Pdf) UnmarshalJSON(b []byte) error {
 	return err
 }
 
-// AsPostJSONBodyRespondWith0 returns the union data inside the PostJSONBody_RespondWith as a PostJSONBodyRespondWith0
-func (t PostJSONBody_RespondWith) AsPostJSONBodyRespondWith0() (PostJSONBodyRespondWith0, error) {
-	var body PostJSONBodyRespondWith0
+// AsEnum0x10 returns the union data inside the PostJSONBody_RespondWith as a Enum0x10
+func (t PostJSONBody_RespondWith) AsEnum0x10() (Enum0x10, error) {
+	var body Enum0x10
 	err := json.Unmarshal(t.union, &body)
 	return body, err
 }
 
-// FromPostJSONBodyRespondWith0 overwrites any union data inside the PostJSONBody_RespondWith as the provided PostJSONBodyRespondWith0
-func (t *PostJSONBody_RespondWith) FromPostJSONBodyRespondWith0(v PostJSONBodyRespondWith0) error {
+// FromEnum0x10 overwrites any union data inside the PostJSONBody_RespondWith as the provided Enum0x10
+func (t *PostJSONBody_RespondWith) FromEnum0x10(v Enum0x10) error {
 	b, err := json.Marshal(v)
 	t.union = b
 	return err
 }
 
-// MergePostJSONBodyRespondWith0 performs a merge with any union data inside the PostJSONBody_RespondWith, using the provided PostJSONBodyRespondWith0
-func (t *PostJSONBody_RespondWith) MergePostJSONBodyRespondWith0(v PostJSONBodyRespondWith0) error {
+// MergeEnum0x10 performs a merge with any union data inside the PostJSONBody_RespondWith, using the provided Enum0x10
+func (t *PostJSONBody_RespondWith) MergeEnum0x10(v Enum0x10) error {
 	b, err := json.Marshal(v)
 	if err != nil {
 		return err
@@ -12153,6 +12135,68 @@ func (t PostJSONBody_RespondWith) MarshalJSON() ([]byte, error) {
 }
 
 func (t *PostJSONBody_RespondWith) UnmarshalJSON(b []byte) error {
+	err := t.union.UnmarshalJSON(b)
+	return err
+}
+
+// AsPseudoBoolean0x11 returns the union data inside the PostJSONBody_RobotsTxt as a PseudoBoolean0x11
+func (t PostJSONBody_RobotsTxt) AsPseudoBoolean0x11() (PseudoBoolean0x11, error) {
+	var body PseudoBoolean0x11
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromPseudoBoolean0x11 overwrites any union data inside the PostJSONBody_RobotsTxt as the provided PseudoBoolean0x11
+func (t *PostJSONBody_RobotsTxt) FromPseudoBoolean0x11(v PseudoBoolean0x11) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergePseudoBoolean0x11 performs a merge with any union data inside the PostJSONBody_RobotsTxt, using the provided PseudoBoolean0x11
+func (t *PostJSONBody_RobotsTxt) MergePseudoBoolean0x11(v PseudoBoolean0x11) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsPostJSONBodyRobotsTxt1 returns the union data inside the PostJSONBody_RobotsTxt as a PostJSONBodyRobotsTxt1
+func (t PostJSONBody_RobotsTxt) AsPostJSONBodyRobotsTxt1() (PostJSONBodyRobotsTxt1, error) {
+	var body PostJSONBodyRobotsTxt1
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromPostJSONBodyRobotsTxt1 overwrites any union data inside the PostJSONBody_RobotsTxt as the provided PostJSONBodyRobotsTxt1
+func (t *PostJSONBody_RobotsTxt) FromPostJSONBodyRobotsTxt1(v PostJSONBodyRobotsTxt1) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergePostJSONBodyRobotsTxt1 performs a merge with any union data inside the PostJSONBody_RobotsTxt, using the provided PostJSONBodyRobotsTxt1
+func (t *PostJSONBody_RobotsTxt) MergePostJSONBodyRobotsTxt1(v PostJSONBodyRobotsTxt1) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+func (t PostJSONBody_RobotsTxt) MarshalJSON() ([]byte, error) {
+	b, err := t.union.MarshalJSON()
+	return b, err
+}
+
+func (t *PostJSONBody_RobotsTxt) UnmarshalJSON(b []byte) error {
 	err := t.union.UnmarshalJSON(b)
 	return err
 }
@@ -12219,22 +12263,84 @@ func (t *PostJSONBody_SetCookies_Item) UnmarshalJSON(b []byte) error {
 	return err
 }
 
-// AsPostJSONBodyWithIframe0 returns the union data inside the PostJSONBody_WithIframe as a PostJSONBodyWithIframe0
-func (t PostJSONBody_WithIframe) AsPostJSONBodyWithIframe0() (PostJSONBodyWithIframe0, error) {
-	var body PostJSONBodyWithIframe0
+// AsPseudoBoolean0x11 returns the union data inside the PostJSONBody_WebBotAuth as a PseudoBoolean0x11
+func (t PostJSONBody_WebBotAuth) AsPseudoBoolean0x11() (PseudoBoolean0x11, error) {
+	var body PseudoBoolean0x11
 	err := json.Unmarshal(t.union, &body)
 	return body, err
 }
 
-// FromPostJSONBodyWithIframe0 overwrites any union data inside the PostJSONBody_WithIframe as the provided PostJSONBodyWithIframe0
-func (t *PostJSONBody_WithIframe) FromPostJSONBodyWithIframe0(v PostJSONBodyWithIframe0) error {
+// FromPseudoBoolean0x11 overwrites any union data inside the PostJSONBody_WebBotAuth as the provided PseudoBoolean0x11
+func (t *PostJSONBody_WebBotAuth) FromPseudoBoolean0x11(v PseudoBoolean0x11) error {
 	b, err := json.Marshal(v)
 	t.union = b
 	return err
 }
 
-// MergePostJSONBodyWithIframe0 performs a merge with any union data inside the PostJSONBody_WithIframe, using the provided PostJSONBodyWithIframe0
-func (t *PostJSONBody_WithIframe) MergePostJSONBodyWithIframe0(v PostJSONBodyWithIframe0) error {
+// MergePseudoBoolean0x11 performs a merge with any union data inside the PostJSONBody_WebBotAuth, using the provided PseudoBoolean0x11
+func (t *PostJSONBody_WebBotAuth) MergePseudoBoolean0x11(v PseudoBoolean0x11) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsEnum0x16 returns the union data inside the PostJSONBody_WebBotAuth as a Enum0x16
+func (t PostJSONBody_WebBotAuth) AsEnum0x16() (Enum0x16, error) {
+	var body Enum0x16
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromEnum0x16 overwrites any union data inside the PostJSONBody_WebBotAuth as the provided Enum0x16
+func (t *PostJSONBody_WebBotAuth) FromEnum0x16(v Enum0x16) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeEnum0x16 performs a merge with any union data inside the PostJSONBody_WebBotAuth, using the provided Enum0x16
+func (t *PostJSONBody_WebBotAuth) MergeEnum0x16(v Enum0x16) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+func (t PostJSONBody_WebBotAuth) MarshalJSON() ([]byte, error) {
+	b, err := t.union.MarshalJSON()
+	return b, err
+}
+
+func (t *PostJSONBody_WebBotAuth) UnmarshalJSON(b []byte) error {
+	err := t.union.UnmarshalJSON(b)
+	return err
+}
+
+// AsPseudoBoolean0x11 returns the union data inside the PostJSONBody_WithIframe as a PseudoBoolean0x11
+func (t PostJSONBody_WithIframe) AsPseudoBoolean0x11() (PseudoBoolean0x11, error) {
+	var body PseudoBoolean0x11
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromPseudoBoolean0x11 overwrites any union data inside the PostJSONBody_WithIframe as the provided PseudoBoolean0x11
+func (t *PostJSONBody_WithIframe) FromPseudoBoolean0x11(v PseudoBoolean0x11) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergePseudoBoolean0x11 performs a merge with any union data inside the PostJSONBody_WithIframe, using the provided PseudoBoolean0x11
+func (t *PostJSONBody_WithIframe) MergePseudoBoolean0x11(v PseudoBoolean0x11) error {
 	b, err := json.Marshal(v)
 	if err != nil {
 		return err
@@ -12281,22 +12387,22 @@ func (t *PostJSONBody_WithIframe) UnmarshalJSON(b []byte) error {
 	return err
 }
 
-// AsPostJSONBodyWithLinksSummary0 returns the union data inside the PostJSONBody_WithLinksSummary as a PostJSONBodyWithLinksSummary0
-func (t PostJSONBody_WithLinksSummary) AsPostJSONBodyWithLinksSummary0() (PostJSONBodyWithLinksSummary0, error) {
-	var body PostJSONBodyWithLinksSummary0
+// AsPseudoBoolean0x11 returns the union data inside the PostJSONBody_WithLinksSummary as a PseudoBoolean0x11
+func (t PostJSONBody_WithLinksSummary) AsPseudoBoolean0x11() (PseudoBoolean0x11, error) {
+	var body PseudoBoolean0x11
 	err := json.Unmarshal(t.union, &body)
 	return body, err
 }
 
-// FromPostJSONBodyWithLinksSummary0 overwrites any union data inside the PostJSONBody_WithLinksSummary as the provided PostJSONBodyWithLinksSummary0
-func (t *PostJSONBody_WithLinksSummary) FromPostJSONBodyWithLinksSummary0(v PostJSONBodyWithLinksSummary0) error {
+// FromPseudoBoolean0x11 overwrites any union data inside the PostJSONBody_WithLinksSummary as the provided PseudoBoolean0x11
+func (t *PostJSONBody_WithLinksSummary) FromPseudoBoolean0x11(v PseudoBoolean0x11) error {
 	b, err := json.Marshal(v)
 	t.union = b
 	return err
 }
 
-// MergePostJSONBodyWithLinksSummary0 performs a merge with any union data inside the PostJSONBody_WithLinksSummary, using the provided PostJSONBodyWithLinksSummary0
-func (t *PostJSONBody_WithLinksSummary) MergePostJSONBodyWithLinksSummary0(v PostJSONBodyWithLinksSummary0) error {
+// MergePseudoBoolean0x11 performs a merge with any union data inside the PostJSONBody_WithLinksSummary, using the provided PseudoBoolean0x11
+func (t *PostJSONBody_WithLinksSummary) MergePseudoBoolean0x11(v PseudoBoolean0x11) error {
 	b, err := json.Marshal(v)
 	if err != nil {
 		return err
@@ -12343,22 +12449,22 @@ func (t *PostJSONBody_WithLinksSummary) UnmarshalJSON(b []byte) error {
 	return err
 }
 
-// AsPostFormdataBodyEngine0 returns the union data inside the PostFormdataBody_Engine as a PostFormdataBodyEngine0
-func (t PostFormdataBody_Engine) AsPostFormdataBodyEngine0() (PostFormdataBodyEngine0, error) {
-	var body PostFormdataBodyEngine0
+// AsEnum0x1c returns the union data inside the PostFormdataBody_Engine as a Enum0x1c
+func (t PostFormdataBody_Engine) AsEnum0x1c() (Enum0x1c, error) {
+	var body Enum0x1c
 	err := json.Unmarshal(t.union, &body)
 	return body, err
 }
 
-// FromPostFormdataBodyEngine0 overwrites any union data inside the PostFormdataBody_Engine as the provided PostFormdataBodyEngine0
-func (t *PostFormdataBody_Engine) FromPostFormdataBodyEngine0(v PostFormdataBodyEngine0) error {
+// FromEnum0x1c overwrites any union data inside the PostFormdataBody_Engine as the provided Enum0x1c
+func (t *PostFormdataBody_Engine) FromEnum0x1c(v Enum0x1c) error {
 	b, err := json.Marshal(v)
 	t.union = b
 	return err
 }
 
-// MergePostFormdataBodyEngine0 performs a merge with any union data inside the PostFormdataBody_Engine, using the provided PostFormdataBodyEngine0
-func (t *PostFormdataBody_Engine) MergePostFormdataBodyEngine0(v PostFormdataBodyEngine0) error {
+// MergeEnum0x1c performs a merge with any union data inside the PostFormdataBody_Engine, using the provided Enum0x1c
+func (t *PostFormdataBody_Engine) MergeEnum0x1c(v Enum0x1c) error {
 	b, err := json.Marshal(v)
 	if err != nil {
 		return err
@@ -12405,22 +12511,22 @@ func (t *PostFormdataBody_Engine) UnmarshalJSON(b []byte) error {
 	return err
 }
 
-// AsPostFormdataBodyFile0 returns the union data inside the PostFormdataBody_File as a PostFormdataBodyFile0
-func (t PostFormdataBody_File) AsPostFormdataBodyFile0() (PostFormdataBodyFile0, error) {
-	var body PostFormdataBodyFile0
+// AsFancyFile0x0e returns the union data inside the PostFormdataBody_File as a FancyFile0x0e
+func (t PostFormdataBody_File) AsFancyFile0x0e() (FancyFile0x0e, error) {
+	var body FancyFile0x0e
 	err := json.Unmarshal(t.union, &body)
 	return body, err
 }
 
-// FromPostFormdataBodyFile0 overwrites any union data inside the PostFormdataBody_File as the provided PostFormdataBodyFile0
-func (t *PostFormdataBody_File) FromPostFormdataBodyFile0(v PostFormdataBodyFile0) error {
+// FromFancyFile0x0e overwrites any union data inside the PostFormdataBody_File as the provided FancyFile0x0e
+func (t *PostFormdataBody_File) FromFancyFile0x0e(v FancyFile0x0e) error {
 	b, err := json.Marshal(v)
 	t.union = b
 	return err
 }
 
-// MergePostFormdataBodyFile0 performs a merge with any union data inside the PostFormdataBody_File, using the provided PostFormdataBodyFile0
-func (t *PostFormdataBody_File) MergePostFormdataBodyFile0(v PostFormdataBodyFile0) error {
+// MergeFancyFile0x0e performs a merge with any union data inside the PostFormdataBody_File, using the provided FancyFile0x0e
+func (t *PostFormdataBody_File) MergeFancyFile0x0e(v FancyFile0x0e) error {
 	b, err := json.Marshal(v)
 	if err != nil {
 		return err
@@ -12467,22 +12573,22 @@ func (t *PostFormdataBody_File) UnmarshalJSON(b []byte) error {
 	return err
 }
 
-// AsPostFormdataBodyMarkdownChunking0 returns the union data inside the PostFormdataBody_MarkdownChunking as a PostFormdataBodyMarkdownChunking0
-func (t PostFormdataBody_MarkdownChunking) AsPostFormdataBodyMarkdownChunking0() (PostFormdataBodyMarkdownChunking0, error) {
-	var body PostFormdataBodyMarkdownChunking0
+// AsEnum0x27 returns the union data inside the PostFormdataBody_MarkdownChunking as a Enum0x27
+func (t PostFormdataBody_MarkdownChunking) AsEnum0x27() (Enum0x27, error) {
+	var body Enum0x27
 	err := json.Unmarshal(t.union, &body)
 	return body, err
 }
 
-// FromPostFormdataBodyMarkdownChunking0 overwrites any union data inside the PostFormdataBody_MarkdownChunking as the provided PostFormdataBodyMarkdownChunking0
-func (t *PostFormdataBody_MarkdownChunking) FromPostFormdataBodyMarkdownChunking0(v PostFormdataBodyMarkdownChunking0) error {
+// FromEnum0x27 overwrites any union data inside the PostFormdataBody_MarkdownChunking as the provided Enum0x27
+func (t *PostFormdataBody_MarkdownChunking) FromEnum0x27(v Enum0x27) error {
 	b, err := json.Marshal(v)
 	t.union = b
 	return err
 }
 
-// MergePostFormdataBodyMarkdownChunking0 performs a merge with any union data inside the PostFormdataBody_MarkdownChunking, using the provided PostFormdataBodyMarkdownChunking0
-func (t *PostFormdataBody_MarkdownChunking) MergePostFormdataBodyMarkdownChunking0(v PostFormdataBodyMarkdownChunking0) error {
+// MergeEnum0x27 performs a merge with any union data inside the PostFormdataBody_MarkdownChunking, using the provided Enum0x27
+func (t *PostFormdataBody_MarkdownChunking) MergeEnum0x27(v Enum0x27) error {
 	b, err := json.Marshal(v)
 	if err != nil {
 		return err
@@ -12529,22 +12635,22 @@ func (t *PostFormdataBody_MarkdownChunking) UnmarshalJSON(b []byte) error {
 	return err
 }
 
-// AsPostFormdataBodyNoGfm0 returns the union data inside the PostFormdataBody_NoGfm as a PostFormdataBodyNoGfm0
-func (t PostFormdataBody_NoGfm) AsPostFormdataBodyNoGfm0() (PostFormdataBodyNoGfm0, error) {
-	var body PostFormdataBodyNoGfm0
+// AsPseudoBoolean0x11 returns the union data inside the PostFormdataBody_NoGfm as a PseudoBoolean0x11
+func (t PostFormdataBody_NoGfm) AsPseudoBoolean0x11() (PseudoBoolean0x11, error) {
+	var body PseudoBoolean0x11
 	err := json.Unmarshal(t.union, &body)
 	return body, err
 }
 
-// FromPostFormdataBodyNoGfm0 overwrites any union data inside the PostFormdataBody_NoGfm as the provided PostFormdataBodyNoGfm0
-func (t *PostFormdataBody_NoGfm) FromPostFormdataBodyNoGfm0(v PostFormdataBodyNoGfm0) error {
+// FromPseudoBoolean0x11 overwrites any union data inside the PostFormdataBody_NoGfm as the provided PseudoBoolean0x11
+func (t *PostFormdataBody_NoGfm) FromPseudoBoolean0x11(v PseudoBoolean0x11) error {
 	b, err := json.Marshal(v)
 	t.union = b
 	return err
 }
 
-// MergePostFormdataBodyNoGfm0 performs a merge with any union data inside the PostFormdataBody_NoGfm, using the provided PostFormdataBodyNoGfm0
-func (t *PostFormdataBody_NoGfm) MergePostFormdataBodyNoGfm0(v PostFormdataBodyNoGfm0) error {
+// MergePseudoBoolean0x11 performs a merge with any union data inside the PostFormdataBody_NoGfm, using the provided PseudoBoolean0x11
+func (t *PostFormdataBody_NoGfm) MergePseudoBoolean0x11(v PseudoBoolean0x11) error {
 	b, err := json.Marshal(v)
 	if err != nil {
 		return err
@@ -12591,22 +12697,22 @@ func (t *PostFormdataBody_NoGfm) UnmarshalJSON(b []byte) error {
 	return err
 }
 
-// AsPostFormdataBodyPdf0 returns the union data inside the PostFormdataBody_Pdf as a PostFormdataBodyPdf0
-func (t PostFormdataBody_Pdf) AsPostFormdataBodyPdf0() (PostFormdataBodyPdf0, error) {
-	var body PostFormdataBodyPdf0
+// AsFancyFile0x0e returns the union data inside the PostFormdataBody_Pdf as a FancyFile0x0e
+func (t PostFormdataBody_Pdf) AsFancyFile0x0e() (FancyFile0x0e, error) {
+	var body FancyFile0x0e
 	err := json.Unmarshal(t.union, &body)
 	return body, err
 }
 
-// FromPostFormdataBodyPdf0 overwrites any union data inside the PostFormdataBody_Pdf as the provided PostFormdataBodyPdf0
-func (t *PostFormdataBody_Pdf) FromPostFormdataBodyPdf0(v PostFormdataBodyPdf0) error {
+// FromFancyFile0x0e overwrites any union data inside the PostFormdataBody_Pdf as the provided FancyFile0x0e
+func (t *PostFormdataBody_Pdf) FromFancyFile0x0e(v FancyFile0x0e) error {
 	b, err := json.Marshal(v)
 	t.union = b
 	return err
 }
 
-// MergePostFormdataBodyPdf0 performs a merge with any union data inside the PostFormdataBody_Pdf, using the provided PostFormdataBodyPdf0
-func (t *PostFormdataBody_Pdf) MergePostFormdataBodyPdf0(v PostFormdataBodyPdf0) error {
+// MergeFancyFile0x0e performs a merge with any union data inside the PostFormdataBody_Pdf, using the provided FancyFile0x0e
+func (t *PostFormdataBody_Pdf) MergeFancyFile0x0e(v FancyFile0x0e) error {
 	b, err := json.Marshal(v)
 	if err != nil {
 		return err
@@ -12653,22 +12759,22 @@ func (t *PostFormdataBody_Pdf) UnmarshalJSON(b []byte) error {
 	return err
 }
 
-// AsPostFormdataBodyRespondWith0 returns the union data inside the PostFormdataBody_RespondWith as a PostFormdataBodyRespondWith0
-func (t PostFormdataBody_RespondWith) AsPostFormdataBodyRespondWith0() (PostFormdataBodyRespondWith0, error) {
-	var body PostFormdataBodyRespondWith0
+// AsEnum0x10 returns the union data inside the PostFormdataBody_RespondWith as a Enum0x10
+func (t PostFormdataBody_RespondWith) AsEnum0x10() (Enum0x10, error) {
+	var body Enum0x10
 	err := json.Unmarshal(t.union, &body)
 	return body, err
 }
 
-// FromPostFormdataBodyRespondWith0 overwrites any union data inside the PostFormdataBody_RespondWith as the provided PostFormdataBodyRespondWith0
-func (t *PostFormdataBody_RespondWith) FromPostFormdataBodyRespondWith0(v PostFormdataBodyRespondWith0) error {
+// FromEnum0x10 overwrites any union data inside the PostFormdataBody_RespondWith as the provided Enum0x10
+func (t *PostFormdataBody_RespondWith) FromEnum0x10(v Enum0x10) error {
 	b, err := json.Marshal(v)
 	t.union = b
 	return err
 }
 
-// MergePostFormdataBodyRespondWith0 performs a merge with any union data inside the PostFormdataBody_RespondWith, using the provided PostFormdataBodyRespondWith0
-func (t *PostFormdataBody_RespondWith) MergePostFormdataBodyRespondWith0(v PostFormdataBodyRespondWith0) error {
+// MergeEnum0x10 performs a merge with any union data inside the PostFormdataBody_RespondWith, using the provided Enum0x10
+func (t *PostFormdataBody_RespondWith) MergeEnum0x10(v Enum0x10) error {
 	b, err := json.Marshal(v)
 	if err != nil {
 		return err
@@ -12711,6 +12817,68 @@ func (t PostFormdataBody_RespondWith) MarshalJSON() ([]byte, error) {
 }
 
 func (t *PostFormdataBody_RespondWith) UnmarshalJSON(b []byte) error {
+	err := t.union.UnmarshalJSON(b)
+	return err
+}
+
+// AsPseudoBoolean0x11 returns the union data inside the PostFormdataBody_RobotsTxt as a PseudoBoolean0x11
+func (t PostFormdataBody_RobotsTxt) AsPseudoBoolean0x11() (PseudoBoolean0x11, error) {
+	var body PseudoBoolean0x11
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromPseudoBoolean0x11 overwrites any union data inside the PostFormdataBody_RobotsTxt as the provided PseudoBoolean0x11
+func (t *PostFormdataBody_RobotsTxt) FromPseudoBoolean0x11(v PseudoBoolean0x11) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergePseudoBoolean0x11 performs a merge with any union data inside the PostFormdataBody_RobotsTxt, using the provided PseudoBoolean0x11
+func (t *PostFormdataBody_RobotsTxt) MergePseudoBoolean0x11(v PseudoBoolean0x11) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsPostFormdataBodyRobotsTxt1 returns the union data inside the PostFormdataBody_RobotsTxt as a PostFormdataBodyRobotsTxt1
+func (t PostFormdataBody_RobotsTxt) AsPostFormdataBodyRobotsTxt1() (PostFormdataBodyRobotsTxt1, error) {
+	var body PostFormdataBodyRobotsTxt1
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromPostFormdataBodyRobotsTxt1 overwrites any union data inside the PostFormdataBody_RobotsTxt as the provided PostFormdataBodyRobotsTxt1
+func (t *PostFormdataBody_RobotsTxt) FromPostFormdataBodyRobotsTxt1(v PostFormdataBodyRobotsTxt1) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergePostFormdataBodyRobotsTxt1 performs a merge with any union data inside the PostFormdataBody_RobotsTxt, using the provided PostFormdataBodyRobotsTxt1
+func (t *PostFormdataBody_RobotsTxt) MergePostFormdataBodyRobotsTxt1(v PostFormdataBodyRobotsTxt1) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+func (t PostFormdataBody_RobotsTxt) MarshalJSON() ([]byte, error) {
+	b, err := t.union.MarshalJSON()
+	return b, err
+}
+
+func (t *PostFormdataBody_RobotsTxt) UnmarshalJSON(b []byte) error {
 	err := t.union.UnmarshalJSON(b)
 	return err
 }
@@ -12777,22 +12945,84 @@ func (t *PostFormdataBody_SetCookies) UnmarshalJSON(b []byte) error {
 	return err
 }
 
-// AsPostFormdataBodyWithIframe0 returns the union data inside the PostFormdataBody_WithIframe as a PostFormdataBodyWithIframe0
-func (t PostFormdataBody_WithIframe) AsPostFormdataBodyWithIframe0() (PostFormdataBodyWithIframe0, error) {
-	var body PostFormdataBodyWithIframe0
+// AsPseudoBoolean0x11 returns the union data inside the PostFormdataBody_WebBotAuth as a PseudoBoolean0x11
+func (t PostFormdataBody_WebBotAuth) AsPseudoBoolean0x11() (PseudoBoolean0x11, error) {
+	var body PseudoBoolean0x11
 	err := json.Unmarshal(t.union, &body)
 	return body, err
 }
 
-// FromPostFormdataBodyWithIframe0 overwrites any union data inside the PostFormdataBody_WithIframe as the provided PostFormdataBodyWithIframe0
-func (t *PostFormdataBody_WithIframe) FromPostFormdataBodyWithIframe0(v PostFormdataBodyWithIframe0) error {
+// FromPseudoBoolean0x11 overwrites any union data inside the PostFormdataBody_WebBotAuth as the provided PseudoBoolean0x11
+func (t *PostFormdataBody_WebBotAuth) FromPseudoBoolean0x11(v PseudoBoolean0x11) error {
 	b, err := json.Marshal(v)
 	t.union = b
 	return err
 }
 
-// MergePostFormdataBodyWithIframe0 performs a merge with any union data inside the PostFormdataBody_WithIframe, using the provided PostFormdataBodyWithIframe0
-func (t *PostFormdataBody_WithIframe) MergePostFormdataBodyWithIframe0(v PostFormdataBodyWithIframe0) error {
+// MergePseudoBoolean0x11 performs a merge with any union data inside the PostFormdataBody_WebBotAuth, using the provided PseudoBoolean0x11
+func (t *PostFormdataBody_WebBotAuth) MergePseudoBoolean0x11(v PseudoBoolean0x11) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsEnum0x16 returns the union data inside the PostFormdataBody_WebBotAuth as a Enum0x16
+func (t PostFormdataBody_WebBotAuth) AsEnum0x16() (Enum0x16, error) {
+	var body Enum0x16
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromEnum0x16 overwrites any union data inside the PostFormdataBody_WebBotAuth as the provided Enum0x16
+func (t *PostFormdataBody_WebBotAuth) FromEnum0x16(v Enum0x16) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeEnum0x16 performs a merge with any union data inside the PostFormdataBody_WebBotAuth, using the provided Enum0x16
+func (t *PostFormdataBody_WebBotAuth) MergeEnum0x16(v Enum0x16) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+func (t PostFormdataBody_WebBotAuth) MarshalJSON() ([]byte, error) {
+	b, err := t.union.MarshalJSON()
+	return b, err
+}
+
+func (t *PostFormdataBody_WebBotAuth) UnmarshalJSON(b []byte) error {
+	err := t.union.UnmarshalJSON(b)
+	return err
+}
+
+// AsPseudoBoolean0x11 returns the union data inside the PostFormdataBody_WithIframe as a PseudoBoolean0x11
+func (t PostFormdataBody_WithIframe) AsPseudoBoolean0x11() (PseudoBoolean0x11, error) {
+	var body PseudoBoolean0x11
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromPseudoBoolean0x11 overwrites any union data inside the PostFormdataBody_WithIframe as the provided PseudoBoolean0x11
+func (t *PostFormdataBody_WithIframe) FromPseudoBoolean0x11(v PseudoBoolean0x11) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergePseudoBoolean0x11 performs a merge with any union data inside the PostFormdataBody_WithIframe, using the provided PseudoBoolean0x11
+func (t *PostFormdataBody_WithIframe) MergePseudoBoolean0x11(v PseudoBoolean0x11) error {
 	b, err := json.Marshal(v)
 	if err != nil {
 		return err
@@ -12839,22 +13069,22 @@ func (t *PostFormdataBody_WithIframe) UnmarshalJSON(b []byte) error {
 	return err
 }
 
-// AsPostFormdataBodyWithLinksSummary0 returns the union data inside the PostFormdataBody_WithLinksSummary as a PostFormdataBodyWithLinksSummary0
-func (t PostFormdataBody_WithLinksSummary) AsPostFormdataBodyWithLinksSummary0() (PostFormdataBodyWithLinksSummary0, error) {
-	var body PostFormdataBodyWithLinksSummary0
+// AsPseudoBoolean0x11 returns the union data inside the PostFormdataBody_WithLinksSummary as a PseudoBoolean0x11
+func (t PostFormdataBody_WithLinksSummary) AsPseudoBoolean0x11() (PseudoBoolean0x11, error) {
+	var body PseudoBoolean0x11
 	err := json.Unmarshal(t.union, &body)
 	return body, err
 }
 
-// FromPostFormdataBodyWithLinksSummary0 overwrites any union data inside the PostFormdataBody_WithLinksSummary as the provided PostFormdataBodyWithLinksSummary0
-func (t *PostFormdataBody_WithLinksSummary) FromPostFormdataBodyWithLinksSummary0(v PostFormdataBodyWithLinksSummary0) error {
+// FromPseudoBoolean0x11 overwrites any union data inside the PostFormdataBody_WithLinksSummary as the provided PseudoBoolean0x11
+func (t *PostFormdataBody_WithLinksSummary) FromPseudoBoolean0x11(v PseudoBoolean0x11) error {
 	b, err := json.Marshal(v)
 	t.union = b
 	return err
 }
 
-// MergePostFormdataBodyWithLinksSummary0 performs a merge with any union data inside the PostFormdataBody_WithLinksSummary, using the provided PostFormdataBodyWithLinksSummary0
-func (t *PostFormdataBody_WithLinksSummary) MergePostFormdataBodyWithLinksSummary0(v PostFormdataBodyWithLinksSummary0) error {
+// MergePseudoBoolean0x11 performs a merge with any union data inside the PostFormdataBody_WithLinksSummary, using the provided PseudoBoolean0x11
+func (t *PostFormdataBody_WithLinksSummary) MergePseudoBoolean0x11(v PseudoBoolean0x11) error {
 	b, err := json.Marshal(v)
 	if err != nil {
 		return err
@@ -12901,22 +13131,22 @@ func (t *PostFormdataBody_WithLinksSummary) UnmarshalJSON(b []byte) error {
 	return err
 }
 
-// AsPostMultipartBodyEngine0 returns the union data inside the PostMultipartBody_Engine as a PostMultipartBodyEngine0
-func (t PostMultipartBody_Engine) AsPostMultipartBodyEngine0() (PostMultipartBodyEngine0, error) {
-	var body PostMultipartBodyEngine0
+// AsEnum0x1c returns the union data inside the PostMultipartBody_Engine as a Enum0x1c
+func (t PostMultipartBody_Engine) AsEnum0x1c() (Enum0x1c, error) {
+	var body Enum0x1c
 	err := json.Unmarshal(t.union, &body)
 	return body, err
 }
 
-// FromPostMultipartBodyEngine0 overwrites any union data inside the PostMultipartBody_Engine as the provided PostMultipartBodyEngine0
-func (t *PostMultipartBody_Engine) FromPostMultipartBodyEngine0(v PostMultipartBodyEngine0) error {
+// FromEnum0x1c overwrites any union data inside the PostMultipartBody_Engine as the provided Enum0x1c
+func (t *PostMultipartBody_Engine) FromEnum0x1c(v Enum0x1c) error {
 	b, err := json.Marshal(v)
 	t.union = b
 	return err
 }
 
-// MergePostMultipartBodyEngine0 performs a merge with any union data inside the PostMultipartBody_Engine, using the provided PostMultipartBodyEngine0
-func (t *PostMultipartBody_Engine) MergePostMultipartBodyEngine0(v PostMultipartBodyEngine0) error {
+// MergeEnum0x1c performs a merge with any union data inside the PostMultipartBody_Engine, using the provided Enum0x1c
+func (t *PostMultipartBody_Engine) MergeEnum0x1c(v Enum0x1c) error {
 	b, err := json.Marshal(v)
 	if err != nil {
 		return err
@@ -12963,22 +13193,22 @@ func (t *PostMultipartBody_Engine) UnmarshalJSON(b []byte) error {
 	return err
 }
 
-// AsPostMultipartBodyFile0 returns the union data inside the PostMultipartBody_File as a PostMultipartBodyFile0
-func (t PostMultipartBody_File) AsPostMultipartBodyFile0() (PostMultipartBodyFile0, error) {
-	var body PostMultipartBodyFile0
+// AsFancyFile0x0e returns the union data inside the PostMultipartBody_File as a FancyFile0x0e
+func (t PostMultipartBody_File) AsFancyFile0x0e() (FancyFile0x0e, error) {
+	var body FancyFile0x0e
 	err := json.Unmarshal(t.union, &body)
 	return body, err
 }
 
-// FromPostMultipartBodyFile0 overwrites any union data inside the PostMultipartBody_File as the provided PostMultipartBodyFile0
-func (t *PostMultipartBody_File) FromPostMultipartBodyFile0(v PostMultipartBodyFile0) error {
+// FromFancyFile0x0e overwrites any union data inside the PostMultipartBody_File as the provided FancyFile0x0e
+func (t *PostMultipartBody_File) FromFancyFile0x0e(v FancyFile0x0e) error {
 	b, err := json.Marshal(v)
 	t.union = b
 	return err
 }
 
-// MergePostMultipartBodyFile0 performs a merge with any union data inside the PostMultipartBody_File, using the provided PostMultipartBodyFile0
-func (t *PostMultipartBody_File) MergePostMultipartBodyFile0(v PostMultipartBodyFile0) error {
+// MergeFancyFile0x0e performs a merge with any union data inside the PostMultipartBody_File, using the provided FancyFile0x0e
+func (t *PostMultipartBody_File) MergeFancyFile0x0e(v FancyFile0x0e) error {
 	b, err := json.Marshal(v)
 	if err != nil {
 		return err
@@ -13025,22 +13255,22 @@ func (t *PostMultipartBody_File) UnmarshalJSON(b []byte) error {
 	return err
 }
 
-// AsPostMultipartBodyMarkdownChunking0 returns the union data inside the PostMultipartBody_MarkdownChunking as a PostMultipartBodyMarkdownChunking0
-func (t PostMultipartBody_MarkdownChunking) AsPostMultipartBodyMarkdownChunking0() (PostMultipartBodyMarkdownChunking0, error) {
-	var body PostMultipartBodyMarkdownChunking0
+// AsEnum0x27 returns the union data inside the PostMultipartBody_MarkdownChunking as a Enum0x27
+func (t PostMultipartBody_MarkdownChunking) AsEnum0x27() (Enum0x27, error) {
+	var body Enum0x27
 	err := json.Unmarshal(t.union, &body)
 	return body, err
 }
 
-// FromPostMultipartBodyMarkdownChunking0 overwrites any union data inside the PostMultipartBody_MarkdownChunking as the provided PostMultipartBodyMarkdownChunking0
-func (t *PostMultipartBody_MarkdownChunking) FromPostMultipartBodyMarkdownChunking0(v PostMultipartBodyMarkdownChunking0) error {
+// FromEnum0x27 overwrites any union data inside the PostMultipartBody_MarkdownChunking as the provided Enum0x27
+func (t *PostMultipartBody_MarkdownChunking) FromEnum0x27(v Enum0x27) error {
 	b, err := json.Marshal(v)
 	t.union = b
 	return err
 }
 
-// MergePostMultipartBodyMarkdownChunking0 performs a merge with any union data inside the PostMultipartBody_MarkdownChunking, using the provided PostMultipartBodyMarkdownChunking0
-func (t *PostMultipartBody_MarkdownChunking) MergePostMultipartBodyMarkdownChunking0(v PostMultipartBodyMarkdownChunking0) error {
+// MergeEnum0x27 performs a merge with any union data inside the PostMultipartBody_MarkdownChunking, using the provided Enum0x27
+func (t *PostMultipartBody_MarkdownChunking) MergeEnum0x27(v Enum0x27) error {
 	b, err := json.Marshal(v)
 	if err != nil {
 		return err
@@ -13087,22 +13317,22 @@ func (t *PostMultipartBody_MarkdownChunking) UnmarshalJSON(b []byte) error {
 	return err
 }
 
-// AsPostMultipartBodyNoGfm0 returns the union data inside the PostMultipartBody_NoGfm as a PostMultipartBodyNoGfm0
-func (t PostMultipartBody_NoGfm) AsPostMultipartBodyNoGfm0() (PostMultipartBodyNoGfm0, error) {
-	var body PostMultipartBodyNoGfm0
+// AsPseudoBoolean0x11 returns the union data inside the PostMultipartBody_NoGfm as a PseudoBoolean0x11
+func (t PostMultipartBody_NoGfm) AsPseudoBoolean0x11() (PseudoBoolean0x11, error) {
+	var body PseudoBoolean0x11
 	err := json.Unmarshal(t.union, &body)
 	return body, err
 }
 
-// FromPostMultipartBodyNoGfm0 overwrites any union data inside the PostMultipartBody_NoGfm as the provided PostMultipartBodyNoGfm0
-func (t *PostMultipartBody_NoGfm) FromPostMultipartBodyNoGfm0(v PostMultipartBodyNoGfm0) error {
+// FromPseudoBoolean0x11 overwrites any union data inside the PostMultipartBody_NoGfm as the provided PseudoBoolean0x11
+func (t *PostMultipartBody_NoGfm) FromPseudoBoolean0x11(v PseudoBoolean0x11) error {
 	b, err := json.Marshal(v)
 	t.union = b
 	return err
 }
 
-// MergePostMultipartBodyNoGfm0 performs a merge with any union data inside the PostMultipartBody_NoGfm, using the provided PostMultipartBodyNoGfm0
-func (t *PostMultipartBody_NoGfm) MergePostMultipartBodyNoGfm0(v PostMultipartBodyNoGfm0) error {
+// MergePseudoBoolean0x11 performs a merge with any union data inside the PostMultipartBody_NoGfm, using the provided PseudoBoolean0x11
+func (t *PostMultipartBody_NoGfm) MergePseudoBoolean0x11(v PseudoBoolean0x11) error {
 	b, err := json.Marshal(v)
 	if err != nil {
 		return err
@@ -13149,22 +13379,22 @@ func (t *PostMultipartBody_NoGfm) UnmarshalJSON(b []byte) error {
 	return err
 }
 
-// AsPostMultipartBodyPdf0 returns the union data inside the PostMultipartBody_Pdf as a PostMultipartBodyPdf0
-func (t PostMultipartBody_Pdf) AsPostMultipartBodyPdf0() (PostMultipartBodyPdf0, error) {
-	var body PostMultipartBodyPdf0
+// AsFancyFile0x0e returns the union data inside the PostMultipartBody_Pdf as a FancyFile0x0e
+func (t PostMultipartBody_Pdf) AsFancyFile0x0e() (FancyFile0x0e, error) {
+	var body FancyFile0x0e
 	err := json.Unmarshal(t.union, &body)
 	return body, err
 }
 
-// FromPostMultipartBodyPdf0 overwrites any union data inside the PostMultipartBody_Pdf as the provided PostMultipartBodyPdf0
-func (t *PostMultipartBody_Pdf) FromPostMultipartBodyPdf0(v PostMultipartBodyPdf0) error {
+// FromFancyFile0x0e overwrites any union data inside the PostMultipartBody_Pdf as the provided FancyFile0x0e
+func (t *PostMultipartBody_Pdf) FromFancyFile0x0e(v FancyFile0x0e) error {
 	b, err := json.Marshal(v)
 	t.union = b
 	return err
 }
 
-// MergePostMultipartBodyPdf0 performs a merge with any union data inside the PostMultipartBody_Pdf, using the provided PostMultipartBodyPdf0
-func (t *PostMultipartBody_Pdf) MergePostMultipartBodyPdf0(v PostMultipartBodyPdf0) error {
+// MergeFancyFile0x0e performs a merge with any union data inside the PostMultipartBody_Pdf, using the provided FancyFile0x0e
+func (t *PostMultipartBody_Pdf) MergeFancyFile0x0e(v FancyFile0x0e) error {
 	b, err := json.Marshal(v)
 	if err != nil {
 		return err
@@ -13211,22 +13441,22 @@ func (t *PostMultipartBody_Pdf) UnmarshalJSON(b []byte) error {
 	return err
 }
 
-// AsPostMultipartBodyRespondWith0 returns the union data inside the PostMultipartBody_RespondWith as a PostMultipartBodyRespondWith0
-func (t PostMultipartBody_RespondWith) AsPostMultipartBodyRespondWith0() (PostMultipartBodyRespondWith0, error) {
-	var body PostMultipartBodyRespondWith0
+// AsEnum0x10 returns the union data inside the PostMultipartBody_RespondWith as a Enum0x10
+func (t PostMultipartBody_RespondWith) AsEnum0x10() (Enum0x10, error) {
+	var body Enum0x10
 	err := json.Unmarshal(t.union, &body)
 	return body, err
 }
 
-// FromPostMultipartBodyRespondWith0 overwrites any union data inside the PostMultipartBody_RespondWith as the provided PostMultipartBodyRespondWith0
-func (t *PostMultipartBody_RespondWith) FromPostMultipartBodyRespondWith0(v PostMultipartBodyRespondWith0) error {
+// FromEnum0x10 overwrites any union data inside the PostMultipartBody_RespondWith as the provided Enum0x10
+func (t *PostMultipartBody_RespondWith) FromEnum0x10(v Enum0x10) error {
 	b, err := json.Marshal(v)
 	t.union = b
 	return err
 }
 
-// MergePostMultipartBodyRespondWith0 performs a merge with any union data inside the PostMultipartBody_RespondWith, using the provided PostMultipartBodyRespondWith0
-func (t *PostMultipartBody_RespondWith) MergePostMultipartBodyRespondWith0(v PostMultipartBodyRespondWith0) error {
+// MergeEnum0x10 performs a merge with any union data inside the PostMultipartBody_RespondWith, using the provided Enum0x10
+func (t *PostMultipartBody_RespondWith) MergeEnum0x10(v Enum0x10) error {
 	b, err := json.Marshal(v)
 	if err != nil {
 		return err
@@ -13269,6 +13499,68 @@ func (t PostMultipartBody_RespondWith) MarshalJSON() ([]byte, error) {
 }
 
 func (t *PostMultipartBody_RespondWith) UnmarshalJSON(b []byte) error {
+	err := t.union.UnmarshalJSON(b)
+	return err
+}
+
+// AsPseudoBoolean0x11 returns the union data inside the PostMultipartBody_RobotsTxt as a PseudoBoolean0x11
+func (t PostMultipartBody_RobotsTxt) AsPseudoBoolean0x11() (PseudoBoolean0x11, error) {
+	var body PseudoBoolean0x11
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromPseudoBoolean0x11 overwrites any union data inside the PostMultipartBody_RobotsTxt as the provided PseudoBoolean0x11
+func (t *PostMultipartBody_RobotsTxt) FromPseudoBoolean0x11(v PseudoBoolean0x11) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergePseudoBoolean0x11 performs a merge with any union data inside the PostMultipartBody_RobotsTxt, using the provided PseudoBoolean0x11
+func (t *PostMultipartBody_RobotsTxt) MergePseudoBoolean0x11(v PseudoBoolean0x11) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsPostMultipartBodyRobotsTxt1 returns the union data inside the PostMultipartBody_RobotsTxt as a PostMultipartBodyRobotsTxt1
+func (t PostMultipartBody_RobotsTxt) AsPostMultipartBodyRobotsTxt1() (PostMultipartBodyRobotsTxt1, error) {
+	var body PostMultipartBodyRobotsTxt1
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromPostMultipartBodyRobotsTxt1 overwrites any union data inside the PostMultipartBody_RobotsTxt as the provided PostMultipartBodyRobotsTxt1
+func (t *PostMultipartBody_RobotsTxt) FromPostMultipartBodyRobotsTxt1(v PostMultipartBodyRobotsTxt1) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergePostMultipartBodyRobotsTxt1 performs a merge with any union data inside the PostMultipartBody_RobotsTxt, using the provided PostMultipartBodyRobotsTxt1
+func (t *PostMultipartBody_RobotsTxt) MergePostMultipartBodyRobotsTxt1(v PostMultipartBodyRobotsTxt1) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+func (t PostMultipartBody_RobotsTxt) MarshalJSON() ([]byte, error) {
+	b, err := t.union.MarshalJSON()
+	return b, err
+}
+
+func (t *PostMultipartBody_RobotsTxt) UnmarshalJSON(b []byte) error {
 	err := t.union.UnmarshalJSON(b)
 	return err
 }
@@ -13335,22 +13627,84 @@ func (t *PostMultipartBody_SetCookies_Item) UnmarshalJSON(b []byte) error {
 	return err
 }
 
-// AsPostMultipartBodyWithIframe0 returns the union data inside the PostMultipartBody_WithIframe as a PostMultipartBodyWithIframe0
-func (t PostMultipartBody_WithIframe) AsPostMultipartBodyWithIframe0() (PostMultipartBodyWithIframe0, error) {
-	var body PostMultipartBodyWithIframe0
+// AsPseudoBoolean0x11 returns the union data inside the PostMultipartBody_WebBotAuth as a PseudoBoolean0x11
+func (t PostMultipartBody_WebBotAuth) AsPseudoBoolean0x11() (PseudoBoolean0x11, error) {
+	var body PseudoBoolean0x11
 	err := json.Unmarshal(t.union, &body)
 	return body, err
 }
 
-// FromPostMultipartBodyWithIframe0 overwrites any union data inside the PostMultipartBody_WithIframe as the provided PostMultipartBodyWithIframe0
-func (t *PostMultipartBody_WithIframe) FromPostMultipartBodyWithIframe0(v PostMultipartBodyWithIframe0) error {
+// FromPseudoBoolean0x11 overwrites any union data inside the PostMultipartBody_WebBotAuth as the provided PseudoBoolean0x11
+func (t *PostMultipartBody_WebBotAuth) FromPseudoBoolean0x11(v PseudoBoolean0x11) error {
 	b, err := json.Marshal(v)
 	t.union = b
 	return err
 }
 
-// MergePostMultipartBodyWithIframe0 performs a merge with any union data inside the PostMultipartBody_WithIframe, using the provided PostMultipartBodyWithIframe0
-func (t *PostMultipartBody_WithIframe) MergePostMultipartBodyWithIframe0(v PostMultipartBodyWithIframe0) error {
+// MergePseudoBoolean0x11 performs a merge with any union data inside the PostMultipartBody_WebBotAuth, using the provided PseudoBoolean0x11
+func (t *PostMultipartBody_WebBotAuth) MergePseudoBoolean0x11(v PseudoBoolean0x11) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsEnum0x16 returns the union data inside the PostMultipartBody_WebBotAuth as a Enum0x16
+func (t PostMultipartBody_WebBotAuth) AsEnum0x16() (Enum0x16, error) {
+	var body Enum0x16
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromEnum0x16 overwrites any union data inside the PostMultipartBody_WebBotAuth as the provided Enum0x16
+func (t *PostMultipartBody_WebBotAuth) FromEnum0x16(v Enum0x16) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeEnum0x16 performs a merge with any union data inside the PostMultipartBody_WebBotAuth, using the provided Enum0x16
+func (t *PostMultipartBody_WebBotAuth) MergeEnum0x16(v Enum0x16) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+func (t PostMultipartBody_WebBotAuth) MarshalJSON() ([]byte, error) {
+	b, err := t.union.MarshalJSON()
+	return b, err
+}
+
+func (t *PostMultipartBody_WebBotAuth) UnmarshalJSON(b []byte) error {
+	err := t.union.UnmarshalJSON(b)
+	return err
+}
+
+// AsPseudoBoolean0x11 returns the union data inside the PostMultipartBody_WithIframe as a PseudoBoolean0x11
+func (t PostMultipartBody_WithIframe) AsPseudoBoolean0x11() (PseudoBoolean0x11, error) {
+	var body PseudoBoolean0x11
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromPseudoBoolean0x11 overwrites any union data inside the PostMultipartBody_WithIframe as the provided PseudoBoolean0x11
+func (t *PostMultipartBody_WithIframe) FromPseudoBoolean0x11(v PseudoBoolean0x11) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergePseudoBoolean0x11 performs a merge with any union data inside the PostMultipartBody_WithIframe, using the provided PseudoBoolean0x11
+func (t *PostMultipartBody_WithIframe) MergePseudoBoolean0x11(v PseudoBoolean0x11) error {
 	b, err := json.Marshal(v)
 	if err != nil {
 		return err
@@ -13397,22 +13751,22 @@ func (t *PostMultipartBody_WithIframe) UnmarshalJSON(b []byte) error {
 	return err
 }
 
-// AsPostMultipartBodyWithLinksSummary0 returns the union data inside the PostMultipartBody_WithLinksSummary as a PostMultipartBodyWithLinksSummary0
-func (t PostMultipartBody_WithLinksSummary) AsPostMultipartBodyWithLinksSummary0() (PostMultipartBodyWithLinksSummary0, error) {
-	var body PostMultipartBodyWithLinksSummary0
+// AsPseudoBoolean0x11 returns the union data inside the PostMultipartBody_WithLinksSummary as a PseudoBoolean0x11
+func (t PostMultipartBody_WithLinksSummary) AsPseudoBoolean0x11() (PseudoBoolean0x11, error) {
+	var body PseudoBoolean0x11
 	err := json.Unmarshal(t.union, &body)
 	return body, err
 }
 
-// FromPostMultipartBodyWithLinksSummary0 overwrites any union data inside the PostMultipartBody_WithLinksSummary as the provided PostMultipartBodyWithLinksSummary0
-func (t *PostMultipartBody_WithLinksSummary) FromPostMultipartBodyWithLinksSummary0(v PostMultipartBodyWithLinksSummary0) error {
+// FromPseudoBoolean0x11 overwrites any union data inside the PostMultipartBody_WithLinksSummary as the provided PseudoBoolean0x11
+func (t *PostMultipartBody_WithLinksSummary) FromPseudoBoolean0x11(v PseudoBoolean0x11) error {
 	b, err := json.Marshal(v)
 	t.union = b
 	return err
 }
 
-// MergePostMultipartBodyWithLinksSummary0 performs a merge with any union data inside the PostMultipartBody_WithLinksSummary, using the provided PostMultipartBodyWithLinksSummary0
-func (t *PostMultipartBody_WithLinksSummary) MergePostMultipartBodyWithLinksSummary0(v PostMultipartBodyWithLinksSummary0) error {
+// MergePseudoBoolean0x11 performs a merge with any union data inside the PostMultipartBody_WithLinksSummary, using the provided PseudoBoolean0x11
+func (t *PostMultipartBody_WithLinksSummary) MergePseudoBoolean0x11(v PseudoBoolean0x11) error {
 	b, err := json.Marshal(v)
 	if err != nil {
 		return err
@@ -13459,22 +13813,22 @@ func (t *PostMultipartBody_WithLinksSummary) UnmarshalJSON(b []byte) error {
 	return err
 }
 
-// AsPost400JSONResponseBody0 returns the union data inside the Post400JSONResponseBody as a Post400JSONResponseBody0
-func (t Post400JSONResponseBody) AsPost400JSONResponseBody0() (Post400JSONResponseBody0, error) {
-	var body Post400JSONResponseBody0
+// AsParamValidationError0x29 returns the union data inside the Post400JSONResponseBody as a ParamValidationError0x29
+func (t Post400JSONResponseBody) AsParamValidationError0x29() (ParamValidationError0x29, error) {
+	var body ParamValidationError0x29
 	err := json.Unmarshal(t.union, &body)
 	return body, err
 }
 
-// FromPost400JSONResponseBody0 overwrites any union data inside the Post400JSONResponseBody as the provided Post400JSONResponseBody0
-func (t *Post400JSONResponseBody) FromPost400JSONResponseBody0(v Post400JSONResponseBody0) error {
+// FromParamValidationError0x29 overwrites any union data inside the Post400JSONResponseBody as the provided ParamValidationError0x29
+func (t *Post400JSONResponseBody) FromParamValidationError0x29(v ParamValidationError0x29) error {
 	b, err := json.Marshal(v)
 	t.union = b
 	return err
 }
 
-// MergePost400JSONResponseBody0 performs a merge with any union data inside the Post400JSONResponseBody, using the provided Post400JSONResponseBody0
-func (t *Post400JSONResponseBody) MergePost400JSONResponseBody0(v Post400JSONResponseBody0) error {
+// MergeParamValidationError0x29 performs a merge with any union data inside the Post400JSONResponseBody, using the provided ParamValidationError0x29
+func (t *Post400JSONResponseBody) MergeParamValidationError0x29(v ParamValidationError0x29) error {
 	b, err := json.Marshal(v)
 	if err != nil {
 		return err
@@ -13485,22 +13839,22 @@ func (t *Post400JSONResponseBody) MergePost400JSONResponseBody0(v Post400JSONRes
 	return err
 }
 
-// AsPost400JSONResponseBody1 returns the union data inside the Post400JSONResponseBody as a Post400JSONResponseBody1
-func (t Post400JSONResponseBody) AsPost400JSONResponseBody1() (Post400JSONResponseBody1, error) {
-	var body Post400JSONResponseBody1
+// AsDataStreamBrokenError0x2a returns the union data inside the Post400JSONResponseBody as a DataStreamBrokenError0x2a
+func (t Post400JSONResponseBody) AsDataStreamBrokenError0x2a() (DataStreamBrokenError0x2a, error) {
+	var body DataStreamBrokenError0x2a
 	err := json.Unmarshal(t.union, &body)
 	return body, err
 }
 
-// FromPost400JSONResponseBody1 overwrites any union data inside the Post400JSONResponseBody as the provided Post400JSONResponseBody1
-func (t *Post400JSONResponseBody) FromPost400JSONResponseBody1(v Post400JSONResponseBody1) error {
+// FromDataStreamBrokenError0x2a overwrites any union data inside the Post400JSONResponseBody as the provided DataStreamBrokenError0x2a
+func (t *Post400JSONResponseBody) FromDataStreamBrokenError0x2a(v DataStreamBrokenError0x2a) error {
 	b, err := json.Marshal(v)
 	t.union = b
 	return err
 }
 
-// MergePost400JSONResponseBody1 performs a merge with any union data inside the Post400JSONResponseBody, using the provided Post400JSONResponseBody1
-func (t *Post400JSONResponseBody) MergePost400JSONResponseBody1(v Post400JSONResponseBody1) error {
+// MergeDataStreamBrokenError0x2a performs a merge with any union data inside the Post400JSONResponseBody, using the provided DataStreamBrokenError0x2a
+func (t *Post400JSONResponseBody) MergeDataStreamBrokenError0x2a(v DataStreamBrokenError0x2a) error {
 	b, err := json.Marshal(v)
 	if err != nil {
 		return err
@@ -13521,22 +13875,22 @@ func (t *Post400JSONResponseBody) UnmarshalJSON(b []byte) error {
 	return err
 }
 
-// AsPost401JSONResponseBody0 returns the union data inside the Post401JSONResponseBody as a Post401JSONResponseBody0
-func (t Post401JSONResponseBody) AsPost401JSONResponseBody0() (Post401JSONResponseBody0, error) {
-	var body Post401JSONResponseBody0
+// AsAuthenticationFailedError0x2b returns the union data inside the Post401JSONResponseBody as a AuthenticationFailedError0x2b
+func (t Post401JSONResponseBody) AsAuthenticationFailedError0x2b() (AuthenticationFailedError0x2b, error) {
+	var body AuthenticationFailedError0x2b
 	err := json.Unmarshal(t.union, &body)
 	return body, err
 }
 
-// FromPost401JSONResponseBody0 overwrites any union data inside the Post401JSONResponseBody as the provided Post401JSONResponseBody0
-func (t *Post401JSONResponseBody) FromPost401JSONResponseBody0(v Post401JSONResponseBody0) error {
+// FromAuthenticationFailedError0x2b overwrites any union data inside the Post401JSONResponseBody as the provided AuthenticationFailedError0x2b
+func (t *Post401JSONResponseBody) FromAuthenticationFailedError0x2b(v AuthenticationFailedError0x2b) error {
 	b, err := json.Marshal(v)
 	t.union = b
 	return err
 }
 
-// MergePost401JSONResponseBody0 performs a merge with any union data inside the Post401JSONResponseBody, using the provided Post401JSONResponseBody0
-func (t *Post401JSONResponseBody) MergePost401JSONResponseBody0(v Post401JSONResponseBody0) error {
+// MergeAuthenticationFailedError0x2b performs a merge with any union data inside the Post401JSONResponseBody, using the provided AuthenticationFailedError0x2b
+func (t *Post401JSONResponseBody) MergeAuthenticationFailedError0x2b(v AuthenticationFailedError0x2b) error {
 	b, err := json.Marshal(v)
 	if err != nil {
 		return err
@@ -13547,22 +13901,22 @@ func (t *Post401JSONResponseBody) MergePost401JSONResponseBody0(v Post401JSONRes
 	return err
 }
 
-// AsPost401JSONResponseBody1 returns the union data inside the Post401JSONResponseBody as a Post401JSONResponseBody1
-func (t Post401JSONResponseBody) AsPost401JSONResponseBody1() (Post401JSONResponseBody1, error) {
-	var body Post401JSONResponseBody1
+// AsAuthenticationRequiredError0x2c returns the union data inside the Post401JSONResponseBody as a AuthenticationRequiredError0x2c
+func (t Post401JSONResponseBody) AsAuthenticationRequiredError0x2c() (AuthenticationRequiredError0x2c, error) {
+	var body AuthenticationRequiredError0x2c
 	err := json.Unmarshal(t.union, &body)
 	return body, err
 }
 
-// FromPost401JSONResponseBody1 overwrites any union data inside the Post401JSONResponseBody as the provided Post401JSONResponseBody1
-func (t *Post401JSONResponseBody) FromPost401JSONResponseBody1(v Post401JSONResponseBody1) error {
+// FromAuthenticationRequiredError0x2c overwrites any union data inside the Post401JSONResponseBody as the provided AuthenticationRequiredError0x2c
+func (t *Post401JSONResponseBody) FromAuthenticationRequiredError0x2c(v AuthenticationRequiredError0x2c) error {
 	b, err := json.Marshal(v)
 	t.union = b
 	return err
 }
 
-// MergePost401JSONResponseBody1 performs a merge with any union data inside the Post401JSONResponseBody, using the provided Post401JSONResponseBody1
-func (t *Post401JSONResponseBody) MergePost401JSONResponseBody1(v Post401JSONResponseBody1) error {
+// MergeAuthenticationRequiredError0x2c performs a merge with any union data inside the Post401JSONResponseBody, using the provided AuthenticationRequiredError0x2c
+func (t *Post401JSONResponseBody) MergeAuthenticationRequiredError0x2c(v AuthenticationRequiredError0x2c) error {
 	b, err := json.Marshal(v)
 	if err != nil {
 		return err
@@ -13583,22 +13937,22 @@ func (t *Post401JSONResponseBody) UnmarshalJSON(b []byte) error {
 	return err
 }
 
-// AsPost402JSONResponseBody0 returns the union data inside the Post402JSONResponseBody as a Post402JSONResponseBody0
-func (t Post402JSONResponseBody) AsPost402JSONResponseBody0() (Post402JSONResponseBody0, error) {
-	var body Post402JSONResponseBody0
+// AsTierFeatureConstraintError0x2d returns the union data inside the Post402JSONResponseBody as a TierFeatureConstraintError0x2d
+func (t Post402JSONResponseBody) AsTierFeatureConstraintError0x2d() (TierFeatureConstraintError0x2d, error) {
+	var body TierFeatureConstraintError0x2d
 	err := json.Unmarshal(t.union, &body)
 	return body, err
 }
 
-// FromPost402JSONResponseBody0 overwrites any union data inside the Post402JSONResponseBody as the provided Post402JSONResponseBody0
-func (t *Post402JSONResponseBody) FromPost402JSONResponseBody0(v Post402JSONResponseBody0) error {
+// FromTierFeatureConstraintError0x2d overwrites any union data inside the Post402JSONResponseBody as the provided TierFeatureConstraintError0x2d
+func (t *Post402JSONResponseBody) FromTierFeatureConstraintError0x2d(v TierFeatureConstraintError0x2d) error {
 	b, err := json.Marshal(v)
 	t.union = b
 	return err
 }
 
-// MergePost402JSONResponseBody0 performs a merge with any union data inside the Post402JSONResponseBody, using the provided Post402JSONResponseBody0
-func (t *Post402JSONResponseBody) MergePost402JSONResponseBody0(v Post402JSONResponseBody0) error {
+// MergeTierFeatureConstraintError0x2d performs a merge with any union data inside the Post402JSONResponseBody, using the provided TierFeatureConstraintError0x2d
+func (t *Post402JSONResponseBody) MergeTierFeatureConstraintError0x2d(v TierFeatureConstraintError0x2d) error {
 	b, err := json.Marshal(v)
 	if err != nil {
 		return err
@@ -13609,22 +13963,22 @@ func (t *Post402JSONResponseBody) MergePost402JSONResponseBody0(v Post402JSONRes
 	return err
 }
 
-// AsPost402JSONResponseBody1 returns the union data inside the Post402JSONResponseBody as a Post402JSONResponseBody1
-func (t Post402JSONResponseBody) AsPost402JSONResponseBody1() (Post402JSONResponseBody1, error) {
-	var body Post402JSONResponseBody1
+// AsInsufficientBalanceError0x2e returns the union data inside the Post402JSONResponseBody as a InsufficientBalanceError0x2e
+func (t Post402JSONResponseBody) AsInsufficientBalanceError0x2e() (InsufficientBalanceError0x2e, error) {
+	var body InsufficientBalanceError0x2e
 	err := json.Unmarshal(t.union, &body)
 	return body, err
 }
 
-// FromPost402JSONResponseBody1 overwrites any union data inside the Post402JSONResponseBody as the provided Post402JSONResponseBody1
-func (t *Post402JSONResponseBody) FromPost402JSONResponseBody1(v Post402JSONResponseBody1) error {
+// FromInsufficientBalanceError0x2e overwrites any union data inside the Post402JSONResponseBody as the provided InsufficientBalanceError0x2e
+func (t *Post402JSONResponseBody) FromInsufficientBalanceError0x2e(v InsufficientBalanceError0x2e) error {
 	b, err := json.Marshal(v)
 	t.union = b
 	return err
 }
 
-// MergePost402JSONResponseBody1 performs a merge with any union data inside the Post402JSONResponseBody, using the provided Post402JSONResponseBody1
-func (t *Post402JSONResponseBody) MergePost402JSONResponseBody1(v Post402JSONResponseBody1) error {
+// MergeInsufficientBalanceError0x2e performs a merge with any union data inside the Post402JSONResponseBody, using the provided InsufficientBalanceError0x2e
+func (t *Post402JSONResponseBody) MergeInsufficientBalanceError0x2e(v InsufficientBalanceError0x2e) error {
 	b, err := json.Marshal(v)
 	if err != nil {
 		return err
@@ -13645,22 +13999,22 @@ func (t *Post402JSONResponseBody) UnmarshalJSON(b []byte) error {
 	return err
 }
 
-// AsPost403JSONResponseBody0 returns the union data inside the Post403JSONResponseBody as a Post403JSONResponseBody0
-func (t Post403JSONResponseBody) AsPost403JSONResponseBody0() (Post403JSONResponseBody0, error) {
-	var body Post403JSONResponseBody0
+// AsOperationNotAllowedError0x2f returns the union data inside the Post403JSONResponseBody as a OperationNotAllowedError0x2f
+func (t Post403JSONResponseBody) AsOperationNotAllowedError0x2f() (OperationNotAllowedError0x2f, error) {
+	var body OperationNotAllowedError0x2f
 	err := json.Unmarshal(t.union, &body)
 	return body, err
 }
 
-// FromPost403JSONResponseBody0 overwrites any union data inside the Post403JSONResponseBody as the provided Post403JSONResponseBody0
-func (t *Post403JSONResponseBody) FromPost403JSONResponseBody0(v Post403JSONResponseBody0) error {
+// FromOperationNotAllowedError0x2f overwrites any union data inside the Post403JSONResponseBody as the provided OperationNotAllowedError0x2f
+func (t *Post403JSONResponseBody) FromOperationNotAllowedError0x2f(v OperationNotAllowedError0x2f) error {
 	b, err := json.Marshal(v)
 	t.union = b
 	return err
 }
 
-// MergePost403JSONResponseBody0 performs a merge with any union data inside the Post403JSONResponseBody, using the provided Post403JSONResponseBody0
-func (t *Post403JSONResponseBody) MergePost403JSONResponseBody0(v Post403JSONResponseBody0) error {
+// MergeOperationNotAllowedError0x2f performs a merge with any union data inside the Post403JSONResponseBody, using the provided OperationNotAllowedError0x2f
+func (t *Post403JSONResponseBody) MergeOperationNotAllowedError0x2f(v OperationNotAllowedError0x2f) error {
 	b, err := json.Marshal(v)
 	if err != nil {
 		return err
@@ -13671,22 +14025,22 @@ func (t *Post403JSONResponseBody) MergePost403JSONResponseBody0(v Post403JSONRes
 	return err
 }
 
-// AsPost403JSONResponseBody1 returns the union data inside the Post403JSONResponseBody as a Post403JSONResponseBody1
-func (t Post403JSONResponseBody) AsPost403JSONResponseBody1() (Post403JSONResponseBody1, error) {
-	var body Post403JSONResponseBody1
+// AsAbuseAlleviationError0x30 returns the union data inside the Post403JSONResponseBody as a AbuseAlleviationError0x30
+func (t Post403JSONResponseBody) AsAbuseAlleviationError0x30() (AbuseAlleviationError0x30, error) {
+	var body AbuseAlleviationError0x30
 	err := json.Unmarshal(t.union, &body)
 	return body, err
 }
 
-// FromPost403JSONResponseBody1 overwrites any union data inside the Post403JSONResponseBody as the provided Post403JSONResponseBody1
-func (t *Post403JSONResponseBody) FromPost403JSONResponseBody1(v Post403JSONResponseBody1) error {
+// FromAbuseAlleviationError0x30 overwrites any union data inside the Post403JSONResponseBody as the provided AbuseAlleviationError0x30
+func (t *Post403JSONResponseBody) FromAbuseAlleviationError0x30(v AbuseAlleviationError0x30) error {
 	b, err := json.Marshal(v)
 	t.union = b
 	return err
 }
 
-// MergePost403JSONResponseBody1 performs a merge with any union data inside the Post403JSONResponseBody, using the provided Post403JSONResponseBody1
-func (t *Post403JSONResponseBody) MergePost403JSONResponseBody1(v Post403JSONResponseBody1) error {
+// MergeAbuseAlleviationError0x30 performs a merge with any union data inside the Post403JSONResponseBody, using the provided AbuseAlleviationError0x30
+func (t *Post403JSONResponseBody) MergeAbuseAlleviationError0x30(v AbuseAlleviationError0x30) error {
 	b, err := json.Marshal(v)
 	if err != nil {
 		return err
@@ -13707,22 +14061,22 @@ func (t *Post403JSONResponseBody) UnmarshalJSON(b []byte) error {
 	return err
 }
 
-// AsPost409JSONResponseBody0 returns the union data inside the Post409JSONResponseBody as a Post409JSONResponseBody0
-func (t Post409JSONResponseBody) AsPost409JSONResponseBody0() (Post409JSONResponseBody0, error) {
-	var body Post409JSONResponseBody0
+// AsResourcePolicyDenyError0x31 returns the union data inside the Post409JSONResponseBody as a ResourcePolicyDenyError0x31
+func (t Post409JSONResponseBody) AsResourcePolicyDenyError0x31() (ResourcePolicyDenyError0x31, error) {
+	var body ResourcePolicyDenyError0x31
 	err := json.Unmarshal(t.union, &body)
 	return body, err
 }
 
-// FromPost409JSONResponseBody0 overwrites any union data inside the Post409JSONResponseBody as the provided Post409JSONResponseBody0
-func (t *Post409JSONResponseBody) FromPost409JSONResponseBody0(v Post409JSONResponseBody0) error {
+// FromResourcePolicyDenyError0x31 overwrites any union data inside the Post409JSONResponseBody as the provided ResourcePolicyDenyError0x31
+func (t *Post409JSONResponseBody) FromResourcePolicyDenyError0x31(v ResourcePolicyDenyError0x31) error {
 	b, err := json.Marshal(v)
 	t.union = b
 	return err
 }
 
-// MergePost409JSONResponseBody0 performs a merge with any union data inside the Post409JSONResponseBody, using the provided Post409JSONResponseBody0
-func (t *Post409JSONResponseBody) MergePost409JSONResponseBody0(v Post409JSONResponseBody0) error {
+// MergeResourcePolicyDenyError0x31 performs a merge with any union data inside the Post409JSONResponseBody, using the provided ResourcePolicyDenyError0x31
+func (t *Post409JSONResponseBody) MergeResourcePolicyDenyError0x31(v ResourcePolicyDenyError0x31) error {
 	b, err := json.Marshal(v)
 	if err != nil {
 		return err
@@ -13733,22 +14087,22 @@ func (t *Post409JSONResponseBody) MergePost409JSONResponseBody0(v Post409JSONRes
 	return err
 }
 
-// AsPost409JSONResponseBody1 returns the union data inside the Post409JSONResponseBody as a Post409JSONResponseBody1
-func (t Post409JSONResponseBody) AsPost409JSONResponseBody1() (Post409JSONResponseBody1, error) {
-	var body Post409JSONResponseBody1
+// AsBudgetExceededError0x32 returns the union data inside the Post409JSONResponseBody as a BudgetExceededError0x32
+func (t Post409JSONResponseBody) AsBudgetExceededError0x32() (BudgetExceededError0x32, error) {
+	var body BudgetExceededError0x32
 	err := json.Unmarshal(t.union, &body)
 	return body, err
 }
 
-// FromPost409JSONResponseBody1 overwrites any union data inside the Post409JSONResponseBody as the provided Post409JSONResponseBody1
-func (t *Post409JSONResponseBody) FromPost409JSONResponseBody1(v Post409JSONResponseBody1) error {
+// FromBudgetExceededError0x32 overwrites any union data inside the Post409JSONResponseBody as the provided BudgetExceededError0x32
+func (t *Post409JSONResponseBody) FromBudgetExceededError0x32(v BudgetExceededError0x32) error {
 	b, err := json.Marshal(v)
 	t.union = b
 	return err
 }
 
-// MergePost409JSONResponseBody1 performs a merge with any union data inside the Post409JSONResponseBody, using the provided Post409JSONResponseBody1
-func (t *Post409JSONResponseBody) MergePost409JSONResponseBody1(v Post409JSONResponseBody1) error {
+// MergeBudgetExceededError0x32 performs a merge with any union data inside the Post409JSONResponseBody, using the provided BudgetExceededError0x32
+func (t *Post409JSONResponseBody) MergeBudgetExceededError0x32(v BudgetExceededError0x32) error {
 	b, err := json.Marshal(v)
 	if err != nil {
 		return err
@@ -13769,22 +14123,22 @@ func (t *Post409JSONResponseBody) UnmarshalJSON(b []byte) error {
 	return err
 }
 
-// AsPost422JSONResponseBody0 returns the union data inside the Post422JSONResponseBody as a Post422JSONResponseBody0
-func (t Post422JSONResponseBody) AsPost422JSONResponseBody0() (Post422JSONResponseBody0, error) {
-	var body Post422JSONResponseBody0
+// AsSubmittedDataMalformedError0x34 returns the union data inside the Post422JSONResponseBody as a SubmittedDataMalformedError0x34
+func (t Post422JSONResponseBody) AsSubmittedDataMalformedError0x34() (SubmittedDataMalformedError0x34, error) {
+	var body SubmittedDataMalformedError0x34
 	err := json.Unmarshal(t.union, &body)
 	return body, err
 }
 
-// FromPost422JSONResponseBody0 overwrites any union data inside the Post422JSONResponseBody as the provided Post422JSONResponseBody0
-func (t *Post422JSONResponseBody) FromPost422JSONResponseBody0(v Post422JSONResponseBody0) error {
+// FromSubmittedDataMalformedError0x34 overwrites any union data inside the Post422JSONResponseBody as the provided SubmittedDataMalformedError0x34
+func (t *Post422JSONResponseBody) FromSubmittedDataMalformedError0x34(v SubmittedDataMalformedError0x34) error {
 	b, err := json.Marshal(v)
 	t.union = b
 	return err
 }
 
-// MergePost422JSONResponseBody0 performs a merge with any union data inside the Post422JSONResponseBody, using the provided Post422JSONResponseBody0
-func (t *Post422JSONResponseBody) MergePost422JSONResponseBody0(v Post422JSONResponseBody0) error {
+// MergeSubmittedDataMalformedError0x34 performs a merge with any union data inside the Post422JSONResponseBody, using the provided SubmittedDataMalformedError0x34
+func (t *Post422JSONResponseBody) MergeSubmittedDataMalformedError0x34(v SubmittedDataMalformedError0x34) error {
 	b, err := json.Marshal(v)
 	if err != nil {
 		return err
@@ -13795,22 +14149,22 @@ func (t *Post422JSONResponseBody) MergePost422JSONResponseBody0(v Post422JSONRes
 	return err
 }
 
-// AsPost422JSONResponseBody1 returns the union data inside the Post422JSONResponseBody as a Post422JSONResponseBody1
-func (t Post422JSONResponseBody) AsPost422JSONResponseBody1() (Post422JSONResponseBody1, error) {
-	var body Post422JSONResponseBody1
+// AsDownstreamServiceFailureError0x35 returns the union data inside the Post422JSONResponseBody as a DownstreamServiceFailureError0x35
+func (t Post422JSONResponseBody) AsDownstreamServiceFailureError0x35() (DownstreamServiceFailureError0x35, error) {
+	var body DownstreamServiceFailureError0x35
 	err := json.Unmarshal(t.union, &body)
 	return body, err
 }
 
-// FromPost422JSONResponseBody1 overwrites any union data inside the Post422JSONResponseBody as the provided Post422JSONResponseBody1
-func (t *Post422JSONResponseBody) FromPost422JSONResponseBody1(v Post422JSONResponseBody1) error {
+// FromDownstreamServiceFailureError0x35 overwrites any union data inside the Post422JSONResponseBody as the provided DownstreamServiceFailureError0x35
+func (t *Post422JSONResponseBody) FromDownstreamServiceFailureError0x35(v DownstreamServiceFailureError0x35) error {
 	b, err := json.Marshal(v)
 	t.union = b
 	return err
 }
 
-// MergePost422JSONResponseBody1 performs a merge with any union data inside the Post422JSONResponseBody, using the provided Post422JSONResponseBody1
-func (t *Post422JSONResponseBody) MergePost422JSONResponseBody1(v Post422JSONResponseBody1) error {
+// MergeDownstreamServiceFailureError0x35 performs a merge with any union data inside the Post422JSONResponseBody, using the provided DownstreamServiceFailureError0x35
+func (t *Post422JSONResponseBody) MergeDownstreamServiceFailureError0x35(v DownstreamServiceFailureError0x35) error {
 	b, err := json.Marshal(v)
 	if err != nil {
 		return err
@@ -13821,22 +14175,22 @@ func (t *Post422JSONResponseBody) MergePost422JSONResponseBody1(v Post422JSONRes
 	return err
 }
 
-// AsPost422JSONResponseBody2 returns the union data inside the Post422JSONResponseBody as a Post422JSONResponseBody2
-func (t Post422JSONResponseBody) AsPost422JSONResponseBody2() (Post422JSONResponseBody2, error) {
-	var body Post422JSONResponseBody2
+// AsAssertionFailureError0x36 returns the union data inside the Post422JSONResponseBody as a AssertionFailureError0x36
+func (t Post422JSONResponseBody) AsAssertionFailureError0x36() (AssertionFailureError0x36, error) {
+	var body AssertionFailureError0x36
 	err := json.Unmarshal(t.union, &body)
 	return body, err
 }
 
-// FromPost422JSONResponseBody2 overwrites any union data inside the Post422JSONResponseBody as the provided Post422JSONResponseBody2
-func (t *Post422JSONResponseBody) FromPost422JSONResponseBody2(v Post422JSONResponseBody2) error {
+// FromAssertionFailureError0x36 overwrites any union data inside the Post422JSONResponseBody as the provided AssertionFailureError0x36
+func (t *Post422JSONResponseBody) FromAssertionFailureError0x36(v AssertionFailureError0x36) error {
 	b, err := json.Marshal(v)
 	t.union = b
 	return err
 }
 
-// MergePost422JSONResponseBody2 performs a merge with any union data inside the Post422JSONResponseBody, using the provided Post422JSONResponseBody2
-func (t *Post422JSONResponseBody) MergePost422JSONResponseBody2(v Post422JSONResponseBody2) error {
+// MergeAssertionFailureError0x36 performs a merge with any union data inside the Post422JSONResponseBody, using the provided AssertionFailureError0x36
+func (t *Post422JSONResponseBody) MergeAssertionFailureError0x36(v AssertionFailureError0x36) error {
 	b, err := json.Marshal(v)
 	if err != nil {
 		return err
@@ -13857,22 +14211,22 @@ func (t *Post422JSONResponseBody) UnmarshalJSON(b []byte) error {
 	return err
 }
 
-// AsGetTargetUrl400JSONResponseBody0 returns the union data inside the GetTargetUrl400JSONResponseBody as a GetTargetUrl400JSONResponseBody0
-func (t GetTargetUrl400JSONResponseBody) AsGetTargetUrl400JSONResponseBody0() (GetTargetUrl400JSONResponseBody0, error) {
-	var body GetTargetUrl400JSONResponseBody0
+// AsParamValidationError0x29 returns the union data inside the GetTargetUrl400JSONResponseBody as a ParamValidationError0x29
+func (t GetTargetUrl400JSONResponseBody) AsParamValidationError0x29() (ParamValidationError0x29, error) {
+	var body ParamValidationError0x29
 	err := json.Unmarshal(t.union, &body)
 	return body, err
 }
 
-// FromGetTargetUrl400JSONResponseBody0 overwrites any union data inside the GetTargetUrl400JSONResponseBody as the provided GetTargetUrl400JSONResponseBody0
-func (t *GetTargetUrl400JSONResponseBody) FromGetTargetUrl400JSONResponseBody0(v GetTargetUrl400JSONResponseBody0) error {
+// FromParamValidationError0x29 overwrites any union data inside the GetTargetUrl400JSONResponseBody as the provided ParamValidationError0x29
+func (t *GetTargetUrl400JSONResponseBody) FromParamValidationError0x29(v ParamValidationError0x29) error {
 	b, err := json.Marshal(v)
 	t.union = b
 	return err
 }
 
-// MergeGetTargetUrl400JSONResponseBody0 performs a merge with any union data inside the GetTargetUrl400JSONResponseBody, using the provided GetTargetUrl400JSONResponseBody0
-func (t *GetTargetUrl400JSONResponseBody) MergeGetTargetUrl400JSONResponseBody0(v GetTargetUrl400JSONResponseBody0) error {
+// MergeParamValidationError0x29 performs a merge with any union data inside the GetTargetUrl400JSONResponseBody, using the provided ParamValidationError0x29
+func (t *GetTargetUrl400JSONResponseBody) MergeParamValidationError0x29(v ParamValidationError0x29) error {
 	b, err := json.Marshal(v)
 	if err != nil {
 		return err
@@ -13883,22 +14237,22 @@ func (t *GetTargetUrl400JSONResponseBody) MergeGetTargetUrl400JSONResponseBody0(
 	return err
 }
 
-// AsGetTargetUrl400JSONResponseBody1 returns the union data inside the GetTargetUrl400JSONResponseBody as a GetTargetUrl400JSONResponseBody1
-func (t GetTargetUrl400JSONResponseBody) AsGetTargetUrl400JSONResponseBody1() (GetTargetUrl400JSONResponseBody1, error) {
-	var body GetTargetUrl400JSONResponseBody1
+// AsDataStreamBrokenError0x2a returns the union data inside the GetTargetUrl400JSONResponseBody as a DataStreamBrokenError0x2a
+func (t GetTargetUrl400JSONResponseBody) AsDataStreamBrokenError0x2a() (DataStreamBrokenError0x2a, error) {
+	var body DataStreamBrokenError0x2a
 	err := json.Unmarshal(t.union, &body)
 	return body, err
 }
 
-// FromGetTargetUrl400JSONResponseBody1 overwrites any union data inside the GetTargetUrl400JSONResponseBody as the provided GetTargetUrl400JSONResponseBody1
-func (t *GetTargetUrl400JSONResponseBody) FromGetTargetUrl400JSONResponseBody1(v GetTargetUrl400JSONResponseBody1) error {
+// FromDataStreamBrokenError0x2a overwrites any union data inside the GetTargetUrl400JSONResponseBody as the provided DataStreamBrokenError0x2a
+func (t *GetTargetUrl400JSONResponseBody) FromDataStreamBrokenError0x2a(v DataStreamBrokenError0x2a) error {
 	b, err := json.Marshal(v)
 	t.union = b
 	return err
 }
 
-// MergeGetTargetUrl400JSONResponseBody1 performs a merge with any union data inside the GetTargetUrl400JSONResponseBody, using the provided GetTargetUrl400JSONResponseBody1
-func (t *GetTargetUrl400JSONResponseBody) MergeGetTargetUrl400JSONResponseBody1(v GetTargetUrl400JSONResponseBody1) error {
+// MergeDataStreamBrokenError0x2a performs a merge with any union data inside the GetTargetUrl400JSONResponseBody, using the provided DataStreamBrokenError0x2a
+func (t *GetTargetUrl400JSONResponseBody) MergeDataStreamBrokenError0x2a(v DataStreamBrokenError0x2a) error {
 	b, err := json.Marshal(v)
 	if err != nil {
 		return err
@@ -13919,22 +14273,22 @@ func (t *GetTargetUrl400JSONResponseBody) UnmarshalJSON(b []byte) error {
 	return err
 }
 
-// AsGetTargetUrl401JSONResponseBody0 returns the union data inside the GetTargetUrl401JSONResponseBody as a GetTargetUrl401JSONResponseBody0
-func (t GetTargetUrl401JSONResponseBody) AsGetTargetUrl401JSONResponseBody0() (GetTargetUrl401JSONResponseBody0, error) {
-	var body GetTargetUrl401JSONResponseBody0
+// AsAuthenticationFailedError0x2b returns the union data inside the GetTargetUrl401JSONResponseBody as a AuthenticationFailedError0x2b
+func (t GetTargetUrl401JSONResponseBody) AsAuthenticationFailedError0x2b() (AuthenticationFailedError0x2b, error) {
+	var body AuthenticationFailedError0x2b
 	err := json.Unmarshal(t.union, &body)
 	return body, err
 }
 
-// FromGetTargetUrl401JSONResponseBody0 overwrites any union data inside the GetTargetUrl401JSONResponseBody as the provided GetTargetUrl401JSONResponseBody0
-func (t *GetTargetUrl401JSONResponseBody) FromGetTargetUrl401JSONResponseBody0(v GetTargetUrl401JSONResponseBody0) error {
+// FromAuthenticationFailedError0x2b overwrites any union data inside the GetTargetUrl401JSONResponseBody as the provided AuthenticationFailedError0x2b
+func (t *GetTargetUrl401JSONResponseBody) FromAuthenticationFailedError0x2b(v AuthenticationFailedError0x2b) error {
 	b, err := json.Marshal(v)
 	t.union = b
 	return err
 }
 
-// MergeGetTargetUrl401JSONResponseBody0 performs a merge with any union data inside the GetTargetUrl401JSONResponseBody, using the provided GetTargetUrl401JSONResponseBody0
-func (t *GetTargetUrl401JSONResponseBody) MergeGetTargetUrl401JSONResponseBody0(v GetTargetUrl401JSONResponseBody0) error {
+// MergeAuthenticationFailedError0x2b performs a merge with any union data inside the GetTargetUrl401JSONResponseBody, using the provided AuthenticationFailedError0x2b
+func (t *GetTargetUrl401JSONResponseBody) MergeAuthenticationFailedError0x2b(v AuthenticationFailedError0x2b) error {
 	b, err := json.Marshal(v)
 	if err != nil {
 		return err
@@ -13945,22 +14299,22 @@ func (t *GetTargetUrl401JSONResponseBody) MergeGetTargetUrl401JSONResponseBody0(
 	return err
 }
 
-// AsGetTargetUrl401JSONResponseBody1 returns the union data inside the GetTargetUrl401JSONResponseBody as a GetTargetUrl401JSONResponseBody1
-func (t GetTargetUrl401JSONResponseBody) AsGetTargetUrl401JSONResponseBody1() (GetTargetUrl401JSONResponseBody1, error) {
-	var body GetTargetUrl401JSONResponseBody1
+// AsAuthenticationRequiredError0x2c returns the union data inside the GetTargetUrl401JSONResponseBody as a AuthenticationRequiredError0x2c
+func (t GetTargetUrl401JSONResponseBody) AsAuthenticationRequiredError0x2c() (AuthenticationRequiredError0x2c, error) {
+	var body AuthenticationRequiredError0x2c
 	err := json.Unmarshal(t.union, &body)
 	return body, err
 }
 
-// FromGetTargetUrl401JSONResponseBody1 overwrites any union data inside the GetTargetUrl401JSONResponseBody as the provided GetTargetUrl401JSONResponseBody1
-func (t *GetTargetUrl401JSONResponseBody) FromGetTargetUrl401JSONResponseBody1(v GetTargetUrl401JSONResponseBody1) error {
+// FromAuthenticationRequiredError0x2c overwrites any union data inside the GetTargetUrl401JSONResponseBody as the provided AuthenticationRequiredError0x2c
+func (t *GetTargetUrl401JSONResponseBody) FromAuthenticationRequiredError0x2c(v AuthenticationRequiredError0x2c) error {
 	b, err := json.Marshal(v)
 	t.union = b
 	return err
 }
 
-// MergeGetTargetUrl401JSONResponseBody1 performs a merge with any union data inside the GetTargetUrl401JSONResponseBody, using the provided GetTargetUrl401JSONResponseBody1
-func (t *GetTargetUrl401JSONResponseBody) MergeGetTargetUrl401JSONResponseBody1(v GetTargetUrl401JSONResponseBody1) error {
+// MergeAuthenticationRequiredError0x2c performs a merge with any union data inside the GetTargetUrl401JSONResponseBody, using the provided AuthenticationRequiredError0x2c
+func (t *GetTargetUrl401JSONResponseBody) MergeAuthenticationRequiredError0x2c(v AuthenticationRequiredError0x2c) error {
 	b, err := json.Marshal(v)
 	if err != nil {
 		return err
@@ -13981,22 +14335,22 @@ func (t *GetTargetUrl401JSONResponseBody) UnmarshalJSON(b []byte) error {
 	return err
 }
 
-// AsGetTargetUrl402JSONResponseBody0 returns the union data inside the GetTargetUrl402JSONResponseBody as a GetTargetUrl402JSONResponseBody0
-func (t GetTargetUrl402JSONResponseBody) AsGetTargetUrl402JSONResponseBody0() (GetTargetUrl402JSONResponseBody0, error) {
-	var body GetTargetUrl402JSONResponseBody0
+// AsTierFeatureConstraintError0x2d returns the union data inside the GetTargetUrl402JSONResponseBody as a TierFeatureConstraintError0x2d
+func (t GetTargetUrl402JSONResponseBody) AsTierFeatureConstraintError0x2d() (TierFeatureConstraintError0x2d, error) {
+	var body TierFeatureConstraintError0x2d
 	err := json.Unmarshal(t.union, &body)
 	return body, err
 }
 
-// FromGetTargetUrl402JSONResponseBody0 overwrites any union data inside the GetTargetUrl402JSONResponseBody as the provided GetTargetUrl402JSONResponseBody0
-func (t *GetTargetUrl402JSONResponseBody) FromGetTargetUrl402JSONResponseBody0(v GetTargetUrl402JSONResponseBody0) error {
+// FromTierFeatureConstraintError0x2d overwrites any union data inside the GetTargetUrl402JSONResponseBody as the provided TierFeatureConstraintError0x2d
+func (t *GetTargetUrl402JSONResponseBody) FromTierFeatureConstraintError0x2d(v TierFeatureConstraintError0x2d) error {
 	b, err := json.Marshal(v)
 	t.union = b
 	return err
 }
 
-// MergeGetTargetUrl402JSONResponseBody0 performs a merge with any union data inside the GetTargetUrl402JSONResponseBody, using the provided GetTargetUrl402JSONResponseBody0
-func (t *GetTargetUrl402JSONResponseBody) MergeGetTargetUrl402JSONResponseBody0(v GetTargetUrl402JSONResponseBody0) error {
+// MergeTierFeatureConstraintError0x2d performs a merge with any union data inside the GetTargetUrl402JSONResponseBody, using the provided TierFeatureConstraintError0x2d
+func (t *GetTargetUrl402JSONResponseBody) MergeTierFeatureConstraintError0x2d(v TierFeatureConstraintError0x2d) error {
 	b, err := json.Marshal(v)
 	if err != nil {
 		return err
@@ -14007,22 +14361,22 @@ func (t *GetTargetUrl402JSONResponseBody) MergeGetTargetUrl402JSONResponseBody0(
 	return err
 }
 
-// AsGetTargetUrl402JSONResponseBody1 returns the union data inside the GetTargetUrl402JSONResponseBody as a GetTargetUrl402JSONResponseBody1
-func (t GetTargetUrl402JSONResponseBody) AsGetTargetUrl402JSONResponseBody1() (GetTargetUrl402JSONResponseBody1, error) {
-	var body GetTargetUrl402JSONResponseBody1
+// AsInsufficientBalanceError0x2e returns the union data inside the GetTargetUrl402JSONResponseBody as a InsufficientBalanceError0x2e
+func (t GetTargetUrl402JSONResponseBody) AsInsufficientBalanceError0x2e() (InsufficientBalanceError0x2e, error) {
+	var body InsufficientBalanceError0x2e
 	err := json.Unmarshal(t.union, &body)
 	return body, err
 }
 
-// FromGetTargetUrl402JSONResponseBody1 overwrites any union data inside the GetTargetUrl402JSONResponseBody as the provided GetTargetUrl402JSONResponseBody1
-func (t *GetTargetUrl402JSONResponseBody) FromGetTargetUrl402JSONResponseBody1(v GetTargetUrl402JSONResponseBody1) error {
+// FromInsufficientBalanceError0x2e overwrites any union data inside the GetTargetUrl402JSONResponseBody as the provided InsufficientBalanceError0x2e
+func (t *GetTargetUrl402JSONResponseBody) FromInsufficientBalanceError0x2e(v InsufficientBalanceError0x2e) error {
 	b, err := json.Marshal(v)
 	t.union = b
 	return err
 }
 
-// MergeGetTargetUrl402JSONResponseBody1 performs a merge with any union data inside the GetTargetUrl402JSONResponseBody, using the provided GetTargetUrl402JSONResponseBody1
-func (t *GetTargetUrl402JSONResponseBody) MergeGetTargetUrl402JSONResponseBody1(v GetTargetUrl402JSONResponseBody1) error {
+// MergeInsufficientBalanceError0x2e performs a merge with any union data inside the GetTargetUrl402JSONResponseBody, using the provided InsufficientBalanceError0x2e
+func (t *GetTargetUrl402JSONResponseBody) MergeInsufficientBalanceError0x2e(v InsufficientBalanceError0x2e) error {
 	b, err := json.Marshal(v)
 	if err != nil {
 		return err
@@ -14043,22 +14397,22 @@ func (t *GetTargetUrl402JSONResponseBody) UnmarshalJSON(b []byte) error {
 	return err
 }
 
-// AsGetTargetUrl403JSONResponseBody0 returns the union data inside the GetTargetUrl403JSONResponseBody as a GetTargetUrl403JSONResponseBody0
-func (t GetTargetUrl403JSONResponseBody) AsGetTargetUrl403JSONResponseBody0() (GetTargetUrl403JSONResponseBody0, error) {
-	var body GetTargetUrl403JSONResponseBody0
+// AsOperationNotAllowedError0x2f returns the union data inside the GetTargetUrl403JSONResponseBody as a OperationNotAllowedError0x2f
+func (t GetTargetUrl403JSONResponseBody) AsOperationNotAllowedError0x2f() (OperationNotAllowedError0x2f, error) {
+	var body OperationNotAllowedError0x2f
 	err := json.Unmarshal(t.union, &body)
 	return body, err
 }
 
-// FromGetTargetUrl403JSONResponseBody0 overwrites any union data inside the GetTargetUrl403JSONResponseBody as the provided GetTargetUrl403JSONResponseBody0
-func (t *GetTargetUrl403JSONResponseBody) FromGetTargetUrl403JSONResponseBody0(v GetTargetUrl403JSONResponseBody0) error {
+// FromOperationNotAllowedError0x2f overwrites any union data inside the GetTargetUrl403JSONResponseBody as the provided OperationNotAllowedError0x2f
+func (t *GetTargetUrl403JSONResponseBody) FromOperationNotAllowedError0x2f(v OperationNotAllowedError0x2f) error {
 	b, err := json.Marshal(v)
 	t.union = b
 	return err
 }
 
-// MergeGetTargetUrl403JSONResponseBody0 performs a merge with any union data inside the GetTargetUrl403JSONResponseBody, using the provided GetTargetUrl403JSONResponseBody0
-func (t *GetTargetUrl403JSONResponseBody) MergeGetTargetUrl403JSONResponseBody0(v GetTargetUrl403JSONResponseBody0) error {
+// MergeOperationNotAllowedError0x2f performs a merge with any union data inside the GetTargetUrl403JSONResponseBody, using the provided OperationNotAllowedError0x2f
+func (t *GetTargetUrl403JSONResponseBody) MergeOperationNotAllowedError0x2f(v OperationNotAllowedError0x2f) error {
 	b, err := json.Marshal(v)
 	if err != nil {
 		return err
@@ -14069,22 +14423,22 @@ func (t *GetTargetUrl403JSONResponseBody) MergeGetTargetUrl403JSONResponseBody0(
 	return err
 }
 
-// AsGetTargetUrl403JSONResponseBody1 returns the union data inside the GetTargetUrl403JSONResponseBody as a GetTargetUrl403JSONResponseBody1
-func (t GetTargetUrl403JSONResponseBody) AsGetTargetUrl403JSONResponseBody1() (GetTargetUrl403JSONResponseBody1, error) {
-	var body GetTargetUrl403JSONResponseBody1
+// AsAbuseAlleviationError0x30 returns the union data inside the GetTargetUrl403JSONResponseBody as a AbuseAlleviationError0x30
+func (t GetTargetUrl403JSONResponseBody) AsAbuseAlleviationError0x30() (AbuseAlleviationError0x30, error) {
+	var body AbuseAlleviationError0x30
 	err := json.Unmarshal(t.union, &body)
 	return body, err
 }
 
-// FromGetTargetUrl403JSONResponseBody1 overwrites any union data inside the GetTargetUrl403JSONResponseBody as the provided GetTargetUrl403JSONResponseBody1
-func (t *GetTargetUrl403JSONResponseBody) FromGetTargetUrl403JSONResponseBody1(v GetTargetUrl403JSONResponseBody1) error {
+// FromAbuseAlleviationError0x30 overwrites any union data inside the GetTargetUrl403JSONResponseBody as the provided AbuseAlleviationError0x30
+func (t *GetTargetUrl403JSONResponseBody) FromAbuseAlleviationError0x30(v AbuseAlleviationError0x30) error {
 	b, err := json.Marshal(v)
 	t.union = b
 	return err
 }
 
-// MergeGetTargetUrl403JSONResponseBody1 performs a merge with any union data inside the GetTargetUrl403JSONResponseBody, using the provided GetTargetUrl403JSONResponseBody1
-func (t *GetTargetUrl403JSONResponseBody) MergeGetTargetUrl403JSONResponseBody1(v GetTargetUrl403JSONResponseBody1) error {
+// MergeAbuseAlleviationError0x30 performs a merge with any union data inside the GetTargetUrl403JSONResponseBody, using the provided AbuseAlleviationError0x30
+func (t *GetTargetUrl403JSONResponseBody) MergeAbuseAlleviationError0x30(v AbuseAlleviationError0x30) error {
 	b, err := json.Marshal(v)
 	if err != nil {
 		return err
@@ -14105,22 +14459,22 @@ func (t *GetTargetUrl403JSONResponseBody) UnmarshalJSON(b []byte) error {
 	return err
 }
 
-// AsGetTargetUrl409JSONResponseBody0 returns the union data inside the GetTargetUrl409JSONResponseBody as a GetTargetUrl409JSONResponseBody0
-func (t GetTargetUrl409JSONResponseBody) AsGetTargetUrl409JSONResponseBody0() (GetTargetUrl409JSONResponseBody0, error) {
-	var body GetTargetUrl409JSONResponseBody0
+// AsResourcePolicyDenyError0x31 returns the union data inside the GetTargetUrl409JSONResponseBody as a ResourcePolicyDenyError0x31
+func (t GetTargetUrl409JSONResponseBody) AsResourcePolicyDenyError0x31() (ResourcePolicyDenyError0x31, error) {
+	var body ResourcePolicyDenyError0x31
 	err := json.Unmarshal(t.union, &body)
 	return body, err
 }
 
-// FromGetTargetUrl409JSONResponseBody0 overwrites any union data inside the GetTargetUrl409JSONResponseBody as the provided GetTargetUrl409JSONResponseBody0
-func (t *GetTargetUrl409JSONResponseBody) FromGetTargetUrl409JSONResponseBody0(v GetTargetUrl409JSONResponseBody0) error {
+// FromResourcePolicyDenyError0x31 overwrites any union data inside the GetTargetUrl409JSONResponseBody as the provided ResourcePolicyDenyError0x31
+func (t *GetTargetUrl409JSONResponseBody) FromResourcePolicyDenyError0x31(v ResourcePolicyDenyError0x31) error {
 	b, err := json.Marshal(v)
 	t.union = b
 	return err
 }
 
-// MergeGetTargetUrl409JSONResponseBody0 performs a merge with any union data inside the GetTargetUrl409JSONResponseBody, using the provided GetTargetUrl409JSONResponseBody0
-func (t *GetTargetUrl409JSONResponseBody) MergeGetTargetUrl409JSONResponseBody0(v GetTargetUrl409JSONResponseBody0) error {
+// MergeResourcePolicyDenyError0x31 performs a merge with any union data inside the GetTargetUrl409JSONResponseBody, using the provided ResourcePolicyDenyError0x31
+func (t *GetTargetUrl409JSONResponseBody) MergeResourcePolicyDenyError0x31(v ResourcePolicyDenyError0x31) error {
 	b, err := json.Marshal(v)
 	if err != nil {
 		return err
@@ -14131,22 +14485,22 @@ func (t *GetTargetUrl409JSONResponseBody) MergeGetTargetUrl409JSONResponseBody0(
 	return err
 }
 
-// AsGetTargetUrl409JSONResponseBody1 returns the union data inside the GetTargetUrl409JSONResponseBody as a GetTargetUrl409JSONResponseBody1
-func (t GetTargetUrl409JSONResponseBody) AsGetTargetUrl409JSONResponseBody1() (GetTargetUrl409JSONResponseBody1, error) {
-	var body GetTargetUrl409JSONResponseBody1
+// AsBudgetExceededError0x32 returns the union data inside the GetTargetUrl409JSONResponseBody as a BudgetExceededError0x32
+func (t GetTargetUrl409JSONResponseBody) AsBudgetExceededError0x32() (BudgetExceededError0x32, error) {
+	var body BudgetExceededError0x32
 	err := json.Unmarshal(t.union, &body)
 	return body, err
 }
 
-// FromGetTargetUrl409JSONResponseBody1 overwrites any union data inside the GetTargetUrl409JSONResponseBody as the provided GetTargetUrl409JSONResponseBody1
-func (t *GetTargetUrl409JSONResponseBody) FromGetTargetUrl409JSONResponseBody1(v GetTargetUrl409JSONResponseBody1) error {
+// FromBudgetExceededError0x32 overwrites any union data inside the GetTargetUrl409JSONResponseBody as the provided BudgetExceededError0x32
+func (t *GetTargetUrl409JSONResponseBody) FromBudgetExceededError0x32(v BudgetExceededError0x32) error {
 	b, err := json.Marshal(v)
 	t.union = b
 	return err
 }
 
-// MergeGetTargetUrl409JSONResponseBody1 performs a merge with any union data inside the GetTargetUrl409JSONResponseBody, using the provided GetTargetUrl409JSONResponseBody1
-func (t *GetTargetUrl409JSONResponseBody) MergeGetTargetUrl409JSONResponseBody1(v GetTargetUrl409JSONResponseBody1) error {
+// MergeBudgetExceededError0x32 performs a merge with any union data inside the GetTargetUrl409JSONResponseBody, using the provided BudgetExceededError0x32
+func (t *GetTargetUrl409JSONResponseBody) MergeBudgetExceededError0x32(v BudgetExceededError0x32) error {
 	b, err := json.Marshal(v)
 	if err != nil {
 		return err
@@ -14167,22 +14521,22 @@ func (t *GetTargetUrl409JSONResponseBody) UnmarshalJSON(b []byte) error {
 	return err
 }
 
-// AsGetTargetUrl422JSONResponseBody0 returns the union data inside the GetTargetUrl422JSONResponseBody as a GetTargetUrl422JSONResponseBody0
-func (t GetTargetUrl422JSONResponseBody) AsGetTargetUrl422JSONResponseBody0() (GetTargetUrl422JSONResponseBody0, error) {
-	var body GetTargetUrl422JSONResponseBody0
+// AsSubmittedDataMalformedError0x34 returns the union data inside the GetTargetUrl422JSONResponseBody as a SubmittedDataMalformedError0x34
+func (t GetTargetUrl422JSONResponseBody) AsSubmittedDataMalformedError0x34() (SubmittedDataMalformedError0x34, error) {
+	var body SubmittedDataMalformedError0x34
 	err := json.Unmarshal(t.union, &body)
 	return body, err
 }
 
-// FromGetTargetUrl422JSONResponseBody0 overwrites any union data inside the GetTargetUrl422JSONResponseBody as the provided GetTargetUrl422JSONResponseBody0
-func (t *GetTargetUrl422JSONResponseBody) FromGetTargetUrl422JSONResponseBody0(v GetTargetUrl422JSONResponseBody0) error {
+// FromSubmittedDataMalformedError0x34 overwrites any union data inside the GetTargetUrl422JSONResponseBody as the provided SubmittedDataMalformedError0x34
+func (t *GetTargetUrl422JSONResponseBody) FromSubmittedDataMalformedError0x34(v SubmittedDataMalformedError0x34) error {
 	b, err := json.Marshal(v)
 	t.union = b
 	return err
 }
 
-// MergeGetTargetUrl422JSONResponseBody0 performs a merge with any union data inside the GetTargetUrl422JSONResponseBody, using the provided GetTargetUrl422JSONResponseBody0
-func (t *GetTargetUrl422JSONResponseBody) MergeGetTargetUrl422JSONResponseBody0(v GetTargetUrl422JSONResponseBody0) error {
+// MergeSubmittedDataMalformedError0x34 performs a merge with any union data inside the GetTargetUrl422JSONResponseBody, using the provided SubmittedDataMalformedError0x34
+func (t *GetTargetUrl422JSONResponseBody) MergeSubmittedDataMalformedError0x34(v SubmittedDataMalformedError0x34) error {
 	b, err := json.Marshal(v)
 	if err != nil {
 		return err
@@ -14193,22 +14547,22 @@ func (t *GetTargetUrl422JSONResponseBody) MergeGetTargetUrl422JSONResponseBody0(
 	return err
 }
 
-// AsGetTargetUrl422JSONResponseBody1 returns the union data inside the GetTargetUrl422JSONResponseBody as a GetTargetUrl422JSONResponseBody1
-func (t GetTargetUrl422JSONResponseBody) AsGetTargetUrl422JSONResponseBody1() (GetTargetUrl422JSONResponseBody1, error) {
-	var body GetTargetUrl422JSONResponseBody1
+// AsDownstreamServiceFailureError0x35 returns the union data inside the GetTargetUrl422JSONResponseBody as a DownstreamServiceFailureError0x35
+func (t GetTargetUrl422JSONResponseBody) AsDownstreamServiceFailureError0x35() (DownstreamServiceFailureError0x35, error) {
+	var body DownstreamServiceFailureError0x35
 	err := json.Unmarshal(t.union, &body)
 	return body, err
 }
 
-// FromGetTargetUrl422JSONResponseBody1 overwrites any union data inside the GetTargetUrl422JSONResponseBody as the provided GetTargetUrl422JSONResponseBody1
-func (t *GetTargetUrl422JSONResponseBody) FromGetTargetUrl422JSONResponseBody1(v GetTargetUrl422JSONResponseBody1) error {
+// FromDownstreamServiceFailureError0x35 overwrites any union data inside the GetTargetUrl422JSONResponseBody as the provided DownstreamServiceFailureError0x35
+func (t *GetTargetUrl422JSONResponseBody) FromDownstreamServiceFailureError0x35(v DownstreamServiceFailureError0x35) error {
 	b, err := json.Marshal(v)
 	t.union = b
 	return err
 }
 
-// MergeGetTargetUrl422JSONResponseBody1 performs a merge with any union data inside the GetTargetUrl422JSONResponseBody, using the provided GetTargetUrl422JSONResponseBody1
-func (t *GetTargetUrl422JSONResponseBody) MergeGetTargetUrl422JSONResponseBody1(v GetTargetUrl422JSONResponseBody1) error {
+// MergeDownstreamServiceFailureError0x35 performs a merge with any union data inside the GetTargetUrl422JSONResponseBody, using the provided DownstreamServiceFailureError0x35
+func (t *GetTargetUrl422JSONResponseBody) MergeDownstreamServiceFailureError0x35(v DownstreamServiceFailureError0x35) error {
 	b, err := json.Marshal(v)
 	if err != nil {
 		return err
@@ -14219,22 +14573,22 @@ func (t *GetTargetUrl422JSONResponseBody) MergeGetTargetUrl422JSONResponseBody1(
 	return err
 }
 
-// AsGetTargetUrl422JSONResponseBody2 returns the union data inside the GetTargetUrl422JSONResponseBody as a GetTargetUrl422JSONResponseBody2
-func (t GetTargetUrl422JSONResponseBody) AsGetTargetUrl422JSONResponseBody2() (GetTargetUrl422JSONResponseBody2, error) {
-	var body GetTargetUrl422JSONResponseBody2
+// AsAssertionFailureError0x36 returns the union data inside the GetTargetUrl422JSONResponseBody as a AssertionFailureError0x36
+func (t GetTargetUrl422JSONResponseBody) AsAssertionFailureError0x36() (AssertionFailureError0x36, error) {
+	var body AssertionFailureError0x36
 	err := json.Unmarshal(t.union, &body)
 	return body, err
 }
 
-// FromGetTargetUrl422JSONResponseBody2 overwrites any union data inside the GetTargetUrl422JSONResponseBody as the provided GetTargetUrl422JSONResponseBody2
-func (t *GetTargetUrl422JSONResponseBody) FromGetTargetUrl422JSONResponseBody2(v GetTargetUrl422JSONResponseBody2) error {
+// FromAssertionFailureError0x36 overwrites any union data inside the GetTargetUrl422JSONResponseBody as the provided AssertionFailureError0x36
+func (t *GetTargetUrl422JSONResponseBody) FromAssertionFailureError0x36(v AssertionFailureError0x36) error {
 	b, err := json.Marshal(v)
 	t.union = b
 	return err
 }
 
-// MergeGetTargetUrl422JSONResponseBody2 performs a merge with any union data inside the GetTargetUrl422JSONResponseBody, using the provided GetTargetUrl422JSONResponseBody2
-func (t *GetTargetUrl422JSONResponseBody) MergeGetTargetUrl422JSONResponseBody2(v GetTargetUrl422JSONResponseBody2) error {
+// MergeAssertionFailureError0x36 performs a merge with any union data inside the GetTargetUrl422JSONResponseBody, using the provided AssertionFailureError0x36
+func (t *GetTargetUrl422JSONResponseBody) MergeAssertionFailureError0x36(v AssertionFailureError0x36) error {
 	b, err := json.Marshal(v)
 	if err != nil {
 		return err
@@ -14255,22 +14609,22 @@ func (t *GetTargetUrl422JSONResponseBody) UnmarshalJSON(b []byte) error {
 	return err
 }
 
-// AsPostTargetUrlJSONBodyEngine0 returns the union data inside the PostTargetUrlJSONBody_Engine as a PostTargetUrlJSONBodyEngine0
-func (t PostTargetUrlJSONBody_Engine) AsPostTargetUrlJSONBodyEngine0() (PostTargetUrlJSONBodyEngine0, error) {
-	var body PostTargetUrlJSONBodyEngine0
+// AsEnum0x1c returns the union data inside the PostTargetUrlJSONBody_Engine as a Enum0x1c
+func (t PostTargetUrlJSONBody_Engine) AsEnum0x1c() (Enum0x1c, error) {
+	var body Enum0x1c
 	err := json.Unmarshal(t.union, &body)
 	return body, err
 }
 
-// FromPostTargetUrlJSONBodyEngine0 overwrites any union data inside the PostTargetUrlJSONBody_Engine as the provided PostTargetUrlJSONBodyEngine0
-func (t *PostTargetUrlJSONBody_Engine) FromPostTargetUrlJSONBodyEngine0(v PostTargetUrlJSONBodyEngine0) error {
+// FromEnum0x1c overwrites any union data inside the PostTargetUrlJSONBody_Engine as the provided Enum0x1c
+func (t *PostTargetUrlJSONBody_Engine) FromEnum0x1c(v Enum0x1c) error {
 	b, err := json.Marshal(v)
 	t.union = b
 	return err
 }
 
-// MergePostTargetUrlJSONBodyEngine0 performs a merge with any union data inside the PostTargetUrlJSONBody_Engine, using the provided PostTargetUrlJSONBodyEngine0
-func (t *PostTargetUrlJSONBody_Engine) MergePostTargetUrlJSONBodyEngine0(v PostTargetUrlJSONBodyEngine0) error {
+// MergeEnum0x1c performs a merge with any union data inside the PostTargetUrlJSONBody_Engine, using the provided Enum0x1c
+func (t *PostTargetUrlJSONBody_Engine) MergeEnum0x1c(v Enum0x1c) error {
 	b, err := json.Marshal(v)
 	if err != nil {
 		return err
@@ -14317,22 +14671,22 @@ func (t *PostTargetUrlJSONBody_Engine) UnmarshalJSON(b []byte) error {
 	return err
 }
 
-// AsPostTargetUrlJSONBodyFile0 returns the union data inside the PostTargetUrlJSONBody_File as a PostTargetUrlJSONBodyFile0
-func (t PostTargetUrlJSONBody_File) AsPostTargetUrlJSONBodyFile0() (PostTargetUrlJSONBodyFile0, error) {
-	var body PostTargetUrlJSONBodyFile0
+// AsFancyFile0x0e returns the union data inside the PostTargetUrlJSONBody_File as a FancyFile0x0e
+func (t PostTargetUrlJSONBody_File) AsFancyFile0x0e() (FancyFile0x0e, error) {
+	var body FancyFile0x0e
 	err := json.Unmarshal(t.union, &body)
 	return body, err
 }
 
-// FromPostTargetUrlJSONBodyFile0 overwrites any union data inside the PostTargetUrlJSONBody_File as the provided PostTargetUrlJSONBodyFile0
-func (t *PostTargetUrlJSONBody_File) FromPostTargetUrlJSONBodyFile0(v PostTargetUrlJSONBodyFile0) error {
+// FromFancyFile0x0e overwrites any union data inside the PostTargetUrlJSONBody_File as the provided FancyFile0x0e
+func (t *PostTargetUrlJSONBody_File) FromFancyFile0x0e(v FancyFile0x0e) error {
 	b, err := json.Marshal(v)
 	t.union = b
 	return err
 }
 
-// MergePostTargetUrlJSONBodyFile0 performs a merge with any union data inside the PostTargetUrlJSONBody_File, using the provided PostTargetUrlJSONBodyFile0
-func (t *PostTargetUrlJSONBody_File) MergePostTargetUrlJSONBodyFile0(v PostTargetUrlJSONBodyFile0) error {
+// MergeFancyFile0x0e performs a merge with any union data inside the PostTargetUrlJSONBody_File, using the provided FancyFile0x0e
+func (t *PostTargetUrlJSONBody_File) MergeFancyFile0x0e(v FancyFile0x0e) error {
 	b, err := json.Marshal(v)
 	if err != nil {
 		return err
@@ -14379,22 +14733,22 @@ func (t *PostTargetUrlJSONBody_File) UnmarshalJSON(b []byte) error {
 	return err
 }
 
-// AsPostTargetUrlJSONBodyMarkdownChunking0 returns the union data inside the PostTargetUrlJSONBody_MarkdownChunking as a PostTargetUrlJSONBodyMarkdownChunking0
-func (t PostTargetUrlJSONBody_MarkdownChunking) AsPostTargetUrlJSONBodyMarkdownChunking0() (PostTargetUrlJSONBodyMarkdownChunking0, error) {
-	var body PostTargetUrlJSONBodyMarkdownChunking0
+// AsEnum0x27 returns the union data inside the PostTargetUrlJSONBody_MarkdownChunking as a Enum0x27
+func (t PostTargetUrlJSONBody_MarkdownChunking) AsEnum0x27() (Enum0x27, error) {
+	var body Enum0x27
 	err := json.Unmarshal(t.union, &body)
 	return body, err
 }
 
-// FromPostTargetUrlJSONBodyMarkdownChunking0 overwrites any union data inside the PostTargetUrlJSONBody_MarkdownChunking as the provided PostTargetUrlJSONBodyMarkdownChunking0
-func (t *PostTargetUrlJSONBody_MarkdownChunking) FromPostTargetUrlJSONBodyMarkdownChunking0(v PostTargetUrlJSONBodyMarkdownChunking0) error {
+// FromEnum0x27 overwrites any union data inside the PostTargetUrlJSONBody_MarkdownChunking as the provided Enum0x27
+func (t *PostTargetUrlJSONBody_MarkdownChunking) FromEnum0x27(v Enum0x27) error {
 	b, err := json.Marshal(v)
 	t.union = b
 	return err
 }
 
-// MergePostTargetUrlJSONBodyMarkdownChunking0 performs a merge with any union data inside the PostTargetUrlJSONBody_MarkdownChunking, using the provided PostTargetUrlJSONBodyMarkdownChunking0
-func (t *PostTargetUrlJSONBody_MarkdownChunking) MergePostTargetUrlJSONBodyMarkdownChunking0(v PostTargetUrlJSONBodyMarkdownChunking0) error {
+// MergeEnum0x27 performs a merge with any union data inside the PostTargetUrlJSONBody_MarkdownChunking, using the provided Enum0x27
+func (t *PostTargetUrlJSONBody_MarkdownChunking) MergeEnum0x27(v Enum0x27) error {
 	b, err := json.Marshal(v)
 	if err != nil {
 		return err
@@ -14441,22 +14795,22 @@ func (t *PostTargetUrlJSONBody_MarkdownChunking) UnmarshalJSON(b []byte) error {
 	return err
 }
 
-// AsPostTargetUrlJSONBodyNoGfm0 returns the union data inside the PostTargetUrlJSONBody_NoGfm as a PostTargetUrlJSONBodyNoGfm0
-func (t PostTargetUrlJSONBody_NoGfm) AsPostTargetUrlJSONBodyNoGfm0() (PostTargetUrlJSONBodyNoGfm0, error) {
-	var body PostTargetUrlJSONBodyNoGfm0
+// AsPseudoBoolean0x11 returns the union data inside the PostTargetUrlJSONBody_NoGfm as a PseudoBoolean0x11
+func (t PostTargetUrlJSONBody_NoGfm) AsPseudoBoolean0x11() (PseudoBoolean0x11, error) {
+	var body PseudoBoolean0x11
 	err := json.Unmarshal(t.union, &body)
 	return body, err
 }
 
-// FromPostTargetUrlJSONBodyNoGfm0 overwrites any union data inside the PostTargetUrlJSONBody_NoGfm as the provided PostTargetUrlJSONBodyNoGfm0
-func (t *PostTargetUrlJSONBody_NoGfm) FromPostTargetUrlJSONBodyNoGfm0(v PostTargetUrlJSONBodyNoGfm0) error {
+// FromPseudoBoolean0x11 overwrites any union data inside the PostTargetUrlJSONBody_NoGfm as the provided PseudoBoolean0x11
+func (t *PostTargetUrlJSONBody_NoGfm) FromPseudoBoolean0x11(v PseudoBoolean0x11) error {
 	b, err := json.Marshal(v)
 	t.union = b
 	return err
 }
 
-// MergePostTargetUrlJSONBodyNoGfm0 performs a merge with any union data inside the PostTargetUrlJSONBody_NoGfm, using the provided PostTargetUrlJSONBodyNoGfm0
-func (t *PostTargetUrlJSONBody_NoGfm) MergePostTargetUrlJSONBodyNoGfm0(v PostTargetUrlJSONBodyNoGfm0) error {
+// MergePseudoBoolean0x11 performs a merge with any union data inside the PostTargetUrlJSONBody_NoGfm, using the provided PseudoBoolean0x11
+func (t *PostTargetUrlJSONBody_NoGfm) MergePseudoBoolean0x11(v PseudoBoolean0x11) error {
 	b, err := json.Marshal(v)
 	if err != nil {
 		return err
@@ -14503,22 +14857,22 @@ func (t *PostTargetUrlJSONBody_NoGfm) UnmarshalJSON(b []byte) error {
 	return err
 }
 
-// AsPostTargetUrlJSONBodyPdf0 returns the union data inside the PostTargetUrlJSONBody_Pdf as a PostTargetUrlJSONBodyPdf0
-func (t PostTargetUrlJSONBody_Pdf) AsPostTargetUrlJSONBodyPdf0() (PostTargetUrlJSONBodyPdf0, error) {
-	var body PostTargetUrlJSONBodyPdf0
+// AsFancyFile0x0e returns the union data inside the PostTargetUrlJSONBody_Pdf as a FancyFile0x0e
+func (t PostTargetUrlJSONBody_Pdf) AsFancyFile0x0e() (FancyFile0x0e, error) {
+	var body FancyFile0x0e
 	err := json.Unmarshal(t.union, &body)
 	return body, err
 }
 
-// FromPostTargetUrlJSONBodyPdf0 overwrites any union data inside the PostTargetUrlJSONBody_Pdf as the provided PostTargetUrlJSONBodyPdf0
-func (t *PostTargetUrlJSONBody_Pdf) FromPostTargetUrlJSONBodyPdf0(v PostTargetUrlJSONBodyPdf0) error {
+// FromFancyFile0x0e overwrites any union data inside the PostTargetUrlJSONBody_Pdf as the provided FancyFile0x0e
+func (t *PostTargetUrlJSONBody_Pdf) FromFancyFile0x0e(v FancyFile0x0e) error {
 	b, err := json.Marshal(v)
 	t.union = b
 	return err
 }
 
-// MergePostTargetUrlJSONBodyPdf0 performs a merge with any union data inside the PostTargetUrlJSONBody_Pdf, using the provided PostTargetUrlJSONBodyPdf0
-func (t *PostTargetUrlJSONBody_Pdf) MergePostTargetUrlJSONBodyPdf0(v PostTargetUrlJSONBodyPdf0) error {
+// MergeFancyFile0x0e performs a merge with any union data inside the PostTargetUrlJSONBody_Pdf, using the provided FancyFile0x0e
+func (t *PostTargetUrlJSONBody_Pdf) MergeFancyFile0x0e(v FancyFile0x0e) error {
 	b, err := json.Marshal(v)
 	if err != nil {
 		return err
@@ -14565,22 +14919,22 @@ func (t *PostTargetUrlJSONBody_Pdf) UnmarshalJSON(b []byte) error {
 	return err
 }
 
-// AsPostTargetUrlJSONBodyRespondWith0 returns the union data inside the PostTargetUrlJSONBody_RespondWith as a PostTargetUrlJSONBodyRespondWith0
-func (t PostTargetUrlJSONBody_RespondWith) AsPostTargetUrlJSONBodyRespondWith0() (PostTargetUrlJSONBodyRespondWith0, error) {
-	var body PostTargetUrlJSONBodyRespondWith0
+// AsEnum0x10 returns the union data inside the PostTargetUrlJSONBody_RespondWith as a Enum0x10
+func (t PostTargetUrlJSONBody_RespondWith) AsEnum0x10() (Enum0x10, error) {
+	var body Enum0x10
 	err := json.Unmarshal(t.union, &body)
 	return body, err
 }
 
-// FromPostTargetUrlJSONBodyRespondWith0 overwrites any union data inside the PostTargetUrlJSONBody_RespondWith as the provided PostTargetUrlJSONBodyRespondWith0
-func (t *PostTargetUrlJSONBody_RespondWith) FromPostTargetUrlJSONBodyRespondWith0(v PostTargetUrlJSONBodyRespondWith0) error {
+// FromEnum0x10 overwrites any union data inside the PostTargetUrlJSONBody_RespondWith as the provided Enum0x10
+func (t *PostTargetUrlJSONBody_RespondWith) FromEnum0x10(v Enum0x10) error {
 	b, err := json.Marshal(v)
 	t.union = b
 	return err
 }
 
-// MergePostTargetUrlJSONBodyRespondWith0 performs a merge with any union data inside the PostTargetUrlJSONBody_RespondWith, using the provided PostTargetUrlJSONBodyRespondWith0
-func (t *PostTargetUrlJSONBody_RespondWith) MergePostTargetUrlJSONBodyRespondWith0(v PostTargetUrlJSONBodyRespondWith0) error {
+// MergeEnum0x10 performs a merge with any union data inside the PostTargetUrlJSONBody_RespondWith, using the provided Enum0x10
+func (t *PostTargetUrlJSONBody_RespondWith) MergeEnum0x10(v Enum0x10) error {
 	b, err := json.Marshal(v)
 	if err != nil {
 		return err
@@ -14623,6 +14977,68 @@ func (t PostTargetUrlJSONBody_RespondWith) MarshalJSON() ([]byte, error) {
 }
 
 func (t *PostTargetUrlJSONBody_RespondWith) UnmarshalJSON(b []byte) error {
+	err := t.union.UnmarshalJSON(b)
+	return err
+}
+
+// AsPseudoBoolean0x11 returns the union data inside the PostTargetUrlJSONBody_RobotsTxt as a PseudoBoolean0x11
+func (t PostTargetUrlJSONBody_RobotsTxt) AsPseudoBoolean0x11() (PseudoBoolean0x11, error) {
+	var body PseudoBoolean0x11
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromPseudoBoolean0x11 overwrites any union data inside the PostTargetUrlJSONBody_RobotsTxt as the provided PseudoBoolean0x11
+func (t *PostTargetUrlJSONBody_RobotsTxt) FromPseudoBoolean0x11(v PseudoBoolean0x11) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergePseudoBoolean0x11 performs a merge with any union data inside the PostTargetUrlJSONBody_RobotsTxt, using the provided PseudoBoolean0x11
+func (t *PostTargetUrlJSONBody_RobotsTxt) MergePseudoBoolean0x11(v PseudoBoolean0x11) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsPostTargetUrlJSONBodyRobotsTxt1 returns the union data inside the PostTargetUrlJSONBody_RobotsTxt as a PostTargetUrlJSONBodyRobotsTxt1
+func (t PostTargetUrlJSONBody_RobotsTxt) AsPostTargetUrlJSONBodyRobotsTxt1() (PostTargetUrlJSONBodyRobotsTxt1, error) {
+	var body PostTargetUrlJSONBodyRobotsTxt1
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromPostTargetUrlJSONBodyRobotsTxt1 overwrites any union data inside the PostTargetUrlJSONBody_RobotsTxt as the provided PostTargetUrlJSONBodyRobotsTxt1
+func (t *PostTargetUrlJSONBody_RobotsTxt) FromPostTargetUrlJSONBodyRobotsTxt1(v PostTargetUrlJSONBodyRobotsTxt1) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergePostTargetUrlJSONBodyRobotsTxt1 performs a merge with any union data inside the PostTargetUrlJSONBody_RobotsTxt, using the provided PostTargetUrlJSONBodyRobotsTxt1
+func (t *PostTargetUrlJSONBody_RobotsTxt) MergePostTargetUrlJSONBodyRobotsTxt1(v PostTargetUrlJSONBodyRobotsTxt1) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+func (t PostTargetUrlJSONBody_RobotsTxt) MarshalJSON() ([]byte, error) {
+	b, err := t.union.MarshalJSON()
+	return b, err
+}
+
+func (t *PostTargetUrlJSONBody_RobotsTxt) UnmarshalJSON(b []byte) error {
 	err := t.union.UnmarshalJSON(b)
 	return err
 }
@@ -14689,22 +15105,84 @@ func (t *PostTargetUrlJSONBody_SetCookies_Item) UnmarshalJSON(b []byte) error {
 	return err
 }
 
-// AsPostTargetUrlJSONBodyWithIframe0 returns the union data inside the PostTargetUrlJSONBody_WithIframe as a PostTargetUrlJSONBodyWithIframe0
-func (t PostTargetUrlJSONBody_WithIframe) AsPostTargetUrlJSONBodyWithIframe0() (PostTargetUrlJSONBodyWithIframe0, error) {
-	var body PostTargetUrlJSONBodyWithIframe0
+// AsPseudoBoolean0x11 returns the union data inside the PostTargetUrlJSONBody_WebBotAuth as a PseudoBoolean0x11
+func (t PostTargetUrlJSONBody_WebBotAuth) AsPseudoBoolean0x11() (PseudoBoolean0x11, error) {
+	var body PseudoBoolean0x11
 	err := json.Unmarshal(t.union, &body)
 	return body, err
 }
 
-// FromPostTargetUrlJSONBodyWithIframe0 overwrites any union data inside the PostTargetUrlJSONBody_WithIframe as the provided PostTargetUrlJSONBodyWithIframe0
-func (t *PostTargetUrlJSONBody_WithIframe) FromPostTargetUrlJSONBodyWithIframe0(v PostTargetUrlJSONBodyWithIframe0) error {
+// FromPseudoBoolean0x11 overwrites any union data inside the PostTargetUrlJSONBody_WebBotAuth as the provided PseudoBoolean0x11
+func (t *PostTargetUrlJSONBody_WebBotAuth) FromPseudoBoolean0x11(v PseudoBoolean0x11) error {
 	b, err := json.Marshal(v)
 	t.union = b
 	return err
 }
 
-// MergePostTargetUrlJSONBodyWithIframe0 performs a merge with any union data inside the PostTargetUrlJSONBody_WithIframe, using the provided PostTargetUrlJSONBodyWithIframe0
-func (t *PostTargetUrlJSONBody_WithIframe) MergePostTargetUrlJSONBodyWithIframe0(v PostTargetUrlJSONBodyWithIframe0) error {
+// MergePseudoBoolean0x11 performs a merge with any union data inside the PostTargetUrlJSONBody_WebBotAuth, using the provided PseudoBoolean0x11
+func (t *PostTargetUrlJSONBody_WebBotAuth) MergePseudoBoolean0x11(v PseudoBoolean0x11) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsEnum0x16 returns the union data inside the PostTargetUrlJSONBody_WebBotAuth as a Enum0x16
+func (t PostTargetUrlJSONBody_WebBotAuth) AsEnum0x16() (Enum0x16, error) {
+	var body Enum0x16
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromEnum0x16 overwrites any union data inside the PostTargetUrlJSONBody_WebBotAuth as the provided Enum0x16
+func (t *PostTargetUrlJSONBody_WebBotAuth) FromEnum0x16(v Enum0x16) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeEnum0x16 performs a merge with any union data inside the PostTargetUrlJSONBody_WebBotAuth, using the provided Enum0x16
+func (t *PostTargetUrlJSONBody_WebBotAuth) MergeEnum0x16(v Enum0x16) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+func (t PostTargetUrlJSONBody_WebBotAuth) MarshalJSON() ([]byte, error) {
+	b, err := t.union.MarshalJSON()
+	return b, err
+}
+
+func (t *PostTargetUrlJSONBody_WebBotAuth) UnmarshalJSON(b []byte) error {
+	err := t.union.UnmarshalJSON(b)
+	return err
+}
+
+// AsPseudoBoolean0x11 returns the union data inside the PostTargetUrlJSONBody_WithIframe as a PseudoBoolean0x11
+func (t PostTargetUrlJSONBody_WithIframe) AsPseudoBoolean0x11() (PseudoBoolean0x11, error) {
+	var body PseudoBoolean0x11
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromPseudoBoolean0x11 overwrites any union data inside the PostTargetUrlJSONBody_WithIframe as the provided PseudoBoolean0x11
+func (t *PostTargetUrlJSONBody_WithIframe) FromPseudoBoolean0x11(v PseudoBoolean0x11) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergePseudoBoolean0x11 performs a merge with any union data inside the PostTargetUrlJSONBody_WithIframe, using the provided PseudoBoolean0x11
+func (t *PostTargetUrlJSONBody_WithIframe) MergePseudoBoolean0x11(v PseudoBoolean0x11) error {
 	b, err := json.Marshal(v)
 	if err != nil {
 		return err
@@ -14751,22 +15229,22 @@ func (t *PostTargetUrlJSONBody_WithIframe) UnmarshalJSON(b []byte) error {
 	return err
 }
 
-// AsPostTargetUrlJSONBodyWithLinksSummary0 returns the union data inside the PostTargetUrlJSONBody_WithLinksSummary as a PostTargetUrlJSONBodyWithLinksSummary0
-func (t PostTargetUrlJSONBody_WithLinksSummary) AsPostTargetUrlJSONBodyWithLinksSummary0() (PostTargetUrlJSONBodyWithLinksSummary0, error) {
-	var body PostTargetUrlJSONBodyWithLinksSummary0
+// AsPseudoBoolean0x11 returns the union data inside the PostTargetUrlJSONBody_WithLinksSummary as a PseudoBoolean0x11
+func (t PostTargetUrlJSONBody_WithLinksSummary) AsPseudoBoolean0x11() (PseudoBoolean0x11, error) {
+	var body PseudoBoolean0x11
 	err := json.Unmarshal(t.union, &body)
 	return body, err
 }
 
-// FromPostTargetUrlJSONBodyWithLinksSummary0 overwrites any union data inside the PostTargetUrlJSONBody_WithLinksSummary as the provided PostTargetUrlJSONBodyWithLinksSummary0
-func (t *PostTargetUrlJSONBody_WithLinksSummary) FromPostTargetUrlJSONBodyWithLinksSummary0(v PostTargetUrlJSONBodyWithLinksSummary0) error {
+// FromPseudoBoolean0x11 overwrites any union data inside the PostTargetUrlJSONBody_WithLinksSummary as the provided PseudoBoolean0x11
+func (t *PostTargetUrlJSONBody_WithLinksSummary) FromPseudoBoolean0x11(v PseudoBoolean0x11) error {
 	b, err := json.Marshal(v)
 	t.union = b
 	return err
 }
 
-// MergePostTargetUrlJSONBodyWithLinksSummary0 performs a merge with any union data inside the PostTargetUrlJSONBody_WithLinksSummary, using the provided PostTargetUrlJSONBodyWithLinksSummary0
-func (t *PostTargetUrlJSONBody_WithLinksSummary) MergePostTargetUrlJSONBodyWithLinksSummary0(v PostTargetUrlJSONBodyWithLinksSummary0) error {
+// MergePseudoBoolean0x11 performs a merge with any union data inside the PostTargetUrlJSONBody_WithLinksSummary, using the provided PseudoBoolean0x11
+func (t *PostTargetUrlJSONBody_WithLinksSummary) MergePseudoBoolean0x11(v PseudoBoolean0x11) error {
 	b, err := json.Marshal(v)
 	if err != nil {
 		return err
@@ -14813,22 +15291,22 @@ func (t *PostTargetUrlJSONBody_WithLinksSummary) UnmarshalJSON(b []byte) error {
 	return err
 }
 
-// AsPostTargetUrlFormdataBodyEngine0 returns the union data inside the PostTargetUrlFormdataBody_Engine as a PostTargetUrlFormdataBodyEngine0
-func (t PostTargetUrlFormdataBody_Engine) AsPostTargetUrlFormdataBodyEngine0() (PostTargetUrlFormdataBodyEngine0, error) {
-	var body PostTargetUrlFormdataBodyEngine0
+// AsEnum0x1c returns the union data inside the PostTargetUrlFormdataBody_Engine as a Enum0x1c
+func (t PostTargetUrlFormdataBody_Engine) AsEnum0x1c() (Enum0x1c, error) {
+	var body Enum0x1c
 	err := json.Unmarshal(t.union, &body)
 	return body, err
 }
 
-// FromPostTargetUrlFormdataBodyEngine0 overwrites any union data inside the PostTargetUrlFormdataBody_Engine as the provided PostTargetUrlFormdataBodyEngine0
-func (t *PostTargetUrlFormdataBody_Engine) FromPostTargetUrlFormdataBodyEngine0(v PostTargetUrlFormdataBodyEngine0) error {
+// FromEnum0x1c overwrites any union data inside the PostTargetUrlFormdataBody_Engine as the provided Enum0x1c
+func (t *PostTargetUrlFormdataBody_Engine) FromEnum0x1c(v Enum0x1c) error {
 	b, err := json.Marshal(v)
 	t.union = b
 	return err
 }
 
-// MergePostTargetUrlFormdataBodyEngine0 performs a merge with any union data inside the PostTargetUrlFormdataBody_Engine, using the provided PostTargetUrlFormdataBodyEngine0
-func (t *PostTargetUrlFormdataBody_Engine) MergePostTargetUrlFormdataBodyEngine0(v PostTargetUrlFormdataBodyEngine0) error {
+// MergeEnum0x1c performs a merge with any union data inside the PostTargetUrlFormdataBody_Engine, using the provided Enum0x1c
+func (t *PostTargetUrlFormdataBody_Engine) MergeEnum0x1c(v Enum0x1c) error {
 	b, err := json.Marshal(v)
 	if err != nil {
 		return err
@@ -14875,22 +15353,22 @@ func (t *PostTargetUrlFormdataBody_Engine) UnmarshalJSON(b []byte) error {
 	return err
 }
 
-// AsPostTargetUrlFormdataBodyFile0 returns the union data inside the PostTargetUrlFormdataBody_File as a PostTargetUrlFormdataBodyFile0
-func (t PostTargetUrlFormdataBody_File) AsPostTargetUrlFormdataBodyFile0() (PostTargetUrlFormdataBodyFile0, error) {
-	var body PostTargetUrlFormdataBodyFile0
+// AsFancyFile0x0e returns the union data inside the PostTargetUrlFormdataBody_File as a FancyFile0x0e
+func (t PostTargetUrlFormdataBody_File) AsFancyFile0x0e() (FancyFile0x0e, error) {
+	var body FancyFile0x0e
 	err := json.Unmarshal(t.union, &body)
 	return body, err
 }
 
-// FromPostTargetUrlFormdataBodyFile0 overwrites any union data inside the PostTargetUrlFormdataBody_File as the provided PostTargetUrlFormdataBodyFile0
-func (t *PostTargetUrlFormdataBody_File) FromPostTargetUrlFormdataBodyFile0(v PostTargetUrlFormdataBodyFile0) error {
+// FromFancyFile0x0e overwrites any union data inside the PostTargetUrlFormdataBody_File as the provided FancyFile0x0e
+func (t *PostTargetUrlFormdataBody_File) FromFancyFile0x0e(v FancyFile0x0e) error {
 	b, err := json.Marshal(v)
 	t.union = b
 	return err
 }
 
-// MergePostTargetUrlFormdataBodyFile0 performs a merge with any union data inside the PostTargetUrlFormdataBody_File, using the provided PostTargetUrlFormdataBodyFile0
-func (t *PostTargetUrlFormdataBody_File) MergePostTargetUrlFormdataBodyFile0(v PostTargetUrlFormdataBodyFile0) error {
+// MergeFancyFile0x0e performs a merge with any union data inside the PostTargetUrlFormdataBody_File, using the provided FancyFile0x0e
+func (t *PostTargetUrlFormdataBody_File) MergeFancyFile0x0e(v FancyFile0x0e) error {
 	b, err := json.Marshal(v)
 	if err != nil {
 		return err
@@ -14937,22 +15415,22 @@ func (t *PostTargetUrlFormdataBody_File) UnmarshalJSON(b []byte) error {
 	return err
 }
 
-// AsPostTargetUrlFormdataBodyMarkdownChunking0 returns the union data inside the PostTargetUrlFormdataBody_MarkdownChunking as a PostTargetUrlFormdataBodyMarkdownChunking0
-func (t PostTargetUrlFormdataBody_MarkdownChunking) AsPostTargetUrlFormdataBodyMarkdownChunking0() (PostTargetUrlFormdataBodyMarkdownChunking0, error) {
-	var body PostTargetUrlFormdataBodyMarkdownChunking0
+// AsEnum0x27 returns the union data inside the PostTargetUrlFormdataBody_MarkdownChunking as a Enum0x27
+func (t PostTargetUrlFormdataBody_MarkdownChunking) AsEnum0x27() (Enum0x27, error) {
+	var body Enum0x27
 	err := json.Unmarshal(t.union, &body)
 	return body, err
 }
 
-// FromPostTargetUrlFormdataBodyMarkdownChunking0 overwrites any union data inside the PostTargetUrlFormdataBody_MarkdownChunking as the provided PostTargetUrlFormdataBodyMarkdownChunking0
-func (t *PostTargetUrlFormdataBody_MarkdownChunking) FromPostTargetUrlFormdataBodyMarkdownChunking0(v PostTargetUrlFormdataBodyMarkdownChunking0) error {
+// FromEnum0x27 overwrites any union data inside the PostTargetUrlFormdataBody_MarkdownChunking as the provided Enum0x27
+func (t *PostTargetUrlFormdataBody_MarkdownChunking) FromEnum0x27(v Enum0x27) error {
 	b, err := json.Marshal(v)
 	t.union = b
 	return err
 }
 
-// MergePostTargetUrlFormdataBodyMarkdownChunking0 performs a merge with any union data inside the PostTargetUrlFormdataBody_MarkdownChunking, using the provided PostTargetUrlFormdataBodyMarkdownChunking0
-func (t *PostTargetUrlFormdataBody_MarkdownChunking) MergePostTargetUrlFormdataBodyMarkdownChunking0(v PostTargetUrlFormdataBodyMarkdownChunking0) error {
+// MergeEnum0x27 performs a merge with any union data inside the PostTargetUrlFormdataBody_MarkdownChunking, using the provided Enum0x27
+func (t *PostTargetUrlFormdataBody_MarkdownChunking) MergeEnum0x27(v Enum0x27) error {
 	b, err := json.Marshal(v)
 	if err != nil {
 		return err
@@ -14999,22 +15477,22 @@ func (t *PostTargetUrlFormdataBody_MarkdownChunking) UnmarshalJSON(b []byte) err
 	return err
 }
 
-// AsPostTargetUrlFormdataBodyNoGfm0 returns the union data inside the PostTargetUrlFormdataBody_NoGfm as a PostTargetUrlFormdataBodyNoGfm0
-func (t PostTargetUrlFormdataBody_NoGfm) AsPostTargetUrlFormdataBodyNoGfm0() (PostTargetUrlFormdataBodyNoGfm0, error) {
-	var body PostTargetUrlFormdataBodyNoGfm0
+// AsPseudoBoolean0x11 returns the union data inside the PostTargetUrlFormdataBody_NoGfm as a PseudoBoolean0x11
+func (t PostTargetUrlFormdataBody_NoGfm) AsPseudoBoolean0x11() (PseudoBoolean0x11, error) {
+	var body PseudoBoolean0x11
 	err := json.Unmarshal(t.union, &body)
 	return body, err
 }
 
-// FromPostTargetUrlFormdataBodyNoGfm0 overwrites any union data inside the PostTargetUrlFormdataBody_NoGfm as the provided PostTargetUrlFormdataBodyNoGfm0
-func (t *PostTargetUrlFormdataBody_NoGfm) FromPostTargetUrlFormdataBodyNoGfm0(v PostTargetUrlFormdataBodyNoGfm0) error {
+// FromPseudoBoolean0x11 overwrites any union data inside the PostTargetUrlFormdataBody_NoGfm as the provided PseudoBoolean0x11
+func (t *PostTargetUrlFormdataBody_NoGfm) FromPseudoBoolean0x11(v PseudoBoolean0x11) error {
 	b, err := json.Marshal(v)
 	t.union = b
 	return err
 }
 
-// MergePostTargetUrlFormdataBodyNoGfm0 performs a merge with any union data inside the PostTargetUrlFormdataBody_NoGfm, using the provided PostTargetUrlFormdataBodyNoGfm0
-func (t *PostTargetUrlFormdataBody_NoGfm) MergePostTargetUrlFormdataBodyNoGfm0(v PostTargetUrlFormdataBodyNoGfm0) error {
+// MergePseudoBoolean0x11 performs a merge with any union data inside the PostTargetUrlFormdataBody_NoGfm, using the provided PseudoBoolean0x11
+func (t *PostTargetUrlFormdataBody_NoGfm) MergePseudoBoolean0x11(v PseudoBoolean0x11) error {
 	b, err := json.Marshal(v)
 	if err != nil {
 		return err
@@ -15061,22 +15539,22 @@ func (t *PostTargetUrlFormdataBody_NoGfm) UnmarshalJSON(b []byte) error {
 	return err
 }
 
-// AsPostTargetUrlFormdataBodyPdf0 returns the union data inside the PostTargetUrlFormdataBody_Pdf as a PostTargetUrlFormdataBodyPdf0
-func (t PostTargetUrlFormdataBody_Pdf) AsPostTargetUrlFormdataBodyPdf0() (PostTargetUrlFormdataBodyPdf0, error) {
-	var body PostTargetUrlFormdataBodyPdf0
+// AsFancyFile0x0e returns the union data inside the PostTargetUrlFormdataBody_Pdf as a FancyFile0x0e
+func (t PostTargetUrlFormdataBody_Pdf) AsFancyFile0x0e() (FancyFile0x0e, error) {
+	var body FancyFile0x0e
 	err := json.Unmarshal(t.union, &body)
 	return body, err
 }
 
-// FromPostTargetUrlFormdataBodyPdf0 overwrites any union data inside the PostTargetUrlFormdataBody_Pdf as the provided PostTargetUrlFormdataBodyPdf0
-func (t *PostTargetUrlFormdataBody_Pdf) FromPostTargetUrlFormdataBodyPdf0(v PostTargetUrlFormdataBodyPdf0) error {
+// FromFancyFile0x0e overwrites any union data inside the PostTargetUrlFormdataBody_Pdf as the provided FancyFile0x0e
+func (t *PostTargetUrlFormdataBody_Pdf) FromFancyFile0x0e(v FancyFile0x0e) error {
 	b, err := json.Marshal(v)
 	t.union = b
 	return err
 }
 
-// MergePostTargetUrlFormdataBodyPdf0 performs a merge with any union data inside the PostTargetUrlFormdataBody_Pdf, using the provided PostTargetUrlFormdataBodyPdf0
-func (t *PostTargetUrlFormdataBody_Pdf) MergePostTargetUrlFormdataBodyPdf0(v PostTargetUrlFormdataBodyPdf0) error {
+// MergeFancyFile0x0e performs a merge with any union data inside the PostTargetUrlFormdataBody_Pdf, using the provided FancyFile0x0e
+func (t *PostTargetUrlFormdataBody_Pdf) MergeFancyFile0x0e(v FancyFile0x0e) error {
 	b, err := json.Marshal(v)
 	if err != nil {
 		return err
@@ -15123,22 +15601,22 @@ func (t *PostTargetUrlFormdataBody_Pdf) UnmarshalJSON(b []byte) error {
 	return err
 }
 
-// AsPostTargetUrlFormdataBodyRespondWith0 returns the union data inside the PostTargetUrlFormdataBody_RespondWith as a PostTargetUrlFormdataBodyRespondWith0
-func (t PostTargetUrlFormdataBody_RespondWith) AsPostTargetUrlFormdataBodyRespondWith0() (PostTargetUrlFormdataBodyRespondWith0, error) {
-	var body PostTargetUrlFormdataBodyRespondWith0
+// AsEnum0x10 returns the union data inside the PostTargetUrlFormdataBody_RespondWith as a Enum0x10
+func (t PostTargetUrlFormdataBody_RespondWith) AsEnum0x10() (Enum0x10, error) {
+	var body Enum0x10
 	err := json.Unmarshal(t.union, &body)
 	return body, err
 }
 
-// FromPostTargetUrlFormdataBodyRespondWith0 overwrites any union data inside the PostTargetUrlFormdataBody_RespondWith as the provided PostTargetUrlFormdataBodyRespondWith0
-func (t *PostTargetUrlFormdataBody_RespondWith) FromPostTargetUrlFormdataBodyRespondWith0(v PostTargetUrlFormdataBodyRespondWith0) error {
+// FromEnum0x10 overwrites any union data inside the PostTargetUrlFormdataBody_RespondWith as the provided Enum0x10
+func (t *PostTargetUrlFormdataBody_RespondWith) FromEnum0x10(v Enum0x10) error {
 	b, err := json.Marshal(v)
 	t.union = b
 	return err
 }
 
-// MergePostTargetUrlFormdataBodyRespondWith0 performs a merge with any union data inside the PostTargetUrlFormdataBody_RespondWith, using the provided PostTargetUrlFormdataBodyRespondWith0
-func (t *PostTargetUrlFormdataBody_RespondWith) MergePostTargetUrlFormdataBodyRespondWith0(v PostTargetUrlFormdataBodyRespondWith0) error {
+// MergeEnum0x10 performs a merge with any union data inside the PostTargetUrlFormdataBody_RespondWith, using the provided Enum0x10
+func (t *PostTargetUrlFormdataBody_RespondWith) MergeEnum0x10(v Enum0x10) error {
 	b, err := json.Marshal(v)
 	if err != nil {
 		return err
@@ -15181,6 +15659,68 @@ func (t PostTargetUrlFormdataBody_RespondWith) MarshalJSON() ([]byte, error) {
 }
 
 func (t *PostTargetUrlFormdataBody_RespondWith) UnmarshalJSON(b []byte) error {
+	err := t.union.UnmarshalJSON(b)
+	return err
+}
+
+// AsPseudoBoolean0x11 returns the union data inside the PostTargetUrlFormdataBody_RobotsTxt as a PseudoBoolean0x11
+func (t PostTargetUrlFormdataBody_RobotsTxt) AsPseudoBoolean0x11() (PseudoBoolean0x11, error) {
+	var body PseudoBoolean0x11
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromPseudoBoolean0x11 overwrites any union data inside the PostTargetUrlFormdataBody_RobotsTxt as the provided PseudoBoolean0x11
+func (t *PostTargetUrlFormdataBody_RobotsTxt) FromPseudoBoolean0x11(v PseudoBoolean0x11) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergePseudoBoolean0x11 performs a merge with any union data inside the PostTargetUrlFormdataBody_RobotsTxt, using the provided PseudoBoolean0x11
+func (t *PostTargetUrlFormdataBody_RobotsTxt) MergePseudoBoolean0x11(v PseudoBoolean0x11) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsPostTargetUrlFormdataBodyRobotsTxt1 returns the union data inside the PostTargetUrlFormdataBody_RobotsTxt as a PostTargetUrlFormdataBodyRobotsTxt1
+func (t PostTargetUrlFormdataBody_RobotsTxt) AsPostTargetUrlFormdataBodyRobotsTxt1() (PostTargetUrlFormdataBodyRobotsTxt1, error) {
+	var body PostTargetUrlFormdataBodyRobotsTxt1
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromPostTargetUrlFormdataBodyRobotsTxt1 overwrites any union data inside the PostTargetUrlFormdataBody_RobotsTxt as the provided PostTargetUrlFormdataBodyRobotsTxt1
+func (t *PostTargetUrlFormdataBody_RobotsTxt) FromPostTargetUrlFormdataBodyRobotsTxt1(v PostTargetUrlFormdataBodyRobotsTxt1) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergePostTargetUrlFormdataBodyRobotsTxt1 performs a merge with any union data inside the PostTargetUrlFormdataBody_RobotsTxt, using the provided PostTargetUrlFormdataBodyRobotsTxt1
+func (t *PostTargetUrlFormdataBody_RobotsTxt) MergePostTargetUrlFormdataBodyRobotsTxt1(v PostTargetUrlFormdataBodyRobotsTxt1) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+func (t PostTargetUrlFormdataBody_RobotsTxt) MarshalJSON() ([]byte, error) {
+	b, err := t.union.MarshalJSON()
+	return b, err
+}
+
+func (t *PostTargetUrlFormdataBody_RobotsTxt) UnmarshalJSON(b []byte) error {
 	err := t.union.UnmarshalJSON(b)
 	return err
 }
@@ -15247,22 +15787,84 @@ func (t *PostTargetUrlFormdataBody_SetCookies) UnmarshalJSON(b []byte) error {
 	return err
 }
 
-// AsPostTargetUrlFormdataBodyWithIframe0 returns the union data inside the PostTargetUrlFormdataBody_WithIframe as a PostTargetUrlFormdataBodyWithIframe0
-func (t PostTargetUrlFormdataBody_WithIframe) AsPostTargetUrlFormdataBodyWithIframe0() (PostTargetUrlFormdataBodyWithIframe0, error) {
-	var body PostTargetUrlFormdataBodyWithIframe0
+// AsPseudoBoolean0x11 returns the union data inside the PostTargetUrlFormdataBody_WebBotAuth as a PseudoBoolean0x11
+func (t PostTargetUrlFormdataBody_WebBotAuth) AsPseudoBoolean0x11() (PseudoBoolean0x11, error) {
+	var body PseudoBoolean0x11
 	err := json.Unmarshal(t.union, &body)
 	return body, err
 }
 
-// FromPostTargetUrlFormdataBodyWithIframe0 overwrites any union data inside the PostTargetUrlFormdataBody_WithIframe as the provided PostTargetUrlFormdataBodyWithIframe0
-func (t *PostTargetUrlFormdataBody_WithIframe) FromPostTargetUrlFormdataBodyWithIframe0(v PostTargetUrlFormdataBodyWithIframe0) error {
+// FromPseudoBoolean0x11 overwrites any union data inside the PostTargetUrlFormdataBody_WebBotAuth as the provided PseudoBoolean0x11
+func (t *PostTargetUrlFormdataBody_WebBotAuth) FromPseudoBoolean0x11(v PseudoBoolean0x11) error {
 	b, err := json.Marshal(v)
 	t.union = b
 	return err
 }
 
-// MergePostTargetUrlFormdataBodyWithIframe0 performs a merge with any union data inside the PostTargetUrlFormdataBody_WithIframe, using the provided PostTargetUrlFormdataBodyWithIframe0
-func (t *PostTargetUrlFormdataBody_WithIframe) MergePostTargetUrlFormdataBodyWithIframe0(v PostTargetUrlFormdataBodyWithIframe0) error {
+// MergePseudoBoolean0x11 performs a merge with any union data inside the PostTargetUrlFormdataBody_WebBotAuth, using the provided PseudoBoolean0x11
+func (t *PostTargetUrlFormdataBody_WebBotAuth) MergePseudoBoolean0x11(v PseudoBoolean0x11) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsEnum0x16 returns the union data inside the PostTargetUrlFormdataBody_WebBotAuth as a Enum0x16
+func (t PostTargetUrlFormdataBody_WebBotAuth) AsEnum0x16() (Enum0x16, error) {
+	var body Enum0x16
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromEnum0x16 overwrites any union data inside the PostTargetUrlFormdataBody_WebBotAuth as the provided Enum0x16
+func (t *PostTargetUrlFormdataBody_WebBotAuth) FromEnum0x16(v Enum0x16) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeEnum0x16 performs a merge with any union data inside the PostTargetUrlFormdataBody_WebBotAuth, using the provided Enum0x16
+func (t *PostTargetUrlFormdataBody_WebBotAuth) MergeEnum0x16(v Enum0x16) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+func (t PostTargetUrlFormdataBody_WebBotAuth) MarshalJSON() ([]byte, error) {
+	b, err := t.union.MarshalJSON()
+	return b, err
+}
+
+func (t *PostTargetUrlFormdataBody_WebBotAuth) UnmarshalJSON(b []byte) error {
+	err := t.union.UnmarshalJSON(b)
+	return err
+}
+
+// AsPseudoBoolean0x11 returns the union data inside the PostTargetUrlFormdataBody_WithIframe as a PseudoBoolean0x11
+func (t PostTargetUrlFormdataBody_WithIframe) AsPseudoBoolean0x11() (PseudoBoolean0x11, error) {
+	var body PseudoBoolean0x11
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromPseudoBoolean0x11 overwrites any union data inside the PostTargetUrlFormdataBody_WithIframe as the provided PseudoBoolean0x11
+func (t *PostTargetUrlFormdataBody_WithIframe) FromPseudoBoolean0x11(v PseudoBoolean0x11) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergePseudoBoolean0x11 performs a merge with any union data inside the PostTargetUrlFormdataBody_WithIframe, using the provided PseudoBoolean0x11
+func (t *PostTargetUrlFormdataBody_WithIframe) MergePseudoBoolean0x11(v PseudoBoolean0x11) error {
 	b, err := json.Marshal(v)
 	if err != nil {
 		return err
@@ -15309,22 +15911,22 @@ func (t *PostTargetUrlFormdataBody_WithIframe) UnmarshalJSON(b []byte) error {
 	return err
 }
 
-// AsPostTargetUrlFormdataBodyWithLinksSummary0 returns the union data inside the PostTargetUrlFormdataBody_WithLinksSummary as a PostTargetUrlFormdataBodyWithLinksSummary0
-func (t PostTargetUrlFormdataBody_WithLinksSummary) AsPostTargetUrlFormdataBodyWithLinksSummary0() (PostTargetUrlFormdataBodyWithLinksSummary0, error) {
-	var body PostTargetUrlFormdataBodyWithLinksSummary0
+// AsPseudoBoolean0x11 returns the union data inside the PostTargetUrlFormdataBody_WithLinksSummary as a PseudoBoolean0x11
+func (t PostTargetUrlFormdataBody_WithLinksSummary) AsPseudoBoolean0x11() (PseudoBoolean0x11, error) {
+	var body PseudoBoolean0x11
 	err := json.Unmarshal(t.union, &body)
 	return body, err
 }
 
-// FromPostTargetUrlFormdataBodyWithLinksSummary0 overwrites any union data inside the PostTargetUrlFormdataBody_WithLinksSummary as the provided PostTargetUrlFormdataBodyWithLinksSummary0
-func (t *PostTargetUrlFormdataBody_WithLinksSummary) FromPostTargetUrlFormdataBodyWithLinksSummary0(v PostTargetUrlFormdataBodyWithLinksSummary0) error {
+// FromPseudoBoolean0x11 overwrites any union data inside the PostTargetUrlFormdataBody_WithLinksSummary as the provided PseudoBoolean0x11
+func (t *PostTargetUrlFormdataBody_WithLinksSummary) FromPseudoBoolean0x11(v PseudoBoolean0x11) error {
 	b, err := json.Marshal(v)
 	t.union = b
 	return err
 }
 
-// MergePostTargetUrlFormdataBodyWithLinksSummary0 performs a merge with any union data inside the PostTargetUrlFormdataBody_WithLinksSummary, using the provided PostTargetUrlFormdataBodyWithLinksSummary0
-func (t *PostTargetUrlFormdataBody_WithLinksSummary) MergePostTargetUrlFormdataBodyWithLinksSummary0(v PostTargetUrlFormdataBodyWithLinksSummary0) error {
+// MergePseudoBoolean0x11 performs a merge with any union data inside the PostTargetUrlFormdataBody_WithLinksSummary, using the provided PseudoBoolean0x11
+func (t *PostTargetUrlFormdataBody_WithLinksSummary) MergePseudoBoolean0x11(v PseudoBoolean0x11) error {
 	b, err := json.Marshal(v)
 	if err != nil {
 		return err
@@ -15371,22 +15973,22 @@ func (t *PostTargetUrlFormdataBody_WithLinksSummary) UnmarshalJSON(b []byte) err
 	return err
 }
 
-// AsPostTargetUrlMultipartBodyEngine0 returns the union data inside the PostTargetUrlMultipartBody_Engine as a PostTargetUrlMultipartBodyEngine0
-func (t PostTargetUrlMultipartBody_Engine) AsPostTargetUrlMultipartBodyEngine0() (PostTargetUrlMultipartBodyEngine0, error) {
-	var body PostTargetUrlMultipartBodyEngine0
+// AsEnum0x1c returns the union data inside the PostTargetUrlMultipartBody_Engine as a Enum0x1c
+func (t PostTargetUrlMultipartBody_Engine) AsEnum0x1c() (Enum0x1c, error) {
+	var body Enum0x1c
 	err := json.Unmarshal(t.union, &body)
 	return body, err
 }
 
-// FromPostTargetUrlMultipartBodyEngine0 overwrites any union data inside the PostTargetUrlMultipartBody_Engine as the provided PostTargetUrlMultipartBodyEngine0
-func (t *PostTargetUrlMultipartBody_Engine) FromPostTargetUrlMultipartBodyEngine0(v PostTargetUrlMultipartBodyEngine0) error {
+// FromEnum0x1c overwrites any union data inside the PostTargetUrlMultipartBody_Engine as the provided Enum0x1c
+func (t *PostTargetUrlMultipartBody_Engine) FromEnum0x1c(v Enum0x1c) error {
 	b, err := json.Marshal(v)
 	t.union = b
 	return err
 }
 
-// MergePostTargetUrlMultipartBodyEngine0 performs a merge with any union data inside the PostTargetUrlMultipartBody_Engine, using the provided PostTargetUrlMultipartBodyEngine0
-func (t *PostTargetUrlMultipartBody_Engine) MergePostTargetUrlMultipartBodyEngine0(v PostTargetUrlMultipartBodyEngine0) error {
+// MergeEnum0x1c performs a merge with any union data inside the PostTargetUrlMultipartBody_Engine, using the provided Enum0x1c
+func (t *PostTargetUrlMultipartBody_Engine) MergeEnum0x1c(v Enum0x1c) error {
 	b, err := json.Marshal(v)
 	if err != nil {
 		return err
@@ -15433,22 +16035,22 @@ func (t *PostTargetUrlMultipartBody_Engine) UnmarshalJSON(b []byte) error {
 	return err
 }
 
-// AsPostTargetUrlMultipartBodyFile0 returns the union data inside the PostTargetUrlMultipartBody_File as a PostTargetUrlMultipartBodyFile0
-func (t PostTargetUrlMultipartBody_File) AsPostTargetUrlMultipartBodyFile0() (PostTargetUrlMultipartBodyFile0, error) {
-	var body PostTargetUrlMultipartBodyFile0
+// AsFancyFile0x0e returns the union data inside the PostTargetUrlMultipartBody_File as a FancyFile0x0e
+func (t PostTargetUrlMultipartBody_File) AsFancyFile0x0e() (FancyFile0x0e, error) {
+	var body FancyFile0x0e
 	err := json.Unmarshal(t.union, &body)
 	return body, err
 }
 
-// FromPostTargetUrlMultipartBodyFile0 overwrites any union data inside the PostTargetUrlMultipartBody_File as the provided PostTargetUrlMultipartBodyFile0
-func (t *PostTargetUrlMultipartBody_File) FromPostTargetUrlMultipartBodyFile0(v PostTargetUrlMultipartBodyFile0) error {
+// FromFancyFile0x0e overwrites any union data inside the PostTargetUrlMultipartBody_File as the provided FancyFile0x0e
+func (t *PostTargetUrlMultipartBody_File) FromFancyFile0x0e(v FancyFile0x0e) error {
 	b, err := json.Marshal(v)
 	t.union = b
 	return err
 }
 
-// MergePostTargetUrlMultipartBodyFile0 performs a merge with any union data inside the PostTargetUrlMultipartBody_File, using the provided PostTargetUrlMultipartBodyFile0
-func (t *PostTargetUrlMultipartBody_File) MergePostTargetUrlMultipartBodyFile0(v PostTargetUrlMultipartBodyFile0) error {
+// MergeFancyFile0x0e performs a merge with any union data inside the PostTargetUrlMultipartBody_File, using the provided FancyFile0x0e
+func (t *PostTargetUrlMultipartBody_File) MergeFancyFile0x0e(v FancyFile0x0e) error {
 	b, err := json.Marshal(v)
 	if err != nil {
 		return err
@@ -15495,22 +16097,22 @@ func (t *PostTargetUrlMultipartBody_File) UnmarshalJSON(b []byte) error {
 	return err
 }
 
-// AsPostTargetUrlMultipartBodyMarkdownChunking0 returns the union data inside the PostTargetUrlMultipartBody_MarkdownChunking as a PostTargetUrlMultipartBodyMarkdownChunking0
-func (t PostTargetUrlMultipartBody_MarkdownChunking) AsPostTargetUrlMultipartBodyMarkdownChunking0() (PostTargetUrlMultipartBodyMarkdownChunking0, error) {
-	var body PostTargetUrlMultipartBodyMarkdownChunking0
+// AsEnum0x27 returns the union data inside the PostTargetUrlMultipartBody_MarkdownChunking as a Enum0x27
+func (t PostTargetUrlMultipartBody_MarkdownChunking) AsEnum0x27() (Enum0x27, error) {
+	var body Enum0x27
 	err := json.Unmarshal(t.union, &body)
 	return body, err
 }
 
-// FromPostTargetUrlMultipartBodyMarkdownChunking0 overwrites any union data inside the PostTargetUrlMultipartBody_MarkdownChunking as the provided PostTargetUrlMultipartBodyMarkdownChunking0
-func (t *PostTargetUrlMultipartBody_MarkdownChunking) FromPostTargetUrlMultipartBodyMarkdownChunking0(v PostTargetUrlMultipartBodyMarkdownChunking0) error {
+// FromEnum0x27 overwrites any union data inside the PostTargetUrlMultipartBody_MarkdownChunking as the provided Enum0x27
+func (t *PostTargetUrlMultipartBody_MarkdownChunking) FromEnum0x27(v Enum0x27) error {
 	b, err := json.Marshal(v)
 	t.union = b
 	return err
 }
 
-// MergePostTargetUrlMultipartBodyMarkdownChunking0 performs a merge with any union data inside the PostTargetUrlMultipartBody_MarkdownChunking, using the provided PostTargetUrlMultipartBodyMarkdownChunking0
-func (t *PostTargetUrlMultipartBody_MarkdownChunking) MergePostTargetUrlMultipartBodyMarkdownChunking0(v PostTargetUrlMultipartBodyMarkdownChunking0) error {
+// MergeEnum0x27 performs a merge with any union data inside the PostTargetUrlMultipartBody_MarkdownChunking, using the provided Enum0x27
+func (t *PostTargetUrlMultipartBody_MarkdownChunking) MergeEnum0x27(v Enum0x27) error {
 	b, err := json.Marshal(v)
 	if err != nil {
 		return err
@@ -15557,22 +16159,22 @@ func (t *PostTargetUrlMultipartBody_MarkdownChunking) UnmarshalJSON(b []byte) er
 	return err
 }
 
-// AsPostTargetUrlMultipartBodyNoGfm0 returns the union data inside the PostTargetUrlMultipartBody_NoGfm as a PostTargetUrlMultipartBodyNoGfm0
-func (t PostTargetUrlMultipartBody_NoGfm) AsPostTargetUrlMultipartBodyNoGfm0() (PostTargetUrlMultipartBodyNoGfm0, error) {
-	var body PostTargetUrlMultipartBodyNoGfm0
+// AsPseudoBoolean0x11 returns the union data inside the PostTargetUrlMultipartBody_NoGfm as a PseudoBoolean0x11
+func (t PostTargetUrlMultipartBody_NoGfm) AsPseudoBoolean0x11() (PseudoBoolean0x11, error) {
+	var body PseudoBoolean0x11
 	err := json.Unmarshal(t.union, &body)
 	return body, err
 }
 
-// FromPostTargetUrlMultipartBodyNoGfm0 overwrites any union data inside the PostTargetUrlMultipartBody_NoGfm as the provided PostTargetUrlMultipartBodyNoGfm0
-func (t *PostTargetUrlMultipartBody_NoGfm) FromPostTargetUrlMultipartBodyNoGfm0(v PostTargetUrlMultipartBodyNoGfm0) error {
+// FromPseudoBoolean0x11 overwrites any union data inside the PostTargetUrlMultipartBody_NoGfm as the provided PseudoBoolean0x11
+func (t *PostTargetUrlMultipartBody_NoGfm) FromPseudoBoolean0x11(v PseudoBoolean0x11) error {
 	b, err := json.Marshal(v)
 	t.union = b
 	return err
 }
 
-// MergePostTargetUrlMultipartBodyNoGfm0 performs a merge with any union data inside the PostTargetUrlMultipartBody_NoGfm, using the provided PostTargetUrlMultipartBodyNoGfm0
-func (t *PostTargetUrlMultipartBody_NoGfm) MergePostTargetUrlMultipartBodyNoGfm0(v PostTargetUrlMultipartBodyNoGfm0) error {
+// MergePseudoBoolean0x11 performs a merge with any union data inside the PostTargetUrlMultipartBody_NoGfm, using the provided PseudoBoolean0x11
+func (t *PostTargetUrlMultipartBody_NoGfm) MergePseudoBoolean0x11(v PseudoBoolean0x11) error {
 	b, err := json.Marshal(v)
 	if err != nil {
 		return err
@@ -15619,22 +16221,22 @@ func (t *PostTargetUrlMultipartBody_NoGfm) UnmarshalJSON(b []byte) error {
 	return err
 }
 
-// AsPostTargetUrlMultipartBodyPdf0 returns the union data inside the PostTargetUrlMultipartBody_Pdf as a PostTargetUrlMultipartBodyPdf0
-func (t PostTargetUrlMultipartBody_Pdf) AsPostTargetUrlMultipartBodyPdf0() (PostTargetUrlMultipartBodyPdf0, error) {
-	var body PostTargetUrlMultipartBodyPdf0
+// AsFancyFile0x0e returns the union data inside the PostTargetUrlMultipartBody_Pdf as a FancyFile0x0e
+func (t PostTargetUrlMultipartBody_Pdf) AsFancyFile0x0e() (FancyFile0x0e, error) {
+	var body FancyFile0x0e
 	err := json.Unmarshal(t.union, &body)
 	return body, err
 }
 
-// FromPostTargetUrlMultipartBodyPdf0 overwrites any union data inside the PostTargetUrlMultipartBody_Pdf as the provided PostTargetUrlMultipartBodyPdf0
-func (t *PostTargetUrlMultipartBody_Pdf) FromPostTargetUrlMultipartBodyPdf0(v PostTargetUrlMultipartBodyPdf0) error {
+// FromFancyFile0x0e overwrites any union data inside the PostTargetUrlMultipartBody_Pdf as the provided FancyFile0x0e
+func (t *PostTargetUrlMultipartBody_Pdf) FromFancyFile0x0e(v FancyFile0x0e) error {
 	b, err := json.Marshal(v)
 	t.union = b
 	return err
 }
 
-// MergePostTargetUrlMultipartBodyPdf0 performs a merge with any union data inside the PostTargetUrlMultipartBody_Pdf, using the provided PostTargetUrlMultipartBodyPdf0
-func (t *PostTargetUrlMultipartBody_Pdf) MergePostTargetUrlMultipartBodyPdf0(v PostTargetUrlMultipartBodyPdf0) error {
+// MergeFancyFile0x0e performs a merge with any union data inside the PostTargetUrlMultipartBody_Pdf, using the provided FancyFile0x0e
+func (t *PostTargetUrlMultipartBody_Pdf) MergeFancyFile0x0e(v FancyFile0x0e) error {
 	b, err := json.Marshal(v)
 	if err != nil {
 		return err
@@ -15681,22 +16283,22 @@ func (t *PostTargetUrlMultipartBody_Pdf) UnmarshalJSON(b []byte) error {
 	return err
 }
 
-// AsPostTargetUrlMultipartBodyRespondWith0 returns the union data inside the PostTargetUrlMultipartBody_RespondWith as a PostTargetUrlMultipartBodyRespondWith0
-func (t PostTargetUrlMultipartBody_RespondWith) AsPostTargetUrlMultipartBodyRespondWith0() (PostTargetUrlMultipartBodyRespondWith0, error) {
-	var body PostTargetUrlMultipartBodyRespondWith0
+// AsEnum0x10 returns the union data inside the PostTargetUrlMultipartBody_RespondWith as a Enum0x10
+func (t PostTargetUrlMultipartBody_RespondWith) AsEnum0x10() (Enum0x10, error) {
+	var body Enum0x10
 	err := json.Unmarshal(t.union, &body)
 	return body, err
 }
 
-// FromPostTargetUrlMultipartBodyRespondWith0 overwrites any union data inside the PostTargetUrlMultipartBody_RespondWith as the provided PostTargetUrlMultipartBodyRespondWith0
-func (t *PostTargetUrlMultipartBody_RespondWith) FromPostTargetUrlMultipartBodyRespondWith0(v PostTargetUrlMultipartBodyRespondWith0) error {
+// FromEnum0x10 overwrites any union data inside the PostTargetUrlMultipartBody_RespondWith as the provided Enum0x10
+func (t *PostTargetUrlMultipartBody_RespondWith) FromEnum0x10(v Enum0x10) error {
 	b, err := json.Marshal(v)
 	t.union = b
 	return err
 }
 
-// MergePostTargetUrlMultipartBodyRespondWith0 performs a merge with any union data inside the PostTargetUrlMultipartBody_RespondWith, using the provided PostTargetUrlMultipartBodyRespondWith0
-func (t *PostTargetUrlMultipartBody_RespondWith) MergePostTargetUrlMultipartBodyRespondWith0(v PostTargetUrlMultipartBodyRespondWith0) error {
+// MergeEnum0x10 performs a merge with any union data inside the PostTargetUrlMultipartBody_RespondWith, using the provided Enum0x10
+func (t *PostTargetUrlMultipartBody_RespondWith) MergeEnum0x10(v Enum0x10) error {
 	b, err := json.Marshal(v)
 	if err != nil {
 		return err
@@ -15739,6 +16341,68 @@ func (t PostTargetUrlMultipartBody_RespondWith) MarshalJSON() ([]byte, error) {
 }
 
 func (t *PostTargetUrlMultipartBody_RespondWith) UnmarshalJSON(b []byte) error {
+	err := t.union.UnmarshalJSON(b)
+	return err
+}
+
+// AsPseudoBoolean0x11 returns the union data inside the PostTargetUrlMultipartBody_RobotsTxt as a PseudoBoolean0x11
+func (t PostTargetUrlMultipartBody_RobotsTxt) AsPseudoBoolean0x11() (PseudoBoolean0x11, error) {
+	var body PseudoBoolean0x11
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromPseudoBoolean0x11 overwrites any union data inside the PostTargetUrlMultipartBody_RobotsTxt as the provided PseudoBoolean0x11
+func (t *PostTargetUrlMultipartBody_RobotsTxt) FromPseudoBoolean0x11(v PseudoBoolean0x11) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergePseudoBoolean0x11 performs a merge with any union data inside the PostTargetUrlMultipartBody_RobotsTxt, using the provided PseudoBoolean0x11
+func (t *PostTargetUrlMultipartBody_RobotsTxt) MergePseudoBoolean0x11(v PseudoBoolean0x11) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsPostTargetUrlMultipartBodyRobotsTxt1 returns the union data inside the PostTargetUrlMultipartBody_RobotsTxt as a PostTargetUrlMultipartBodyRobotsTxt1
+func (t PostTargetUrlMultipartBody_RobotsTxt) AsPostTargetUrlMultipartBodyRobotsTxt1() (PostTargetUrlMultipartBodyRobotsTxt1, error) {
+	var body PostTargetUrlMultipartBodyRobotsTxt1
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromPostTargetUrlMultipartBodyRobotsTxt1 overwrites any union data inside the PostTargetUrlMultipartBody_RobotsTxt as the provided PostTargetUrlMultipartBodyRobotsTxt1
+func (t *PostTargetUrlMultipartBody_RobotsTxt) FromPostTargetUrlMultipartBodyRobotsTxt1(v PostTargetUrlMultipartBodyRobotsTxt1) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergePostTargetUrlMultipartBodyRobotsTxt1 performs a merge with any union data inside the PostTargetUrlMultipartBody_RobotsTxt, using the provided PostTargetUrlMultipartBodyRobotsTxt1
+func (t *PostTargetUrlMultipartBody_RobotsTxt) MergePostTargetUrlMultipartBodyRobotsTxt1(v PostTargetUrlMultipartBodyRobotsTxt1) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+func (t PostTargetUrlMultipartBody_RobotsTxt) MarshalJSON() ([]byte, error) {
+	b, err := t.union.MarshalJSON()
+	return b, err
+}
+
+func (t *PostTargetUrlMultipartBody_RobotsTxt) UnmarshalJSON(b []byte) error {
 	err := t.union.UnmarshalJSON(b)
 	return err
 }
@@ -15805,22 +16469,84 @@ func (t *PostTargetUrlMultipartBody_SetCookies_Item) UnmarshalJSON(b []byte) err
 	return err
 }
 
-// AsPostTargetUrlMultipartBodyWithIframe0 returns the union data inside the PostTargetUrlMultipartBody_WithIframe as a PostTargetUrlMultipartBodyWithIframe0
-func (t PostTargetUrlMultipartBody_WithIframe) AsPostTargetUrlMultipartBodyWithIframe0() (PostTargetUrlMultipartBodyWithIframe0, error) {
-	var body PostTargetUrlMultipartBodyWithIframe0
+// AsPseudoBoolean0x11 returns the union data inside the PostTargetUrlMultipartBody_WebBotAuth as a PseudoBoolean0x11
+func (t PostTargetUrlMultipartBody_WebBotAuth) AsPseudoBoolean0x11() (PseudoBoolean0x11, error) {
+	var body PseudoBoolean0x11
 	err := json.Unmarshal(t.union, &body)
 	return body, err
 }
 
-// FromPostTargetUrlMultipartBodyWithIframe0 overwrites any union data inside the PostTargetUrlMultipartBody_WithIframe as the provided PostTargetUrlMultipartBodyWithIframe0
-func (t *PostTargetUrlMultipartBody_WithIframe) FromPostTargetUrlMultipartBodyWithIframe0(v PostTargetUrlMultipartBodyWithIframe0) error {
+// FromPseudoBoolean0x11 overwrites any union data inside the PostTargetUrlMultipartBody_WebBotAuth as the provided PseudoBoolean0x11
+func (t *PostTargetUrlMultipartBody_WebBotAuth) FromPseudoBoolean0x11(v PseudoBoolean0x11) error {
 	b, err := json.Marshal(v)
 	t.union = b
 	return err
 }
 
-// MergePostTargetUrlMultipartBodyWithIframe0 performs a merge with any union data inside the PostTargetUrlMultipartBody_WithIframe, using the provided PostTargetUrlMultipartBodyWithIframe0
-func (t *PostTargetUrlMultipartBody_WithIframe) MergePostTargetUrlMultipartBodyWithIframe0(v PostTargetUrlMultipartBodyWithIframe0) error {
+// MergePseudoBoolean0x11 performs a merge with any union data inside the PostTargetUrlMultipartBody_WebBotAuth, using the provided PseudoBoolean0x11
+func (t *PostTargetUrlMultipartBody_WebBotAuth) MergePseudoBoolean0x11(v PseudoBoolean0x11) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsEnum0x16 returns the union data inside the PostTargetUrlMultipartBody_WebBotAuth as a Enum0x16
+func (t PostTargetUrlMultipartBody_WebBotAuth) AsEnum0x16() (Enum0x16, error) {
+	var body Enum0x16
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromEnum0x16 overwrites any union data inside the PostTargetUrlMultipartBody_WebBotAuth as the provided Enum0x16
+func (t *PostTargetUrlMultipartBody_WebBotAuth) FromEnum0x16(v Enum0x16) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeEnum0x16 performs a merge with any union data inside the PostTargetUrlMultipartBody_WebBotAuth, using the provided Enum0x16
+func (t *PostTargetUrlMultipartBody_WebBotAuth) MergeEnum0x16(v Enum0x16) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+func (t PostTargetUrlMultipartBody_WebBotAuth) MarshalJSON() ([]byte, error) {
+	b, err := t.union.MarshalJSON()
+	return b, err
+}
+
+func (t *PostTargetUrlMultipartBody_WebBotAuth) UnmarshalJSON(b []byte) error {
+	err := t.union.UnmarshalJSON(b)
+	return err
+}
+
+// AsPseudoBoolean0x11 returns the union data inside the PostTargetUrlMultipartBody_WithIframe as a PseudoBoolean0x11
+func (t PostTargetUrlMultipartBody_WithIframe) AsPseudoBoolean0x11() (PseudoBoolean0x11, error) {
+	var body PseudoBoolean0x11
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromPseudoBoolean0x11 overwrites any union data inside the PostTargetUrlMultipartBody_WithIframe as the provided PseudoBoolean0x11
+func (t *PostTargetUrlMultipartBody_WithIframe) FromPseudoBoolean0x11(v PseudoBoolean0x11) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergePseudoBoolean0x11 performs a merge with any union data inside the PostTargetUrlMultipartBody_WithIframe, using the provided PseudoBoolean0x11
+func (t *PostTargetUrlMultipartBody_WithIframe) MergePseudoBoolean0x11(v PseudoBoolean0x11) error {
 	b, err := json.Marshal(v)
 	if err != nil {
 		return err
@@ -15867,22 +16593,22 @@ func (t *PostTargetUrlMultipartBody_WithIframe) UnmarshalJSON(b []byte) error {
 	return err
 }
 
-// AsPostTargetUrlMultipartBodyWithLinksSummary0 returns the union data inside the PostTargetUrlMultipartBody_WithLinksSummary as a PostTargetUrlMultipartBodyWithLinksSummary0
-func (t PostTargetUrlMultipartBody_WithLinksSummary) AsPostTargetUrlMultipartBodyWithLinksSummary0() (PostTargetUrlMultipartBodyWithLinksSummary0, error) {
-	var body PostTargetUrlMultipartBodyWithLinksSummary0
+// AsPseudoBoolean0x11 returns the union data inside the PostTargetUrlMultipartBody_WithLinksSummary as a PseudoBoolean0x11
+func (t PostTargetUrlMultipartBody_WithLinksSummary) AsPseudoBoolean0x11() (PseudoBoolean0x11, error) {
+	var body PseudoBoolean0x11
 	err := json.Unmarshal(t.union, &body)
 	return body, err
 }
 
-// FromPostTargetUrlMultipartBodyWithLinksSummary0 overwrites any union data inside the PostTargetUrlMultipartBody_WithLinksSummary as the provided PostTargetUrlMultipartBodyWithLinksSummary0
-func (t *PostTargetUrlMultipartBody_WithLinksSummary) FromPostTargetUrlMultipartBodyWithLinksSummary0(v PostTargetUrlMultipartBodyWithLinksSummary0) error {
+// FromPseudoBoolean0x11 overwrites any union data inside the PostTargetUrlMultipartBody_WithLinksSummary as the provided PseudoBoolean0x11
+func (t *PostTargetUrlMultipartBody_WithLinksSummary) FromPseudoBoolean0x11(v PseudoBoolean0x11) error {
 	b, err := json.Marshal(v)
 	t.union = b
 	return err
 }
 
-// MergePostTargetUrlMultipartBodyWithLinksSummary0 performs a merge with any union data inside the PostTargetUrlMultipartBody_WithLinksSummary, using the provided PostTargetUrlMultipartBodyWithLinksSummary0
-func (t *PostTargetUrlMultipartBody_WithLinksSummary) MergePostTargetUrlMultipartBodyWithLinksSummary0(v PostTargetUrlMultipartBodyWithLinksSummary0) error {
+// MergePseudoBoolean0x11 performs a merge with any union data inside the PostTargetUrlMultipartBody_WithLinksSummary, using the provided PseudoBoolean0x11
+func (t *PostTargetUrlMultipartBody_WithLinksSummary) MergePseudoBoolean0x11(v PseudoBoolean0x11) error {
 	b, err := json.Marshal(v)
 	if err != nil {
 		return err
@@ -15929,22 +16655,22 @@ func (t *PostTargetUrlMultipartBody_WithLinksSummary) UnmarshalJSON(b []byte) er
 	return err
 }
 
-// AsPostTargetUrl400JSONResponseBody0 returns the union data inside the PostTargetUrl400JSONResponseBody as a PostTargetUrl400JSONResponseBody0
-func (t PostTargetUrl400JSONResponseBody) AsPostTargetUrl400JSONResponseBody0() (PostTargetUrl400JSONResponseBody0, error) {
-	var body PostTargetUrl400JSONResponseBody0
+// AsParamValidationError0x29 returns the union data inside the PostTargetUrl400JSONResponseBody as a ParamValidationError0x29
+func (t PostTargetUrl400JSONResponseBody) AsParamValidationError0x29() (ParamValidationError0x29, error) {
+	var body ParamValidationError0x29
 	err := json.Unmarshal(t.union, &body)
 	return body, err
 }
 
-// FromPostTargetUrl400JSONResponseBody0 overwrites any union data inside the PostTargetUrl400JSONResponseBody as the provided PostTargetUrl400JSONResponseBody0
-func (t *PostTargetUrl400JSONResponseBody) FromPostTargetUrl400JSONResponseBody0(v PostTargetUrl400JSONResponseBody0) error {
+// FromParamValidationError0x29 overwrites any union data inside the PostTargetUrl400JSONResponseBody as the provided ParamValidationError0x29
+func (t *PostTargetUrl400JSONResponseBody) FromParamValidationError0x29(v ParamValidationError0x29) error {
 	b, err := json.Marshal(v)
 	t.union = b
 	return err
 }
 
-// MergePostTargetUrl400JSONResponseBody0 performs a merge with any union data inside the PostTargetUrl400JSONResponseBody, using the provided PostTargetUrl400JSONResponseBody0
-func (t *PostTargetUrl400JSONResponseBody) MergePostTargetUrl400JSONResponseBody0(v PostTargetUrl400JSONResponseBody0) error {
+// MergeParamValidationError0x29 performs a merge with any union data inside the PostTargetUrl400JSONResponseBody, using the provided ParamValidationError0x29
+func (t *PostTargetUrl400JSONResponseBody) MergeParamValidationError0x29(v ParamValidationError0x29) error {
 	b, err := json.Marshal(v)
 	if err != nil {
 		return err
@@ -15955,22 +16681,22 @@ func (t *PostTargetUrl400JSONResponseBody) MergePostTargetUrl400JSONResponseBody
 	return err
 }
 
-// AsPostTargetUrl400JSONResponseBody1 returns the union data inside the PostTargetUrl400JSONResponseBody as a PostTargetUrl400JSONResponseBody1
-func (t PostTargetUrl400JSONResponseBody) AsPostTargetUrl400JSONResponseBody1() (PostTargetUrl400JSONResponseBody1, error) {
-	var body PostTargetUrl400JSONResponseBody1
+// AsDataStreamBrokenError0x2a returns the union data inside the PostTargetUrl400JSONResponseBody as a DataStreamBrokenError0x2a
+func (t PostTargetUrl400JSONResponseBody) AsDataStreamBrokenError0x2a() (DataStreamBrokenError0x2a, error) {
+	var body DataStreamBrokenError0x2a
 	err := json.Unmarshal(t.union, &body)
 	return body, err
 }
 
-// FromPostTargetUrl400JSONResponseBody1 overwrites any union data inside the PostTargetUrl400JSONResponseBody as the provided PostTargetUrl400JSONResponseBody1
-func (t *PostTargetUrl400JSONResponseBody) FromPostTargetUrl400JSONResponseBody1(v PostTargetUrl400JSONResponseBody1) error {
+// FromDataStreamBrokenError0x2a overwrites any union data inside the PostTargetUrl400JSONResponseBody as the provided DataStreamBrokenError0x2a
+func (t *PostTargetUrl400JSONResponseBody) FromDataStreamBrokenError0x2a(v DataStreamBrokenError0x2a) error {
 	b, err := json.Marshal(v)
 	t.union = b
 	return err
 }
 
-// MergePostTargetUrl400JSONResponseBody1 performs a merge with any union data inside the PostTargetUrl400JSONResponseBody, using the provided PostTargetUrl400JSONResponseBody1
-func (t *PostTargetUrl400JSONResponseBody) MergePostTargetUrl400JSONResponseBody1(v PostTargetUrl400JSONResponseBody1) error {
+// MergeDataStreamBrokenError0x2a performs a merge with any union data inside the PostTargetUrl400JSONResponseBody, using the provided DataStreamBrokenError0x2a
+func (t *PostTargetUrl400JSONResponseBody) MergeDataStreamBrokenError0x2a(v DataStreamBrokenError0x2a) error {
 	b, err := json.Marshal(v)
 	if err != nil {
 		return err
@@ -15991,22 +16717,22 @@ func (t *PostTargetUrl400JSONResponseBody) UnmarshalJSON(b []byte) error {
 	return err
 }
 
-// AsPostTargetUrl401JSONResponseBody0 returns the union data inside the PostTargetUrl401JSONResponseBody as a PostTargetUrl401JSONResponseBody0
-func (t PostTargetUrl401JSONResponseBody) AsPostTargetUrl401JSONResponseBody0() (PostTargetUrl401JSONResponseBody0, error) {
-	var body PostTargetUrl401JSONResponseBody0
+// AsAuthenticationFailedError0x2b returns the union data inside the PostTargetUrl401JSONResponseBody as a AuthenticationFailedError0x2b
+func (t PostTargetUrl401JSONResponseBody) AsAuthenticationFailedError0x2b() (AuthenticationFailedError0x2b, error) {
+	var body AuthenticationFailedError0x2b
 	err := json.Unmarshal(t.union, &body)
 	return body, err
 }
 
-// FromPostTargetUrl401JSONResponseBody0 overwrites any union data inside the PostTargetUrl401JSONResponseBody as the provided PostTargetUrl401JSONResponseBody0
-func (t *PostTargetUrl401JSONResponseBody) FromPostTargetUrl401JSONResponseBody0(v PostTargetUrl401JSONResponseBody0) error {
+// FromAuthenticationFailedError0x2b overwrites any union data inside the PostTargetUrl401JSONResponseBody as the provided AuthenticationFailedError0x2b
+func (t *PostTargetUrl401JSONResponseBody) FromAuthenticationFailedError0x2b(v AuthenticationFailedError0x2b) error {
 	b, err := json.Marshal(v)
 	t.union = b
 	return err
 }
 
-// MergePostTargetUrl401JSONResponseBody0 performs a merge with any union data inside the PostTargetUrl401JSONResponseBody, using the provided PostTargetUrl401JSONResponseBody0
-func (t *PostTargetUrl401JSONResponseBody) MergePostTargetUrl401JSONResponseBody0(v PostTargetUrl401JSONResponseBody0) error {
+// MergeAuthenticationFailedError0x2b performs a merge with any union data inside the PostTargetUrl401JSONResponseBody, using the provided AuthenticationFailedError0x2b
+func (t *PostTargetUrl401JSONResponseBody) MergeAuthenticationFailedError0x2b(v AuthenticationFailedError0x2b) error {
 	b, err := json.Marshal(v)
 	if err != nil {
 		return err
@@ -16017,22 +16743,22 @@ func (t *PostTargetUrl401JSONResponseBody) MergePostTargetUrl401JSONResponseBody
 	return err
 }
 
-// AsPostTargetUrl401JSONResponseBody1 returns the union data inside the PostTargetUrl401JSONResponseBody as a PostTargetUrl401JSONResponseBody1
-func (t PostTargetUrl401JSONResponseBody) AsPostTargetUrl401JSONResponseBody1() (PostTargetUrl401JSONResponseBody1, error) {
-	var body PostTargetUrl401JSONResponseBody1
+// AsAuthenticationRequiredError0x2c returns the union data inside the PostTargetUrl401JSONResponseBody as a AuthenticationRequiredError0x2c
+func (t PostTargetUrl401JSONResponseBody) AsAuthenticationRequiredError0x2c() (AuthenticationRequiredError0x2c, error) {
+	var body AuthenticationRequiredError0x2c
 	err := json.Unmarshal(t.union, &body)
 	return body, err
 }
 
-// FromPostTargetUrl401JSONResponseBody1 overwrites any union data inside the PostTargetUrl401JSONResponseBody as the provided PostTargetUrl401JSONResponseBody1
-func (t *PostTargetUrl401JSONResponseBody) FromPostTargetUrl401JSONResponseBody1(v PostTargetUrl401JSONResponseBody1) error {
+// FromAuthenticationRequiredError0x2c overwrites any union data inside the PostTargetUrl401JSONResponseBody as the provided AuthenticationRequiredError0x2c
+func (t *PostTargetUrl401JSONResponseBody) FromAuthenticationRequiredError0x2c(v AuthenticationRequiredError0x2c) error {
 	b, err := json.Marshal(v)
 	t.union = b
 	return err
 }
 
-// MergePostTargetUrl401JSONResponseBody1 performs a merge with any union data inside the PostTargetUrl401JSONResponseBody, using the provided PostTargetUrl401JSONResponseBody1
-func (t *PostTargetUrl401JSONResponseBody) MergePostTargetUrl401JSONResponseBody1(v PostTargetUrl401JSONResponseBody1) error {
+// MergeAuthenticationRequiredError0x2c performs a merge with any union data inside the PostTargetUrl401JSONResponseBody, using the provided AuthenticationRequiredError0x2c
+func (t *PostTargetUrl401JSONResponseBody) MergeAuthenticationRequiredError0x2c(v AuthenticationRequiredError0x2c) error {
 	b, err := json.Marshal(v)
 	if err != nil {
 		return err
@@ -16053,22 +16779,22 @@ func (t *PostTargetUrl401JSONResponseBody) UnmarshalJSON(b []byte) error {
 	return err
 }
 
-// AsPostTargetUrl402JSONResponseBody0 returns the union data inside the PostTargetUrl402JSONResponseBody as a PostTargetUrl402JSONResponseBody0
-func (t PostTargetUrl402JSONResponseBody) AsPostTargetUrl402JSONResponseBody0() (PostTargetUrl402JSONResponseBody0, error) {
-	var body PostTargetUrl402JSONResponseBody0
+// AsTierFeatureConstraintError0x2d returns the union data inside the PostTargetUrl402JSONResponseBody as a TierFeatureConstraintError0x2d
+func (t PostTargetUrl402JSONResponseBody) AsTierFeatureConstraintError0x2d() (TierFeatureConstraintError0x2d, error) {
+	var body TierFeatureConstraintError0x2d
 	err := json.Unmarshal(t.union, &body)
 	return body, err
 }
 
-// FromPostTargetUrl402JSONResponseBody0 overwrites any union data inside the PostTargetUrl402JSONResponseBody as the provided PostTargetUrl402JSONResponseBody0
-func (t *PostTargetUrl402JSONResponseBody) FromPostTargetUrl402JSONResponseBody0(v PostTargetUrl402JSONResponseBody0) error {
+// FromTierFeatureConstraintError0x2d overwrites any union data inside the PostTargetUrl402JSONResponseBody as the provided TierFeatureConstraintError0x2d
+func (t *PostTargetUrl402JSONResponseBody) FromTierFeatureConstraintError0x2d(v TierFeatureConstraintError0x2d) error {
 	b, err := json.Marshal(v)
 	t.union = b
 	return err
 }
 
-// MergePostTargetUrl402JSONResponseBody0 performs a merge with any union data inside the PostTargetUrl402JSONResponseBody, using the provided PostTargetUrl402JSONResponseBody0
-func (t *PostTargetUrl402JSONResponseBody) MergePostTargetUrl402JSONResponseBody0(v PostTargetUrl402JSONResponseBody0) error {
+// MergeTierFeatureConstraintError0x2d performs a merge with any union data inside the PostTargetUrl402JSONResponseBody, using the provided TierFeatureConstraintError0x2d
+func (t *PostTargetUrl402JSONResponseBody) MergeTierFeatureConstraintError0x2d(v TierFeatureConstraintError0x2d) error {
 	b, err := json.Marshal(v)
 	if err != nil {
 		return err
@@ -16079,22 +16805,22 @@ func (t *PostTargetUrl402JSONResponseBody) MergePostTargetUrl402JSONResponseBody
 	return err
 }
 
-// AsPostTargetUrl402JSONResponseBody1 returns the union data inside the PostTargetUrl402JSONResponseBody as a PostTargetUrl402JSONResponseBody1
-func (t PostTargetUrl402JSONResponseBody) AsPostTargetUrl402JSONResponseBody1() (PostTargetUrl402JSONResponseBody1, error) {
-	var body PostTargetUrl402JSONResponseBody1
+// AsInsufficientBalanceError0x2e returns the union data inside the PostTargetUrl402JSONResponseBody as a InsufficientBalanceError0x2e
+func (t PostTargetUrl402JSONResponseBody) AsInsufficientBalanceError0x2e() (InsufficientBalanceError0x2e, error) {
+	var body InsufficientBalanceError0x2e
 	err := json.Unmarshal(t.union, &body)
 	return body, err
 }
 
-// FromPostTargetUrl402JSONResponseBody1 overwrites any union data inside the PostTargetUrl402JSONResponseBody as the provided PostTargetUrl402JSONResponseBody1
-func (t *PostTargetUrl402JSONResponseBody) FromPostTargetUrl402JSONResponseBody1(v PostTargetUrl402JSONResponseBody1) error {
+// FromInsufficientBalanceError0x2e overwrites any union data inside the PostTargetUrl402JSONResponseBody as the provided InsufficientBalanceError0x2e
+func (t *PostTargetUrl402JSONResponseBody) FromInsufficientBalanceError0x2e(v InsufficientBalanceError0x2e) error {
 	b, err := json.Marshal(v)
 	t.union = b
 	return err
 }
 
-// MergePostTargetUrl402JSONResponseBody1 performs a merge with any union data inside the PostTargetUrl402JSONResponseBody, using the provided PostTargetUrl402JSONResponseBody1
-func (t *PostTargetUrl402JSONResponseBody) MergePostTargetUrl402JSONResponseBody1(v PostTargetUrl402JSONResponseBody1) error {
+// MergeInsufficientBalanceError0x2e performs a merge with any union data inside the PostTargetUrl402JSONResponseBody, using the provided InsufficientBalanceError0x2e
+func (t *PostTargetUrl402JSONResponseBody) MergeInsufficientBalanceError0x2e(v InsufficientBalanceError0x2e) error {
 	b, err := json.Marshal(v)
 	if err != nil {
 		return err
@@ -16115,22 +16841,22 @@ func (t *PostTargetUrl402JSONResponseBody) UnmarshalJSON(b []byte) error {
 	return err
 }
 
-// AsPostTargetUrl403JSONResponseBody0 returns the union data inside the PostTargetUrl403JSONResponseBody as a PostTargetUrl403JSONResponseBody0
-func (t PostTargetUrl403JSONResponseBody) AsPostTargetUrl403JSONResponseBody0() (PostTargetUrl403JSONResponseBody0, error) {
-	var body PostTargetUrl403JSONResponseBody0
+// AsOperationNotAllowedError0x2f returns the union data inside the PostTargetUrl403JSONResponseBody as a OperationNotAllowedError0x2f
+func (t PostTargetUrl403JSONResponseBody) AsOperationNotAllowedError0x2f() (OperationNotAllowedError0x2f, error) {
+	var body OperationNotAllowedError0x2f
 	err := json.Unmarshal(t.union, &body)
 	return body, err
 }
 
-// FromPostTargetUrl403JSONResponseBody0 overwrites any union data inside the PostTargetUrl403JSONResponseBody as the provided PostTargetUrl403JSONResponseBody0
-func (t *PostTargetUrl403JSONResponseBody) FromPostTargetUrl403JSONResponseBody0(v PostTargetUrl403JSONResponseBody0) error {
+// FromOperationNotAllowedError0x2f overwrites any union data inside the PostTargetUrl403JSONResponseBody as the provided OperationNotAllowedError0x2f
+func (t *PostTargetUrl403JSONResponseBody) FromOperationNotAllowedError0x2f(v OperationNotAllowedError0x2f) error {
 	b, err := json.Marshal(v)
 	t.union = b
 	return err
 }
 
-// MergePostTargetUrl403JSONResponseBody0 performs a merge with any union data inside the PostTargetUrl403JSONResponseBody, using the provided PostTargetUrl403JSONResponseBody0
-func (t *PostTargetUrl403JSONResponseBody) MergePostTargetUrl403JSONResponseBody0(v PostTargetUrl403JSONResponseBody0) error {
+// MergeOperationNotAllowedError0x2f performs a merge with any union data inside the PostTargetUrl403JSONResponseBody, using the provided OperationNotAllowedError0x2f
+func (t *PostTargetUrl403JSONResponseBody) MergeOperationNotAllowedError0x2f(v OperationNotAllowedError0x2f) error {
 	b, err := json.Marshal(v)
 	if err != nil {
 		return err
@@ -16141,22 +16867,22 @@ func (t *PostTargetUrl403JSONResponseBody) MergePostTargetUrl403JSONResponseBody
 	return err
 }
 
-// AsPostTargetUrl403JSONResponseBody1 returns the union data inside the PostTargetUrl403JSONResponseBody as a PostTargetUrl403JSONResponseBody1
-func (t PostTargetUrl403JSONResponseBody) AsPostTargetUrl403JSONResponseBody1() (PostTargetUrl403JSONResponseBody1, error) {
-	var body PostTargetUrl403JSONResponseBody1
+// AsAbuseAlleviationError0x30 returns the union data inside the PostTargetUrl403JSONResponseBody as a AbuseAlleviationError0x30
+func (t PostTargetUrl403JSONResponseBody) AsAbuseAlleviationError0x30() (AbuseAlleviationError0x30, error) {
+	var body AbuseAlleviationError0x30
 	err := json.Unmarshal(t.union, &body)
 	return body, err
 }
 
-// FromPostTargetUrl403JSONResponseBody1 overwrites any union data inside the PostTargetUrl403JSONResponseBody as the provided PostTargetUrl403JSONResponseBody1
-func (t *PostTargetUrl403JSONResponseBody) FromPostTargetUrl403JSONResponseBody1(v PostTargetUrl403JSONResponseBody1) error {
+// FromAbuseAlleviationError0x30 overwrites any union data inside the PostTargetUrl403JSONResponseBody as the provided AbuseAlleviationError0x30
+func (t *PostTargetUrl403JSONResponseBody) FromAbuseAlleviationError0x30(v AbuseAlleviationError0x30) error {
 	b, err := json.Marshal(v)
 	t.union = b
 	return err
 }
 
-// MergePostTargetUrl403JSONResponseBody1 performs a merge with any union data inside the PostTargetUrl403JSONResponseBody, using the provided PostTargetUrl403JSONResponseBody1
-func (t *PostTargetUrl403JSONResponseBody) MergePostTargetUrl403JSONResponseBody1(v PostTargetUrl403JSONResponseBody1) error {
+// MergeAbuseAlleviationError0x30 performs a merge with any union data inside the PostTargetUrl403JSONResponseBody, using the provided AbuseAlleviationError0x30
+func (t *PostTargetUrl403JSONResponseBody) MergeAbuseAlleviationError0x30(v AbuseAlleviationError0x30) error {
 	b, err := json.Marshal(v)
 	if err != nil {
 		return err
@@ -16177,22 +16903,22 @@ func (t *PostTargetUrl403JSONResponseBody) UnmarshalJSON(b []byte) error {
 	return err
 }
 
-// AsPostTargetUrl409JSONResponseBody0 returns the union data inside the PostTargetUrl409JSONResponseBody as a PostTargetUrl409JSONResponseBody0
-func (t PostTargetUrl409JSONResponseBody) AsPostTargetUrl409JSONResponseBody0() (PostTargetUrl409JSONResponseBody0, error) {
-	var body PostTargetUrl409JSONResponseBody0
+// AsResourcePolicyDenyError0x31 returns the union data inside the PostTargetUrl409JSONResponseBody as a ResourcePolicyDenyError0x31
+func (t PostTargetUrl409JSONResponseBody) AsResourcePolicyDenyError0x31() (ResourcePolicyDenyError0x31, error) {
+	var body ResourcePolicyDenyError0x31
 	err := json.Unmarshal(t.union, &body)
 	return body, err
 }
 
-// FromPostTargetUrl409JSONResponseBody0 overwrites any union data inside the PostTargetUrl409JSONResponseBody as the provided PostTargetUrl409JSONResponseBody0
-func (t *PostTargetUrl409JSONResponseBody) FromPostTargetUrl409JSONResponseBody0(v PostTargetUrl409JSONResponseBody0) error {
+// FromResourcePolicyDenyError0x31 overwrites any union data inside the PostTargetUrl409JSONResponseBody as the provided ResourcePolicyDenyError0x31
+func (t *PostTargetUrl409JSONResponseBody) FromResourcePolicyDenyError0x31(v ResourcePolicyDenyError0x31) error {
 	b, err := json.Marshal(v)
 	t.union = b
 	return err
 }
 
-// MergePostTargetUrl409JSONResponseBody0 performs a merge with any union data inside the PostTargetUrl409JSONResponseBody, using the provided PostTargetUrl409JSONResponseBody0
-func (t *PostTargetUrl409JSONResponseBody) MergePostTargetUrl409JSONResponseBody0(v PostTargetUrl409JSONResponseBody0) error {
+// MergeResourcePolicyDenyError0x31 performs a merge with any union data inside the PostTargetUrl409JSONResponseBody, using the provided ResourcePolicyDenyError0x31
+func (t *PostTargetUrl409JSONResponseBody) MergeResourcePolicyDenyError0x31(v ResourcePolicyDenyError0x31) error {
 	b, err := json.Marshal(v)
 	if err != nil {
 		return err
@@ -16203,22 +16929,22 @@ func (t *PostTargetUrl409JSONResponseBody) MergePostTargetUrl409JSONResponseBody
 	return err
 }
 
-// AsPostTargetUrl409JSONResponseBody1 returns the union data inside the PostTargetUrl409JSONResponseBody as a PostTargetUrl409JSONResponseBody1
-func (t PostTargetUrl409JSONResponseBody) AsPostTargetUrl409JSONResponseBody1() (PostTargetUrl409JSONResponseBody1, error) {
-	var body PostTargetUrl409JSONResponseBody1
+// AsBudgetExceededError0x32 returns the union data inside the PostTargetUrl409JSONResponseBody as a BudgetExceededError0x32
+func (t PostTargetUrl409JSONResponseBody) AsBudgetExceededError0x32() (BudgetExceededError0x32, error) {
+	var body BudgetExceededError0x32
 	err := json.Unmarshal(t.union, &body)
 	return body, err
 }
 
-// FromPostTargetUrl409JSONResponseBody1 overwrites any union data inside the PostTargetUrl409JSONResponseBody as the provided PostTargetUrl409JSONResponseBody1
-func (t *PostTargetUrl409JSONResponseBody) FromPostTargetUrl409JSONResponseBody1(v PostTargetUrl409JSONResponseBody1) error {
+// FromBudgetExceededError0x32 overwrites any union data inside the PostTargetUrl409JSONResponseBody as the provided BudgetExceededError0x32
+func (t *PostTargetUrl409JSONResponseBody) FromBudgetExceededError0x32(v BudgetExceededError0x32) error {
 	b, err := json.Marshal(v)
 	t.union = b
 	return err
 }
 
-// MergePostTargetUrl409JSONResponseBody1 performs a merge with any union data inside the PostTargetUrl409JSONResponseBody, using the provided PostTargetUrl409JSONResponseBody1
-func (t *PostTargetUrl409JSONResponseBody) MergePostTargetUrl409JSONResponseBody1(v PostTargetUrl409JSONResponseBody1) error {
+// MergeBudgetExceededError0x32 performs a merge with any union data inside the PostTargetUrl409JSONResponseBody, using the provided BudgetExceededError0x32
+func (t *PostTargetUrl409JSONResponseBody) MergeBudgetExceededError0x32(v BudgetExceededError0x32) error {
 	b, err := json.Marshal(v)
 	if err != nil {
 		return err
@@ -16239,22 +16965,22 @@ func (t *PostTargetUrl409JSONResponseBody) UnmarshalJSON(b []byte) error {
 	return err
 }
 
-// AsPostTargetUrl422JSONResponseBody0 returns the union data inside the PostTargetUrl422JSONResponseBody as a PostTargetUrl422JSONResponseBody0
-func (t PostTargetUrl422JSONResponseBody) AsPostTargetUrl422JSONResponseBody0() (PostTargetUrl422JSONResponseBody0, error) {
-	var body PostTargetUrl422JSONResponseBody0
+// AsSubmittedDataMalformedError0x34 returns the union data inside the PostTargetUrl422JSONResponseBody as a SubmittedDataMalformedError0x34
+func (t PostTargetUrl422JSONResponseBody) AsSubmittedDataMalformedError0x34() (SubmittedDataMalformedError0x34, error) {
+	var body SubmittedDataMalformedError0x34
 	err := json.Unmarshal(t.union, &body)
 	return body, err
 }
 
-// FromPostTargetUrl422JSONResponseBody0 overwrites any union data inside the PostTargetUrl422JSONResponseBody as the provided PostTargetUrl422JSONResponseBody0
-func (t *PostTargetUrl422JSONResponseBody) FromPostTargetUrl422JSONResponseBody0(v PostTargetUrl422JSONResponseBody0) error {
+// FromSubmittedDataMalformedError0x34 overwrites any union data inside the PostTargetUrl422JSONResponseBody as the provided SubmittedDataMalformedError0x34
+func (t *PostTargetUrl422JSONResponseBody) FromSubmittedDataMalformedError0x34(v SubmittedDataMalformedError0x34) error {
 	b, err := json.Marshal(v)
 	t.union = b
 	return err
 }
 
-// MergePostTargetUrl422JSONResponseBody0 performs a merge with any union data inside the PostTargetUrl422JSONResponseBody, using the provided PostTargetUrl422JSONResponseBody0
-func (t *PostTargetUrl422JSONResponseBody) MergePostTargetUrl422JSONResponseBody0(v PostTargetUrl422JSONResponseBody0) error {
+// MergeSubmittedDataMalformedError0x34 performs a merge with any union data inside the PostTargetUrl422JSONResponseBody, using the provided SubmittedDataMalformedError0x34
+func (t *PostTargetUrl422JSONResponseBody) MergeSubmittedDataMalformedError0x34(v SubmittedDataMalformedError0x34) error {
 	b, err := json.Marshal(v)
 	if err != nil {
 		return err
@@ -16265,22 +16991,22 @@ func (t *PostTargetUrl422JSONResponseBody) MergePostTargetUrl422JSONResponseBody
 	return err
 }
 
-// AsPostTargetUrl422JSONResponseBody1 returns the union data inside the PostTargetUrl422JSONResponseBody as a PostTargetUrl422JSONResponseBody1
-func (t PostTargetUrl422JSONResponseBody) AsPostTargetUrl422JSONResponseBody1() (PostTargetUrl422JSONResponseBody1, error) {
-	var body PostTargetUrl422JSONResponseBody1
+// AsDownstreamServiceFailureError0x35 returns the union data inside the PostTargetUrl422JSONResponseBody as a DownstreamServiceFailureError0x35
+func (t PostTargetUrl422JSONResponseBody) AsDownstreamServiceFailureError0x35() (DownstreamServiceFailureError0x35, error) {
+	var body DownstreamServiceFailureError0x35
 	err := json.Unmarshal(t.union, &body)
 	return body, err
 }
 
-// FromPostTargetUrl422JSONResponseBody1 overwrites any union data inside the PostTargetUrl422JSONResponseBody as the provided PostTargetUrl422JSONResponseBody1
-func (t *PostTargetUrl422JSONResponseBody) FromPostTargetUrl422JSONResponseBody1(v PostTargetUrl422JSONResponseBody1) error {
+// FromDownstreamServiceFailureError0x35 overwrites any union data inside the PostTargetUrl422JSONResponseBody as the provided DownstreamServiceFailureError0x35
+func (t *PostTargetUrl422JSONResponseBody) FromDownstreamServiceFailureError0x35(v DownstreamServiceFailureError0x35) error {
 	b, err := json.Marshal(v)
 	t.union = b
 	return err
 }
 
-// MergePostTargetUrl422JSONResponseBody1 performs a merge with any union data inside the PostTargetUrl422JSONResponseBody, using the provided PostTargetUrl422JSONResponseBody1
-func (t *PostTargetUrl422JSONResponseBody) MergePostTargetUrl422JSONResponseBody1(v PostTargetUrl422JSONResponseBody1) error {
+// MergeDownstreamServiceFailureError0x35 performs a merge with any union data inside the PostTargetUrl422JSONResponseBody, using the provided DownstreamServiceFailureError0x35
+func (t *PostTargetUrl422JSONResponseBody) MergeDownstreamServiceFailureError0x35(v DownstreamServiceFailureError0x35) error {
 	b, err := json.Marshal(v)
 	if err != nil {
 		return err
@@ -16291,22 +17017,22 @@ func (t *PostTargetUrl422JSONResponseBody) MergePostTargetUrl422JSONResponseBody
 	return err
 }
 
-// AsPostTargetUrl422JSONResponseBody2 returns the union data inside the PostTargetUrl422JSONResponseBody as a PostTargetUrl422JSONResponseBody2
-func (t PostTargetUrl422JSONResponseBody) AsPostTargetUrl422JSONResponseBody2() (PostTargetUrl422JSONResponseBody2, error) {
-	var body PostTargetUrl422JSONResponseBody2
+// AsAssertionFailureError0x36 returns the union data inside the PostTargetUrl422JSONResponseBody as a AssertionFailureError0x36
+func (t PostTargetUrl422JSONResponseBody) AsAssertionFailureError0x36() (AssertionFailureError0x36, error) {
+	var body AssertionFailureError0x36
 	err := json.Unmarshal(t.union, &body)
 	return body, err
 }
 
-// FromPostTargetUrl422JSONResponseBody2 overwrites any union data inside the PostTargetUrl422JSONResponseBody as the provided PostTargetUrl422JSONResponseBody2
-func (t *PostTargetUrl422JSONResponseBody) FromPostTargetUrl422JSONResponseBody2(v PostTargetUrl422JSONResponseBody2) error {
+// FromAssertionFailureError0x36 overwrites any union data inside the PostTargetUrl422JSONResponseBody as the provided AssertionFailureError0x36
+func (t *PostTargetUrl422JSONResponseBody) FromAssertionFailureError0x36(v AssertionFailureError0x36) error {
 	b, err := json.Marshal(v)
 	t.union = b
 	return err
 }
 
-// MergePostTargetUrl422JSONResponseBody2 performs a merge with any union data inside the PostTargetUrl422JSONResponseBody, using the provided PostTargetUrl422JSONResponseBody2
-func (t *PostTargetUrl422JSONResponseBody) MergePostTargetUrl422JSONResponseBody2(v PostTargetUrl422JSONResponseBody2) error {
+// MergeAssertionFailureError0x36 performs a merge with any union data inside the PostTargetUrl422JSONResponseBody, using the provided AssertionFailureError0x36
+func (t *PostTargetUrl422JSONResponseBody) MergeAssertionFailureError0x36(v AssertionFailureError0x36) error {
 	b, err := json.Marshal(v)
 	if err != nil {
 		return err
