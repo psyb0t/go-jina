@@ -740,7 +740,7 @@ type CrawlerOptions0x28 struct {
 	//
 	// - Member of &lt;CrawlerOptions&gt;
 	//
-	// - Defaults to: &#39;initial&#39;
+	// - Defaults to: &#39;final&#39;
 	Base *Enum0x0d `json:"base,omitempty"`
 
 	// CacheTolerance - Cast to: &lt; **number** &gt;
@@ -1154,7 +1154,7 @@ type CrawlerOptionsHeaderOnly0x3b struct {
 	//
 	// - Member of &lt;CrawlerOptionsHeaderOnly&gt;
 	//
-	// - Defaults to: &#39;initial&#39;
+	// - Defaults to: &#39;final&#39;
 	Base *Enum0x0d `json:"base,omitempty"`
 
 	// CacheTolerance - Cast to: &lt; **number** &gt;
@@ -1695,6 +1695,11 @@ type FormattedPageDto0x43 struct {
 	//
 	// - Member of &lt;FormattedPageDto&gt;
 	External *FormattedPageDto0x43_External `json:"external,omitempty"`
+
+	// FinalUrl - Cast to: &lt; **string** &gt;
+	//
+	// - Member of &lt;FormattedPageDto&gt;
+	FinalUrl *string `json:"finalUrl,omitempty"`
 
 	// Html - Cast to: &lt; **string** &gt;
 	//
@@ -3153,7 +3158,7 @@ type PostJSONBody struct {
 	//
 	// - Member of &lt;CrawlerOptions&gt;
 	//
-	// - Defaults to: &#39;initial&#39;
+	// - Defaults to: &#39;final&#39;
 	Base *Enum0x0d `json:"base,omitempty"`
 
 	// CacheTolerance - Cast to: &lt; **number** &gt;
@@ -3453,7 +3458,7 @@ type PostFormdataBody struct {
 	//
 	// - Member of &lt;CrawlerOptions&gt;
 	//
-	// - Defaults to: &#39;initial&#39;
+	// - Defaults to: &#39;final&#39;
 	Base *Enum0x0d `form:"base,omitempty" json:"base,omitempty"`
 
 	// CacheTolerance - Cast to: &lt; **number** &gt;
@@ -3728,7 +3733,7 @@ type PostMultipartBody struct {
 	//
 	// - Member of &lt;CrawlerOptions&gt;
 	//
-	// - Defaults to: &#39;initial&#39;
+	// - Defaults to: &#39;final&#39;
 	Base *Enum0x0d `json:"base,omitempty"`
 
 	// CacheTolerance - Cast to: &lt; **number** &gt;
@@ -5384,7 +5389,7 @@ type PostTargetUrlJSONBody struct {
 	//
 	// - Member of &lt;CrawlerOptions&gt;
 	//
-	// - Defaults to: &#39;initial&#39;
+	// - Defaults to: &#39;final&#39;
 	Base *Enum0x0d `json:"base,omitempty"`
 
 	// CacheTolerance - Cast to: &lt; **number** &gt;
@@ -5684,7 +5689,7 @@ type PostTargetUrlFormdataBody struct {
 	//
 	// - Member of &lt;CrawlerOptions&gt;
 	//
-	// - Defaults to: &#39;initial&#39;
+	// - Defaults to: &#39;final&#39;
 	Base *Enum0x0d `form:"base,omitempty" json:"base,omitempty"`
 
 	// CacheTolerance - Cast to: &lt; **number** &gt;
@@ -5959,7 +5964,7 @@ type PostTargetUrlMultipartBody struct {
 	//
 	// - Member of &lt;CrawlerOptions&gt;
 	//
-	// - Defaults to: &#39;initial&#39;
+	// - Defaults to: &#39;final&#39;
 	Base *Enum0x0d `json:"base,omitempty"`
 
 	// CacheTolerance - Cast to: &lt; **number** &gt;

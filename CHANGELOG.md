@@ -2,6 +2,12 @@
 
 All notable changes per release. Versions follow [semver](https://semver.org).
 
+## v0.4.3, 2026-10-30
+
+- Added the `FinalUrl` field (`*string`, JSON `finalUrl`) to `FormattedPageDto0x43` in `jinareader`.
+- The documented default of the `Base` field changed from 'initial' to 'final' in `CrawlerOptions0x28`, `CrawlerOptionsHeaderOnly0x3b` and the `Post` and `PostTargetUrl` JSON, form data and multipart body types. Only the doc comments changed, the Go types are the same.
+- `jinareader` generates from Jina Reader API spec version 0.5.0+9e23d86.
+
 ## v0.4.2, 2026-10-28
 
 - Updated Semgrep in the development image to 1.182.1 and refreshed its locked dependencies. certifi 2026.10.23 drops the emSign root CAs whose intermediate keys were compromised (GHSA-6q48-6c7w-9gw2).
