@@ -2,6 +2,14 @@
 
 All notable changes per release. Versions follow [semver](https://semver.org).
 
+## v0.5.0, 2026-11-03
+
+- The Echo body types in `jinareader` changed from type aliases to defined types: `PostEchoJSONBody`, `PutEchoJSONBody`, `PatchEchoJSONBody`, their `MultipartBody` equivalents and the same types for `PostEchoRest`, `PutEchoRest` and `PatchEchoRest`. Each was `= interface{}` and is now `interface{}` as its own type.
+- The matching `JSONRequestBody` and `MultipartRequestBody` types, such as `PostEchoJSONRequestBody` and `PatchEchoRestMultipartRequestBody`, are now defined types instead of aliases. The `FormdataBody` and `FormdataRequestBody` types are unchanged.
+- The `PostEcho`, `PutEcho`, `PatchEcho`, `PostEchoRest`, `PutEchoRest` and `PatchEchoRest` methods, their `WithResponse` variants, the `NewXxxEchoRequest` builders and both client interfaces take these new types. Code that assigns an `interface{}` value directly still compiles. Code that relies on the types being identical to each other or to `interface{}` must convert.
+- The Reader spec rewrite in `scripts/fix-reader-spec.jq` now also replaces a single-`$ref` `allOf` wrapper in `anyOf` members with the bare `$ref`, as it already did for `oneOf`. This keeps oapi-codegen from emitting per-member alias types that the gitleaks `generic-api-key` rule flags.
+- `jinareader` generates from Jina Reader API spec version 0.5.0+6943abb, up from 0.5.0+9e23d86. The `jina` package and its spec version are unchanged.
+
 ## v0.4.3, 2026-10-30
 
 - Added the `FinalUrl` field (`*string`, JSON `finalUrl`) to `FormattedPageDto0x43` in `jinareader`.

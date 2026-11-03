@@ -21,7 +21,7 @@
 # 5. Parameters with neither `schema` nor `content` become `type: string`.
 #    oapi-codegen refuses to generate a parameter without one, and the `rest`
 #    path parameter of `/echo/{rest}` has none.
-# 6. A `oneOf` member that wraps a single `$ref` in `allOf` becomes the bare
+# 6. A `oneOf` or `anyOf` member that wraps a single `$ref` in `allOf` becomes the bare
 #    `$ref`. oapi-codegen otherwise declares an alias type per member, named
 #    after the property. For a property with "auth" in its name, the alias
 #    line looks like an API key assignment to the gitleaks generic rule.
@@ -79,10 +79,10 @@ def type_schemaless_params:
       )
   );
 
-def unwrap_oneof_refs:
+def unwrap_member_refs(key):
   walk(
-    if type == "object" and (.oneOf | type) == "array" then
-      .oneOf |= map(
+    if type == "object" and (.[key] | type) == "array" then
+      .[key] |= map(
         if type == "object" and (.allOf | type) == "array"
           and (.allOf | length) == 1 and (.allOf[0] | has("$ref"))
           and (keys == ["allOf"]) then
@@ -91,6 +91,9 @@ def unwrap_oneof_refs:
       )
     else . end
   );
+
+def unwrap_oneof_refs:
+  unwrap_member_refs("oneOf") | unwrap_member_refs("anyOf");
 
 rename_url_param
 | drop_untyped_nullable_maps

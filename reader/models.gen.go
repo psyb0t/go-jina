@@ -4753,64 +4753,64 @@ type Post422JSONResponseBody struct {
 }
 
 // PatchEchoJSONBody defines parameters for PatchEcho.
-type PatchEchoJSONBody = interface{}
+type PatchEchoJSONBody interface{}
 
 // PatchEchoFormdataBody defines parameters for PatchEcho.
 type PatchEchoFormdataBody = struct {
 }
 
 // PatchEchoMultipartBody defines parameters for PatchEcho.
-type PatchEchoMultipartBody = interface{}
+type PatchEchoMultipartBody interface{}
 
 // PostEchoJSONBody defines parameters for PostEcho.
-type PostEchoJSONBody = interface{}
+type PostEchoJSONBody interface{}
 
 // PostEchoFormdataBody defines parameters for PostEcho.
 type PostEchoFormdataBody = struct {
 }
 
 // PostEchoMultipartBody defines parameters for PostEcho.
-type PostEchoMultipartBody = interface{}
+type PostEchoMultipartBody interface{}
 
 // PutEchoJSONBody defines parameters for PutEcho.
-type PutEchoJSONBody = interface{}
+type PutEchoJSONBody interface{}
 
 // PutEchoFormdataBody defines parameters for PutEcho.
 type PutEchoFormdataBody = struct {
 }
 
 // PutEchoMultipartBody defines parameters for PutEcho.
-type PutEchoMultipartBody = interface{}
+type PutEchoMultipartBody interface{}
 
 // PatchEchoRestJSONBody defines parameters for PatchEchoRest.
-type PatchEchoRestJSONBody = interface{}
+type PatchEchoRestJSONBody interface{}
 
 // PatchEchoRestFormdataBody defines parameters for PatchEchoRest.
 type PatchEchoRestFormdataBody = struct {
 }
 
 // PatchEchoRestMultipartBody defines parameters for PatchEchoRest.
-type PatchEchoRestMultipartBody = interface{}
+type PatchEchoRestMultipartBody interface{}
 
 // PostEchoRestJSONBody defines parameters for PostEchoRest.
-type PostEchoRestJSONBody = interface{}
+type PostEchoRestJSONBody interface{}
 
 // PostEchoRestFormdataBody defines parameters for PostEchoRest.
 type PostEchoRestFormdataBody = struct {
 }
 
 // PostEchoRestMultipartBody defines parameters for PostEchoRest.
-type PostEchoRestMultipartBody = interface{}
+type PostEchoRestMultipartBody interface{}
 
 // PutEchoRestJSONBody defines parameters for PutEchoRest.
-type PutEchoRestJSONBody = interface{}
+type PutEchoRestJSONBody interface{}
 
 // PutEchoRestFormdataBody defines parameters for PutEchoRest.
 type PutEchoRestFormdataBody = struct {
 }
 
 // PutEchoRestMultipartBody defines parameters for PutEchoRest.
-type PutEchoRestMultipartBody = interface{}
+type PutEchoRestMultipartBody interface{}
 
 // GetEphemeralEncodedFidParams defines parameters for GetEphemeralEncodedFid.
 type GetEphemeralEncodedFidParams struct {
@@ -6992,58 +6992,58 @@ type PostFormdataRequestBody PostFormdataBody
 type PostMultipartRequestBody PostMultipartBody
 
 // PatchEchoJSONRequestBody defines body for PatchEcho for application/json ContentType.
-type PatchEchoJSONRequestBody = PatchEchoJSONBody
+type PatchEchoJSONRequestBody PatchEchoJSONBody
 
 // PatchEchoFormdataRequestBody defines body for PatchEcho for application/x-www-form-urlencoded ContentType.
 type PatchEchoFormdataRequestBody = PatchEchoFormdataBody
 
 // PatchEchoMultipartRequestBody defines body for PatchEcho for multipart/form-data ContentType.
-type PatchEchoMultipartRequestBody = PatchEchoMultipartBody
+type PatchEchoMultipartRequestBody PatchEchoMultipartBody
 
 // PostEchoJSONRequestBody defines body for PostEcho for application/json ContentType.
-type PostEchoJSONRequestBody = PostEchoJSONBody
+type PostEchoJSONRequestBody PostEchoJSONBody
 
 // PostEchoFormdataRequestBody defines body for PostEcho for application/x-www-form-urlencoded ContentType.
 type PostEchoFormdataRequestBody = PostEchoFormdataBody
 
 // PostEchoMultipartRequestBody defines body for PostEcho for multipart/form-data ContentType.
-type PostEchoMultipartRequestBody = PostEchoMultipartBody
+type PostEchoMultipartRequestBody PostEchoMultipartBody
 
 // PutEchoJSONRequestBody defines body for PutEcho for application/json ContentType.
-type PutEchoJSONRequestBody = PutEchoJSONBody
+type PutEchoJSONRequestBody PutEchoJSONBody
 
 // PutEchoFormdataRequestBody defines body for PutEcho for application/x-www-form-urlencoded ContentType.
 type PutEchoFormdataRequestBody = PutEchoFormdataBody
 
 // PutEchoMultipartRequestBody defines body for PutEcho for multipart/form-data ContentType.
-type PutEchoMultipartRequestBody = PutEchoMultipartBody
+type PutEchoMultipartRequestBody PutEchoMultipartBody
 
 // PatchEchoRestJSONRequestBody defines body for PatchEchoRest for application/json ContentType.
-type PatchEchoRestJSONRequestBody = PatchEchoRestJSONBody
+type PatchEchoRestJSONRequestBody PatchEchoRestJSONBody
 
 // PatchEchoRestFormdataRequestBody defines body for PatchEchoRest for application/x-www-form-urlencoded ContentType.
 type PatchEchoRestFormdataRequestBody = PatchEchoRestFormdataBody
 
 // PatchEchoRestMultipartRequestBody defines body for PatchEchoRest for multipart/form-data ContentType.
-type PatchEchoRestMultipartRequestBody = PatchEchoRestMultipartBody
+type PatchEchoRestMultipartRequestBody PatchEchoRestMultipartBody
 
 // PostEchoRestJSONRequestBody defines body for PostEchoRest for application/json ContentType.
-type PostEchoRestJSONRequestBody = PostEchoRestJSONBody
+type PostEchoRestJSONRequestBody PostEchoRestJSONBody
 
 // PostEchoRestFormdataRequestBody defines body for PostEchoRest for application/x-www-form-urlencoded ContentType.
 type PostEchoRestFormdataRequestBody = PostEchoRestFormdataBody
 
 // PostEchoRestMultipartRequestBody defines body for PostEchoRest for multipart/form-data ContentType.
-type PostEchoRestMultipartRequestBody = PostEchoRestMultipartBody
+type PostEchoRestMultipartRequestBody PostEchoRestMultipartBody
 
 // PutEchoRestJSONRequestBody defines body for PutEchoRest for application/json ContentType.
-type PutEchoRestJSONRequestBody = PutEchoRestJSONBody
+type PutEchoRestJSONRequestBody PutEchoRestJSONBody
 
 // PutEchoRestFormdataRequestBody defines body for PutEchoRest for application/x-www-form-urlencoded ContentType.
 type PutEchoRestFormdataRequestBody = PutEchoRestFormdataBody
 
 // PutEchoRestMultipartRequestBody defines body for PutEchoRest for multipart/form-data ContentType.
-type PutEchoRestMultipartRequestBody = PutEchoRestMultipartBody
+type PutEchoRestMultipartRequestBody PutEchoRestMultipartBody
 
 // PostEphemeralEncodedFidJSONRequestBody defines body for PostEphemeralEncodedFid for application/json ContentType.
 type PostEphemeralEncodedFidJSONRequestBody PostEphemeralEncodedFidJSONBody
