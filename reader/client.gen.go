@@ -362,6 +362,33 @@ type ClientInterface interface {
 	// Corresponds with POST /ephemeral/{encodedFid} (the `PostEphemeralEncodedFid` operationId).
 	PostEphemeralEncodedFidWithFormdataBody(ctx context.Context, encodedFid string, params *PostEphemeralEncodedFidParams, body PostEphemeralEncodedFidFormdataRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error)
 
+	// PostReadWithBody readDedicatedEntrypoint
+	//
+	// Dedicated entrypoint for the read service.
+	//
+	// Takes any type of body and a specified content type.
+	//
+	// Corresponds with POST /read (the `PostRead` operationId).
+	PostReadWithBody(ctx context.Context, params *PostReadParams, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error)
+
+	// PostRead readDedicatedEntrypoint
+	//
+	// Dedicated entrypoint for the read service.
+	//
+	// Takes a body of the `application/json` content type.
+	//
+	// Corresponds with POST /read (the `PostRead` operationId).
+	PostRead(ctx context.Context, params *PostReadParams, body PostReadJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error)
+
+	// PostReadWithFormdataBody readDedicatedEntrypoint
+	//
+	// Dedicated entrypoint for the read service.
+	//
+	// Takes a body of the `application/x-www-form-urlencoded` content type.
+	//
+	// Corresponds with POST /read (the `PostRead` operationId).
+	PostReadWithFormdataBody(ctx context.Context, params *PostReadParams, body PostReadFormdataRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error)
+
 	// GetTargetUrl read
 	//
 	// Read a URL and get its content back in an LLM-friendly format.
@@ -979,6 +1006,63 @@ func (c *Client) PostEphemeralEncodedFid(ctx context.Context, encodedFid string,
 // Corresponds with POST /ephemeral/{encodedFid} (the `PostEphemeralEncodedFid` operationId).
 func (c *Client) PostEphemeralEncodedFidWithFormdataBody(ctx context.Context, encodedFid string, params *PostEphemeralEncodedFidParams, body PostEphemeralEncodedFidFormdataRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
 	req, err := NewPostEphemeralEncodedFidRequestWithFormdataBody(c.Server, encodedFid, params, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+// PostReadWithBody readDedicatedEntrypoint
+//
+// Dedicated entrypoint for the read service.
+//
+// Takes any type of body and a specified content type.
+//
+// Corresponds with POST /read (the `PostRead` operationId).
+func (c *Client) PostReadWithBody(ctx context.Context, params *PostReadParams, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewPostReadRequestWithBody(c.Server, params, contentType, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+// PostRead readDedicatedEntrypoint
+//
+// Dedicated entrypoint for the read service.
+//
+// Takes a body of the `application/json` content type.
+//
+// Corresponds with POST /read (the `PostRead` operationId).
+func (c *Client) PostRead(ctx context.Context, params *PostReadParams, body PostReadJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewPostReadRequest(c.Server, params, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+// PostReadWithFormdataBody readDedicatedEntrypoint
+//
+// Dedicated entrypoint for the read service.
+//
+// Takes a body of the `application/x-www-form-urlencoded` content type.
+//
+// Corresponds with POST /read (the `PostRead` operationId).
+func (c *Client) PostReadWithFormdataBody(ctx context.Context, params *PostReadParams, body PostReadFormdataRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewPostReadRequestWithFormdataBody(c.Server, params, body)
 	if err != nil {
 		return nil, err
 	}
@@ -4154,6 +4238,1215 @@ func NewPostEphemeralEncodedFidRequestWithBody(server string, encodedFid string,
 	return req, nil
 }
 
+// NewPostReadRequest calls the generic PostRead builder with application/json body
+func NewPostReadRequest(server string, params *PostReadParams, body PostReadJSONRequestBody) (*http.Request, error) {
+	var bodyReader io.Reader
+	buf, err := json.Marshal(body)
+	if err != nil {
+		return nil, err
+	}
+	bodyReader = bytes.NewReader(buf)
+	return NewPostReadRequestWithBody(server, params, "application/json", bodyReader)
+}
+
+// NewPostReadRequestWithFormdataBody calls the generic PostRead builder with application/x-www-form-urlencoded body
+func NewPostReadRequestWithFormdataBody(server string, params *PostReadParams, body PostReadFormdataRequestBody) (*http.Request, error) {
+	var bodyReader io.Reader
+	bodyStr, err := runtime.MarshalForm(body, nil)
+	if err != nil {
+		return nil, err
+	}
+	bodyReader = strings.NewReader(bodyStr.Encode())
+	return NewPostReadRequestWithBody(server, params, "application/x-www-form-urlencoded", bodyReader)
+}
+
+// NewPostReadRequestWithBody constructs an http.Request for the PostRead method, with any body, and a specified content type
+func NewPostReadRequestWithBody(server string, params *PostReadParams, contentType string, body io.Reader) (*http.Request, error) {
+	var err error
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/read")
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	if params != nil {
+		// queryValues collects non-styled parameters (passthrough, JSON)
+		// that are safe to round-trip through url.Values.Encode().
+		queryValues := queryURL.Query()
+		// rawQueryFragments collects pre-encoded query fragments from
+		// styled parameters, preserving literal commas as delimiters
+		// per the OpenAPI spec (e.g. "color=blue,black,brown").
+		var rawQueryFragments []string
+
+		if params.Url != nil {
+
+			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "url", *params.Url, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "string", Format: ""}); err != nil {
+				return nil, err
+			} else {
+				for _, qp := range strings.Split(queryFrag, "&") {
+					rawQueryFragments = append(rawQueryFragments, qp)
+				}
+			}
+
+		}
+
+		if params.PreloadUrl != nil {
+
+			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "preloadUrl", *params.PreloadUrl, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "string", Format: ""}); err != nil {
+				return nil, err
+			} else {
+				for _, qp := range strings.Split(queryFrag, "&") {
+					rawQueryFragments = append(rawQueryFragments, qp)
+				}
+			}
+
+		}
+
+		if params.NoServiceWorker != nil {
+
+			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "noServiceWorker", *params.NoServiceWorker, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "", Format: ""}); err != nil {
+				return nil, err
+			} else {
+				for _, qp := range strings.Split(queryFrag, "&") {
+					rawQueryFragments = append(rawQueryFragments, qp)
+				}
+			}
+
+		}
+
+		if params.Html != nil {
+
+			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "html", *params.Html, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "string", Format: ""}); err != nil {
+				return nil, err
+			} else {
+				for _, qp := range strings.Split(queryFrag, "&") {
+					rawQueryFragments = append(rawQueryFragments, qp)
+				}
+			}
+
+		}
+
+		if params.Base != nil {
+
+			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "base", *params.Base, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "", Format: ""}); err != nil {
+				return nil, err
+			} else {
+				for _, qp := range strings.Split(queryFrag, "&") {
+					rawQueryFragments = append(rawQueryFragments, qp)
+				}
+			}
+
+		}
+
+		if params.Pdf != nil {
+
+			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "pdf", *params.Pdf, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "", Format: ""}); err != nil {
+				return nil, err
+			} else {
+				for _, qp := range strings.Split(queryFrag, "&") {
+					rawQueryFragments = append(rawQueryFragments, qp)
+				}
+			}
+
+		}
+
+		if params.File != nil {
+
+			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "file", *params.File, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "", Format: ""}); err != nil {
+				return nil, err
+			} else {
+				for _, qp := range strings.Split(queryFrag, "&") {
+					rawQueryFragments = append(rawQueryFragments, qp)
+				}
+			}
+
+		}
+
+		if params.Page != nil {
+
+			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "page", *params.Page, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "", Format: ""}); err != nil {
+				return nil, err
+			} else {
+				for _, qp := range strings.Split(queryFrag, "&") {
+					rawQueryFragments = append(rawQueryFragments, qp)
+				}
+			}
+
+		}
+
+		if params.RespondWith != nil {
+
+			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "respondWith", *params.RespondWith, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "", Format: ""}); err != nil {
+				return nil, err
+			} else {
+				for _, qp := range strings.Split(queryFrag, "&") {
+					rawQueryFragments = append(rawQueryFragments, qp)
+				}
+			}
+
+		}
+
+		if params.WithGeneratedAlt != nil {
+
+			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "withGeneratedAlt", *params.WithGeneratedAlt, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "", Format: ""}); err != nil {
+				return nil, err
+			} else {
+				for _, qp := range strings.Split(queryFrag, "&") {
+					rawQueryFragments = append(rawQueryFragments, qp)
+				}
+			}
+
+		}
+
+		if params.RetainImages != nil {
+
+			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "retainImages", *params.RetainImages, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "", Format: ""}); err != nil {
+				return nil, err
+			} else {
+				for _, qp := range strings.Split(queryFrag, "&") {
+					rawQueryFragments = append(rawQueryFragments, qp)
+				}
+			}
+
+		}
+
+		if params.RetainMedia != nil {
+
+			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "retainMedia", *params.RetainMedia, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "", Format: ""}); err != nil {
+				return nil, err
+			} else {
+				for _, qp := range strings.Split(queryFrag, "&") {
+					rawQueryFragments = append(rawQueryFragments, qp)
+				}
+			}
+
+		}
+
+		if params.Preset != nil {
+
+			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "preset", *params.Preset, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "", Format: ""}); err != nil {
+				return nil, err
+			} else {
+				for _, qp := range strings.Split(queryFrag, "&") {
+					rawQueryFragments = append(rawQueryFragments, qp)
+				}
+			}
+
+		}
+
+		if params.RetainLinks != nil {
+
+			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "retainLinks", *params.RetainLinks, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "", Format: ""}); err != nil {
+				return nil, err
+			} else {
+				for _, qp := range strings.Split(queryFrag, "&") {
+					rawQueryFragments = append(rawQueryFragments, qp)
+				}
+			}
+
+		}
+
+		if params.WithLinksSummary != nil {
+
+			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "withLinksSummary", *params.WithLinksSummary, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "", Format: ""}); err != nil {
+				return nil, err
+			} else {
+				for _, qp := range strings.Split(queryFrag, "&") {
+					rawQueryFragments = append(rawQueryFragments, qp)
+				}
+			}
+
+		}
+
+		if params.WithImagesSummary != nil {
+
+			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "withImagesSummary", *params.WithImagesSummary, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "", Format: ""}); err != nil {
+				return nil, err
+			} else {
+				for _, qp := range strings.Split(queryFrag, "&") {
+					rawQueryFragments = append(rawQueryFragments, qp)
+				}
+			}
+
+		}
+
+		if params.NoCache != nil {
+
+			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "noCache", *params.NoCache, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "", Format: ""}); err != nil {
+				return nil, err
+			} else {
+				for _, qp := range strings.Split(queryFrag, "&") {
+					rawQueryFragments = append(rawQueryFragments, qp)
+				}
+			}
+
+		}
+
+		if params.RemoveOverlay != nil {
+
+			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "removeOverlay", *params.RemoveOverlay, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "", Format: ""}); err != nil {
+				return nil, err
+			} else {
+				for _, qp := range strings.Split(queryFrag, "&") {
+					rawQueryFragments = append(rawQueryFragments, qp)
+				}
+			}
+
+		}
+
+		if params.DetachInvisibles != nil {
+
+			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "detachInvisibles", *params.DetachInvisibles, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "", Format: ""}); err != nil {
+				return nil, err
+			} else {
+				for _, qp := range strings.Split(queryFrag, "&") {
+					rawQueryFragments = append(rawQueryFragments, qp)
+				}
+			}
+
+		}
+
+		if params.NoGfm != nil {
+
+			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "noGfm", *params.NoGfm, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "", Format: ""}); err != nil {
+				return nil, err
+			} else {
+				for _, qp := range strings.Split(queryFrag, "&") {
+					rawQueryFragments = append(rawQueryFragments, qp)
+				}
+			}
+
+		}
+
+		if params.CacheTolerance != nil {
+
+			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "cacheTolerance", *params.CacheTolerance, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "number", Format: ""}); err != nil {
+				return nil, err
+			} else {
+				for _, qp := range strings.Split(queryFrag, "&") {
+					rawQueryFragments = append(rawQueryFragments, qp)
+				}
+			}
+
+		}
+
+		if params.TargetSelector != nil {
+
+			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "targetSelector", *params.TargetSelector, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "string", Format: ""}); err != nil {
+				return nil, err
+			} else {
+				for _, qp := range strings.Split(queryFrag, "&") {
+					rawQueryFragments = append(rawQueryFragments, qp)
+				}
+			}
+
+		}
+
+		if params.WaitForSelector != nil {
+
+			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "waitForSelector", *params.WaitForSelector, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "string", Format: ""}); err != nil {
+				return nil, err
+			} else {
+				for _, qp := range strings.Split(queryFrag, "&") {
+					rawQueryFragments = append(rawQueryFragments, qp)
+				}
+			}
+
+		}
+
+		if params.RemoveSelector != nil {
+
+			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "removeSelector", *params.RemoveSelector, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "string", Format: ""}); err != nil {
+				return nil, err
+			} else {
+				for _, qp := range strings.Split(queryFrag, "&") {
+					rawQueryFragments = append(rawQueryFragments, qp)
+				}
+			}
+
+		}
+
+		if params.KeepImgDataUrl != nil {
+
+			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "keepImgDataUrl", *params.KeepImgDataUrl, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "", Format: ""}); err != nil {
+				return nil, err
+			} else {
+				for _, qp := range strings.Split(queryFrag, "&") {
+					rawQueryFragments = append(rawQueryFragments, qp)
+				}
+			}
+
+		}
+
+		if params.WithIframe != nil {
+
+			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "withIframe", *params.WithIframe, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "", Format: ""}); err != nil {
+				return nil, err
+			} else {
+				for _, qp := range strings.Split(queryFrag, "&") {
+					rawQueryFragments = append(rawQueryFragments, qp)
+				}
+			}
+
+		}
+
+		if params.WithShadowDom != nil {
+
+			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "withShadowDom", *params.WithShadowDom, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "", Format: ""}); err != nil {
+				return nil, err
+			} else {
+				for _, qp := range strings.Split(queryFrag, "&") {
+					rawQueryFragments = append(rawQueryFragments, qp)
+				}
+			}
+
+		}
+
+		if params.SkipCertVerification != nil {
+
+			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "skipCertVerification", *params.SkipCertVerification, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "", Format: ""}); err != nil {
+				return nil, err
+			} else {
+				for _, qp := range strings.Split(queryFrag, "&") {
+					rawQueryFragments = append(rawQueryFragments, qp)
+				}
+			}
+
+		}
+
+		if params.WebBotAuth != nil {
+
+			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "webBotAuth", *params.WebBotAuth, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "", Format: ""}); err != nil {
+				return nil, err
+			} else {
+				for _, qp := range strings.Split(queryFrag, "&") {
+					rawQueryFragments = append(rawQueryFragments, qp)
+				}
+			}
+
+		}
+
+		if params.SetCookies != nil {
+
+			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "setCookies", *params.SetCookies, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "", Format: ""}); err != nil {
+				return nil, err
+			} else {
+				for _, qp := range strings.Split(queryFrag, "&") {
+					rawQueryFragments = append(rawQueryFragments, qp)
+				}
+			}
+
+		}
+
+		if params.ExportStorageState != nil {
+
+			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "exportStorageState", *params.ExportStorageState, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "", Format: ""}); err != nil {
+				return nil, err
+			} else {
+				for _, qp := range strings.Split(queryFrag, "&") {
+					rawQueryFragments = append(rawQueryFragments, qp)
+				}
+			}
+
+		}
+
+		if params.ProxyUrl != nil {
+
+			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "proxyUrl", *params.ProxyUrl, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "string", Format: ""}); err != nil {
+				return nil, err
+			} else {
+				for _, qp := range strings.Split(queryFrag, "&") {
+					rawQueryFragments = append(rawQueryFragments, qp)
+				}
+			}
+
+		}
+
+		if params.ProxyResources != nil {
+
+			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "proxyResources", *params.ProxyResources, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "", Format: ""}); err != nil {
+				return nil, err
+			} else {
+				for _, qp := range strings.Split(queryFrag, "&") {
+					rawQueryFragments = append(rawQueryFragments, qp)
+				}
+			}
+
+		}
+
+		if params.Proxy != nil {
+
+			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "proxy", *params.Proxy, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "string", Format: ""}); err != nil {
+				return nil, err
+			} else {
+				for _, qp := range strings.Split(queryFrag, "&") {
+					rawQueryFragments = append(rawQueryFragments, qp)
+				}
+			}
+
+		}
+
+		if params.UserAgent != nil {
+
+			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "userAgent", *params.UserAgent, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "string", Format: ""}); err != nil {
+				return nil, err
+			} else {
+				for _, qp := range strings.Split(queryFrag, "&") {
+					rawQueryFragments = append(rawQueryFragments, qp)
+				}
+			}
+
+		}
+
+		if params.Engine != nil {
+
+			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "engine", *params.Engine, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "", Format: ""}); err != nil {
+				return nil, err
+			} else {
+				for _, qp := range strings.Split(queryFrag, "&") {
+					rawQueryFragments = append(rawQueryFragments, qp)
+				}
+			}
+
+		}
+
+		if params.InjectPageScript != nil {
+
+			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "injectPageScript", *params.InjectPageScript, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "string", Format: ""}); err != nil {
+				return nil, err
+			} else {
+				for _, qp := range strings.Split(queryFrag, "&") {
+					rawQueryFragments = append(rawQueryFragments, qp)
+				}
+			}
+
+		}
+
+		if params.InjectFrameScript != nil {
+
+			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "injectFrameScript", *params.InjectFrameScript, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "string", Format: ""}); err != nil {
+				return nil, err
+			} else {
+				for _, qp := range strings.Split(queryFrag, "&") {
+					rawQueryFragments = append(rawQueryFragments, qp)
+				}
+			}
+
+		}
+
+		if params.Timeout != nil {
+
+			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "timeout", *params.Timeout, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "number", Format: ""}); err != nil {
+				return nil, err
+			} else {
+				for _, qp := range strings.Split(queryFrag, "&") {
+					rawQueryFragments = append(rawQueryFragments, qp)
+				}
+			}
+
+		}
+
+		if params.Locale != nil {
+
+			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "locale", *params.Locale, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "string", Format: ""}); err != nil {
+				return nil, err
+			} else {
+				for _, qp := range strings.Split(queryFrag, "&") {
+					rawQueryFragments = append(rawQueryFragments, qp)
+				}
+			}
+
+		}
+
+		if params.Referer != nil {
+
+			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "referer", *params.Referer, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "string", Format: ""}); err != nil {
+				return nil, err
+			} else {
+				for _, qp := range strings.Split(queryFrag, "&") {
+					rawQueryFragments = append(rawQueryFragments, qp)
+				}
+			}
+
+		}
+
+		if params.TokenBudget != nil {
+
+			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "tokenBudget", *params.TokenBudget, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "number", Format: ""}); err != nil {
+				return nil, err
+			} else {
+				for _, qp := range strings.Split(queryFrag, "&") {
+					rawQueryFragments = append(rawQueryFragments, qp)
+				}
+			}
+
+		}
+
+		if params.AssertStatusCode != nil {
+
+			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "assertStatusCode", *params.AssertStatusCode, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "number", Format: ""}); err != nil {
+				return nil, err
+			} else {
+				for _, qp := range strings.Split(queryFrag, "&") {
+					rawQueryFragments = append(rawQueryFragments, qp)
+				}
+			}
+
+		}
+
+		if params.Instruction != nil {
+
+			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "instruction", *params.Instruction, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "string", Format: ""}); err != nil {
+				return nil, err
+			} else {
+				for _, qp := range strings.Split(queryFrag, "&") {
+					rawQueryFragments = append(rawQueryFragments, qp)
+				}
+			}
+
+		}
+
+		if params.JsonSchema != nil {
+
+			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "jsonSchema", *params.JsonSchema, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "string", Format: ""}); err != nil {
+				return nil, err
+			} else {
+				for _, qp := range strings.Split(queryFrag, "&") {
+					rawQueryFragments = append(rawQueryFragments, qp)
+				}
+			}
+
+		}
+
+		if params.RobotsTxt != nil {
+
+			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "robotsTxt", *params.RobotsTxt, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "", Format: ""}); err != nil {
+				return nil, err
+			} else {
+				for _, qp := range strings.Split(queryFrag, "&") {
+					rawQueryFragments = append(rawQueryFragments, qp)
+				}
+			}
+
+		}
+
+		if params.ZeroDataRetention != nil {
+
+			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "zeroDataRetention", *params.ZeroDataRetention, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "", Format: ""}); err != nil {
+				return nil, err
+			} else {
+				for _, qp := range strings.Split(queryFrag, "&") {
+					rawQueryFragments = append(rawQueryFragments, qp)
+				}
+			}
+
+		}
+
+		if params.RespondTiming != nil {
+
+			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "respondTiming", *params.RespondTiming, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "", Format: ""}); err != nil {
+				return nil, err
+			} else {
+				for _, qp := range strings.Split(queryFrag, "&") {
+					rawQueryFragments = append(rawQueryFragments, qp)
+				}
+			}
+
+		}
+
+		if params.MarkdownChunking != nil {
+
+			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "markdownChunking", *params.MarkdownChunking, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "", Format: ""}); err != nil {
+				return nil, err
+			} else {
+				for _, qp := range strings.Split(queryFrag, "&") {
+					rawQueryFragments = append(rawQueryFragments, qp)
+				}
+			}
+
+		}
+
+		if params.MaxTokens != nil {
+
+			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "maxTokens", *params.MaxTokens, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "number", Format: ""}); err != nil {
+				return nil, err
+			} else {
+				for _, qp := range strings.Split(queryFrag, "&") {
+					rawQueryFragments = append(rawQueryFragments, qp)
+				}
+			}
+
+		}
+
+		if encoded := queryValues.Encode(); encoded != "" {
+			rawQueryFragments = append(rawQueryFragments, encoded)
+		}
+		queryURL.RawQuery = strings.Join(rawQueryFragments, "&")
+	}
+
+	req, err := http.NewRequest(http.MethodPost, queryURL.String(), body)
+	if err != nil {
+		return nil, err
+	}
+
+	req.Header.Add("Content-Type", contentType)
+
+	if params != nil {
+
+		if params.Authorization != nil {
+			var headerParam0 string
+
+			headerParam0, err = runtime.StyleParamWithOptions("simple", false, "Authorization", *params.Authorization, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationHeader, Type: "", Format: ""})
+			if err != nil {
+				return nil, err
+			}
+
+			req.Header.Set("Authorization", headerParam0)
+		}
+
+		if params.Accept != nil {
+			var headerParam1 string
+
+			headerParam1, err = runtime.StyleParamWithOptions("simple", false, "Accept", *params.Accept, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationHeader, Type: "string", Format: ""})
+			if err != nil {
+				return nil, err
+			}
+
+			req.Header.Set("Accept", headerParam1)
+		}
+
+		if params.XCacheTolerance != nil {
+			var headerParam2 string
+
+			headerParam2, err = runtime.StyleParamWithOptions("simple", false, "X-Cache-Tolerance", *params.XCacheTolerance, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationHeader, Type: "string", Format: ""})
+			if err != nil {
+				return nil, err
+			}
+
+			req.Header.Set("X-Cache-Tolerance", headerParam2)
+		}
+
+		if params.XNoCache != nil {
+			var headerParam3 string
+
+			headerParam3, err = runtime.StyleParamWithOptions("simple", false, "X-No-Cache", *params.XNoCache, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationHeader, Type: "string", Format: ""})
+			if err != nil {
+				return nil, err
+			}
+
+			req.Header.Set("X-No-Cache", headerParam3)
+		}
+
+		if params.XRespondWith != nil {
+			var headerParam4 string
+
+			headerParam4, err = runtime.StyleParamWithOptions("simple", false, "X-Respond-With", *params.XRespondWith, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationHeader, Type: "string", Format: ""})
+			if err != nil {
+				return nil, err
+			}
+
+			req.Header.Set("X-Respond-With", headerParam4)
+		}
+
+		if params.XWaitForSelector != nil {
+			var headerParam5 string
+
+			headerParam5, err = runtime.StyleParamWithOptions("simple", false, "X-Wait-For-Selector", *params.XWaitForSelector, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationHeader, Type: "string", Format: ""})
+			if err != nil {
+				return nil, err
+			}
+
+			req.Header.Set("X-Wait-For-Selector", headerParam5)
+		}
+
+		if params.XTargetSelector != nil {
+			var headerParam6 string
+
+			headerParam6, err = runtime.StyleParamWithOptions("simple", false, "X-Target-Selector", *params.XTargetSelector, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationHeader, Type: "string", Format: ""})
+			if err != nil {
+				return nil, err
+			}
+
+			req.Header.Set("X-Target-Selector", headerParam6)
+		}
+
+		if params.XRemoveSelector != nil {
+			var headerParam7 string
+
+			headerParam7, err = runtime.StyleParamWithOptions("simple", false, "X-Remove-Selector", *params.XRemoveSelector, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationHeader, Type: "string", Format: ""})
+			if err != nil {
+				return nil, err
+			}
+
+			req.Header.Set("X-Remove-Selector", headerParam7)
+		}
+
+		if params.XKeepImgDataUrl != nil {
+			var headerParam8 string
+
+			headerParam8, err = runtime.StyleParamWithOptions("simple", false, "X-Keep-Img-Data-Url", *params.XKeepImgDataUrl, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationHeader, Type: "string", Format: ""})
+			if err != nil {
+				return nil, err
+			}
+
+			req.Header.Set("X-Keep-Img-Data-Url", headerParam8)
+		}
+
+		if params.XProxyUrl != nil {
+			var headerParam9 string
+
+			headerParam9, err = runtime.StyleParamWithOptions("simple", false, "X-Proxy-Url", *params.XProxyUrl, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationHeader, Type: "string", Format: ""})
+			if err != nil {
+				return nil, err
+			}
+
+			req.Header.Set("X-Proxy-Url", headerParam9)
+		}
+
+		if params.XProxyResources != nil {
+			var headerParam10 string
+
+			headerParam10, err = runtime.StyleParamWithOptions("simple", false, "X-Proxy-Resources", *params.XProxyResources, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationHeader, Type: "string", Format: ""})
+			if err != nil {
+				return nil, err
+			}
+
+			req.Header.Set("X-Proxy-Resources", headerParam10)
+		}
+
+		if params.XProxy != nil {
+			var headerParam11 string
+
+			headerParam11, err = runtime.StyleParamWithOptions("simple", false, "X-Proxy", *params.XProxy, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationHeader, Type: "string", Format: ""})
+			if err != nil {
+				return nil, err
+			}
+
+			req.Header.Set("X-Proxy", headerParam11)
+		}
+
+		if params.XRobotsTxt != nil {
+			var headerParam12 string
+
+			headerParam12, err = runtime.StyleParamWithOptions("simple", false, "X-Robots-Txt", *params.XRobotsTxt, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationHeader, Type: "string", Format: ""})
+			if err != nil {
+				return nil, err
+			}
+
+			req.Header.Set("X-Robots-Txt", headerParam12)
+		}
+
+		if params.DNT != nil {
+			var headerParam13 string
+
+			headerParam13, err = runtime.StyleParamWithOptions("simple", false, "DNT", *params.DNT, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationHeader, Type: "string", Format: ""})
+			if err != nil {
+				return nil, err
+			}
+
+			req.Header.Set("DNT", headerParam13)
+		}
+
+		if params.XSetCookie != nil {
+			var headerParam14 string
+
+			headerParam14, err = runtime.StyleParamWithOptions("simple", false, "X-Set-Cookie", *params.XSetCookie, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationHeader, Type: "string", Format: ""})
+			if err != nil {
+				return nil, err
+			}
+
+			req.Header.Set("X-Set-Cookie", headerParam14)
+		}
+
+		if params.XExportStorageState != nil {
+			var headerParam15 string
+
+			headerParam15, err = runtime.StyleParamWithOptions("simple", false, "X-Export-Storage-State", *params.XExportStorageState, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationHeader, Type: "string", Format: ""})
+			if err != nil {
+				return nil, err
+			}
+
+			req.Header.Set("X-Export-Storage-State", headerParam15)
+		}
+
+		if params.XWithGeneratedAlt != nil {
+			var headerParam16 string
+
+			headerParam16, err = runtime.StyleParamWithOptions("simple", false, "X-With-Generated-Alt", *params.XWithGeneratedAlt, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationHeader, Type: "string", Format: ""})
+			if err != nil {
+				return nil, err
+			}
+
+			req.Header.Set("X-With-Generated-Alt", headerParam16)
+		}
+
+		if params.XWithImagesSummary != nil {
+			var headerParam17 string
+
+			headerParam17, err = runtime.StyleParamWithOptions("simple", false, "X-With-Images-Summary", *params.XWithImagesSummary, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationHeader, Type: "string", Format: ""})
+			if err != nil {
+				return nil, err
+			}
+
+			req.Header.Set("X-With-Images-Summary", headerParam17)
+		}
+
+		if params.XWithLinksSummary != nil {
+			var headerParam18 string
+
+			headerParam18, err = runtime.StyleParamWithOptions("simple", false, "X-With-links-Summary", *params.XWithLinksSummary, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationHeader, Type: "string", Format: ""})
+			if err != nil {
+				return nil, err
+			}
+
+			req.Header.Set("X-With-links-Summary", headerParam18)
+		}
+
+		if params.XRetainLinks != nil {
+			var headerParam19 string
+
+			headerParam19, err = runtime.StyleParamWithOptions("simple", false, "X-Retain-Links", *params.XRetainLinks, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationHeader, Type: "string", Format: ""})
+			if err != nil {
+				return nil, err
+			}
+
+			req.Header.Set("X-Retain-Links", headerParam19)
+		}
+
+		if params.XRetainImages != nil {
+			var headerParam20 string
+
+			headerParam20, err = runtime.StyleParamWithOptions("simple", false, "X-Retain-Images", *params.XRetainImages, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationHeader, Type: "string", Format: ""})
+			if err != nil {
+				return nil, err
+			}
+
+			req.Header.Set("X-Retain-Images", headerParam20)
+		}
+
+		if params.XRetainMedia != nil {
+			var headerParam21 string
+
+			headerParam21, err = runtime.StyleParamWithOptions("simple", false, "X-Retain-Media", *params.XRetainMedia, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationHeader, Type: "string", Format: ""})
+			if err != nil {
+				return nil, err
+			}
+
+			req.Header.Set("X-Retain-Media", headerParam21)
+		}
+
+		if params.XPreset != nil {
+			var headerParam22 string
+
+			headerParam22, err = runtime.StyleParamWithOptions("simple", false, "X-Preset", *params.XPreset, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationHeader, Type: "string", Format: ""})
+			if err != nil {
+				return nil, err
+			}
+
+			req.Header.Set("X-Preset", headerParam22)
+		}
+
+		if params.XWithIframe != nil {
+			var headerParam23 string
+
+			headerParam23, err = runtime.StyleParamWithOptions("simple", false, "X-With-Iframe", *params.XWithIframe, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationHeader, Type: "string", Format: ""})
+			if err != nil {
+				return nil, err
+			}
+
+			req.Header.Set("X-With-Iframe", headerParam23)
+		}
+
+		if params.XWithShadowDom != nil {
+			var headerParam24 string
+
+			headerParam24, err = runtime.StyleParamWithOptions("simple", false, "X-With-Shadow-Dom", *params.XWithShadowDom, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationHeader, Type: "string", Format: ""})
+			if err != nil {
+				return nil, err
+			}
+
+			req.Header.Set("X-With-Shadow-Dom", headerParam24)
+		}
+
+		if params.XSkipCertVerification != nil {
+			var headerParam25 string
+
+			headerParam25, err = runtime.StyleParamWithOptions("simple", false, "X-Skip-Cert-Verification", *params.XSkipCertVerification, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationHeader, Type: "string", Format: ""})
+			if err != nil {
+				return nil, err
+			}
+
+			req.Header.Set("X-Skip-Cert-Verification", headerParam25)
+		}
+
+		if params.XUserAgent != nil {
+			var headerParam26 string
+
+			headerParam26, err = runtime.StyleParamWithOptions("simple", false, "X-User-Agent", *params.XUserAgent, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationHeader, Type: "string", Format: ""})
+			if err != nil {
+				return nil, err
+			}
+
+			req.Header.Set("X-User-Agent", headerParam26)
+		}
+
+		if params.XTimeout != nil {
+			var headerParam27 string
+
+			headerParam27, err = runtime.StyleParamWithOptions("simple", false, "X-Timeout", *params.XTimeout, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationHeader, Type: "string", Format: ""})
+			if err != nil {
+				return nil, err
+			}
+
+			req.Header.Set("X-Timeout", headerParam27)
+		}
+
+		if params.XLocale != nil {
+			var headerParam28 string
+
+			headerParam28, err = runtime.StyleParamWithOptions("simple", false, "X-Locale", *params.XLocale, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationHeader, Type: "string", Format: ""})
+			if err != nil {
+				return nil, err
+			}
+
+			req.Header.Set("X-Locale", headerParam28)
+		}
+
+		if params.XReferer != nil {
+			var headerParam29 string
+
+			headerParam29, err = runtime.StyleParamWithOptions("simple", false, "X-Referer", *params.XReferer, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationHeader, Type: "string", Format: ""})
+			if err != nil {
+				return nil, err
+			}
+
+			req.Header.Set("X-Referer", headerParam29)
+		}
+
+		if params.XTokenBudget != nil {
+			var headerParam30 string
+
+			headerParam30, err = runtime.StyleParamWithOptions("simple", false, "X-Token-Budget", *params.XTokenBudget, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationHeader, Type: "string", Format: ""})
+			if err != nil {
+				return nil, err
+			}
+
+			req.Header.Set("X-Token-Budget", headerParam30)
+		}
+
+		if params.XMaxTokens != nil {
+			var headerParam31 string
+
+			headerParam31, err = runtime.StyleParamWithOptions("simple", false, "X-Max-Tokens", *params.XMaxTokens, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationHeader, Type: "string", Format: ""})
+			if err != nil {
+				return nil, err
+			}
+
+			req.Header.Set("X-Max-Tokens", headerParam31)
+		}
+
+		if params.XAssertStatusCode != nil {
+			var headerParam32 string
+
+			headerParam32, err = runtime.StyleParamWithOptions("simple", false, "X-Assert-Status-Code", *params.XAssertStatusCode, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationHeader, Type: "string", Format: ""})
+			if err != nil {
+				return nil, err
+			}
+
+			req.Header.Set("X-Assert-Status-Code", headerParam32)
+		}
+
+		if params.XRespondTiming != nil {
+			var headerParam33 string
+
+			headerParam33, err = runtime.StyleParamWithOptions("simple", false, "X-Respond-Timing", *params.XRespondTiming, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationHeader, Type: "string", Format: ""})
+			if err != nil {
+				return nil, err
+			}
+
+			req.Header.Set("X-Respond-Timing", headerParam33)
+		}
+
+		if params.XEngine != nil {
+			var headerParam34 string
+
+			headerParam34, err = runtime.StyleParamWithOptions("simple", false, "X-Engine", *params.XEngine, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationHeader, Type: "string", Format: ""})
+			if err != nil {
+				return nil, err
+			}
+
+			req.Header.Set("X-Engine", headerParam34)
+		}
+
+		if params.XBase != nil {
+			var headerParam35 string
+
+			headerParam35, err = runtime.StyleParamWithOptions("simple", false, "X-Base", *params.XBase, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationHeader, Type: "string", Format: ""})
+			if err != nil {
+				return nil, err
+			}
+
+			req.Header.Set("X-Base", headerParam35)
+		}
+
+		if params.XRemoveOverlay != nil {
+			var headerParam36 string
+
+			headerParam36, err = runtime.StyleParamWithOptions("simple", false, "X-Remove-Overlay", *params.XRemoveOverlay, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationHeader, Type: "string", Format: ""})
+			if err != nil {
+				return nil, err
+			}
+
+			req.Header.Set("X-Remove-Overlay", headerParam36)
+		}
+
+		if params.XDetachInvisibles != nil {
+			var headerParam37 string
+
+			headerParam37, err = runtime.StyleParamWithOptions("simple", false, "X-Detach-Invisibles", *params.XDetachInvisibles, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationHeader, Type: "string", Format: ""})
+			if err != nil {
+				return nil, err
+			}
+
+			req.Header.Set("X-Detach-Invisibles", headerParam37)
+		}
+
+		if params.XMarkdownChunking != nil {
+			var headerParam38 string
+
+			headerParam38, err = runtime.StyleParamWithOptions("simple", false, "X-Markdown-Chunking", *params.XMarkdownChunking, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationHeader, Type: "string", Format: ""})
+			if err != nil {
+				return nil, err
+			}
+
+			req.Header.Set("X-Markdown-Chunking", headerParam38)
+		}
+
+		if params.XMdHeadingStyle != nil {
+			var headerParam39 string
+
+			headerParam39, err = runtime.StyleParamWithOptions("simple", false, "X-Md-Heading-Style", *params.XMdHeadingStyle, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationHeader, Type: "string", Format: ""})
+			if err != nil {
+				return nil, err
+			}
+
+			req.Header.Set("X-Md-Heading-Style", headerParam39)
+		}
+
+		if params.XMdHr != nil {
+			var headerParam40 string
+
+			headerParam40, err = runtime.StyleParamWithOptions("simple", false, "X-Md-Hr", *params.XMdHr, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationHeader, Type: "string", Format: ""})
+			if err != nil {
+				return nil, err
+			}
+
+			req.Header.Set("X-Md-Hr", headerParam40)
+		}
+
+		if params.XMdBulletListMarker != nil {
+			var headerParam41 string
+
+			headerParam41, err = runtime.StyleParamWithOptions("simple", false, "X-Md-Bullet-List-Marker", *params.XMdBulletListMarker, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationHeader, Type: "string", Format: ""})
+			if err != nil {
+				return nil, err
+			}
+
+			req.Header.Set("X-Md-Bullet-List-Marker", headerParam41)
+		}
+
+		if params.XMdEmDelimiter != nil {
+			var headerParam42 string
+
+			headerParam42, err = runtime.StyleParamWithOptions("simple", false, "X-Md-Em-Delimiter", *params.XMdEmDelimiter, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationHeader, Type: "string", Format: ""})
+			if err != nil {
+				return nil, err
+			}
+
+			req.Header.Set("X-Md-Em-Delimiter", headerParam42)
+		}
+
+		if params.XMdStrongDelimiter != nil {
+			var headerParam43 string
+
+			headerParam43, err = runtime.StyleParamWithOptions("simple", false, "X-Md-Strong-Delimiter", *params.XMdStrongDelimiter, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationHeader, Type: "string", Format: ""})
+			if err != nil {
+				return nil, err
+			}
+
+			req.Header.Set("X-Md-Strong-Delimiter", headerParam43)
+		}
+
+		if params.XMdLinkStyle != nil {
+			var headerParam44 string
+
+			headerParam44, err = runtime.StyleParamWithOptions("simple", false, "X-Md-Link-Style", *params.XMdLinkStyle, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationHeader, Type: "string", Format: ""})
+			if err != nil {
+				return nil, err
+			}
+
+			req.Header.Set("X-Md-Link-Style", headerParam44)
+		}
+
+		if params.XMdLinkReferenceStyle != nil {
+			var headerParam45 string
+
+			headerParam45, err = runtime.StyleParamWithOptions("simple", false, "X-Md-Link-Reference-Style", *params.XMdLinkReferenceStyle, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationHeader, Type: "string", Format: ""})
+			if err != nil {
+				return nil, err
+			}
+
+			req.Header.Set("X-Md-Link-Reference-Style", headerParam45)
+		}
+
+		if params.XPage != nil {
+			var headerParam46 string
+
+			headerParam46, err = runtime.StyleParamWithOptions("simple", false, "X-Page", *params.XPage, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationHeader, Type: "string", Format: ""})
+			if err != nil {
+				return nil, err
+			}
+
+			req.Header.Set("X-Page", headerParam46)
+		}
+
+		if params.XPreloadUrl != nil {
+			var headerParam47 string
+
+			headerParam47, err = runtime.StyleParamWithOptions("simple", false, "X-Preload-Url", *params.XPreloadUrl, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationHeader, Type: "string", Format: ""})
+			if err != nil {
+				return nil, err
+			}
+
+			req.Header.Set("X-Preload-Url", headerParam47)
+		}
+
+		if params.XNoServiceWorker != nil {
+			var headerParam48 string
+
+			headerParam48, err = runtime.StyleParamWithOptions("simple", false, "X-No-Service-Worker", *params.XNoServiceWorker, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationHeader, Type: "string", Format: ""})
+			if err != nil {
+				return nil, err
+			}
+
+			req.Header.Set("X-No-Service-Worker", headerParam48)
+		}
+
+	}
+
+	return req, nil
+}
+
 // NewGetTargetUrlRequest constructs an http.Request for the GetTargetUrl method
 func NewGetTargetUrlRequest(server string, targetUrl string, params *GetTargetUrlParams) (*http.Request, error) {
 	var err error
@@ -6870,6 +8163,33 @@ type ClientWithResponsesInterface interface {
 	// Corresponds with POST /ephemeral/{encodedFid} (the `PostEphemeralEncodedFid` operationId).
 	PostEphemeralEncodedFidWithFormdataBodyWithResponse(ctx context.Context, encodedFid string, params *PostEphemeralEncodedFidParams, body PostEphemeralEncodedFidFormdataRequestBody, reqEditors ...RequestEditorFn) (*PostEphemeralEncodedFidResponse, error)
 
+	// PostReadWithBodyWithResponse readDedicatedEntrypoint
+	//
+	// Dedicated entrypoint for the read service.
+	//
+	// Takes any type of body and a specified content type, and returns a wrapper object for the known response body format(s).
+	//
+	// Corresponds with POST /read (the `PostRead` operationId).
+	PostReadWithBodyWithResponse(ctx context.Context, params *PostReadParams, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*PostReadResponse, error)
+
+	// PostReadWithResponse readDedicatedEntrypoint
+	//
+	// Dedicated entrypoint for the read service.
+	//
+	// Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
+	//
+	// Corresponds with POST /read (the `PostRead` operationId).
+	PostReadWithResponse(ctx context.Context, params *PostReadParams, body PostReadJSONRequestBody, reqEditors ...RequestEditorFn) (*PostReadResponse, error)
+
+	// PostReadWithFormdataBodyWithResponse readDedicatedEntrypoint
+	//
+	// Dedicated entrypoint for the read service.
+	//
+	// Takes a body of the `application/x-www-form-urlencoded` content type, and returns a wrapper object for the known response body format(s).
+	//
+	// Corresponds with POST /read (the `PostRead` operationId).
+	PostReadWithFormdataBodyWithResponse(ctx context.Context, params *PostReadParams, body PostReadFormdataRequestBody, reqEditors ...RequestEditorFn) (*PostReadResponse, error)
+
 	// GetTargetUrlWithResponse read
 	//
 	// Read a URL and get its content back in an LLM-friendly format.
@@ -8785,6 +10105,204 @@ func (r PostEphemeralEncodedFidResponse) ContentType() string {
 	return ""
 }
 
+type PostReadResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	// JSON200 the response for an HTTP 200 `application/json` response
+	JSON200 *struct {
+		// Code [REQUIRED]
+		//
+		// Envelope code.
+		//
+		// Mirror of HTTP status code
+		//
+		// - Cast to: &lt; **number** &gt;
+		//
+		// - Member of &lt;ReaderEnvelope&gt;
+		//
+		// - Defaults to: 200
+		Code float64 `json:"code"`
+
+		// Data The result payload you expect
+		//
+		// - Cast to: &lt; **FormattedPageDto** &gt;
+		//
+		// - Member of &lt;ReaderEnvelope&gt;
+		Data *FormattedPageDto0x43 `json:"data,omitempty"`
+
+		// Meta The metadata that the payload sometimes came with
+		//
+		// - Cast to: &lt; **object** &gt;
+		//
+		// - Member of &lt;ReaderEnvelope&gt;
+		Meta interface{} `json:"meta,omitempty"`
+
+		// Status [REQUIRED]
+		//
+		// Envelope status.
+		//
+		// In extension to HTTP status code
+		//
+		// - Cast to: &lt; **number** &gt;
+		//
+		// - Member of &lt;ReaderEnvelope&gt;
+		//
+		// - Defaults to: 20000
+		Status float64 `json:"status"`
+	}
+	// JSON400 the response for an HTTP 400 `application/json` response
+	JSON400 *PostRead400JSONResponseBody
+	// JSON401 the response for an HTTP 401 `application/json` response
+	JSON401 *PostRead401JSONResponseBody
+	// JSON402 the response for an HTTP 402 `application/json` response
+	JSON402 *PostRead402JSONResponseBody
+	// JSON403 the response for an HTTP 403 `application/json` response
+	JSON403 *PostRead403JSONResponseBody
+	// JSON409 the response for an HTTP 409 `application/json` response
+	JSON409 *PostRead409JSONResponseBody
+	// JSON413 the response for an HTTP 413 `application/json` response
+	JSON413 *TargetFileTooLargeError0x33
+	// JSON422 the response for an HTTP 422 `application/json` response
+	JSON422 *PostRead422JSONResponseBody
+	// JSON429 the response for an HTTP 429 `application/json` response
+	JSON429 *RateLimitTriggeredError0x37
+	// JSON451 the response for an HTTP 451 `application/json` response
+	JSON451 *HarmfulContentError0x38
+	// JSON500 the response for an HTTP 500 `application/json` response
+	JSON500 *DownstreamServiceError0x39
+	// JSON503 the response for an HTTP 503 `application/json` response
+	JSON503 *ServiceNodeResourceDrainError0x3a
+}
+
+// GetJSON200 returns the response for an HTTP 200 `application/json` response
+func (r PostReadResponse) GetJSON200() *struct {
+	// Code [REQUIRED]
+	//
+	// Envelope code.
+	//
+	// Mirror of HTTP status code
+	//
+	// - Cast to: &lt; **number** &gt;
+	//
+	// - Member of &lt;ReaderEnvelope&gt;
+	//
+	// - Defaults to: 200
+	Code float64 `json:"code"`
+
+	// Data The result payload you expect
+	//
+	// - Cast to: &lt; **FormattedPageDto** &gt;
+	//
+	// - Member of &lt;ReaderEnvelope&gt;
+	Data *FormattedPageDto0x43 `json:"data,omitempty"`
+
+	// Meta The metadata that the payload sometimes came with
+	//
+	// - Cast to: &lt; **object** &gt;
+	//
+	// - Member of &lt;ReaderEnvelope&gt;
+	Meta interface{} `json:"meta,omitempty"`
+
+	// Status [REQUIRED]
+	//
+	// Envelope status.
+	//
+	// In extension to HTTP status code
+	//
+	// - Cast to: &lt; **number** &gt;
+	//
+	// - Member of &lt;ReaderEnvelope&gt;
+	//
+	// - Defaults to: 20000
+	Status float64 `json:"status"`
+} {
+	return r.JSON200
+}
+
+// GetJSON400 returns the response for an HTTP 400 `application/json` response
+func (r PostReadResponse) GetJSON400() *PostRead400JSONResponseBody {
+	return r.JSON400
+}
+
+// GetJSON401 returns the response for an HTTP 401 `application/json` response
+func (r PostReadResponse) GetJSON401() *PostRead401JSONResponseBody {
+	return r.JSON401
+}
+
+// GetJSON402 returns the response for an HTTP 402 `application/json` response
+func (r PostReadResponse) GetJSON402() *PostRead402JSONResponseBody {
+	return r.JSON402
+}
+
+// GetJSON403 returns the response for an HTTP 403 `application/json` response
+func (r PostReadResponse) GetJSON403() *PostRead403JSONResponseBody {
+	return r.JSON403
+}
+
+// GetJSON409 returns the response for an HTTP 409 `application/json` response
+func (r PostReadResponse) GetJSON409() *PostRead409JSONResponseBody {
+	return r.JSON409
+}
+
+// GetJSON413 returns the response for an HTTP 413 `application/json` response
+func (r PostReadResponse) GetJSON413() *TargetFileTooLargeError0x33 {
+	return r.JSON413
+}
+
+// GetJSON422 returns the response for an HTTP 422 `application/json` response
+func (r PostReadResponse) GetJSON422() *PostRead422JSONResponseBody {
+	return r.JSON422
+}
+
+// GetJSON429 returns the response for an HTTP 429 `application/json` response
+func (r PostReadResponse) GetJSON429() *RateLimitTriggeredError0x37 {
+	return r.JSON429
+}
+
+// GetJSON451 returns the response for an HTTP 451 `application/json` response
+func (r PostReadResponse) GetJSON451() *HarmfulContentError0x38 {
+	return r.JSON451
+}
+
+// GetJSON500 returns the response for an HTTP 500 `application/json` response
+func (r PostReadResponse) GetJSON500() *DownstreamServiceError0x39 {
+	return r.JSON500
+}
+
+// GetJSON503 returns the response for an HTTP 503 `application/json` response
+func (r PostReadResponse) GetJSON503() *ServiceNodeResourceDrainError0x3a {
+	return r.JSON503
+}
+
+// GetBody returns the raw response body bytes
+func (r PostReadResponse) GetBody() []byte {
+	return r.Body
+}
+
+// Status returns HTTPResponse.Status
+func (r PostReadResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r PostReadResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
+func (r PostReadResponse) ContentType() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Header.Get("Content-Type")
+	}
+	return ""
+}
+
 type GetTargetUrlResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
@@ -9659,6 +11177,51 @@ func (c *ClientWithResponses) PostEphemeralEncodedFidWithFormdataBodyWithRespons
 		return nil, err
 	}
 	return ParsePostEphemeralEncodedFidResponse(rsp)
+}
+
+// PostReadWithBodyWithResponse readDedicatedEntrypoint
+//
+// Dedicated entrypoint for the read service.
+//
+// Takes any type of body and a specified content type, and returns a wrapper object for the known response body format(s).
+//
+// Corresponds with POST /read (the `PostRead` operationId).
+func (c *ClientWithResponses) PostReadWithBodyWithResponse(ctx context.Context, params *PostReadParams, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*PostReadResponse, error) {
+	rsp, err := c.PostReadWithBody(ctx, params, contentType, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParsePostReadResponse(rsp)
+}
+
+// PostReadWithResponse readDedicatedEntrypoint
+//
+// Dedicated entrypoint for the read service.
+//
+// Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
+//
+// Corresponds with POST /read (the `PostRead` operationId).
+func (c *ClientWithResponses) PostReadWithResponse(ctx context.Context, params *PostReadParams, body PostReadJSONRequestBody, reqEditors ...RequestEditorFn) (*PostReadResponse, error) {
+	rsp, err := c.PostRead(ctx, params, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParsePostReadResponse(rsp)
+}
+
+// PostReadWithFormdataBodyWithResponse readDedicatedEntrypoint
+//
+// Dedicated entrypoint for the read service.
+//
+// Takes a body of the `application/x-www-form-urlencoded` content type, and returns a wrapper object for the known response body format(s).
+//
+// Corresponds with POST /read (the `PostRead` operationId).
+func (c *ClientWithResponses) PostReadWithFormdataBodyWithResponse(ctx context.Context, params *PostReadParams, body PostReadFormdataRequestBody, reqEditors ...RequestEditorFn) (*PostReadResponse, error) {
+	rsp, err := c.PostReadWithFormdataBody(ctx, params, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParsePostReadResponse(rsp)
 }
 
 // GetTargetUrlWithResponse read
@@ -10830,6 +12393,152 @@ func ParsePostEphemeralEncodedFidResponse(rsp *http.Response) (*PostEphemeralEnc
 			return nil, err
 		}
 		response.JSON404 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParsePostReadResponse parses an HTTP response from a PostReadWithResponse call
+func ParsePostReadResponse(rsp *http.Response) (*PostReadResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &PostReadResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest struct {
+			// Code [REQUIRED]
+			//
+			// Envelope code.
+			//
+			// Mirror of HTTP status code
+			//
+			// - Cast to: &lt; **number** &gt;
+			//
+			// - Member of &lt;ReaderEnvelope&gt;
+			//
+			// - Defaults to: 200
+			Code float64 `json:"code"`
+
+			// Data The result payload you expect
+			//
+			// - Cast to: &lt; **FormattedPageDto** &gt;
+			//
+			// - Member of &lt;ReaderEnvelope&gt;
+			Data *FormattedPageDto0x43 `json:"data,omitempty"`
+
+			// Meta The metadata that the payload sometimes came with
+			//
+			// - Cast to: &lt; **object** &gt;
+			//
+			// - Member of &lt;ReaderEnvelope&gt;
+			Meta interface{} `json:"meta,omitempty"`
+
+			// Status [REQUIRED]
+			//
+			// Envelope status.
+			//
+			// In extension to HTTP status code
+			//
+			// - Cast to: &lt; **number** &gt;
+			//
+			// - Member of &lt;ReaderEnvelope&gt;
+			//
+			// - Defaults to: 20000
+			Status float64 `json:"status"`
+		}
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 400:
+		var dest PostRead400JSONResponseBody
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON400 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 401:
+		var dest PostRead401JSONResponseBody
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON401 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 402:
+		var dest PostRead402JSONResponseBody
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON402 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 403:
+		var dest PostRead403JSONResponseBody
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON403 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 409:
+		var dest PostRead409JSONResponseBody
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON409 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 413:
+		var dest TargetFileTooLargeError0x33
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON413 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 422:
+		var dest PostRead422JSONResponseBody
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON422 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 429:
+		var dest RateLimitTriggeredError0x37
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON429 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 451:
+		var dest HarmfulContentError0x38
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON451 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 500:
+		var dest DownstreamServiceError0x39
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON500 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 503:
+		var dest ServiceNodeResourceDrainError0x3a
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON503 = &dest
+
+	case rsp.StatusCode == 200:
+		// Content-type (text/plain; charset=utf-8) unsupported
 
 	}
 

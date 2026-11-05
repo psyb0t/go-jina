@@ -2,6 +2,14 @@
 
 All notable changes per release. Versions follow [semver](https://semver.org).
 
+## v0.6.0, 2026-11-05
+
+- Added the `POST /read` operation (`PostRead`, the read dedicated entrypoint) to `jinareader`.
+- Added the `Client` methods `PostRead`, `PostReadWithBody` and `PostReadWithFormdataBody`, and the `ClientWithResponses` methods `PostReadWithResponse`, `PostReadWithBodyWithResponse` and `PostReadWithFormdataBodyWithResponse`.
+- Added the request builders `NewPostReadRequest`, `NewPostReadRequestWithBody` and `NewPostReadRequestWithFormdataBody`, and the parser `ParsePostReadResponse`.
+- Added the request body types `PostReadJSONBody`, `PostReadFormdataBody` and `PostReadMultipartBody`, the aliases `PostReadJSONRequestBody` and `PostReadFormdataRequestBody`, and the error response types `PostRead400JSONResponseBody` to `PostRead422JSONResponseBody`.
+- The `ClientInterface` and `ClientWithResponsesInterface` interfaces in `jinareader` gained the matching `PostRead` methods. Custom implementations or mocks of these interfaces must add them.
+
 ## v0.5.0, 2026-11-03
 
 - The Echo body types in `jinareader` changed from type aliases to defined types: `PostEchoJSONBody`, `PutEchoJSONBody`, `PatchEchoJSONBody`, their `MultipartBody` equivalents and the same types for `PostEchoRest`, `PutEchoRest` and `PatchEchoRest`. Each was `= interface{}` and is now `interface{}` as its own type.

@@ -4913,6 +4913,1611 @@ type PostEphemeralEncodedFidParams struct {
 	Crop *string    `form:"crop,omitempty" json:"crop,omitempty"`
 }
 
+// PostReadJSONBody defines parameters for PostRead.
+type PostReadJSONBody struct {
+	// AssertStatusCode - Cast to: &lt; **number** &gt;
+	//
+	// - Member of &lt;CrawlerOptions&gt;
+	AssertStatusCode *float64 `json:"assertStatusCode,omitempty"`
+
+	// Base - Cast to: &lt; **&quot;initial&quot; | &quot;final&quot;** &gt;
+	//
+	// - Member of &lt;CrawlerOptions&gt;
+	//
+	// - Defaults to: &#39;final&#39;
+	Base *Enum0x0d `json:"base,omitempty"`
+
+	// CacheTolerance - Cast to: &lt; **number** &gt;
+	//
+	// - Member of &lt;CrawlerOptions&gt;
+	CacheTolerance *float64 `json:"cacheTolerance,omitempty"`
+
+	// CustomHeader - Cast to: &lt; **Record&lt;string, string&gt;** &gt;
+	//
+	// - Member of &lt;CrawlerOptions&gt;
+	CustomHeader *map[string]string `json:"customHeader,omitempty"`
+
+	// DetachInvisibles - Cast to: &lt; **PseudoBooleanLoose** &gt;
+	//
+	// - Member of &lt;CrawlerOptions&gt;
+	DetachInvisibles *PseudoBooleanLoose0x0c `json:"detachInvisibles,omitempty"`
+
+	// Engine - Cast to: &lt; **&quot;auto&quot; | &quot;browser&quot; | &quot;curl&quot; | &quot;cf-browser-rendering&quot;|string** &gt;
+	//
+	// - Member of &lt;CrawlerOptions&gt;
+	Engine *PostReadJSONBody_Engine `json:"engine,omitempty"`
+
+	// ExportStorageState - Cast to: &lt; **PseudoBooleanLoose** &gt;
+	//
+	// - Member of &lt;CrawlerOptions&gt;
+	ExportStorageState *PseudoBooleanLoose0x0c `json:"exportStorageState,omitempty"`
+
+	// File Base64 encoded file.
+	//
+	// - Cast to: &lt; **FancyFile|string** &gt;
+	//
+	// - Member of &lt;CrawlerOptions&gt;
+	File *PostReadJSONBody_File `json:"file,omitempty"`
+
+	// Html - Cast to: &lt; **string** &gt;
+	//
+	// - Member of &lt;CrawlerOptions&gt;
+	Html *string `json:"html,omitempty"`
+
+	// InjectFrameScript - Cast to: &lt; **Array&lt;string&gt;** &gt;
+	//
+	// - Member of &lt;CrawlerOptions&gt;
+	InjectFrameScript *[]string `json:"injectFrameScript,omitempty"`
+
+	// InjectPageScript - Cast to: &lt; **Array&lt;string&gt;** &gt;
+	//
+	// - Member of &lt;CrawlerOptions&gt;
+	InjectPageScript *[]string `json:"injectPageScript,omitempty"`
+
+	// Instruction - Cast to: &lt; **string** &gt;
+	//
+	// - Member of &lt;CrawlerOptions&gt;
+	Instruction *string `json:"instruction,omitempty"`
+
+	// JsonSchema Can be any value - string, number, boolean, array or object.
+	//
+	// - Cast to: &lt; **object** &gt;
+	//
+	// - Member of &lt;CrawlerOptions&gt;
+	JsonSchema interface{} `json:"jsonSchema,omitempty"`
+
+	// KeepImgDataUrl - Cast to: &lt; **PseudoBooleanLoose** &gt;
+	//
+	// - Member of &lt;CrawlerOptions&gt;
+	KeepImgDataUrl *PseudoBooleanLoose0x0c `json:"keepImgDataUrl,omitempty"`
+
+	// Locale - Cast to: &lt; **string** &gt;
+	//
+	// - Member of &lt;CrawlerOptions&gt;
+	Locale *string `json:"locale,omitempty"`
+
+	// Markdown - Cast to: &lt; **TurnDownTweakableOptions** &gt;
+	//
+	// - Member of &lt;CrawlerOptions&gt;
+	Markdown *TurnDownTweakableOptions0x24 `json:"markdown,omitempty"`
+
+	// MarkdownChunking - Cast to: &lt; **&quot;true&quot; | &quot;h1&quot; | &quot;h2&quot; | &quot;h3&quot; | &quot;h4&quot; | &quot;h5&quot; | &quot;structured&quot; | &quot;s1&quot; | &quot;s2&quot; | &quot;s3&quot; | &quot;s4&quot; | &quot;s5&quot;|string** &gt;
+	//
+	// - Member of &lt;CrawlerOptions&gt;
+	MarkdownChunking *PostReadJSONBody_MarkdownChunking `json:"markdownChunking,omitempty"`
+
+	// MaxTokens - Cast to: &lt; **number** &gt;
+	//
+	// - Member of &lt;CrawlerOptions&gt;
+	//
+	// - Some validators will be applied on value(s): (v) =&gt; v &gt;= 500
+	MaxTokens *float64 `json:"maxTokens,omitempty"`
+
+	// NoCache - Cast to: &lt; **PseudoBooleanLoose** &gt;
+	//
+	// - Member of &lt;CrawlerOptions&gt;
+	NoCache *PseudoBooleanLoose0x0c `json:"noCache,omitempty"`
+
+	// NoGfm - Cast to: &lt; **PseudoBoolean|string** &gt;
+	//
+	// - Member of &lt;CrawlerOptions&gt;
+	NoGfm *PostReadJSONBody_NoGfm `json:"noGfm,omitempty"`
+
+	// NoServiceWorker - Cast to: &lt; **PseudoBooleanLoose** &gt;
+	//
+	// - Member of &lt;CrawlerOptions&gt;
+	NoServiceWorker *PseudoBooleanLoose0x0c `json:"noServiceWorker,omitempty"`
+
+	// Ocr - Cast to: &lt; **OCRPreferences** &gt;
+	//
+	// - Member of &lt;CrawlerOptions&gt;
+	Ocr *OCRPreferences0x25 `json:"ocr,omitempty"`
+
+	// Page Steer which page(s) to return for document files. See PageSelection.
+	//
+	// - Cast to: &lt; **PageSelection** &gt;
+	//
+	// - Member of &lt;CrawlerOptions&gt;
+	Page *PageSelection0x0f `json:"page,omitempty"`
+
+	// Pdf Base64 encoded PDF.
+	//
+	// - Cast to: &lt; **FancyFile|string** &gt;
+	//
+	// - Member of &lt;CrawlerOptions&gt;
+	Pdf *PostReadJSONBody_Pdf `json:"pdf,omitempty"`
+
+	// PreloadUrl - Cast to: &lt; **string** &gt;
+	//
+	// - Member of &lt;CrawlerOptions&gt;
+	PreloadUrl *string `json:"preloadUrl,omitempty"`
+
+	// Preset - Cast to: &lt; **&quot;reader&quot; | &quot;index&quot; | &quot;research&quot; | &quot;agent&quot; | &quot;spider&quot; | &quot;ocr&quot; | &quot;ocr+&quot; | &quot;ocr++&quot; | &quot;pdf&quot; | &quot;pdf+&quot; | &quot;pdf++&quot;** &gt;
+	//
+	// - Member of &lt;CrawlerOptions&gt;
+	Preset *Enum0x14 `json:"preset,omitempty"`
+
+	// Proxy - Cast to: &lt; **string** &gt;
+	//
+	// - Member of &lt;CrawlerOptions&gt;
+	Proxy *string `json:"proxy,omitempty"`
+
+	// ProxyResources - Cast to: &lt; **PseudoBooleanLoose** &gt;
+	//
+	// - Member of &lt;CrawlerOptions&gt;
+	ProxyResources *PseudoBooleanLoose0x0c `json:"proxyResources,omitempty"`
+
+	// ProxyUrl - Cast to: &lt; **string** &gt;
+	//
+	// - Member of &lt;CrawlerOptions&gt;
+	ProxyUrl *string `json:"proxyUrl,omitempty"`
+
+	// Referer - Cast to: &lt; **string** &gt;
+	//
+	// - Member of &lt;CrawlerOptions&gt;
+	Referer *string `json:"referer,omitempty"`
+
+	// RemoveOverlay - Cast to: &lt; **PseudoBooleanLoose** &gt;
+	//
+	// - Member of &lt;CrawlerOptions&gt;
+	RemoveOverlay *PseudoBooleanLoose0x0c `json:"removeOverlay,omitempty"`
+
+	// RemoveSelector - Cast to: &lt; **Array&lt;string&gt;** &gt;
+	//
+	// - Member of &lt;CrawlerOptions&gt;
+	RemoveSelector *[]string `json:"removeSelector,omitempty"`
+
+	// RespondTiming - Cast to: &lt; **&quot;html&quot; | &quot;visible-content&quot; | &quot;mutation-idle&quot; | &quot;resource-idle&quot; | &quot;media-idle&quot; | &quot;network-idle&quot;** &gt;
+	//
+	// - Member of &lt;CrawlerOptions&gt;
+	RespondTiming *Enum0x26 `json:"respondTiming,omitempty"`
+
+	// RespondWith - Cast to: &lt; **&quot;content&quot; | &quot;markdown&quot; | &quot;html&quot; | &quot;text&quot; | &quot;pageshot&quot; | &quot;screenshot&quot; | &quot;vlm&quot; | &quot;readerlm-v2&quot; | &quot;frontmatter&quot; | &quot;readability&quot; | &quot;...|string** &gt;
+	//
+	// - Member of &lt;CrawlerOptions&gt;
+	//
+	// - Defaults to: &#39;content&#39;
+	RespondWith *PostReadJSONBody_RespondWith `json:"respondWith,omitempty"`
+
+	// RetainImages - Cast to: &lt; **&quot;none&quot; | &quot;all&quot; | &quot;alt&quot; | &quot;all_p&quot; | &quot;alt_p&quot;** &gt;
+	//
+	// - Member of &lt;CrawlerOptions&gt;
+	//
+	// - Defaults to: &#39;all&#39;
+	RetainImages *Enum0x12 `json:"retainImages,omitempty"`
+
+	// RetainLinks - Cast to: &lt; **&quot;none&quot; | &quot;all&quot; | &quot;text&quot; | &quot;gpt-oss&quot;** &gt;
+	//
+	// - Member of &lt;CrawlerOptions&gt;
+	//
+	// - Defaults to: &#39;all&#39;
+	RetainLinks *Enum0x15 `json:"retainLinks,omitempty"`
+
+	// RetainMedia - Cast to: &lt; **&quot;none&quot; | &quot;text&quot; | &quot;link&quot; | &quot;image&quot; | &quot;html&quot;** &gt;
+	//
+	// - Member of &lt;CrawlerOptions&gt;
+	//
+	// - Defaults to: &#39;link&#39;
+	RetainMedia *Enum0x13 `json:"retainMedia,omitempty"`
+
+	// RobotsTxt - Cast to: &lt; **PseudoBoolean|string** &gt;
+	//
+	// - Member of &lt;CrawlerOptions&gt;
+	RobotsTxt *PostReadJSONBody_RobotsTxt `json:"robotsTxt,omitempty"`
+
+	// SetCookies - Cast to: &lt; **Array&lt;object|string&gt;** &gt;
+	//
+	// - Member of &lt;CrawlerOptions&gt;
+	SetCookies *[]PostReadJSONBody_SetCookies_Item `json:"setCookies,omitempty"`
+
+	// SkipCertVerification - Cast to: &lt; **PseudoBooleanLoose** &gt;
+	//
+	// - Member of &lt;CrawlerOptions&gt;
+	SkipCertVerification *PseudoBooleanLoose0x0c `json:"skipCertVerification,omitempty"`
+
+	// StorageState - Cast to: &lt; **StorageState** &gt;
+	//
+	// - Member of &lt;CrawlerOptions&gt;
+	StorageState *StorageState0x1b `json:"storageState,omitempty"`
+
+	// TargetSelector - Cast to: &lt; **Array&lt;string&gt;** &gt;
+	//
+	// - Member of &lt;CrawlerOptions&gt;
+	TargetSelector *[]string `json:"targetSelector,omitempty"`
+
+	// Timeout - Cast to: &lt; **number** &gt;
+	//
+	// - Member of &lt;CrawlerOptions&gt;
+	//
+	// - Some validators will be applied on value(s): (v) =&gt; v &gt; 0 &amp;&amp; v &lt;= 180
+	Timeout *float64 `json:"timeout,omitempty"`
+
+	// TokenBudget - Cast to: &lt; **number** &gt;
+	//
+	// - Member of &lt;CrawlerOptions&gt;
+	TokenBudget *float64 `json:"tokenBudget,omitempty"`
+
+	// Url - Cast to: &lt; **string** &gt;
+	//
+	// - Member of &lt;CrawlerOptions&gt;
+	Url *string `json:"url,omitempty"`
+
+	// UserAgent - Cast to: &lt; **string** &gt;
+	//
+	// - Member of &lt;CrawlerOptions&gt;
+	UserAgent *string `json:"userAgent,omitempty"`
+
+	// Viewport - Cast to: &lt; **Viewport** &gt;
+	//
+	// - Member of &lt;CrawlerOptions&gt;
+	Viewport *Viewport0x1d `json:"viewport,omitempty"`
+
+	// WaitForSelector - Cast to: &lt; **Array&lt;string&gt;** &gt;
+	//
+	// - Member of &lt;CrawlerOptions&gt;
+	WaitForSelector *[]string `json:"waitForSelector,omitempty"`
+
+	// WebBotAuth - Cast to: &lt; **PseudoBoolean|&quot;authority&quot; | &quot;target-uri&quot;** &gt;
+	//
+	// - Member of &lt;CrawlerOptions&gt;
+	WebBotAuth *PostReadJSONBody_WebBotAuth `json:"webBotAuth,omitempty"`
+
+	// WithGeneratedAlt - Cast to: &lt; **PseudoBoolean** &gt;
+	//
+	// - Member of &lt;CrawlerOptions&gt;
+	WithGeneratedAlt *PseudoBoolean0x11 `json:"withGeneratedAlt,omitempty"`
+
+	// WithIframe - Cast to: &lt; **PseudoBoolean|string** &gt;
+	//
+	// - Member of &lt;CrawlerOptions&gt;
+	WithIframe *PostReadJSONBody_WithIframe `json:"withIframe,omitempty"`
+
+	// WithImagesSummary - Cast to: &lt; **PseudoBooleanLoose** &gt;
+	//
+	// - Member of &lt;CrawlerOptions&gt;
+	WithImagesSummary *PseudoBooleanLoose0x0c `json:"withImagesSummary,omitempty"`
+
+	// WithLinksSummary - Cast to: &lt; **PseudoBoolean|string** &gt;
+	//
+	// - Member of &lt;CrawlerOptions&gt;
+	WithLinksSummary *PostReadJSONBody_WithLinksSummary `json:"withLinksSummary,omitempty"`
+
+	// WithShadowDom - Cast to: &lt; **PseudoBooleanLoose** &gt;
+	//
+	// - Member of &lt;CrawlerOptions&gt;
+	WithShadowDom *PseudoBooleanLoose0x0c `json:"withShadowDom,omitempty"`
+
+	// ZeroDataRetention - Cast to: &lt; **PseudoBooleanLoose** &gt;
+	//
+	// - Member of &lt;CrawlerOptions&gt;
+	ZeroDataRetention *PseudoBooleanLoose0x0c `json:"zeroDataRetention,omitempty"`
+}
+
+// PostReadFormdataBody defines parameters for PostRead.
+type PostReadFormdataBody struct {
+	// AssertStatusCode - Cast to: &lt; **number** &gt;
+	//
+	// - Member of &lt;CrawlerOptions&gt;
+	AssertStatusCode *float64 `form:"assertStatusCode,omitempty" json:"assertStatusCode,omitempty"`
+
+	// Base - Cast to: &lt; **&quot;initial&quot; | &quot;final&quot;** &gt;
+	//
+	// - Member of &lt;CrawlerOptions&gt;
+	//
+	// - Defaults to: &#39;final&#39;
+	Base *Enum0x0d `form:"base,omitempty" json:"base,omitempty"`
+
+	// CacheTolerance - Cast to: &lt; **number** &gt;
+	//
+	// - Member of &lt;CrawlerOptions&gt;
+	CacheTolerance *float64 `form:"cacheTolerance,omitempty" json:"cacheTolerance,omitempty"`
+
+	// DetachInvisibles - Cast to: &lt; **PseudoBooleanLoose** &gt;
+	//
+	// - Member of &lt;CrawlerOptions&gt;
+	DetachInvisibles *PseudoBooleanLoose0x0c `form:"detachInvisibles,omitempty" json:"detachInvisibles,omitempty"`
+
+	// Engine - Cast to: &lt; **&quot;auto&quot; | &quot;browser&quot; | &quot;curl&quot; | &quot;cf-browser-rendering&quot;|string** &gt;
+	//
+	// - Member of &lt;CrawlerOptions&gt;
+	Engine *PostReadFormdataBody_Engine `form:"engine,omitempty" json:"engine,omitempty"`
+
+	// ExportStorageState - Cast to: &lt; **PseudoBooleanLoose** &gt;
+	//
+	// - Member of &lt;CrawlerOptions&gt;
+	ExportStorageState *PseudoBooleanLoose0x0c `form:"exportStorageState,omitempty" json:"exportStorageState,omitempty"`
+
+	// File Base64 encoded file.
+	//
+	// - Cast to: &lt; **FancyFile|string** &gt;
+	//
+	// - Member of &lt;CrawlerOptions&gt;
+	File *PostReadFormdataBody_File `form:"file,omitempty" json:"file,omitempty"`
+
+	// Html - Cast to: &lt; **string** &gt;
+	//
+	// - Member of &lt;CrawlerOptions&gt;
+	Html *string `form:"html,omitempty" json:"html,omitempty"`
+
+	// InjectFrameScript - Cast to: &lt; **Array&lt;string&gt;** &gt;
+	//
+	// - Member of &lt;CrawlerOptions&gt;
+	InjectFrameScript *string `form:"injectFrameScript,omitempty" json:"injectFrameScript,omitempty"`
+
+	// InjectPageScript - Cast to: &lt; **Array&lt;string&gt;** &gt;
+	//
+	// - Member of &lt;CrawlerOptions&gt;
+	InjectPageScript *string `form:"injectPageScript,omitempty" json:"injectPageScript,omitempty"`
+
+	// Instruction - Cast to: &lt; **string** &gt;
+	//
+	// - Member of &lt;CrawlerOptions&gt;
+	Instruction *string `form:"instruction,omitempty" json:"instruction,omitempty"`
+
+	// JsonSchema Can be any value - string, number, boolean, array or object.
+	//
+	// - Cast to: &lt; **object** &gt;
+	//
+	// - Member of &lt;CrawlerOptions&gt;
+	JsonSchema interface{} `form:"jsonSchema,omitempty" json:"jsonSchema,omitempty"`
+
+	// KeepImgDataUrl - Cast to: &lt; **PseudoBooleanLoose** &gt;
+	//
+	// - Member of &lt;CrawlerOptions&gt;
+	KeepImgDataUrl *PseudoBooleanLoose0x0c `form:"keepImgDataUrl,omitempty" json:"keepImgDataUrl,omitempty"`
+
+	// Locale - Cast to: &lt; **string** &gt;
+	//
+	// - Member of &lt;CrawlerOptions&gt;
+	Locale *string `form:"locale,omitempty" json:"locale,omitempty"`
+
+	// MarkdownChunking - Cast to: &lt; **&quot;true&quot; | &quot;h1&quot; | &quot;h2&quot; | &quot;h3&quot; | &quot;h4&quot; | &quot;h5&quot; | &quot;structured&quot; | &quot;s1&quot; | &quot;s2&quot; | &quot;s3&quot; | &quot;s4&quot; | &quot;s5&quot;|string** &gt;
+	//
+	// - Member of &lt;CrawlerOptions&gt;
+	MarkdownChunking *PostReadFormdataBody_MarkdownChunking `form:"markdownChunking,omitempty" json:"markdownChunking,omitempty"`
+
+	// MaxTokens - Cast to: &lt; **number** &gt;
+	//
+	// - Member of &lt;CrawlerOptions&gt;
+	//
+	// - Some validators will be applied on value(s): (v) =&gt; v &gt;= 500
+	MaxTokens *float64 `form:"maxTokens,omitempty" json:"maxTokens,omitempty"`
+
+	// NoCache - Cast to: &lt; **PseudoBooleanLoose** &gt;
+	//
+	// - Member of &lt;CrawlerOptions&gt;
+	NoCache *PseudoBooleanLoose0x0c `form:"noCache,omitempty" json:"noCache,omitempty"`
+
+	// NoGfm - Cast to: &lt; **PseudoBoolean|string** &gt;
+	//
+	// - Member of &lt;CrawlerOptions&gt;
+	NoGfm *PostReadFormdataBody_NoGfm `form:"noGfm,omitempty" json:"noGfm,omitempty"`
+
+	// NoServiceWorker - Cast to: &lt; **PseudoBooleanLoose** &gt;
+	//
+	// - Member of &lt;CrawlerOptions&gt;
+	NoServiceWorker *PseudoBooleanLoose0x0c `form:"noServiceWorker,omitempty" json:"noServiceWorker,omitempty"`
+
+	// Page Steer which page(s) to return for document files. See PageSelection.
+	//
+	// - Cast to: &lt; **PageSelection** &gt;
+	//
+	// - Member of &lt;CrawlerOptions&gt;
+	Page *PageSelection0x0f `form:"page,omitempty" json:"page,omitempty"`
+
+	// Pdf Base64 encoded PDF.
+	//
+	// - Cast to: &lt; **FancyFile|string** &gt;
+	//
+	// - Member of &lt;CrawlerOptions&gt;
+	Pdf *PostReadFormdataBody_Pdf `form:"pdf,omitempty" json:"pdf,omitempty"`
+
+	// PreloadUrl - Cast to: &lt; **string** &gt;
+	//
+	// - Member of &lt;CrawlerOptions&gt;
+	PreloadUrl *string `form:"preloadUrl,omitempty" json:"preloadUrl,omitempty"`
+
+	// Preset - Cast to: &lt; **&quot;reader&quot; | &quot;index&quot; | &quot;research&quot; | &quot;agent&quot; | &quot;spider&quot; | &quot;ocr&quot; | &quot;ocr+&quot; | &quot;ocr++&quot; | &quot;pdf&quot; | &quot;pdf+&quot; | &quot;pdf++&quot;** &gt;
+	//
+	// - Member of &lt;CrawlerOptions&gt;
+	Preset *Enum0x14 `form:"preset,omitempty" json:"preset,omitempty"`
+
+	// Proxy - Cast to: &lt; **string** &gt;
+	//
+	// - Member of &lt;CrawlerOptions&gt;
+	Proxy *string `form:"proxy,omitempty" json:"proxy,omitempty"`
+
+	// ProxyResources - Cast to: &lt; **PseudoBooleanLoose** &gt;
+	//
+	// - Member of &lt;CrawlerOptions&gt;
+	ProxyResources *PseudoBooleanLoose0x0c `form:"proxyResources,omitempty" json:"proxyResources,omitempty"`
+
+	// ProxyUrl - Cast to: &lt; **string** &gt;
+	//
+	// - Member of &lt;CrawlerOptions&gt;
+	ProxyUrl *string `form:"proxyUrl,omitempty" json:"proxyUrl,omitempty"`
+
+	// Referer - Cast to: &lt; **string** &gt;
+	//
+	// - Member of &lt;CrawlerOptions&gt;
+	Referer *string `form:"referer,omitempty" json:"referer,omitempty"`
+
+	// RemoveOverlay - Cast to: &lt; **PseudoBooleanLoose** &gt;
+	//
+	// - Member of &lt;CrawlerOptions&gt;
+	RemoveOverlay *PseudoBooleanLoose0x0c `form:"removeOverlay,omitempty" json:"removeOverlay,omitempty"`
+
+	// RemoveSelector - Cast to: &lt; **Array&lt;string&gt;** &gt;
+	//
+	// - Member of &lt;CrawlerOptions&gt;
+	RemoveSelector *string `form:"removeSelector,omitempty" json:"removeSelector,omitempty"`
+
+	// RespondTiming - Cast to: &lt; **&quot;html&quot; | &quot;visible-content&quot; | &quot;mutation-idle&quot; | &quot;resource-idle&quot; | &quot;media-idle&quot; | &quot;network-idle&quot;** &gt;
+	//
+	// - Member of &lt;CrawlerOptions&gt;
+	RespondTiming *Enum0x26 `form:"respondTiming,omitempty" json:"respondTiming,omitempty"`
+
+	// RespondWith - Cast to: &lt; **&quot;content&quot; | &quot;markdown&quot; | &quot;html&quot; | &quot;text&quot; | &quot;pageshot&quot; | &quot;screenshot&quot; | &quot;vlm&quot; | &quot;readerlm-v2&quot; | &quot;frontmatter&quot; | &quot;readability&quot; | &quot;...|string** &gt;
+	//
+	// - Member of &lt;CrawlerOptions&gt;
+	//
+	// - Defaults to: &#39;content&#39;
+	RespondWith *PostReadFormdataBody_RespondWith `form:"respondWith,omitempty" json:"respondWith,omitempty"`
+
+	// RetainImages - Cast to: &lt; **&quot;none&quot; | &quot;all&quot; | &quot;alt&quot; | &quot;all_p&quot; | &quot;alt_p&quot;** &gt;
+	//
+	// - Member of &lt;CrawlerOptions&gt;
+	//
+	// - Defaults to: &#39;all&#39;
+	RetainImages *Enum0x12 `form:"retainImages,omitempty" json:"retainImages,omitempty"`
+
+	// RetainLinks - Cast to: &lt; **&quot;none&quot; | &quot;all&quot; | &quot;text&quot; | &quot;gpt-oss&quot;** &gt;
+	//
+	// - Member of &lt;CrawlerOptions&gt;
+	//
+	// - Defaults to: &#39;all&#39;
+	RetainLinks *Enum0x15 `form:"retainLinks,omitempty" json:"retainLinks,omitempty"`
+
+	// RetainMedia - Cast to: &lt; **&quot;none&quot; | &quot;text&quot; | &quot;link&quot; | &quot;image&quot; | &quot;html&quot;** &gt;
+	//
+	// - Member of &lt;CrawlerOptions&gt;
+	//
+	// - Defaults to: &#39;link&#39;
+	RetainMedia *Enum0x13 `form:"retainMedia,omitempty" json:"retainMedia,omitempty"`
+
+	// RobotsTxt - Cast to: &lt; **PseudoBoolean|string** &gt;
+	//
+	// - Member of &lt;CrawlerOptions&gt;
+	RobotsTxt *PostReadFormdataBody_RobotsTxt `form:"robotsTxt,omitempty" json:"robotsTxt,omitempty"`
+
+	// SetCookies - Cast to: &lt; **Array&lt;object|string&gt;** &gt;
+	//
+	// - Member of &lt;CrawlerOptions&gt;
+	SetCookies *PostReadFormdataBody_SetCookies `form:"setCookies,omitempty" json:"setCookies,omitempty"`
+
+	// SkipCertVerification - Cast to: &lt; **PseudoBooleanLoose** &gt;
+	//
+	// - Member of &lt;CrawlerOptions&gt;
+	SkipCertVerification *PseudoBooleanLoose0x0c `form:"skipCertVerification,omitempty" json:"skipCertVerification,omitempty"`
+
+	// TargetSelector - Cast to: &lt; **Array&lt;string&gt;** &gt;
+	//
+	// - Member of &lt;CrawlerOptions&gt;
+	TargetSelector *string `form:"targetSelector,omitempty" json:"targetSelector,omitempty"`
+
+	// Timeout - Cast to: &lt; **number** &gt;
+	//
+	// - Member of &lt;CrawlerOptions&gt;
+	//
+	// - Some validators will be applied on value(s): (v) =&gt; v &gt; 0 &amp;&amp; v &lt;= 180
+	Timeout *float64 `form:"timeout,omitempty" json:"timeout,omitempty"`
+
+	// TokenBudget - Cast to: &lt; **number** &gt;
+	//
+	// - Member of &lt;CrawlerOptions&gt;
+	TokenBudget *float64 `form:"tokenBudget,omitempty" json:"tokenBudget,omitempty"`
+
+	// Url - Cast to: &lt; **string** &gt;
+	//
+	// - Member of &lt;CrawlerOptions&gt;
+	Url *string `form:"url,omitempty" json:"url,omitempty"`
+
+	// UserAgent - Cast to: &lt; **string** &gt;
+	//
+	// - Member of &lt;CrawlerOptions&gt;
+	UserAgent *string `form:"userAgent,omitempty" json:"userAgent,omitempty"`
+
+	// WaitForSelector - Cast to: &lt; **Array&lt;string&gt;** &gt;
+	//
+	// - Member of &lt;CrawlerOptions&gt;
+	WaitForSelector *string `form:"waitForSelector,omitempty" json:"waitForSelector,omitempty"`
+
+	// WebBotAuth - Cast to: &lt; **PseudoBoolean|&quot;authority&quot; | &quot;target-uri&quot;** &gt;
+	//
+	// - Member of &lt;CrawlerOptions&gt;
+	WebBotAuth *PostReadFormdataBody_WebBotAuth `form:"webBotAuth,omitempty" json:"webBotAuth,omitempty"`
+
+	// WithGeneratedAlt - Cast to: &lt; **PseudoBoolean** &gt;
+	//
+	// - Member of &lt;CrawlerOptions&gt;
+	WithGeneratedAlt *PseudoBoolean0x11 `form:"withGeneratedAlt,omitempty" json:"withGeneratedAlt,omitempty"`
+
+	// WithIframe - Cast to: &lt; **PseudoBoolean|string** &gt;
+	//
+	// - Member of &lt;CrawlerOptions&gt;
+	WithIframe *PostReadFormdataBody_WithIframe `form:"withIframe,omitempty" json:"withIframe,omitempty"`
+
+	// WithImagesSummary - Cast to: &lt; **PseudoBooleanLoose** &gt;
+	//
+	// - Member of &lt;CrawlerOptions&gt;
+	WithImagesSummary *PseudoBooleanLoose0x0c `form:"withImagesSummary,omitempty" json:"withImagesSummary,omitempty"`
+
+	// WithLinksSummary - Cast to: &lt; **PseudoBoolean|string** &gt;
+	//
+	// - Member of &lt;CrawlerOptions&gt;
+	WithLinksSummary *PostReadFormdataBody_WithLinksSummary `form:"withLinksSummary,omitempty" json:"withLinksSummary,omitempty"`
+
+	// WithShadowDom - Cast to: &lt; **PseudoBooleanLoose** &gt;
+	//
+	// - Member of &lt;CrawlerOptions&gt;
+	WithShadowDom *PseudoBooleanLoose0x0c `form:"withShadowDom,omitempty" json:"withShadowDom,omitempty"`
+
+	// ZeroDataRetention - Cast to: &lt; **PseudoBooleanLoose** &gt;
+	//
+	// - Member of &lt;CrawlerOptions&gt;
+	ZeroDataRetention *PseudoBooleanLoose0x0c `form:"zeroDataRetention,omitempty" json:"zeroDataRetention,omitempty"`
+}
+
+// PostReadMultipartBody defines parameters for PostRead.
+type PostReadMultipartBody struct {
+	// AssertStatusCode - Cast to: &lt; **number** &gt;
+	//
+	// - Member of &lt;CrawlerOptions&gt;
+	AssertStatusCode *float64 `json:"assertStatusCode,omitempty"`
+
+	// Base - Cast to: &lt; **&quot;initial&quot; | &quot;final&quot;** &gt;
+	//
+	// - Member of &lt;CrawlerOptions&gt;
+	//
+	// - Defaults to: &#39;final&#39;
+	Base *Enum0x0d `json:"base,omitempty"`
+
+	// CacheTolerance - Cast to: &lt; **number** &gt;
+	//
+	// - Member of &lt;CrawlerOptions&gt;
+	CacheTolerance *float64 `json:"cacheTolerance,omitempty"`
+
+	// CustomHeader - Cast to: &lt; **Record&lt;string, string&gt;** &gt;
+	//
+	// - Member of &lt;CrawlerOptions&gt;
+	CustomHeader *map[string]string `json:"customHeader,omitempty"`
+
+	// DetachInvisibles - Cast to: &lt; **PseudoBooleanLoose** &gt;
+	//
+	// - Member of &lt;CrawlerOptions&gt;
+	DetachInvisibles *PseudoBooleanLoose0x0c `json:"detachInvisibles,omitempty"`
+
+	// Engine - Cast to: &lt; **&quot;auto&quot; | &quot;browser&quot; | &quot;curl&quot; | &quot;cf-browser-rendering&quot;|string** &gt;
+	//
+	// - Member of &lt;CrawlerOptions&gt;
+	Engine *PostReadMultipartBody_Engine `json:"engine,omitempty"`
+
+	// ExportStorageState - Cast to: &lt; **PseudoBooleanLoose** &gt;
+	//
+	// - Member of &lt;CrawlerOptions&gt;
+	ExportStorageState *PseudoBooleanLoose0x0c `json:"exportStorageState,omitempty"`
+
+	// File Base64 encoded file.
+	//
+	// - Cast to: &lt; **FancyFile|string** &gt;
+	//
+	// - Member of &lt;CrawlerOptions&gt;
+	File *PostReadMultipartBody_File `json:"file,omitempty"`
+
+	// Html - Cast to: &lt; **string** &gt;
+	//
+	// - Member of &lt;CrawlerOptions&gt;
+	Html *string `json:"html,omitempty"`
+
+	// InjectFrameScript - Cast to: &lt; **Array&lt;string&gt;** &gt;
+	//
+	// - Member of &lt;CrawlerOptions&gt;
+	InjectFrameScript *[]string `json:"injectFrameScript,omitempty"`
+
+	// InjectPageScript - Cast to: &lt; **Array&lt;string&gt;** &gt;
+	//
+	// - Member of &lt;CrawlerOptions&gt;
+	InjectPageScript *[]string `json:"injectPageScript,omitempty"`
+
+	// Instruction - Cast to: &lt; **string** &gt;
+	//
+	// - Member of &lt;CrawlerOptions&gt;
+	Instruction *string `json:"instruction,omitempty"`
+
+	// JsonSchema Can be any value - string, number, boolean, array or object.
+	//
+	// - Cast to: &lt; **object** &gt;
+	//
+	// - Member of &lt;CrawlerOptions&gt;
+	JsonSchema interface{} `json:"jsonSchema,omitempty"`
+
+	// KeepImgDataUrl - Cast to: &lt; **PseudoBooleanLoose** &gt;
+	//
+	// - Member of &lt;CrawlerOptions&gt;
+	KeepImgDataUrl *PseudoBooleanLoose0x0c `json:"keepImgDataUrl,omitempty"`
+
+	// Locale - Cast to: &lt; **string** &gt;
+	//
+	// - Member of &lt;CrawlerOptions&gt;
+	Locale *string `json:"locale,omitempty"`
+
+	// Markdown - Cast to: &lt; **TurnDownTweakableOptions** &gt;
+	//
+	// - Member of &lt;CrawlerOptions&gt;
+	Markdown *TurnDownTweakableOptions0x24 `json:"markdown,omitempty"`
+
+	// MarkdownChunking - Cast to: &lt; **&quot;true&quot; | &quot;h1&quot; | &quot;h2&quot; | &quot;h3&quot; | &quot;h4&quot; | &quot;h5&quot; | &quot;structured&quot; | &quot;s1&quot; | &quot;s2&quot; | &quot;s3&quot; | &quot;s4&quot; | &quot;s5&quot;|string** &gt;
+	//
+	// - Member of &lt;CrawlerOptions&gt;
+	MarkdownChunking *PostReadMultipartBody_MarkdownChunking `json:"markdownChunking,omitempty"`
+
+	// MaxTokens - Cast to: &lt; **number** &gt;
+	//
+	// - Member of &lt;CrawlerOptions&gt;
+	//
+	// - Some validators will be applied on value(s): (v) =&gt; v &gt;= 500
+	MaxTokens *float64 `json:"maxTokens,omitempty"`
+
+	// NoCache - Cast to: &lt; **PseudoBooleanLoose** &gt;
+	//
+	// - Member of &lt;CrawlerOptions&gt;
+	NoCache *PseudoBooleanLoose0x0c `json:"noCache,omitempty"`
+
+	// NoGfm - Cast to: &lt; **PseudoBoolean|string** &gt;
+	//
+	// - Member of &lt;CrawlerOptions&gt;
+	NoGfm *PostReadMultipartBody_NoGfm `json:"noGfm,omitempty"`
+
+	// NoServiceWorker - Cast to: &lt; **PseudoBooleanLoose** &gt;
+	//
+	// - Member of &lt;CrawlerOptions&gt;
+	NoServiceWorker *PseudoBooleanLoose0x0c `json:"noServiceWorker,omitempty"`
+
+	// Ocr - Cast to: &lt; **OCRPreferences** &gt;
+	//
+	// - Member of &lt;CrawlerOptions&gt;
+	Ocr *OCRPreferences0x25 `json:"ocr,omitempty"`
+
+	// Page Steer which page(s) to return for document files. See PageSelection.
+	//
+	// - Cast to: &lt; **PageSelection** &gt;
+	//
+	// - Member of &lt;CrawlerOptions&gt;
+	Page *PageSelection0x0f `json:"page,omitempty"`
+
+	// Pdf Base64 encoded PDF.
+	//
+	// - Cast to: &lt; **FancyFile|string** &gt;
+	//
+	// - Member of &lt;CrawlerOptions&gt;
+	Pdf *PostReadMultipartBody_Pdf `json:"pdf,omitempty"`
+
+	// PreloadUrl - Cast to: &lt; **string** &gt;
+	//
+	// - Member of &lt;CrawlerOptions&gt;
+	PreloadUrl *string `json:"preloadUrl,omitempty"`
+
+	// Preset - Cast to: &lt; **&quot;reader&quot; | &quot;index&quot; | &quot;research&quot; | &quot;agent&quot; | &quot;spider&quot; | &quot;ocr&quot; | &quot;ocr+&quot; | &quot;ocr++&quot; | &quot;pdf&quot; | &quot;pdf+&quot; | &quot;pdf++&quot;** &gt;
+	//
+	// - Member of &lt;CrawlerOptions&gt;
+	Preset *Enum0x14 `json:"preset,omitempty"`
+
+	// Proxy - Cast to: &lt; **string** &gt;
+	//
+	// - Member of &lt;CrawlerOptions&gt;
+	Proxy *string `json:"proxy,omitempty"`
+
+	// ProxyResources - Cast to: &lt; **PseudoBooleanLoose** &gt;
+	//
+	// - Member of &lt;CrawlerOptions&gt;
+	ProxyResources *PseudoBooleanLoose0x0c `json:"proxyResources,omitempty"`
+
+	// ProxyUrl - Cast to: &lt; **string** &gt;
+	//
+	// - Member of &lt;CrawlerOptions&gt;
+	ProxyUrl *string `json:"proxyUrl,omitempty"`
+
+	// Referer - Cast to: &lt; **string** &gt;
+	//
+	// - Member of &lt;CrawlerOptions&gt;
+	Referer *string `json:"referer,omitempty"`
+
+	// RemoveOverlay - Cast to: &lt; **PseudoBooleanLoose** &gt;
+	//
+	// - Member of &lt;CrawlerOptions&gt;
+	RemoveOverlay *PseudoBooleanLoose0x0c `json:"removeOverlay,omitempty"`
+
+	// RemoveSelector - Cast to: &lt; **Array&lt;string&gt;** &gt;
+	//
+	// - Member of &lt;CrawlerOptions&gt;
+	RemoveSelector *[]string `json:"removeSelector,omitempty"`
+
+	// RespondTiming - Cast to: &lt; **&quot;html&quot; | &quot;visible-content&quot; | &quot;mutation-idle&quot; | &quot;resource-idle&quot; | &quot;media-idle&quot; | &quot;network-idle&quot;** &gt;
+	//
+	// - Member of &lt;CrawlerOptions&gt;
+	RespondTiming *Enum0x26 `json:"respondTiming,omitempty"`
+
+	// RespondWith - Cast to: &lt; **&quot;content&quot; | &quot;markdown&quot; | &quot;html&quot; | &quot;text&quot; | &quot;pageshot&quot; | &quot;screenshot&quot; | &quot;vlm&quot; | &quot;readerlm-v2&quot; | &quot;frontmatter&quot; | &quot;readability&quot; | &quot;...|string** &gt;
+	//
+	// - Member of &lt;CrawlerOptions&gt;
+	//
+	// - Defaults to: &#39;content&#39;
+	RespondWith *PostReadMultipartBody_RespondWith `json:"respondWith,omitempty"`
+
+	// RetainImages - Cast to: &lt; **&quot;none&quot; | &quot;all&quot; | &quot;alt&quot; | &quot;all_p&quot; | &quot;alt_p&quot;** &gt;
+	//
+	// - Member of &lt;CrawlerOptions&gt;
+	//
+	// - Defaults to: &#39;all&#39;
+	RetainImages *Enum0x12 `json:"retainImages,omitempty"`
+
+	// RetainLinks - Cast to: &lt; **&quot;none&quot; | &quot;all&quot; | &quot;text&quot; | &quot;gpt-oss&quot;** &gt;
+	//
+	// - Member of &lt;CrawlerOptions&gt;
+	//
+	// - Defaults to: &#39;all&#39;
+	RetainLinks *Enum0x15 `json:"retainLinks,omitempty"`
+
+	// RetainMedia - Cast to: &lt; **&quot;none&quot; | &quot;text&quot; | &quot;link&quot; | &quot;image&quot; | &quot;html&quot;** &gt;
+	//
+	// - Member of &lt;CrawlerOptions&gt;
+	//
+	// - Defaults to: &#39;link&#39;
+	RetainMedia *Enum0x13 `json:"retainMedia,omitempty"`
+
+	// RobotsTxt - Cast to: &lt; **PseudoBoolean|string** &gt;
+	//
+	// - Member of &lt;CrawlerOptions&gt;
+	RobotsTxt *PostReadMultipartBody_RobotsTxt `json:"robotsTxt,omitempty"`
+
+	// SetCookies - Cast to: &lt; **Array&lt;object|string&gt;** &gt;
+	//
+	// - Member of &lt;CrawlerOptions&gt;
+	SetCookies *[]PostReadMultipartBody_SetCookies_Item `json:"setCookies,omitempty"`
+
+	// SkipCertVerification - Cast to: &lt; **PseudoBooleanLoose** &gt;
+	//
+	// - Member of &lt;CrawlerOptions&gt;
+	SkipCertVerification *PseudoBooleanLoose0x0c `json:"skipCertVerification,omitempty"`
+
+	// StorageState - Cast to: &lt; **StorageState** &gt;
+	//
+	// - Member of &lt;CrawlerOptions&gt;
+	StorageState *StorageState0x1b `json:"storageState,omitempty"`
+
+	// TargetSelector - Cast to: &lt; **Array&lt;string&gt;** &gt;
+	//
+	// - Member of &lt;CrawlerOptions&gt;
+	TargetSelector *[]string `json:"targetSelector,omitempty"`
+
+	// Timeout - Cast to: &lt; **number** &gt;
+	//
+	// - Member of &lt;CrawlerOptions&gt;
+	//
+	// - Some validators will be applied on value(s): (v) =&gt; v &gt; 0 &amp;&amp; v &lt;= 180
+	Timeout *float64 `json:"timeout,omitempty"`
+
+	// TokenBudget - Cast to: &lt; **number** &gt;
+	//
+	// - Member of &lt;CrawlerOptions&gt;
+	TokenBudget *float64 `json:"tokenBudget,omitempty"`
+
+	// Url - Cast to: &lt; **string** &gt;
+	//
+	// - Member of &lt;CrawlerOptions&gt;
+	Url *string `json:"url,omitempty"`
+
+	// UserAgent - Cast to: &lt; **string** &gt;
+	//
+	// - Member of &lt;CrawlerOptions&gt;
+	UserAgent *string `json:"userAgent,omitempty"`
+
+	// Viewport - Cast to: &lt; **Viewport** &gt;
+	//
+	// - Member of &lt;CrawlerOptions&gt;
+	Viewport *Viewport0x1d `json:"viewport,omitempty"`
+
+	// WaitForSelector - Cast to: &lt; **Array&lt;string&gt;** &gt;
+	//
+	// - Member of &lt;CrawlerOptions&gt;
+	WaitForSelector *[]string `json:"waitForSelector,omitempty"`
+
+	// WebBotAuth - Cast to: &lt; **PseudoBoolean|&quot;authority&quot; | &quot;target-uri&quot;** &gt;
+	//
+	// - Member of &lt;CrawlerOptions&gt;
+	WebBotAuth *PostReadMultipartBody_WebBotAuth `json:"webBotAuth,omitempty"`
+
+	// WithGeneratedAlt - Cast to: &lt; **PseudoBoolean** &gt;
+	//
+	// - Member of &lt;CrawlerOptions&gt;
+	WithGeneratedAlt *PseudoBoolean0x11 `json:"withGeneratedAlt,omitempty"`
+
+	// WithIframe - Cast to: &lt; **PseudoBoolean|string** &gt;
+	//
+	// - Member of &lt;CrawlerOptions&gt;
+	WithIframe *PostReadMultipartBody_WithIframe `json:"withIframe,omitempty"`
+
+	// WithImagesSummary - Cast to: &lt; **PseudoBooleanLoose** &gt;
+	//
+	// - Member of &lt;CrawlerOptions&gt;
+	WithImagesSummary *PseudoBooleanLoose0x0c `json:"withImagesSummary,omitempty"`
+
+	// WithLinksSummary - Cast to: &lt; **PseudoBoolean|string** &gt;
+	//
+	// - Member of &lt;CrawlerOptions&gt;
+	WithLinksSummary *PostReadMultipartBody_WithLinksSummary `json:"withLinksSummary,omitempty"`
+
+	// WithShadowDom - Cast to: &lt; **PseudoBooleanLoose** &gt;
+	//
+	// - Member of &lt;CrawlerOptions&gt;
+	WithShadowDom *PseudoBooleanLoose0x0c `json:"withShadowDom,omitempty"`
+
+	// ZeroDataRetention - Cast to: &lt; **PseudoBooleanLoose** &gt;
+	//
+	// - Member of &lt;CrawlerOptions&gt;
+	ZeroDataRetention *PseudoBooleanLoose0x0c `json:"zeroDataRetention,omitempty"`
+}
+
+// PostReadParams defines parameters for PostRead.
+type PostReadParams struct {
+	Url             *string                 `form:"url,omitempty" json:"url,omitempty"`
+	PreloadUrl      *string                 `form:"preloadUrl,omitempty" json:"preloadUrl,omitempty"`
+	NoServiceWorker *PseudoBooleanLoose0x0c `form:"noServiceWorker,omitempty" json:"noServiceWorker,omitempty"`
+	Html            *string                 `form:"html,omitempty" json:"html,omitempty"`
+	Base            *Enum0x0d               `form:"base,omitempty" json:"base,omitempty"`
+	Pdf             *struct {
+		union json.RawMessage
+	} `form:"pdf,omitempty" json:"pdf,omitempty"`
+	File *struct {
+		union json.RawMessage
+	} `form:"file,omitempty" json:"file,omitempty"`
+	Page        *PageSelection0x0f `form:"page,omitempty" json:"page,omitempty"`
+	RespondWith *struct {
+		union json.RawMessage
+	} `form:"respondWith,omitempty" json:"respondWith,omitempty"`
+	WithGeneratedAlt *PseudoBoolean0x11 `form:"withGeneratedAlt,omitempty" json:"withGeneratedAlt,omitempty"`
+	RetainImages     *Enum0x12          `form:"retainImages,omitempty" json:"retainImages,omitempty"`
+	RetainMedia      *Enum0x13          `form:"retainMedia,omitempty" json:"retainMedia,omitempty"`
+	Preset           *Enum0x14          `form:"preset,omitempty" json:"preset,omitempty"`
+	RetainLinks      *Enum0x15          `form:"retainLinks,omitempty" json:"retainLinks,omitempty"`
+	WithLinksSummary *struct {
+		union json.RawMessage
+	} `form:"withLinksSummary,omitempty" json:"withLinksSummary,omitempty"`
+	WithImagesSummary *PseudoBooleanLoose0x0c `form:"withImagesSummary,omitempty" json:"withImagesSummary,omitempty"`
+	NoCache           *PseudoBooleanLoose0x0c `form:"noCache,omitempty" json:"noCache,omitempty"`
+	RemoveOverlay     *PseudoBooleanLoose0x0c `form:"removeOverlay,omitempty" json:"removeOverlay,omitempty"`
+	DetachInvisibles  *PseudoBooleanLoose0x0c `form:"detachInvisibles,omitempty" json:"detachInvisibles,omitempty"`
+	NoGfm             *struct {
+		union json.RawMessage
+	} `form:"noGfm,omitempty" json:"noGfm,omitempty"`
+	CacheTolerance  *float64                `form:"cacheTolerance,omitempty" json:"cacheTolerance,omitempty"`
+	TargetSelector  *string                 `form:"targetSelector,omitempty" json:"targetSelector,omitempty"`
+	WaitForSelector *string                 `form:"waitForSelector,omitempty" json:"waitForSelector,omitempty"`
+	RemoveSelector  *string                 `form:"removeSelector,omitempty" json:"removeSelector,omitempty"`
+	KeepImgDataUrl  *PseudoBooleanLoose0x0c `form:"keepImgDataUrl,omitempty" json:"keepImgDataUrl,omitempty"`
+	WithIframe      *struct {
+		union json.RawMessage
+	} `form:"withIframe,omitempty" json:"withIframe,omitempty"`
+	WithShadowDom        *PseudoBooleanLoose0x0c `form:"withShadowDom,omitempty" json:"withShadowDom,omitempty"`
+	SkipCertVerification *PseudoBooleanLoose0x0c `form:"skipCertVerification,omitempty" json:"skipCertVerification,omitempty"`
+	WebBotAuth           *struct {
+		union json.RawMessage
+	} `form:"webBotAuth,omitempty" json:"webBotAuth,omitempty"`
+	SetCookies *struct {
+		union json.RawMessage
+	} `form:"setCookies,omitempty" json:"setCookies,omitempty"`
+	ExportStorageState *PseudoBooleanLoose0x0c `form:"exportStorageState,omitempty" json:"exportStorageState,omitempty"`
+	ProxyUrl           *string                 `form:"proxyUrl,omitempty" json:"proxyUrl,omitempty"`
+	ProxyResources     *PseudoBooleanLoose0x0c `form:"proxyResources,omitempty" json:"proxyResources,omitempty"`
+	Proxy              *string                 `form:"proxy,omitempty" json:"proxy,omitempty"`
+	UserAgent          *string                 `form:"userAgent,omitempty" json:"userAgent,omitempty"`
+	Engine             *struct {
+		union json.RawMessage
+	} `form:"engine,omitempty" json:"engine,omitempty"`
+	InjectPageScript  *string  `form:"injectPageScript,omitempty" json:"injectPageScript,omitempty"`
+	InjectFrameScript *string  `form:"injectFrameScript,omitempty" json:"injectFrameScript,omitempty"`
+	Timeout           *float64 `form:"timeout,omitempty" json:"timeout,omitempty"`
+	Locale            *string  `form:"locale,omitempty" json:"locale,omitempty"`
+	Referer           *string  `form:"referer,omitempty" json:"referer,omitempty"`
+	TokenBudget       *float64 `form:"tokenBudget,omitempty" json:"tokenBudget,omitempty"`
+	AssertStatusCode  *float64 `form:"assertStatusCode,omitempty" json:"assertStatusCode,omitempty"`
+	Instruction       *string  `form:"instruction,omitempty" json:"instruction,omitempty"`
+	JsonSchema        *string  `form:"jsonSchema,omitempty" json:"jsonSchema,omitempty"`
+	RobotsTxt         *struct {
+		union json.RawMessage
+	} `form:"robotsTxt,omitempty" json:"robotsTxt,omitempty"`
+	ZeroDataRetention *PseudoBooleanLoose0x0c `form:"zeroDataRetention,omitempty" json:"zeroDataRetention,omitempty"`
+	RespondTiming     *Enum0x26               `form:"respondTiming,omitempty" json:"respondTiming,omitempty"`
+	MarkdownChunking  *struct {
+		union json.RawMessage
+	} `form:"markdownChunking,omitempty" json:"markdownChunking,omitempty"`
+	MaxTokens *float64 `form:"maxTokens,omitempty" json:"maxTokens,omitempty"`
+
+	// Authorization Jina Token for authentication.
+	//
+	// - Member of &lt;JinaEmbeddingsAuthDTO&gt;
+	//
+	// - Authorization: Bearer {YOUR_JINA_TOKEN}
+	Authorization *struct {
+		union json.RawMessage
+	} `json:"Authorization,omitempty"`
+
+	// Accept Specifies your preference for the response format.
+	//
+	// Supported formats:
+	// - text/event-stream
+	// - application/json or text/json
+	// - text/plain
+	Accept *string `json:"Accept,omitempty"`
+
+	// XCacheTolerance Sets internal cache tolerance in seconds if this header is specified with a integer.
+	XCacheTolerance *string `json:"X-Cache-Tolerance,omitempty"`
+
+	// XNoCache Ignores internal cache if this header is specified with a value.
+	//
+	// Equivalent to X-Cache-Tolerance: 0
+	XNoCache *string `json:"X-No-Cache,omitempty"`
+
+	// XRespondWith Specifies the (non-default) form of the crawled data you prefer.
+	//
+	// Supported formats:
+	// - markdown
+	// - html
+	// - text
+	// - pageshot
+	// - screenshot
+	// - content
+	// - frontmatter
+	// - any combination of the above
+	// - vlm
+	// - jina-ocr-v1
+	// - jina-ocr
+	// - readerlm-v2
+	//
+	//
+	// Default: content
+	XRespondWith *string `json:"X-Respond-With,omitempty"`
+
+	// XWaitForSelector Specifies a CSS selector to wait for the appearance of such an element before returning.
+	//
+	// Example: `X-Wait-For-Selector: .content-block`
+	XWaitForSelector *string `json:"X-Wait-For-Selector,omitempty"`
+
+	// XTargetSelector Specifies a CSS selector for return target instead of the full html.
+	//
+	// Implies `X-Wait-For-Selector: (same selector)`
+	XTargetSelector *string `json:"X-Target-Selector,omitempty"`
+
+	// XRemoveSelector Specifies a CSS selector to remove elements from the full html.
+	//
+	// Example `X-Remove-Selector: nav`
+	XRemoveSelector *string `json:"X-Remove-Selector,omitempty"`
+
+	// XKeepImgDataUrl Keep data-url as it instead of transforming them to object-url. (Only applicable when targeting markdown format)
+	//
+	// Example `X-Keep-Img-Data-Url: true`
+	XKeepImgDataUrl *string `json:"X-Keep-Img-Data-Url,omitempty"`
+
+	// XProxyUrl Specifies your custom proxy if you prefer to use one.
+	//
+	// Supported protocols:
+	// - http
+	// - https
+	// - socks4
+	// - socks5
+	//
+	// For authentication, https://user:pass@host:port
+	XProxyUrl *string `json:"X-Proxy-Url,omitempty"`
+
+	// XProxyResources Whether to load resources like image/style/scripts via the proxy server.
+	XProxyResources *string `json:"X-Proxy-Resources,omitempty"`
+
+	// XProxy Use a proxy server provided by us.
+	//
+	// Optionally specify two-letter country code.
+	XProxy *string `json:"X-Proxy,omitempty"`
+
+	// XRobotsTxt Load and conform to the respective robot.txt on the target origin.
+	//
+	// Optionally specify a bot UA to check against.
+	//
+	XRobotsTxt *string `json:"X-Robots-Txt,omitempty"`
+
+	// DNT When set to 1, prevent the result of this request to be cached in the system.
+	//
+	DNT *string `json:"DNT,omitempty"`
+
+	// XSetCookie Sets cookie(s) to the headless browser for your request.
+	//
+	// Syntax is the same with standard Set-Cookie
+	XSetCookie *string `json:"X-Set-Cookie,omitempty"`
+
+	// XExportStorageState Export the browser storage state (cookies and per-origin localStorage) accumulated during the crawl.
+	//
+	// When enabled, the JSON response includes a `storageState` field whose shape mirrors the `storageState` request option, so it can be fed back into a subsequent request.
+	//
+	// Requires the browser engine and disables caching.
+	XExportStorageState *string `json:"X-Export-Storage-State,omitempty"`
+
+	// XWithGeneratedAlt Enable automatic alt-text generating for images without an meaningful alt-text.
+	//
+	// Note: Does not work when `X-Respond-With` is specified
+	XWithGeneratedAlt *string `json:"X-With-Generated-Alt,omitempty"`
+
+	// XWithImagesSummary Enable dedicated summary section for images on the page.
+	XWithImagesSummary *string `json:"X-With-Images-Summary,omitempty"`
+
+	// XWithLinksSummary Enable dedicated summary section for hyper links on the page.
+	XWithLinksSummary *string `json:"X-With-links-Summary,omitempty"`
+
+	// XRetainLinks Link retention modes.
+	//
+	// Supported modes:
+	// - all: all links
+	// - none: no links
+	// - text: only link text
+	// - gpt-oss: gpt-oss link citation format `【{id}†.*】`
+	//
+	XRetainLinks *string `json:"X-Retain-Links,omitempty"`
+
+	// XRetainImages Image retention modes.
+	//
+	// Supported modes:
+	// - all: all images
+	// - none: no images
+	// - alt: only alt text
+	// - all_p: all images and with generated alt text
+	// - alt_p: only alt text and with generated alt
+	//
+	XRetainImages *string `json:"X-Retain-Images,omitempty"`
+
+	// XRetainMedia Media retention modes for video, audio, and embedded video iframes.
+	//
+	// Supported modes:
+	// - none: no media
+	// - text: plain label, e.g. `Video 1`
+	// - link: markdown link, e.g. `[Video 1](url)` (default)
+	// - image: markdown image syntax, e.g. `![Video 1](url)`
+	// - html: original HTML with irrelevant attributes (class, id, style, data-*, aria-*) stripped
+	//
+	XRetainMedia *string `json:"X-Retain-Media,omitempty"`
+
+	// XPreset Apply a preset configuration for common scenarios.
+	//
+	// Supported presets:
+	// - reader: optimized for display to human users
+	// - index: optimized for semantic indexing
+	// - research: optimized for academic/research AI agents
+	// - agent: optimized for day-to-day AI agents
+	// - spider: optimized for recursive site crawling
+	//
+	// Preset values are applied only to options not explicitly set by the caller.
+	//
+	XPreset *string `json:"X-Preset,omitempty"`
+
+	// XWithIframe Enable filling iframe contents into main. (violates standards)
+	XWithIframe *string `json:"X-With-Iframe,omitempty"`
+
+	// XWithShadowDom Enable filling shadow dom contents into main. (violates standards)
+	XWithShadowDom *string `json:"X-With-Shadow-Dom,omitempty"`
+
+	// XSkipCertVerification Enable skipping SSL certificate verification. (violates security best practices)
+	XSkipCertVerification *string `json:"X-Skip-Cert-Verification,omitempty"`
+
+	// XUserAgent Override User-Agent.
+	//
+	// Several special values:
+	// - browser: use the internal browser UA
+	// - auto: pass-through your UA if it starts with `Mozilla/5.0`, otherwise use the internal browser UA
+	// - inherit / pass-through: use the User-Agent from the request context if applicable
+	// - bot: Use a pre-defined bot User-Agent from this service
+	// - diversify: Use a diversified browser User-Agent
+	//
+	// Or specify your own user agent string.
+	//
+	// Note: anonymous users specifying a browser UA will have no effect and will fall back to the internal browser UA.
+	//
+	// Default: browser
+	XUserAgent *string `json:"X-User-Agent,omitempty"`
+
+	// XTimeout Specify timeout in seconds. Max 180.
+	XTimeout *string `json:"X-Timeout,omitempty"`
+
+	// XLocale Specify browser locale for the page.
+	XLocale *string `json:"X-Locale,omitempty"`
+
+	// XReferer Specify referer for the page.
+	XReferer *string `json:"X-Referer,omitempty"`
+
+	// XTokenBudget Specify a budget in tokens.
+	//
+	// If the resulting token cost exceeds the budget, the request is rejected.
+	//
+	// Note this parameter is ignored for the search endpoint.
+	XTokenBudget *string `json:"X-Token-Budget,omitempty"`
+
+	// XMaxTokens Trim the response content at a maximum number of tokens.
+	XMaxTokens *string `json:"X-Max-Tokens,omitempty"`
+
+	// XAssertStatusCode Assert the HTTP status code of the crawled page. If the actual status code does not match the asserted one, the request is rejected with 422 Unprocessable Entity.
+	XAssertStatusCode *string `json:"X-Assert-Status-Code,omitempty"`
+
+	// XRespondTiming Explicitly specify the respond timing. One of the following:
+	//
+	// - html: directly return unrendered HTML
+	// - visible-content: return immediately when any content becomes available
+	// - mutation-idle: wait for DOM mutations to settle and remain unchanged for at least 0.2s
+	// - resource-idle: wait for no additional resources that would affect page logic and content has SUCCEEDED loading in 0.5s
+	// - media-idle: wait for no additional resources, including media resources, has SUCCEEDED loading in 0.5s
+	// - network-idle: wait for full load of webpage, also known as networkidle0.
+	//
+	XRespondTiming *string `json:"X-Respond-Timing,omitempty"`
+
+	// XEngine Specify the engine to use for crawling.
+	//
+	// Supported: browser, direct, cf-browser-rendering
+	XEngine *string `json:"X-Engine,omitempty"`
+
+	// XBase Select base modes of relative URLs.
+	//
+	// Supported: initial, final
+	XBase *string `json:"X-Base,omitempty"`
+
+	// XRemoveOverlay Specify whether to remove overlay elements from the page.
+	XRemoveOverlay *string `json:"X-Remove-Overlay,omitempty"`
+
+	// XDetachInvisibles Temporarily detach elements with computed `display:none` before snapshotting, then restore them.
+	//
+	// Requires the browser engine and disables caching.
+	XDetachInvisibles *string `json:"X-Detach-Invisibles,omitempty"`
+
+	// XMarkdownChunking Opt-in markdown chunking.
+	//
+	// Supported values:
+	// - true
+	// - h1
+	// - h2
+	// - h3
+	// - h4
+	// - h5
+	// - structured
+	// - s1
+	// - s2
+	// - s3
+	// - s4
+	// - s5
+	//
+	// Note if you are expecting text return, the chunking is done by injecting character \u001D
+	//
+	XMarkdownChunking *string `json:"X-Markdown-Chunking,omitempty"`
+
+	// XMdHeadingStyle Heading style of the generated markdown.
+	//
+	// This is an option passed through to [Turndown](https://github.com/mixmark-io/turndown?tab=readme-ov-file#options).
+	//
+	// Supported: setext, atx
+	XMdHeadingStyle *string `json:"X-Md-Heading-Style,omitempty"`
+
+	// XMdHr Hr text of the generated markdown.
+	//
+	// This is an option passed through to [Turndown](https://github.com/mixmark-io/turndown?tab=readme-ov-file#options).
+	XMdHr *string `json:"X-Md-Hr,omitempty"`
+
+	// XMdBulletListMarker Bullet list marker of the generated markdown.
+	//
+	// This is an option passed through to [Turndown](https://github.com/mixmark-io/turndown?tab=readme-ov-file#options).
+	//
+	// Supported: -, +, *
+	XMdBulletListMarker *string `json:"X-Md-Bullet-List-Marker,omitempty"`
+
+	// XMdEmDelimiter Em delimiter of the generated markdown.
+	//
+	// This is an option passed through to [Turndown](https://github.com/mixmark-io/turndown?tab=readme-ov-file#options).
+	//
+	// Supported: _, *
+	XMdEmDelimiter *string `json:"X-Md-Em-Delimiter,omitempty"`
+
+	// XMdStrongDelimiter Strong delimiter of the generated markdown.
+	//
+	// This is an option passed through to [Turndown](https://github.com/mixmark-io/turndown?tab=readme-ov-file#options).
+	//
+	// Supported: **, __
+	XMdStrongDelimiter *string `json:"X-Md-Strong-Delimiter,omitempty"`
+
+	// XMdLinkStyle Link style of the generated markdown.
+	//
+	// This is an option passed through to [Turndown](https://github.com/mixmark-io/turndown?tab=readme-ov-file#options).
+	//
+	// Supported: inlined, referenced, discarded
+	XMdLinkStyle *string `json:"X-Md-Link-Style,omitempty"`
+
+	// XMdLinkReferenceStyle Link reference style of the generated markdown.
+	//
+	// This is an option passed through to [Turndown](https://github.com/mixmark-io/turndown?tab=readme-ov-file#options).
+	//
+	// Supported: full, collapsed, shortcut, discarded
+	XMdLinkReferenceStyle *string `json:"X-Md-Link-Reference-Style,omitempty"`
+
+	// XPage Steer which page to return for uploaded files (PDF, DOC, XLS, PPT, etc.).
+	//
+	// 1-indexed, 0 is the same as 1. Accepts a page number, a list and/or ranges like `1,3,5-7`.
+	//
+	// At most 35 pages can be selected. With multiple pages, DocLayout / OCR runs over each selected page.
+	//
+	// Ignored when the target is not a document.
+	XPage *string `json:"X-Page,omitempty"`
+
+	// XPreloadUrl URL to preload before scraping.
+	//
+	// Ignored when no URL is provided.
+	XPreloadUrl *string `json:"X-Preload-Url,omitempty"`
+
+	// XNoServiceWorker Disable service workers when running the browser.
+	//
+	// Useful for bypassing service-worker-based caching or interception.
+	XNoServiceWorker *string `json:"X-No-Service-Worker,omitempty"`
+}
+
+// PostReadParamsPdf1 defines parameters for PostRead.
+type PostReadParamsPdf1 = string
+
+// PostReadParamsFile1 defines parameters for PostRead.
+type PostReadParamsFile1 = string
+
+// PostReadParamsRespondWith1 defines parameters for PostRead.
+type PostReadParamsRespondWith1 = string
+
+// PostReadParamsWithLinksSummary1 defines parameters for PostRead.
+type PostReadParamsWithLinksSummary1 = string
+
+// PostReadParamsNoGfm1 defines parameters for PostRead.
+type PostReadParamsNoGfm1 = string
+
+// PostReadParamsWithIframe1 defines parameters for PostRead.
+type PostReadParamsWithIframe1 = string
+
+// PostReadParamsSetCookies0 defines parameters for PostRead.
+type PostReadParamsSetCookies0 = interface{}
+
+// PostReadParamsSetCookies1 defines parameters for PostRead.
+type PostReadParamsSetCookies1 = string
+
+// PostReadParamsEngine1 defines parameters for PostRead.
+type PostReadParamsEngine1 = string
+
+// PostReadParamsRobotsTxt1 defines parameters for PostRead.
+type PostReadParamsRobotsTxt1 = string
+
+// PostReadParamsMarkdownChunking1 defines parameters for PostRead.
+type PostReadParamsMarkdownChunking1 = string
+
+// PostReadParamsAuthorization0 defines parameters for PostRead.
+type PostReadParamsAuthorization0 = string
+
+// PostReadJSONBodyEngine1 defines parameters for PostRead.
+type PostReadJSONBodyEngine1 = string
+
+// PostReadJSONBody_Engine defines parameters for PostRead.
+type PostReadJSONBody_Engine struct {
+	union json.RawMessage
+}
+
+// PostReadJSONBodyFile1 defines parameters for PostRead.
+type PostReadJSONBodyFile1 = string
+
+// PostReadJSONBody_File defines parameters for PostRead.
+type PostReadJSONBody_File struct {
+	union json.RawMessage
+}
+
+// PostReadJSONBodyMarkdownChunking1 defines parameters for PostRead.
+type PostReadJSONBodyMarkdownChunking1 = string
+
+// PostReadJSONBody_MarkdownChunking defines parameters for PostRead.
+type PostReadJSONBody_MarkdownChunking struct {
+	union json.RawMessage
+}
+
+// PostReadJSONBodyNoGfm1 defines parameters for PostRead.
+type PostReadJSONBodyNoGfm1 = string
+
+// PostReadJSONBody_NoGfm defines parameters for PostRead.
+type PostReadJSONBody_NoGfm struct {
+	union json.RawMessage
+}
+
+// PostReadJSONBodyPdf1 defines parameters for PostRead.
+type PostReadJSONBodyPdf1 = string
+
+// PostReadJSONBody_Pdf defines parameters for PostRead.
+type PostReadJSONBody_Pdf struct {
+	union json.RawMessage
+}
+
+// PostReadJSONBodyRespondWith1 defines parameters for PostRead.
+type PostReadJSONBodyRespondWith1 = string
+
+// PostReadJSONBody_RespondWith defines parameters for PostRead.
+type PostReadJSONBody_RespondWith struct {
+	union json.RawMessage
+}
+
+// PostReadJSONBodyRobotsTxt1 defines parameters for PostRead.
+type PostReadJSONBodyRobotsTxt1 = string
+
+// PostReadJSONBody_RobotsTxt defines parameters for PostRead.
+type PostReadJSONBody_RobotsTxt struct {
+	union json.RawMessage
+}
+
+// PostReadJSONBodySetCookies0 defines parameters for PostRead.
+type PostReadJSONBodySetCookies0 = interface{}
+
+// PostReadJSONBodySetCookies1 defines parameters for PostRead.
+type PostReadJSONBodySetCookies1 = string
+
+// PostReadJSONBody_SetCookies_Item defines parameters for PostRead.
+type PostReadJSONBody_SetCookies_Item struct {
+	union json.RawMessage
+}
+
+// PostReadJSONBody_WebBotAuth defines parameters for PostRead.
+type PostReadJSONBody_WebBotAuth struct {
+	union json.RawMessage
+}
+
+// PostReadJSONBodyWithIframe1 defines parameters for PostRead.
+type PostReadJSONBodyWithIframe1 = string
+
+// PostReadJSONBody_WithIframe defines parameters for PostRead.
+type PostReadJSONBody_WithIframe struct {
+	union json.RawMessage
+}
+
+// PostReadJSONBodyWithLinksSummary1 defines parameters for PostRead.
+type PostReadJSONBodyWithLinksSummary1 = string
+
+// PostReadJSONBody_WithLinksSummary defines parameters for PostRead.
+type PostReadJSONBody_WithLinksSummary struct {
+	union json.RawMessage
+}
+
+// PostReadFormdataBodyEngine1 defines parameters for PostRead.
+type PostReadFormdataBodyEngine1 = string
+
+// PostReadFormdataBody_Engine defines parameters for PostRead.
+type PostReadFormdataBody_Engine struct {
+	union json.RawMessage
+}
+
+// PostReadFormdataBodyFile1 defines parameters for PostRead.
+type PostReadFormdataBodyFile1 = string
+
+// PostReadFormdataBody_File defines parameters for PostRead.
+type PostReadFormdataBody_File struct {
+	union json.RawMessage
+}
+
+// PostReadFormdataBodyMarkdownChunking1 defines parameters for PostRead.
+type PostReadFormdataBodyMarkdownChunking1 = string
+
+// PostReadFormdataBody_MarkdownChunking defines parameters for PostRead.
+type PostReadFormdataBody_MarkdownChunking struct {
+	union json.RawMessage
+}
+
+// PostReadFormdataBodyNoGfm1 defines parameters for PostRead.
+type PostReadFormdataBodyNoGfm1 = string
+
+// PostReadFormdataBody_NoGfm defines parameters for PostRead.
+type PostReadFormdataBody_NoGfm struct {
+	union json.RawMessage
+}
+
+// PostReadFormdataBodyPdf1 defines parameters for PostRead.
+type PostReadFormdataBodyPdf1 = string
+
+// PostReadFormdataBody_Pdf defines parameters for PostRead.
+type PostReadFormdataBody_Pdf struct {
+	union json.RawMessage
+}
+
+// PostReadFormdataBodyRespondWith1 defines parameters for PostRead.
+type PostReadFormdataBodyRespondWith1 = string
+
+// PostReadFormdataBody_RespondWith defines parameters for PostRead.
+type PostReadFormdataBody_RespondWith struct {
+	union json.RawMessage
+}
+
+// PostReadFormdataBodyRobotsTxt1 defines parameters for PostRead.
+type PostReadFormdataBodyRobotsTxt1 = string
+
+// PostReadFormdataBody_RobotsTxt defines parameters for PostRead.
+type PostReadFormdataBody_RobotsTxt struct {
+	union json.RawMessage
+}
+
+// PostReadFormdataBodySetCookies0 defines parameters for PostRead.
+type PostReadFormdataBodySetCookies0 = interface{}
+
+// PostReadFormdataBodySetCookies1 defines parameters for PostRead.
+type PostReadFormdataBodySetCookies1 = string
+
+// PostReadFormdataBody_SetCookies defines parameters for PostRead.
+type PostReadFormdataBody_SetCookies struct {
+	union json.RawMessage
+}
+
+// PostReadFormdataBody_WebBotAuth defines parameters for PostRead.
+type PostReadFormdataBody_WebBotAuth struct {
+	union json.RawMessage
+}
+
+// PostReadFormdataBodyWithIframe1 defines parameters for PostRead.
+type PostReadFormdataBodyWithIframe1 = string
+
+// PostReadFormdataBody_WithIframe defines parameters for PostRead.
+type PostReadFormdataBody_WithIframe struct {
+	union json.RawMessage
+}
+
+// PostReadFormdataBodyWithLinksSummary1 defines parameters for PostRead.
+type PostReadFormdataBodyWithLinksSummary1 = string
+
+// PostReadFormdataBody_WithLinksSummary defines parameters for PostRead.
+type PostReadFormdataBody_WithLinksSummary struct {
+	union json.RawMessage
+}
+
+// PostReadMultipartBodyEngine1 defines parameters for PostRead.
+type PostReadMultipartBodyEngine1 = string
+
+// PostReadMultipartBody_Engine defines parameters for PostRead.
+type PostReadMultipartBody_Engine struct {
+	union json.RawMessage
+}
+
+// PostReadMultipartBodyFile1 defines parameters for PostRead.
+type PostReadMultipartBodyFile1 = string
+
+// PostReadMultipartBody_File defines parameters for PostRead.
+type PostReadMultipartBody_File struct {
+	union json.RawMessage
+}
+
+// PostReadMultipartBodyMarkdownChunking1 defines parameters for PostRead.
+type PostReadMultipartBodyMarkdownChunking1 = string
+
+// PostReadMultipartBody_MarkdownChunking defines parameters for PostRead.
+type PostReadMultipartBody_MarkdownChunking struct {
+	union json.RawMessage
+}
+
+// PostReadMultipartBodyNoGfm1 defines parameters for PostRead.
+type PostReadMultipartBodyNoGfm1 = string
+
+// PostReadMultipartBody_NoGfm defines parameters for PostRead.
+type PostReadMultipartBody_NoGfm struct {
+	union json.RawMessage
+}
+
+// PostReadMultipartBodyPdf1 defines parameters for PostRead.
+type PostReadMultipartBodyPdf1 = string
+
+// PostReadMultipartBody_Pdf defines parameters for PostRead.
+type PostReadMultipartBody_Pdf struct {
+	union json.RawMessage
+}
+
+// PostReadMultipartBodyRespondWith1 defines parameters for PostRead.
+type PostReadMultipartBodyRespondWith1 = string
+
+// PostReadMultipartBody_RespondWith defines parameters for PostRead.
+type PostReadMultipartBody_RespondWith struct {
+	union json.RawMessage
+}
+
+// PostReadMultipartBodyRobotsTxt1 defines parameters for PostRead.
+type PostReadMultipartBodyRobotsTxt1 = string
+
+// PostReadMultipartBody_RobotsTxt defines parameters for PostRead.
+type PostReadMultipartBody_RobotsTxt struct {
+	union json.RawMessage
+}
+
+// PostReadMultipartBodySetCookies0 defines parameters for PostRead.
+type PostReadMultipartBodySetCookies0 = interface{}
+
+// PostReadMultipartBodySetCookies1 defines parameters for PostRead.
+type PostReadMultipartBodySetCookies1 = string
+
+// PostReadMultipartBody_SetCookies_Item defines parameters for PostRead.
+type PostReadMultipartBody_SetCookies_Item struct {
+	union json.RawMessage
+}
+
+// PostReadMultipartBody_WebBotAuth defines parameters for PostRead.
+type PostReadMultipartBody_WebBotAuth struct {
+	union json.RawMessage
+}
+
+// PostReadMultipartBodyWithIframe1 defines parameters for PostRead.
+type PostReadMultipartBodyWithIframe1 = string
+
+// PostReadMultipartBody_WithIframe defines parameters for PostRead.
+type PostReadMultipartBody_WithIframe struct {
+	union json.RawMessage
+}
+
+// PostReadMultipartBodyWithLinksSummary1 defines parameters for PostRead.
+type PostReadMultipartBodyWithLinksSummary1 = string
+
+// PostReadMultipartBody_WithLinksSummary defines parameters for PostRead.
+type PostReadMultipartBody_WithLinksSummary struct {
+	union json.RawMessage
+}
+
+// PostRead400JSONResponseBody defines parameters for PostRead.
+type PostRead400JSONResponseBody struct {
+	union json.RawMessage
+}
+
+// PostRead401JSONResponseBody defines parameters for PostRead.
+type PostRead401JSONResponseBody struct {
+	union json.RawMessage
+}
+
+// PostRead402JSONResponseBody defines parameters for PostRead.
+type PostRead402JSONResponseBody struct {
+	union json.RawMessage
+}
+
+// PostRead403JSONResponseBody defines parameters for PostRead.
+type PostRead403JSONResponseBody struct {
+	union json.RawMessage
+}
+
+// PostRead409JSONResponseBody defines parameters for PostRead.
+type PostRead409JSONResponseBody struct {
+	union json.RawMessage
+}
+
+// PostRead422JSONResponseBody defines parameters for PostRead.
+type PostRead422JSONResponseBody struct {
+	union json.RawMessage
+}
+
 // GetTargetUrlParams defines parameters for GetTargetUrl.
 type GetTargetUrlParams struct {
 	PreloadUrl      *string                 `form:"preloadUrl,omitempty" json:"preloadUrl,omitempty"`
@@ -7053,6 +8658,15 @@ type PostEphemeralEncodedFidFormdataRequestBody PostEphemeralEncodedFidFormdataB
 
 // PostEphemeralEncodedFidMultipartRequestBody defines body for PostEphemeralEncodedFid for multipart/form-data ContentType.
 type PostEphemeralEncodedFidMultipartRequestBody PostEphemeralEncodedFidMultipartBody
+
+// PostReadJSONRequestBody defines body for PostRead for application/json ContentType.
+type PostReadJSONRequestBody PostReadJSONBody
+
+// PostReadFormdataRequestBody defines body for PostRead for application/x-www-form-urlencoded ContentType.
+type PostReadFormdataRequestBody PostReadFormdataBody
+
+// PostReadMultipartRequestBody defines body for PostRead for multipart/form-data ContentType.
+type PostReadMultipartRequestBody PostReadMultipartBody
 
 // PostTargetUrlJSONRequestBody defines body for PostTargetUrl for application/json ContentType.
 type PostTargetUrlJSONRequestBody PostTargetUrlJSONBody
@@ -14212,6 +15826,2450 @@ func (t Post422JSONResponseBody) MarshalJSON() ([]byte, error) {
 }
 
 func (t *Post422JSONResponseBody) UnmarshalJSON(b []byte) error {
+	err := t.union.UnmarshalJSON(b)
+	return err
+}
+
+// AsEnum0x1c returns the union data inside the PostReadJSONBody_Engine as a Enum0x1c
+func (t PostReadJSONBody_Engine) AsEnum0x1c() (Enum0x1c, error) {
+	var body Enum0x1c
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromEnum0x1c overwrites any union data inside the PostReadJSONBody_Engine as the provided Enum0x1c
+func (t *PostReadJSONBody_Engine) FromEnum0x1c(v Enum0x1c) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeEnum0x1c performs a merge with any union data inside the PostReadJSONBody_Engine, using the provided Enum0x1c
+func (t *PostReadJSONBody_Engine) MergeEnum0x1c(v Enum0x1c) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsPostReadJSONBodyEngine1 returns the union data inside the PostReadJSONBody_Engine as a PostReadJSONBodyEngine1
+func (t PostReadJSONBody_Engine) AsPostReadJSONBodyEngine1() (PostReadJSONBodyEngine1, error) {
+	var body PostReadJSONBodyEngine1
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromPostReadJSONBodyEngine1 overwrites any union data inside the PostReadJSONBody_Engine as the provided PostReadJSONBodyEngine1
+func (t *PostReadJSONBody_Engine) FromPostReadJSONBodyEngine1(v PostReadJSONBodyEngine1) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergePostReadJSONBodyEngine1 performs a merge with any union data inside the PostReadJSONBody_Engine, using the provided PostReadJSONBodyEngine1
+func (t *PostReadJSONBody_Engine) MergePostReadJSONBodyEngine1(v PostReadJSONBodyEngine1) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+func (t PostReadJSONBody_Engine) MarshalJSON() ([]byte, error) {
+	b, err := t.union.MarshalJSON()
+	return b, err
+}
+
+func (t *PostReadJSONBody_Engine) UnmarshalJSON(b []byte) error {
+	err := t.union.UnmarshalJSON(b)
+	return err
+}
+
+// AsFancyFile0x0e returns the union data inside the PostReadJSONBody_File as a FancyFile0x0e
+func (t PostReadJSONBody_File) AsFancyFile0x0e() (FancyFile0x0e, error) {
+	var body FancyFile0x0e
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromFancyFile0x0e overwrites any union data inside the PostReadJSONBody_File as the provided FancyFile0x0e
+func (t *PostReadJSONBody_File) FromFancyFile0x0e(v FancyFile0x0e) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeFancyFile0x0e performs a merge with any union data inside the PostReadJSONBody_File, using the provided FancyFile0x0e
+func (t *PostReadJSONBody_File) MergeFancyFile0x0e(v FancyFile0x0e) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsPostReadJSONBodyFile1 returns the union data inside the PostReadJSONBody_File as a PostReadJSONBodyFile1
+func (t PostReadJSONBody_File) AsPostReadJSONBodyFile1() (PostReadJSONBodyFile1, error) {
+	var body PostReadJSONBodyFile1
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromPostReadJSONBodyFile1 overwrites any union data inside the PostReadJSONBody_File as the provided PostReadJSONBodyFile1
+func (t *PostReadJSONBody_File) FromPostReadJSONBodyFile1(v PostReadJSONBodyFile1) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergePostReadJSONBodyFile1 performs a merge with any union data inside the PostReadJSONBody_File, using the provided PostReadJSONBodyFile1
+func (t *PostReadJSONBody_File) MergePostReadJSONBodyFile1(v PostReadJSONBodyFile1) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+func (t PostReadJSONBody_File) MarshalJSON() ([]byte, error) {
+	b, err := t.union.MarshalJSON()
+	return b, err
+}
+
+func (t *PostReadJSONBody_File) UnmarshalJSON(b []byte) error {
+	err := t.union.UnmarshalJSON(b)
+	return err
+}
+
+// AsEnum0x27 returns the union data inside the PostReadJSONBody_MarkdownChunking as a Enum0x27
+func (t PostReadJSONBody_MarkdownChunking) AsEnum0x27() (Enum0x27, error) {
+	var body Enum0x27
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromEnum0x27 overwrites any union data inside the PostReadJSONBody_MarkdownChunking as the provided Enum0x27
+func (t *PostReadJSONBody_MarkdownChunking) FromEnum0x27(v Enum0x27) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeEnum0x27 performs a merge with any union data inside the PostReadJSONBody_MarkdownChunking, using the provided Enum0x27
+func (t *PostReadJSONBody_MarkdownChunking) MergeEnum0x27(v Enum0x27) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsPostReadJSONBodyMarkdownChunking1 returns the union data inside the PostReadJSONBody_MarkdownChunking as a PostReadJSONBodyMarkdownChunking1
+func (t PostReadJSONBody_MarkdownChunking) AsPostReadJSONBodyMarkdownChunking1() (PostReadJSONBodyMarkdownChunking1, error) {
+	var body PostReadJSONBodyMarkdownChunking1
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromPostReadJSONBodyMarkdownChunking1 overwrites any union data inside the PostReadJSONBody_MarkdownChunking as the provided PostReadJSONBodyMarkdownChunking1
+func (t *PostReadJSONBody_MarkdownChunking) FromPostReadJSONBodyMarkdownChunking1(v PostReadJSONBodyMarkdownChunking1) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergePostReadJSONBodyMarkdownChunking1 performs a merge with any union data inside the PostReadJSONBody_MarkdownChunking, using the provided PostReadJSONBodyMarkdownChunking1
+func (t *PostReadJSONBody_MarkdownChunking) MergePostReadJSONBodyMarkdownChunking1(v PostReadJSONBodyMarkdownChunking1) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+func (t PostReadJSONBody_MarkdownChunking) MarshalJSON() ([]byte, error) {
+	b, err := t.union.MarshalJSON()
+	return b, err
+}
+
+func (t *PostReadJSONBody_MarkdownChunking) UnmarshalJSON(b []byte) error {
+	err := t.union.UnmarshalJSON(b)
+	return err
+}
+
+// AsPseudoBoolean0x11 returns the union data inside the PostReadJSONBody_NoGfm as a PseudoBoolean0x11
+func (t PostReadJSONBody_NoGfm) AsPseudoBoolean0x11() (PseudoBoolean0x11, error) {
+	var body PseudoBoolean0x11
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromPseudoBoolean0x11 overwrites any union data inside the PostReadJSONBody_NoGfm as the provided PseudoBoolean0x11
+func (t *PostReadJSONBody_NoGfm) FromPseudoBoolean0x11(v PseudoBoolean0x11) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergePseudoBoolean0x11 performs a merge with any union data inside the PostReadJSONBody_NoGfm, using the provided PseudoBoolean0x11
+func (t *PostReadJSONBody_NoGfm) MergePseudoBoolean0x11(v PseudoBoolean0x11) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsPostReadJSONBodyNoGfm1 returns the union data inside the PostReadJSONBody_NoGfm as a PostReadJSONBodyNoGfm1
+func (t PostReadJSONBody_NoGfm) AsPostReadJSONBodyNoGfm1() (PostReadJSONBodyNoGfm1, error) {
+	var body PostReadJSONBodyNoGfm1
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromPostReadJSONBodyNoGfm1 overwrites any union data inside the PostReadJSONBody_NoGfm as the provided PostReadJSONBodyNoGfm1
+func (t *PostReadJSONBody_NoGfm) FromPostReadJSONBodyNoGfm1(v PostReadJSONBodyNoGfm1) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergePostReadJSONBodyNoGfm1 performs a merge with any union data inside the PostReadJSONBody_NoGfm, using the provided PostReadJSONBodyNoGfm1
+func (t *PostReadJSONBody_NoGfm) MergePostReadJSONBodyNoGfm1(v PostReadJSONBodyNoGfm1) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+func (t PostReadJSONBody_NoGfm) MarshalJSON() ([]byte, error) {
+	b, err := t.union.MarshalJSON()
+	return b, err
+}
+
+func (t *PostReadJSONBody_NoGfm) UnmarshalJSON(b []byte) error {
+	err := t.union.UnmarshalJSON(b)
+	return err
+}
+
+// AsFancyFile0x0e returns the union data inside the PostReadJSONBody_Pdf as a FancyFile0x0e
+func (t PostReadJSONBody_Pdf) AsFancyFile0x0e() (FancyFile0x0e, error) {
+	var body FancyFile0x0e
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromFancyFile0x0e overwrites any union data inside the PostReadJSONBody_Pdf as the provided FancyFile0x0e
+func (t *PostReadJSONBody_Pdf) FromFancyFile0x0e(v FancyFile0x0e) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeFancyFile0x0e performs a merge with any union data inside the PostReadJSONBody_Pdf, using the provided FancyFile0x0e
+func (t *PostReadJSONBody_Pdf) MergeFancyFile0x0e(v FancyFile0x0e) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsPostReadJSONBodyPdf1 returns the union data inside the PostReadJSONBody_Pdf as a PostReadJSONBodyPdf1
+func (t PostReadJSONBody_Pdf) AsPostReadJSONBodyPdf1() (PostReadJSONBodyPdf1, error) {
+	var body PostReadJSONBodyPdf1
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromPostReadJSONBodyPdf1 overwrites any union data inside the PostReadJSONBody_Pdf as the provided PostReadJSONBodyPdf1
+func (t *PostReadJSONBody_Pdf) FromPostReadJSONBodyPdf1(v PostReadJSONBodyPdf1) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergePostReadJSONBodyPdf1 performs a merge with any union data inside the PostReadJSONBody_Pdf, using the provided PostReadJSONBodyPdf1
+func (t *PostReadJSONBody_Pdf) MergePostReadJSONBodyPdf1(v PostReadJSONBodyPdf1) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+func (t PostReadJSONBody_Pdf) MarshalJSON() ([]byte, error) {
+	b, err := t.union.MarshalJSON()
+	return b, err
+}
+
+func (t *PostReadJSONBody_Pdf) UnmarshalJSON(b []byte) error {
+	err := t.union.UnmarshalJSON(b)
+	return err
+}
+
+// AsEnum0x10 returns the union data inside the PostReadJSONBody_RespondWith as a Enum0x10
+func (t PostReadJSONBody_RespondWith) AsEnum0x10() (Enum0x10, error) {
+	var body Enum0x10
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromEnum0x10 overwrites any union data inside the PostReadJSONBody_RespondWith as the provided Enum0x10
+func (t *PostReadJSONBody_RespondWith) FromEnum0x10(v Enum0x10) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeEnum0x10 performs a merge with any union data inside the PostReadJSONBody_RespondWith, using the provided Enum0x10
+func (t *PostReadJSONBody_RespondWith) MergeEnum0x10(v Enum0x10) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsPostReadJSONBodyRespondWith1 returns the union data inside the PostReadJSONBody_RespondWith as a PostReadJSONBodyRespondWith1
+func (t PostReadJSONBody_RespondWith) AsPostReadJSONBodyRespondWith1() (PostReadJSONBodyRespondWith1, error) {
+	var body PostReadJSONBodyRespondWith1
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromPostReadJSONBodyRespondWith1 overwrites any union data inside the PostReadJSONBody_RespondWith as the provided PostReadJSONBodyRespondWith1
+func (t *PostReadJSONBody_RespondWith) FromPostReadJSONBodyRespondWith1(v PostReadJSONBodyRespondWith1) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergePostReadJSONBodyRespondWith1 performs a merge with any union data inside the PostReadJSONBody_RespondWith, using the provided PostReadJSONBodyRespondWith1
+func (t *PostReadJSONBody_RespondWith) MergePostReadJSONBodyRespondWith1(v PostReadJSONBodyRespondWith1) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+func (t PostReadJSONBody_RespondWith) MarshalJSON() ([]byte, error) {
+	b, err := t.union.MarshalJSON()
+	return b, err
+}
+
+func (t *PostReadJSONBody_RespondWith) UnmarshalJSON(b []byte) error {
+	err := t.union.UnmarshalJSON(b)
+	return err
+}
+
+// AsPseudoBoolean0x11 returns the union data inside the PostReadJSONBody_RobotsTxt as a PseudoBoolean0x11
+func (t PostReadJSONBody_RobotsTxt) AsPseudoBoolean0x11() (PseudoBoolean0x11, error) {
+	var body PseudoBoolean0x11
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromPseudoBoolean0x11 overwrites any union data inside the PostReadJSONBody_RobotsTxt as the provided PseudoBoolean0x11
+func (t *PostReadJSONBody_RobotsTxt) FromPseudoBoolean0x11(v PseudoBoolean0x11) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergePseudoBoolean0x11 performs a merge with any union data inside the PostReadJSONBody_RobotsTxt, using the provided PseudoBoolean0x11
+func (t *PostReadJSONBody_RobotsTxt) MergePseudoBoolean0x11(v PseudoBoolean0x11) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsPostReadJSONBodyRobotsTxt1 returns the union data inside the PostReadJSONBody_RobotsTxt as a PostReadJSONBodyRobotsTxt1
+func (t PostReadJSONBody_RobotsTxt) AsPostReadJSONBodyRobotsTxt1() (PostReadJSONBodyRobotsTxt1, error) {
+	var body PostReadJSONBodyRobotsTxt1
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromPostReadJSONBodyRobotsTxt1 overwrites any union data inside the PostReadJSONBody_RobotsTxt as the provided PostReadJSONBodyRobotsTxt1
+func (t *PostReadJSONBody_RobotsTxt) FromPostReadJSONBodyRobotsTxt1(v PostReadJSONBodyRobotsTxt1) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergePostReadJSONBodyRobotsTxt1 performs a merge with any union data inside the PostReadJSONBody_RobotsTxt, using the provided PostReadJSONBodyRobotsTxt1
+func (t *PostReadJSONBody_RobotsTxt) MergePostReadJSONBodyRobotsTxt1(v PostReadJSONBodyRobotsTxt1) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+func (t PostReadJSONBody_RobotsTxt) MarshalJSON() ([]byte, error) {
+	b, err := t.union.MarshalJSON()
+	return b, err
+}
+
+func (t *PostReadJSONBody_RobotsTxt) UnmarshalJSON(b []byte) error {
+	err := t.union.UnmarshalJSON(b)
+	return err
+}
+
+// AsPostReadJSONBodySetCookies0 returns the union data inside the PostReadJSONBody_SetCookies_Item as a PostReadJSONBodySetCookies0
+func (t PostReadJSONBody_SetCookies_Item) AsPostReadJSONBodySetCookies0() (PostReadJSONBodySetCookies0, error) {
+	var body PostReadJSONBodySetCookies0
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromPostReadJSONBodySetCookies0 overwrites any union data inside the PostReadJSONBody_SetCookies_Item as the provided PostReadJSONBodySetCookies0
+func (t *PostReadJSONBody_SetCookies_Item) FromPostReadJSONBodySetCookies0(v PostReadJSONBodySetCookies0) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergePostReadJSONBodySetCookies0 performs a merge with any union data inside the PostReadJSONBody_SetCookies_Item, using the provided PostReadJSONBodySetCookies0
+func (t *PostReadJSONBody_SetCookies_Item) MergePostReadJSONBodySetCookies0(v PostReadJSONBodySetCookies0) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsPostReadJSONBodySetCookies1 returns the union data inside the PostReadJSONBody_SetCookies_Item as a PostReadJSONBodySetCookies1
+func (t PostReadJSONBody_SetCookies_Item) AsPostReadJSONBodySetCookies1() (PostReadJSONBodySetCookies1, error) {
+	var body PostReadJSONBodySetCookies1
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromPostReadJSONBodySetCookies1 overwrites any union data inside the PostReadJSONBody_SetCookies_Item as the provided PostReadJSONBodySetCookies1
+func (t *PostReadJSONBody_SetCookies_Item) FromPostReadJSONBodySetCookies1(v PostReadJSONBodySetCookies1) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergePostReadJSONBodySetCookies1 performs a merge with any union data inside the PostReadJSONBody_SetCookies_Item, using the provided PostReadJSONBodySetCookies1
+func (t *PostReadJSONBody_SetCookies_Item) MergePostReadJSONBodySetCookies1(v PostReadJSONBodySetCookies1) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+func (t PostReadJSONBody_SetCookies_Item) MarshalJSON() ([]byte, error) {
+	b, err := t.union.MarshalJSON()
+	return b, err
+}
+
+func (t *PostReadJSONBody_SetCookies_Item) UnmarshalJSON(b []byte) error {
+	err := t.union.UnmarshalJSON(b)
+	return err
+}
+
+// AsPseudoBoolean0x11 returns the union data inside the PostReadJSONBody_WebBotAuth as a PseudoBoolean0x11
+func (t PostReadJSONBody_WebBotAuth) AsPseudoBoolean0x11() (PseudoBoolean0x11, error) {
+	var body PseudoBoolean0x11
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromPseudoBoolean0x11 overwrites any union data inside the PostReadJSONBody_WebBotAuth as the provided PseudoBoolean0x11
+func (t *PostReadJSONBody_WebBotAuth) FromPseudoBoolean0x11(v PseudoBoolean0x11) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergePseudoBoolean0x11 performs a merge with any union data inside the PostReadJSONBody_WebBotAuth, using the provided PseudoBoolean0x11
+func (t *PostReadJSONBody_WebBotAuth) MergePseudoBoolean0x11(v PseudoBoolean0x11) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsEnum0x16 returns the union data inside the PostReadJSONBody_WebBotAuth as a Enum0x16
+func (t PostReadJSONBody_WebBotAuth) AsEnum0x16() (Enum0x16, error) {
+	var body Enum0x16
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromEnum0x16 overwrites any union data inside the PostReadJSONBody_WebBotAuth as the provided Enum0x16
+func (t *PostReadJSONBody_WebBotAuth) FromEnum0x16(v Enum0x16) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeEnum0x16 performs a merge with any union data inside the PostReadJSONBody_WebBotAuth, using the provided Enum0x16
+func (t *PostReadJSONBody_WebBotAuth) MergeEnum0x16(v Enum0x16) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+func (t PostReadJSONBody_WebBotAuth) MarshalJSON() ([]byte, error) {
+	b, err := t.union.MarshalJSON()
+	return b, err
+}
+
+func (t *PostReadJSONBody_WebBotAuth) UnmarshalJSON(b []byte) error {
+	err := t.union.UnmarshalJSON(b)
+	return err
+}
+
+// AsPseudoBoolean0x11 returns the union data inside the PostReadJSONBody_WithIframe as a PseudoBoolean0x11
+func (t PostReadJSONBody_WithIframe) AsPseudoBoolean0x11() (PseudoBoolean0x11, error) {
+	var body PseudoBoolean0x11
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromPseudoBoolean0x11 overwrites any union data inside the PostReadJSONBody_WithIframe as the provided PseudoBoolean0x11
+func (t *PostReadJSONBody_WithIframe) FromPseudoBoolean0x11(v PseudoBoolean0x11) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergePseudoBoolean0x11 performs a merge with any union data inside the PostReadJSONBody_WithIframe, using the provided PseudoBoolean0x11
+func (t *PostReadJSONBody_WithIframe) MergePseudoBoolean0x11(v PseudoBoolean0x11) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsPostReadJSONBodyWithIframe1 returns the union data inside the PostReadJSONBody_WithIframe as a PostReadJSONBodyWithIframe1
+func (t PostReadJSONBody_WithIframe) AsPostReadJSONBodyWithIframe1() (PostReadJSONBodyWithIframe1, error) {
+	var body PostReadJSONBodyWithIframe1
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromPostReadJSONBodyWithIframe1 overwrites any union data inside the PostReadJSONBody_WithIframe as the provided PostReadJSONBodyWithIframe1
+func (t *PostReadJSONBody_WithIframe) FromPostReadJSONBodyWithIframe1(v PostReadJSONBodyWithIframe1) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergePostReadJSONBodyWithIframe1 performs a merge with any union data inside the PostReadJSONBody_WithIframe, using the provided PostReadJSONBodyWithIframe1
+func (t *PostReadJSONBody_WithIframe) MergePostReadJSONBodyWithIframe1(v PostReadJSONBodyWithIframe1) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+func (t PostReadJSONBody_WithIframe) MarshalJSON() ([]byte, error) {
+	b, err := t.union.MarshalJSON()
+	return b, err
+}
+
+func (t *PostReadJSONBody_WithIframe) UnmarshalJSON(b []byte) error {
+	err := t.union.UnmarshalJSON(b)
+	return err
+}
+
+// AsPseudoBoolean0x11 returns the union data inside the PostReadJSONBody_WithLinksSummary as a PseudoBoolean0x11
+func (t PostReadJSONBody_WithLinksSummary) AsPseudoBoolean0x11() (PseudoBoolean0x11, error) {
+	var body PseudoBoolean0x11
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromPseudoBoolean0x11 overwrites any union data inside the PostReadJSONBody_WithLinksSummary as the provided PseudoBoolean0x11
+func (t *PostReadJSONBody_WithLinksSummary) FromPseudoBoolean0x11(v PseudoBoolean0x11) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergePseudoBoolean0x11 performs a merge with any union data inside the PostReadJSONBody_WithLinksSummary, using the provided PseudoBoolean0x11
+func (t *PostReadJSONBody_WithLinksSummary) MergePseudoBoolean0x11(v PseudoBoolean0x11) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsPostReadJSONBodyWithLinksSummary1 returns the union data inside the PostReadJSONBody_WithLinksSummary as a PostReadJSONBodyWithLinksSummary1
+func (t PostReadJSONBody_WithLinksSummary) AsPostReadJSONBodyWithLinksSummary1() (PostReadJSONBodyWithLinksSummary1, error) {
+	var body PostReadJSONBodyWithLinksSummary1
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromPostReadJSONBodyWithLinksSummary1 overwrites any union data inside the PostReadJSONBody_WithLinksSummary as the provided PostReadJSONBodyWithLinksSummary1
+func (t *PostReadJSONBody_WithLinksSummary) FromPostReadJSONBodyWithLinksSummary1(v PostReadJSONBodyWithLinksSummary1) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergePostReadJSONBodyWithLinksSummary1 performs a merge with any union data inside the PostReadJSONBody_WithLinksSummary, using the provided PostReadJSONBodyWithLinksSummary1
+func (t *PostReadJSONBody_WithLinksSummary) MergePostReadJSONBodyWithLinksSummary1(v PostReadJSONBodyWithLinksSummary1) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+func (t PostReadJSONBody_WithLinksSummary) MarshalJSON() ([]byte, error) {
+	b, err := t.union.MarshalJSON()
+	return b, err
+}
+
+func (t *PostReadJSONBody_WithLinksSummary) UnmarshalJSON(b []byte) error {
+	err := t.union.UnmarshalJSON(b)
+	return err
+}
+
+// AsEnum0x1c returns the union data inside the PostReadFormdataBody_Engine as a Enum0x1c
+func (t PostReadFormdataBody_Engine) AsEnum0x1c() (Enum0x1c, error) {
+	var body Enum0x1c
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromEnum0x1c overwrites any union data inside the PostReadFormdataBody_Engine as the provided Enum0x1c
+func (t *PostReadFormdataBody_Engine) FromEnum0x1c(v Enum0x1c) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeEnum0x1c performs a merge with any union data inside the PostReadFormdataBody_Engine, using the provided Enum0x1c
+func (t *PostReadFormdataBody_Engine) MergeEnum0x1c(v Enum0x1c) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsPostReadFormdataBodyEngine1 returns the union data inside the PostReadFormdataBody_Engine as a PostReadFormdataBodyEngine1
+func (t PostReadFormdataBody_Engine) AsPostReadFormdataBodyEngine1() (PostReadFormdataBodyEngine1, error) {
+	var body PostReadFormdataBodyEngine1
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromPostReadFormdataBodyEngine1 overwrites any union data inside the PostReadFormdataBody_Engine as the provided PostReadFormdataBodyEngine1
+func (t *PostReadFormdataBody_Engine) FromPostReadFormdataBodyEngine1(v PostReadFormdataBodyEngine1) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergePostReadFormdataBodyEngine1 performs a merge with any union data inside the PostReadFormdataBody_Engine, using the provided PostReadFormdataBodyEngine1
+func (t *PostReadFormdataBody_Engine) MergePostReadFormdataBodyEngine1(v PostReadFormdataBodyEngine1) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+func (t PostReadFormdataBody_Engine) MarshalJSON() ([]byte, error) {
+	b, err := t.union.MarshalJSON()
+	return b, err
+}
+
+func (t *PostReadFormdataBody_Engine) UnmarshalJSON(b []byte) error {
+	err := t.union.UnmarshalJSON(b)
+	return err
+}
+
+// AsFancyFile0x0e returns the union data inside the PostReadFormdataBody_File as a FancyFile0x0e
+func (t PostReadFormdataBody_File) AsFancyFile0x0e() (FancyFile0x0e, error) {
+	var body FancyFile0x0e
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromFancyFile0x0e overwrites any union data inside the PostReadFormdataBody_File as the provided FancyFile0x0e
+func (t *PostReadFormdataBody_File) FromFancyFile0x0e(v FancyFile0x0e) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeFancyFile0x0e performs a merge with any union data inside the PostReadFormdataBody_File, using the provided FancyFile0x0e
+func (t *PostReadFormdataBody_File) MergeFancyFile0x0e(v FancyFile0x0e) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsPostReadFormdataBodyFile1 returns the union data inside the PostReadFormdataBody_File as a PostReadFormdataBodyFile1
+func (t PostReadFormdataBody_File) AsPostReadFormdataBodyFile1() (PostReadFormdataBodyFile1, error) {
+	var body PostReadFormdataBodyFile1
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromPostReadFormdataBodyFile1 overwrites any union data inside the PostReadFormdataBody_File as the provided PostReadFormdataBodyFile1
+func (t *PostReadFormdataBody_File) FromPostReadFormdataBodyFile1(v PostReadFormdataBodyFile1) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergePostReadFormdataBodyFile1 performs a merge with any union data inside the PostReadFormdataBody_File, using the provided PostReadFormdataBodyFile1
+func (t *PostReadFormdataBody_File) MergePostReadFormdataBodyFile1(v PostReadFormdataBodyFile1) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+func (t PostReadFormdataBody_File) MarshalJSON() ([]byte, error) {
+	b, err := t.union.MarshalJSON()
+	return b, err
+}
+
+func (t *PostReadFormdataBody_File) UnmarshalJSON(b []byte) error {
+	err := t.union.UnmarshalJSON(b)
+	return err
+}
+
+// AsEnum0x27 returns the union data inside the PostReadFormdataBody_MarkdownChunking as a Enum0x27
+func (t PostReadFormdataBody_MarkdownChunking) AsEnum0x27() (Enum0x27, error) {
+	var body Enum0x27
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromEnum0x27 overwrites any union data inside the PostReadFormdataBody_MarkdownChunking as the provided Enum0x27
+func (t *PostReadFormdataBody_MarkdownChunking) FromEnum0x27(v Enum0x27) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeEnum0x27 performs a merge with any union data inside the PostReadFormdataBody_MarkdownChunking, using the provided Enum0x27
+func (t *PostReadFormdataBody_MarkdownChunking) MergeEnum0x27(v Enum0x27) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsPostReadFormdataBodyMarkdownChunking1 returns the union data inside the PostReadFormdataBody_MarkdownChunking as a PostReadFormdataBodyMarkdownChunking1
+func (t PostReadFormdataBody_MarkdownChunking) AsPostReadFormdataBodyMarkdownChunking1() (PostReadFormdataBodyMarkdownChunking1, error) {
+	var body PostReadFormdataBodyMarkdownChunking1
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromPostReadFormdataBodyMarkdownChunking1 overwrites any union data inside the PostReadFormdataBody_MarkdownChunking as the provided PostReadFormdataBodyMarkdownChunking1
+func (t *PostReadFormdataBody_MarkdownChunking) FromPostReadFormdataBodyMarkdownChunking1(v PostReadFormdataBodyMarkdownChunking1) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergePostReadFormdataBodyMarkdownChunking1 performs a merge with any union data inside the PostReadFormdataBody_MarkdownChunking, using the provided PostReadFormdataBodyMarkdownChunking1
+func (t *PostReadFormdataBody_MarkdownChunking) MergePostReadFormdataBodyMarkdownChunking1(v PostReadFormdataBodyMarkdownChunking1) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+func (t PostReadFormdataBody_MarkdownChunking) MarshalJSON() ([]byte, error) {
+	b, err := t.union.MarshalJSON()
+	return b, err
+}
+
+func (t *PostReadFormdataBody_MarkdownChunking) UnmarshalJSON(b []byte) error {
+	err := t.union.UnmarshalJSON(b)
+	return err
+}
+
+// AsPseudoBoolean0x11 returns the union data inside the PostReadFormdataBody_NoGfm as a PseudoBoolean0x11
+func (t PostReadFormdataBody_NoGfm) AsPseudoBoolean0x11() (PseudoBoolean0x11, error) {
+	var body PseudoBoolean0x11
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromPseudoBoolean0x11 overwrites any union data inside the PostReadFormdataBody_NoGfm as the provided PseudoBoolean0x11
+func (t *PostReadFormdataBody_NoGfm) FromPseudoBoolean0x11(v PseudoBoolean0x11) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergePseudoBoolean0x11 performs a merge with any union data inside the PostReadFormdataBody_NoGfm, using the provided PseudoBoolean0x11
+func (t *PostReadFormdataBody_NoGfm) MergePseudoBoolean0x11(v PseudoBoolean0x11) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsPostReadFormdataBodyNoGfm1 returns the union data inside the PostReadFormdataBody_NoGfm as a PostReadFormdataBodyNoGfm1
+func (t PostReadFormdataBody_NoGfm) AsPostReadFormdataBodyNoGfm1() (PostReadFormdataBodyNoGfm1, error) {
+	var body PostReadFormdataBodyNoGfm1
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromPostReadFormdataBodyNoGfm1 overwrites any union data inside the PostReadFormdataBody_NoGfm as the provided PostReadFormdataBodyNoGfm1
+func (t *PostReadFormdataBody_NoGfm) FromPostReadFormdataBodyNoGfm1(v PostReadFormdataBodyNoGfm1) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergePostReadFormdataBodyNoGfm1 performs a merge with any union data inside the PostReadFormdataBody_NoGfm, using the provided PostReadFormdataBodyNoGfm1
+func (t *PostReadFormdataBody_NoGfm) MergePostReadFormdataBodyNoGfm1(v PostReadFormdataBodyNoGfm1) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+func (t PostReadFormdataBody_NoGfm) MarshalJSON() ([]byte, error) {
+	b, err := t.union.MarshalJSON()
+	return b, err
+}
+
+func (t *PostReadFormdataBody_NoGfm) UnmarshalJSON(b []byte) error {
+	err := t.union.UnmarshalJSON(b)
+	return err
+}
+
+// AsFancyFile0x0e returns the union data inside the PostReadFormdataBody_Pdf as a FancyFile0x0e
+func (t PostReadFormdataBody_Pdf) AsFancyFile0x0e() (FancyFile0x0e, error) {
+	var body FancyFile0x0e
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromFancyFile0x0e overwrites any union data inside the PostReadFormdataBody_Pdf as the provided FancyFile0x0e
+func (t *PostReadFormdataBody_Pdf) FromFancyFile0x0e(v FancyFile0x0e) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeFancyFile0x0e performs a merge with any union data inside the PostReadFormdataBody_Pdf, using the provided FancyFile0x0e
+func (t *PostReadFormdataBody_Pdf) MergeFancyFile0x0e(v FancyFile0x0e) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsPostReadFormdataBodyPdf1 returns the union data inside the PostReadFormdataBody_Pdf as a PostReadFormdataBodyPdf1
+func (t PostReadFormdataBody_Pdf) AsPostReadFormdataBodyPdf1() (PostReadFormdataBodyPdf1, error) {
+	var body PostReadFormdataBodyPdf1
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromPostReadFormdataBodyPdf1 overwrites any union data inside the PostReadFormdataBody_Pdf as the provided PostReadFormdataBodyPdf1
+func (t *PostReadFormdataBody_Pdf) FromPostReadFormdataBodyPdf1(v PostReadFormdataBodyPdf1) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergePostReadFormdataBodyPdf1 performs a merge with any union data inside the PostReadFormdataBody_Pdf, using the provided PostReadFormdataBodyPdf1
+func (t *PostReadFormdataBody_Pdf) MergePostReadFormdataBodyPdf1(v PostReadFormdataBodyPdf1) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+func (t PostReadFormdataBody_Pdf) MarshalJSON() ([]byte, error) {
+	b, err := t.union.MarshalJSON()
+	return b, err
+}
+
+func (t *PostReadFormdataBody_Pdf) UnmarshalJSON(b []byte) error {
+	err := t.union.UnmarshalJSON(b)
+	return err
+}
+
+// AsEnum0x10 returns the union data inside the PostReadFormdataBody_RespondWith as a Enum0x10
+func (t PostReadFormdataBody_RespondWith) AsEnum0x10() (Enum0x10, error) {
+	var body Enum0x10
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromEnum0x10 overwrites any union data inside the PostReadFormdataBody_RespondWith as the provided Enum0x10
+func (t *PostReadFormdataBody_RespondWith) FromEnum0x10(v Enum0x10) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeEnum0x10 performs a merge with any union data inside the PostReadFormdataBody_RespondWith, using the provided Enum0x10
+func (t *PostReadFormdataBody_RespondWith) MergeEnum0x10(v Enum0x10) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsPostReadFormdataBodyRespondWith1 returns the union data inside the PostReadFormdataBody_RespondWith as a PostReadFormdataBodyRespondWith1
+func (t PostReadFormdataBody_RespondWith) AsPostReadFormdataBodyRespondWith1() (PostReadFormdataBodyRespondWith1, error) {
+	var body PostReadFormdataBodyRespondWith1
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromPostReadFormdataBodyRespondWith1 overwrites any union data inside the PostReadFormdataBody_RespondWith as the provided PostReadFormdataBodyRespondWith1
+func (t *PostReadFormdataBody_RespondWith) FromPostReadFormdataBodyRespondWith1(v PostReadFormdataBodyRespondWith1) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergePostReadFormdataBodyRespondWith1 performs a merge with any union data inside the PostReadFormdataBody_RespondWith, using the provided PostReadFormdataBodyRespondWith1
+func (t *PostReadFormdataBody_RespondWith) MergePostReadFormdataBodyRespondWith1(v PostReadFormdataBodyRespondWith1) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+func (t PostReadFormdataBody_RespondWith) MarshalJSON() ([]byte, error) {
+	b, err := t.union.MarshalJSON()
+	return b, err
+}
+
+func (t *PostReadFormdataBody_RespondWith) UnmarshalJSON(b []byte) error {
+	err := t.union.UnmarshalJSON(b)
+	return err
+}
+
+// AsPseudoBoolean0x11 returns the union data inside the PostReadFormdataBody_RobotsTxt as a PseudoBoolean0x11
+func (t PostReadFormdataBody_RobotsTxt) AsPseudoBoolean0x11() (PseudoBoolean0x11, error) {
+	var body PseudoBoolean0x11
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromPseudoBoolean0x11 overwrites any union data inside the PostReadFormdataBody_RobotsTxt as the provided PseudoBoolean0x11
+func (t *PostReadFormdataBody_RobotsTxt) FromPseudoBoolean0x11(v PseudoBoolean0x11) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergePseudoBoolean0x11 performs a merge with any union data inside the PostReadFormdataBody_RobotsTxt, using the provided PseudoBoolean0x11
+func (t *PostReadFormdataBody_RobotsTxt) MergePseudoBoolean0x11(v PseudoBoolean0x11) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsPostReadFormdataBodyRobotsTxt1 returns the union data inside the PostReadFormdataBody_RobotsTxt as a PostReadFormdataBodyRobotsTxt1
+func (t PostReadFormdataBody_RobotsTxt) AsPostReadFormdataBodyRobotsTxt1() (PostReadFormdataBodyRobotsTxt1, error) {
+	var body PostReadFormdataBodyRobotsTxt1
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromPostReadFormdataBodyRobotsTxt1 overwrites any union data inside the PostReadFormdataBody_RobotsTxt as the provided PostReadFormdataBodyRobotsTxt1
+func (t *PostReadFormdataBody_RobotsTxt) FromPostReadFormdataBodyRobotsTxt1(v PostReadFormdataBodyRobotsTxt1) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergePostReadFormdataBodyRobotsTxt1 performs a merge with any union data inside the PostReadFormdataBody_RobotsTxt, using the provided PostReadFormdataBodyRobotsTxt1
+func (t *PostReadFormdataBody_RobotsTxt) MergePostReadFormdataBodyRobotsTxt1(v PostReadFormdataBodyRobotsTxt1) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+func (t PostReadFormdataBody_RobotsTxt) MarshalJSON() ([]byte, error) {
+	b, err := t.union.MarshalJSON()
+	return b, err
+}
+
+func (t *PostReadFormdataBody_RobotsTxt) UnmarshalJSON(b []byte) error {
+	err := t.union.UnmarshalJSON(b)
+	return err
+}
+
+// AsPostReadFormdataBodySetCookies0 returns the union data inside the PostReadFormdataBody_SetCookies as a PostReadFormdataBodySetCookies0
+func (t PostReadFormdataBody_SetCookies) AsPostReadFormdataBodySetCookies0() (PostReadFormdataBodySetCookies0, error) {
+	var body PostReadFormdataBodySetCookies0
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromPostReadFormdataBodySetCookies0 overwrites any union data inside the PostReadFormdataBody_SetCookies as the provided PostReadFormdataBodySetCookies0
+func (t *PostReadFormdataBody_SetCookies) FromPostReadFormdataBodySetCookies0(v PostReadFormdataBodySetCookies0) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergePostReadFormdataBodySetCookies0 performs a merge with any union data inside the PostReadFormdataBody_SetCookies, using the provided PostReadFormdataBodySetCookies0
+func (t *PostReadFormdataBody_SetCookies) MergePostReadFormdataBodySetCookies0(v PostReadFormdataBodySetCookies0) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsPostReadFormdataBodySetCookies1 returns the union data inside the PostReadFormdataBody_SetCookies as a PostReadFormdataBodySetCookies1
+func (t PostReadFormdataBody_SetCookies) AsPostReadFormdataBodySetCookies1() (PostReadFormdataBodySetCookies1, error) {
+	var body PostReadFormdataBodySetCookies1
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromPostReadFormdataBodySetCookies1 overwrites any union data inside the PostReadFormdataBody_SetCookies as the provided PostReadFormdataBodySetCookies1
+func (t *PostReadFormdataBody_SetCookies) FromPostReadFormdataBodySetCookies1(v PostReadFormdataBodySetCookies1) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergePostReadFormdataBodySetCookies1 performs a merge with any union data inside the PostReadFormdataBody_SetCookies, using the provided PostReadFormdataBodySetCookies1
+func (t *PostReadFormdataBody_SetCookies) MergePostReadFormdataBodySetCookies1(v PostReadFormdataBodySetCookies1) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+func (t PostReadFormdataBody_SetCookies) MarshalJSON() ([]byte, error) {
+	b, err := t.union.MarshalJSON()
+	return b, err
+}
+
+func (t *PostReadFormdataBody_SetCookies) UnmarshalJSON(b []byte) error {
+	err := t.union.UnmarshalJSON(b)
+	return err
+}
+
+// AsPseudoBoolean0x11 returns the union data inside the PostReadFormdataBody_WebBotAuth as a PseudoBoolean0x11
+func (t PostReadFormdataBody_WebBotAuth) AsPseudoBoolean0x11() (PseudoBoolean0x11, error) {
+	var body PseudoBoolean0x11
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromPseudoBoolean0x11 overwrites any union data inside the PostReadFormdataBody_WebBotAuth as the provided PseudoBoolean0x11
+func (t *PostReadFormdataBody_WebBotAuth) FromPseudoBoolean0x11(v PseudoBoolean0x11) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergePseudoBoolean0x11 performs a merge with any union data inside the PostReadFormdataBody_WebBotAuth, using the provided PseudoBoolean0x11
+func (t *PostReadFormdataBody_WebBotAuth) MergePseudoBoolean0x11(v PseudoBoolean0x11) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsEnum0x16 returns the union data inside the PostReadFormdataBody_WebBotAuth as a Enum0x16
+func (t PostReadFormdataBody_WebBotAuth) AsEnum0x16() (Enum0x16, error) {
+	var body Enum0x16
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromEnum0x16 overwrites any union data inside the PostReadFormdataBody_WebBotAuth as the provided Enum0x16
+func (t *PostReadFormdataBody_WebBotAuth) FromEnum0x16(v Enum0x16) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeEnum0x16 performs a merge with any union data inside the PostReadFormdataBody_WebBotAuth, using the provided Enum0x16
+func (t *PostReadFormdataBody_WebBotAuth) MergeEnum0x16(v Enum0x16) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+func (t PostReadFormdataBody_WebBotAuth) MarshalJSON() ([]byte, error) {
+	b, err := t.union.MarshalJSON()
+	return b, err
+}
+
+func (t *PostReadFormdataBody_WebBotAuth) UnmarshalJSON(b []byte) error {
+	err := t.union.UnmarshalJSON(b)
+	return err
+}
+
+// AsPseudoBoolean0x11 returns the union data inside the PostReadFormdataBody_WithIframe as a PseudoBoolean0x11
+func (t PostReadFormdataBody_WithIframe) AsPseudoBoolean0x11() (PseudoBoolean0x11, error) {
+	var body PseudoBoolean0x11
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromPseudoBoolean0x11 overwrites any union data inside the PostReadFormdataBody_WithIframe as the provided PseudoBoolean0x11
+func (t *PostReadFormdataBody_WithIframe) FromPseudoBoolean0x11(v PseudoBoolean0x11) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergePseudoBoolean0x11 performs a merge with any union data inside the PostReadFormdataBody_WithIframe, using the provided PseudoBoolean0x11
+func (t *PostReadFormdataBody_WithIframe) MergePseudoBoolean0x11(v PseudoBoolean0x11) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsPostReadFormdataBodyWithIframe1 returns the union data inside the PostReadFormdataBody_WithIframe as a PostReadFormdataBodyWithIframe1
+func (t PostReadFormdataBody_WithIframe) AsPostReadFormdataBodyWithIframe1() (PostReadFormdataBodyWithIframe1, error) {
+	var body PostReadFormdataBodyWithIframe1
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromPostReadFormdataBodyWithIframe1 overwrites any union data inside the PostReadFormdataBody_WithIframe as the provided PostReadFormdataBodyWithIframe1
+func (t *PostReadFormdataBody_WithIframe) FromPostReadFormdataBodyWithIframe1(v PostReadFormdataBodyWithIframe1) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergePostReadFormdataBodyWithIframe1 performs a merge with any union data inside the PostReadFormdataBody_WithIframe, using the provided PostReadFormdataBodyWithIframe1
+func (t *PostReadFormdataBody_WithIframe) MergePostReadFormdataBodyWithIframe1(v PostReadFormdataBodyWithIframe1) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+func (t PostReadFormdataBody_WithIframe) MarshalJSON() ([]byte, error) {
+	b, err := t.union.MarshalJSON()
+	return b, err
+}
+
+func (t *PostReadFormdataBody_WithIframe) UnmarshalJSON(b []byte) error {
+	err := t.union.UnmarshalJSON(b)
+	return err
+}
+
+// AsPseudoBoolean0x11 returns the union data inside the PostReadFormdataBody_WithLinksSummary as a PseudoBoolean0x11
+func (t PostReadFormdataBody_WithLinksSummary) AsPseudoBoolean0x11() (PseudoBoolean0x11, error) {
+	var body PseudoBoolean0x11
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromPseudoBoolean0x11 overwrites any union data inside the PostReadFormdataBody_WithLinksSummary as the provided PseudoBoolean0x11
+func (t *PostReadFormdataBody_WithLinksSummary) FromPseudoBoolean0x11(v PseudoBoolean0x11) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergePseudoBoolean0x11 performs a merge with any union data inside the PostReadFormdataBody_WithLinksSummary, using the provided PseudoBoolean0x11
+func (t *PostReadFormdataBody_WithLinksSummary) MergePseudoBoolean0x11(v PseudoBoolean0x11) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsPostReadFormdataBodyWithLinksSummary1 returns the union data inside the PostReadFormdataBody_WithLinksSummary as a PostReadFormdataBodyWithLinksSummary1
+func (t PostReadFormdataBody_WithLinksSummary) AsPostReadFormdataBodyWithLinksSummary1() (PostReadFormdataBodyWithLinksSummary1, error) {
+	var body PostReadFormdataBodyWithLinksSummary1
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromPostReadFormdataBodyWithLinksSummary1 overwrites any union data inside the PostReadFormdataBody_WithLinksSummary as the provided PostReadFormdataBodyWithLinksSummary1
+func (t *PostReadFormdataBody_WithLinksSummary) FromPostReadFormdataBodyWithLinksSummary1(v PostReadFormdataBodyWithLinksSummary1) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergePostReadFormdataBodyWithLinksSummary1 performs a merge with any union data inside the PostReadFormdataBody_WithLinksSummary, using the provided PostReadFormdataBodyWithLinksSummary1
+func (t *PostReadFormdataBody_WithLinksSummary) MergePostReadFormdataBodyWithLinksSummary1(v PostReadFormdataBodyWithLinksSummary1) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+func (t PostReadFormdataBody_WithLinksSummary) MarshalJSON() ([]byte, error) {
+	b, err := t.union.MarshalJSON()
+	return b, err
+}
+
+func (t *PostReadFormdataBody_WithLinksSummary) UnmarshalJSON(b []byte) error {
+	err := t.union.UnmarshalJSON(b)
+	return err
+}
+
+// AsEnum0x1c returns the union data inside the PostReadMultipartBody_Engine as a Enum0x1c
+func (t PostReadMultipartBody_Engine) AsEnum0x1c() (Enum0x1c, error) {
+	var body Enum0x1c
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromEnum0x1c overwrites any union data inside the PostReadMultipartBody_Engine as the provided Enum0x1c
+func (t *PostReadMultipartBody_Engine) FromEnum0x1c(v Enum0x1c) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeEnum0x1c performs a merge with any union data inside the PostReadMultipartBody_Engine, using the provided Enum0x1c
+func (t *PostReadMultipartBody_Engine) MergeEnum0x1c(v Enum0x1c) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsPostReadMultipartBodyEngine1 returns the union data inside the PostReadMultipartBody_Engine as a PostReadMultipartBodyEngine1
+func (t PostReadMultipartBody_Engine) AsPostReadMultipartBodyEngine1() (PostReadMultipartBodyEngine1, error) {
+	var body PostReadMultipartBodyEngine1
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromPostReadMultipartBodyEngine1 overwrites any union data inside the PostReadMultipartBody_Engine as the provided PostReadMultipartBodyEngine1
+func (t *PostReadMultipartBody_Engine) FromPostReadMultipartBodyEngine1(v PostReadMultipartBodyEngine1) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergePostReadMultipartBodyEngine1 performs a merge with any union data inside the PostReadMultipartBody_Engine, using the provided PostReadMultipartBodyEngine1
+func (t *PostReadMultipartBody_Engine) MergePostReadMultipartBodyEngine1(v PostReadMultipartBodyEngine1) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+func (t PostReadMultipartBody_Engine) MarshalJSON() ([]byte, error) {
+	b, err := t.union.MarshalJSON()
+	return b, err
+}
+
+func (t *PostReadMultipartBody_Engine) UnmarshalJSON(b []byte) error {
+	err := t.union.UnmarshalJSON(b)
+	return err
+}
+
+// AsFancyFile0x0e returns the union data inside the PostReadMultipartBody_File as a FancyFile0x0e
+func (t PostReadMultipartBody_File) AsFancyFile0x0e() (FancyFile0x0e, error) {
+	var body FancyFile0x0e
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromFancyFile0x0e overwrites any union data inside the PostReadMultipartBody_File as the provided FancyFile0x0e
+func (t *PostReadMultipartBody_File) FromFancyFile0x0e(v FancyFile0x0e) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeFancyFile0x0e performs a merge with any union data inside the PostReadMultipartBody_File, using the provided FancyFile0x0e
+func (t *PostReadMultipartBody_File) MergeFancyFile0x0e(v FancyFile0x0e) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsPostReadMultipartBodyFile1 returns the union data inside the PostReadMultipartBody_File as a PostReadMultipartBodyFile1
+func (t PostReadMultipartBody_File) AsPostReadMultipartBodyFile1() (PostReadMultipartBodyFile1, error) {
+	var body PostReadMultipartBodyFile1
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromPostReadMultipartBodyFile1 overwrites any union data inside the PostReadMultipartBody_File as the provided PostReadMultipartBodyFile1
+func (t *PostReadMultipartBody_File) FromPostReadMultipartBodyFile1(v PostReadMultipartBodyFile1) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergePostReadMultipartBodyFile1 performs a merge with any union data inside the PostReadMultipartBody_File, using the provided PostReadMultipartBodyFile1
+func (t *PostReadMultipartBody_File) MergePostReadMultipartBodyFile1(v PostReadMultipartBodyFile1) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+func (t PostReadMultipartBody_File) MarshalJSON() ([]byte, error) {
+	b, err := t.union.MarshalJSON()
+	return b, err
+}
+
+func (t *PostReadMultipartBody_File) UnmarshalJSON(b []byte) error {
+	err := t.union.UnmarshalJSON(b)
+	return err
+}
+
+// AsEnum0x27 returns the union data inside the PostReadMultipartBody_MarkdownChunking as a Enum0x27
+func (t PostReadMultipartBody_MarkdownChunking) AsEnum0x27() (Enum0x27, error) {
+	var body Enum0x27
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromEnum0x27 overwrites any union data inside the PostReadMultipartBody_MarkdownChunking as the provided Enum0x27
+func (t *PostReadMultipartBody_MarkdownChunking) FromEnum0x27(v Enum0x27) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeEnum0x27 performs a merge with any union data inside the PostReadMultipartBody_MarkdownChunking, using the provided Enum0x27
+func (t *PostReadMultipartBody_MarkdownChunking) MergeEnum0x27(v Enum0x27) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsPostReadMultipartBodyMarkdownChunking1 returns the union data inside the PostReadMultipartBody_MarkdownChunking as a PostReadMultipartBodyMarkdownChunking1
+func (t PostReadMultipartBody_MarkdownChunking) AsPostReadMultipartBodyMarkdownChunking1() (PostReadMultipartBodyMarkdownChunking1, error) {
+	var body PostReadMultipartBodyMarkdownChunking1
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromPostReadMultipartBodyMarkdownChunking1 overwrites any union data inside the PostReadMultipartBody_MarkdownChunking as the provided PostReadMultipartBodyMarkdownChunking1
+func (t *PostReadMultipartBody_MarkdownChunking) FromPostReadMultipartBodyMarkdownChunking1(v PostReadMultipartBodyMarkdownChunking1) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergePostReadMultipartBodyMarkdownChunking1 performs a merge with any union data inside the PostReadMultipartBody_MarkdownChunking, using the provided PostReadMultipartBodyMarkdownChunking1
+func (t *PostReadMultipartBody_MarkdownChunking) MergePostReadMultipartBodyMarkdownChunking1(v PostReadMultipartBodyMarkdownChunking1) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+func (t PostReadMultipartBody_MarkdownChunking) MarshalJSON() ([]byte, error) {
+	b, err := t.union.MarshalJSON()
+	return b, err
+}
+
+func (t *PostReadMultipartBody_MarkdownChunking) UnmarshalJSON(b []byte) error {
+	err := t.union.UnmarshalJSON(b)
+	return err
+}
+
+// AsPseudoBoolean0x11 returns the union data inside the PostReadMultipartBody_NoGfm as a PseudoBoolean0x11
+func (t PostReadMultipartBody_NoGfm) AsPseudoBoolean0x11() (PseudoBoolean0x11, error) {
+	var body PseudoBoolean0x11
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromPseudoBoolean0x11 overwrites any union data inside the PostReadMultipartBody_NoGfm as the provided PseudoBoolean0x11
+func (t *PostReadMultipartBody_NoGfm) FromPseudoBoolean0x11(v PseudoBoolean0x11) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergePseudoBoolean0x11 performs a merge with any union data inside the PostReadMultipartBody_NoGfm, using the provided PseudoBoolean0x11
+func (t *PostReadMultipartBody_NoGfm) MergePseudoBoolean0x11(v PseudoBoolean0x11) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsPostReadMultipartBodyNoGfm1 returns the union data inside the PostReadMultipartBody_NoGfm as a PostReadMultipartBodyNoGfm1
+func (t PostReadMultipartBody_NoGfm) AsPostReadMultipartBodyNoGfm1() (PostReadMultipartBodyNoGfm1, error) {
+	var body PostReadMultipartBodyNoGfm1
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromPostReadMultipartBodyNoGfm1 overwrites any union data inside the PostReadMultipartBody_NoGfm as the provided PostReadMultipartBodyNoGfm1
+func (t *PostReadMultipartBody_NoGfm) FromPostReadMultipartBodyNoGfm1(v PostReadMultipartBodyNoGfm1) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergePostReadMultipartBodyNoGfm1 performs a merge with any union data inside the PostReadMultipartBody_NoGfm, using the provided PostReadMultipartBodyNoGfm1
+func (t *PostReadMultipartBody_NoGfm) MergePostReadMultipartBodyNoGfm1(v PostReadMultipartBodyNoGfm1) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+func (t PostReadMultipartBody_NoGfm) MarshalJSON() ([]byte, error) {
+	b, err := t.union.MarshalJSON()
+	return b, err
+}
+
+func (t *PostReadMultipartBody_NoGfm) UnmarshalJSON(b []byte) error {
+	err := t.union.UnmarshalJSON(b)
+	return err
+}
+
+// AsFancyFile0x0e returns the union data inside the PostReadMultipartBody_Pdf as a FancyFile0x0e
+func (t PostReadMultipartBody_Pdf) AsFancyFile0x0e() (FancyFile0x0e, error) {
+	var body FancyFile0x0e
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromFancyFile0x0e overwrites any union data inside the PostReadMultipartBody_Pdf as the provided FancyFile0x0e
+func (t *PostReadMultipartBody_Pdf) FromFancyFile0x0e(v FancyFile0x0e) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeFancyFile0x0e performs a merge with any union data inside the PostReadMultipartBody_Pdf, using the provided FancyFile0x0e
+func (t *PostReadMultipartBody_Pdf) MergeFancyFile0x0e(v FancyFile0x0e) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsPostReadMultipartBodyPdf1 returns the union data inside the PostReadMultipartBody_Pdf as a PostReadMultipartBodyPdf1
+func (t PostReadMultipartBody_Pdf) AsPostReadMultipartBodyPdf1() (PostReadMultipartBodyPdf1, error) {
+	var body PostReadMultipartBodyPdf1
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromPostReadMultipartBodyPdf1 overwrites any union data inside the PostReadMultipartBody_Pdf as the provided PostReadMultipartBodyPdf1
+func (t *PostReadMultipartBody_Pdf) FromPostReadMultipartBodyPdf1(v PostReadMultipartBodyPdf1) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergePostReadMultipartBodyPdf1 performs a merge with any union data inside the PostReadMultipartBody_Pdf, using the provided PostReadMultipartBodyPdf1
+func (t *PostReadMultipartBody_Pdf) MergePostReadMultipartBodyPdf1(v PostReadMultipartBodyPdf1) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+func (t PostReadMultipartBody_Pdf) MarshalJSON() ([]byte, error) {
+	b, err := t.union.MarshalJSON()
+	return b, err
+}
+
+func (t *PostReadMultipartBody_Pdf) UnmarshalJSON(b []byte) error {
+	err := t.union.UnmarshalJSON(b)
+	return err
+}
+
+// AsEnum0x10 returns the union data inside the PostReadMultipartBody_RespondWith as a Enum0x10
+func (t PostReadMultipartBody_RespondWith) AsEnum0x10() (Enum0x10, error) {
+	var body Enum0x10
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromEnum0x10 overwrites any union data inside the PostReadMultipartBody_RespondWith as the provided Enum0x10
+func (t *PostReadMultipartBody_RespondWith) FromEnum0x10(v Enum0x10) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeEnum0x10 performs a merge with any union data inside the PostReadMultipartBody_RespondWith, using the provided Enum0x10
+func (t *PostReadMultipartBody_RespondWith) MergeEnum0x10(v Enum0x10) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsPostReadMultipartBodyRespondWith1 returns the union data inside the PostReadMultipartBody_RespondWith as a PostReadMultipartBodyRespondWith1
+func (t PostReadMultipartBody_RespondWith) AsPostReadMultipartBodyRespondWith1() (PostReadMultipartBodyRespondWith1, error) {
+	var body PostReadMultipartBodyRespondWith1
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromPostReadMultipartBodyRespondWith1 overwrites any union data inside the PostReadMultipartBody_RespondWith as the provided PostReadMultipartBodyRespondWith1
+func (t *PostReadMultipartBody_RespondWith) FromPostReadMultipartBodyRespondWith1(v PostReadMultipartBodyRespondWith1) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergePostReadMultipartBodyRespondWith1 performs a merge with any union data inside the PostReadMultipartBody_RespondWith, using the provided PostReadMultipartBodyRespondWith1
+func (t *PostReadMultipartBody_RespondWith) MergePostReadMultipartBodyRespondWith1(v PostReadMultipartBodyRespondWith1) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+func (t PostReadMultipartBody_RespondWith) MarshalJSON() ([]byte, error) {
+	b, err := t.union.MarshalJSON()
+	return b, err
+}
+
+func (t *PostReadMultipartBody_RespondWith) UnmarshalJSON(b []byte) error {
+	err := t.union.UnmarshalJSON(b)
+	return err
+}
+
+// AsPseudoBoolean0x11 returns the union data inside the PostReadMultipartBody_RobotsTxt as a PseudoBoolean0x11
+func (t PostReadMultipartBody_RobotsTxt) AsPseudoBoolean0x11() (PseudoBoolean0x11, error) {
+	var body PseudoBoolean0x11
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromPseudoBoolean0x11 overwrites any union data inside the PostReadMultipartBody_RobotsTxt as the provided PseudoBoolean0x11
+func (t *PostReadMultipartBody_RobotsTxt) FromPseudoBoolean0x11(v PseudoBoolean0x11) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergePseudoBoolean0x11 performs a merge with any union data inside the PostReadMultipartBody_RobotsTxt, using the provided PseudoBoolean0x11
+func (t *PostReadMultipartBody_RobotsTxt) MergePseudoBoolean0x11(v PseudoBoolean0x11) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsPostReadMultipartBodyRobotsTxt1 returns the union data inside the PostReadMultipartBody_RobotsTxt as a PostReadMultipartBodyRobotsTxt1
+func (t PostReadMultipartBody_RobotsTxt) AsPostReadMultipartBodyRobotsTxt1() (PostReadMultipartBodyRobotsTxt1, error) {
+	var body PostReadMultipartBodyRobotsTxt1
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromPostReadMultipartBodyRobotsTxt1 overwrites any union data inside the PostReadMultipartBody_RobotsTxt as the provided PostReadMultipartBodyRobotsTxt1
+func (t *PostReadMultipartBody_RobotsTxt) FromPostReadMultipartBodyRobotsTxt1(v PostReadMultipartBodyRobotsTxt1) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergePostReadMultipartBodyRobotsTxt1 performs a merge with any union data inside the PostReadMultipartBody_RobotsTxt, using the provided PostReadMultipartBodyRobotsTxt1
+func (t *PostReadMultipartBody_RobotsTxt) MergePostReadMultipartBodyRobotsTxt1(v PostReadMultipartBodyRobotsTxt1) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+func (t PostReadMultipartBody_RobotsTxt) MarshalJSON() ([]byte, error) {
+	b, err := t.union.MarshalJSON()
+	return b, err
+}
+
+func (t *PostReadMultipartBody_RobotsTxt) UnmarshalJSON(b []byte) error {
+	err := t.union.UnmarshalJSON(b)
+	return err
+}
+
+// AsPostReadMultipartBodySetCookies0 returns the union data inside the PostReadMultipartBody_SetCookies_Item as a PostReadMultipartBodySetCookies0
+func (t PostReadMultipartBody_SetCookies_Item) AsPostReadMultipartBodySetCookies0() (PostReadMultipartBodySetCookies0, error) {
+	var body PostReadMultipartBodySetCookies0
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromPostReadMultipartBodySetCookies0 overwrites any union data inside the PostReadMultipartBody_SetCookies_Item as the provided PostReadMultipartBodySetCookies0
+func (t *PostReadMultipartBody_SetCookies_Item) FromPostReadMultipartBodySetCookies0(v PostReadMultipartBodySetCookies0) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergePostReadMultipartBodySetCookies0 performs a merge with any union data inside the PostReadMultipartBody_SetCookies_Item, using the provided PostReadMultipartBodySetCookies0
+func (t *PostReadMultipartBody_SetCookies_Item) MergePostReadMultipartBodySetCookies0(v PostReadMultipartBodySetCookies0) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsPostReadMultipartBodySetCookies1 returns the union data inside the PostReadMultipartBody_SetCookies_Item as a PostReadMultipartBodySetCookies1
+func (t PostReadMultipartBody_SetCookies_Item) AsPostReadMultipartBodySetCookies1() (PostReadMultipartBodySetCookies1, error) {
+	var body PostReadMultipartBodySetCookies1
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromPostReadMultipartBodySetCookies1 overwrites any union data inside the PostReadMultipartBody_SetCookies_Item as the provided PostReadMultipartBodySetCookies1
+func (t *PostReadMultipartBody_SetCookies_Item) FromPostReadMultipartBodySetCookies1(v PostReadMultipartBodySetCookies1) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergePostReadMultipartBodySetCookies1 performs a merge with any union data inside the PostReadMultipartBody_SetCookies_Item, using the provided PostReadMultipartBodySetCookies1
+func (t *PostReadMultipartBody_SetCookies_Item) MergePostReadMultipartBodySetCookies1(v PostReadMultipartBodySetCookies1) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+func (t PostReadMultipartBody_SetCookies_Item) MarshalJSON() ([]byte, error) {
+	b, err := t.union.MarshalJSON()
+	return b, err
+}
+
+func (t *PostReadMultipartBody_SetCookies_Item) UnmarshalJSON(b []byte) error {
+	err := t.union.UnmarshalJSON(b)
+	return err
+}
+
+// AsPseudoBoolean0x11 returns the union data inside the PostReadMultipartBody_WebBotAuth as a PseudoBoolean0x11
+func (t PostReadMultipartBody_WebBotAuth) AsPseudoBoolean0x11() (PseudoBoolean0x11, error) {
+	var body PseudoBoolean0x11
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromPseudoBoolean0x11 overwrites any union data inside the PostReadMultipartBody_WebBotAuth as the provided PseudoBoolean0x11
+func (t *PostReadMultipartBody_WebBotAuth) FromPseudoBoolean0x11(v PseudoBoolean0x11) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergePseudoBoolean0x11 performs a merge with any union data inside the PostReadMultipartBody_WebBotAuth, using the provided PseudoBoolean0x11
+func (t *PostReadMultipartBody_WebBotAuth) MergePseudoBoolean0x11(v PseudoBoolean0x11) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsEnum0x16 returns the union data inside the PostReadMultipartBody_WebBotAuth as a Enum0x16
+func (t PostReadMultipartBody_WebBotAuth) AsEnum0x16() (Enum0x16, error) {
+	var body Enum0x16
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromEnum0x16 overwrites any union data inside the PostReadMultipartBody_WebBotAuth as the provided Enum0x16
+func (t *PostReadMultipartBody_WebBotAuth) FromEnum0x16(v Enum0x16) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeEnum0x16 performs a merge with any union data inside the PostReadMultipartBody_WebBotAuth, using the provided Enum0x16
+func (t *PostReadMultipartBody_WebBotAuth) MergeEnum0x16(v Enum0x16) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+func (t PostReadMultipartBody_WebBotAuth) MarshalJSON() ([]byte, error) {
+	b, err := t.union.MarshalJSON()
+	return b, err
+}
+
+func (t *PostReadMultipartBody_WebBotAuth) UnmarshalJSON(b []byte) error {
+	err := t.union.UnmarshalJSON(b)
+	return err
+}
+
+// AsPseudoBoolean0x11 returns the union data inside the PostReadMultipartBody_WithIframe as a PseudoBoolean0x11
+func (t PostReadMultipartBody_WithIframe) AsPseudoBoolean0x11() (PseudoBoolean0x11, error) {
+	var body PseudoBoolean0x11
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromPseudoBoolean0x11 overwrites any union data inside the PostReadMultipartBody_WithIframe as the provided PseudoBoolean0x11
+func (t *PostReadMultipartBody_WithIframe) FromPseudoBoolean0x11(v PseudoBoolean0x11) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergePseudoBoolean0x11 performs a merge with any union data inside the PostReadMultipartBody_WithIframe, using the provided PseudoBoolean0x11
+func (t *PostReadMultipartBody_WithIframe) MergePseudoBoolean0x11(v PseudoBoolean0x11) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsPostReadMultipartBodyWithIframe1 returns the union data inside the PostReadMultipartBody_WithIframe as a PostReadMultipartBodyWithIframe1
+func (t PostReadMultipartBody_WithIframe) AsPostReadMultipartBodyWithIframe1() (PostReadMultipartBodyWithIframe1, error) {
+	var body PostReadMultipartBodyWithIframe1
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromPostReadMultipartBodyWithIframe1 overwrites any union data inside the PostReadMultipartBody_WithIframe as the provided PostReadMultipartBodyWithIframe1
+func (t *PostReadMultipartBody_WithIframe) FromPostReadMultipartBodyWithIframe1(v PostReadMultipartBodyWithIframe1) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergePostReadMultipartBodyWithIframe1 performs a merge with any union data inside the PostReadMultipartBody_WithIframe, using the provided PostReadMultipartBodyWithIframe1
+func (t *PostReadMultipartBody_WithIframe) MergePostReadMultipartBodyWithIframe1(v PostReadMultipartBodyWithIframe1) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+func (t PostReadMultipartBody_WithIframe) MarshalJSON() ([]byte, error) {
+	b, err := t.union.MarshalJSON()
+	return b, err
+}
+
+func (t *PostReadMultipartBody_WithIframe) UnmarshalJSON(b []byte) error {
+	err := t.union.UnmarshalJSON(b)
+	return err
+}
+
+// AsPseudoBoolean0x11 returns the union data inside the PostReadMultipartBody_WithLinksSummary as a PseudoBoolean0x11
+func (t PostReadMultipartBody_WithLinksSummary) AsPseudoBoolean0x11() (PseudoBoolean0x11, error) {
+	var body PseudoBoolean0x11
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromPseudoBoolean0x11 overwrites any union data inside the PostReadMultipartBody_WithLinksSummary as the provided PseudoBoolean0x11
+func (t *PostReadMultipartBody_WithLinksSummary) FromPseudoBoolean0x11(v PseudoBoolean0x11) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergePseudoBoolean0x11 performs a merge with any union data inside the PostReadMultipartBody_WithLinksSummary, using the provided PseudoBoolean0x11
+func (t *PostReadMultipartBody_WithLinksSummary) MergePseudoBoolean0x11(v PseudoBoolean0x11) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsPostReadMultipartBodyWithLinksSummary1 returns the union data inside the PostReadMultipartBody_WithLinksSummary as a PostReadMultipartBodyWithLinksSummary1
+func (t PostReadMultipartBody_WithLinksSummary) AsPostReadMultipartBodyWithLinksSummary1() (PostReadMultipartBodyWithLinksSummary1, error) {
+	var body PostReadMultipartBodyWithLinksSummary1
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromPostReadMultipartBodyWithLinksSummary1 overwrites any union data inside the PostReadMultipartBody_WithLinksSummary as the provided PostReadMultipartBodyWithLinksSummary1
+func (t *PostReadMultipartBody_WithLinksSummary) FromPostReadMultipartBodyWithLinksSummary1(v PostReadMultipartBodyWithLinksSummary1) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergePostReadMultipartBodyWithLinksSummary1 performs a merge with any union data inside the PostReadMultipartBody_WithLinksSummary, using the provided PostReadMultipartBodyWithLinksSummary1
+func (t *PostReadMultipartBody_WithLinksSummary) MergePostReadMultipartBodyWithLinksSummary1(v PostReadMultipartBodyWithLinksSummary1) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+func (t PostReadMultipartBody_WithLinksSummary) MarshalJSON() ([]byte, error) {
+	b, err := t.union.MarshalJSON()
+	return b, err
+}
+
+func (t *PostReadMultipartBody_WithLinksSummary) UnmarshalJSON(b []byte) error {
+	err := t.union.UnmarshalJSON(b)
+	return err
+}
+
+// AsParamValidationError0x29 returns the union data inside the PostRead400JSONResponseBody as a ParamValidationError0x29
+func (t PostRead400JSONResponseBody) AsParamValidationError0x29() (ParamValidationError0x29, error) {
+	var body ParamValidationError0x29
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromParamValidationError0x29 overwrites any union data inside the PostRead400JSONResponseBody as the provided ParamValidationError0x29
+func (t *PostRead400JSONResponseBody) FromParamValidationError0x29(v ParamValidationError0x29) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeParamValidationError0x29 performs a merge with any union data inside the PostRead400JSONResponseBody, using the provided ParamValidationError0x29
+func (t *PostRead400JSONResponseBody) MergeParamValidationError0x29(v ParamValidationError0x29) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsDataStreamBrokenError0x2a returns the union data inside the PostRead400JSONResponseBody as a DataStreamBrokenError0x2a
+func (t PostRead400JSONResponseBody) AsDataStreamBrokenError0x2a() (DataStreamBrokenError0x2a, error) {
+	var body DataStreamBrokenError0x2a
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromDataStreamBrokenError0x2a overwrites any union data inside the PostRead400JSONResponseBody as the provided DataStreamBrokenError0x2a
+func (t *PostRead400JSONResponseBody) FromDataStreamBrokenError0x2a(v DataStreamBrokenError0x2a) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeDataStreamBrokenError0x2a performs a merge with any union data inside the PostRead400JSONResponseBody, using the provided DataStreamBrokenError0x2a
+func (t *PostRead400JSONResponseBody) MergeDataStreamBrokenError0x2a(v DataStreamBrokenError0x2a) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+func (t PostRead400JSONResponseBody) MarshalJSON() ([]byte, error) {
+	b, err := t.union.MarshalJSON()
+	return b, err
+}
+
+func (t *PostRead400JSONResponseBody) UnmarshalJSON(b []byte) error {
+	err := t.union.UnmarshalJSON(b)
+	return err
+}
+
+// AsAuthenticationFailedError0x2b returns the union data inside the PostRead401JSONResponseBody as a AuthenticationFailedError0x2b
+func (t PostRead401JSONResponseBody) AsAuthenticationFailedError0x2b() (AuthenticationFailedError0x2b, error) {
+	var body AuthenticationFailedError0x2b
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromAuthenticationFailedError0x2b overwrites any union data inside the PostRead401JSONResponseBody as the provided AuthenticationFailedError0x2b
+func (t *PostRead401JSONResponseBody) FromAuthenticationFailedError0x2b(v AuthenticationFailedError0x2b) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeAuthenticationFailedError0x2b performs a merge with any union data inside the PostRead401JSONResponseBody, using the provided AuthenticationFailedError0x2b
+func (t *PostRead401JSONResponseBody) MergeAuthenticationFailedError0x2b(v AuthenticationFailedError0x2b) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsAuthenticationRequiredError0x2c returns the union data inside the PostRead401JSONResponseBody as a AuthenticationRequiredError0x2c
+func (t PostRead401JSONResponseBody) AsAuthenticationRequiredError0x2c() (AuthenticationRequiredError0x2c, error) {
+	var body AuthenticationRequiredError0x2c
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromAuthenticationRequiredError0x2c overwrites any union data inside the PostRead401JSONResponseBody as the provided AuthenticationRequiredError0x2c
+func (t *PostRead401JSONResponseBody) FromAuthenticationRequiredError0x2c(v AuthenticationRequiredError0x2c) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeAuthenticationRequiredError0x2c performs a merge with any union data inside the PostRead401JSONResponseBody, using the provided AuthenticationRequiredError0x2c
+func (t *PostRead401JSONResponseBody) MergeAuthenticationRequiredError0x2c(v AuthenticationRequiredError0x2c) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+func (t PostRead401JSONResponseBody) MarshalJSON() ([]byte, error) {
+	b, err := t.union.MarshalJSON()
+	return b, err
+}
+
+func (t *PostRead401JSONResponseBody) UnmarshalJSON(b []byte) error {
+	err := t.union.UnmarshalJSON(b)
+	return err
+}
+
+// AsTierFeatureConstraintError0x2d returns the union data inside the PostRead402JSONResponseBody as a TierFeatureConstraintError0x2d
+func (t PostRead402JSONResponseBody) AsTierFeatureConstraintError0x2d() (TierFeatureConstraintError0x2d, error) {
+	var body TierFeatureConstraintError0x2d
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromTierFeatureConstraintError0x2d overwrites any union data inside the PostRead402JSONResponseBody as the provided TierFeatureConstraintError0x2d
+func (t *PostRead402JSONResponseBody) FromTierFeatureConstraintError0x2d(v TierFeatureConstraintError0x2d) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeTierFeatureConstraintError0x2d performs a merge with any union data inside the PostRead402JSONResponseBody, using the provided TierFeatureConstraintError0x2d
+func (t *PostRead402JSONResponseBody) MergeTierFeatureConstraintError0x2d(v TierFeatureConstraintError0x2d) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsInsufficientBalanceError0x2e returns the union data inside the PostRead402JSONResponseBody as a InsufficientBalanceError0x2e
+func (t PostRead402JSONResponseBody) AsInsufficientBalanceError0x2e() (InsufficientBalanceError0x2e, error) {
+	var body InsufficientBalanceError0x2e
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromInsufficientBalanceError0x2e overwrites any union data inside the PostRead402JSONResponseBody as the provided InsufficientBalanceError0x2e
+func (t *PostRead402JSONResponseBody) FromInsufficientBalanceError0x2e(v InsufficientBalanceError0x2e) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeInsufficientBalanceError0x2e performs a merge with any union data inside the PostRead402JSONResponseBody, using the provided InsufficientBalanceError0x2e
+func (t *PostRead402JSONResponseBody) MergeInsufficientBalanceError0x2e(v InsufficientBalanceError0x2e) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+func (t PostRead402JSONResponseBody) MarshalJSON() ([]byte, error) {
+	b, err := t.union.MarshalJSON()
+	return b, err
+}
+
+func (t *PostRead402JSONResponseBody) UnmarshalJSON(b []byte) error {
+	err := t.union.UnmarshalJSON(b)
+	return err
+}
+
+// AsOperationNotAllowedError0x2f returns the union data inside the PostRead403JSONResponseBody as a OperationNotAllowedError0x2f
+func (t PostRead403JSONResponseBody) AsOperationNotAllowedError0x2f() (OperationNotAllowedError0x2f, error) {
+	var body OperationNotAllowedError0x2f
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromOperationNotAllowedError0x2f overwrites any union data inside the PostRead403JSONResponseBody as the provided OperationNotAllowedError0x2f
+func (t *PostRead403JSONResponseBody) FromOperationNotAllowedError0x2f(v OperationNotAllowedError0x2f) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeOperationNotAllowedError0x2f performs a merge with any union data inside the PostRead403JSONResponseBody, using the provided OperationNotAllowedError0x2f
+func (t *PostRead403JSONResponseBody) MergeOperationNotAllowedError0x2f(v OperationNotAllowedError0x2f) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsAbuseAlleviationError0x30 returns the union data inside the PostRead403JSONResponseBody as a AbuseAlleviationError0x30
+func (t PostRead403JSONResponseBody) AsAbuseAlleviationError0x30() (AbuseAlleviationError0x30, error) {
+	var body AbuseAlleviationError0x30
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromAbuseAlleviationError0x30 overwrites any union data inside the PostRead403JSONResponseBody as the provided AbuseAlleviationError0x30
+func (t *PostRead403JSONResponseBody) FromAbuseAlleviationError0x30(v AbuseAlleviationError0x30) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeAbuseAlleviationError0x30 performs a merge with any union data inside the PostRead403JSONResponseBody, using the provided AbuseAlleviationError0x30
+func (t *PostRead403JSONResponseBody) MergeAbuseAlleviationError0x30(v AbuseAlleviationError0x30) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+func (t PostRead403JSONResponseBody) MarshalJSON() ([]byte, error) {
+	b, err := t.union.MarshalJSON()
+	return b, err
+}
+
+func (t *PostRead403JSONResponseBody) UnmarshalJSON(b []byte) error {
+	err := t.union.UnmarshalJSON(b)
+	return err
+}
+
+// AsResourcePolicyDenyError0x31 returns the union data inside the PostRead409JSONResponseBody as a ResourcePolicyDenyError0x31
+func (t PostRead409JSONResponseBody) AsResourcePolicyDenyError0x31() (ResourcePolicyDenyError0x31, error) {
+	var body ResourcePolicyDenyError0x31
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromResourcePolicyDenyError0x31 overwrites any union data inside the PostRead409JSONResponseBody as the provided ResourcePolicyDenyError0x31
+func (t *PostRead409JSONResponseBody) FromResourcePolicyDenyError0x31(v ResourcePolicyDenyError0x31) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeResourcePolicyDenyError0x31 performs a merge with any union data inside the PostRead409JSONResponseBody, using the provided ResourcePolicyDenyError0x31
+func (t *PostRead409JSONResponseBody) MergeResourcePolicyDenyError0x31(v ResourcePolicyDenyError0x31) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsBudgetExceededError0x32 returns the union data inside the PostRead409JSONResponseBody as a BudgetExceededError0x32
+func (t PostRead409JSONResponseBody) AsBudgetExceededError0x32() (BudgetExceededError0x32, error) {
+	var body BudgetExceededError0x32
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromBudgetExceededError0x32 overwrites any union data inside the PostRead409JSONResponseBody as the provided BudgetExceededError0x32
+func (t *PostRead409JSONResponseBody) FromBudgetExceededError0x32(v BudgetExceededError0x32) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeBudgetExceededError0x32 performs a merge with any union data inside the PostRead409JSONResponseBody, using the provided BudgetExceededError0x32
+func (t *PostRead409JSONResponseBody) MergeBudgetExceededError0x32(v BudgetExceededError0x32) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+func (t PostRead409JSONResponseBody) MarshalJSON() ([]byte, error) {
+	b, err := t.union.MarshalJSON()
+	return b, err
+}
+
+func (t *PostRead409JSONResponseBody) UnmarshalJSON(b []byte) error {
+	err := t.union.UnmarshalJSON(b)
+	return err
+}
+
+// AsSubmittedDataMalformedError0x34 returns the union data inside the PostRead422JSONResponseBody as a SubmittedDataMalformedError0x34
+func (t PostRead422JSONResponseBody) AsSubmittedDataMalformedError0x34() (SubmittedDataMalformedError0x34, error) {
+	var body SubmittedDataMalformedError0x34
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromSubmittedDataMalformedError0x34 overwrites any union data inside the PostRead422JSONResponseBody as the provided SubmittedDataMalformedError0x34
+func (t *PostRead422JSONResponseBody) FromSubmittedDataMalformedError0x34(v SubmittedDataMalformedError0x34) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeSubmittedDataMalformedError0x34 performs a merge with any union data inside the PostRead422JSONResponseBody, using the provided SubmittedDataMalformedError0x34
+func (t *PostRead422JSONResponseBody) MergeSubmittedDataMalformedError0x34(v SubmittedDataMalformedError0x34) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsDownstreamServiceFailureError0x35 returns the union data inside the PostRead422JSONResponseBody as a DownstreamServiceFailureError0x35
+func (t PostRead422JSONResponseBody) AsDownstreamServiceFailureError0x35() (DownstreamServiceFailureError0x35, error) {
+	var body DownstreamServiceFailureError0x35
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromDownstreamServiceFailureError0x35 overwrites any union data inside the PostRead422JSONResponseBody as the provided DownstreamServiceFailureError0x35
+func (t *PostRead422JSONResponseBody) FromDownstreamServiceFailureError0x35(v DownstreamServiceFailureError0x35) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeDownstreamServiceFailureError0x35 performs a merge with any union data inside the PostRead422JSONResponseBody, using the provided DownstreamServiceFailureError0x35
+func (t *PostRead422JSONResponseBody) MergeDownstreamServiceFailureError0x35(v DownstreamServiceFailureError0x35) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsAssertionFailureError0x36 returns the union data inside the PostRead422JSONResponseBody as a AssertionFailureError0x36
+func (t PostRead422JSONResponseBody) AsAssertionFailureError0x36() (AssertionFailureError0x36, error) {
+	var body AssertionFailureError0x36
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromAssertionFailureError0x36 overwrites any union data inside the PostRead422JSONResponseBody as the provided AssertionFailureError0x36
+func (t *PostRead422JSONResponseBody) FromAssertionFailureError0x36(v AssertionFailureError0x36) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeAssertionFailureError0x36 performs a merge with any union data inside the PostRead422JSONResponseBody, using the provided AssertionFailureError0x36
+func (t *PostRead422JSONResponseBody) MergeAssertionFailureError0x36(v AssertionFailureError0x36) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+func (t PostRead422JSONResponseBody) MarshalJSON() ([]byte, error) {
+	b, err := t.union.MarshalJSON()
+	return b, err
+}
+
+func (t *PostRead422JSONResponseBody) UnmarshalJSON(b []byte) error {
 	err := t.union.UnmarshalJSON(b)
 	return err
 }
