@@ -2,6 +2,12 @@
 
 All notable changes per release. Versions follow [semver](https://semver.org).
 
+## v0.6.1, 2026-11-20
+
+- The module requires Go 1.26.11, up from 1.26.10, and the development image uses `golang:1.26.11-trixie`. Go 1.26.11 fixes GO-2026-6859 in `net/http`, which govulncheck reports for packages that make HTTP requests.
+- The setup reference in the agent skill lists Go 1.26.11 as the minimum version.
+- The generated `jina` and `jinareader` packages are unchanged. The exported API has no changes.
+
 ## v0.6.0, 2026-11-05
 
 - Added the `POST /read` operation (`PostRead`, the read dedicated entrypoint) to `jinareader`.
